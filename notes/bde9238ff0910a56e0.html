@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.7.3 引力势与引力势能 / Gravitational potential · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.7 引力场与卫星</div><h1 id="h-2eca3ea93539a4c911">3.7.3 引力势与引力势能 / Gravitational potential</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/f5cbf8e1a9934f3ffc.html">3.7.3</a>　｜　<a class="internal-link" href="/notes/da867bb75d0c7de166.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>引力势 / gravitational potential</strong></td>
+<td><span class="math inline">\(V\)</span></td>
+<td><span class="math inline">\(\mathrm{J\,kg^{-1}}\)</span></td>
+<td>不是电势；注意单位 / Not electric potential; check units.</td>
+</tr>
+<tr>
+<td><strong>引力势差 / gravitational potential difference</strong></td>
+<td><span class="math inline">\(\Delta V\)</span></td>
+<td><span class="math inline">\(\mathrm{J\,kg^{-1}}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>引力势能 / gravitational potential energy</strong></td>
+<td><span class="math inline">\(U,\ E_p\)</span></td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+<td>沿用本节 U；不是引力势 V / U in this section; not potential V.</td>
+</tr>
+<tr>
+<td><strong>质量 / mass</strong></td>
+<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+<td>与重力不同 / Not weight.</td>
+</tr>
+<tr>
+<td><strong>源天体质量 / source mass</strong></td>
+<td><span class="math inline">\(M\)</span></td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+<td>不是力矩或摩尔质量 M / Not moment or molar mass.</td>
+</tr>
+<tr>
+<td><strong>万有引力常量 / gravitational constant</strong></td>
+<td><span class="math inline">\(G\)</span></td>
+<td><span class="math inline">\(\mathrm{N\,m^2\,kg^{-2}}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>半径、距源距离 / radius, distance from source</strong></td>
+<td><span class="math inline">\(r\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>具体指半径或距源距离，由本题定义 / Follow the specified geometry.</td>
+</tr>
+<tr>
+<td><strong>重力加速度、引力场强 / gravitational acceleration, field strength</strong></td>
+<td><span class="math inline">\(g\)</span></td>
+<td><span class="math inline">\(\mathrm{m\,s^{-2}}\)</span></td>
+<td>等效单位 N kg⁻¹；按所述物理量解释 / N kg⁻¹ is equivalent; interpret the quantity in context.</td>
+</tr>
+<tr>
+<td><strong>功 / work done</strong></td>
+<td><span class="math inline">\(W\)</span></td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+<td>与重力 W 区分；看物理含义及单位 / Distinguish from weight using meaning and units.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/c3a93f6df6affaaa98.html">gravitational potential — 引力势</a></li>
+<li><a class="internal-link" href="/notes/949aea6277123fab5b.html">gravitational potential difference — 引力势差</a></li>
+<li><a class="internal-link" href="/notes/1b30e85356a76ea346.html">equipotential surface — 等势面</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/c3a93f6df6affaaa98.html#h-485f2ec53559b6043e">↗ gravitational potential — 引力势</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The work done per unit mass by an external agent in moving a small test mass from infinity to a point, without changing its kinetic energy.</p>
+<p><strong>中文：</strong> 外力使单位小检验质量从无穷远移至该点、且不改变动能时所做的功。</p>
+<p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/41e6d23a6392ba0890.html">PH03 202506-Q04</a>、<a class="internal-link" href="/notes/6441b05956cdfc4053.html">PH03 202101-Q01</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/949aea6277123fab5b.html#h-485f2ec53559b6043e">↗ gravitational potential difference — 引力势差</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The change in gravitational potential energy per unit mass between two points.</p>
+<p><strong>中文：</strong> 两点间引力势能变化与质量之比。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/1b30e85356a76ea346.html#h-485f2ec53559b6043e">↗ equipotential surface — 等势面</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A surface on which every point has the same potential.</p>
+<p><strong>中文：</strong> 各点势相同的面。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p><strong>真题定义依据 / Mark-scheme checks：</strong> <a class="internal-link" href="/notes/6441b05956cdfc4053.html">PH03 202101-Q01</a>、<a class="internal-link" href="/notes/41e6d23a6392ba0890.html">PH03 202506-Q04</a>。定义按评分要点概括；原答案可在对应题目下展开。 Definitions are summarised from the scoring points, with original answers below the linked questions.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p>无穷远规定为零势，吸引质量的引力势为负。</p>
+<p><span class="math inline">\(V=-GM/r\)</span>; <span class="math inline">\(U=mV=-GMm/r\)</span>; <span class="math inline">\(\Delta U=m\Delta V\)</span>; radial signed <span class="math inline">\(g_r=-dV/dr\)</span>.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>缓慢移动或动能不变时，外力功等于势能变化；引力功符号相反。</p>
+<p>An external-work value equals potential energy change for a slow transfer or unchanged kinetic energy; work done by gravity has the opposite sign.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-80a3733e374510acfb">势、势能和正负号 / Potential, energy and signs</h3>
+<p>引力势是将单位质量从无穷远缓慢移到该点时外力所做的功，无穷远势为零。<span class="math inline">\(V=-GM/r\)</span>，<span class="math inline">\(E_p=mV=-GMm/r\)</span>；引力吸引质量，因此有限距离的势为负，向远处移动时势增大并趋近零。</p>
+<p>Gravitational potential is external work per unit mass in bringing a mass slowly from infinity. With zero at infinity, <span class="math inline">\(V=-GM/r\)</span> and potential energy is <span class="math inline">\(mV\)</span>; both rise towards zero on moving outward.</p>
+<p><span class="math inline">\(\Delta E_p=m(V_2-V_1)\)</span>；缓慢移动时外力做功等于该变化，引力做功则为 <span class="math inline">\(-\Delta E_p\)</span>。仅在近地小高度且 <span class="math inline">\(g\)</span> 可视为恒定时使用 <span class="math inline">\(\Delta E_p=mg\Delta h\)</span>。</p>
+<p>External work in a slow transfer equals the increase in potential energy; gravitational work has the opposite sign. Use <span class="math inline">\(mg\Delta h\)</span> only where gravity is approximately uniform.</p>
+<p>等势面上 <span class="math inline">\(\Delta V=0\)</span>，沿面移动时引力不做功；径向场等势面是同心球面，与场线垂直。</p>
+<p>No gravitational work is done along an equipotential surface. Radial-field equipotentials are concentric spheres perpendicular to field lines.</p>
+<h3 id="h-6f4850a28a837ad5ea">图像斜率与面积 / Gradients and areas</h3>
+<p>取径向向外为正，<span class="math inline">\(g_r=-dV/dr=-GM/r^2\)</span>；场强大小 <span class="math inline">\(g=GM/r^2\)</span>。<span class="math inline">\(V\)</span>–<span class="math inline">\(r\)</span> 在负值区随 <span class="math inline">\(r\)</span> 增大趋近零，切线斜率为正，其负值是有符号场分量。</p>
+<p>With outward radius positive, the radial field is the negative potential gradient. The potential curve rises from negative values towards zero; its positive slope gives an inward field after the minus sign.</p>
+<p><span class="math inline">\(V_2-V_1=-\int_{r_1}^{r_2}g_r\,dr\)</span>；已知图上画的是“场强大小”还是“有符号分量”后再处理面积。考纲原文个别大小写不改变 <span class="math inline">\(\Delta E_p=m\Delta V\)</span> 的物理含义。</p>
+<p>Potential difference is the negative signed field area. Check whether a graph shows field magnitude or signed component before interpreting its area.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/11fbe687130c053bc6.html#h-b0fc0830ce2359cbd5">3.7.3</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/de5a4a204898914e44.png" target="_blank"><img alt="3.7.2-S006-P01" decoding="async" loading="lazy" src="/media/de5a4a204898914e44.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/7de7900c25ccd1714c.png" target="_blank"><img alt="3.7.2-S006-P02" decoding="async" loading="lazy" src="/media/7de7900c25ccd1714c.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/098d74b0c8cd4ec63a.png" target="_blank"><img alt="3.7.2-S012-P01" decoding="async" loading="lazy" src="/media/098d74b0c8cd4ec63a.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/b19537f401b7255d9b.png" target="_blank"><img alt="3.7.2-S013-P01" decoding="async" loading="lazy" src="/media/b19537f401b7255d9b.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h3 id="h-015977c9f67c142b67">U3 Gravitational field potential</h3>
+<a class="image-link" href="/media/65b1825a17e83832d8.png" target="_blank"><img alt="U3_Gravitational_field_potential" decoding="async" loading="lazy" src="/media/65b1825a17e83832d8.png" style="max-width:min(100%,1100px)"/></a>
+<p>球体外部场强大小按反平方下降，势为负并趋近零；势的负斜率给出带符号径向场强。 Exterior spherical field.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>大范围提升卫星时用引力势差，近似匀强场才使用重力势能变化公式。</p>
+<p>Calculate the work needed to raise a satellite over a large distance; use <span class="math inline">\(mg\Delta h\)</span> only for an approximately uniform field.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>绝对势须说明无穷远零势；不可删去引力势负号。</p>
+<p>“Zero at infinity” is essential to the absolute potential convention; do not drop the negative sign from gravitational potential.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-bee973cd8e24a1e7e4">3.7.3 方法 1 · 引力势、能量账目与势垒 / Potential, energy budgets and barriers</h3>
+<p><strong>定义细节 / Definition detail.</strong> 势是把小测试质量从无穷远移至该点的外力功除以质量；以无穷远为零，引力吸引使有限距离处的势为负。 / Gravitational potential is external work per unit mass from infinity to the point, with zero at infinity.</p>
+<ol>
+<li>用 <span class="math inline">\(E_{p,f}-E_{p,i}=m(V_f-V_i)\)</span>；沿长距离不能默认 <span class="math inline">\(g\)</span> 恒定而用 <span class="math inline">\(mgh\)</span>。由能量求出中心距后再减天体半径。 / Keep radius and altitude separate.</li>
+<li>地月间最小发射能量由起点到<strong>沿途最大势能</strong>的增量决定，不一定是到目的地的净势能差，也不一定要达到无穷远。 / Check the energy barrier along the path.</li>
+<li>非圆轨道用 <span class="math inline">\(E_{total}=\frac12mv^2-GMm/r\)</span>；不要套仅适用于圆轨道的 <span class="math inline">\(E=-GMm/(2r)\)</span>。 / Retain the general energy equation for an elliptical trajectory.</li>
+<li>若无耗散，初速度相同的不同质量岩石达到同一高度，因动能、势能都与物体质量成正比。 / Demonstrate cancellation rather than merely asserting equal height.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/6441b05956cdfc4053.html">PH03 · 202101 · Q01</a>；<a class="internal-link" href="/notes/5188be0f5de4564c20.html">PH03 · 202406 · Q03</a>；<a class="internal-link" href="/notes/b0dd5a56e77974901e.html">PH03 · 202601 · Q05</a>；<a class="internal-link" href="/notes/22f4584378191fc1f9.html">PH03 · 202501 · Q02</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (20)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/ce962afa6912b8850a.html">PH03 · 201806 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/20f1db04697035a07d.html">PH03 · 201806 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/09434428a240f600f4.html">PH03 · 201901 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b903b48e293d51c938.html">PH03 · 201901 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/13c7531b39a0071cd6.html">PH03 · 201906 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1b388c56096667b06d.html">PH03 · 201906 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0cd1d369a59399708e.html">PH03 · 201906 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6441b05956cdfc4053.html">PH03 · 202101 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7d1ac1335fd886c858.html">PH03 · 202201 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/bf96b0624dba74dbbf.html">PH03 · 202301 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5e8d02c68e388198ce.html">PH03 · 202401 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ef9b402054d72df484.html">PH03 · 202401 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1fa36e5f2030de43d0.html">PH03 · 202401 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5188be0f5de4564c20.html">PH03 · 202406 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/22f4584378191fc1f9.html">PH03 · 202501 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6db5d3ae76855b9c57.html">PH03 · 202501 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/41e6d23a6392ba0890.html">PH03 · 202506 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b0dd5a56e77974901e.html">PH03 · 202601 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7508294c4d0715cea0.html">PH03 · 202606 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f3dd0210aad2c6a780.html">PH03 · 202606 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/f7c6092e7cb47bdc8b.html">U3逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/a77e41d9e48f4f6326.html">课件例题与复述</a> · <a class="internal-link" href="/notes/122fdf24ae94992fbd.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/883c37a9e0a6342d56.html">3.7.2 引力场强与场线</a>：势梯度 → 场 / potential gradient</li>
+<li><a class="internal-link" href="/notes/50caf1b7636c6a4d17.html">3.7.4 卫星轨道、周期与能量</a>：轨道能量收支 / orbital energy</li>
+<li><a class="internal-link" href="/notes/92b471d35e67ce0e8c.html">3.8.3 电势、电势能与等势面</a>：引力势与引力势能 ↔ 电势、电势能与等势面</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.7.3。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 302–309；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/3c681ab645ff3bb6b1.html">U3PM03 径向引力场与卫星 - Satellite and orbit</a></li>
+</ul>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/4d2a010a3386bd1dae.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/ade9c8b61186dd6e3e.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/2c4b46e582bcf040d3.html">跨单元知识联系 / Cross-unit knowledge</a></li><li><a href="/notes/da867bb75d0c7de166.html">U3 场及其影响 / Fields and their consequences</a></li><li><a href="/notes/11fbe687130c053bc6.html">U3 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/c8418eb48964cf69c4.html">U3 考纲框架 / Specification map</a></li><li><a href="/notes/f5cbf8e1a9934f3ffc.html">3.7.3 引力势 / GRAVITATIONAL POTENTIAL</a></li><li><a href="/notes/883c37a9e0a6342d56.html">3.7.2 引力场强与场线 / Gravitational field strength</a></li><li><a href="/notes/50caf1b7636c6a4d17.html">3.7.4 卫星轨道、周期与能量 / Orbits of planets and satellites</a></li><li><a href="/notes/92b471d35e67ce0e8c.html">3.8.3 电势、电势能与等势面 / Electric potential</a></li><li><a href="/notes/c3a93f6df6affaaa98.html">gravitational potential — 引力势</a></li><li><a href="/notes/949aea6277123fab5b.html">gravitational potential difference — 引力势差</a></li><li><a href="/notes/1b30e85356a76ea346.html">equipotential surface — 等势面</a></li><li><a href="/notes/70af9f4d38e4bcdff8.html">U3 来源与范围 / Sources and scope</a></li><li><a href="/notes/f7c6092e7cb47bdc8b.html">U3 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/9fc7be13a5240e443f.html">3.6.1 圆周运动与向心力 真题练习 / Past-paper practice</a></li><li><a href="/notes/7c5b338f8322152940.html">3.7.1 万有引力定律 真题练习 / Past-paper practice</a></li><li><a href="/notes/3421b039992ec5e42b.html">3.7.2 引力场强与场线 真题练习 / Past-paper practice</a></li><li><a href="/notes/122fdf24ae94992fbd.html">3.7.3 引力势与引力势能 真题练习 / Past-paper practice</a></li><li><a href="/notes/ece690aed34af4c8f1.html">3.7.4 卫星轨道、周期与能量 真题练习 / Past-paper practice</a></li><li><a href="/notes/30b738f4a07790e843.html">3.8.3 电势、电势能与等势面 真题练习 / Past-paper practice</a></li><li><a href="/notes/d90d9353211feec3fc.html">PH03 201806 / Paper index</a></li><li><a href="/notes/ce962afa6912b8850a.html">PH03 201806 Q02</a></li><li><a href="/notes/20f1db04697035a07d.html">PH03 201806 Q12</a></li><li><a href="/notes/0b84b05c25fbc49f80.html">PH03 201901 / Paper index</a></li><li><a href="/notes/09434428a240f600f4.html">PH03 201901 Q14</a></li><li><a href="/notes/b903b48e293d51c938.html">PH03 201901 Q17</a></li><li><a href="/notes/c770501e3c411d9d06.html">PH03 201906 / Paper index</a></li><li><a href="/notes/13c7531b39a0071cd6.html">PH03 201906 Q01</a></li><li><a href="/notes/1b388c56096667b06d.html">PH03 201906 Q15</a></li><li><a href="/notes/0cd1d369a59399708e.html">PH03 201906 Q20</a></li><li><a href="/notes/9056240cebaa303286.html">PH03 202101 / Paper index</a></li><li><a href="/notes/6441b05956cdfc4053.html">PH03 202101 Q01</a></li><li><a href="/notes/02136a2e67ef51d964.html">PH03 202201 / Paper index</a></li><li><a href="/notes/7d1ac1335fd886c858.html">PH03 202201 Q05</a></li><li><a href="/notes/457457bc96f55b4adb.html">PH03 202301 / Paper index</a></li><li><a href="/notes/bf96b0624dba74dbbf.html">PH03 202301 Q10</a></li><li><a href="/notes/db82f6247ae551f056.html">PH03 202401 / Paper index</a></li><li><a href="/notes/5e8d02c68e388198ce.html">PH03 202401 Q05</a></li><li><a href="/notes/ef9b402054d72df484.html">PH03 202401 Q08</a></li><li><a href="/notes/1fa36e5f2030de43d0.html">PH03 202401 Q12</a></li><li><a href="/notes/dd32a67647d1347e67.html">PH03 202406 / Paper index</a></li><li><a href="/notes/5188be0f5de4564c20.html">PH03 202406 Q03</a></li><li><a href="/notes/1f07f31e3f2612fc4a.html">PH03 202501 / Paper index</a></li><li><a href="/notes/22f4584378191fc1f9.html">PH03 202501 Q02</a></li><li><a href="/notes/6db5d3ae76855b9c57.html">PH03 202501 Q12</a></li><li><a href="/notes/ae5bee24e0ee1a0c3a.html">PH03 202506 / Paper index</a></li><li><a href="/notes/41e6d23a6392ba0890.html">PH03 202506 Q04</a></li><li><a href="/notes/676e3cac4eb704e930.html">PH03 202601 / Paper index</a></li><li><a href="/notes/b0dd5a56e77974901e.html">PH03 202601 Q05</a></li><li><a href="/notes/bcd518c140cf55fadf.html">PH03 202606 / Paper index</a></li><li><a href="/notes/7508294c4d0715cea0.html">PH03 202606 Q04</a></li><li><a href="/notes/f3dd0210aad2c6a780.html">PH03 202606 Q08</a></li><li><a href="/notes/4d2a010a3386bd1dae.html">3.7.3 引力势与引力势能 / Gravitational potential · 概念考察练习 / Concept practice</a></li><li><a href="/notes/9e4e3cf7cd114329ee.html">PH03 · 2021年1月 / January 2021 · Q01.1 · Meaning of gravitational potential / 引力势的含义</a></li><li><a href="/notes/ea360fa12e84d7fceb.html">PH03 · 2025年6月 / June 2025 · Q04.1 · Gravitational potential / 引力势</a></li><li><a href="/notes/f414de3ee748519937.html">U3 通用规范与有效数字 / General conventions and significant figures</a></li><li><a href="/notes/5cc9287fea3846d511.html">U3 图像与示意图 / Graphs and diagrams</a></li><li><a href="/notes/0a4fd575ab896bbadf.html">U3 陈述、解释与比较 / Statements explanations and comparisons</a></li><li><a href="/notes/198bbaaf957396329b.html">PH03 2021年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/bb532cc879687b2468.html">PH03 2024年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/fb1b7ae2795242e907.html">PH03 · 2024年6月 / June 2024 · Q03.2 · Potential-energy maximum between bodies / 两天体间的势能极大值</a></li><li><a href="/notes/ade9c8b61186dd6e3e.html">3.7.3 引力势与引力势能 / Gravitational potential · 论述题练习 / Written-response practice</a></li><li><a href="/notes/663c6aceaaaf45badd.html">PH03 · 2018年6月 / June 2018 · Q02.2 · Negative gravitational potential / 负引力势</a></li><li><a href="/notes/bca971018eb64f1aac.html">PH03 · 2021年1月 / January 2021 · Q01.5 · Ejected rocks of different masses / 不同质量岩石抛出</a></li><li><a href="/notes/2e4221fb0e321fa946.html">PH03 · 2024年6月 / June 2024 · Q03.1 · Negative gravitational energy / 负引力势能</a></li><li><a href="/notes/c34df142b961b7e0ab.html">PH03 · 2025年1月 / January 2025 · Q02.4 · Motion on an equipotential / 沿等势面的运动</a></li><li><a href="/notes/f099c28c47c4fea0ea.html">PH03 · 2026年1月 / January 2026 · Q05.3 · Nonzero potential at zero field / 零场强处的非零势</a></li><li><a href="/notes/8bd14ecd8a46abd357.html">PH03 · 2019年6月 / June 2019 · Q01.4 · Energy of a higher orbit / 较高轨道的能量</a></li><li><a href="/notes/c00729b95e75d798f2.html">PH03 · 2022年6月 / June 2022 · Q02.2 · Negative orbital total energy / 负的轨道总能量</a></li><li><a href="/notes/cbb6d7f016238275b2.html">PH03 · 2023年1月 / January 2023 · Q07.5 · Positive orbital total energy / 正的轨道总能量</a></li><li><a href="/notes/3c681ab645ff3bb6b1.html">径向引力场与卫星 / Satellite and orbit</a></li><li><a href="/notes/bb43d9e36676e5af2a.html">U3 3.7 引力场与卫星词汇 / Vocabulary</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U3/02 知识节点/3.7 引力场与卫星/3.7.3 引力势与引力势能 - Gravitational potential.md","url":"/notes/bde9238ff0910a56e0.html","unit":"U3"}</script></body></html>

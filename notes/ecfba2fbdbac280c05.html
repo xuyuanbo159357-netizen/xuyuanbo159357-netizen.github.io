@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.11.4 气体分子运动论与布朗运动 / Kinetic theory of gases · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U4/02 知识节点/3.11 热学</div><h1 id="h-8fa2e3aced3b388ea5">3.11.4 气体分子运动论与布朗运动 / Kinetic theory of gases</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/778b89793fd4b2dbc6.html">3.11.4</a>　｜　<a class="internal-link" href="/notes/b10222e15f0fcc973d.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>压强 / pressure</strong></td>
+<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(\mathrm{Pa}\)</span></td>
+<td>不是动量 p / Not momentum.</td>
+</tr>
+<tr>
+<td><strong>体积 / volume</strong></td>
+<td><span class="math inline">\(V\)</span></td>
+<td><span class="math inline">\(\mathrm{m^3}\)</span></td>
+<td>与电势、电势差 V 区分 / Not potential or voltage here.</td>
+</tr>
+<tr>
+<td><strong>分子数 / number of molecules</strong></td>
+<td><span class="math inline">\(N\)</span></td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+<td>不是以 mol 表示的物质的量 / A count, not amount in mol.</td>
+</tr>
+<tr>
+<td><strong>单个分子质量 / mass of one molecule</strong></td>
+<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+<td>分子运动论中的 m 不是整团气体的质量 / Not the total gas mass.</td>
+</tr>
+<tr>
+<td><strong>分子方均根速率 / root mean square molecular speed</strong></td>
+<td><span class="math inline">\(c_{\mathrm{rms}}\)</span></td>
+<td><span class="math inline">\(\mathrm{m\,s^{-1}}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>分子平均平动动能 / mean translational kinetic energy</strong></td>
+<td><span class="math inline">\(\overline E_k\)</span></td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+<td>单个分子的平均量 / Mean per molecule.</td>
+</tr>
+<tr>
+<td><strong>热力学温度 / thermodynamic temperature</strong></td>
+<td><span class="math inline">\(T\)</span></td>
+<td><span class="math inline">\(\mathrm{K}\)</span></td>
+<td>气体定律用 K；与周期 T 区分 / Gas laws use kelvin; not period.</td>
+</tr>
+<tr>
+<td><strong>玻尔兹曼常量 / Boltzmann constant</strong></td>
+<td><span class="math inline">\(k_B\)</span></td>
+<td><span class="math inline">\(\mathrm{J\,K^{-1}}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>摩尔气体常量 / molar gas constant</strong></td>
+<td><span class="math inline">\(R\)</span></td>
+<td><span class="math inline">\(\mathrm{J\,mol^{-1}\,K^{-1}}\)</span></td>
+<td>不是电阻或半径 R / Not resistance or radius.</td>
+</tr>
+<tr>
+<td><strong>阿伏伽德罗常量 / Avogadro constant</strong></td>
+<td><span class="math inline">\(N_A\)</span></td>
+<td><span class="math inline">\(\mathrm{mol^{-1}}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/afa604753e96426db0.html">Brownian motion — 布朗运动</a></li>
+<li><a class="internal-link" href="/notes/1aa5154e2daae92abd.html">root mean square speed — 方均根速率</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/afa604753e96426db0.html#h-485f2ec53559b6043e">↗ Brownian motion — 布朗运动</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The random motion of small visible particles suspended in a fluid, caused by unequal collisions with the fluid molecules.</p>
+<p><strong>中文：</strong> 悬浮小颗粒因流体分子不均衡碰撞而产生的无规则运动。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/1aa5154e2daae92abd.html#h-485f2ec53559b6043e">↗ root mean square speed — 方均根速率</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The square root of the mean of the squared molecular speeds.</p>
+<p><strong>中文：</strong> 分子速率平方的平均值再开平方。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p>定义按考纲与指定教材概括；本页未列出可直接对应的定义题评分条目。 Definitions are summarised from the specification and textbook; no directly matched definition-item citation is claimed here.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p>这里 m 为一个分子质量，不是整个气体质量。</p>
+<p><span class="math inline">\(pV=\frac13Nm c_{\mathrm{rms}}^2\)</span>; <span class="math inline">\(\overline E_k=\frac12m c_{\mathrm{rms}}^2=\frac32k_BT=\frac32RT/N_A\)</span>.</p>
+<p>给出多个分子速率时，先分别平方、取平均，再开方；带正负号的速度平方后得到同样的速率平方。</p>
+<p>For N listed molecular speeds, <span class="math inline">\(c_{\mathrm{rms}}=\sqrt{(c_1^2+\cdots+c_N^2)/N}\)</span>. Squaring signed velocities gives the same speed squares.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>模型假设：大量体积可忽略的质点，随机各向同性运动，碰撞外无分子间作用力，碰撞时间很短且弹性，满足牛顿定律。</p>
+<p>Model: many point particles with negligible own volume; random isotropic motion; no intermolecular force except during collisions; short-duration elastic collisions; Newton’s laws apply.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-df39029ec009a65c2b">布朗运动与模型假设 / Brownian motion and assumptions</h3>
+<p>显微镜看到的是悬浮微粒的无规则运动，不是直接看到气体分子；运动由周围不可见分子不均衡、随机碰撞造成，支持原子分子存在。温度升高时碰撞更剧烈。</p>
+<p>Brownian motion is the observed random motion of suspended particles, caused by unequal random molecular impacts. It is evidence for molecules, not direct observation of individual gas molecules.</p>
+<p>气体定律来自实验，是经验关系；分子运动论用微观模型解释。基本假设：大量粒子持续随机运动，粒子体积可忽略，除碰撞外相互作用可忽略，碰撞弹性且持续时间短，运动方向统计上各向同性。平均动能与温度的关系由模型和气体方程得到，不把它当独立碰撞假设。</p>
+<p>Gas laws are empirical; kinetic theory explains them through many randomly moving particles of negligible volume, negligible forces between collisions, short elastic collisions and statistical isotropy.</p>
+<h3 id="h-9f1c722a9aa5e9e87d">压强的动量解释 / Pressure from momentum transfer</h3>
+<p>分子碰壁改变动量，壁受到反向冲量；单位时间总动量变化给力，再除面积得压强。恒容升温：分子平均速率增大，碰撞更频繁且每次平均动量改变更大，压强上升。</p>
+<p>Wall collisions transfer momentum. Total momentum change per second gives force and hence pressure. At fixed volume, heating increases impact frequency and typical momentum transfer, raising pressure.</p>
+<p>等温减小体积：平均动能不变，数密度及碰壁频率增大，压强升高。恒压加热：气体膨胀降低数密度，以抵消更快分子造成的作用。</p>
+<p>At constant temperature, compression increases number density and collision frequency. At constant pressure, heating causes expansion that offsets the stronger molecular impacts.</p>
+<h3 id="h-65c822ee4d845dc93b">方均根速率和平均动能 / RMS speed and mean energy</h3>
+<p><span class="math inline">\(c_{\rm rms}=\sqrt{\overline{c^2}}\)</span>，不是平均速率，也不是均方速率本身。<span class="math inline">\(pV=\tfrac13Nm_0c_{\rm rms}^2\)</span>，其中 <span class="math inline">\(m_0\)</span> 为一个分子的质量；也可写 <span class="math inline">\(p=\rho c_{\rm rms}^2/3\)</span>。</p>
+<p>RMS speed is the square root of mean squared speed. In the kinetic equation use individual molecular mass; equivalently pressure equals one third of density times mean squared speed.</p>
+<p><span class="math inline">\(\tfrac12m_0c_{\rm rms}^2=\tfrac32kT\)</span>，所以 <span class="math inline">\(c_{\rm rms}=\sqrt{3RT/M}\)</span>。同温度不同气体平均平动动能相同，轻分子方均根速率较大。各分子能量并不相同。</p>
+<p>At the same temperature gases share the same mean translational kinetic energy, but lighter molecules have greater rms speeds. Individual molecular energies vary.</p>
+<p>在本考纲的单原子理想气体模型中，内能为随机平动动能，<span class="math inline">\(U=\tfrac32NkT=\tfrac32nRT\)</span>；不能无条件把该式作为多原子真实气体总内能。</p>
+<p>For the monatomic ideal-gas model, internal energy is random translational kinetic energy. Do not unconditionally extend <span class="math inline">\(3nRT/2\)</span> to all real or polyatomic gases.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/71907ca6349f90e588.html#h-ef2295dc72246845e1">3.11.4</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/b257f9a2272e6d252b.png" target="_blank"><img alt="3.11.4-S011-P01" decoding="async" loading="lazy" src="/media/b257f9a2272e6d252b.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/3efaa914fd67f7e5c3.png" target="_blank"><img alt="3.11.4-S012-P01" decoding="async" loading="lazy" src="/media/3efaa914fd67f7e5c3.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/5dbaa32da0a2956a0d.png" target="_blank"><img alt="3.11.4-S015-P01" decoding="async" loading="lazy" src="/media/5dbaa32da0a2956a0d.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>由碰撞解释气体定律，用单分子质量求速率或温度，并区分经验规律与理论模型。</p>
+<p>Explain Boyle’s and pressure laws from collisions; calculate speed or temperature using single-molecule mass. Contrast empirical gas laws with the theoretical molecular model.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>方均根速率不等于速率算术平均；烟粒不是气体分子本身。</p>
+<p>Rms speed is not the arithmetic mean speed. Avoid saying the observed smoke grains are the gas molecules themselves.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-ae67760eda5a246843">3.11.4 方法 1 · 微观压强、均方根速率与布朗证据 / Pressure, rms speed and Brownian evidence</h3>
+<p><strong>压强解释链 / Pressure chain:</strong> 分子撞壁 → 分子动量改变 → 壁对分子的力为动量变化率 → 分子对壁反作用力 → 单位面积力为压强。 / Include Newton's third law and area.</p>
+<ol>
+<li><span class="math inline">\(c_{rms}=\sqrt{\sum c_i^2/N}\)</span>：先平方、平均、开方，不能平均速度后平方。随机气体平均速度矢量可为零，而均方根速率不为零。 / Distinguish mean velocity from rms speed.</li>
+<li>平均平动动能 <span class="math inline">\(\frac12m_0c_{rms}^2=\frac32kT\)</span>；同温不同粒子平均平动动能相同，较重粒子 <span class="math inline">\(c_{rms}\)</span> 较小。相同 <span class="math inline">\(N,V,T\)</span> 的两气体贡献相同压强。 / Do not infer greater partial pressure solely from greater molecular mass.</li>
+<li>理想假设：分子体积相对容器可忽略、碰撞弹性、碰撞外相互作用可忽略、运动随机；不是质量可忽略、所有速率相同。 / Use the correct assumptions.</li>
+<li>显微镜直接看到的是<strong>烟粒</strong>随机运动；空气分子不可见，其不均匀碰撞由烟粒运动推断。 / Separate observation from inference.</li>
+<li>等离子体有长程电磁作用，不能无条件套无相互作用的理想模型；平均能量以下不代表所有粒子能量都低，能量分布尾端可有聚变。 / State why the idealisation may fail.</li>
+<li>多原子非理想气体还可有转动、振动及相互作用能；<span class="math inline">\(3NkT/2\)</span> 不应当作所有真实气体的总内能。 / Restrict the monatomic internal-energy formula.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/cac52c560943fba1a0.html">PH04 · 202501 · Q02</a>；<a class="internal-link" href="/notes/e9c8aa585c0bfad95e.html">PH04 · 202306 · Q01</a>；<a class="internal-link" href="/notes/8fc09c74eff704c493.html">PH04 · 202101 · Q01</a>；<a class="internal-link" href="/notes/dab2740d338ce40ec7.html">PH04 · 202601 · Q11</a>；<a class="internal-link" href="/notes/5a6b1a36565852c138.html">PH04 · 202406 · Q03</a>；<a class="internal-link" href="/notes/b64f1011eaa73c04f4.html">PH04 · 202406 · Q07</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (44)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/062164a83df36ad897.html">PH04 · 2018 specimen paper · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/fc482d5ee8f86002fc.html">PH04 · 2018 specimen paper · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2811ed38bbb575396f.html">PH04 · 2018 specimen paper · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6fca7f9e39dd5965cb.html">PH04 · 2018 specimen paper · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0cf44ee8b7884709ef.html">PH04 · 2018 specimen paper · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b7b80b74b34097c56b.html">PH04 · 201806 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ca4023990d07a7df67.html">PH04 · 201806 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f1d2ac495a7a763eb8.html">PH04 · 201806 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/775b22ac4be4dcd3f9.html">PH04 · 201806 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/11d9b44d77afbde609.html">PH04 · 201806 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/04cc9c0a1d5d1e55c3.html">PH04 · 201901 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/62dd62e3744a2dff71.html">PH04 · 201901 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dd56a426b334c2a7bc.html">PH04 · 201901 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1129ae619fe8f131b9.html">PH04 · 201901 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/137cc9eca1fc5b5114.html">PH04 · 201901 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e7567b46e950b4a994.html">PH04 · 201901 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ebcd599eb369415c57.html">PH04 · 201906 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0dcd126baab51138ae.html">PH04 · 201906 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8af45648228f82e41d.html">PH04 · 201906 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7e4df6753962e837d1.html">PH04 · 201906 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/53553da035646e279f.html">PH04 · 202001 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1a50f3c0caca76a748.html">PH04 · 202001 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f3fef547f3e1ccb945.html">PH04 · 202001 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8fc09c74eff704c493.html">PH04 · 202101 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/92ad075fccda65e388.html">PH04 · 202101 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8e61e167cd6f296e33.html">PH04 · 202201 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/408195c1fc788b1d2f.html">PH04 · 202201 · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/06e502af3179a2410a.html">PH04 · 202206 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4a5a75907a884576f3.html">PH04 · 202301 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/59fcbfdaa2e5325b15.html">PH04 · 202301 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e9c8aa585c0bfad95e.html">PH04 · 202306 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5a8180f0e4215eba42.html">PH04 · 202306 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/fa830ec2473e0ab67c.html">PH04 · 202401 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9d72cbb09f3cf4c6a2.html">PH04 · 202401 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5a6b1a36565852c138.html">PH04 · 202406 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b64f1011eaa73c04f4.html">PH04 · 202406 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/da4a53c8778f0fd151.html">PH04 · 202406 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cac52c560943fba1a0.html">PH04 · 202501 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/332f98a9320c84df73.html">PH04 · 202501 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1cc0043795d9ebee04.html">PH04 · 202506 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/248641b111364a6c24.html">PH04 · 202506 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cf33a67cc770753c97.html">PH04 · 202601 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dab2740d338ce40ec7.html">PH04 · 202601 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/288192a3eae7f22d36.html">PH04 · 202606 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/fca3a9ecc76aba6c37.html">U4逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/be04b82683585385ac.html">课件例题与复述</a> · <a class="internal-link" href="/notes/25e6e590f61f68b21e.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/dc01c66abc2191edb5.html">3.11.1 内能、热力学第一定律与比热容</a>：气体分子运动论与布朗运动 ↔ 内能、热力学第一定律与比热容</li>
+<li><a class="internal-link" href="/notes/c857d21ff7767970be.html">3.11.3 气体定律与理想气体</a>：宏观规律 → 分子模型 / gas laws to molecules</li>
+<li><a class="internal-link" href="/notes/4b32fd2cee3ed6ba87.html">3.12.5 核聚变、等离子体与太阳氢循环</a>：气体分子运动论与布朗运动 ↔ 核聚变、等离子体与太阳氢循环</li>
+<li><a class="internal-link" href="/notes/88eca5b9d3ed5730ae.html">U1 3.2.6</a>：本节所需基础 / prerequisite</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.11.4。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 413–416；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/4f9cbaf63e52cd39f3.html">U4PM03 气体状态与分子运动 - Pressure volume and temperature</a></li>
+</ul>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/8981dd1d34658dc258.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/b2d817220df7dae436.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/2c4b46e582bcf040d3.html">跨单元知识联系 / Cross-unit knowledge</a></li><li><a href="/notes/88eca5b9d3ed5730ae.html">3.2.6 动量 / MOMENTUM</a></li><li><a href="/notes/b10222e15f0fcc973d.html">U4 能量与能源 / Energy and energy resources</a></li><li><a href="/notes/71907ca6349f90e588.html">U4 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/a593b4e850d1c0eb26.html">U4 考纲框架 / Specification map</a></li><li><a href="/notes/778b89793fd4b2dbc6.html">3.11.4 气体分子运动论 / KINETIC THEORY OF GASES</a></li><li><a href="/notes/dc01c66abc2191edb5.html">3.11.1 内能、热力学第一定律与比热容 / Energy transfer by heating and doing work</a></li><li><a href="/notes/c857d21ff7767970be.html">3.11.3 气体定律与理想气体 / Ideal gases</a></li><li><a href="/notes/4b32fd2cee3ed6ba87.html">3.12.5 核聚变、等离子体与太阳氢循环 / Nuclear fusion</a></li><li><a href="/notes/afa604753e96426db0.html">Brownian motion — 布朗运动</a></li><li><a href="/notes/1aa5154e2daae92abd.html">root mean square speed — 方均根速率</a></li><li><a href="/notes/ec429c44fa1441d79d.html">U4 来源与范围 / Sources and scope</a></li><li><a href="/notes/fca3a9ecc76aba6c37.html">U4 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/1a5715c9277a1a1f4e.html">3.11.1 内能、热力学第一定律与比热容 真题练习 / Past-paper practice</a></li><li><a href="/notes/909825fc7ee0d04c3f.html">3.11.3 气体定律与理想气体 真题练习 / Past-paper practice</a></li><li><a href="/notes/25e6e590f61f68b21e.html">3.11.4 气体分子运动论与布朗运动 真题练习 / Past-paper practice</a></li><li><a href="/notes/71b561ecd188fb989e.html">3.12.5 核聚变、等离子体与太阳氢循环 真题练习 / Past-paper practice</a></li><li><a href="/notes/9134aa21b7a70c3876.html">PH04 2018 specimen paper / Paper index</a></li><li><a href="/notes/062164a83df36ad897.html">PH04 2018 specimen paper Q04</a></li><li><a href="/notes/fc482d5ee8f86002fc.html">PH04 2018 specimen paper Q08</a></li><li><a href="/notes/2811ed38bbb575396f.html">PH04 2018 specimen paper Q10</a></li><li><a href="/notes/6fca7f9e39dd5965cb.html">PH04 2018 specimen paper Q11</a></li><li><a href="/notes/0cf44ee8b7884709ef.html">PH04 2018 specimen paper Q14</a></li><li><a href="/notes/cba8c48f49700cba19.html">PH04 201806 / Paper index</a></li><li><a href="/notes/b7b80b74b34097c56b.html">PH04 201806 Q06</a></li><li><a href="/notes/ca4023990d07a7df67.html">PH04 201806 Q09</a></li><li><a href="/notes/f1d2ac495a7a763eb8.html">PH04 201806 Q10</a></li><li><a href="/notes/775b22ac4be4dcd3f9.html">PH04 201806 Q11</a></li><li><a href="/notes/11d9b44d77afbde609.html">PH04 201806 Q15</a></li><li><a href="/notes/22bfd90e76ebca5d69.html">PH04 201901 / Paper index</a></li><li><a href="/notes/04cc9c0a1d5d1e55c3.html">PH04 201901 Q07</a></li><li><a href="/notes/62dd62e3744a2dff71.html">PH04 201901 Q08</a></li><li><a href="/notes/dd56a426b334c2a7bc.html">PH04 201901 Q13</a></li><li><a href="/notes/1129ae619fe8f131b9.html">PH04 201901 Q14</a></li><li><a href="/notes/137cc9eca1fc5b5114.html">PH04 201901 Q15</a></li><li><a href="/notes/e7567b46e950b4a994.html">PH04 201901 Q16</a></li><li><a href="/notes/7059cfa3649f4d7808.html">PH04 201906 / Paper index</a></li><li><a href="/notes/ebcd599eb369415c57.html">PH04 201906 Q01</a></li><li><a href="/notes/0dcd126baab51138ae.html">PH04 201906 Q15</a></li><li><a href="/notes/8af45648228f82e41d.html">PH04 201906 Q16</a></li><li><a href="/notes/7e4df6753962e837d1.html">PH04 201906 Q17</a></li><li><a href="/notes/73109e3a35371f3e82.html">PH04 202001 / Paper index</a></li><li><a href="/notes/53553da035646e279f.html">PH04 202001 Q13</a></li><li><a href="/notes/1a50f3c0caca76a748.html">PH04 202001 Q17</a></li><li><a href="/notes/f3fef547f3e1ccb945.html">PH04 202001 Q20</a></li><li><a href="/notes/33e687d25c32175d0a.html">PH04 202101 / Paper index</a></li><li><a href="/notes/8fc09c74eff704c493.html">PH04 202101 Q01</a></li><li><a href="/notes/92ad075fccda65e388.html">PH04 202101 Q20</a></li><li><a href="/notes/9df8a8e42d000e437b.html">PH04 202201 / Paper index</a></li><li><a href="/notes/8e61e167cd6f296e33.html">PH04 202201 Q13</a></li><li><a href="/notes/408195c1fc788b1d2f.html">PH04 202201 Q21</a></li><li><a href="/notes/fc2480a9151f9e22dd.html">PH04 202206 / Paper index</a></li><li><a href="/notes/06e502af3179a2410a.html">PH04 202206 Q13</a></li><li><a href="/notes/d5879bd7a67ae3bd84.html">PH04 202301 / Paper index</a></li><li><a href="/notes/4a5a75907a884576f3.html">PH04 202301 Q09</a></li><li><a href="/notes/59fcbfdaa2e5325b15.html">PH04 202301 Q11</a></li><li><a href="/notes/4bb95d4a34b71f5d37.html">PH04 202306 / Paper index</a></li><li><a href="/notes/e9c8aa585c0bfad95e.html">PH04 202306 Q01</a></li><li><a href="/notes/5a8180f0e4215eba42.html">PH04 202306 Q11</a></li><li><a href="/notes/7167f5c32b71342eba.html">PH04 202401 / Paper index</a></li><li><a href="/notes/fa830ec2473e0ab67c.html">PH04 202401 Q02</a></li><li><a href="/notes/9d72cbb09f3cf4c6a2.html">PH04 202401 Q13</a></li><li><a href="/notes/182027c42362c64584.html">PH04 202406 / Paper index</a></li><li><a href="/notes/5a6b1a36565852c138.html">PH04 202406 Q03</a></li><li><a href="/notes/b64f1011eaa73c04f4.html">PH04 202406 Q07</a></li><li><a href="/notes/da4a53c8778f0fd151.html">PH04 202406 Q12</a></li><li><a href="/notes/f216bf20bcf67e2be7.html">PH04 202501 / Paper index</a></li><li><a href="/notes/cac52c560943fba1a0.html">PH04 202501 Q02</a></li><li><a href="/notes/332f98a9320c84df73.html">PH04 202501 Q07</a></li><li><a href="/notes/c35645553887462192.html">PH04 202506 / Paper index</a></li><li><a href="/notes/1cc0043795d9ebee04.html">PH04 202506 Q11</a></li><li><a href="/notes/248641b111364a6c24.html">PH04 202506 Q18</a></li><li><a href="/notes/38cff5d9600d6f31af.html">PH04 202601 / Paper index</a></li><li><a href="/notes/cf33a67cc770753c97.html">PH04 202601 Q08</a></li><li><a href="/notes/dab2740d338ce40ec7.html">PH04 202601 Q11</a></li><li><a href="/notes/427a7cbd9b95b6c67e.html">PH04 202606 / Paper index</a></li><li><a href="/notes/288192a3eae7f22d36.html">PH04 202606 Q02</a></li><li><a href="/notes/1c85a162198f35ebe8.html">PH04 · 2019年1月 / January 2019 · Q08 · Molecular energy during boiling / 汽化时的分子能量</a></li><li><a href="/notes/8981dd1d34658dc258.html">3.11.4 气体分子运动论与布朗运动 / Kinetic theory of gases · 概念考察练习 / Concept practice</a></li><li><a href="/notes/9d8ded29c7e6318e3e.html">PH04 · 2024年6月 / June 2024 · Q12 · Brownian-motion observations / 布朗运动观察</a></li><li><a href="/notes/08676a1bbed08aefa8.html">PH04 · 2024年6月 / June 2024 · Q03.4 · Plasma versus an ideal gas / 等离子体与理想气体</a></li><li><a href="/notes/ba252a311e6bf2624a.html">PH04 · 2025年1月 / January 2025 · Q02.3 · Partial pressures of different gases / 不同气体的分压</a></li><li><a href="/notes/b848080669dd3baf68.html">PH04 · 2026年1月 / January 2026 · Q01.4 · Cold container lid / 冷容器盖难以开启</a></li><li><a href="/notes/b2d817220df7dae436.html">3.11.4 气体分子运动论与布朗运动 / Kinetic theory of gases · 论述题练习 / Written-response practice</a></li><li><a href="/notes/bdbec239ada01d694d.html">PH04 · 2023年6月 / June 2023 · Q01 · Brownian-motion evidence / 布朗运动证据</a></li><li><a href="/notes/402e9b9609200ae307.html">PH04 · 2025年1月 / January 2025 · Q02.1 · Molecular origin of gas pressure / 气体压强的分子起源</a></li><li><a href="/notes/4f9cbaf63e52cd39f3.html">气体状态与分子运动 / Pressure volume and temperature</a></li><li><a href="/notes/324356b8c74a5ab095.html">U4 3.11 热学词汇 / Vocabulary</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U4/02 知识节点/3.11 热学/3.11.4 气体分子运动论与布朗运动 - Kinetic theory of gases.md","url":"/notes/ecfba2fbdbac280c05.html","unit":"U4"}</script></body></html>

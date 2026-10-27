@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.9.2 放射性指数衰变 / Exponential changes in radioactivity · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.9 指数变化</div><h1 id="h-c00fb0e733268f66ff">3.9.2 放射性指数衰变 / Exponential changes in radioactivity</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/4e80b719788300d426.html">3.9.2</a>　｜　<a class="internal-link" href="/notes/da867bb75d0c7de166.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>衰变常量 / decay constant</strong></td>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td><span class="math inline">\(\mathrm{s^{-1}}\)</span></td>
+<td>不是波长 λ；衰变概率每单位时间 / Not wavelength.</td>
+</tr>
+<tr>
+<td><strong>活度 / activity</strong></td>
+<td><span class="math inline">\(A\)</span></td>
+<td><span class="math inline">\(\mathrm{Bq}\)</span></td>
+<td>1 Bq = 1 s⁻¹；不是振幅或面积 A / Not amplitude or area.</td>
+</tr>
+<tr>
+<td><strong>半衰期 / half-life</strong></td>
+<td><span class="math inline">\(T_{1/2},\ t_{1/2}\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td>两种记号均常见 / Both forms are used.</td>
+</tr>
+<tr>
+<td><strong>未衰变核数、初始核数 / undecayed and initial nuclei</strong></td>
+<td><span class="math inline">\(N,\ N_0\)</span></td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+<td>N₀ 为 t=0 的核数 / N₀ is the initial number.</td>
+</tr>
+<tr>
+<td><strong>时间、时间间隔 / time, time interval</strong></td>
+<td><span class="math inline">\(t,\ \Delta t\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>质量 / mass</strong></td>
+<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+<td>与重力不同 / Not weight.</td>
+</tr>
+<tr>
+<td><strong>摩尔质量 / molar mass</strong></td>
+<td><span class="math inline">\(M\)</span></td>
+<td><span class="math inline">\(\mathrm{kg\,mol^{-1}}\)</span></td>
+<td>若质量用 g，摩尔质量需同步用 g mol⁻¹ / Keep mass and molar-mass units consistent.</td>
+</tr>
+<tr>
+<td><strong>阿伏伽德罗常量 / Avogadro constant</strong></td>
+<td><span class="math inline">\(N_A\)</span></td>
+<td><span class="math inline">\(\mathrm{mol^{-1}}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>计数率 / count rate</strong></td>
+<td><span class="math inline">\(R\)</span></td>
+<td><span class="math inline">\(\mathrm{s^{-1}}\)</span></td>
+<td>R_measured、R_bg、R_corrected 分别为实测、背景、修正计数率 / Subscripts identify measured, background and corrected rates.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/057d332025f674344a.html">decay constant — 衰变常量</a></li>
+<li><a class="internal-link" href="/notes/f180b5d369ea8c5833.html">activity — 活度</a></li>
+<li><a class="internal-link" href="/notes/54aa37168812fed1b5.html">half-life — 半衰期</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/057d332025f674344a.html#h-485f2ec53559b6043e">↗ decay constant — 衰变常量</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The probability per unit time that an individual nucleus will decay.</p>
+<p><strong>中文：</strong> 单个原子核在单位时间内发生衰变的概率。</p>
+<p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/9cc1ca641fd1432af7.html">PH03 202606-Q01</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/f180b5d369ea8c5833.html#h-485f2ec53559b6043e">↗ activity — 活度</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The number of nuclear decays per unit time in a radioactive sample.</p>
+<p><strong>中文：</strong> 放射性样品单位时间发生的核衰变数。</p>
+<p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/1593cf231575525350.html">PH03 202206-Q03</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/54aa37168812fed1b5.html#h-485f2ec53559b6043e">↗ half-life — 半衰期</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The time for the number of undecayed nuclei, or the activity, to fall to half its initial value.</p>
+<p><strong>中文：</strong> 未衰变核数或活度降为初值一半所需时间。</p>
+<p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/e505d4304c9486a01a.html">PH03 202301-Q05</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
+</section>
+<p><strong>真题定义依据 / Mark-scheme checks：</strong> <a class="internal-link" href="/notes/6fb9715723ac0318f8.html">PH03 201806-Q04</a>、<a class="internal-link" href="/notes/84fbf18d18666dbdcb.html">PH03 202101-Q03</a>、<a class="internal-link" href="/notes/1593cf231575525350.html">PH03 202206-Q03</a>、<a class="internal-link" href="/notes/e505d4304c9486a01a.html">PH03 202301-Q05</a>、<a class="internal-link" href="/notes/9cc1ca641fd1432af7.html">PH03 202606-Q01</a>。定义按评分要点概括；原答案可在对应题目下展开。 Definitions are summarised from the scoring points, with original answers below the linked questions.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p>活度单位 Bq，衰变常量单位 s<span class="math inline">\(^{-1}\)</span>；质量与摩尔质量使用一致单位。</p>
+<p><span class="math inline">\(dN/dt=-\lambda N\)</span>; <span class="math inline">\(N=N_0e^{-\lambda t}\)</span>; <span class="math inline">\(A=\lambda N=A_0e^{-\lambda t}\)</span>; <span class="math inline">\(T_{1/2}=\ln2/\lambda\)</span>; <span class="math inline">\(N=(m/M)N_A\)</span>.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>采用同一种核素且概率恒定；固定探测效率与几何、扣除背景后，计数率才与活度成正比。</p>
+<p>Use a single radionuclide with constant decay probability. Detected count rate is proportional to activity only with fixed detection efficiency/geometry and corrected background.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-6019a0254b1a911a2d">随机性、衰变概率与活度 / Randomness and activity</h3>
+<p>不能预测某一个核何时衰变，但给定核素每个尚未衰变核在单位时间的衰变概率恒定。<span class="math inline">\(dN/dt=-\lambda N\)</span>，<span class="math inline">\(N=N_0e^{-\lambda t}\)</span>；负号表示未衰变核数减少。</p>
+<p>Individual decay times are unpredictable, while each undecayed nucleus of a given isotope has a constant decay probability per unit time. The negative number gradient describes loss of undecayed nuclei.</p>
+<p>活度是每秒衰变数，取正值：<span class="math inline">\(A=-dN/dt=\lambda N=A_0e^{-\lambda t}\)</span>，单位 Bq。衰变常量单位 <span class="math inline">\(\mathrm{s^{-1}}\)</span>；“随机”不代表样品没有可预测的统计规律。</p>
+<p>Activity is the positive decay rate, not the negative derivative itself. Random individual behaviour still gives predictable statistical behaviour for a large sample.</p>
+<p>掷骰子模型：每轮移除出现指定点数的骰子，其余继续投掷；每个剩余骰子的移除概率相同，剩余数量近似指数衰减。</p>
+<p>Repeatedly removing a specified die face models constant individual decay probability and an approximately exponential remaining population.</p>
+<h3 id="h-4b10ba451249108610">半衰期、核数和图像 / Half-life, nuclei and graphs</h3>
+<p><span class="math inline">\(N=(m/M)N_A\)</span>（质量和摩尔质量单位一致），再用 <span class="math inline">\(A=\lambda N\)</span>。<span class="math inline">\(T_{1/2}=\ln2/\lambda\)</span>；经过 <span class="math inline">\(n\)</span> 个半衰期，剩余比例 <span class="math inline">\(2^{-n}\)</span>，已衰变比例为 <span class="math inline">\(1-2^{-n}\)</span>。</p>
+<p>Convert sample mass to nuclei using molar mass and Avogadro constant. Distinguish the remaining fraction from the decayed fraction.</p>
+<p>测量计数率先扣背景：<span class="math inline">\(C_{\rm net}=C_{\rm measured}-C_{\rm background}\)</span>。在效率和几何不变时净计数率与活度成正比；作 <span class="math inline">\(\ln C_{\rm net}\)</span>–<span class="math inline">\(t\)</span>，斜率 <span class="math inline">\(-\lambda\)</span>。原曲线可从任意净计数率减半区间求半衰期并多次平均。</p>
+<p>Subtract background before logarithmic analysis or halving. With fixed efficiency and geometry, net count rate is proportional to activity. A natural-log gradient gives <span class="math inline">\(-\lambda\)</span>.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/11fbe687130c053bc6.html#h-b923c3b5c6822cbcb5">3.9.2</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/bcc95d031bf9950cf3.png" target="_blank"><img alt="3.9.2-S016-P01" decoding="async" loading="lazy" src="/media/bcc95d031bf9950cf3.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/30fe403dbe6ece6db9.png" target="_blank"><img alt="3.9.2-S017-P01" decoding="async" loading="lazy" src="/media/30fe403dbe6ece6db9.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/098d74b0c8cd4ec63a.png" target="_blank"><img alt="3.9.2-S028-P01" decoding="async" loading="lazy" src="/media/098d74b0c8cd4ec63a.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h3 id="h-28bb3893000cb3c172">U3 Radioactive decay</h3>
+<a class="image-link" href="/media/7ae52b22f050c810eb.png" target="_blank"><img alt="U3_Radioactive_decay" decoding="async" loading="lazy" src="/media/7ae52b22f050c810eb.png" style="max-width:min(100%,1100px)"/></a>
+<p>单核素且扣背景的指数和对数衰变图；相等时间减少相同比例。 Corrected single-isotope decay.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>先扣背景，再使用衰变曲线、对数或比值；掷骰模型用每轮固定概率模拟随机衰变。</p>
+<p>Subtract background first, then use decay graphs, logarithms or ratios. A dice model removes a fixed-probability fraction each round and models random decay.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>探测计数不必等于真实衰变数；半衰期与该核素当前数量无关。</p>
+<p>Measured detector counts are not necessarily the actual number of decays. Half-life does not depend on the amount of the isotope present.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-92b6346022c42b5f5e">3.9.2 方法 1 · 衰变数量、质量与功率账目 / Decay counts, mass and power</h3>
+<ol>
+<li><span class="math inline">\(\lambda=\ln2/T_{1/2}\)</span>，先使时间单位一致；<span class="math inline">\(A=\lambda N\)</span>，<span class="math inline">\(N=(m/M)N_A\)</span>。活度单位Bq表示每秒衰变，不是探测器每秒计数。 / Distinguish activity from detected count rate.</li>
+<li><span class="math inline">\(N=N_0e^{-\lambda t}\)</span> 是剩余母核；衰变数 <span class="math inline">\(N_0-N\)</span>。最初无子核且子核稳定时，<span class="math inline">\(N_d=N_0(1-e^{-\lambda t})\)</span>。 / Distinguish remaining nuclei from daughter production.</li>
+<li>衰变掉的该同位素质量可用质量的指数变化或 <span class="math inline">\(\Delta N=\Delta A/\lambda\)</span> 求，不能把它当作整个封闭样品的质量亏损。 / Isotope depletion is not the mass defect of the whole sample.</li>
+<li>每次释放能量 <span class="math inline">\(E_d\)</span> 时总释放功率 <span class="math inline">\(P=AE_d\)</span>；真正加热功率还要扣除逃逸粒子、尤其弱相互作用的中微子带走的能量。 / Separate energy release from deposited heat.</li>
+<li>倒推初活度 <span class="math inline">\(A_0=Ae^{\lambda t}\)</span>；核对结果应较大。混匀示踪测体积先把总活度衰减到取样时，再用总活度/样品活度乘样品体积。 / Compare all activities at the same time.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/79807bcf591062b051.html">PH03 · 202601 · Q01</a>；<a class="internal-link" href="/notes/9cc1ca641fd1432af7.html">PH03 · 202606 · Q01</a>；<a class="internal-link" href="/notes/e3993e3b3c0cfdc192.html">PH03 · 202406 · Q07</a>；<a class="internal-link" href="/notes/c9e6a97e9b198fd629.html">PH03 · 202401 · Q04</a>；<a class="internal-link" href="/notes/959008913a16107e0e.html">PH03 · 2018 specimen paper · Q02</a>。</p>
+<h3 id="h-e093fd75d13e6eb22b">3.9.2 方法 2 · 随机性、对数图与年代局限 / Randomness, log graphs and dating limits</h3>
+<ul>
+<li>随机是无法预测某个核何时衰变；大样品总量可作较可靠统计预测。一个核存活一个半衰期，不会增加下一半衰期内的条件衰变概率。 / Survival does not change the decay probability for the next equal interval.</li>
+<li><span class="math inline">\(\ln A=\ln A_0-\lambda t\)</span>：斜率 <span class="math inline">\(-\lambda\)</span>，截距是对数；若横轴为小时，先换成 <span class="math inline">\(\mathrm{s^{-1}}\)</span> 再用Bq求核数。 / Convert a logarithmic intercept and its time unit correctly.</li>
+<li>骰子模型每轮剩余比例 <span class="math inline">\(1-p\)</span>，<span class="math inline">\(N_n=N_0(1-p)^n\)</span>；连续指数等效 <span class="math inline">\(\lambda=-\ln(1-p)/\Delta t\)</span>，小概率才近似 <span class="math inline">\(p/\Delta t\)</span>。 / Distinguish the discrete survival law from the approximation.</li>
+<li>碳定年需考虑初始比例、碳含量、现代碳污染、木材年龄与器物制作年龄的区别；时间过长则净活度接近背景，过短则变化太小。 / Link each limitation to the measured ratio or activity.</li>
+<li>检验指数关系用净计数率、等时间比值或对数直线；不要对“已衰变核数”直接套剩余母核的直线规律。 / Identify exactly what is plotted.</li>
+</ul>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/eb59026accd511b2bd.html">PH03 · 202506 · Q02</a>；<a class="internal-link" href="/notes/5ce8e3d91ea5d54c27.html">PH03 · 202606 · Q16</a>；<a class="internal-link" href="/notes/c3da8fd012b4172769.html">PH03 · 201906 · Q05</a>；<a class="internal-link" href="/notes/1593cf231575525350.html">PH03 · 202206 · Q03</a>；<a class="internal-link" href="/notes/84fbf18d18666dbdcb.html">PH03 · 202101 · Q03</a>；<a class="internal-link" href="/notes/a1ed427a9401a0bb4b.html">PH03 · 202201 · Q02</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (29)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/959008913a16107e0e.html">PH03 · 2018 specimen paper · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e687dc0b69e1268929.html">PH03 · 2018 specimen paper · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6fb9715723ac0318f8.html">PH03 · 201806 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cc094b1bcc1961264e.html">PH03 · 201806 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/29f1687a57fad854d5.html">PH03 · 201806 · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6bef0ad9673f79d9c3.html">PH03 · 201806 · Q26</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b731bedae434edfe62.html">PH03 · 201901 · Q27</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c770d12968beaba3a5.html">PH03 · 201901 · Q28</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/01fc2077b22513c741.html">PH03 · 201901 · Q29</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c3da8fd012b4172769.html">PH03 · 201906 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/54f7c322ac6378cf8b.html">PH03 · 201906 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1d16dbc04d537a20bd.html">PH03 · 201906 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a9246866e115e2ee1e.html">PH03 · 202001 · Q26</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/84fbf18d18666dbdcb.html">PH03 · 202101 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a1ed427a9401a0bb4b.html">PH03 · 202201 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1593cf231575525350.html">PH03 · 202206 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e505d4304c9486a01a.html">PH03 · 202301 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/985e0166cf8fd6ca91.html">PH03 · 202306 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c9e6a97e9b198fd629.html">PH03 · 202401 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e3993e3b3c0cfdc192.html">PH03 · 202406 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dcdb83fc393b57a0ad.html">PH03 · 202501 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/eb59026accd511b2bd.html">PH03 · 202506 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e40a7b7d03388a6b04.html">PH03 · 202506 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ebe4d24f0066a7e3fc.html">PH03 · 202506 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/79807bcf591062b051.html">PH03 · 202601 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c8b9d12faa24a254b6.html">PH03 · 202601 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9cc1ca641fd1432af7.html">PH03 · 202606 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5ce8e3d91ea5d54c27.html">PH03 · 202606 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/06a80bcea1b6a0838a.html">PH03 · 202606 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/f7c6092e7cb47bdc8b.html">U3逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/6fb1253256c5ea3da4.html">课件例题与复述</a> · <a class="internal-link" href="/notes/f87d38b2a1f0aab643.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/4966b0336b9fc63e3c.html">3.9.1 电容充放电与时间常量</a>：共同指数模型 / exponential analogy</li>
+<li><a class="internal-link" href="/notes/22a9eaa4466d90e8ed.html">3.12.3 诱发裂变、链式反应与反应堆</a>：放射性指数衰变 ↔ 诱发裂变、链式反应与反应堆</li>
+<li><a class="internal-link" href="/notes/ddd18c0ae44acf9778.html">3.12.4 核反应堆安全与放射性废物</a>：放射性指数衰变 ↔ 核反应堆安全与放射性废物</li>
+<li><a class="internal-link" href="/notes/e2590921f647e0ee13.html">U1 3.3.3</a>：本节所需基础 / prerequisite</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.9.2。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 350–352；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/6fb18a57f5002e379e.html">U3PM08 核衰变活度与背景修正 - Activity and half-life</a></li>
+</ul>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/ca2dec712305095ce0.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/3261363b6123e94f35.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/2c4b46e582bcf040d3.html">跨单元知识联系 / Cross-unit knowledge</a></li><li><a href="/notes/e2590921f647e0ee13.html">3.3.3 放射性 / RADIOACTIVITY</a></li><li><a href="/notes/da867bb75d0c7de166.html">U3 场及其影响 / Fields and their consequences</a></li><li><a href="/notes/11fbe687130c053bc6.html">U3 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/c8418eb48964cf69c4.html">U3 考纲框架 / Specification map</a></li><li><a href="/notes/4e80b719788300d426.html">3.9.2 放射性的指数变化 / EXPONENTIAL CHANGES IN RADIOACTIVITY</a></li><li><a href="/notes/4966b0336b9fc63e3c.html">3.9.1 电容充放电与时间常量 / Capacitor charge and discharge</a></li><li><a href="/notes/54aa37168812fed1b5.html">half-life — 半衰期</a></li><li><a href="/notes/f180b5d369ea8c5833.html">activity — 活度</a></li><li><a href="/notes/057d332025f674344a.html">decay constant — 衰变常量</a></li><li><a href="/notes/70af9f4d38e4bcdff8.html">U3 来源与范围 / Sources and scope</a></li><li><a href="/notes/f7c6092e7cb47bdc8b.html">U3 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/f87d38b2a1f0aab643.html">3.9.2 放射性指数衰变 真题练习 / Past-paper practice</a></li><li><a href="/notes/fa767480b1139c9687.html">PH03 2018 specimen paper / Paper index</a></li><li><a href="/notes/959008913a16107e0e.html">PH03 2018 specimen paper Q02</a></li><li><a href="/notes/e687dc0b69e1268929.html">PH03 2018 specimen paper Q18</a></li><li><a href="/notes/d90d9353211feec3fc.html">PH03 201806 / Paper index</a></li><li><a href="/notes/6fb9715723ac0318f8.html">PH03 201806 Q04</a></li><li><a href="/notes/cc094b1bcc1961264e.html">PH03 201806 Q24</a></li><li><a href="/notes/29f1687a57fad854d5.html">PH03 201806 Q25</a></li><li><a href="/notes/6bef0ad9673f79d9c3.html">PH03 201806 Q26</a></li><li><a href="/notes/0b84b05c25fbc49f80.html">PH03 201901 / Paper index</a></li><li><a href="/notes/b731bedae434edfe62.html">PH03 201901 Q27</a></li><li><a href="/notes/c770d12968beaba3a5.html">PH03 201901 Q28</a></li><li><a href="/notes/01fc2077b22513c741.html">PH03 201901 Q29</a></li><li><a href="/notes/c770501e3c411d9d06.html">PH03 201906 / Paper index</a></li><li><a href="/notes/c3da8fd012b4172769.html">PH03 201906 Q05</a></li><li><a href="/notes/54f7c322ac6378cf8b.html">PH03 201906 Q23</a></li><li><a href="/notes/1d16dbc04d537a20bd.html">PH03 201906 Q24</a></li><li><a href="/notes/c28e405421b2dbdbf3.html">PH03 202001 / Paper index</a></li><li><a href="/notes/a9246866e115e2ee1e.html">PH03 202001 Q26</a></li><li><a href="/notes/9056240cebaa303286.html">PH03 202101 / Paper index</a></li><li><a href="/notes/84fbf18d18666dbdcb.html">PH03 202101 Q03</a></li><li><a href="/notes/02136a2e67ef51d964.html">PH03 202201 / Paper index</a></li><li><a href="/notes/a1ed427a9401a0bb4b.html">PH03 202201 Q02</a></li><li><a href="/notes/541e1596ffb4ac0cb3.html">PH03 202206 / Paper index</a></li><li><a href="/notes/1593cf231575525350.html">PH03 202206 Q03</a></li><li><a href="/notes/457457bc96f55b4adb.html">PH03 202301 / Paper index</a></li><li><a href="/notes/e505d4304c9486a01a.html">PH03 202301 Q05</a></li><li><a href="/notes/9db6472a27a9bcadb8.html">PH03 202306 / Paper index</a></li><li><a href="/notes/985e0166cf8fd6ca91.html">PH03 202306 Q05</a></li><li><a href="/notes/db82f6247ae551f056.html">PH03 202401 / Paper index</a></li><li><a href="/notes/c9e6a97e9b198fd629.html">PH03 202401 Q04</a></li><li><a href="/notes/dd32a67647d1347e67.html">PH03 202406 / Paper index</a></li><li><a href="/notes/e3993e3b3c0cfdc192.html">PH03 202406 Q07</a></li><li><a href="/notes/1f07f31e3f2612fc4a.html">PH03 202501 / Paper index</a></li><li><a href="/notes/dcdb83fc393b57a0ad.html">PH03 202501 Q05</a></li><li><a href="/notes/ae5bee24e0ee1a0c3a.html">PH03 202506 / Paper index</a></li><li><a href="/notes/eb59026accd511b2bd.html">PH03 202506 Q02</a></li><li><a href="/notes/e40a7b7d03388a6b04.html">PH03 202506 Q14</a></li><li><a href="/notes/ebe4d24f0066a7e3fc.html">PH03 202506 Q15</a></li><li><a href="/notes/676e3cac4eb704e930.html">PH03 202601 / Paper index</a></li><li><a href="/notes/79807bcf591062b051.html">PH03 202601 Q01</a></li><li><a href="/notes/c8b9d12faa24a254b6.html">PH03 202601 Q17</a></li><li><a href="/notes/bcd518c140cf55fadf.html">PH03 202606 / Paper index</a></li><li><a href="/notes/9cc1ca641fd1432af7.html">PH03 202606 Q01</a></li><li><a href="/notes/5ce8e3d91ea5d54c27.html">PH03 202606 Q16</a></li><li><a href="/notes/06a80bcea1b6a0838a.html">PH03 202606 Q17</a></li><li><a href="/notes/ca2dec712305095ce0.html">3.9.2 放射性指数衰变 / Exponential changes in radioactivity · 概念考察练习 / Concept practice</a></li><li><a href="/notes/ce6de3b6592e4147d5.html">PH03 · 2018年6月 / June 2018 · Q04.1 · Decay constant / 衰变常量</a></li><li><a href="/notes/569d3c205e3780f7fb.html">PH03 · 2019年1月 / January 2019 · Q28 · Random radioactive decay / 放射性衰变的随机性</a></li><li><a href="/notes/9b0702816bc4e2769a.html">PH03 · 2021年1月 / January 2021 · Q03.1 · Decay constant / 衰变常量</a></li><li><a href="/notes/57614f69b4529a3e97.html">PH03 · 2022年6月 / June 2022 · Q03.1 · Activity / 放射性活度</a></li><li><a href="/notes/257bb0dac587374839.html">PH03 · 2023年1月 / January 2023 · Q05.1 · Half-life / 半衰期</a></li><li><a href="/notes/79d2d68551e7893e37.html">PH03 · 2026年1月 / January 2026 · Q01.1 · Fluorine-18 decay / 氟18衰变</a></li><li><a href="/notes/cdf114b4f40e79a42a.html">PH03 · 2026年6月 / June 2026 · Q01.1 · Radioactive-source safety / 放射源安全</a></li><li><a href="/notes/cf461132f4f316a93d.html">PH03 · 2026年6月 / June 2026 · Q01.2 · Decay constant / 衰变常量</a></li><li><a href="/notes/1ca0db40a266bda249.html">U3 计算与证明 / Calculations and show-that questions</a></li><li><a href="/notes/7800167edbcae45c5d.html">PH03 2018年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/897e821d83eac7b673.html">PH03 2019年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/198bbaaf957396329b.html">PH03 2021年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/deef06b94e1821a6c8.html">PH03 2023年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/77533e2cb2a07351c4.html">PH03 2026年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/c88f4a5adf27b6d807.html">PH03 2026年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/3261363b6123e94f35.html">3.9.2 放射性指数衰变 / Exponential changes in radioactivity · 论述题练习 / Written-response practice</a></li><li><a href="/notes/cda30e0e179b04a5f8.html">PH03 · 2021年1月 / January 2021 · Q03.5 · Carbon-isotope ratio after death / 死亡后的碳同位素比</a></li><li><a href="/notes/259db460e6b061e701.html">PH03 · 2021年1月 / January 2021 · Q03.7 · Limits of radiocarbon dating / 放射性碳定年的局限</a></li><li><a href="/notes/f2770080c6b0a8b114.html">PH03 · 2022年1月 / January 2022 · Q02.1 · Activity safety comparison / 活度安全限值比较</a></li><li><a href="/notes/10f2c48dd775786f04.html">PH03 · 2022年1月 / January 2022 · Q02.2 · Tritium dating time limit / 氚定年的时间限制</a></li><li><a href="/notes/86573492e5a69c4eaf.html">PH03 · 2022年6月 / June 2022 · Q03.2 · Dice decay constant / 骰子衰变常量</a></li><li><a href="/notes/0c18a34c0df3eb7d51.html">PH03 · 2022年6月 / June 2022 · Q03.5 · Randomness of dice decay / 骰子衰变的随机性</a></li><li><a href="/notes/1b171d9cfda325ae43.html">PH03 · 2023年6月 / June 2023 · Q05.4 · Radiation detected outside the body / 体外探测到的辐射</a></li><li><a href="/notes/c116908af3ebc74b2f.html">PH03 · 2024年1月 / January 2024 · Q04.4 · Heating by beta decay / β衰变产生热量</a></li><li><a href="/notes/d2aaea4b0410fdc95f.html">PH03 · 2024年6月 / June 2024 · Q07.2 · Long-lived daughter activity / 长寿命子核的活度</a></li><li><a href="/notes/e9bf17c1b65dbeb480.html">PH03 · 2025年6月 / June 2025 · Q02.3 · Predicting random decay / 预测随机衰变</a></li><li><a href="/notes/67e9643d7f65690b1f.html">PH03 · 2026年1月 / January 2026 · Q01.4 · Gamma photons in a PET scan / PET扫描中的γ光子</a></li><li><a href="/notes/6fb18a57f5002e379e.html">核衰变活度与背景修正 / Activity and half-life</a></li><li><a href="/notes/0c23570ef8081a7a20.html">U3 3.9 指数变化词汇 / Vocabulary</a></li><li><a href="/notes/22a9eaa4466d90e8ed.html">3.12.3 诱发裂变、链式反应与反应堆 / Induced fission</a></li><li><a href="/notes/ddd18c0ae44acf9778.html">3.12.4 核反应堆安全与放射性废物 / Safety aspects of nuclear reactors</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U3/02 知识节点/3.9 指数变化/3.9.2 放射性指数衰变 - Exponential changes in radioactivity.md","url":"/notes/3181cffbc7942635dd.html","unit":"U3"}</script></body></html>

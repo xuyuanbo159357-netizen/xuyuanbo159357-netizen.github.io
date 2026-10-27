@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>背景辐射与计数修正 / Background radiation and count correction · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/02 知识节点/3.3 原子与放射性</div><h1 id="h-f4f8327fa2bf4ff880">背景辐射与计数修正 / Background radiation and count correction</h1>
+<details class="callout physics-relations"><summary>关系摘要</summary><div class="callout-body"><p><strong>背景辐射与计数修正 / Background radiation and count correction</strong></p>
+<p>测量总计数包含源和背景，必须用相同单位扣除。Measured counts include a background contribution.</p>
+<p>考纲 / Specification：<a class="internal-link" href="/notes/e2590921f647e0ee13.html">3.3.3 放射性 - Radioactivity</a></p>
+</div></details>
+<!-- U1_LINEAGE_START -->
+<details class="callout physics-lineage"><summary>知识谱系位置 / Place in the knowledge lineage</summary><div class="callout-body"><p><a class="internal-link" href="/notes/fe4f62fb8bc5de4a67.html">00 物理U1知识谱系 - Physics U1 knowledge lineage</a> → <a class="internal-link" href="/notes/c8c2ff8fe64cd96ed3.html">3.3 原子与放射性 - Particles, radiation and radioactivity</a> → <a class="internal-link" href="/notes/e2590921f647e0ee13.html">3.3.3 放射性 - Radioactivity</a> → <strong>A14 背景辐射与计数修正</strong></p>
+<p><strong>可以继续连接到 / Outgoing relationships</strong></p>
+<ul>
+<li>本笔记 → <a class="internal-link" href="/notes/fddd1d571a224a29c5.html">A13 γ辐射反平方律与验证 - Gamma inverse-square law and verification</a>: 扣背景 / correct。</li>
+<li>本笔记 → <a class="internal-link" href="/notes/7b849968fe29596e4a.html">A09 半衰期与衰变图像 - Half-life and decay graphs</a>: 校正衰变曲线 / correct。</li>
+<li>本笔记 → <a class="internal-link" href="/notes/dcf463bb3c4a2696d0.html">A11 α、β、γ性质与吸收实验 - Radiation properties and absorption tests</a>: 修正吸收读数 / correct。</li>
+</ul>
+<p><strong>应用与返回 / Apply and return</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/8ec212c1b303232c34.html">A12 辐射危害与厚度检测复述与练习 - Radiation hazards and thickness monitoring - Retrieval practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+<li><a class="internal-link" href="/notes/3e067ca590e73515f6.html">A13 γ辐射反平方律与验证复述与练习 - Gamma inverse-square law and verification - Retrieval practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+</ul>
+<p>箭头的含义以上方关系标签为准，相关知识不一概视为严格先修。The labels distinguish definitions, derivations, evidence, measurement and applications.</p>
+</div></details>
+<!-- U1_LINEAGE_END -->
+<!-- U1_DEFINITIONS_START -->
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>计数率 / count rate</strong></td>
+<td><span class="math inline">\(R\)</span></td>
+<td><span class="math inline">\(\mathrm{s^{-1}}\)</span></td>
+<td>R_measured、R_bg、R_corrected 分别为实测、背景、修正计数率 / Subscripts identify measured, background and corrected rates.</td>
+</tr>
+<tr>
+<td><strong>探测计数 / detected count</strong></td>
+<td><span class="math inline">\(N_{\mathrm{count}},\ N_{\mathrm{bg}}\)</span></td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+<td>在计数实验中 N 可表示记录到的计数；不等于总衰变核数 / A detector count need not equal all decays.</td>
+</tr>
+<tr>
+<td><strong>时间、时间间隔 / time, time interval</strong></td>
+<td><span class="math inline">\(t,\ \Delta t\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<p><strong>Background radiation / 背景辐射</strong>；<strong>Count rate / 计数率</strong>；<strong>Corrected count rate / 校正计数率</strong></p>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<h3 id="h-4d0fdf05bf437f8e4f">Background radiation / 背景辐射</h3>
+<p><strong>EN:</strong> Background radiation is radiation that does not come from the source being investigated.</p>
+<p><strong>中:</strong> 背景辐射是不来自正在研究的源的辐射。</p>
+<p><strong>表达要点 / Wording:</strong> not from the source being investigated</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/492630a71a26fb5961.pdf#page=4">PH01 202206 Q01.1 · MS p4（定义/陈述评分点）</a></p>
+<h3 id="h-629ef75abcccd43e1f">Count rate / 计数率</h3>
+<p><strong>EN:</strong> Count rate is the number of counts recorded by a detector per unit time.</p>
+<p><strong>中:</strong> 计数率是探测器单位时间内记录的计数次数。</p>
+<p><strong>表达要点 / Wording:</strong> recorded counts; per unit time</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/985aa1ad9dba67cfab.pdf#page=18">PH01 202101 Q11.1 · MS p18（相关计算或应用）</a></p>
+<h3 id="h-50acad396c6428b6cd">Corrected count rate / 校正计数率</h3>
+<p><strong>EN:</strong> The corrected count rate is the measured count rate minus the background count rate.</p>
+<p><strong>中:</strong> 校正计数率是测得的计数率减去背景计数率。</p>
+<p><strong>表达要点 / Wording:</strong> count rate; minus; background count rate</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/fab8742ed3d4893967.pdf#page=6">PH01 202301 Q03.1 · MS p6（定义/陈述评分点）</a></p>
+<h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
+<div class="math block">
+\[\begin{gathered}
+R_{\rm bg}=\frac{N_{\rm bg}}{t_{\rm bg}} \\
+R_{\rm source}=\frac{N_{\rm total}}{t_{\rm total}}-R_{\rm bg}
+\end{gathered}\]
+</div>
+<h2 id="h-166a0f981d6cdc4cad">Conditions / 适用条件</h2>
+<p>背景与总测量必须统一为同一单位的计数率后再相减。 / Subtract count rates in the same units rather than raw counts taken over different intervals.</p>
+<h2 id="h-614697bd55e5a5935c">Explanation / 讲解</h2>
+<h3 id="h-ee484e41e288285cb6">来源 / Origins</h3>
+<p>背景辐射可来自宇宙射线、岩石土壤中的天然放射性、氡气、建筑材料及体内天然核素等。人造活动和医疗等可提供额外来源。Recognise natural and human-made sources without assuming all background is artificial.</p>
+<h2 id="h-db2fa3a5f52c97a113">Application / 应用</h2>
+<h3 id="h-0da4e1902c9cf5d4e1">测量与修正 / Measurement and correction</h3>
+<p>移走待测源，保持环境和仪器条件，测较长时间的背景，再换算成计数率。Measure the background separately under comparable conditions.</p>
+<div class="math block">
+\[R_{\rm bg}=\frac{N_{\rm bg}}{t_{\rm bg}},\qquad
+R_{\rm source}=\frac{N_{\rm total}}{t_{\rm total}}-R_{\rm bg}.\]
+</div>
+<p>若计数时间不同，不能直接相减原始计数。Convert both to the same rate first.</p>
+<p>例：背景120次/60 s=2.0 s⁻¹，测源360次/30 s=12 s⁻¹，源校正计数率为10 s⁻¹。Count rate is not automatically the source’s activity because detection efficiency is limited.</p>
+<p>放射性计数随机波动，重复或较长计数通常能减小相对波动影响。源本身随时间明显衰减时，计数间隔也应与变化时间尺度匹配。Balance statistical variation with time resolution.</p>
+<p>背景修正连接吸收实验、半衰期读取和反平方验证。The same correction is needed across the radiation experiments.</p>
+<!-- U1_DEFINITIONS_END -->
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-a5507c157299a23eb2">A14 方法 1 · 背景、计数率与累计时间 / Background, count rates and elapsed time</h3>
+<ol>
+<li>背景辐射是来自所研究源之外的辐射；可有自然和人工来源。给定义时不能只列一个例子或限定全为自然。 / Separate the definition from examples.</li>
+<li>测无源背景计数 <span class="math inline">\(N_b\)</span> 和时长 <span class="math inline">\(t_b\)</span>，<span class="math inline">\(B=N_b/t_b\)</span>；样品净率 <span class="math inline">\(N/t-B\)</span>。不同计数时长不能直接相减总计数。 / Convert both measurements to rates.</li>
+<li>不同计时段的合并率可用 <span class="math inline">\(\sum N_i/\sum t_i\)</span>；区分总计数、每秒率与每分钟率。题给5分钟背景时先由率差再乘300 s。 / Use a time-weighted combined rate.</li>
+<li>长时间或多次测量降低随机波动；实验前后测背景可检查背景是否变化并求代表值，不能假设所有读数变化都由源引起。 / Explain why a background measurement is needed.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/bf7f8badf0d2efe603.html">PH01 · 202206 · Q01</a>；<a class="internal-link" href="/notes/171005644207d02b17.html">PH01 · 202201 · Q08</a>；<a class="internal-link" href="/notes/74e74a0a029fad7c8d.html">PH01 · 202101 · Q11</a>；<a class="internal-link" href="/notes/736c1596403c4deab2.html">PH01 · 201806 · Q11</a>；<a class="internal-link" href="/notes/7a90e85ab4e6c4cd01.html">PH01 · 202301 · Q03</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (21)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/d678c79af70970d0cd.html">PH01 · 201706 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1cebc40dae24b575f7.html">PH01 · 201706 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/736c1596403c4deab2.html">PH01 · 201806 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6e4332bd6156aee7a9.html">PH01 · 201901 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b5526b0ce75ca2a0dc.html">PH01 · 201906 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c638c056b0223d974b.html">PH01 · 201906 · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/71726238948f6ebfc1.html">PH01 · 202001 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/74e74a0a029fad7c8d.html">PH01 · 202101 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8aa9cce0e86bc44bea.html">PH01 · 202101 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/65f6360eec628e197b.html">PH01 · 202101 · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/171005644207d02b17.html">PH01 · 202201 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/bf7f8badf0d2efe603.html">PH01 · 202206 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/25e660a0661e2d2a17.html">PH01 · 202206 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/caefe1011eda1e4537.html">PH01 · 202206 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7a90e85ab4e6c4cd01.html">PH01 · 202301 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1a1224e43986e795e4.html">PH01 · 202306 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ceec0a08f9847970f9.html">PH01 · 202401 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b003c2c92f75dd9c60.html">PH01 · 202406 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a7215de4ba0b6d5cac.html">PH01 · 202501 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/83e0e0876b4402df20.html">PH01 · 202506 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3deaf491e4ebf747c2.html">PH01 · 202606 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/30b5c7a31ed5ee4f9d.html">U1逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-91121d1ecaf6930b80">知识联系 / Relationships</h2>
+<table>
+<thead>
+<tr>
+<th>方向 / Direction</th>
+<th>相连知识 / Linked knowledge</th>
+<th>关系 / Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本知识 → / outgoing</td>
+<td><a class="internal-link" href="/notes/fddd1d571a224a29c5.html">A13 γ辐射反平方律与验证 - Gamma inverse-square law and verification</a></td>
+<td>扣背景 / correct</td>
+</tr>
+<tr>
+<td>本知识 → / outgoing</td>
+<td><a class="internal-link" href="/notes/7b849968fe29596e4a.html">A09 半衰期与衰变图像 - Half-life and decay graphs</a></td>
+<td>校正衰变曲线 / correct</td>
+</tr>
+<tr>
+<td>本知识 → / outgoing</td>
+<td><a class="internal-link" href="/notes/dcf463bb3c4a2696d0.html">A11 α、β、γ性质与吸收实验 - Radiation properties and absorption tests</a></td>
+<td>修正吸收读数 / correct</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-d289ca8067ef00f08b">复述检查 / Retrieval check</h2>
+<ul>
+<li>[ ] 当背景和源的计数时间不同，如何正确修正？ / Convert to comparable rates.</li>
+<li>[ ] 说明背景对半衰期曲线末端与反平方图的影响。 / Interpret a baseline.</li>
+</ul>
+<h2 id="h-7a185af5ecf46cb0ac">对应原课件练习 / Source-slide practice</h2>
+<ul>
+<li><a class="internal-link" href="/notes/8ec212c1b303232c34.html">A12 辐射危害与厚度检测复述与练习 - Radiation hazards and thickness monitoring - Retrieval practice</a></li>
+<li><a class="internal-link" href="/notes/3e067ca590e73515f6.html">A13 γ辐射反平方律与验证复述与练习 - Gamma inverse-square law and verification - Retrieval practice</a></li>
+</ul>
+<h2 id="h-00e36c430b204d4a07">依据 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/notes/0b5dec2e245a870dec.html">资料来源与范围 - Sources and scope</a>：本地9630 U1考纲对应3.3.3，与官方4.4版核对。</li>
+<li>Jim Breithaupt, Oxford International AQA Physics，教材印刷页 12, 129。内容按U1范围重新概括，未复制整段教材。</li>
+</ul>
+<!-- U1_MODELS_START -->
+<h2 id="h-ece831a4c8c76b508e">常用物理模型 / Common physics models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/0998bbf87604ca1455.html">PM23 半衰期与背景扣除模型</a>：half-life；activity / count rate。</li>
+<li><a class="internal-link" href="/notes/c02fd4209edadef805.html">PM24 辐射吸收与厚度检测模型</a>：absorber / penetrating；thickness / gauge。</li>
+<li><a class="internal-link" href="/notes/91fdea4bb7b3d5d8fb.html">PM25 点源扩散与反平方模型</a>：inverse-square；distance / gamma source。</li>
+</ul>
+<!-- U1_MODELS_END -->
+<!-- U1_PAST_PAPERS_START -->
+<h2 id="h-d7e53f0d63ea2388d1">历年真题 / Past-paper practice</h2>
+<a class="internal-link" href="/notes/8470dfa1c13dd473a8.html">按本知识点查看题目图片（21题） / Practice bank</a>
+<table>
+<thead>
+<tr>
+<th>所属试卷 / Paper</th>
+<th>题目 / Question</th>
+<th>对应范围 / Parts</th>
+<th>答案 / MS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017年6月 / June 2017</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-a7e19e10cd5383fd3a">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2017年6月 / June 2017</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-6d4bc80b7ded60bcdd">Q24</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年6月 / June 2018</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-a4607425bb420928bd">Q11</a></td>
+<td>11.2、11.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年1月 / January 2019</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-3d30e7ff7eeeaeaa46">Q05</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年6月 / June 2019</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-752ba2aecac3ef35ed">Q24</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年6月 / June 2019</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-e78454f51978f7eaf1">Q25</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2020年1月 / January 2020</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-1cdf5029a7ad98cb83">Q04</a></td>
+<td>04.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-cc3b05c0bbd684f589">Q11</a></td>
+<td>11.6、11.7</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-0e9bb4fb70dbae0fef">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-77c87d42529cdcf19c">Q25</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年1月 / January 2022</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-aef777a695e667d3c0">Q08</a></td>
+<td>08.1、08.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-38953dc30d84717045">Q01</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-ef71332ccaffa710d8">Q22</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-957e3a2424d179a3e3">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年1月 / January 2023</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-1d12c186b920721431">Q03</a></td>
+<td>03.1</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年6月 / June 2023</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-8ceb0070ec0545eeeb">Q24</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年1月 / January 2024</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-90890157fcbff820d7">Q09</a></td>
+<td>09.1、09.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年6月 / June 2024</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-791c3250ebb6e34eec">Q03</a></td>
+<td>03.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年1月 / January 2025</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-cfcf07c9fb9c6be54f">Q06</a></td>
+<td>06.1</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年6月 / June 2025</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-ce458b745a3d098f85">Q07</a></td>
+<td>07.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年6月 / June 2026</td>
+<td><a class="internal-link" href="/notes/8470dfa1c13dd473a8.html#h-c18a8286e84b795c0e">Q12</a></td>
+<td>12.1</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+</tbody>
+</table>
+<!-- U1_PAST_PAPERS_END -->
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/38f98297dc69200d74.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/e64c752b685dd2a5b7.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/fe4f62fb8bc5de4a67.html">物理 U1 知识谱系 / Physics U1 knowledge lineage</a></li><li><a href="/notes/c8c2ff8fe64cd96ed3.html">3.3 粒子、辐射和放射性 / PARTICLES, RADIATION AND RADIOACTIVITY</a></li><li><a href="/notes/e2590921f647e0ee13.html">3.3.3 放射性 / RADIOACTIVITY</a></li><li><a href="/notes/7b849968fe29596e4a.html">半衰期与衰变图像 / Half-life and decay graphs</a></li><li><a href="/notes/dcf463bb3c4a2696d0.html">α、β、γ性质与吸收实验 / Radiation properties and absorption tests</a></li><li><a href="/notes/fddd1d571a224a29c5.html">γ辐射反平方律与验证 / Gamma inverse-square law and verification</a></li><li><a href="/notes/8ec212c1b303232c34.html">A12 辐射危害与厚度检测复述与练习 / Retrieval and practice</a></li><li><a href="/notes/3e067ca590e73515f6.html">A13 γ辐射反平方律与验证复述与练习 / Retrieval and practice</a></li><li><a href="/notes/f632b124127e9adda3.html">U1 概念与定义索引 / Concepts and definitions</a></li><li><a href="/notes/a250111986d580319a.html">U1复述进度 / Retrieval progress</a></li><li><a href="/notes/8403480eb1d7e4d99d.html">公式与适用条件 / Equations and conditions</a></li><li><a href="/notes/bc44c2f3b633ca38cb.html">关系索引 / Relationship index</a></li><li><a href="/notes/0a583cb08270db6716.html">课件例题提取索引 / Source slide index</a></li><li><a href="/notes/30b5c7a31ed5ee4f9d.html">U1 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/5d71469646857a1b0a.html">真题练习 / PH01 past-paper practice</a></li><li><a href="/notes/857d3e90190ee4b919.html">M04 误差与测量质量 真题练习 / Past-paper practice</a></li><li><a href="/notes/4287665f57095a24ce.html">M06 误差棒与图像不确定度 真题练习 / Past-paper practice</a></li><li><a href="/notes/305612c4688d88909a.html">A04 比荷 真题练习 / Past-paper practice</a></li><li><a href="/notes/c0a51c8a6e3eb6829e.html">A07 核衰变与核方程 真题练习 / Past-paper practice</a></li><li><a href="/notes/176253c8b7259496b6.html">A08 β衰变、中微子与自由中子 真题练习 / Past-paper practice</a></li><li><a href="/notes/b3aaa3030c8c9d98e8.html">A09 半衰期与衰变图像 真题练习 / Past-paper practice</a></li><li><a href="/notes/384416edb4188d4230.html">A10 核激发态、γ射线与Tc-99m 真题练习 / Past-paper practice</a></li><li><a href="/notes/33fe8e5ad82b24720c.html">A11 α、β、γ性质与吸收实验 真题练习 / Past-paper practice</a></li><li><a href="/notes/5206e40bed3b54680a.html">A12 辐射危害与厚度检测 真题练习 / Past-paper practice</a></li><li><a href="/notes/454bf2891bbd763854.html">A13 γ辐射反平方律与验证 真题练习 / Past-paper practice</a></li><li><a href="/notes/8470dfa1c13dd473a8.html">A14 背景辐射与计数修正 真题练习 / Past-paper practice</a></li><li><a href="/notes/d721c694faae32e705.html">PH01 · 2017年6月 / June 2017 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/d678c79af70970d0cd.html">PH01 · 2017年6月 / June 2017 · Q23 · 题目 / Question</a></li><li><a href="/notes/107f16791d86f951bc.html">PH01 · 2017年6月 / June 2017 · Q24 · 答案 / Mark scheme</a></li><li><a href="/notes/1cebc40dae24b575f7.html">PH01 · 2017年6月 / June 2017 · Q24 · 题目 / Question</a></li><li><a href="/notes/c5db1265b24608cd97.html">PH01 · 2018年6月 / June 2018 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/736c1596403c4deab2.html">PH01 · 2018年6月 / June 2018 · Q11 · 题目 / Question</a></li><li><a href="/notes/38e28295ebdb1d417b.html">PH01 · 2019年1月 / January 2019 · Q05 · 答案 / Mark scheme</a></li><li><a href="/notes/6e4332bd6156aee7a9.html">PH01 · 2019年1月 / January 2019 · Q05 · 题目 / Question</a></li><li><a href="/notes/7c6cd7a845353f7cb5.html">PH01 · 2019年6月 / June 2019 · Q24 · 答案 / Mark scheme</a></li><li><a href="/notes/b5526b0ce75ca2a0dc.html">PH01 · 2019年6月 / June 2019 · Q24 · 题目 / Question</a></li><li><a href="/notes/9b8d178a86978316f4.html">PH01 · 2019年6月 / June 2019 · Q25 · 答案 / Mark scheme</a></li><li><a href="/notes/c638c056b0223d974b.html">PH01 · 2019年6月 / June 2019 · Q25 · 题目 / Question</a></li><li><a href="/notes/5c45d58210e29ff451.html">PH01 · 2020年1月 / January 2020 · Q04 · 答案 / Mark scheme</a></li><li><a href="/notes/71726238948f6ebfc1.html">PH01 · 2020年1月 / January 2020 · Q04 · 题目 / Question</a></li><li><a href="/notes/3743f4850ca1f12eb0.html">PH01 · 2021年1月 / January 2021 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/74e74a0a029fad7c8d.html">PH01 · 2021年1月 / January 2021 · Q11 · 题目 / Question</a></li><li><a href="/notes/30c590933962cd3a39.html">PH01 · 2021年1月 / January 2021 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/8aa9cce0e86bc44bea.html">PH01 · 2021年1月 / January 2021 · Q23 · 题目 / Question</a></li><li><a href="/notes/60aa5d4b7ecc07229c.html">PH01 · 2021年1月 / January 2021 · Q25 · 答案 / Mark scheme</a></li><li><a href="/notes/65f6360eec628e197b.html">PH01 · 2021年1月 / January 2021 · Q25 · 题目 / Question</a></li><li><a href="/notes/72d251607e03b143be.html">PH01 · 2022年1月 / January 2022 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/171005644207d02b17.html">PH01 · 2022年1月 / January 2022 · Q08 · 题目 / Question</a></li><li><a href="/notes/b7a345089b4712efba.html">PH01 · 2022年6月 / June 2022 · Q01 · 答案 / Mark scheme</a></li><li><a href="/notes/bf7f8badf0d2efe603.html">PH01 · 2022年6月 / June 2022 · Q01 · 题目 / Question</a></li><li><a href="/notes/c21796a242ef8023bd.html">PH01 · 2022年6月 / June 2022 · Q22 · 答案 / Mark scheme</a></li><li><a href="/notes/25e660a0661e2d2a17.html">PH01 · 2022年6月 / June 2022 · Q22 · 题目 / Question</a></li><li><a href="/notes/4f430ca5847101ed45.html">PH01 · 2022年6月 / June 2022 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/caefe1011eda1e4537.html">PH01 · 2022年6月 / June 2022 · Q23 · 题目 / Question</a></li><li><a href="/notes/b8fe1fac391811af35.html">PH01 · 2023年1月 / January 2023 · Q03 · 答案 / Mark scheme</a></li><li><a href="/notes/7a90e85ab4e6c4cd01.html">PH01 · 2023年1月 / January 2023 · Q03 · 题目 / Question</a></li><li><a href="/notes/03a04f37d3458417a0.html">PH01 · 2023年6月 / June 2023 · Q24 · 答案 / Mark scheme</a></li><li><a href="/notes/1a1224e43986e795e4.html">PH01 · 2023年6月 / June 2023 · Q24 · 题目 / Question</a></li><li><a href="/notes/b1d7f5322bf05cf2d1.html">PH01 · 2024年1月 / January 2024 · Q09 · 答案 / Mark scheme</a></li><li><a href="/notes/ceec0a08f9847970f9.html">PH01 · 2024年1月 / January 2024 · Q09 · 题目 / Question</a></li><li><a href="/notes/3b4c87c0911484bc24.html">PH01 · 2024年6月 / June 2024 · Q03 · 答案 / Mark scheme</a></li><li><a href="/notes/b003c2c92f75dd9c60.html">PH01 · 2024年6月 / June 2024 · Q03 · 题目 / Question</a></li><li><a href="/notes/c9948380e861e1676d.html">PH01 · 2025年1月 / January 2025 · Q06 · 答案 / Mark scheme</a></li><li><a href="/notes/a7215de4ba0b6d5cac.html">PH01 · 2025年1月 / January 2025 · Q06 · 题目 / Question</a></li><li><a href="/notes/e571f094da76012056.html">PH01 · 2025年6月 / June 2025 · Q07 · 答案 / Mark scheme</a></li><li><a href="/notes/83e0e0876b4402df20.html">PH01 · 2025年6月 / June 2025 · Q07 · 题目 / Question</a></li><li><a href="/notes/2ccca759bc1293fb4d.html">PH01 · 2026年6月 / June 2026 · Q12 · 答案 / Mark scheme</a></li><li><a href="/notes/3deaf491e4ebf747c2.html">PH01 · 2026年6月 / June 2026 · Q12 · 题目 / Question</a></li><li><a href="/notes/38f98297dc69200d74.html">背景辐射与计数修正 / Background radiation and count correction · 概念考察练习 / Concept practice</a></li><li><a href="/notes/aa55771af081f7ca39.html">PH01 · 2021年1月 / January 2021 · Q25 · Background radiation sources / 本底辐射来源</a></li><li><a href="/notes/1783dad1f71c7ca140.html">PH01 · 2022年6月 / June 2022 · Q01.1 · Background radiation / 本底辐射</a></li><li><a href="/notes/10f6069fb0ce08241a.html">PH01 · 2023年1月 / January 2023 · Q03.1 · Corrected count rate / 修正计数率</a></li><li><a href="/notes/9af923477f900263c7.html">PH01 · 2026年6月 / June 2026 · Q12.1 · Background radiation source / 本底辐射来源</a></li><li><a href="/notes/c72ed3514d07cf29e4.html">U1 实验、数据与评价 / Practical data and evaluation</a></li><li><a href="/notes/99df329ef3364404b4.html">PH01 2018年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/c17029b0ad4a61800f.html">PH01 2018年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/8cb44ec2b7121466c5.html">PH01 2019年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/4ee160c765f982e2fb.html">PH01 2020年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/bc3402ec09b0bdcd41.html">PH01 2021年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/8ba7b2c9f334ae2797.html">PH01 2022年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/bc64ba66301d6d8655.html">PH01 2023年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/8e3f7a94449f227324.html">PH01 2024年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/ce941af79cb7a6ca06.html">PH01 2024年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/220e7ff79c8acf0967.html">PH01 2025年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/63137c6313a4f36444.html">PH01 2025年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/807adb8e84ef9f0d3e.html">PH01 2026年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/f56916012c9ddd2bc7.html">PH01 2026年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/2aa7f93e59c731f403.html">PH01 · 2019年1月 / January 2019 · Q05 · Inverse-square-law experiment / 平方反比定律实验</a></li><li><a href="/notes/38d5884d6b38676301.html">PH01 · 2024年1月 / January 2024 · Q09.3 · Inverse-square investigation / 平方反比实验</a></li><li><a href="/notes/7f20be77585472ba7b.html">PH01 · 2025年1月 / January 2025 · Q06.1 · Gamma inverse-square experiment / γ射线平方反比实验</a></li><li><a href="/notes/e64c752b685dd2a5b7.html">背景辐射与计数修正 / Background radiation and count correction · 论述题练习 / Written-response practice</a></li><li><a href="/notes/1b440db6e205ca98b3.html">PH01 · 2018年6月 / June 2018 · Q11.4 · Background count rate / 本底计数率</a></li><li><a href="/notes/535ea7d67effeadbb1.html">PH01 · 2021年1月 / January 2021 · Q11.6 · Background intercept / 本底截距</a></li><li><a href="/notes/da5c4a1c82601a5960.html">PH01 · 2022年1月 / January 2022 · Q08.1 · Checking background variation / 检查本底变化</a></li><li><a href="/notes/323d757cb8807aa32f.html">PH01 · 2022年6月 / June 2022 · Q01.2 · Artificial background radiation / 人工本底辐射</a></li><li><a href="/notes/b523c21b62498f3611.html">PH01 · 2024年6月 / June 2024 · Q03.2 · Accurate count rate / 准确的计数率</a></li><li><a href="/notes/604921910109346104.html">PH01 · 2025年6月 / June 2025 · Q07.4 · Correcting count rate / 修正计数率</a></li><li><a href="/notes/0998bbf87604ca1455.html">半衰期与背景扣除模型 / Half-life</a></li><li><a href="/notes/c02fd4209edadef805.html">辐射吸收与厚度检测模型 / Absorption and thickness</a></li><li><a href="/notes/91fdea4bb7b3d5d8fb.html">点源扩散与反平方模型 / Inverse-square law</a></li><li><a href="/notes/06c50c68645a1c99cc.html">放射性与探测词汇 / Radioactivity and detection</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U1/02 知识节点/3.3 原子与放射性/A14 背景辐射与计数修正 - Background radiation and count correction.md","url":"/notes/ba572af6361b57caf1.html","unit":"U1"}</script></body></html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>碰撞模型 / Collide · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/07 常用物理模型</div><h1 id="h-4e6a2ef3a6a8945cc7">碰撞模型 / Collide</h1>
+<p><a class="internal-link" href="/notes/72caa2ae2f28c228eb.html">常用物理模型总目录 / Model index</a> · <a class="internal-link" href="/notes/a9fe07dc865bd25180.html">关键词速查 / Keyword lookup</a></p>
+<p><strong>考纲 / Specification:</strong> <a class="internal-link" href="/notes/88eca5b9d3ed5730ae.html">3.2.6 动量 - MOMENTUM</a> · <a class="internal-link" href="/notes/cc4006b0e246312063.html">3.2.8 能量守恒 - Conservation of energy</a></p>
+<h2 id="h-18e70b49e22d9d832b">题目关键词与翻译 / Keyword cues and meanings</h2>
+<table>
+<thead>
+<tr>
+<th>English cue</th>
+<th>中文</th>
+<th>应如何判断 / Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>collide / collision</strong></td>
+<td>碰撞 / 碰撞过程</td>
+<td>先建立相互作用的物体系统 / Identify the interacting bodies.</td>
+</tr>
+<tr>
+<td><strong>elastic / elastically</strong></td>
+<td>弹性的 / 弹性地</td>
+<td>系统总动能守恒 / Total kinetic energy is conserved.</td>
+</tr>
+<tr>
+<td><strong>inelastic / inelastically</strong></td>
+<td>非弹性的 / 非弹性地</td>
+<td>系统总动能不守恒 / Total kinetic energy is not conserved.</td>
+</tr>
+<tr>
+<td><strong>stick together / move together</strong></td>
+<td>粘在一起 / 一起运动</td>
+<td>碰后共同速度：完全非弹性分支 / A shared final velocity identifies the sticking branch.</td>
+</tr>
+<tr>
+<td><strong>stationary / at rest</strong></td>
+<td>静止 / 静止状态</td>
+<td>相应物体碰前速度为零 / Set that body's initial velocity to zero.</td>
+</tr>
+</tbody>
+</table>
+<p>关键词用于提示候选模型；须结合对象、方向、阶段和题设条件确认。 / Keywords suggest a model; verify the system, direction, stage and stated conditions.</p>
+<h2 id="h-0b1e87aa3b7b7757b7">模型判断 / Model selection</h2>
+<p><strong>Collide → 碰撞情境 → 检查系统与外冲量 → 判断碰撞类别。</strong> / Identify collision, check external impulse, then classify kinetic-energy behaviour.</p>
+<table>
+<thead>
+<tr>
+<th>题目条件 / Condition</th>
+<th>对应分支 / Branch</th>
+<th>总动量 / Total momentum</th>
+<th>总动能 / Total kinetic energy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>elastic / 弹性</td>
+<td>弹性碰撞 / elastic collision</td>
+<td>所选方向外冲量可忽略时守恒 / conserved if external impulse is negligible</td>
+<td><span class="math inline">\(K_f=K_i\)</span></td>
+</tr>
+<tr>
+<td>inelastic / 非弹性</td>
+<td>非弹性碰撞 / inelastic collision</td>
+<td>同一外冲量条件 / same condition</td>
+<td><span class="math inline">\(K_f\ne K_i\)</span>；普通耗散碰撞中减少 / decreases in a dissipative collision</td>
+</tr>
+<tr>
+<td>stick / move together / 粘合</td>
+<td>完全非弹性碰撞 / perfectly inelastic collision</td>
+<td>同一外冲量条件 / same condition</td>
+<td>两物体共享末速度；通常有动能转移 / common final velocity with kinetic-energy transfer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>只给 collide 不能确定弹性；碰后分开也不能确定弹性。</strong> / Neither the word collision nor separation afterwards proves that kinetic energy is conserved.</p>
+<h2 id="h-166a0f981d6cdc4cad">Conditions / 适用条件</h2>
+<p>选“两个碰撞物体”为系统，取所需方向。该方向上的外冲量可忽略，才可令总动量守恒；水平碰撞中，重力可能仍存在，但它不提供水平冲量。 / Apply momentum conservation along a direction with negligible external impulse.</p>
+<p>对“球撞固定墙”，球本身的动量不守恒；分析球的反弹用冲量，或把墙和地球纳入更大的系统。 / A ball alone is not a momentum-conserving system in a wall collision.</p>
+<h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
+<p>一维、带符号速度： / Signed velocities in one dimension:</p>
+<div class="math block">
+\[m_1u_1+m_2u_2=m_1v_1+m_2v_2.\]
+</div>
+<div class="math block">
+\[K_i=\frac12m_1u_1^2+\frac12m_2u_2^2,\qquad K_f=\frac12m_1v_1^2+\frac12m_2v_2^2.\]
+</div>
+<p><strong>弹性分支：</strong> 联立动量守恒与 <span class="math inline">\(K_i=K_f\)</span>。 / Use both total momentum and total kinetic-energy conservation.</p>
+<p><strong>粘合分支：</strong> <span class="math inline">\(v_1=v_2=V\)</span>，因此</p>
+<div class="math block">
+\[V=\frac{m_1u_1+m_2u_2}{m_1+m_2}.\]
+</div>
+<p><strong>只知非弹性：</strong> 通常不能仅凭一条动量方程求两个未知末速度；须使用题目补充的速度、能量变化或“共同运动”条件。 / An unspecified inelastic collision generally needs an additional condition.</p>
+<h2 id="h-668e50018e46a51aa2">能量变化 / Energy account</h2>
+<p>普通耗散碰撞的动能减少量 <span class="math inline">\(E_{\rm transferred}=K_i-K_f\)</span>，可进入内能、形变或声音。<strong>系统及环境的总能量仍守恒。</strong> / Reduced kinetic energy is transferred to other forms; total energy of the complete system is conserved.</p>
+<h2 id="h-0d91d009e14332425f">数值图解 / Numerical illustration</h2>
+<a class="image-link" href="/media/741e4c1a90d2f142af.png" target="_blank"><img alt="PM10 碰撞前后与能量比较" decoding="async" loading="lazy" src="/media/741e4c1a90d2f142af.png"/></a>
+<p><strong>图中共同初始条件 / Common initial state:</strong> <span class="math inline">\(m_1=2\,\mathrm{kg}\)</span>，<span class="math inline">\(u_1=3\,\mathrm{m\,s^{-1}}\)</span>；<span class="math inline">\(m_2=1\,\mathrm{kg}\)</span>，<span class="math inline">\(u_2=0\)</span>；外冲量可忽略。三种结果的总动量都为 <span class="math inline">\(6\,\mathrm{kg\,m\,s^{-1}}\)</span>，但总动能不同。 / Equal total momentum does not imply equal kinetic energy.</p>
+<table>
+<thead>
+<tr>
+<th>分支 / Branch</th>
+<th>末速度 / Final velocities</th>
+<th><span class="math inline">\(K_i\)</span></th>
+<th><span class="math inline">\(K_f\)</span></th>
+<th>转为其他形式 / Transferred</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>弹性 / elastic</td>
+<td><span class="math inline">\(v_1=1\)</span>，<span class="math inline">\(v_2=4\,\mathrm{m\,s^{-1}}\)</span></td>
+<td>9 J</td>
+<td>9 J</td>
+<td>0 J</td>
+</tr>
+<tr>
+<td>非弹性且分开 / inelastic, separated</td>
+<td><span class="math inline">\(v_1=1.5\)</span>，<span class="math inline">\(v_2=3\,\mathrm{m\,s^{-1}}\)</span></td>
+<td>9 J</td>
+<td>6.75 J</td>
+<td>2.25 J</td>
+</tr>
+<tr>
+<td>完全非弹性 / perfectly inelastic</td>
+<td><span class="math inline">\(V=2\,\mathrm{m\,s^{-1}}\)</span></td>
+<td>9 J</td>
+<td>6 J</td>
+<td>3 J</td>
+</tr>
+</tbody>
+</table>
+<p>图为自编说明例，不是原真题或评分标准。 / This is an original teaching example.</p>
+<h2 id="h-bca03c68c3ddc546db">解题流程 / Method</h2>
+<ol>
+<li>圈出碰撞前后、两物体、质量和速度方向。 / Identify both bodies and signed velocities immediately before and after impact.</li>
+<li>明确系统与外冲量条件，再写动量方程。 / State the system and conservation condition.</li>
+<li>从 elastic 或 move together 选择补充方程，求未知量。 / Choose the extra equation from the collision condition.</li>
+<li>比较<strong>总</strong>动能，说明转移；需要单个物体的平均力时转到冲量模型。 / Compare total kinetic energy and use impulse for a single body's average force.</li>
+</ol>
+<h2 id="h-d289ca8067ef00f08b">复述检查 / Retrieval check</h2>
+<p>“两球碰后仍然分开，所以碰撞是弹性的”是否正确？ / Does separation prove elasticity?</p>
+<details class="callout check"><summary>复述答案 / Retrieval answer</summary><div class="callout-body"><p>不正确。图中中间分支碰后分开，但总动能由9 J变为6.75 J。弹性须检查系统总动能是否守恒。 / No. The separated example loses kinetic energy; elasticity concerns total kinetic energy.</p>
+</div></details>
+<h2 id="h-ab0fd79fed886214b4">原课件图像辅助 / Source-slide figures</h2>
+<a class="image-link" href="/media/e5b6a8258df5ac7686.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/e5b6a8258df5ac7686.png"/></a>
+<p><strong>读图 / Reading:</strong> 弹性与否须比较总动能，单凭两物体碰后分开不能判断弹性。 / Separation after a collision alone does not establish elasticity; compare total kinetic energy.</p>
+<a class="image-link" href="/media/8d7c5008b1451047a0.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/8d7c5008b1451047a0.png"/></a>
+<p><strong>读图 / Reading:</strong> 碰后粘合，共同速度：完全非弹性碰撞。 / Bodies stick and share a final velocity in a perfectly inelastic collision.</p>
+<h2 id="h-56859aaf0d7bd7dcd3">真题识别实例 / Recognition in past papers</h2>
+<ul>
+<li><a class="internal-link" href="/notes/e791b5ece270e6902a.html#h-efb0e744d685ef41a3">2026年6月 / June 2026 · Q07</a>：题干线索 <strong>move together</strong>。7.2–7.3：inelastic定义后补充move together，应使用共同末速度的动量方程 / The shared final motion specifies the sticking branch.</li>
+<li><a class="internal-link" href="/notes/e791b5ece270e6902a.html#h-723c5ab19dce652dc3">2023年1月 / January 2023 · Q07</a>：题干线索 <strong>grips it tightly</strong>。7.5：隼抓住小鸟后整体运动，按粘合碰撞求共同速度 / Treat the captured bird and falcon as a shared-velocity system.</li>
+<li><a class="internal-link" href="/notes/e791b5ece270e6902a.html#h-128969072cf9835dae">2026年6月 / June 2026 · Q16</a>：题干线索 <strong>collides elastically</strong>。球撞固定墙：球动能不变，动量改变大小为2mv；球自身动量不守恒 / Elastic rebound changes the ball's momentum despite unchanged kinetic energy.</li>
+</ul>
+<p>点击题号进入对应知识点的原题位置；评分标准在题目下方默认折叠。以上说明为自编模型分析。 / Links open the original question in its topic bank, with the mark scheme collapsed below; model explanations are original summaries.</p>
+<h2 id="h-015b5c1b7e8a13c76a">知识与模型联系 / Knowledge and model connections</h2>
+<p><strong>基础知识 / Knowledge:</strong> <a class="internal-link" href="/notes/47203daf24e7e8bcaf.html">D17 动量与动量守恒 - Momentum and conservation of momentum</a> · <a class="internal-link" href="/notes/ec9b40f27399dd77ec.html">D18 碰撞与爆炸 - Collisions and explosions</a> · <a class="internal-link" href="/notes/69f17727c2b6991086.html">D19 冲量、力时间图与冲击 - Impulse, force-time graphs and impact</a> · <a class="internal-link" href="/notes/567e486acbb2f39ac6.html">D22 能量守恒与能量收支 - Conservation of energy</a></p>
+<p><strong>关联模型 / Models:</strong> <a class="internal-link" href="/notes/13b0172d9370b0822e.html">PM07 抛体独立分运动模型</a> · <a class="internal-link" href="/notes/0baf52887690dc9b44.html">PM11 爆炸与反冲模型</a> · <a class="internal-link" href="/notes/5dade7996b1e93961e.html">PM12 冲量停止与反弹模型</a> · <a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">PM13 功与能量收支模型</a></p>
+<h2 id="h-9be9917ee1a960960c">复述提示 / Retrieval prompt</h2>
+<p>合上公式，说明“关键词提示什么 → 还需什么条件 → 使用什么规律 → 哪一步需要符号或单位检查”。 / Explain the cue, the extra condition, the governing law and the sign or unit check without looking at the equations.</p>
+<p><strong>依据 / Sources:</strong> <a class="internal-link" href="/notes/0b5dec2e245a870dec.html">资料来源与范围 - Sources and scope</a>；对应知识笔记中的定义、课件页码及PH01评分标准。 / The linked knowledge notes record definitions, slide provenance and mark-scheme evidence.</p>
+<section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/47203daf24e7e8bcaf.html">动量与动量守恒 / Momentum and conservation of momentum</a></li><li><a href="/notes/ec9b40f27399dd77ec.html">碰撞与爆炸 / Collisions and explosions</a></li><li><a href="/notes/69f17727c2b6991086.html">冲量、力时间图与冲击 / Impulse, force-time graphs and impact</a></li><li><a href="/notes/567e486acbb2f39ac6.html">能量守恒与能量收支 / Conservation of energy</a></li><li><a href="/notes/6ddae8fa69e4c02393.html">D17 动量与动量守恒 真题练习 / Past-paper practice</a></li><li><a href="/notes/e791b5ece270e6902a.html">D18 碰撞与爆炸 真题练习 / Past-paper practice</a></li><li><a href="/notes/edebb63acb9b6684d4.html">D19 冲量、力时间图与冲击 真题练习 / Past-paper practice</a></li><li><a href="/notes/1f6a93cfd15eebfb12.html">D22 能量守恒与能量收支 真题练习 / Past-paper practice</a></li><li><a href="/notes/c6db2b2607ef02008c.html">PH01 · 2017年6月 / June 2017 · Q08 · 题目 / Question</a></li><li><a href="/notes/2eaeac2ddd56211c95.html">PH01 · 2019年1月 / January 2019 · Q15 · 题目 / Question</a></li><li><a href="/notes/3c43ce31c9cf9020bd.html">PH01 · 2019年6月 / June 2019 · Q18 · 题目 / Question</a></li><li><a href="/notes/6314965cfa238c91c7.html">PH01 · 2019年6月 / June 2019 · Q19 · 题目 / Question</a></li><li><a href="/notes/c2ba47e9ba4ab4a666.html">PH01 · 2019年6月 / June 2019 · Q21 · 题目 / Question</a></li><li><a href="/notes/2de690b53802200d2f.html">PH01 · 2022年1月 / January 2022 · Q02 · 题目 / Question</a></li><li><a href="/notes/899b6252459ef81a2c.html">PH01 · 2022年1月 / January 2022 · Q17 · 题目 / Question</a></li><li><a href="/notes/617812dc4008542341.html">PH01 · 2023年1月 / January 2023 · Q07 · 题目 / Question</a></li><li><a href="/notes/1c8281a4818aceb971.html">PH01 · 2024年6月 / June 2024 · Q02 · 题目 / Question</a></li><li><a href="/notes/c741000951cd0cd4e5.html">PH01 · 2025年1月 / January 2025 · Q16 · 题目 / Question</a></li><li><a href="/notes/b662200d30dfd8f895.html">PH01 · 2025年6月 / June 2025 · Q05 · 题目 / Question</a></li><li><a href="/notes/d8ea323297f8f0bef6.html">PH01 · 2026年1月 / January 2026 · Q17 · 题目 / Question</a></li><li><a href="/notes/384227ada914061913.html">PH01 · 2026年6月 / June 2026 · Q07 · 题目 / Question</a></li><li><a href="/notes/664f030f5fcdbacc2f.html">PH01 · 2026年6月 / June 2026 · Q16 · 题目 / Question</a></li><li><a href="/notes/72caa2ae2f28c228eb.html">常用物理模型 / Common physics models</a></li><li><a href="/notes/a9fe07dc865bd25180.html">关键词与模型速查 / Keyword-to-model lookup</a></li><li><a href="/notes/13b0172d9370b0822e.html">抛体独立分运动模型 / Projectile</a></li><li><a href="/notes/0baf52887690dc9b44.html">爆炸与反冲模型 / Explode and recoil</a></li><li><a href="/notes/5dade7996b1e93961e.html">冲量停止与反弹模型 / Stop and rebound</a></li><li><a href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a></li><li><a href="/notes/13997d967967c432d3.html">材料弹性塑性与曲线模型 / Elastic and plastic</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U1/07 常用物理模型/PM10 碰撞模型 - Collide.md","url":"/notes/a147ef262ccc4f266c.html","unit":"U1"}</script></body></html>

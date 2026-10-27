@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>半衰期与衰变图像 / Half-life and decay graphs · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/02 知识节点/3.3 原子与放射性</div><h1 id="h-a6a7f372c37ebc754a">半衰期与衰变图像 / Half-life and decay graphs</h1>
+<details class="callout physics-relations"><summary>关系摘要</summary><div class="callout-body"><p><strong>半衰期与衰变图像 / Half-life and decay graphs</strong></p>
+<p>每经过一个半衰期，未衰变核数量减半。Half-life describes statistical halving.</p>
+<p>考纲 / Specification：<a class="internal-link" href="/notes/e2590921f647e0ee13.html">3.3.3 放射性 - Radioactivity</a></p>
+</div></details>
+<!-- U1_LINEAGE_START -->
+<details class="callout physics-lineage"><summary>知识谱系位置 / Place in the knowledge lineage</summary><div class="callout-body"><p><a class="internal-link" href="/notes/fe4f62fb8bc5de4a67.html">00 物理U1知识谱系 - Physics U1 knowledge lineage</a> → <a class="internal-link" href="/notes/c8c2ff8fe64cd96ed3.html">3.3 原子与放射性 - Particles, radiation and radioactivity</a> → <a class="internal-link" href="/notes/e2590921f647e0ee13.html">3.3.3 放射性 - Radioactivity</a> → <strong>A09 半衰期与衰变图像</strong></p>
+<p><strong>从哪些知识引入 / Incoming relationships</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/fcf35b1a897b0b7b5d.html">A07 核衰变与核方程 - Radioactive decay equations</a> → 本笔记：剩余核统计 / halving。</li>
+<li><a class="internal-link" href="/notes/ba572af6361b57caf1.html">A14 背景辐射与计数修正 - Background radiation and count correction</a> → 本笔记：校正衰变曲线 / correct。</li>
+</ul>
+<p><strong>可以继续连接到 / Outgoing relationships</strong></p>
+<ul>
+<li>本笔记 → <a class="internal-link" href="/notes/be56545194c5e53914.html">A12 辐射危害与厚度检测 - Radiation hazards and thickness monitoring</a>: 应用时间尺度 / half-life。</li>
+</ul>
+<p><strong>应用与返回 / Apply and return</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/a41b16bbf446829d55.html">A09 半衰期与衰变图像复述与练习 - Half-life and decay graphs - Retrieval practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+</ul>
+<p>箭头的含义以上方关系标签为准，相关知识不一概视为严格先修。The labels distinguish definitions, derivations, evidence, measurement and applications.</p>
+</div></details>
+<!-- U1_LINEAGE_END -->
+<!-- U1_DEFINITIONS_START -->
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>半衰期 / half-life</strong></td>
+<td><span class="math inline">\(T_{1/2},\ t_{1/2}\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td>两种记号均常见 / Both forms are used.</td>
+</tr>
+<tr>
+<td><strong>已经过的半衰期个数 / number of half-lives elapsed</strong></td>
+<td><span class="math inline">\(n\)</span></td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+<td>这里 n 是 t/T₁/₂，不是摩尔数 / Here n counts half-lives, not moles.</td>
+</tr>
+<tr>
+<td><strong>时间、时间间隔 / time, time interval</strong></td>
+<td><span class="math inline">\(t,\ \Delta t\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>未衰变核数、初始核数 / undecayed and initial nuclei</strong></td>
+<td><span class="math inline">\(N,\ N_0\)</span></td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+<td>N₀ 为 t=0 的核数 / N₀ is the initial number.</td>
+</tr>
+<tr>
+<td><strong>计数率 / count rate</strong></td>
+<td><span class="math inline">\(R\)</span></td>
+<td><span class="math inline">\(\mathrm{s^{-1}}\)</span></td>
+<td>R_measured、R_bg、R_corrected 分别为实测、背景、修正计数率 / Subscripts identify measured, background and corrected rates.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<p><strong>Half-life / 半衰期</strong>；<strong>Activity / 活度</strong>；<strong>Count rate / 计数率</strong></p>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<h3 id="h-1a4594cd335e1fc1ca">Half-life / 半衰期</h3>
+<p><strong>EN:</strong> Half-life is the time taken for the number of undecayed nuclei of an isotope in a sample to fall to half its initial value.</p>
+<p><strong>中:</strong> 半衰期是样品中某核素未衰变原子核数量降到初始值一半所需的时间。</p>
+<p><strong>表达要点 / Wording:</strong> time; half; undecayed nuclei</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/1eeb62cfc999d4f02b.pdf#page=16">PH01 202601 Q08.3 · MS p16（相关计算或应用）</a></p>
+<h3 id="h-8906257844b5670744">Activity / 活度</h3>
+<p><strong>EN:</strong> Activity is the number of nuclear decays per unit time in a radioactive sample.</p>
+<p><strong>中:</strong> 活度是放射性样品单位时间内的原子核衰变次数。</p>
+<p><strong>表达要点 / Wording:</strong> nuclear decays; per unit time</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/044352f51f32286519.pdf#page=19">PH01 202506 Q11 · MS p19（相关计算或应用）</a></p>
+<h3 id="h-629ef75abcccd43e1f">Count rate / 计数率</h3>
+<p><strong>EN:</strong> Count rate is the number of counts recorded by a detector per unit time.</p>
+<p><strong>中:</strong> 计数率是探测器单位时间内记录的计数次数。</p>
+<p><strong>表达要点 / Wording:</strong> recorded counts; per unit time</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/985aa1ad9dba67cfab.pdf#page=18">PH01 202101 Q11.1 · MS p18（相关计算或应用）</a></p>
+<h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
+<div class="math block">
+\[\begin{gathered}
+N=\frac{N_0}{2^n} \\
+n=\frac{t}{T_{1/2}} \\
+N_{\rm decayed}=N_0-N \\
+R_{\rm corrected}=R_{\rm measured}-R_{\rm background}
+\end{gathered}\]
+</div>
+<h2 id="h-166a0f981d6cdc4cad">Conditions / 适用条件</h2>
+<p>用计数率读半衰期前先修正背景，并保持可比的探测几何及探测效率。 / Subtract background and keep detector geometry and efficiency comparable when using count rate for half-life.</p>
+<h2 id="h-614697bd55e5a5935c">Explanation / 讲解</h2>
+<h3 id="h-e2dbbf20d2d6abace7">含义与关系 / Meaning and relationships</h3>
+<p>半衰期是大量同种核样品中未衰变核的数量减少到原来一半所需的时间。Half-life is the time for the number of undecayed nuclei of an isotope to halve.</p>
+<p>同一核素在合适条件下，活度或经过背景修正的计数率也减半。活度为每秒衰变次数，单位Bq；计数率取决于探测效率和几何，不能一概等同于活度。Activity and measured count rate are different quantities.</p>
+<h3 id="h-daa05567a862b3e0d5">U1整数半衰期运算 / Whole-number calculations</h3>
+<p>经过n个半衰期（U1核心计算n为整数）：
+<div class="math inline">\[N=\frac{N_0}{2^n},\quad n=\frac{t}{T_{1/2}},\quad N_{\rm decayed}=N_0-N.\]</div>
+初始核素的质量或活度在相同条件下也按此比率减少。The material remaining as the original isotope decreases, not the total mass of all daughters simply disappearing.</p>
+<h3 id="h-4e2aff1ee2cdd4087b">图像方法 / Graph method</h3>
+<p>选一个校正值R，找R/2对应时间，取两时刻之差；可选几组不同位置验证半衰期近似相同。Measure several halving intervals on the graph.</p>
+<p>若存在背景 <span class="math inline">\(R_b\)</span>，先用 <span class="math inline">\(R_{\rm source}=R_{\rm measured}-R_b\)</span>。总计数率趋向背景，不能从未修正曲线直接把总值减半。Subtract the background before finding a halving interval.</p>
+<h3 id="h-03e611bb2e0c7be44f">范围 / Scope</h3>
+<p>U1不要求连续指数方程、衰变常量λ、对数拟合或 <span class="math inline">\(T_{1/2}=\ln2/\lambda\)</span>。教材和PPT如出现这类关系，放入补充范围。The continuous exponential treatment is assigned to A2 by this specification.</p>
+<h3 id="h-554371516ca7656351">物理图像与图示 / Physics graphs and diagrams</h3>
+<a class="image-link" href="/media/4e00c3c7b23f61e9c7.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/4e00c3c7b23f61e9c7.png"/></a>
+<p><strong>读图 / Reading:</strong> 原核素剩余量连续减半，相邻减半位置的时间间隔相同；衰变产物的质量并未消失。 / Equal halving intervals characterize decay; daughter material has not disappeared.</p>
+<a class="image-link" href="/media/7f176e720cd5345b79.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/7f176e720cd5345b79.png"/></a>
+<p><strong>读图 / Reading:</strong> 源向各方向衰变发射，探测器只记录其中一部分；活度与计数率不能直接等同。 / The detector records only part of the radiation, so count rate is not automatically activity.</p>
+<!-- U1_DEFINITIONS_END -->
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-494af060b341d0a874">A09 方法 1 · 半衰、背景与质量归一 / Half-lives, background and normalisation</h3>
+<ol>
+<li>半衰期是大量不稳定核的未衰变数或相应活度减半所需时间；不是每个核在半衰期后必衰变。 / Use a statistical definition.</li>
+<li>U1可用连续减半及比例 <span class="math inline">\(A/A_0=2^{-t/T}\)</span>；不把U3衰变常数推导列为U1额外记忆。问时间区间可找相邻整数次半衰。 / Choose a method within the unit's requirements.</li>
+<li>原始计数率先减背景，只衰减净源计数，再按要求加回背景；从原始图读半衰目标是 <span class="math inline">\(B+(C_0-B)/2\)</span>。 / Do not halve the background.</li>
+<li>不同样品质量先归一；纯母核经两次半衰剩 <span class="math inline">\(N_0/4\)</span>、稳定子核为 <span class="math inline">\(3N_0/4\)</span>，母/子比是1/3而不是1/4。 / Distinguish remaining fraction from a parent-to-daughter ratio.</li>
+<li>图像要求“准确值”应尽可能取两次或更多半衰测定并平均；放射性供能的功率也随活度同比下降。 / Use repeated graphical determinations when asked.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/71726238948f6ebfc1.html">PH01 · 202001 · Q04</a>；<a class="internal-link" href="/notes/d3c46cf0d13fac0342.html">PH01 · 201806 · Q05</a>；<a class="internal-link" href="/notes/a5bbf79448dffff396.html">PH01 · 202506 · Q11</a>；<a class="internal-link" href="/notes/7a90e85ab4e6c4cd01.html">PH01 · 202301 · Q03</a>；<a class="internal-link" href="/notes/0951dcfda6b4a12932.html">PH01 · 202201 · Q22</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (28)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/8dd46f9654d715b66c.html">PH01 · 201706 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d678c79af70970d0cd.html">PH01 · 201706 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/71aa859905a0daa062.html">PH01 · 2018 specimen paper · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ae06799dcd6903a3fd.html">PH01 · 201801 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/113a657336eb77bb17.html">PH01 · 201801 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d3c46cf0d13fac0342.html">PH01 · 201806 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/736c1596403c4deab2.html">PH01 · 201806 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/06f5505ad17d13e5fe.html">PH01 · 201901 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/488f92f3720e32918d.html">PH01 · 201906 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b5526b0ce75ca2a0dc.html">PH01 · 201906 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/71726238948f6ebfc1.html">PH01 · 202001 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/23c294c019da5de3ca.html">PH01 · 202001 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8aa9cce0e86bc44bea.html">PH01 · 202101 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0951dcfda6b4a12932.html">PH01 · 202201 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/de85d8932c83b7ed38.html">PH01 · 202206 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/25e660a0661e2d2a17.html">PH01 · 202206 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7a90e85ab4e6c4cd01.html">PH01 · 202301 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c74db7423c472acd84.html">PH01 · 202301 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ca6fe8b1e38f763ec8.html">PH01 · 202306 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1a1224e43986e795e4.html">PH01 · 202306 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/23fa789302511431dc.html">PH01 · 202401 · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1ceb8b7f0ef5e6cb6c.html">PH01 · 202406 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a7215de4ba0b6d5cac.html">PH01 · 202501 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e08382531a8281d9a6.html">PH01 · 202501 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/83e0e0876b4402df20.html">PH01 · 202506 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a5bbf79448dffff396.html">PH01 · 202506 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2d3506e5501099d075.html">PH01 · 202601 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/38c3de4ad0f66ba4d6.html">PH01 · 202606 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/30b5c7a31ed5ee4f9d.html">U1逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-91121d1ecaf6930b80">知识联系 / Relationships</h2>
+<table>
+<thead>
+<tr>
+<th>方向 / Direction</th>
+<th>相连知识 / Linked knowledge</th>
+<th>关系 / Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前置或关联 → 本知识 / incoming</td>
+<td><a class="internal-link" href="/notes/fcf35b1a897b0b7b5d.html">A07 核衰变与核方程 - Radioactive decay equations</a></td>
+<td>剩余核统计 / halving</td>
+</tr>
+<tr>
+<td>前置或关联 → 本知识 / incoming</td>
+<td><a class="internal-link" href="/notes/ba572af6361b57caf1.html">A14 背景辐射与计数修正 - Background radiation and count correction</a></td>
+<td>校正衰变曲线 / correct</td>
+</tr>
+<tr>
+<td>本知识 → / outgoing</td>
+<td><a class="internal-link" href="/notes/be56545194c5e53914.html">A12 辐射危害与厚度检测 - Radiation hazards and thickness monitoring</a></td>
+<td>应用时间尺度 / half-life</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-d289ca8067ef00f08b">复述检查 / Retrieval check</h2>
+<ul>
+<li>[ ] 从带背景的衰变曲线求半衰期。 / Correct the baseline first.</li>
+<li>[ ] 计算3个半衰期后的剩余数量与已衰变数量。 / Distinguish remaining and decayed nuclei.</li>
+</ul>
+<h2 id="h-7a185af5ecf46cb0ac">对应原课件练习 / Source-slide practice</h2>
+<ul>
+<li><a class="internal-link" href="/notes/a41b16bbf446829d55.html">A09 半衰期与衰变图像复述与练习 - Half-life and decay graphs - Retrieval practice</a></li>
+</ul>
+<h2 id="h-00e36c430b204d4a07">依据 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/notes/0b5dec2e245a870dec.html">资料来源与范围 - Sources and scope</a>：本地9630 U1考纲对应3.3.3，与官方4.4版核对。</li>
+<li>Jim Breithaupt, Oxford International AQA Physics，教材印刷页 140, 141。内容按U1范围重新概括，未复制整段教材。</li>
+</ul>
+<!-- U1_MODELS_START -->
+<h2 id="h-ece831a4c8c76b508e">常用物理模型 / Common physics models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/0998bbf87604ca1455.html">PM23 半衰期与背景扣除模型</a>：half-life；activity / count rate。</li>
+</ul>
+<!-- U1_MODELS_END -->
+<!-- U1_PAST_PAPERS_START -->
+<h2 id="h-d7e53f0d63ea2388d1">历年真题 / Past-paper practice</h2>
+<a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html">按本知识点查看题目图片（28题） / Practice bank</a>
+<table>
+<thead>
+<tr>
+<th>所属试卷 / Paper</th>
+<th>题目 / Question</th>
+<th>对应范围 / Parts</th>
+<th>答案 / MS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017年6月 / June 2017</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-94c4cdbda04f92a98e">Q09</a></td>
+<td>09.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2017年6月 / June 2017</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-a7e19e10cd5383fd3a">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018 样卷 / Specimen 2018</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-6279bc466f79964e20">Q10</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年1月 / January 2018</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-217c1ecdffab0afe62">Q07</a></td>
+<td>07.1</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年1月 / January 2018</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-8e3d8115e5fdfbab18">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年6月 / June 2018</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-54139dd3ec0ddf05a4">Q05</a></td>
+<td>05.2、05.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年6月 / June 2018</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-a4607425bb420928bd">Q11</a></td>
+<td>11.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年1月 / January 2019</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-4f7fa899db23469379">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年6月 / June 2019</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-2b21c6941cfd65acc9">Q12</a></td>
+<td>12.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年6月 / June 2019</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-752ba2aecac3ef35ed">Q24</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2020年1月 / January 2020</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-1cdf5029a7ad98cb83">Q04</a></td>
+<td>04.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2020年1月 / January 2020</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-f8ea09bb125e724a6e">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-0e9bb4fb70dbae0fef">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年1月 / January 2022</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-eba6abd3878e1616c3">Q22</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-e860ec59ac8ba888f3">Q09</a></td>
+<td>09.3、09.4、09.5</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-ef71332ccaffa710d8">Q22</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年1月 / January 2023</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-1d12c186b920721431">Q03</a></td>
+<td>03.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年1月 / January 2023</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-7c8a3faadc23f7ad81">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年6月 / June 2023</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-03df2e3293eb732e67">Q05</a></td>
+<td>05.3、05.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年6月 / June 2023</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-8ceb0070ec0545eeeb">Q24</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年1月 / January 2024</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-5b53fe51f6a3456be7">Q25</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年6月 / June 2024</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-c9cf31b9760d663dd3">Q05</a></td>
+<td>05.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年1月 / January 2025</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-cfcf07c9fb9c6be54f">Q06</a></td>
+<td>06.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年1月 / January 2025</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-f8beba59f8ba2ea558">Q17</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年6月 / June 2025</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-ce458b745a3d098f85">Q07</a></td>
+<td>07.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年6月 / June 2025</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-cf01ac7a4c989bab66">Q11</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年1月 / January 2026</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-bf2670ac91ca74986f">Q08</a></td>
+<td>08.3、08.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年6月 / June 2026</td>
+<td><a class="internal-link" href="/notes/b3aaa3030c8c9d98e8.html#h-3aa2eb708b7514b1ab">Q08</a></td>
+<td>08.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+</tbody>
+</table>
+<!-- U1_PAST_PAPERS_END -->
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/ac34077d6aa9498e48.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/b075e4f33974826193.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/fe4f62fb8bc5de4a67.html">物理 U1 知识谱系 / Physics U1 knowledge lineage</a></li><li><a href="/notes/c8c2ff8fe64cd96ed3.html">3.3 粒子、辐射和放射性 / PARTICLES, RADIATION AND RADIOACTIVITY</a></li><li><a href="/notes/e2590921f647e0ee13.html">3.3.3 放射性 / RADIOACTIVITY</a></li><li><a href="/notes/fcf35b1a897b0b7b5d.html">核衰变与核方程 / Radioactive decay equations</a></li><li><a href="/notes/be56545194c5e53914.html">辐射危害与厚度检测 / Radiation hazards and thickness monitoring</a></li><li><a href="/notes/ba572af6361b57caf1.html">背景辐射与计数修正 / Background radiation and count correction</a></li><li><a href="/notes/a41b16bbf446829d55.html">A09 半衰期与衰变图像复述与练习 / Retrieval and practice</a></li><li><a href="/notes/f632b124127e9adda3.html">U1 概念与定义索引 / Concepts and definitions</a></li><li><a href="/notes/a250111986d580319a.html">U1复述进度 / Retrieval progress</a></li><li><a href="/notes/8403480eb1d7e4d99d.html">公式与适用条件 / Equations and conditions</a></li><li><a href="/notes/bc44c2f3b633ca38cb.html">关系索引 / Relationship index</a></li><li><a href="/notes/0a583cb08270db6716.html">课件例题提取索引 / Source slide index</a></li><li><a href="/notes/30b5c7a31ed5ee4f9d.html">U1 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/5d71469646857a1b0a.html">真题练习 / PH01 past-paper practice</a></li><li><a href="/notes/b10127f2a327b0ed43.html">M03 同一物理量的单位换算 真题练习 / Past-paper practice</a></li><li><a href="/notes/857d3e90190ee4b919.html">M04 误差与测量质量 真题练习 / Past-paper practice</a></li><li><a href="/notes/4287665f57095a24ce.html">M06 误差棒与图像不确定度 真题练习 / Past-paper practice</a></li><li><a href="/notes/42b30140f387c43b86.html">D21 功率与效率 真题练习 / Past-paper practice</a></li><li><a href="/notes/305612c4688d88909a.html">A04 比荷 真题练习 / Past-paper practice</a></li><li><a href="/notes/b46372a109fd9154bb.html">A05 粒子与反粒子 真题练习 / Past-paper practice</a></li><li><a href="/notes/a944cb57cfecd1b689.html">A06 湮灭、成对产生与能量 真题练习 / Past-paper practice</a></li><li><a href="/notes/c0a51c8a6e3eb6829e.html">A07 核衰变与核方程 真题练习 / Past-paper practice</a></li><li><a href="/notes/176253c8b7259496b6.html">A08 β衰变、中微子与自由中子 真题练习 / Past-paper practice</a></li><li><a href="/notes/b3aaa3030c8c9d98e8.html">A09 半衰期与衰变图像 真题练习 / Past-paper practice</a></li><li><a href="/notes/384416edb4188d4230.html">A10 核激发态、γ射线与Tc-99m 真题练习 / Past-paper practice</a></li><li><a href="/notes/33fe8e5ad82b24720c.html">A11 α、β、γ性质与吸收实验 真题练习 / Past-paper practice</a></li><li><a href="/notes/5206e40bed3b54680a.html">A12 辐射危害与厚度检测 真题练习 / Past-paper practice</a></li><li><a href="/notes/454bf2891bbd763854.html">A13 γ辐射反平方律与验证 真题练习 / Past-paper practice</a></li><li><a href="/notes/8470dfa1c13dd473a8.html">A14 背景辐射与计数修正 真题练习 / Past-paper practice</a></li><li><a href="/notes/d326ba2fff6aaae347.html">PH01 · 2018 样卷 / Specimen 2018 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/71aa859905a0daa062.html">PH01 · 2018 样卷 / Specimen 2018 · Q10 · 题目 / Question</a></li><li><a href="/notes/7083cd09e20cea0247.html">PH01 · 2017年6月 / June 2017 · Q09 · 答案 / Mark scheme</a></li><li><a href="/notes/8dd46f9654d715b66c.html">PH01 · 2017年6月 / June 2017 · Q09 · 题目 / Question</a></li><li><a href="/notes/d721c694faae32e705.html">PH01 · 2017年6月 / June 2017 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/d678c79af70970d0cd.html">PH01 · 2017年6月 / June 2017 · Q23 · 题目 / Question</a></li><li><a href="/notes/80d0d47d3fa2f42089.html">PH01 · 2018年1月 / January 2018 · Q07 · 答案 / Mark scheme</a></li><li><a href="/notes/ae06799dcd6903a3fd.html">PH01 · 2018年1月 / January 2018 · Q07 · 题目 / Question</a></li><li><a href="/notes/34b1bca211deff2085.html">PH01 · 2018年1月 / January 2018 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/113a657336eb77bb17.html">PH01 · 2018年1月 / January 2018 · Q23 · 题目 / Question</a></li><li><a href="/notes/191d5da9988ff61ae9.html">PH01 · 2018年6月 / June 2018 · Q05 · 答案 / Mark scheme</a></li><li><a href="/notes/d3c46cf0d13fac0342.html">PH01 · 2018年6月 / June 2018 · Q05 · 题目 / Question</a></li><li><a href="/notes/c5db1265b24608cd97.html">PH01 · 2018年6月 / June 2018 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/736c1596403c4deab2.html">PH01 · 2018年6月 / June 2018 · Q11 · 题目 / Question</a></li><li><a href="/notes/ab4d24211ca9ebffc6.html">PH01 · 2019年1月 / January 2019 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/06f5505ad17d13e5fe.html">PH01 · 2019年1月 / January 2019 · Q23 · 题目 / Question</a></li><li><a href="/notes/b6e5981d7e47a1b526.html">PH01 · 2019年6月 / June 2019 · Q12 · 答案 / Mark scheme</a></li><li><a href="/notes/488f92f3720e32918d.html">PH01 · 2019年6月 / June 2019 · Q12 · 题目 / Question</a></li><li><a href="/notes/7c6cd7a845353f7cb5.html">PH01 · 2019年6月 / June 2019 · Q24 · 答案 / Mark scheme</a></li><li><a href="/notes/b5526b0ce75ca2a0dc.html">PH01 · 2019年6月 / June 2019 · Q24 · 题目 / Question</a></li><li><a href="/notes/5c45d58210e29ff451.html">PH01 · 2020年1月 / January 2020 · Q04 · 答案 / Mark scheme</a></li><li><a href="/notes/71726238948f6ebfc1.html">PH01 · 2020年1月 / January 2020 · Q04 · 题目 / Question</a></li><li><a href="/notes/4168f166a1623c21ef.html">PH01 · 2020年1月 / January 2020 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/23c294c019da5de3ca.html">PH01 · 2020年1月 / January 2020 · Q23 · 题目 / Question</a></li><li><a href="/notes/30c590933962cd3a39.html">PH01 · 2021年1月 / January 2021 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/8aa9cce0e86bc44bea.html">PH01 · 2021年1月 / January 2021 · Q23 · 题目 / Question</a></li><li><a href="/notes/16acfad78a460112ad.html">PH01 · 2022年1月 / January 2022 · Q22 · 答案 / Mark scheme</a></li><li><a href="/notes/0951dcfda6b4a12932.html">PH01 · 2022年1月 / January 2022 · Q22 · 题目 / Question</a></li><li><a href="/notes/fd8a26fb86588e93cb.html">PH01 · 2022年6月 / June 2022 · Q09 · 答案 / Mark scheme</a></li><li><a href="/notes/de85d8932c83b7ed38.html">PH01 · 2022年6月 / June 2022 · Q09 · 题目 / Question</a></li><li><a href="/notes/c21796a242ef8023bd.html">PH01 · 2022年6月 / June 2022 · Q22 · 答案 / Mark scheme</a></li><li><a href="/notes/25e660a0661e2d2a17.html">PH01 · 2022年6月 / June 2022 · Q22 · 题目 / Question</a></li><li><a href="/notes/b8fe1fac391811af35.html">PH01 · 2023年1月 / January 2023 · Q03 · 答案 / Mark scheme</a></li><li><a href="/notes/7a90e85ab4e6c4cd01.html">PH01 · 2023年1月 / January 2023 · Q03 · 题目 / Question</a></li><li><a href="/notes/5774f1d6c289c2f3bf.html">PH01 · 2023年1月 / January 2023 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/c74db7423c472acd84.html">PH01 · 2023年1月 / January 2023 · Q23 · 题目 / Question</a></li><li><a href="/notes/9dff690337c1c09ff1.html">PH01 · 2023年6月 / June 2023 · Q05 · 答案 / Mark scheme</a></li><li><a href="/notes/ca6fe8b1e38f763ec8.html">PH01 · 2023年6月 / June 2023 · Q05 · 题目 / Question</a></li><li><a href="/notes/03a04f37d3458417a0.html">PH01 · 2023年6月 / June 2023 · Q24 · 答案 / Mark scheme</a></li><li><a href="/notes/1a1224e43986e795e4.html">PH01 · 2023年6月 / June 2023 · Q24 · 题目 / Question</a></li><li><a href="/notes/e39f565d2f93d1af60.html">PH01 · 2024年1月 / January 2024 · Q25 · 答案 / Mark scheme</a></li><li><a href="/notes/23fa789302511431dc.html">PH01 · 2024年1月 / January 2024 · Q25 · 题目 / Question</a></li><li><a href="/notes/3289bf70a40d889b5b.html">PH01 · 2024年6月 / June 2024 · Q05 · 答案 / Mark scheme</a></li><li><a href="/notes/1ceb8b7f0ef5e6cb6c.html">PH01 · 2024年6月 / June 2024 · Q05 · 题目 / Question</a></li><li><a href="/notes/c9948380e861e1676d.html">PH01 · 2025年1月 / January 2025 · Q06 · 答案 / Mark scheme</a></li><li><a href="/notes/a7215de4ba0b6d5cac.html">PH01 · 2025年1月 / January 2025 · Q06 · 题目 / Question</a></li><li><a href="/notes/c0782b15cd2bca8a33.html">PH01 · 2025年1月 / January 2025 · Q17 · 答案 / Mark scheme</a></li><li><a href="/notes/e08382531a8281d9a6.html">PH01 · 2025年1月 / January 2025 · Q17 · 题目 / Question</a></li><li><a href="/notes/e571f094da76012056.html">PH01 · 2025年6月 / June 2025 · Q07 · 答案 / Mark scheme</a></li><li><a href="/notes/83e0e0876b4402df20.html">PH01 · 2025年6月 / June 2025 · Q07 · 题目 / Question</a></li><li><a href="/notes/9a76398a82f49d6cc8.html">PH01 · 2025年6月 / June 2025 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/a5bbf79448dffff396.html">PH01 · 2025年6月 / June 2025 · Q11 · 题目 / Question</a></li><li><a href="/notes/93e995680c7bdd440a.html">PH01 · 2026年1月 / January 2026 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/2d3506e5501099d075.html">PH01 · 2026年1月 / January 2026 · Q08 · 题目 / Question</a></li><li><a href="/notes/f39275ce653be8d9c5.html">PH01 · 2026年6月 / June 2026 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/38c3de4ad0f66ba4d6.html">PH01 · 2026年6月 / June 2026 · Q08 · 题目 / Question</a></li><li><a href="/notes/ac34077d6aa9498e48.html">半衰期与衰变图像 / Half-life and decay graphs · 概念考察练习 / Concept practice</a></li><li><a href="/notes/370367b2dcaf7e79c1.html">PH01 · 2026年1月 / January 2026 · Q08.3 · Metastable state and half-life / 亚稳态与半衰期</a></li><li><a href="/notes/9c94b4f887606c64ba.html">U1 图像与示意图 / Graphs and diagrams</a></li><li><a href="/notes/99df329ef3364404b4.html">PH01 2018年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/c17029b0ad4a61800f.html">PH01 2018年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/8cb44ec2b7121466c5.html">PH01 2019年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/4ee160c765f982e2fb.html">PH01 2020年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/bc3402ec09b0bdcd41.html">PH01 2021年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/8ba7b2c9f334ae2797.html">PH01 2022年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/bc64ba66301d6d8655.html">PH01 2023年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/8e3f7a94449f227324.html">PH01 2024年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/ce941af79cb7a6ca06.html">PH01 2024年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/220e7ff79c8acf0967.html">PH01 2025年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/63137c6313a4f36444.html">PH01 2025年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/807adb8e84ef9f0d3e.html">PH01 2026年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/f56916012c9ddd2bc7.html">PH01 2026年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/e6942e9f164c085b0c.html">PH01 · 2018年6月 / June 2018 · Q05.3 · Short-lived medical source / 短寿命医用放射源</a></li><li><a href="/notes/b075e4f33974826193.html">半衰期与衰变图像 / Half-life and decay graphs · 论述题练习 / Written-response practice</a></li><li><a href="/notes/ad88ddb7f1b7b92d6e.html">PH01 · 2019年6月 / June 2019 · Q12.4 · Successive half-lives / 连续半衰期</a></li><li><a href="/notes/c1dcce872f5e0d3186.html">PH01 · 2022年6月 / June 2022 · Q09.5 · Collecting a medical isotope / 收集医用同位素</a></li><li><a href="/notes/1e0e3a51c899c74cc8.html">PH01 · 2023年6月 / June 2023 · Q05.3 · Recalibrating a radiation gauge / 辐射测厚仪重新校准</a></li><li><a href="/notes/a32369b29cb332a993.html">PH01 · 2025年6月 / June 2025 · Q07.2 · Long half-life in a laboratory / 实验室中的长半衰期</a></li><li><a href="/notes/acc460ac685b7004d5.html">PH01 · 2026年6月 / June 2026 · Q08.3 · Technetium medical scan / 锝的医学扫描</a></li><li><a href="/notes/0998bbf87604ca1455.html">半衰期与背景扣除模型 / Half-life</a></li><li><a href="/notes/06c50c68645a1c99cc.html">放射性与探测词汇 / Radioactivity and detection</a></li><li><a href="/notes/c0e35974e67d78fd9d.html">物理情境与器材词汇 / Physical situations and apparatus</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U1/02 知识节点/3.3 原子与放射性/A09 半衰期与衰变图像 - Half-life and decay graphs.md","url":"/notes/7b849968fe29596e4a.html","unit":"U1"}</script></body></html>

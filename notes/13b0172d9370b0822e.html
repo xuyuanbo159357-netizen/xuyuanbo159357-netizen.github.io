@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>抛体独立分运动模型 / Projectile · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/07 常用物理模型</div><h1 id="h-14a2baf4a36f9de088">抛体独立分运动模型 / Projectile</h1>
+<p><a class="internal-link" href="/notes/72caa2ae2f28c228eb.html">常用物理模型总目录 / Model index</a> · <a class="internal-link" href="/notes/a9fe07dc865bd25180.html">关键词速查 / Keyword lookup</a></p>
+<p><strong>考纲 / Specification:</strong> <a class="internal-link" href="/notes/f0a35f9d6b8baf2324.html">3.2.4 抛体运动 - Projectile motion</a></p>
+<h2 id="h-18e70b49e22d9d832b">题目关键词与翻译 / Keyword cues and meanings</h2>
+<table>
+<thead>
+<tr>
+<th>English cue</th>
+<th>中文</th>
+<th>应如何判断 / Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>projectile / fired / launched</strong></td>
+<td>抛体 / 发射 / 抛出</td>
+<td>先检查阻力条件，再分解运动 / Check drag and resolve the motion.</td>
+</tr>
+<tr>
+<td><strong>horizontally</strong></td>
+<td>水平地</td>
+<td>水平抛出时 uᵧ=0；飞行中某时刻水平则 vᵧ=0 / Distinguish launch direction from a later velocity.</td>
+</tr>
+<tr>
+<td><strong>angle to the horizontal</strong></td>
+<td>与水平的夹角</td>
+<td>uₓ=u cosθ，uᵧ=u sinθ / Resolve the launch velocity.</td>
+</tr>
+<tr>
+<td><strong>range / time of flight</strong></td>
+<td>水平射程 / 飞行时间</td>
+<td>先用竖直运动求时间 / Determine time from vertical motion.</td>
+</tr>
+</tbody>
+</table>
+<p>关键词用于提示候选模型；须结合对象、方向、阶段和题设条件确认。 / Keywords suggest a model; verify the system, direction, stage and stated conditions.</p>
+<h2 id="h-a0c6d95dbc33fbe5bf">核心模型与条件 / Model and conditions</h2>
+<p>无空气阻力、均匀重力场中，同一个物体的水平与竖直分运动共享<strong>同一时间</strong>。 / Horizontal and vertical components describe the same flight time.</p>
+<h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
+<div class="math block">
+\[a_x=0,\quad a_y=-g,\quad x=u_xt,\quad y=u_yt-\frac12gt^2,\quad v_y=u_y-gt.\]
+</div>
+<div class="math block">
+\[u_x=u\cos\theta,\quad u_y=u\sin\theta,\quad |v|=\sqrt{v_x^2+v_y^2}.\]
+</div>
+<h2 id="h-bca03c68c3ddc546db">解题流程 / Method</h2>
+<ol>
+<li>定发射点为参考位置，按题目高度差写竖直位移。 / Use the actual launch-to-landing height difference.</li>
+<li>由竖直方程求时间，再代入水平关系。 / Solve the vertical motion first, then use the same time horizontally.</li>
+<li>求落地速度时合成 <span class="math inline">\(v_x\)</span> 与 <span class="math inline">\(v_y\)</span>；方向由分量及象限判断。 / Recombine signed components for speed and direction.</li>
+</ol>
+<h2 id="h-533bbe8b257399f91d">易错判断 / Checks</h2>
+<p><strong>最高点只有竖直速度为零</strong>；若 <span class="math inline">\(u_x\ne0\)</span>，总速率不为零。只有起落高度相同，才可用 <span class="math inline">\(T=2u_y/g\)</span> 的对称简式。 / The top is not a state of rest when horizontal velocity is non-zero; equal-height flight formulas need equal heights.</p>
+<p>空阻不可忽略时，仅作U1要求的定性轨迹分析，并重新判断水平速度是否恒定。 / Drag invalidates the ideal constant-horizontal-velocity assumption.</p>
+<h2 id="h-ab0fd79fed886214b4">原课件图像辅助 / Source-slide figures</h2>
+<a class="image-link" href="/media/72199bb1078715b539.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/72199bb1078715b539.png"/></a>
+<p><strong>读图 / Reading:</strong> 水平速度保持不变，竖直速度在重力作用下改变，两分运动使用同一时间。 / Horizontal velocity stays constant; vertical motion accelerates and shares the same time interval.</p>
+<h2 id="h-56859aaf0d7bd7dcd3">真题识别实例 / Recognition in past papers</h2>
+<ul>
+<li><a class="internal-link" href="/notes/03ecf3e50996f080e7.html#h-eb54760b65c11126bb">2026年6月 / June 2026 · Q13</a>：题干线索 <strong>projectile</strong>。按与水平60°夹角分解初速度，再分析高度 / Resolve the launch velocity before calculating height.</li>
+<li><a class="internal-link" href="/notes/03ecf3e50996f080e7.html#h-efb0e744d685ef41a3">2026年6月 / June 2026 · Q07</a>：题干线索 <strong>moving horizontally</strong>。7.1：水滴碰虫时竖直速度为零，可求上升高度 / Zero vertical velocity at impact identifies the top of the trajectory.</li>
+</ul>
+<p>点击题号进入对应知识点的原题位置；评分标准在题目下方默认折叠。以上说明为自编模型分析。 / Links open the original question in its topic bank, with the mark scheme collapsed below; model explanations are original summaries.</p>
+<h2 id="h-015b5c1b7e8a13c76a">知识与模型联系 / Knowledge and model connections</h2>
+<p><strong>基础知识 / Knowledge:</strong> <a class="internal-link" href="/notes/b4b0538533ee9ff1b7.html">D02 矢量相加与分量 - Vector addition and resolution</a> · <a class="internal-link" href="/notes/099bf46a250e70a230.html">D09 匀加速度运动方程 - Constant-acceleration equations</a> · <a class="internal-link" href="/notes/3b52b29bb6899c328f.html">D10 自由落体与重力加速度 - Free fall and gravitational acceleration</a> · <a class="internal-link" href="/notes/52bd94f8e287c80867.html">D12 抛体的独立分运动 - Independent projectile components</a></p>
+<p><strong>关联模型 / Models:</strong> <a class="internal-link" href="/notes/a61da1f5e3bef149e8.html">PM02 受力平衡与斜面分解模型</a> · <a class="internal-link" href="/notes/3aff4adeac173cfdf7.html">PM04 匀加速度与分段运动模型</a> · <a class="internal-link" href="/notes/7a51334f2ec6713606.html">PM06 竖直抛落与自由落体模型</a> · <a class="internal-link" href="/notes/a147ef262ccc4f266c.html">PM10 碰撞模型</a></p>
+<h2 id="h-9be9917ee1a960960c">复述提示 / Retrieval prompt</h2>
+<p>合上公式，说明“关键词提示什么 → 还需什么条件 → 使用什么规律 → 哪一步需要符号或单位检查”。 / Explain the cue, the extra condition, the governing law and the sign or unit check without looking at the equations.</p>
+<p><strong>依据 / Sources:</strong> <a class="internal-link" href="/notes/0b5dec2e245a870dec.html">资料来源与范围 - Sources and scope</a>；对应知识笔记中的定义、课件页码及PH01评分标准。 / The linked knowledge notes record definitions, slide provenance and mark-scheme evidence.</p>
+<section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/b4b0538533ee9ff1b7.html">矢量相加与分量 / Vector addition and resolution</a></li><li><a href="/notes/099bf46a250e70a230.html">匀加速度运动方程 / Constant-acceleration equations</a></li><li><a href="/notes/3b52b29bb6899c328f.html">自由落体与重力加速度 / Free fall and gravitational acceleration</a></li><li><a href="/notes/52bd94f8e287c80867.html">抛体的独立分运动 / Independent projectile components</a></li><li><a href="/notes/143938268bf1dc3bfd.html">D02 矢量相加与分量 真题练习 / Past-paper practice</a></li><li><a href="/notes/a99a9fb74089b8de8f.html">D09 匀加速度运动方程 真题练习 / Past-paper practice</a></li><li><a href="/notes/b75774f39cedd5eb55.html">D10 自由落体与重力加速度 真题练习 / Past-paper practice</a></li><li><a href="/notes/03ecf3e50996f080e7.html">D12 抛体的独立分运动 真题练习 / Past-paper practice</a></li><li><a href="/notes/b109f543a7483edd28.html">PH01 · 2017年6月 / June 2017 · Q07 · 题目 / Question</a></li><li><a href="/notes/f6e782ed90e64e616d.html">PH01 · 2017年6月 / June 2017 · Q11 · 题目 / Question</a></li><li><a href="/notes/844f6bbdefc6bf21b9.html">PH01 · 2018年1月 / January 2018 · Q06 · 题目 / Question</a></li><li><a href="/notes/f468da2cb6481dfc27.html">PH01 · 2018年6月 / June 2018 · Q08 · 题目 / Question</a></li><li><a href="/notes/1569d910afe507700b.html">PH01 · 2019年1月 / January 2019 · Q04 · 题目 / Question</a></li><li><a href="/notes/972b2f97a6016821f1.html">PH01 · 2019年6月 / June 2019 · Q08 · 题目 / Question</a></li><li><a href="/notes/1379c1e3d463e07496.html">PH01 · 2020年1月 / January 2020 · Q06 · 题目 / Question</a></li><li><a href="/notes/cde0316ece344be7ce.html">PH01 · 2022年1月 / January 2022 · Q14 · 题目 / Question</a></li><li><a href="/notes/56540e8c655183b472.html">PH01 · 2022年1月 / January 2022 · Q16 · 题目 / Question</a></li><li><a href="/notes/523a18c8382c00483e.html">PH01 · 2022年6月 / June 2022 · Q07 · 题目 / Question</a></li><li><a href="/notes/ad65cf304363de3c95.html">PH01 · 2023年6月 / June 2023 · Q03 · 题目 / Question</a></li><li><a href="/notes/d56f68521926e53d8f.html">PH01 · 2024年1月 / January 2024 · Q07 · 题目 / Question</a></li><li><a href="/notes/0966f7677dac858392.html">PH01 · 2024年6月 / June 2024 · Q08 · 题目 / Question</a></li><li><a href="/notes/e13a47af76c9a241e0.html">PH01 · 2025年1月 / January 2025 · Q08 · 题目 / Question</a></li><li><a href="/notes/88460df45d309ac566.html">PH01 · 2025年1月 / January 2025 · Q15 · 题目 / Question</a></li><li><a href="/notes/80929a18db5acb7ccd.html">PH01 · 2026年1月 / January 2026 · Q06 · 题目 / Question</a></li><li><a href="/notes/384227ada914061913.html">PH01 · 2026年6月 / June 2026 · Q07 · 题目 / Question</a></li><li><a href="/notes/cb15ec991f7703e5f3.html">PH01 · 2026年6月 / June 2026 · Q13 · 题目 / Question</a></li><li><a href="/notes/72caa2ae2f28c228eb.html">常用物理模型 / Common physics models</a></li><li><a href="/notes/a9fe07dc865bd25180.html">关键词与模型速查 / Keyword-to-model lookup</a></li><li><a href="/notes/3aff4adeac173cfdf7.html">匀加速度与分段运动模型 / Constant acceleration</a></li><li><a href="/notes/7a51334f2ec6713606.html">竖直抛落与自由落体模型 / Free fall</a></li><li><a href="/notes/a147ef262ccc4f266c.html">碰撞模型 / Collide</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U1/07 常用物理模型/PM07 抛体独立分运动模型 - Projectile.md","url":"/notes/13b0172d9370b0822e.html","unit":"U1"}</script></body></html>

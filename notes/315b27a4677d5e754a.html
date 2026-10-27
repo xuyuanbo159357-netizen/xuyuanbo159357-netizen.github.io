@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.10.2 磁场中的带电粒子与回旋加速器 / Moving charges in a magnetic field · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.10 磁场</div><h1 id="h-49795c43d32f320494">3.10.2 磁场中的带电粒子与回旋加速器 / Moving charges in a magnetic field</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/ce680f0fb9b248be41.html">3.10.2</a>　｜　<a class="internal-link" href="/notes/da867bb75d0c7de166.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>磁感应强度 / magnetic flux density</strong></td>
+<td><span class="math inline">\(B\)</span></td>
+<td><span class="math inline">\(\mathrm{T}\)</span></td>
+<td>正体 T 是特斯拉，不是周期 / Upright T is the tesla.</td>
+</tr>
+<tr>
+<td><strong>力 / force</strong></td>
+<td><span class="math inline">\(F\)</span></td>
+<td><span class="math inline">\(\mathrm{N}\)</span></td>
+<td>矢量；合力常记 ΣF 或 F_resultant / Vector; resultant force is often ΣF or F_resultant.</td>
+</tr>
+<tr>
+<td><strong>电荷量 / electric charge</strong></td>
+<td><span class="math inline">\(Q,\ q\)</span></td>
+<td><span class="math inline">\(\mathrm{C}\)</span></td>
+<td>源电荷常用 Q，单个粒子或检验电荷常用 q / Q often denotes a source; q a particle/test charge.</td>
+</tr>
+<tr>
+<td><strong>速率 / speed</strong></td>
+<td><span class="math inline">\(v\)</span></td>
+<td><span class="math inline">\(\mathrm{m\,s^{-1}}\)</span></td>
+<td>速度的大小 / Magnitude of velocity.</td>
+</tr>
+<tr>
+<td><strong>质量 / mass</strong></td>
+<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+<td>与重力不同 / Not weight.</td>
+</tr>
+<tr>
+<td><strong>半径、距源距离 / radius, distance from source</strong></td>
+<td><span class="math inline">\(r\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>具体指半径或距源距离，由本题定义 / Follow the specified geometry.</td>
+</tr>
+<tr>
+<td><strong>动量 / momentum</strong></td>
+<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(\mathrm{kg\,m\,s^{-1}}\)</span></td>
+<td>矢量；与压强 p 通过语境区分 / Vector; distinguish from pressure by context.</td>
+</tr>
+<tr>
+<td><strong>周期 / period</strong></td>
+<td><span class="math inline">\(T\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td>与热力学温度 T 区分 / Not temperature in this context.</td>
+</tr>
+<tr>
+<td><strong>频率 / frequency</strong></td>
+<td><span class="math inline">\(f\)</span></td>
+<td><span class="math inline">\(\mathrm{Hz}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/93f3f1c9d11fb66142.html">cyclotron — 回旋加速器</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/93f3f1c9d11fb66142.html#h-485f2ec53559b6043e">↗ cyclotron — 回旋加速器</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A device using a magnetic field to bend charged particles and an alternating electric field to accelerate them repeatedly.</p>
+<p><strong>中文：</strong> 用磁场使带电粒子偏转、用交变电场反复加速的装置。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p>定义按考纲与指定教材概括；本页未列出可直接对应的定义题评分条目。 Definitions are summarised from the specification and textbook; no directly matched definition-item citation is claimed here.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p>磁力提供向心力；非相对论模型中回旋周期与速率无关。</p>
+<p><span class="math inline">\(F=|q|vB\)</span> for perpendicular motion; <span class="math inline">\(r=mv/(|q|B)=p/(|q|B)\)</span>; <span class="math inline">\(T=2\pi m/(|q|B)\)</span>; <span class="math inline">\(f=|q|B/(2\pi m)\)</span>.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>匀强磁场、垂直入射、非相对论速率；平行磁场运动时磁力为零。</p>
+<p>Assume uniform magnetic field, perpendicular entry and non-relativistic speed. If velocity is parallel to B, the magnetic force is zero.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-7ab800bae2acec337b">粒子磁力与圆轨道 / Particle force and circular paths</h3>
+<p>速度垂直磁场时，磁力大小 <span class="math inline">\(F=B|q|v\)</span>。正电荷用传统电流方向判断，负电荷反向；静止或沿磁场运动的电荷没有磁力。磁力垂直速度，不做功，只改变方向，不改变速率和动能。</p>
+<p>For perpendicular motion the magnetic force is <span class="math inline">\(B|q|v\)</span>. Reverse the positive-charge force direction for a negative charge. Magnetic force does no work and does not change kinetic energy.</p>
+<p><span class="math inline">\(B|q|v=mv^2/r\)</span>，<span class="math inline">\(r=mv/(B|q|)=p/(B|q|)\)</span>。同一磁场中动量越大轨道越大；由偏转方向可判电荷符号。轨道一周时间 <span class="math inline">\(T=2\pi m/(B|q|)\)</span> 是非相对论模型下的推论。</p>
+<p>Magnetic force supplies the radial resultant. Orbit radius measures momentum per unit charge; curvature gives charge sign. The period expression assumes nonrelativistic motion.</p>
+<h3 id="h-8c9bd65337a54e8eb5">回旋加速器与组合场 / Cyclotron and combined fields</h3>
+<p>回旋加速器：磁场使粒子在D形盒内作半圆运动，盒间交变电场每次加速，粒子速率和半径逐渐增大；磁场本身不提供动能。非相对论下调节电场频率为 <span class="math inline">\(f=B|q|/(2\pi m)\)</span>，保证每次跨缝都受加速。</p>
+<p>A cyclotron uses a magnetic field for bending and an alternating electric field across the gap for acceleration. Speed and radius increase; the magnetic field supplies no energy. The driving frequency matches the nonrelativistic orbit frequency.</p>
+<p>若题目给交叉电磁场且粒子不偏转，应先判电力与磁力相反，再由 <span class="math inline">\(|q|E=B|q|v\)</span> 得 <span class="math inline">\(v=E/B\)</span>；它是受力平衡应用，连接已有速度选择模型。</p>
+<p>For crossed fields and an undeflected particle, opposing electric and magnetic forces give <span class="math inline">\(v=E/B\)</span>. Check force directions before using the balance.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/11fbe687130c053bc6.html#h-c2a4e832ce8dee18db">3.10.2</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/967e2da5493acbae89.png" target="_blank"><img alt="3.10.2-S007-P01" decoding="async" loading="lazy" src="/media/967e2da5493acbae89.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/ca84e1089286922994.png" target="_blank"><img alt="3.10.2-S014-P01" decoding="async" loading="lazy" src="/media/ca84e1089286922994.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/abd2ea94cddf551e0d.png" target="_blank"><img alt="3.10.2-S024-P01" decoding="async" loading="lazy" src="/media/abd2ea94cddf551e0d.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>由轨迹半径求动量或质量，区分电场加速和磁场偏转。</p>
+<p>Find momentum or mass from curvature; distinguish electric acceleration from magnetic steering in particle devices.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>磁场反向改变弯曲方向；平行入射不能用垂直受力公式。</p>
+<p>Changing magnetic-field direction reverses curvature but does not reverse the particle’s speed. Do not use <span class="math inline">\(qvB\)</span> when v is parallel to B.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-f38f03856fdf2da992">3.10.2 方法 1 · 带电粒子、选择器与回旋加速 / Charged particles, selectors and cyclotrons</h3>
+<ol>
+<li><span class="math inline">\(\mathbf F=q\mathbf v\times\mathbf B\)</span>；非零磁力只需速度有垂直于磁场的分量。磁力垂直速度，不做功，不改变动能。 / A perpendicular component is sufficient; motion need not be entirely perpendicular.</li>
+<li>垂直入射圆轨道 <span class="math inline">\(r=p/(|q|B)\)</span>；同速度 <span class="math inline">\(r\propto m/|q|\)</span>，同动能 <span class="math inline">\(r\propto\sqrt{mK}/|q|\)</span>。探测器半圆轨迹的落点距常是直径，先除二。 / State the controlled quantity and the geometric radius.</li>
+<li>斜入射：<span class="math inline">\(v_\parallel\)</span> 不变，<span class="math inline">\(v_\perp\)</span> 决定半径，得到螺旋；非相对论回转周期 <span class="math inline">\(2\pi m/(|q|B)\)</span> 与速率无关。 / Use the perpendicular speed, not total speed, for the radius.</li>
+<li>速度选择器令电力与磁力等大反向，<span class="math inline">\(qE=qvB\Rightarrow v=E/B\)</span>。速率改变时电力不变、磁力改变，再判断偏转方向。 / Explain both force changes.</li>
+<li>回旋加速器：间隙电场增动能，dee内磁力改变方向；每半圈电压反相，半径随速率增大、角速率保持不变。每圈过间隙两次，峰值电压与峰峰值还要另行区分。 / Count gap crossings and voltage definitions.</li>
+<li>云室螺旋变紧是电离损能使动量下降，不是磁场做负功。由相反弯曲推异号，由初始相似半径推相似动量；无轨迹的光子不因此“没有能量”。 / Tie each inference to a visible track feature.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/75701d867693985f6a.html">PH03 · 202301 · Q06</a>；<a class="internal-link" href="/notes/aac950fbc75918e372.html">PH03 · 202101 · Q04</a>；<a class="internal-link" href="/notes/7270a49f68499f20e1.html">PH03 · 202401 · Q03</a>；<a class="internal-link" href="/notes/34f6225a95157ee099.html">PH03 · 202606 · Q07</a>；<a class="internal-link" href="/notes/4303042cb15a0e19e3.html">PH03 · 202206 · Q06</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (30)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/5655930b34c9632191.html">PH03 · 2018 specimen paper · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f5d0cf11d56c377b55.html">PH03 · 2018 specimen paper · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/847beea846f5df8432.html">PH03 · 2018 specimen paper · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c25154d31ea34a1757.html">PH03 · 201806 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4523fe147aae78b203.html">PH03 · 201806 · Q29</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/526da42193153dfe93.html">PH03 · 201901 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e730033b658bc1e325.html">PH03 · 201901 · Q32</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ed8f80ad1a380b30c1.html">PH03 · 201901 · Q34</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/612a4a064c1eb30d28.html">PH03 · 201906 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/25262bc667b155f685.html">PH03 · 201906 · Q28</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/42b4757b99d15bb096.html">PH03 · 202001 · Q28</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0e5d740a434a32c9da.html">PH03 · 202001 · Q29</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2e5305903ba353fa56.html">PH03 · 202001 · Q30</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/aac950fbc75918e372.html">PH03 · 202101 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dbc97d0b6e94971b57.html">PH03 · 202201 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/620d77e37090b81ce9.html">PH03 · 202201 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4303042cb15a0e19e3.html">PH03 · 202206 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b464f81a151de7028d.html">PH03 · 202206 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4c221fadd10bacb605.html">PH03 · 202206 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/75701d867693985f6a.html">PH03 · 202301 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/beb884e149349bd362.html">PH03 · 202306 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7007acad91556bb621.html">PH03 · 202306 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7270a49f68499f20e1.html">PH03 · 202401 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dbaac9a6d87ec3806d.html">PH03 · 202406 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/fe026c88ab4eacb69a.html">PH03 · 202501 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/aabfb15c254ca7c9fd.html">PH03 · 202501 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6df49925e57f2bc9d3.html">PH03 · 202506 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4b9828e34e1cf151a1.html">PH03 · 202601 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0fd70e3d479586f6ea.html">PH03 · 202601 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/34f6225a95157ee099.html">PH03 · 202606 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/f7c6092e7cb47bdc8b.html">U3逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/971e04d6e2f21f7696.html">课件例题与复述</a> · <a class="internal-link" href="/notes/ff6a80852a91c93413.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/a89635a1e6204dc5e0.html">3.6.1 圆周运动与向心力</a>：磁力提供向心力 / magnetic centripetal</li>
+<li><a class="internal-link" href="/notes/9bbd2e52fb9c043db8.html">3.8.2 电场强度与带电粒子偏转</a>：磁场中的带电粒子与回旋加速器 ↔ 电场强度与带电粒子偏转</li>
+<li><a class="internal-link" href="/notes/8a2b03498959da2677.html">3.10.1 磁感应强度与通电导线受力</a>：电流到单电荷 / current to charge</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.10.2。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 361–366；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/f0930b7c9baf764aee.html">U3PM09 磁力与粒子圆轨道 - Magnetic field and curvature</a></li>
+<li><a class="internal-link" href="/notes/ee581a4eaa0ec7b125.html">U3PM10 交叉电磁场速度选择 - Undeflected</a></li>
+</ul>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/6d700ce78e3fd48ec4.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/8a64d9acb645dc8c7c.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/da867bb75d0c7de166.html">U3 场及其影响 / Fields and their consequences</a></li><li><a href="/notes/11fbe687130c053bc6.html">U3 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/c8418eb48964cf69c4.html">U3 考纲框架 / Specification map</a></li><li><a href="/notes/ce680f0fb9b248be41.html">3.10.2 磁场中的运动电荷 / MOVING CHARGES IN A MAGNETIC FIELD</a></li><li><a href="/notes/a89635a1e6204dc5e0.html">3.6.1 圆周运动与向心力 / Circular motion</a></li><li><a href="/notes/9bbd2e52fb9c043db8.html">3.8.2 电场强度与带电粒子偏转 / Electric field strength</a></li><li><a href="/notes/8a2b03498959da2677.html">3.10.1 磁感应强度与通电导线受力 / Magnetic flux density</a></li><li><a href="/notes/93f3f1c9d11fb66142.html">cyclotron — 回旋加速器</a></li><li><a href="/notes/70af9f4d38e4bcdff8.html">U3 来源与范围 / Sources and scope</a></li><li><a href="/notes/f7c6092e7cb47bdc8b.html">U3 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/9fc7be13a5240e443f.html">3.6.1 圆周运动与向心力 真题练习 / Past-paper practice</a></li><li><a href="/notes/cf0d18699a56a6c995.html">3.8.2 电场强度与带电粒子偏转 真题练习 / Past-paper practice</a></li><li><a href="/notes/30b738f4a07790e843.html">3.8.3 电势、电势能与等势面 真题练习 / Past-paper practice</a></li><li><a href="/notes/74ba1e2bebfaa9cfd1.html">3.10.1 磁感应强度与通电导线受力 真题练习 / Past-paper practice</a></li><li><a href="/notes/ff6a80852a91c93413.html">3.10.2 磁场中的带电粒子与回旋加速器 真题练习 / Past-paper practice</a></li><li><a href="/notes/d2265e7e62cf75fe67.html">3.10.4 电磁感应、楞次定律与发电 真题练习 / Past-paper practice</a></li><li><a href="/notes/71fe264ec1b44a5d4b.html">3.10.5 交流有效值与示波器 真题练习 / Past-paper practice</a></li><li><a href="/notes/fa767480b1139c9687.html">PH03 2018 specimen paper / Paper index</a></li><li><a href="/notes/5655930b34c9632191.html">PH03 2018 specimen paper Q04</a></li><li><a href="/notes/f5d0cf11d56c377b55.html">PH03 2018 specimen paper Q13</a></li><li><a href="/notes/847beea846f5df8432.html">PH03 2018 specimen paper Q17</a></li><li><a href="/notes/d90d9353211feec3fc.html">PH03 201806 / Paper index</a></li><li><a href="/notes/c25154d31ea34a1757.html">PH03 201806 Q06</a></li><li><a href="/notes/4523fe147aae78b203.html">PH03 201806 Q29</a></li><li><a href="/notes/0b84b05c25fbc49f80.html">PH03 201901 / Paper index</a></li><li><a href="/notes/526da42193153dfe93.html">PH03 201901 Q05</a></li><li><a href="/notes/e730033b658bc1e325.html">PH03 201901 Q32</a></li><li><a href="/notes/ed8f80ad1a380b30c1.html">PH03 201901 Q34</a></li><li><a href="/notes/c770501e3c411d9d06.html">PH03 201906 / Paper index</a></li><li><a href="/notes/612a4a064c1eb30d28.html">PH03 201906 Q04</a></li><li><a href="/notes/25262bc667b155f685.html">PH03 201906 Q28</a></li><li><a href="/notes/c28e405421b2dbdbf3.html">PH03 202001 / Paper index</a></li><li><a href="/notes/42b4757b99d15bb096.html">PH03 202001 Q28</a></li><li><a href="/notes/0e5d740a434a32c9da.html">PH03 202001 Q29</a></li><li><a href="/notes/2e5305903ba353fa56.html">PH03 202001 Q30</a></li><li><a href="/notes/9056240cebaa303286.html">PH03 202101 / Paper index</a></li><li><a href="/notes/aac950fbc75918e372.html">PH03 202101 Q04</a></li><li><a href="/notes/02136a2e67ef51d964.html">PH03 202201 / Paper index</a></li><li><a href="/notes/dbc97d0b6e94971b57.html">PH03 202201 Q09</a></li><li><a href="/notes/620d77e37090b81ce9.html">PH03 202201 Q10</a></li><li><a href="/notes/541e1596ffb4ac0cb3.html">PH03 202206 / Paper index</a></li><li><a href="/notes/4303042cb15a0e19e3.html">PH03 202206 Q06</a></li><li><a href="/notes/b464f81a151de7028d.html">PH03 202206 Q18</a></li><li><a href="/notes/4c221fadd10bacb605.html">PH03 202206 Q19</a></li><li><a href="/notes/457457bc96f55b4adb.html">PH03 202301 / Paper index</a></li><li><a href="/notes/75701d867693985f6a.html">PH03 202301 Q06</a></li><li><a href="/notes/9db6472a27a9bcadb8.html">PH03 202306 / Paper index</a></li><li><a href="/notes/beb884e149349bd362.html">PH03 202306 Q13</a></li><li><a href="/notes/7007acad91556bb621.html">PH03 202306 Q17</a></li><li><a href="/notes/db82f6247ae551f056.html">PH03 202401 / Paper index</a></li><li><a href="/notes/7270a49f68499f20e1.html">PH03 202401 Q03</a></li><li><a href="/notes/dd32a67647d1347e67.html">PH03 202406 / Paper index</a></li><li><a href="/notes/dbaac9a6d87ec3806d.html">PH03 202406 Q15</a></li><li><a href="/notes/1f07f31e3f2612fc4a.html">PH03 202501 / Paper index</a></li><li><a href="/notes/fe026c88ab4eacb69a.html">PH03 202501 Q10</a></li><li><a href="/notes/aabfb15c254ca7c9fd.html">PH03 202501 Q20</a></li><li><a href="/notes/ae5bee24e0ee1a0c3a.html">PH03 202506 / Paper index</a></li><li><a href="/notes/6df49925e57f2bc9d3.html">PH03 202506 Q16</a></li><li><a href="/notes/676e3cac4eb704e930.html">PH03 202601 / Paper index</a></li><li><a href="/notes/4b9828e34e1cf151a1.html">PH03 202601 Q18</a></li><li><a href="/notes/0fd70e3d479586f6ea.html">PH03 202601 Q19</a></li><li><a href="/notes/bcd518c140cf55fadf.html">PH03 202606 / Paper index</a></li><li><a href="/notes/34f6225a95157ee099.html">PH03 202606 Q07</a></li><li><a href="/notes/6d700ce78e3fd48ec4.html">3.10.2 磁场中的带电粒子与回旋加速器 / Moving charges in a magnetic field · 概念考察练习 / Concept practice</a></li><li><a href="/notes/803c4a585c7e1e19a5.html">PH03 · 2019年1月 / January 2019 · Q32 · Cyclotron fields / 回旋加速器的场</a></li><li><a href="/notes/6f6a583f859b68f871.html">PH03 · 2020年1月 / January 2020 · Q30 · Speed in cyclotron dees / 回旋加速器D形盒内的速率</a></li><li><a href="/notes/19df464dda9f3927c8.html">PH03 · 2022年6月 / June 2022 · Q06.1 · Condition for magnetic force / 磁力产生条件</a></li><li><a href="/notes/56261754318a5c13d8.html">PH03 · 2023年1月 / January 2023 · Q06.1 · Zero magnetic force condition / 磁力为零的条件</a></li><li><a href="/notes/e56f618a8d3d42c4ab.html">PH03 · 2024年6月 / June 2024 · Q15 · Cyclotron path types / 回旋加速器轨迹类型</a></li><li><a href="/notes/999d42b30a90cb6c04.html">PH03 · 2025年6月 / June 2025 · Q16 · Magnetic force and kinetic energy / 磁力与动能</a></li><li><a href="/notes/1ca0db40a266bda249.html">U3 计算与证明 / Calculations and show-that questions</a></li><li><a href="/notes/5cc9287fea3846d511.html">U3 图像与示意图 / Graphs and diagrams</a></li><li><a href="/notes/0a4fd575ab896bbadf.html">U3 陈述、解释与比较 / Statements explanations and comparisons</a></li><li><a href="/notes/897e821d83eac7b673.html">PH03 2019年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/ed30c1c627d22fc84e.html">PH03 2022年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/bada099da09e4c7660.html">PH03 2024年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/8a64d9acb645dc8c7c.html">3.10.2 磁场中的带电粒子与回旋加速器 / Moving charges in a magnetic field · 论述题练习 / Written-response practice</a></li><li><a href="/notes/3730ed919750667e5c.html">PH03 · 2018年6月 / June 2018 · Q06.3 · Magnetic force and speed / 磁力与速率</a></li><li><a href="/notes/ae90ecb85530daaee5.html">PH03 · 2019年6月 / June 2019 · Q04.2 · Cyclotron gap acceleration / 回旋加速器间隙加速</a></li><li><a href="/notes/e2b238a43f6c1b8b97.html">PH03 · 2019年6月 / June 2019 · Q04.3 · Proton inside a dee / D形盒内的质子</a></li><li><a href="/notes/e9bda66d6dd28ed9af.html">PH03 · 2021年1月 / January 2021 · Q04.5 · Faster electrons in a velocity selector / 速度选择器中较快的电子</a></li><li><a href="/notes/55c1e58ab16a698c6c.html">PH03 · 2022年6月 / June 2022 · Q06.3 · Shrinking cloud-chamber radius / 云室轨迹半径减小</a></li><li><a href="/notes/548a2dcef0f5fc96e0.html">PH03 · 2022年6月 / June 2022 · Q06.5 · Pair-production tracks / 电子对产生轨迹</a></li><li><a href="/notes/2921c3b77d400bdd4d.html">PH03 · 2023年1月 / January 2023 · Q06.3 · Helical proton path / 质子螺旋轨迹</a></li><li><a href="/notes/36b650976a4d01488a.html">PH03 · 2023年6月 / June 2023 · Q07.4 · Proton-antiproton interaction / 质子反质子相互作用</a></li><li><a href="/notes/a8c55070a9e4836303.html">PH03 · 2024年1月 / January 2024 · Q03.2 · Cyclotron motion / 回旋加速器中的运动</a></li><li><a href="/notes/f173367bfe96576594.html">PH03 · 2024年1月 / January 2024 · Q03.3 · Constant cyclotron angular speed / 回旋加速器角速度恒定</a></li><li><a href="/notes/9789a69acb0649c51d.html">PH03 · 2026年6月 / June 2026 · Q07.1 · Magnetic circular path / 磁场圆轨道</a></li><li><a href="/notes/c1f5dc3ebcc9fe06ef.html">PH03 · 2026年6月 / June 2026 · Q07.2 · Ion-track magnetic direction / 离子轨迹中的磁场方向</a></li><li><a href="/notes/a3360ae55db6da164e.html">PH03 · 2026年6月 / June 2026 · Q07.3 · Mass from ion-track radius / 从离子轨道半径判断质量</a></li><li><a href="/notes/28716b78aceb064df9.html">PH03 · 2026年6月 / June 2026 · Q07.6 · Undeflected velocity selector / 速度选择器中的不偏转</a></li><li><a href="/notes/f0930b7c9baf764aee.html">磁力与粒子圆轨道 / Magnetic field and curvature</a></li><li><a href="/notes/ee581a4eaa0ec7b125.html">交叉电磁场速度选择 / Undeflected</a></li><li><a href="/notes/8f136e56d555f9fa42.html">U3 3.10 磁场与交流词汇 / Vocabulary</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U3/02 知识节点/3.10 磁场/3.10.2 磁场中的带电粒子与回旋加速器 - Moving charges in a magnetic field.md","url":"/notes/315b27a4677d5e754a.html","unit":"U3"}</script></body></html>

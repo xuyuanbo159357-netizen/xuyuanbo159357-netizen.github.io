@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>误差棒与图像不确定度 / Error bars and graph uncertainty · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/02 知识节点/3.1 测量与误差</div><h1 id="h-80ab0cf04ce0e57834">误差棒与图像不确定度 / Error bars and graph uncertainty</h1>
+<details class="callout physics-relations"><summary>关系摘要</summary><div class="callout-body"><p><strong>误差棒与图像不确定度 / Error bars and graph uncertainty</strong></p>
+<p>最佳直线给出估计值，允许的极端直线给出梯度和截距范围。Use a best line and acceptable extreme lines.</p>
+<p>考纲 / Specification：<a class="internal-link" href="/notes/c121509e7646ee8712.html">3.1.2 物理测量的局限 - Limitation of physical measurements</a></p>
+</div></details>
+<!-- U1_LINEAGE_START -->
+<details class="callout physics-lineage"><summary>知识谱系位置 / Place in the knowledge lineage</summary><div class="callout-body"><p><a class="internal-link" href="/notes/fe4f62fb8bc5de4a67.html">00 物理U1知识谱系 - Physics U1 knowledge lineage</a> → <a class="internal-link" href="/notes/5ef8833056a01fbbe0.html">3.1 测量与误差 - Measurements and their errors</a> → <a class="internal-link" href="/notes/c121509e7646ee8712.html">3.1.2 物理测量的局限 - Limitation of physical measurements</a> → <strong>M06 误差棒与图像不确定度</strong></p>
+<p><strong>从哪些知识引入 / Incoming relationships</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/83a4bc9ab47f7c2577.html">M05 不确定度与传播规则 - Uncertainty and propagation</a> → 本笔记：误差棒 / error bars。</li>
+</ul>
+<p><strong>可以继续连接到 / Outgoing relationships</strong></p>
+<ul>
+<li>本笔记 → <a class="internal-link" href="/notes/459b87d1532b5f4488.html">P01 必做实验1：自由落体测g - Required practical 1 - free-fall measurement of g</a>: 梯度不确定度 / slope range。</li>
+<li>本笔记 → <a class="internal-link" href="/notes/c380fa2b733282bfba.html">P02 必做实验2：线材杨氏模量 - Required practical 2 - Young modulus of a wire</a>: 梯度测量 / slope。</li>
+</ul>
+<p><strong>应用与返回 / Apply and return</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/8d77caac76f7491f44.html">M06 误差棒与图像不确定度复述与练习 - Error bars and graph uncertainty - Retrieval practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+</ul>
+<p>箭头的含义以上方关系标签为准，相关知识不一概视为严格先修。The labels distinguish definitions, derivations, evidence, measurement and applications.</p>
+</div></details>
+<!-- U1_LINEAGE_END -->
+<!-- U1_DEFINITIONS_START -->
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>一般被测量、其不确定度 / measured quantity and its uncertainty</strong></td>
+<td><span class="math inline">\(x,\ \Delta x\)</span></td>
+<td><span class="math inline">\(\mathrm{\text{same as }x}\)</span></td>
+<td>x 是被测物理量的占位符；Δx 与 x 单位相同 / Placeholder; uncertainty has the same unit.</td>
+</tr>
+<tr>
+<td><strong>图像斜率及不确定度 / graph gradient and uncertainty</strong></td>
+<td><span class="math inline">\(m,\ \Delta m\)</span></td>
+<td><span class="math inline">\(\mathrm{\text{vertical unit/horizontal unit}}\)</span></td>
+<td>m 在此是斜率，不是质量 / m means gradient, not mass.</td>
+</tr>
+<tr>
+<td><strong>纵轴截距 / vertical intercept</strong></td>
+<td><span class="math inline">\(c\)</span></td>
+<td><span class="math inline">\(\mathrm{\text{vertical-axis unit}}\)</span></td>
+<td>c 在此是截距，不是光速 / c means intercept, not light speed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<p><strong>Error bar / 误差棒</strong>；<strong>Line of best fit / 最佳拟合直线</strong>；<strong>Gradient / 斜率</strong></p>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<h3 id="h-3d3aa36a9686f83fd9">Error bar / 误差棒</h3>
+<p><strong>EN:</strong> An error bar shows the uncertainty range associated with a plotted measurement.</p>
+<p><strong>中:</strong> 误差棒表示图上测量数据点对应的不确定度范围。</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/411c0dc08759905595.pdf#page=16">PH01 202306 Q12 · MS p16（相关计算或应用）</a></p>
+<h3 id="h-34058fc339ad79ed8e">Line of best fit / 最佳拟合直线</h3>
+<p><strong>EN:</strong> A line of best fit is a straight line that best represents the trend of a set of plotted data.</p>
+<p><strong>中:</strong> 最佳拟合直线是最能代表一组已绘制数据整体趋势的直线。</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/0b957eb26e74011652.pdf#page=12">PH01 201906 Q11.1 · MS p12（相关计算或应用）</a></p>
+<h3 id="h-18c3bcddd710378555">Gradient / 斜率</h3>
+<p><strong>EN:</strong> The gradient of a straight-line graph is the change in the vertical-axis quantity divided by the corresponding change in the horizontal-axis quantity.</p>
+<p><strong>中:</strong> 直线图像的斜率是纵轴量的变化除以对应横轴量的变化。</p>
+<h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
+<div class="math block">
+\[\begin{gathered}
+m=\frac{\Delta y}{\Delta x} \\
+y=mx+c \\
+\Delta m=\frac{m_{\max}-m_{\min}}{2}\quad\text{(if using the half-range convention)}
+\end{gathered}\]
+</div>
+<h2 id="h-614697bd55e5a5935c">Explanation / 讲解</h2>
+<h3 id="h-2919ccf6b5b02037c9">数据点与直线 / Points and lines</h3>
+<p>误差棒的横向、纵向半长度分别表示 <span class="math inline">\(\Delta x\)</span>、<span class="math inline">\(\Delta y\)</span>。Error bars show uncertainty in each coordinate. 最佳拟合直线应合理代表数据趋势，不要求穿过每个点的中心。A best-fit line represents the trend rather than joining all point centres.</p>
+<p>梯度用直线上相距较远的两个点计算：choose a large triangle on the fitted line.
+<div class="math inline">\[m=\frac{\Delta y}{\Delta x},\qquad y=mx+c.\]</div>
+梯度单位为纵轴单位除以横轴单位，截距单位为纵轴单位。The gradient and intercept carry different units.</p>
+<h3 id="h-c442615865a310adb1">不确定度 / Uncertainty</h3>
+<p>在误差范围内画最陡和最缓的合理直线，得到 <span class="math inline">\(m_{\max}\)</span>、<span class="math inline">\(m_{\min}\)</span>。Draw acceptable steepest and shallowest lines. 按题目约定可报告
+<div class="math inline">\[\Delta m=\frac{m_{\max}-m_{\min}}{2}\]</div>
+或采用最佳梯度与极端梯度之间的最大差，并明确说明。Use the specified convention; otherwise state how the range was estimated.</p>
+<p>同样读取允许的截距 <span class="math inline">\(c_{\max}\)</span>、<span class="math inline">\(c_{\min}\)</span>，估算 <span class="math inline">\(\Delta c\)</span>。无误差棒时根据数据散布画合理的极端直线，不能假装知道更小的范围。Without error bars, use the observed scatter to justify the extreme lines.</p>
+<h3 id="h-367e39e1abe3e3066b">物理含义 / Physical meaning</h3>
+<p><span class="math inline">\(s\)</span> 对 <span class="math inline">\(t^2\)</span> 图像中梯度为 <span class="math inline">\(g/2\)</span>；<span class="math inline">\(F\)</span> 对 <span class="math inline">\(\Delta L\)</span> 图像中梯度为 <span class="math inline">\(EA/L\)</span>。把图像梯度转成物理量时，不确定度也按同一比例转化。Convert the gradient and its uncertainty using the same model.</p>
+<p>若模型预期截距为零，而测得截距显著偏离零，应检查零点、基准位置或计时延迟。A significant intercept may indicate a systematic offset.</p>
+<h3 id="h-554371516ca7656351">物理图像与图示 / Physics graphs and diagrams</h3>
+<a class="image-link" href="/media/9df62966fd9ed007f9.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/9df62966fd9ed007f9.png"/></a>
+<p><strong>读图 / Reading:</strong> 误差棒给出各读数范围，拟合直线代表整体趋势。 / Error bars show measurement ranges; the fitted line represents the trend.</p>
+<a class="image-link" href="/media/fc029d01ac74bfe6c2.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/fc029d01ac74bfe6c2.png"/></a>
+<p><strong>读图 / Reading:</strong> 在误差范围内比较合理的最陡和最缓直线，估计斜率范围。 / Compare acceptable steepest and shallowest lines to estimate gradient uncertainty.</p>
+<!-- U1_DEFINITIONS_END -->
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-7c11fb34d473cd1148">M06 方法 1 · 拟合、截距与极限斜率 / Fits, intercepts and extreme gradients</h3>
+<ol>
+<li>拟合反映整体趋势，斜率从线上相距较远的两点读，不直接连接最靠近的测量点；曲线瞬时变化率画指定点切线。 / Distinguish fitting a trend from taking a local derivative.</li>
+<li>先与 <span class="math inline">\(y=mx+b\)</span> 对照，识别实际坐标及倍率；非零截距可以来自固定预载或零误差，未必改变斜率。 / Interpret a systematic offset separately from the gradient.</li>
+<li>最陡、最缓允许直线应通过所有相关误差棒；参数不确定度常取允许值半范围，再按关系传播。 / Use lines consistent with the data.</li>
+<li>“正比”不仅要求直线，还要求应有的原点；远距离外推需说明数据范围不足，不能把拟合关系无条件推广。 / State the limit of the inference.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/e75d43227b417096c9.html">PH01 · 201906 · Q11</a>；<a class="internal-link" href="/notes/1f2434549c2e06843b.html">PH01 · 202301 · Q10</a>；<a class="internal-link" href="/notes/30d49b3e94fc258273.html">PH01 · 202601 · Q10</a>；<a class="internal-link" href="/notes/854e3e20a4db7dbf40.html">PH01 · 2018 specimen paper · Q11</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (25)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/71aa859905a0daa062.html">PH01 · 2018 specimen paper · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/854e3e20a4db7dbf40.html">PH01 · 2018 specimen paper · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/20b0c54f4136265d66.html">PH01 · 201806 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e75d43227b417096c9.html">PH01 · 201906 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a675a9e19dc5c6f673.html">PH01 · 202001 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/560f67c5ce49aba454.html">PH01 · 202001 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8ec39bfc21e37e8457.html">PH01 · 202101 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/74e74a0a029fad7c8d.html">PH01 · 202101 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d0014d526499fcdc4b.html">PH01 · 202101 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/171005644207d02b17.html">PH01 · 202201 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a45f570ea1a84d4cb5.html">PH01 · 202206 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1f2434549c2e06843b.html">PH01 · 202301 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/abb97e066f03f6a6e4.html">PH01 · 202306 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9d032b7635c6eeb5be.html">PH01 · 202306 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d56f68521926e53d8f.html">PH01 · 202401 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ceec0a08f9847970f9.html">PH01 · 202401 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5605ff777aef26393f.html">PH01 · 202406 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/66a2b588380b92a03b.html">PH01 · 202501 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b65920d9e5331b1bfe.html">PH01 · 202506 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/30d49b3e94fc258273.html">PH01 · 202601 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/106e0dbad2e316bd1b.html">PH01 · 202601 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3deaf491e4ebf747c2.html">PH01 · 202606 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9ef10285fece222b4b.html">PH02 · 201706 · Q10</a></td>
+<td>U2 所需基础 / Prerequisite</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b2f74753eaa245b63f.html">PH02 · 202401 · Q09</a></td>
+<td>U2 所需基础 / Prerequisite</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/24e230d776a8bb4f07.html">PH02 · 202501 · Q10</a></td>
+<td>U2 所需基础 / Prerequisite</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/30b5c7a31ed5ee4f9d.html">U1逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-91121d1ecaf6930b80">知识联系 / Relationships</h2>
+<table>
+<thead>
+<tr>
+<th>方向 / Direction</th>
+<th>相连知识 / Linked knowledge</th>
+<th>关系 / Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前置或关联 → 本知识 / incoming</td>
+<td><a class="internal-link" href="/notes/83a4bc9ab47f7c2577.html">M05 不确定度与传播规则 - Uncertainty and propagation</a></td>
+<td>误差棒 / error bars</td>
+</tr>
+<tr>
+<td>本知识 → / outgoing</td>
+<td><a class="internal-link" href="/notes/459b87d1532b5f4488.html">P01 必做实验1：自由落体测g - Required practical 1 - free-fall measurement of g</a></td>
+<td>梯度不确定度 / slope range</td>
+</tr>
+<tr>
+<td>本知识 → / outgoing</td>
+<td><a class="internal-link" href="/notes/c380fa2b733282bfba.html">P02 必做实验2：线材杨氏模量 - Required practical 2 - Young modulus of a wire</a></td>
+<td>梯度测量 / slope</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-d289ca8067ef00f08b">复述检查 / Retrieval check</h2>
+<ul>
+<li>[ ] 如何在有误差棒和没有误差棒时估计梯度误差？ / Explain both methods.</li>
+<li>[ ] 解释梯度、截距的单位以及非零截距可能表示什么。 / Interpret units and intercepts.</li>
+</ul>
+<h2 id="h-7a185af5ecf46cb0ac">对应原课件练习 / Source-slide practice</h2>
+<ul>
+<li><a class="internal-link" href="/notes/8d77caac76f7491f44.html">M06 误差棒与图像不确定度复述与练习 - Error bars and graph uncertainty - Retrieval practice</a></li>
+</ul>
+<h2 id="h-00e36c430b204d4a07">依据 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/notes/0b5dec2e245a870dec.html">资料来源与范围 - Sources and scope</a>：本地9630 U1考纲对应3.1.2，与官方4.4版核对。</li>
+<li>Jim Breithaupt, Oxford International AQA Physics，教材印刷页 7。内容按U1范围重新概括，未复制整段教材。</li>
+</ul>
+<!-- U1_MODELS_START -->
+<h2 id="h-ece831a4c8c76b508e">常用物理模型 / Common physics models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/2e19dabdb29d0e5ee9.html">PM01 实验图像与不确定度模型</a>：best-fit line；gradient / intercept。</li>
+<li><a class="internal-link" href="/notes/91fdea4bb7b3d5d8fb.html">PM25 点源扩散与反平方模型</a>：inverse-square；distance / gamma source。</li>
+</ul>
+<!-- U1_MODELS_END -->
+<!-- U1_PAST_PAPERS_START -->
+<h2 id="h-d7e53f0d63ea2388d1">历年真题 / Past-paper practice</h2>
+<a class="internal-link" href="/notes/4287665f57095a24ce.html">按本知识点查看题目图片（22题） / Practice bank</a>
+<table>
+<thead>
+<tr>
+<th>所属试卷 / Paper</th>
+<th>题目 / Question</th>
+<th>对应范围 / Parts</th>
+<th>答案 / MS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018 样卷 / Specimen 2018</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-6279bc466f79964e20">Q10</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018 样卷 / Specimen 2018</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-34610c3d89f9ca1b9f">Q11</a></td>
+<td>11.1、11.2、11.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年6月 / June 2018</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-bdb063e13baebf4748">Q10</a></td>
+<td>10.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年6月 / June 2019</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-520cd580b097acc20a">Q11</a></td>
+<td>11.1、11.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2020年1月 / January 2020</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-53e7086794626bd862">Q08</a></td>
+<td>08.4、08.5</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2020年1月 / January 2020</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-f40a986b4cce411298">Q10</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-f109a31a785e3a619f">Q07</a></td>
+<td>07.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-cc3b05c0bbd684f589">Q11</a></td>
+<td>11.2、11.3、11.4、11.5、11.7</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-96b54b8e8bf893b033">Q14</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年1月 / January 2022</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-aef777a695e667d3c0">Q08</a></td>
+<td>08.4、08.5、08.6</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-6c54fb2ed758154701">Q10</a></td>
+<td>10.1、10.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年1月 / January 2023</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-bafb99f03e6e7c49ea">Q10</a></td>
+<td>10.2、10.3、10.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年6月 / June 2023</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-2063f9c1e309ebf03c">Q10</a></td>
+<td>10.2、10.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年6月 / June 2023</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-331dd17489a1f03846">Q12</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年1月 / January 2024</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-4465f485cbd9eff8b9">Q07</a></td>
+<td>07.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年1月 / January 2024</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-90890157fcbff820d7">Q09</a></td>
+<td>09.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年6月 / June 2024</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-36dd6139b42b0185b7">Q10</a></td>
+<td>10.2、10.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年1月 / January 2025</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-28663afc78acd8c727">Q10</a></td>
+<td>10.2、10.3、10.4、10.5</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年6月 / June 2025</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-c5a18178b7f3eeca65">Q09</a></td>
+<td>09.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年1月 / January 2026</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-fe1481cd552ff9ca05">Q10</a></td>
+<td>10.2、10.3、10.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年1月 / January 2026</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-7a0ab409c2de84cc4d">Q11</a></td>
+<td>11.1</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年6月 / June 2026</td>
+<td><a class="internal-link" href="/notes/4287665f57095a24ce.html#h-c18a8286e84b795c0e">Q12</a></td>
+<td>12.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+</tbody>
+</table>
+<!-- U1_PAST_PAPERS_END -->
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<a class="internal-link" href="/notes/3f50f5f68f50f0db8a.html">论述题练习 / Written-response practice</a>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/fe4f62fb8bc5de4a67.html">物理 U1 知识谱系 / Physics U1 knowledge lineage</a></li><li><a href="/notes/5ef8833056a01fbbe0.html">3.1 测量及其误差 / MEASUREMENTS AND THEIR ERRORS</a></li><li><a href="/notes/c121509e7646ee8712.html">3.1.2 物理测量的局限 / LIMITATION OF PHYSICAL MEASUREMENTS</a></li><li><a href="/notes/83a4bc9ab47f7c2577.html">不确定度与传播规则 / Uncertainty and propagation</a></li><li><a href="/notes/459b87d1532b5f4488.html">必做实验1：自由落体测g / Required practical 1: free-fall measurement of g</a></li><li><a href="/notes/c380fa2b733282bfba.html">必做实验2：线材杨氏模量 / Required practical 2: Young modulus of a wire</a></li><li><a href="/notes/8d77caac76f7491f44.html">M06 误差棒与图像不确定度复述与练习 / Retrieval and practice</a></li><li><a href="/notes/f632b124127e9adda3.html">U1 概念与定义索引 / Concepts and definitions</a></li><li><a href="/notes/a250111986d580319a.html">U1复述进度 / Retrieval progress</a></li><li><a href="/notes/bc44c2f3b633ca38cb.html">关系索引 / Relationship index</a></li><li><a href="/notes/0a583cb08270db6716.html">课件例题提取索引 / Source slide index</a></li><li><a href="/notes/30b5c7a31ed5ee4f9d.html">U1 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/5d71469646857a1b0a.html">真题练习 / PH01 past-paper practice</a></li><li><a href="/notes/23c34f3b857fe6b1f0.html">M01 SI基本量与导出单位 真题练习 / Past-paper practice</a></li><li><a href="/notes/b10127f2a327b0ed43.html">M03 同一物理量的单位换算 真题练习 / Past-paper practice</a></li><li><a href="/notes/857d3e90190ee4b919.html">M04 误差与测量质量 真题练习 / Past-paper practice</a></li><li><a href="/notes/fe7637d09b6ef7141e.html">M05 不确定度与传播规则 真题练习 / Past-paper practice</a></li><li><a href="/notes/4287665f57095a24ce.html">M06 误差棒与图像不确定度 真题练习 / Past-paper practice</a></li><li><a href="/notes/79d0be57d2f94783a8.html">M07 有效数字与结果表达 真题练习 / Past-paper practice</a></li><li><a href="/notes/3c513d7140023b576a.html">D04 力矩与力矩原理 真题练习 / Past-paper practice</a></li><li><a href="/notes/056410eb0d203a4ea0.html">D06 质心与稳定性 真题练习 / Past-paper practice</a></li><li><a href="/notes/8ce0042fbeb056af21.html">D08 运动图像的斜率与面积 真题练习 / Past-paper practice</a></li><li><a href="/notes/a99a9fb74089b8de8f.html">D09 匀加速度运动方程 真题练习 / Past-paper practice</a></li><li><a href="/notes/03ecf3e50996f080e7.html">D12 抛体的独立分运动 真题练习 / Past-paper practice</a></li><li><a href="/notes/14a72a3c76f4e8d575.html">D13 摩擦、阻力与升力 真题练习 / Past-paper practice</a></li><li><a href="/notes/c52e05e955ad845940.html">D14 终极速率与车辆最大速率 真题练习 / Past-paper practice</a></li><li><a href="/notes/133c95102dab21bf8f.html">D16 受力图与运动方程 真题练习 / Past-paper practice</a></li><li><a href="/notes/37e0477c04f2570ea9.html">D20 功与力位移图 真题练习 / Past-paper practice</a></li><li><a href="/notes/1f6a93cfd15eebfb12.html">D22 能量守恒与能量收支 真题练习 / Past-paper practice</a></li><li><a href="/notes/6539cad3d41757ae0c.html">D24 胡克定律与弹性极限 真题练习 / Past-paper practice</a></li><li><a href="/notes/60e237010ed2414b08.html">D27 弹性应变能与形变功 真题练习 / Past-paper practice</a></li><li><a href="/notes/5566eaadf8d9007c88.html">D28 杨氏模量与材料刚度 真题练习 / Past-paper practice</a></li><li><a href="/notes/0db49b84b2c3f8fdf7.html">P01 必做实验1：自由落体测g 真题练习 / Past-paper practice</a></li><li><a href="/notes/08ef2d4353ae9eea31.html">P02 必做实验2：线材杨氏模量 真题练习 / Past-paper practice</a></li><li><a href="/notes/b3aaa3030c8c9d98e8.html">A09 半衰期与衰变图像 真题练习 / Past-paper practice</a></li><li><a href="/notes/5206e40bed3b54680a.html">A12 辐射危害与厚度检测 真题练习 / Past-paper practice</a></li><li><a href="/notes/454bf2891bbd763854.html">A13 γ辐射反平方律与验证 真题练习 / Past-paper practice</a></li><li><a href="/notes/8470dfa1c13dd473a8.html">A14 背景辐射与计数修正 真题练习 / Past-paper practice</a></li><li><a href="/notes/d326ba2fff6aaae347.html">PH01 · 2018 样卷 / Specimen 2018 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/71aa859905a0daa062.html">PH01 · 2018 样卷 / Specimen 2018 · Q10 · 题目 / Question</a></li><li><a href="/notes/c19f1fe58093c6e5d3.html">PH01 · 2018 样卷 / Specimen 2018 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/854e3e20a4db7dbf40.html">PH01 · 2018 样卷 / Specimen 2018 · Q11 · 题目 / Question</a></li><li><a href="/notes/ea37159d0569c0fcb7.html">PH01 · 2018年6月 / June 2018 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/20b0c54f4136265d66.html">PH01 · 2018年6月 / June 2018 · Q10 · 题目 / Question</a></li><li><a href="/notes/4c487227e5f8ff3438.html">PH01 · 2019年6月 / June 2019 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/e75d43227b417096c9.html">PH01 · 2019年6月 / June 2019 · Q11 · 题目 / Question</a></li><li><a href="/notes/7f94fcfbb311742f8a.html">PH01 · 2020年1月 / January 2020 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/a675a9e19dc5c6f673.html">PH01 · 2020年1月 / January 2020 · Q08 · 题目 / Question</a></li><li><a href="/notes/9b5c6fa38473b08968.html">PH01 · 2020年1月 / January 2020 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/560f67c5ce49aba454.html">PH01 · 2020年1月 / January 2020 · Q10 · 题目 / Question</a></li><li><a href="/notes/d200ff4c14ddd13ed7.html">PH01 · 2021年1月 / January 2021 · Q07 · 答案 / Mark scheme</a></li><li><a href="/notes/8ec39bfc21e37e8457.html">PH01 · 2021年1月 / January 2021 · Q07 · 题目 / Question</a></li><li><a href="/notes/3743f4850ca1f12eb0.html">PH01 · 2021年1月 / January 2021 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/74e74a0a029fad7c8d.html">PH01 · 2021年1月 / January 2021 · Q11 · 题目 / Question</a></li><li><a href="/notes/698f11fd94ea308da7.html">PH01 · 2021年1月 / January 2021 · Q14 · 答案 / Mark scheme</a></li><li><a href="/notes/d0014d526499fcdc4b.html">PH01 · 2021年1月 / January 2021 · Q14 · 题目 / Question</a></li><li><a href="/notes/72d251607e03b143be.html">PH01 · 2022年1月 / January 2022 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/171005644207d02b17.html">PH01 · 2022年1月 / January 2022 · Q08 · 题目 / Question</a></li><li><a href="/notes/2b3b2707c809b1a104.html">PH01 · 2022年6月 / June 2022 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/a45f570ea1a84d4cb5.html">PH01 · 2022年6月 / June 2022 · Q10 · 题目 / Question</a></li><li><a href="/notes/52548fbc85505027af.html">PH01 · 2023年1月 / January 2023 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/1f2434549c2e06843b.html">PH01 · 2023年1月 / January 2023 · Q10 · 题目 / Question</a></li><li><a href="/notes/5b7d6975e181264219.html">PH01 · 2023年6月 / June 2023 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/abb97e066f03f6a6e4.html">PH01 · 2023年6月 / June 2023 · Q10 · 题目 / Question</a></li><li><a href="/notes/ddb86457c5798d7756.html">PH01 · 2023年6月 / June 2023 · Q12 · 答案 / Mark scheme</a></li><li><a href="/notes/9d032b7635c6eeb5be.html">PH01 · 2023年6月 / June 2023 · Q12 · 题目 / Question</a></li><li><a href="/notes/f78f69015bac40d6fb.html">PH01 · 2024年1月 / January 2024 · Q07 · 答案 / Mark scheme</a></li><li><a href="/notes/d56f68521926e53d8f.html">PH01 · 2024年1月 / January 2024 · Q07 · 题目 / Question</a></li><li><a href="/notes/b1d7f5322bf05cf2d1.html">PH01 · 2024年1月 / January 2024 · Q09 · 答案 / Mark scheme</a></li><li><a href="/notes/ceec0a08f9847970f9.html">PH01 · 2024年1月 / January 2024 · Q09 · 题目 / Question</a></li><li><a href="/notes/cb9b13244903a9326a.html">PH01 · 2024年6月 / June 2024 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/5605ff777aef26393f.html">PH01 · 2024年6月 / June 2024 · Q10 · 题目 / Question</a></li><li><a href="/notes/f3ff83a0216dc396e6.html">PH01 · 2025年1月 / January 2025 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/66a2b588380b92a03b.html">PH01 · 2025年1月 / January 2025 · Q10 · 题目 / Question</a></li><li><a href="/notes/8e2e8f83ae7fd7c8e9.html">PH01 · 2025年6月 / June 2025 · Q09 · 答案 / Mark scheme</a></li><li><a href="/notes/b65920d9e5331b1bfe.html">PH01 · 2025年6月 / June 2025 · Q09 · 题目 / Question</a></li><li><a href="/notes/b56ce0dc3bfa086060.html">PH01 · 2026年1月 / January 2026 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/30d49b3e94fc258273.html">PH01 · 2026年1月 / January 2026 · Q10 · 题目 / Question</a></li><li><a href="/notes/8b721ca75fe0bc6a0c.html">PH01 · 2026年1月 / January 2026 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/106e0dbad2e316bd1b.html">PH01 · 2026年1月 / January 2026 · Q11 · 题目 / Question</a></li><li><a href="/notes/2ccca759bc1293fb4d.html">PH01 · 2026年6月 / June 2026 · Q12 · 答案 / Mark scheme</a></li><li><a href="/notes/3deaf491e4ebf747c2.html">PH01 · 2026年6月 / June 2026 · Q12 · 题目 / Question</a></li><li><a href="/notes/9c94b4f887606c64ba.html">U1 图像与示意图 / Graphs and diagrams</a></li><li><a href="/notes/c72ed3514d07cf29e4.html">U1 实验、数据与评价 / Practical data and evaluation</a></li><li><a href="/notes/bc3402ec09b0bdcd41.html">PH01 2021年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/8a188cbee25dd7ea7e.html">PH01 2023年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/390aaf8ec1acbb8ebd.html">PH01 · 2021年1月 / January 2021 · Q11.5 · Inverse-square graph / 平方反比图像</a></li><li><a href="/notes/f4f399b8c7b3521291.html">PH01 · 2022年1月 / January 2022 · Q08.6 · Inverse-square law and end correction / 平方反比关系与端点修正</a></li><li><a href="/notes/38d5884d6b38676301.html">PH01 · 2024年1月 / January 2024 · Q09.3 · Inverse-square investigation / 平方反比实验</a></li><li><a href="/notes/535ea7d67effeadbb1.html">PH01 · 2021年1月 / January 2021 · Q11.6 · Background intercept / 本底截距</a></li><li><a href="/notes/3afb07535bcc6136b2.html">PH01 · 2020年1月 / January 2020 · Q08.5 · Testing quadratic drag / 检验平方阻力关系</a></li><li><a href="/notes/c828bb10c9d3d926f0.html">PH01 · 2023年1月 / January 2023 · Q10.5 · Zero error and gradient / 零误差与斜率</a></li><li><a href="/notes/b064e86921afe78b2d.html">PH01 · 2026年1月 / January 2026 · Q10.5 · Stiffer springs and uncertainty / 较硬弹簧与不确定度</a></li><li><a href="/notes/3f50f5f68f50f0db8a.html">误差棒与图像不确定度 / Error bars and graph uncertainty · 论述题练习 / Written-response practice</a></li><li><a href="/notes/6aa9547688e82c2f70.html">PH01 · 2019年6月 / June 2019 · Q11.2 · Testing proportionality / 检验正比关系</a></li><li><a href="/notes/ea2e736b0560461bb3.html">PH01 · 2019年6月 / June 2019 · Q11.5 · Gradient despite zero error / 零误差下的斜率</a></li><li><a href="/notes/11955edc95c6847cbe.html">PH01 · 2022年6月 / June 2022 · Q10.3 · Graph uncertainty / 图像不确定度</a></li><li><a href="/notes/55ff681605afe58c41.html">PH01 · 2025年6月 / June 2025 · Q09.4 · Graphical determination of g / 图像法测g</a></li><li><a href="/notes/2e19dabdb29d0e5ee9.html">实验图像与不确定度模型 / Gradient and uncertainty</a></li><li><a href="/notes/91fdea4bb7b3d5d8fb.html">点源扩散与反平方模型 / Inverse-square law</a></li><li><a href="/notes/52db8077a8b20db5a0.html">测量与数据处理词汇 / Measurements and data</a></li><li><a href="/notes/e1ddf60650a630609d.html">题目指令与条件词 / Question instructions and conditions</a></li><li><a href="/notes/c0e35974e67d78fd9d.html">物理情境与器材词汇 / Physical situations and apparatus</a></li><li><a href="/notes/56c6e1152fae1e8d55.html">U2 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/ea48ca07a7d544d840.html">测量与 U1 基础 / Cross-unit prerequisite practice</a></li><li><a href="/notes/09ebcd672c8c7c070a.html">3.5.10 光子与光电效应 真题练习 / Past-paper practice</a></li><li><a href="/notes/9ef10285fece222b4b.html">PH02 201706 Q10</a></li><li><a href="/notes/b2f74753eaa245b63f.html">PH02 202401 Q09</a></li><li><a href="/notes/24e230d776a8bb4f07.html">PH02 202501 Q10</a></li><li><a href="/notes/fc0533d84dc2717fe2.html">PH02 2017年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/b9b756b6e0dcfc47a6.html">PH02 2025年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/da709a66ee846b438e.html">PH02 2025年6月 / June 试卷分析 / Paper analysis</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U1/02 知识节点/3.1 测量与误差/M06 误差棒与图像不确定度 - Error bars and graph uncertainty.md","url":"/notes/e011272c2cc6fe768b.html","unit":"U1"}</script></body></html>

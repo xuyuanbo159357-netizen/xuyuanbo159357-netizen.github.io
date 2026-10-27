@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>必做实验2：线材杨氏模量 / Required practical 2: Young modulus of a wire · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/02 知识节点/3.2 力学与材料</div><h1 id="h-5f4bcd28171e061301">必做实验2：线材杨氏模量 / Required practical 2: Young modulus of a wire</h1>
+<details class="callout physics-relations"><summary>关系摘要</summary><div class="callout-body"><p><strong>必做实验2：线材杨氏模量 / Required practical 2: Young modulus of a wire</strong></p>
+<p>用载荷–伸长梯度、原长和截面积求E。Find E from the load-extension gradient and specimen geometry.</p>
+<p>考纲 / Specification：<a class="internal-link" href="/notes/44178f1b0af177db32.html">3.2.10 杨氏模量 - The young modulus</a></p>
+</div></details>
+<!-- U1_LINEAGE_START -->
+<details class="callout physics-lineage"><summary>知识谱系位置 / Place in the knowledge lineage</summary><div class="callout-body"><p><a class="internal-link" href="/notes/fe4f62fb8bc5de4a67.html">00 物理U1知识谱系 - Physics U1 knowledge lineage</a> → <a class="internal-link" href="/notes/16a0d0b8df1a4bed67.html">3.2 力学与材料 - Mechanics and materials</a> → <a class="internal-link" href="/notes/44178f1b0af177db32.html">3.2.10 杨氏模量 - The young modulus</a> → <strong>P02 必做实验2：线材杨氏模量</strong></p>
+<p><strong>从哪些知识引入 / Incoming relationships</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/e011272c2cc6fe768b.html">M06 误差棒与图像不确定度 - Error bars and graph uncertainty</a> → 本笔记：梯度测量 / slope。</li>
+<li><a class="internal-link" href="/notes/83a4bc9ab47f7c2577.html">M05 不确定度与传播规则 - Uncertainty and propagation</a> → 本笔记：d²误差贡献 / diameter²。</li>
+<li><a class="internal-link" href="/notes/36bed4fe756eb58c01.html">D28 杨氏模量与材料刚度 - Young modulus and material stiffness</a> → 本笔记：实验测E / measure。</li>
+</ul>
+<p><strong>应用与返回 / Apply and return</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/1d4d45f7a7f00dbdda.html">3.2.10 课堂检测复述 - Retrieval and practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+</ul>
+<p>箭头的含义以上方关系标签为准，相关知识不一概视为严格先修。The labels distinguish definitions, derivations, evidence, measurement and applications.</p>
+</div></details>
+<!-- U1_LINEAGE_END -->
+<!-- U1_DEFINITIONS_START -->
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>杨氏模量 / Young modulus</strong></td>
+<td><span class="math inline">\(E\)</span></td>
+<td><span class="math inline">\(\mathrm{Pa}\)</span></td>
+<td>此 E 不是能量；单位是 Pa / E here has unit Pa, not J.</td>
+</tr>
+<tr>
+<td><strong>力 / force</strong></td>
+<td><span class="math inline">\(F\)</span></td>
+<td><span class="math inline">\(\mathrm{N}\)</span></td>
+<td>矢量；合力常记 ΣF 或 F_resultant / Vector; resultant force is often ΣF or F_resultant.</td>
+</tr>
+<tr>
+<td><strong>质量 / mass</strong></td>
+<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+<td>与重力不同 / Not weight.</td>
+</tr>
+<tr>
+<td><strong>重力加速度、引力场强 / gravitational acceleration, field strength</strong></td>
+<td><span class="math inline">\(g\)</span></td>
+<td><span class="math inline">\(\mathrm{m\,s^{-2}}\)</span></td>
+<td>等效单位 N kg⁻¹；按所述物理量解释 / N kg⁻¹ is equivalent; interpret the quantity in context.</td>
+</tr>
+<tr>
+<td><strong>劲度系数 / spring constant, stiffness</strong></td>
+<td><span class="math inline">\(k\)</span></td>
+<td><span class="math inline">\(\mathrm{N\,m^{-1}}\)</span></td>
+<td>与导热系数、玻尔兹曼常量区分 / Not thermal conductivity or Boltzmann constant.</td>
+</tr>
+<tr>
+<td><strong>原长 / original length</strong></td>
+<td><span class="math inline">\(L_0\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>伸长量 / extension</strong></td>
+<td><span class="math inline">\(\Delta L\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>有些题写 x 或 e；按题设识别 / Some questions use x or e.</td>
+</tr>
+<tr>
+<td><strong>面积、横截面积 / area, cross-sectional area</strong></td>
+<td><span class="math inline">\(A,\ A_0\)</span></td>
+<td><span class="math inline">\(\mathrm{m^2}\)</span></td>
+<td>A₀ 表初始横截面积；与活度 A 区分 / A₀ is initial area; not activity A.</td>
+</tr>
+<tr>
+<td><strong>直径 / diameter</strong></td>
+<td><span class="math inline">\(d,\ d_0\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>d₀ 表初始直径 / d₀ is the original diameter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<p><strong>Young modulus / 杨氏模量</strong>；<strong>Tensile stress / 拉应力</strong>；<strong>Tensile strain / 拉应变</strong></p>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<h3 id="h-b6ba2021c76a6e60b8">Young modulus / 杨氏模量</h3>
+<p><strong>EN:</strong> The Young modulus is the ratio of tensile stress to tensile strain in the linear elastic region.</p>
+<p><strong>中:</strong> 杨氏模量是线性弹性范围内拉应力与拉应变之比。</p>
+<p><strong>表达要点 / Wording:</strong> tensile stress; tensile strain; linear region</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/f6300cb04858f0ff68.pdf#page=11">PH01 201801 Q08.3 · MS p11（相关计算或应用）</a></p>
+<h3 id="h-19c1d0aebd3ab83994">Tensile stress / 拉应力</h3>
+<p><strong>EN:</strong> Tensile stress is the tensile force per unit cross-sectional area of a specimen.</p>
+<p><strong>中:</strong> 拉应力是试样单位截面积上承受的拉力。</p>
+<p><strong>表达要点 / Wording:</strong> force; cross-sectional area</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/f6300cb04858f0ff68.pdf#page=11">PH01 201801 Q08.3 · MS p11（相关计算或应用）</a>；<a class="internal-link" href="/media/fa97d049231f3431f7.pdf#page=4">PH01 202401 Q01 · MS p4（相关计算或应用）</a></p>
+<h3 id="h-0b51af97698affd702">Tensile strain / 拉应变</h3>
+<p><strong>EN:</strong> Tensile strain is the extension divided by the original unstretched length.</p>
+<p><strong>中:</strong> 拉应变是伸长量除以原始未拉伸长度。</p>
+<p><strong>表达要点 / Wording:</strong> extension; original length</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/14ad53b05596ade853.pdf#page=7">PH01 201806 Q04.1 · MS p7（定义/陈述评分点）</a></p>
+<h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
+<div class="math block">
+\[\begin{gathered}
+F=mg \\
+A_0=\frac{\pi d_0^2}{4} \\
+E=\frac{kL_0}{A_0} \\
+\frac{\Delta E}{E}=\frac{\Delta k}{k}+\frac{\Delta L_0}{L_0}+2\frac{\Delta d_0}{d_0}
+\end{gathered}\]
+</div>
+<h2 id="h-166a0f981d6cdc4cad">Conditions / 适用条件</h2>
+<p>在线性弹性范围内测量，原长取实际受拉的有效段，截面积由代表性的原始直径得到。 / Measure in the linear elastic range using the gauge length and representative original diameter.</p>
+<h2 id="h-614697bd55e5a5935c">Explanation / 讲解</h2>
+<h3 id="h-fdc492ac67d4d11fc4">原理 / Principle</h3>
+<div class="math block">
+\[F=k\Delta L,\qquad E=\frac{kL_0}{A},\qquad A=\frac{\pi d^2}{4}.\]
+</div>
+<p>在比例范围内载荷–伸长梯度 <span class="math inline">\(k=EA/L_0\)</span>。The graph must use the linear range.</p>
+<h3 id="h-cf28139b60c6c2532d">装置与测量 / Apparatus and measurements</h3>
+<p>用长而均匀的金属线、可靠支架、砝码与挂钩、长度标尺、伸长读数装置及螺旋测微器。可用合适参考线/补偿装置减小支架变化的影响。Measure extension without assuming the support is perfectly rigid.</p>
+<p>原长应按线材实际受拉的有效测量段取值。直径在多个位置、不同方向重复测量并取平均，检查测微器零点。Measure the original gauge length and representative diameter.</p>
+<h2 id="h-db2fa3a5f52c97a113">Application / 应用</h2>
+<h3 id="h-0f863b516673bdc3a9">步骤 / Procedure</h3>
+<ol>
+<li>加适当预载荷拉直线材并定义读数零点 / Use a preload and define the baseline.</li>
+<li>分步增加已知载荷，静止后读取伸长 / Increase load and wait for equilibrium.</li>
+<li>将质量换为力 <span class="math inline">\(F=mg\)</span>，记录增量和总载荷的约定 / State the load convention.</li>
+<li>画F–ΔL图，选择线性段求k，再求E / Fit the linear range.</li>
+<li>必要时逐步卸载，检验能否恢复 / Unload to test elastic behaviour.</li>
+</ol>
+<h3 id="h-56780a63743ac59011">评价 / Evaluation</h3>
+<p>长线材伸长较大，减小读数的相对误差。读取时防视差，避免温度变化和支架移动。直径的不确定度贡献在面积中乘2。Diameter uncertainty is amplified because area depends on its square.</p>
+<p>在简化独立量模型下：<span class="math inline">\(\Delta E/E=\Delta k/k+\Delta L_0/L_0+2\Delta d/d\)</span>。若已按其他相关测量求不确定度，不应重复计同一误差。State the variables used in the propagation.</p>
+<p>避免超载断线，可加防护与砝码接收垫。The thin wire and falling masses require a controlled load range.</p>
+<!-- U1_DEFINITIONS_END -->
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-b5abf8531b5b9b36d2">P02 方法 1 · 杨氏模量实验与误差方向 / Young-modulus experiments and bias</h3>
+<ol>
+<li>测原长，微米尺多位置、多方向测直径并查零误差；逐级加已知质量，测<strong>增量伸长</strong>，保持比例区并记录卸载以检查恢复。 / Measure geometry and extension independently.</li>
+<li>参照线装置可补偿共同支架移动或温度变化；松夹具会把滑移当伸长，使 <span class="math inline">\(E=FL/(A\Delta L)\)</span> 偏小。 / Explain the sign of the systematic bias.</li>
+<li><span class="math inline">\(F\)</span>–<span class="math inline">\(\Delta L\)</span> 斜率为 <span class="math inline">\(k\)</span>，<span class="math inline">\(E=kL/A\)</span>；质量—伸长图斜率需再乘 <span class="math inline">\(gL/A\)</span>；应力—应变图线性斜率才直接为 <span class="math inline">\(E\)</span>。 / Use the actual plotted variables.</li>
+<li>细线增加伸长、可减小伸长的百分不确定度，但同时增加直径的百分不确定度；不能脱离仪器分辨率断言总不确定度一定降低。 / Discuss competing uncertainty contributions.</li>
+<li>面积法求塑性区形变功不能继续用线性区 <span class="math inline">\(F\Delta L/2\)</span>。 / Use the measured curve beyond proportionality.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/20b0c54f4136265d66.html">PH01 · 201806 · Q10</a>；<a class="internal-link" href="/notes/a45f570ea1a84d4cb5.html">PH01 · 202206 · Q10</a>；<a class="internal-link" href="/notes/abb97e066f03f6a6e4.html">PH01 · 202306 · Q10</a>；<a class="internal-link" href="/notes/891a903abf1db781db.html">PH01 · 202401 · Q15</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (5)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/20b0c54f4136265d66.html">PH01 · 201806 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a45f570ea1a84d4cb5.html">PH01 · 202206 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/abb97e066f03f6a6e4.html">PH01 · 202306 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/891a903abf1db781db.html">PH01 · 202401 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9ef10285fece222b4b.html">PH02 · 201706 · Q10</a></td>
+<td>U2 所需基础 / Prerequisite</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/30b5c7a31ed5ee4f9d.html">U1逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-91121d1ecaf6930b80">知识联系 / Relationships</h2>
+<table>
+<thead>
+<tr>
+<th>方向 / Direction</th>
+<th>相连知识 / Linked knowledge</th>
+<th>关系 / Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前置或关联 → 本知识 / incoming</td>
+<td><a class="internal-link" href="/notes/e011272c2cc6fe768b.html">M06 误差棒与图像不确定度 - Error bars and graph uncertainty</a></td>
+<td>梯度测量 / slope</td>
+</tr>
+<tr>
+<td>前置或关联 → 本知识 / incoming</td>
+<td><a class="internal-link" href="/notes/83a4bc9ab47f7c2577.html">M05 不确定度与传播规则 - Uncertainty and propagation</a></td>
+<td>d²误差贡献 / diameter²</td>
+</tr>
+<tr>
+<td>前置或关联 → 本知识 / incoming</td>
+<td><a class="internal-link" href="/notes/36bed4fe756eb58c01.html">D28 杨氏模量与材料刚度 - Young modulus and material stiffness</a></td>
+<td>实验测E / measure</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-d289ca8067ef00f08b">复述检查 / Retrieval check</h2>
+<ul>
+<li>[ ] 复述如何从载荷–伸长图求E。 / Explain each measured quantity.</li>
+<li>[ ] 指出主要误差、改进和弹性检验。 / Evaluate the method.</li>
+</ul>
+<h2 id="h-7a185af5ecf46cb0ac">对应原课件练习 / Source-slide practice</h2>
+<ul>
+<li><a class="internal-link" href="/notes/1d4d45f7a7f00dbdda.html">3.2.10 课堂检测复述 - Retrieval and practice</a></li>
+</ul>
+<h2 id="h-00e36c430b204d4a07">依据 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/notes/0b5dec2e245a870dec.html">资料来源与范围 - Sources and scope</a>：本地9630 U1考纲对应3.2.10，与官方4.4版核对。</li>
+<li>Jim Breithaupt, Oxford International AQA Physics，教材印刷页 108, 109。内容按U1范围重新概括，未复制整段教材。</li>
+</ul>
+<!-- U1_MODELS_START -->
+<h2 id="h-ece831a4c8c76b508e">常用物理模型 / Common physics models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/2e19dabdb29d0e5ee9.html">PM01 实验图像与不确定度模型</a>：best-fit line；gradient / intercept。</li>
+<li><a class="internal-link" href="/notes/3d9c8fe72e413dfc10.html">PM18 线材拉伸与杨氏模量模型</a>：wire / cable；Young modulus / same material。</li>
+</ul>
+<!-- U1_MODELS_END -->
+<!-- U1_PAST_PAPERS_START -->
+<h2 id="h-d7e53f0d63ea2388d1">历年真题 / Past-paper practice</h2>
+<a class="internal-link" href="/notes/08ef2d4353ae9eea31.html">按本知识点查看题目图片（4题） / Practice bank</a>
+<table>
+<thead>
+<tr>
+<th>所属试卷 / Paper</th>
+<th>题目 / Question</th>
+<th>对应范围 / Parts</th>
+<th>答案 / MS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018年6月 / June 2018</td>
+<td><a class="internal-link" href="/notes/08ef2d4353ae9eea31.html#h-bdb063e13baebf4748">Q10</a></td>
+<td>10.1、10.2、10.3、10.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/08ef2d4353ae9eea31.html#h-6c54fb2ed758154701">Q10</a></td>
+<td>10.1、10.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年6月 / June 2023</td>
+<td><a class="internal-link" href="/notes/08ef2d4353ae9eea31.html#h-2063f9c1e309ebf03c">Q10</a></td>
+<td>10.1、10.2、10.3、10.4、10.5</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年1月 / January 2024</td>
+<td><a class="internal-link" href="/notes/08ef2d4353ae9eea31.html#h-875988987c93fbba60">Q15</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+</tbody>
+</table>
+<!-- U1_PAST_PAPERS_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/866f533af7a4118899.html">OxfordAQA Physics U1 / 物理U1知识库</a></li><li><a href="/notes/fe4f62fb8bc5de4a67.html">物理 U1 知识谱系 / Physics U1 knowledge lineage</a></li><li><a href="/notes/5ef8833056a01fbbe0.html">3.1 测量及其误差 / MEASUREMENTS AND THEIR ERRORS</a></li><li><a href="/notes/16a0d0b8df1a4bed67.html">3.2 力学和材料 / MECHANICS AND MATERIALS</a></li><li><a href="/notes/44178f1b0af177db32.html">3.2.10 杨氏模量 / THE YOUNG MODULUS</a></li><li><a href="/notes/83a4bc9ab47f7c2577.html">不确定度与传播规则 / Uncertainty and propagation</a></li><li><a href="/notes/e011272c2cc6fe768b.html">误差棒与图像不确定度 / Error bars and graph uncertainty</a></li><li><a href="/notes/36bed4fe756eb58c01.html">杨氏模量与材料刚度 / Young modulus and material stiffness</a></li><li><a href="/notes/1d4d45f7a7f00dbdda.html">3.2.10 课堂检测复述 / Retrieval and practice</a></li><li><a href="/notes/f632b124127e9adda3.html">U1 概念与定义索引 / Concepts and definitions</a></li><li><a href="/notes/a250111986d580319a.html">U1复述进度 / Retrieval progress</a></li><li><a href="/notes/bc44c2f3b633ca38cb.html">关系索引 / Relationship index</a></li><li><a href="/notes/30b5c7a31ed5ee4f9d.html">U1 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/5d71469646857a1b0a.html">真题练习 / PH01 past-paper practice</a></li><li><a href="/notes/857d3e90190ee4b919.html">M04 误差与测量质量 真题练习 / Past-paper practice</a></li><li><a href="/notes/fe7637d09b6ef7141e.html">M05 不确定度与传播规则 真题练习 / Past-paper practice</a></li><li><a href="/notes/4287665f57095a24ce.html">M06 误差棒与图像不确定度 真题练习 / Past-paper practice</a></li><li><a href="/notes/6539cad3d41757ae0c.html">D24 胡克定律与弹性极限 真题练习 / Past-paper practice</a></li><li><a href="/notes/60e237010ed2414b08.html">D27 弹性应变能与形变功 真题练习 / Past-paper practice</a></li><li><a href="/notes/5566eaadf8d9007c88.html">D28 杨氏模量与材料刚度 真题练习 / Past-paper practice</a></li><li><a href="/notes/08ef2d4353ae9eea31.html">P02 必做实验2：线材杨氏模量 真题练习 / Past-paper practice</a></li><li><a href="/notes/ea37159d0569c0fcb7.html">PH01 · 2018年6月 / June 2018 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/20b0c54f4136265d66.html">PH01 · 2018年6月 / June 2018 · Q10 · 题目 / Question</a></li><li><a href="/notes/2b3b2707c809b1a104.html">PH01 · 2022年6月 / June 2022 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/a45f570ea1a84d4cb5.html">PH01 · 2022年6月 / June 2022 · Q10 · 题目 / Question</a></li><li><a href="/notes/5b7d6975e181264219.html">PH01 · 2023年6月 / June 2023 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/abb97e066f03f6a6e4.html">PH01 · 2023年6月 / June 2023 · Q10 · 题目 / Question</a></li><li><a href="/notes/866a65a3b9af8a76cf.html">PH01 · 2024年1月 / January 2024 · Q15 · 答案 / Mark scheme</a></li><li><a href="/notes/891a903abf1db781db.html">PH01 · 2024年1月 / January 2024 · Q15 · 题目 / Question</a></li><li><a href="/notes/c72ed3514d07cf29e4.html">U1 实验、数据与评价 / Practical data and evaluation</a></li><li><a href="/notes/2e19dabdb29d0e5ee9.html">实验图像与不确定度模型 / Gradient and uncertainty</a></li><li><a href="/notes/3d9c8fe72e413dfc10.html">线材拉伸与杨氏模量模型 / Young modulus</a></li><li><a href="/notes/56c6e1152fae1e8d55.html">U2 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/ea48ca07a7d544d840.html">测量与 U1 基础 / Cross-unit prerequisite practice</a></li><li><a href="/notes/9ef10285fece222b4b.html">PH02 201706 Q10</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U1/02 知识节点/3.2 力学与材料/P02 必做实验2：线材杨氏模量 - Required practical 2 - Young modulus of a wire.md","url":"/notes/c380fa2b733282bfba.html","unit":"U1"}</script></body></html>

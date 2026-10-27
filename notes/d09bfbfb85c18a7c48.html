@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.5.5 叠加原理、驻波与谐波 / Superposition and stationary waves · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U2/02 知识节点/3.5 振动与波</div><h1 id="h-90ed8912906449df93">3.5.5 叠加原理、驻波与谐波 / Superposition and stationary waves</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/e7cbb8d84894a2118c.html">3.5.5</a>　｜　<a class="internal-link" href="/notes/d51c071167c0e89009.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>振幅 / amplitude</strong></td>
+<td><span class="math inline">\(A\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>位移振幅；与面积、活度 A 区分 / Displacement amplitude, not area or activity.</td>
+</tr>
+<tr>
+<td><strong>位移 / displacement</strong></td>
+<td><span class="math inline">\(s,\ x\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>一维正负号表示方向 / A sign gives direction in one dimension.</td>
+</tr>
+<tr>
+<td><strong>频率 / frequency</strong></td>
+<td><span class="math inline">\(f\)</span></td>
+<td><span class="math inline">\(\mathrm{Hz}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>波长 / wavelength</strong></td>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>与衰变常量 λ 区分 / Not decay constant.</td>
+</tr>
+<tr>
+<td><strong>长度 / length</strong></td>
+<td><span class="math inline">\(L,\ l\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>按题目给出的记号 / Use the question's notation.</td>
+</tr>
+<tr>
+<td><strong>弦的张力 / string tension</strong></td>
+<td><span class="math inline">\(F\)</span></td>
+<td><span class="math inline">\(\mathrm{N}\)</span></td>
+<td>本笔记用 F；部分题目用 T / F here; some questions use T.</td>
+</tr>
+<tr>
+<td><strong>线密度 / mass per unit length</strong></td>
+<td><span class="math inline">\(\mu\)</span></td>
+<td><span class="math inline">\(\mathrm{kg\,m^{-1}}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>质量 / mass</strong></td>
+<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+<td>与重力不同 / Not weight.</td>
+</tr>
+<tr>
+<td><strong>谐波序号 / harmonic number</strong></td>
+<td><span class="math inline">\(n\)</span></td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+<td>正整数；与摩尔数 n 区分 / A positive integer, not amount of substance.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/cac60ae025c40a9574.html">superposition — 叠加</a></li>
+<li><a class="internal-link" href="/notes/0e011191d785a01d37.html">stationary wave — 驻波</a></li>
+<li><a class="internal-link" href="/notes/47fe936515cf0b0573.html">node — 波节</a></li>
+<li><a class="internal-link" href="/notes/b2c7678080c1049eae.html">antinode — 波腹</a></li>
+<li><a class="internal-link" href="/notes/683ad56e802696d89e.html">mass per unit length — 线密度</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/cac60ae025c40a9574.html#h-485f2ec53559b6043e">↗ superposition — 叠加</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> When waves overlap, the resultant displacement is the algebraic sum of their individual displacements at each point.</p>
+<p><strong>中文：</strong> 波相遇时，各点合位移等于各波位移的代数和。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/0e011191d785a01d37.html#h-485f2ec53559b6043e">↗ stationary wave — 驻波</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A wave pattern with fixed nodes and antinodes, formed by the superposition of waves of the same frequency travelling in opposite directions.</p>
+<p><strong>中文：</strong> 同频率反向传播波叠加产生的、波节与波腹位置固定的波形。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/47fe936515cf0b0573.html#h-485f2ec53559b6043e">↗ node — 波节</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A point on a stationary wave at which the displacement is always zero.</p>
+<p><strong>中文：</strong> 驻波上位移始终为零的位置。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/b2c7678080c1049eae.html#h-485f2ec53559b6043e">↗ antinode — 波腹</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A point on a stationary wave at which the amplitude is maximum.</p>
+<p><strong>中文：</strong> 驻波上振幅最大的位置。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/683ad56e802696d89e.html#h-485f2ec53559b6043e">↗ mass per unit length — 线密度</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The mass of a string or wire divided by its length.</p>
+<p><strong>中文：</strong> 弦或导线的质量与长度之比。</p>
+<p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/7bd21053d42db5a4d8.html">PH02 202306-Q06</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
+</section>
+<p><strong>真题定义依据 / Mark-scheme checks：</strong> <a class="internal-link" href="/notes/7bd21053d42db5a4d8.html">PH02 202306-Q06</a>。定义按评分要点概括；原答案可在对应题目下展开。 Definitions are summarised from the scoring points, with original answers below the linked questions.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p>弦张力用 <span class="math inline">\(F\)</span> 表示，避免与周期 <span class="math inline">\(T\)</span> 混淆；两端固定弦的第 <span class="math inline">\(n\)</span> 谐波含 <span class="math inline">\(n\)</span> 个波腹。</p>
+<p><span class="math inline">\(f_1=\frac{1}{2L}\sqrt{F/\mu}\)</span>; <span class="math inline">\(\mu=m/L\)</span>; <span class="math inline">\(\lambda_n=2L/n\)</span> and <span class="math inline">\(f_n=nf_1\)</span> for a string fixed at both ends.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>标准完整波节图要求反向波同频、等振幅；弦需均匀且两端固定。采用“第一谐波”和“谐波”术语。</p>
+<p>For the standard complete-node pattern, the counter-propagating waves have equal frequency and equal amplitude. String relationships assume uniform linear density and both ends fixed. Use “first harmonic” and “harmonics”.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-4f8b9cddde659fc9d5">叠加形成驻波 / Superposition and formation</h3>
+<p>重叠时合位移是各列波位移的代数和。相同频率、同一介质中沿相反方向传播的波叠加，可形成固定波节和波腹；完全波节要求两波振幅相等。常见情形是入射波与反射波叠加。</p>
+<p>Resultant displacement is the algebraic sum of component displacements. Counter-propagating waves of the same frequency can form fixed nodes and antinodes; complete nodes require equal amplitudes.</p>
+<p>画图时选几个相隔四分之一周期的时刻，将两波逐点相加：波节始终为零，波腹在最大正位移、零、最大负位移间变化。驻波无沿波传播方向的净能量传递，但各点仍可振动。</p>
+<p>Add the two waveforms point by point at successive quarter-cycle intervals. Nodes remain at zero while antinodes oscillate. An ideal stationary wave has no net energy transfer along the wave.</p>
+<h3 id="h-e00d2a393fa9af2c2c">间距、相位与谐波 / Spacing, phase and harmonics</h3>
+<p>相邻波节或相邻波腹相距 <span class="math inline">\(\lambda/2\)</span>，相邻波节与波腹相距 <span class="math inline">\(\lambda/4\)</span>。同一对相邻波节内的振动同相，跨过一个波节反相；波节处振幅为零，不给它指定振动相位。</p>
+<p>Adjacent nodes or antinodes are separated by half a wavelength; a node and its adjacent antinode by a quarter wavelength. Points within one loop are in phase; adjacent loops are in antiphase. Phase is undefined at a node.</p>
+<p>两端固定弦的第 <span class="math inline">\(n\)</span> 谐波：<span class="math inline">\(L=n\lambda_n/2\)</span>，<span class="math inline">\(f_n=nf_1\)</span>，<span class="math inline">\(f_1=(1/2L)\sqrt{\mathcal T/\mu}\)</span>，<span class="math inline">\(\mu=m/L\)</span>。这里 <span class="math inline">\(\mathcal T\)</span> 表示张力，避免与周期 <span class="math inline">\(T\)</span> 混淆。采用 first harmonic、second harmonic 等术语。</p>
+<p>For a string fixed at both ends, <span class="math inline">\(L=n\lambda_n/2\)</span> and <span class="math inline">\(f_n=nf_1\)</span>. Use harmonic terminology; distinguish tension from period.</p>
+<h3 id="h-c20ace4ecef0a07ab6">三种装置与变量关系 / Apparatus and variable relationships</h3>
+<p>弦：振动发生器驱动并调频观察波腹。微波：发射器、反射板和探头测相邻极小值间距。声波：声源、反射端和麦克风测声强变化；由相邻波节间距求 <span class="math inline">\(\lambda\)</span>，再用 <span class="math inline">\(c=f\lambda\)</span>。</p>
+<p>Use a vibrator and string, a microwave transmitter with reflector and probe, or a sound source with reflector and microphone. Adjacent minima give half the wavelength, allowing wave speed to be found.</p>
+<p>研究弦频率时一次改变一个量：<span class="math inline">\(f\propto1/L\)</span>、<span class="math inline">\(f\propto\sqrt{\mathcal T}\)</span>、<span class="math inline">\(f\propto1/\sqrt\mu\)</span>；可作 <span class="math inline">\(f\)</span>–<span class="math inline">\(1/L\)</span>、<span class="math inline">\(f^2\)</span>–<span class="math inline">\(\mathcal T\)</span>、<span class="math inline">\(f^2\)</span>–<span class="math inline">\(1/\mu\)</span> 图，保持同一谐波。</p>
+<p>Change one variable at a time and keep the harmonic fixed. Linearise the predicted relationships using reciprocal length or squared frequency.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/d4268f21d8a6d90d7c.html#h-cf0a0eafe056797c64">3.5.5</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/09f2402367a981f4fe.png" target="_blank"><img alt="3.5.5-S008-P01" decoding="async" loading="lazy" src="/media/09f2402367a981f4fe.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/3e16b844ef100f787e.png" target="_blank"><img alt="3.5.5-S009-P01" decoding="async" loading="lazy" src="/media/3e16b844ef100f787e.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/188a30788dae51b237.png" target="_blank"><img alt="3.5.5-S010-P03" decoding="async" loading="lazy" src="/media/188a30788dae51b237.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/aff9c9f037fbcee0ec.png" target="_blank"><img alt="3.5.5-S010-P01" decoding="async" loading="lazy" src="/media/aff9c9f037fbcee0ec.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h3 id="h-43999b4aa02e7339e2">U2 Stationary wave formation</h3>
+<a class="image-link" href="/media/64a6d119ac0b2d8429.png" target="_blank"><img alt="U2_Stationary_wave_formation" decoding="async" loading="lazy" src="/media/64a6d119ac0b2d8429.png" style="max-width:min(100%,1100px)"/></a>
+<p>同频、等振幅、反向传播波的逐点叠加；波节位置固定。 Superposition at three instants; fixed nodes.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>实验研究频率与弦长、张力、线密度关系；声波或微波驻波可由连续极大、极小位置识别。</p>
+<p>Investigate frequency against string length, tension and mass per unit length. Sound or microwave standing waves can be detected by successive maxima/minima.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>不能将两端固定弦公式直接套用于所有空气柱，应先看边界条件。</p>
+<p>Do not apply the two-fixed-end string formula unchanged to every air column; infer boundary conditions from the question.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-c83fad3da5e7f59a2a">3.5.5 方法 1 · 驻波合成、谐波与不等振幅 / Standing waves and unequal amplitudes</h3>
+<ol>
+<li>两列波逐点相加：<span class="math inline">\(y=y_1+y_2\)</span>；求缺失波用 <span class="math inline">\(y_2=y-y_1\)</span>。过 <span class="math inline">\(T/4\)</span> 后，两行波各沿相反方向移动 <span class="math inline">\(\lambda/4\)</span>，不能平移整个驻波图。 / Superpose locally and propagate the component waves separately.</li>
+<li>波腹处两波同相、波节处反相；不能说两列反向行波处处同相。振幅不等时极大 <span class="math inline">\(A_1+A_2\)</span>，极小 <span class="math inline">\(|A_1-A_2|\)</span>，极小未必为零。 / A minimum need not be a true node when amplitudes differ.</li>
+<li>固定两端的弦先数半波段，<span class="math inline">\(L=n\lambda/2\)</span>；相邻波节间同相、跨一个波节反相。选谐波的拨弦点应在相应波腹。 / Count loops and identify phase regions.</li>
+<li><span class="math inline">\(f_n=n\sqrt{T/\mu}/(2L)\)</span>，<span class="math inline">\(\mu=m/L\)</span>；先统一质量和长度单位，再从实际坐标推导斜率。 / Derive the graph relation, including unit conversions.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/353733a6e43ab3332f.html">PH02 · 202201 · Q07</a>；<a class="internal-link" href="/notes/7bd21053d42db5a4d8.html">PH02 · 202306 · Q06</a>；<a class="internal-link" href="/notes/3f9b4f7038ce5bf7f7.html">PH02 · 202606 · Q19</a>；<a class="internal-link" href="/notes/5f47f51b2ad3fa6f0f.html">PH02 · 202601 · Q11</a>。</p>
+<h3 id="h-81433459bfa5d5a6fc">3.5.5 方法 2 · 闭端空气柱与端部修正 / Closed air columns and end correction</h3>
+<p>水面为位移波节，开口附近为位移波腹。基频时 <span class="math inline">\(\lambda=4(L+x)\)</span>，<span class="math inline">\(x&gt;0\)</span> 为端部修正。 / The closed end is a displacement node and the open end is near an antinode.</p>
+<p><span class="math inline">\(1/f=4L/v+4x/v\)</span>：画 <span class="math inline">\(1/f\)</span> 对 <span class="math inline">\(L\)</span>，斜率 <span class="math inline">\(m=4/v\)</span>，纵截距 <span class="math inline">\(b=4x/v\)</span>，因此 <span class="math inline">\(v=4/m\)</span>、<span class="math inline">\(x=b/m\)</span>。横截距为 <span class="math inline">\(-x\)</span>；正的端部修正取该负横截距的绝对值。 / Distinguish the signed intercept from the positive correction.</p>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/a4978edd28b794e9ca.html">PH02 · 202406 · Q07</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (33)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/84f92ff9fc20423172.html">PH02 · 201706 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b98fafe5346399a432.html">PH02 · 201706 · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/51dd2922385eccdc62.html">PH02 · 2018 specimen paper · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/190c06896300ba2125.html">PH02 · 2018 specimen paper · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1225576d874d482d85.html">PH02 · 2018 specimen paper · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/34e8619b7c614cbccd.html">PH02 · 2018 specimen paper · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/86356ebeb0a8cf9f19.html">PH02 · 201801 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2c8e7c4767d05c8a9e.html">PH02 · 201806 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/67c06b94156802412a.html">PH02 · 201806 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4ebb9cadf5b6ec1c24.html">PH02 · 201901 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d1c138ce8359ceaba4.html">PH02 · 201901 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c1e10e52e7a3fe9e89.html">PH02 · 201906 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9a6de47cc1bc08490a.html">PH02 · 201906 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e404dbcc7615b4be15.html">PH02 · 202001 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a8240567f3e013f289.html">PH02 · 202101 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/353733a6e43ab3332f.html">PH02 · 202201 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0676f832050f8e93e9.html">PH02 · 202201 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f324598c826465e822.html">PH02 · 202206 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3a8eee85d9ff6b30dd.html">PH02 · 202301 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c8b5d7ab737202c45e.html">PH02 · 202301 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7bd21053d42db5a4d8.html">PH02 · 202306 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a76429f334735c97a5.html">PH02 · 202306 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/af23489569dc272152.html">PH02 · 202306 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0f1b4424ec8c082d54.html">PH02 · 202401 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a4978edd28b794e9ca.html">PH02 · 202406 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/32160252b19ab4aa9b.html">PH02 · 202406 · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/800d1aa78bcb798655.html">PH02 · 202501 · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7f4798a68bc5487de3.html">PH02 · 202506 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ab95dd55d05e279318.html">PH02 · 202506 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5f47f51b2ad3fa6f0f.html">PH02 · 202601 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9fc431f4c04e2b69de.html">PH02 · 202606 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/473e341c6d1433c2e8.html">PH02 · 202606 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3f9b4f7038ce5bf7f7.html">PH02 · 202606 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/56c6e1152fae1e8d55.html">U2逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/75155978f7b6b5f799.html">课件例题与复述</a> · <a class="internal-link" href="/notes/65afee2f474b6b413a.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/4a9ba85b474db764d5.html">3.5.2 受迫振动与共振</a>：谐波共振 / harmonic resonance</li>
+<li><a class="internal-link" href="/notes/7e8d036187b8a0ca89.html">3.5.3 行波、相位与波参数</a>：反向行波叠加 / opposite waves</li>
+<li><a class="internal-link" href="/notes/543fc2981cceb52fdf.html">3.5.6 干涉、相干与杨氏双缝</a>：叠加与相消增强 / superposition</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.5.5。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 196–201；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/5f8f4ba9a66a700e69.html">U2PM10 弦驻波与谐波 - Node and harmonic</a></li>
+</ul>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/28a7b6b3c9bd651fd2.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/730e5ebbdd7486a28d.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/d51c071167c0e89009.html">U2 电学、波与粒子 / Electricity, waves and particles</a></li><li><a href="/notes/d4268f21d8a6d90d7c.html">U2 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/59118fa50edd7bf53a.html">U2 考纲框架 / Specification map</a></li><li><a href="/notes/e7cbb8d84894a2118c.html">3.5.5 波的叠加原理与驻波的形成 / PRINCIPLE OF SUPERPOSITION OF WAVES AND FORMATION OF STATIONARY WAVES</a></li><li><a href="/notes/4a9ba85b474db764d5.html">3.5.2 受迫振动与共振 / Forced vibrations and resonance</a></li><li><a href="/notes/7e8d036187b8a0ca89.html">3.5.3 行波、相位与波参数 / Progressive waves</a></li><li><a href="/notes/543fc2981cceb52fdf.html">3.5.6 干涉、相干与杨氏双缝 / Interference</a></li><li><a href="/notes/cac60ae025c40a9574.html">superposition — 叠加</a></li><li><a href="/notes/b2c7678080c1049eae.html">antinode — 波腹</a></li><li><a href="/notes/47fe936515cf0b0573.html">node — 波节</a></li><li><a href="/notes/683ad56e802696d89e.html">mass per unit length — 线密度</a></li><li><a href="/notes/0e011191d785a01d37.html">stationary wave — 驻波</a></li><li><a href="/notes/7013f303a4a6a5fb2f.html">U2 来源与范围 / Sources and scope</a></li><li><a href="/notes/56c6e1152fae1e8d55.html">U2 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/279da08daa15cec550.html">3.5.1 振动系统、能量与阻尼 真题练习 / Past-paper practice</a></li><li><a href="/notes/0f67f2c858c688f5ce.html">3.5.2 受迫振动与共振 真题练习 / Past-paper practice</a></li><li><a href="/notes/e73828d0e5041be868.html">3.5.3 行波、相位与波参数 真题练习 / Past-paper practice</a></li><li><a href="/notes/949a03110b13eba7fd.html">3.5.4 横波、纵波、偏振与超声 真题练习 / Past-paper practice</a></li><li><a href="/notes/65afee2f474b6b413a.html">3.5.5 叠加原理、驻波与谐波 真题练习 / Past-paper practice</a></li><li><a href="/notes/118e1b7536b1f672fc.html">3.5.6 干涉、相干与杨氏双缝 真题练习 / Past-paper practice</a></li><li><a href="/notes/fb08f7d5188c6c9ed5.html">PH02 2018 specimen paper / Paper index</a></li><li><a href="/notes/51dd2922385eccdc62.html">PH02 2018 specimen paper Q06</a></li><li><a href="/notes/190c06896300ba2125.html">PH02 2018 specimen paper Q14</a></li><li><a href="/notes/1225576d874d482d85.html">PH02 2018 specimen paper Q17</a></li><li><a href="/notes/34e8619b7c614cbccd.html">PH02 2018 specimen paper Q18</a></li><li><a href="/notes/56570cdfe35ebac726.html">PH02 201706 / Paper index</a></li><li><a href="/notes/84f92ff9fc20423172.html">PH02 201706 Q22</a></li><li><a href="/notes/b98fafe5346399a432.html">PH02 201706 Q25</a></li><li><a href="/notes/e6cc1ccb6ec83d0361.html">PH02 201801 / Paper index</a></li><li><a href="/notes/86356ebeb0a8cf9f19.html">PH02 201801 Q06</a></li><li><a href="/notes/7c525ef238b5ef97b6.html">PH02 201806 / Paper index</a></li><li><a href="/notes/2c8e7c4767d05c8a9e.html">PH02 201806 Q05</a></li><li><a href="/notes/67c06b94156802412a.html">PH02 201806 Q19</a></li><li><a href="/notes/fe163b6544d7d76797.html">PH02 201901 / Paper index</a></li><li><a href="/notes/4ebb9cadf5b6ec1c24.html">PH02 201901 Q04</a></li><li><a href="/notes/d1c138ce8359ceaba4.html">PH02 201901 Q19</a></li><li><a href="/notes/8645db80972f6c45f3.html">PH02 201906 / Paper index</a></li><li><a href="/notes/c1e10e52e7a3fe9e89.html">PH02 201906 Q08</a></li><li><a href="/notes/9a6de47cc1bc08490a.html">PH02 201906 Q17</a></li><li><a href="/notes/ff4673ae925355ff96.html">PH02 202001 / Paper index</a></li><li><a href="/notes/e404dbcc7615b4be15.html">PH02 202001 Q05</a></li><li><a href="/notes/a3546c81d83fed0c6b.html">PH02 202101 / Paper index</a></li><li><a href="/notes/a8240567f3e013f289.html">PH02 202101 Q02</a></li><li><a href="/notes/a059acf659d94b6635.html">PH02 202201 / Paper index</a></li><li><a href="/notes/353733a6e43ab3332f.html">PH02 202201 Q07</a></li><li><a href="/notes/0676f832050f8e93e9.html">PH02 202201 Q13</a></li><li><a href="/notes/66e1fc4b5aabc65461.html">PH02 202206 / Paper index</a></li><li><a href="/notes/f324598c826465e822.html">PH02 202206 Q18</a></li><li><a href="/notes/585d24af610209a7d0.html">PH02 202301 / Paper index</a></li><li><a href="/notes/3a8eee85d9ff6b30dd.html">PH02 202301 Q05</a></li><li><a href="/notes/c8b5d7ab737202c45e.html">PH02 202301 Q19</a></li><li><a href="/notes/ba2d545cf3acee1456.html">PH02 202306 / Paper index</a></li><li><a href="/notes/7bd21053d42db5a4d8.html">PH02 202306 Q06</a></li><li><a href="/notes/a76429f334735c97a5.html">PH02 202306 Q09</a></li><li><a href="/notes/af23489569dc272152.html">PH02 202306 Q24</a></li><li><a href="/notes/85bcd3b7aababec3d2.html">PH02 202401 / Paper index</a></li><li><a href="/notes/0f1b4424ec8c082d54.html">PH02 202401 Q02</a></li><li><a href="/notes/c5a6923226438012da.html">PH02 202406 / Paper index</a></li><li><a href="/notes/a4978edd28b794e9ca.html">PH02 202406 Q07</a></li><li><a href="/notes/32160252b19ab4aa9b.html">PH02 202406 Q21</a></li><li><a href="/notes/7684ad07813e8f201d.html">PH02 202501 / Paper index</a></li><li><a href="/notes/800d1aa78bcb798655.html">PH02 202501 Q21</a></li><li><a href="/notes/23fab94a72e56b33a5.html">PH02 202506 / Paper index</a></li><li><a href="/notes/7f4798a68bc5487de3.html">PH02 202506 Q08</a></li><li><a href="/notes/ab95dd55d05e279318.html">PH02 202506 Q18</a></li><li><a href="/notes/fc62627b3c9c90b319.html">PH02 202601 / Paper index</a></li><li><a href="/notes/5f47f51b2ad3fa6f0f.html">PH02 202601 Q11</a></li><li><a href="/notes/2be43c625586f867cc.html">PH02 202606 / Paper index</a></li><li><a href="/notes/9fc431f4c04e2b69de.html">PH02 202606 Q17</a></li><li><a href="/notes/473e341c6d1433c2e8.html">PH02 202606 Q18</a></li><li><a href="/notes/3f9b4f7038ce5bf7f7.html">PH02 202606 Q19</a></li><li><a href="/notes/cc5cd5d93137fb801e.html">PH02 · 2017年6月 / June 2017 · Q21 · Properties of light and sound / 光和声的性质</a></li><li><a href="/notes/a4fb3ec2c34584f00d.html">PH02 · 2018年1月 / January 2018 · Q06.1 · Electromagnetic wave / 电磁波</a></li><li><a href="/notes/28a7b6b3c9bd651fd2.html">3.5.5 叠加原理、驻波与谐波 / Superposition and stationary waves · 概念考察练习 / Concept practice</a></li><li><a href="/notes/d2fe33553c3163e6e6.html">PH02 · 2023年6月 / June 2023 · Q06.1 · Mass per unit length / 单位长度质量</a></li><li><a href="/notes/93032a4b59def8dd38.html">U2 图像与示意图 / Graphs and diagrams</a></li><li><a href="/notes/7b34e14bd37730fdd3.html">PH02 2019年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/dba5e5777281b17453.html">PH02 2023年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/a82a4e46c78fe785b1.html">PH02 2024年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/730e5ebbdd7486a28d.html">3.5.5 叠加原理、驻波与谐波 / Superposition and stationary waves · 论述题练习 / Written-response practice</a></li><li><a href="/notes/559682b93686168da8.html">PH02 · 2018年1月 / January 2018 · Q06.3 · Stationary microwaves / 微波驻波</a></li><li><a href="/notes/67536cfeb79183a585.html">PH02 · 2018年1月 / January 2018 · Q06.5 · Detecting nodes and antinodes / 探测波节与波腹</a></li><li><a href="/notes/5f7872a8d92271a540.html">PH02 · 2019年6月 / June 2019 · Q08.1 · Stationary and progressive waves / 驻波与行波</a></li><li><a href="/notes/bd1d958fa8922b4045.html">PH02 · 2019年6月 / June 2019 · Q08.4 · Motion at a node / 波节处的运动</a></li><li><a href="/notes/2fc9af316694f57568.html">PH02 · 2021年1月 / January 2021 · Q02 · Forming a stationary wave on a string / 弦上驻波的形成</a></li><li><a href="/notes/592b8484ddf78d3958.html">PH02 · 2022年1月 / January 2022 · Q07.3 · Stationary-wave superposition / 驻波叠加</a></li><li><a href="/notes/3e654f7737eaf116fd.html">PH02 · 2023年1月 / January 2023 · Q05.1 · Producing an antinode / 波腹的形成</a></li><li><a href="/notes/3fa721b739ce039a8c.html">PH02 · 2023年6月 / June 2023 · Q06.2 · String frequency-length experiment / 弦的频率长度实验</a></li><li><a href="/notes/a93b586e2630248c2c.html">PH02 · 2023年6月 / June 2023 · Q09.3 · Damper near a clamp / 夹持端附近的阻尼器</a></li><li><a href="/notes/7723a84d097a522824.html">PH02 · 2024年6月 / June 2024 · Q07.2 · Air motion at a node and antinode / 波节与波腹处的空气运动</a></li><li><a href="/notes/35b14b7ecaa5eaf3ae.html">PH02 · 2024年6月 / June 2024 · Q07.5 · End correction from a graph / 从图像求端点修正</a></li><li><a href="/notes/406aff9bb7560254cd.html">PH02 · 2025年6月 / June 2025 · Q08.1 · Comparing wave types / 比较驻波与行波</a></li><li><a href="/notes/4e5fd841a145a7feb0.html">PH02 · 2025年6月 / June 2025 · Q08.2 · String linear-density experiment / 弦线密度实验</a></li><li><a href="/notes/d54841d420ccd28153.html">PH02 · 2025年6月 / June 2025 · Q08.3 · Identifying the second harmonic / 识别二次谐波</a></li><li><a href="/notes/53915b6d20fd34f2d8.html">PH02 · 2026年1月 / January 2026 · Q11.1 · Antinode formation / 波腹形成</a></li><li><a href="/notes/73f48a3d9f79f5373d.html">PH02 · 2026年1月 / January 2026 · Q11.4 · Frequency of a stretched string / 拉伸弦的频率</a></li><li><a href="/notes/5f8f4ba9a66a700e69.html">弦驻波与谐波 / Node and harmonic</a></li><li><a href="/notes/7ea6479fb770766e82.html">U2 3.5 振动、波与量子词汇 / Vocabulary</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U2/02 知识节点/3.5 振动与波/3.5.5 叠加原理、驻波与谐波 - Superposition and stationary waves.md","url":"/notes/d09bfbfb85c18a7c48.html","unit":"U2"}</script></body></html>

@@ -1,0 +1,273 @@
+﻿unit,session,topic,topic_zh,topic_en,marks,paper_total,percent
+U1,201706,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,5,80,6.25
+U1,201706,3.1.2,物理测量的局限,Limitation Of Physical Measurements,6,80,7.50
+U1,201706,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,201706,3.2.1,标量和矢量,Scalars And Vectors,3,80,3.75
+U1,201706,3.2.2,力矩,Moments,2,80,2.50
+U1,201706,3.2.3,沿直线的运动,Motion Along A Straight Line,0,80,0.00
+U1,201706,3.2.4,抛体运动,Projectile Motion,16,80,20.00
+U1,201706,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,6,80,7.50
+U1,201706,3.2.6,动量,Momentum,11,80,13.75
+U1,201706,3.2.7,功、能量和功率,"Work, Energy And Power",9,80,11.25
+U1,201706,3.2.8,能量守恒,Conservation Of Energy,1,80,1.25
+U1,201706,3.2.9,固体的宏观性质,Bulk Properties Of Solids,4,80,5.00
+U1,201706,3.2.10,杨氏模量,The Young Modulus,2,80,2.50
+U1,201706,3.3.1,原子的组成,Constituents Of The Atom,1,80,1.25
+U1,201706,3.3.2,基本粒子,Elementary Particles,5,80,6.25
+U1,201706,3.3.3,放射性,Radioactivity,9,80,11.25
+U1,201801,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,2,80,2.50
+U1,201801,3.1.2,物理测量的局限,Limitation Of Physical Measurements,4,80,5.00
+U1,201801,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,201801,3.2.1,标量和矢量,Scalars And Vectors,9,80,11.25
+U1,201801,3.2.2,力矩,Moments,2,80,2.50
+U1,201801,3.2.3,沿直线的运动,Motion Along A Straight Line,12,80,15.00
+U1,201801,3.2.4,抛体运动,Projectile Motion,9,80,11.25
+U1,201801,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,5,80,6.25
+U1,201801,3.2.6,动量,Momentum,8,80,10.00
+U1,201801,3.2.7,功、能量和功率,"Work, Energy And Power",3,80,3.75
+U1,201801,3.2.8,能量守恒,Conservation Of Energy,2,80,2.50
+U1,201801,3.2.9,固体的宏观性质,Bulk Properties Of Solids,3,80,3.75
+U1,201801,3.2.10,杨氏模量,The Young Modulus,4,80,5.00
+U1,201801,3.3.1,原子的组成,Constituents Of The Atom,2,80,2.50
+U1,201801,3.3.2,基本粒子,Elementary Particles,2,80,2.50
+U1,201801,3.3.3,放射性,Radioactivity,13,80,16.25
+U1,201806,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,4,80,5.00
+U1,201806,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U1,201806,3.1.3,物理量的估算,Estimation Of Physical Quantities,1,80,1.25
+U1,201806,3.2.1,标量和矢量,Scalars And Vectors,1,80,1.25
+U1,201806,3.2.2,力矩,Moments,2,80,2.50
+U1,201806,3.2.3,沿直线的运动,Motion Along A Straight Line,7,80,8.75
+U1,201806,3.2.4,抛体运动,Projectile Motion,6,80,7.50
+U1,201806,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,1,80,1.25
+U1,201806,3.2.6,动量,Momentum,3,80,3.75
+U1,201806,3.2.7,功、能量和功率,"Work, Energy And Power",4,80,5.00
+U1,201806,3.2.8,能量守恒,Conservation Of Energy,9,80,11.25
+U1,201806,3.2.9,固体的宏观性质,Bulk Properties Of Solids,8,80,10.00
+U1,201806,3.2.10,杨氏模量,The Young Modulus,3,80,3.75
+U1,201806,3.3.1,原子的组成,Constituents Of The Atom,1,80,1.25
+U1,201806,3.3.2,基本粒子,Elementary Particles,6,80,7.50
+U1,201806,3.3.3,放射性,Radioactivity,19,80,23.75
+U1,201901,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U1,201901,3.1.2,物理测量的局限,Limitation Of Physical Measurements,7,80,8.75
+U1,201901,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,201901,3.2.1,标量和矢量,Scalars And Vectors,2,80,2.50
+U1,201901,3.2.2,力矩,Moments,6,80,7.50
+U1,201901,3.2.3,沿直线的运动,Motion Along A Straight Line,9,80,11.25
+U1,201901,3.2.4,抛体运动,Projectile Motion,9,80,11.25
+U1,201901,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,6,80,7.50
+U1,201901,3.2.6,动量,Momentum,4,80,5.00
+U1,201901,3.2.7,功、能量和功率,"Work, Energy And Power",8,80,10.00
+U1,201901,3.2.8,能量守恒,Conservation Of Energy,3,80,3.75
+U1,201901,3.2.9,固体的宏观性质,Bulk Properties Of Solids,11,80,13.75
+U1,201901,3.2.10,杨氏模量,The Young Modulus,4,80,5.00
+U1,201901,3.3.1,原子的组成,Constituents Of The Atom,1,80,1.25
+U1,201901,3.3.2,基本粒子,Elementary Particles,1,80,1.25
+U1,201901,3.3.3,放射性,Radioactivity,8,80,10.00
+U1,201906,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,3,80,3.75
+U1,201906,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U1,201906,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,201906,3.2.1,标量和矢量,Scalars And Vectors,8,80,10.00
+U1,201906,3.2.2,力矩,Moments,4,80,5.00
+U1,201906,3.2.3,沿直线的运动,Motion Along A Straight Line,17,80,21.25
+U1,201906,3.2.4,抛体运动,Projectile Motion,4,80,5.00
+U1,201906,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,4,80,5.00
+U1,201906,3.2.6,动量,Momentum,4,80,5.00
+U1,201906,3.2.7,功、能量和功率,"Work, Energy And Power",1,80,1.25
+U1,201906,3.2.8,能量守恒,Conservation Of Energy,1,80,1.25
+U1,201906,3.2.9,固体的宏观性质,Bulk Properties Of Solids,5,80,6.25
+U1,201906,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U1,201906,3.3.1,原子的组成,Constituents Of The Atom,5,80,6.25
+U1,201906,3.3.2,基本粒子,Elementary Particles,6,80,7.50
+U1,201906,3.3.3,放射性,Radioactivity,13,80,16.25
+U1,202001,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U1,202001,3.1.2,物理测量的局限,Limitation Of Physical Measurements,8,80,10.00
+U1,202001,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,202001,3.2.1,标量和矢量,Scalars And Vectors,5,80,6.25
+U1,202001,3.2.2,力矩,Moments,1,80,1.25
+U1,202001,3.2.3,沿直线的运动,Motion Along A Straight Line,5,80,6.25
+U1,202001,3.2.4,抛体运动,Projectile Motion,14,80,17.50
+U1,202001,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,6,80,7.50
+U1,202001,3.2.6,动量,Momentum,5,80,6.25
+U1,202001,3.2.7,功、能量和功率,"Work, Energy And Power",9,80,11.25
+U1,202001,3.2.8,能量守恒,Conservation Of Energy,2,80,2.50
+U1,202001,3.2.9,固体的宏观性质,Bulk Properties Of Solids,5,80,6.25
+U1,202001,3.2.10,杨氏模量,The Young Modulus,1,80,1.25
+U1,202001,3.3.1,原子的组成,Constituents Of The Atom,6,80,7.50
+U1,202001,3.3.2,基本粒子,Elementary Particles,4,80,5.00
+U1,202001,3.3.3,放射性,Radioactivity,9,80,11.25
+U1,202101,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U1,202101,3.1.2,物理测量的局限,Limitation Of Physical Measurements,13,80,16.25
+U1,202101,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,202101,3.2.1,标量和矢量,Scalars And Vectors,2,80,2.50
+U1,202101,3.2.2,力矩,Moments,9,80,11.25
+U1,202101,3.2.3,沿直线的运动,Motion Along A Straight Line,7,80,8.75
+U1,202101,3.2.4,抛体运动,Projectile Motion,6,80,7.50
+U1,202101,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,3,80,3.75
+U1,202101,3.2.6,动量,Momentum,5,80,6.25
+U1,202101,3.2.7,功、能量和功率,"Work, Energy And Power",1,80,1.25
+U1,202101,3.2.8,能量守恒,Conservation Of Energy,4,80,5.00
+U1,202101,3.2.9,固体的宏观性质,Bulk Properties Of Solids,10,80,12.50
+U1,202101,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U1,202101,3.3.1,原子的组成,Constituents Of The Atom,2,80,2.50
+U1,202101,3.3.2,基本粒子,Elementary Particles,4,80,5.00
+U1,202101,3.3.3,放射性,Radioactivity,13,80,16.25
+U1,202201,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U1,202201,3.1.2,物理测量的局限,Limitation Of Physical Measurements,6,80,7.50
+U1,202201,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,202201,3.2.1,标量和矢量,Scalars And Vectors,10,80,12.50
+U1,202201,3.2.2,力矩,Moments,7,80,8.75
+U1,202201,3.2.3,沿直线的运动,Motion Along A Straight Line,4,80,5.00
+U1,202201,3.2.4,抛体运动,Projectile Motion,2,80,2.50
+U1,202201,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,5,80,6.25
+U1,202201,3.2.6,动量,Momentum,4,80,5.00
+U1,202201,3.2.7,功、能量和功率,"Work, Energy And Power",3,80,3.75
+U1,202201,3.2.8,能量守恒,Conservation Of Energy,9,80,11.25
+U1,202201,3.2.9,固体的宏观性质,Bulk Properties Of Solids,11,80,13.75
+U1,202201,3.2.10,杨氏模量,The Young Modulus,1,80,1.25
+U1,202201,3.3.1,原子的组成,Constituents Of The Atom,4,80,5.00
+U1,202201,3.3.2,基本粒子,Elementary Particles,5,80,6.25
+U1,202201,3.3.3,放射性,Radioactivity,9,80,11.25
+U1,202206,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U1,202206,3.1.2,物理测量的局限,Limitation Of Physical Measurements,2,80,2.50
+U1,202206,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,202206,3.2.1,标量和矢量,Scalars And Vectors,4,80,5.00
+U1,202206,3.2.2,力矩,Moments,5,80,6.25
+U1,202206,3.2.3,沿直线的运动,Motion Along A Straight Line,4,80,5.00
+U1,202206,3.2.4,抛体运动,Projectile Motion,6,80,7.50
+U1,202206,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U1,202206,3.2.6,动量,Momentum,5,80,6.25
+U1,202206,3.2.7,功、能量和功率,"Work, Energy And Power",6,80,7.50
+U1,202206,3.2.8,能量守恒,Conservation Of Energy,5,80,6.25
+U1,202206,3.2.9,固体的宏观性质,Bulk Properties Of Solids,10,80,12.50
+U1,202206,3.2.10,杨氏模量,The Young Modulus,2,80,2.50
+U1,202206,3.3.1,原子的组成,Constituents Of The Atom,10,80,12.50
+U1,202206,3.3.2,基本粒子,Elementary Particles,4,80,5.00
+U1,202206,3.3.3,放射性,Radioactivity,16,80,20.00
+U1,202301,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U1,202301,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U1,202301,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,202301,3.2.1,标量和矢量,Scalars And Vectors,9,80,11.25
+U1,202301,3.2.2,力矩,Moments,5,80,6.25
+U1,202301,3.2.3,沿直线的运动,Motion Along A Straight Line,4,80,5.00
+U1,202301,3.2.4,抛体运动,Projectile Motion,5,80,6.25
+U1,202301,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,8,80,10.00
+U1,202301,3.2.6,动量,Momentum,5,80,6.25
+U1,202301,3.2.7,功、能量和功率,"Work, Energy And Power",5,80,6.25
+U1,202301,3.2.8,能量守恒,Conservation Of Energy,5,80,6.25
+U1,202301,3.2.9,固体的宏观性质,Bulk Properties Of Solids,8,80,10.00
+U1,202301,3.2.10,杨氏模量,The Young Modulus,2,80,2.50
+U1,202301,3.3.1,原子的组成,Constituents Of The Atom,3,80,3.75
+U1,202301,3.3.2,基本粒子,Elementary Particles,4,80,5.00
+U1,202301,3.3.3,放射性,Radioactivity,11,80,13.75
+U1,202306,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,2,80,2.50
+U1,202306,3.1.2,物理测量的局限,Limitation Of Physical Measurements,10,80,12.50
+U1,202306,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,202306,3.2.1,标量和矢量,Scalars And Vectors,6,80,7.50
+U1,202306,3.2.2,力矩,Moments,3,80,3.75
+U1,202306,3.2.3,沿直线的运动,Motion Along A Straight Line,11,80,13.75
+U1,202306,3.2.4,抛体运动,Projectile Motion,6,80,7.50
+U1,202306,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,4,80,5.00
+U1,202306,3.2.6,动量,Momentum,7,80,8.75
+U1,202306,3.2.7,功、能量和功率,"Work, Energy And Power",3,80,3.75
+U1,202306,3.2.8,能量守恒,Conservation Of Energy,0,80,0.00
+U1,202306,3.2.9,固体的宏观性质,Bulk Properties Of Solids,10,80,12.50
+U1,202306,3.2.10,杨氏模量,The Young Modulus,3,80,3.75
+U1,202306,3.3.1,原子的组成,Constituents Of The Atom,3,80,3.75
+U1,202306,3.3.2,基本粒子,Elementary Particles,2,80,2.50
+U1,202306,3.3.3,放射性,Radioactivity,10,80,12.50
+U1,202401,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U1,202401,3.1.2,物理测量的局限,Limitation Of Physical Measurements,7,80,8.75
+U1,202401,3.1.3,物理量的估算,Estimation Of Physical Quantities,3,80,3.75
+U1,202401,3.2.1,标量和矢量,Scalars And Vectors,2,80,2.50
+U1,202401,3.2.2,力矩,Moments,8,80,10.00
+U1,202401,3.2.3,沿直线的运动,Motion Along A Straight Line,13,80,16.25
+U1,202401,3.2.4,抛体运动,Projectile Motion,7,80,8.75
+U1,202401,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,2,80,2.50
+U1,202401,3.2.6,动量,Momentum,2,80,2.50
+U1,202401,3.2.7,功、能量和功率,"Work, Energy And Power",2,80,2.50
+U1,202401,3.2.8,能量守恒,Conservation Of Energy,1,80,1.25
+U1,202401,3.2.9,固体的宏观性质,Bulk Properties Of Solids,7,80,8.75
+U1,202401,3.2.10,杨氏模量,The Young Modulus,3,80,3.75
+U1,202401,3.3.1,原子的组成,Constituents Of The Atom,5,80,6.25
+U1,202401,3.3.2,基本粒子,Elementary Particles,1,80,1.25
+U1,202401,3.3.3,放射性,Radioactivity,16,80,20.00
+U1,202406,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U1,202406,3.1.2,物理测量的局限,Limitation Of Physical Measurements,6,80,7.50
+U1,202406,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,202406,3.2.1,标量和矢量,Scalars And Vectors,2,80,2.50
+U1,202406,3.2.2,力矩,Moments,9,80,11.25
+U1,202406,3.2.3,沿直线的运动,Motion Along A Straight Line,5,80,6.25
+U1,202406,3.2.4,抛体运动,Projectile Motion,16,80,20.00
+U1,202406,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,9,80,11.25
+U1,202406,3.2.6,动量,Momentum,3,80,3.75
+U1,202406,3.2.7,功、能量和功率,"Work, Energy And Power",1,80,1.25
+U1,202406,3.2.8,能量守恒,Conservation Of Energy,1,80,1.25
+U1,202406,3.2.9,固体的宏观性质,Bulk Properties Of Solids,10,80,12.50
+U1,202406,3.2.10,杨氏模量,The Young Modulus,1,80,1.25
+U1,202406,3.3.1,原子的组成,Constituents Of The Atom,2,80,2.50
+U1,202406,3.3.2,基本粒子,Elementary Particles,3,80,3.75
+U1,202406,3.3.3,放射性,Radioactivity,11,80,13.75
+U1,202501,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U1,202501,3.1.2,物理测量的局限,Limitation Of Physical Measurements,3,80,3.75
+U1,202501,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,202501,3.2.1,标量和矢量,Scalars And Vectors,8,80,10.00
+U1,202501,3.2.2,力矩,Moments,5,80,6.25
+U1,202501,3.2.3,沿直线的运动,Motion Along A Straight Line,2,80,2.50
+U1,202501,3.2.4,抛体运动,Projectile Motion,8,80,10.00
+U1,202501,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,6,80,7.50
+U1,202501,3.2.6,动量,Momentum,4,80,5.00
+U1,202501,3.2.7,功、能量和功率,"Work, Energy And Power",9,80,11.25
+U1,202501,3.2.8,能量守恒,Conservation Of Energy,3,80,3.75
+U1,202501,3.2.9,固体的宏观性质,Bulk Properties Of Solids,4,80,5.00
+U1,202501,3.2.10,杨氏模量,The Young Modulus,5,80,6.25
+U1,202501,3.3.1,原子的组成,Constituents Of The Atom,6,80,7.50
+U1,202501,3.3.2,基本粒子,Elementary Particles,1,80,1.25
+U1,202501,3.3.3,放射性,Radioactivity,16,80,20.00
+U1,202506,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U1,202506,3.1.2,物理测量的局限,Limitation Of Physical Measurements,7,80,8.75
+U1,202506,3.1.3,物理量的估算,Estimation Of Physical Quantities,0,80,0.00
+U1,202506,3.2.1,标量和矢量,Scalars And Vectors,4,80,5.00
+U1,202506,3.2.2,力矩,Moments,3,80,3.75
+U1,202506,3.2.3,沿直线的运动,Motion Along A Straight Line,8,80,10.00
+U1,202506,3.2.4,抛体运动,Projectile Motion,7,80,8.75
+U1,202506,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,8,80,10.00
+U1,202506,3.2.6,动量,Momentum,6,80,7.50
+U1,202506,3.2.7,功、能量和功率,"Work, Energy And Power",2,80,2.50
+U1,202506,3.2.8,能量守恒,Conservation Of Energy,4,80,5.00
+U1,202506,3.2.9,固体的宏观性质,Bulk Properties Of Solids,10,80,12.50
+U1,202506,3.2.10,杨氏模量,The Young Modulus,3,80,3.75
+U1,202506,3.3.1,原子的组成,Constituents Of The Atom,3,80,3.75
+U1,202506,3.3.2,基本粒子,Elementary Particles,3,80,3.75
+U1,202506,3.3.3,放射性,Radioactivity,11,80,13.75
+U1,202601,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,2,80,2.50
+U1,202601,3.1.2,物理测量的局限,Limitation Of Physical Measurements,7,80,8.75
+U1,202601,3.1.3,物理量的估算,Estimation Of Physical Quantities,1,80,1.25
+U1,202601,3.2.1,标量和矢量,Scalars And Vectors,2,80,2.50
+U1,202601,3.2.2,力矩,Moments,4,80,5.00
+U1,202601,3.2.3,沿直线的运动,Motion Along A Straight Line,3,80,3.75
+U1,202601,3.2.4,抛体运动,Projectile Motion,10,80,12.50
+U1,202601,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,3,80,3.75
+U1,202601,3.2.6,动量,Momentum,9,80,11.25
+U1,202601,3.2.7,功、能量和功率,"Work, Energy And Power",5,80,6.25
+U1,202601,3.2.8,能量守恒,Conservation Of Energy,0,80,0.00
+U1,202601,3.2.9,固体的宏观性质,Bulk Properties Of Solids,8,80,10.00
+U1,202601,3.2.10,杨氏模量,The Young Modulus,3,80,3.75
+U1,202601,3.3.1,原子的组成,Constituents Of The Atom,7,80,8.75
+U1,202601,3.3.2,基本粒子,Elementary Particles,3,80,3.75
+U1,202601,3.3.3,放射性,Radioactivity,13,80,16.25
+U1,202606,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U1,202606,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U1,202606,3.1.3,物理量的估算,Estimation Of Physical Quantities,1,80,1.25
+U1,202606,3.2.1,标量和矢量,Scalars And Vectors,1,80,1.25
+U1,202606,3.2.2,力矩,Moments,6,80,7.50
+U1,202606,3.2.3,沿直线的运动,Motion Along A Straight Line,5,80,6.25
+U1,202606,3.2.4,抛体运动,Projectile Motion,5,80,6.25
+U1,202606,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,9,80,11.25
+U1,202606,3.2.6,动量,Momentum,8,80,10.00
+U1,202606,3.2.7,功、能量和功率,"Work, Energy And Power",1,80,1.25
+U1,202606,3.2.8,能量守恒,Conservation Of Energy,6,80,7.50
+U1,202606,3.2.9,固体的宏观性质,Bulk Properties Of Solids,7,80,8.75
+U1,202606,3.2.10,杨氏模量,The Young Modulus,4,80,5.00
+U1,202606,3.3.1,原子的组成,Constituents Of The Atom,3,80,3.75
+U1,202606,3.3.2,基本粒子,Elementary Particles,4,80,5.00
+U1,202606,3.3.3,放射性,Radioactivity,14,80,17.50

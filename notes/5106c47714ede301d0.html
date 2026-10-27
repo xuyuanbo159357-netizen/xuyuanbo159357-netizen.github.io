@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>材料行为与应力应变曲线 / Material behaviour and stress-strain curves · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/02 知识节点/3.2 力学与材料</div><h1 id="h-9328647b233d147b10">材料行为与应力应变曲线 / Material behaviour and stress-strain curves</h1>
+<details class="callout physics-relations"><summary>关系摘要</summary><div class="callout-body"><p><strong>材料行为与应力应变曲线 / Material behaviour and stress-strain curves</strong></p>
+<p>刚度、强度、弹性、塑性与脆性不能混为一谈。Stiffness, strength and deformation describe different properties.</p>
+<p>考纲 / Specification：<a class="internal-link" href="/notes/410e45032b43fd2965.html">3.2.9 固体的宏观性质 - Bulk properties of solids</a></p>
+</div></details>
+<!-- U1_LINEAGE_START -->
+<details class="callout physics-lineage"><summary>知识谱系位置 / Place in the knowledge lineage</summary><div class="callout-body"><p><a class="internal-link" href="/notes/fe4f62fb8bc5de4a67.html">00 物理U1知识谱系 - Physics U1 knowledge lineage</a> → <a class="internal-link" href="/notes/16a0d0b8df1a4bed67.html">3.2 力学与材料 - Mechanics and materials</a> → <a class="internal-link" href="/notes/410e45032b43fd2965.html">3.2.9 固体的宏观性质 - Bulk properties of solids</a> → <strong>D26 材料行为与应力应变曲线</strong></p>
+<p><strong>可以继续连接到 / Outgoing relationships</strong></p>
+<ul>
+<li>本笔记 → <a class="internal-link" href="/notes/c525a19e194700ce72.html">D27 弹性应变能与形变功 - Elastic strain energy and deformation work</a>: 卸载恢复 / recovery。</li>
+<li>本笔记 → <a class="internal-link" href="/notes/36bed4fe756eb58c01.html">D28 杨氏模量与材料刚度 - Young modulus and material stiffness</a>: 线性区 / linear range。</li>
+</ul>
+<p><strong>应用与返回 / Apply and return</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/1d4d45f7a7f00dbdda.html">3.2.10 课堂检测复述 - Retrieval and practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+<li><a class="internal-link" href="/notes/c234ff0678cf391ea9.html">3.2.9 课堂检测复述 - Retrieval and practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+<li><a class="internal-link" href="/notes/14b3543423d448309f.html">D25 拉应力与拉应变复述与练习 - Tensile stress and strain - Retrieval practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+<li><a class="internal-link" href="/notes/fb18d42bb8c8fd2efc.html">D26 材料行为与应力应变曲线复述与练习 - Material behaviour and stress-strain curves - Retrieval practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+</ul>
+<p>箭头的含义以上方关系标签为准，相关知识不一概视为严格先修。The labels distinguish definitions, derivations, evidence, measurement and applications.</p>
+</div></details>
+<!-- U1_LINEAGE_END -->
+<!-- U1_DEFINITIONS_START -->
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>拉应力 / tensile stress</strong></td>
+<td><span class="math inline">\(\sigma\)</span></td>
+<td><span class="math inline">\(\mathrm{Pa}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>拉应变 / tensile strain</strong></td>
+<td><span class="math inline">\(\epsilon\)</span></td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+<td>无量纲；不是伸长量 / Dimensionless; not extension.</td>
+</tr>
+<tr>
+<td><strong>断裂应力 / breaking stress</strong></td>
+<td><span class="math inline">\(\sigma_{\mathrm{breaking}}\)</span></td>
+<td><span class="math inline">\(\mathrm{Pa}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>极限拉伸强度 / ultimate tensile strength</strong></td>
+<td><span class="math inline">\(\sigma_{\mathrm{UTS}}\)</span></td>
+<td><span class="math inline">\(\mathrm{Pa}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>力 / force</strong></td>
+<td><span class="math inline">\(F\)</span></td>
+<td><span class="math inline">\(\mathrm{N}\)</span></td>
+<td>矢量；合力常记 ΣF 或 F_resultant / Vector; resultant force is often ΣF or F_resultant.</td>
+</tr>
+<tr>
+<td><strong>面积、横截面积 / area, cross-sectional area</strong></td>
+<td><span class="math inline">\(A,\ A_0\)</span></td>
+<td><span class="math inline">\(\mathrm{m^2}\)</span></td>
+<td>A₀ 表初始横截面积；与活度 A 区分 / A₀ is initial area; not activity A.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<p><strong>Plastic deformation / 塑性形变</strong>；<strong>Brittle behaviour / 脆性行为</strong>；<strong>Fracture / 断裂</strong>；<strong>Breaking stress / 断裂应力</strong>；<strong>Ultimate tensile stress / 极限拉应力</strong></p>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<h3 id="h-9a4fbd7bbeb432ecb4">Plastic deformation / 塑性形变</h3>
+<p><strong>EN:</strong> Plastic deformation is permanent deformation that remains after the deforming force is removed.</p>
+<p><strong>中:</strong> 塑性形变是在使物体形变的力移除后仍保留的永久形变。</p>
+<p><strong>表达要点 / Wording:</strong> permanent; force removed</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/044352f51f32286519.pdf#page=4">PH01 202506 Q01.1 · MS p4（定义/陈述评分点）</a>；<a class="internal-link" href="/media/f6300cb04858f0ff68.pdf#page=11">PH01 201801 Q08.4 · MS p11（定义/陈述评分点）</a></p>
+<h3 id="h-cc9fe7b0a84d44ccfd">Brittle behaviour / 脆性行为</h3>
+<p><strong>EN:</strong> A brittle material undergoes little or no plastic deformation before it fractures.</p>
+<p><strong>中:</strong> 脆性材料在断裂前发生很少或不发生塑性形变。</p>
+<p><strong>表达要点 / Wording:</strong> little or no plastic deformation; before failure</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/044352f51f32286519.pdf#page=4">PH01 202506 Q01.2 · MS p4（定义/陈述评分点）</a></p>
+<h3 id="h-f2260de7f66013e52e">Fracture / 断裂</h3>
+<p><strong>EN:</strong> Fracture is the breaking of a material into separate parts.</p>
+<p><strong>中:</strong> 断裂是材料破裂成分离部分的过程。</p>
+<h3 id="h-8bdf6aa29da825899a">Breaking stress / 断裂应力</h3>
+<p><strong>EN:</strong> Breaking stress is the tensile force per unit cross-sectional area when the specimen breaks.</p>
+<p><strong>中:</strong> 断裂应力是试样断裂时拉力与截面积之比。</p>
+<p><strong>表达要点 / Wording:</strong> force per unit area; when it breaks</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/f6300cb04858f0ff68.pdf#page=11">PH01 201801 Q08.4 · MS p11（定义/陈述评分点）</a></p>
+<h3 id="h-85f5a7cec654eadbf5">Ultimate tensile stress / 极限拉应力</h3>
+<p><strong>EN:</strong> Ultimate tensile stress is the maximum engineering tensile stress reached before fracture.</p>
+<p><strong>中:</strong> 极限拉应力是断裂前达到的最大工程拉应力。</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/23f411aa1910bae30b.pdf#page=12">PH01 201706 Q19 · MS p12（相关计算或应用）</a></p>
+<h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
+<div class="math block">
+\[\begin{gathered}
+\sigma_{\rm breaking}=\frac{F_{\rm breaking}}{A_0} \\
+\sigma_{\rm UTS}=\frac{F_{\max}}{A_0}
+\end{gathered}\]
+</div>
+<h2 id="h-614697bd55e5a5935c">Explanation / 讲解</h2>
+<h3 id="h-016dc08d692ffcb374">材料性质对照 / Material properties</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>判断依据 / Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>弹性</td>
+<td>elastic</td>
+<td>卸载可恢复 / returns to the original shape</td>
+</tr>
+<tr>
+<td>塑性</td>
+<td>plastic</td>
+<td>卸载后有永久形变 / The material is permanently deformed / does not return to its original length</td>
+</tr>
+<tr>
+<td>脆性</td>
+<td>brittle</td>
+<td>破裂前塑性形变很小 / material undergoes little or no plastic deformation before failure</td>
+</tr>
+<tr>
+<td>刚度</td>
+<td>stiffness</td>
+<td>物体用k（N m⁻¹）比较，材料用E（Pa）比较 / object stiffness k and material modulus E have different units</td>
+</tr>
+<tr>
+<td>抗拉强度</td>
+<td>tensile strength</td>
+<td>能承受的最大拉应力 / maximum tensile stress</td>
+</tr>
+</tbody>
+</table>
+<h3 id="h-899c1424b3b391c082">曲线关键位置 / Curve features</h3>
+<p>比例极限：直线段终止。弹性极限：永久形变开始。屈服：应变显著增加而应力变化较小的区域（形状取决于材料）。极限拉应力UTS：工程应力达到最大。断裂：试样最终断开。
+Identify proportionality, elasticity, yielding, maximum stress and fracture on the given graph rather than assuming every material has identical points.</p>
+<p>延性金属可出现较大塑性形变后断裂；脆性材料可能在仍较小应变时突然断裂。强度高不保证不脆。A strong material may still be brittle.</p>
+<p>断裂应力是断裂时的应力；对发生颈缩的延性材料，最大应力与断裂时工程应力可不同。Do not automatically identify UTS with the final fracture stress.</p>
+<h3 id="h-ec18d15d5f7e26b94b">加载与卸载 / Loading and unloading</h3>
+<p>在弹性范围内可恢复原长；超出弹性极限后卸载留下永久伸长。加载和卸载曲线之间面积可表示未恢复的能量转移。Read the residual extension and energy difference from the graph.</p>
+<h3 id="h-554371516ca7656351">物理图像与图示 / Physics graphs and diagrams</h3>
+<a class="image-link" href="/media/9486ede0c1a7ec8998.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/9486ede0c1a7ec8998.png"/></a>
+<p><strong>读图 / Reading:</strong> 按本PPT标记：A比例极限，B弹性极限，C屈服，D最大工程应力，E断裂；字母仅适用于本图。 / These source labels denote proportionality limit, elastic limit, yield, maximum engineering stress and fracture; letters are graph-specific.</p>
+<a class="image-link" href="/media/a4dd71fc5b676855cb.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/a4dd71fc5b676855cb.png"/></a>
+<p><strong>读图 / Reading:</strong> 比较初始梯度、最大应力与断裂前的塑性形变，分别判断刚度、强度和脆性。 / Use initial gradient, maximum stress and plastic deformation to distinguish stiffness, strength and brittleness.</p>
+<!-- U1_DEFINITIONS_END -->
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-ad7909c752c734ca23">D26 方法 1 · 弹性、塑性、脆性与曲线证据 / Material behaviour and evidence</h3>
+<ol>
+<li>弹性指卸载后恢复，塑性指存在不可恢复形变；脆性指破坏前几乎无塑性形变，不是几乎无弹性形变，也不保证刚度高或强度低。 / Separate elasticity, brittleness and strength.</li>
+<li>单独加载曲线不能证明能否恢复，需卸载证据；非直线也可为弹性，不能把“非胡克”自动判成塑性。 / Linearity is not the definition of elastic behaviour.</li>
+<li>比较图分别看线性区应力/应变比（Young modulus）、最大应力（strength）、塑性范围（ductility/brittleness）、面积（work per volume）。坐标互换时斜率判断反转。 / State which feature supports each property.</li>
+<li>选材料写“曲线显示的性质 → 该用途为何需要它”，例如较小工作伸长、较高允许应力或避免永久形变。 / Make a purpose-specific argument.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/f0c79914ecbec12790.html">PH01 · 202101 · Q08</a>；<a class="internal-link" href="/notes/16eb61c0b820a2d1ae.html">PH01 · 202206 · Q16</a>；<a class="internal-link" href="/notes/25274743504233b3b7.html">PH01 · 202306 · Q17</a>；<a class="internal-link" href="/notes/d95ebd0e918abeeaf4.html">PH01 · 202201 · Q20</a>；<a class="internal-link" href="/notes/b54536006dce4ecffc.html">PH01 · 201806 · Q04</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (18)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/ffe5dba32e212e4ad5.html">PH01 · 201706 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/be681e12898380fc52.html">PH01 · 2018 specimen paper · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c1dfe7e53b9d0e9be7.html">PH01 · 2018 specimen paper · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5929a3086ec36e38a6.html">PH01 · 201801 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b54536006dce4ecffc.html">PH01 · 201806 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/747c8e22278e909ea6.html">PH01 · 201901 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4ab7a2ee71ce460b11.html">PH01 · 202001 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f0c79914ecbec12790.html">PH01 · 202101 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ef85629f2a87554a97.html">PH01 · 202201 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d95ebd0e918abeeaf4.html">PH01 · 202201 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/16eb61c0b820a2d1ae.html">PH01 · 202206 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/25274743504233b3b7.html">PH01 · 202306 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/bde06e77b7a1b1183f.html">PH01 · 202401 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/73f88a8d771fd4430c.html">PH01 · 202406 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6027f6d371ed53e62c.html">PH01 · 202506 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/be503f6d06394f9601.html">PH01 · 202601 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9e53eb29e454f0bb7f.html">PH01 · 202601 · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5bf018da24ce7c0e55.html">PH01 · 202606 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/30b5c7a31ed5ee4f9d.html">U1逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-91121d1ecaf6930b80">知识联系 / Relationships</h2>
+<table>
+<thead>
+<tr>
+<th>方向 / Direction</th>
+<th>相连知识 / Linked knowledge</th>
+<th>关系 / Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本知识 → / outgoing</td>
+<td><a class="internal-link" href="/notes/c525a19e194700ce72.html">D27 弹性应变能与形变功 - Elastic strain energy and deformation work</a></td>
+<td>卸载恢复 / recovery</td>
+</tr>
+<tr>
+<td>本知识 → / outgoing</td>
+<td><a class="internal-link" href="/notes/36bed4fe756eb58c01.html">D28 杨氏模量与材料刚度 - Young modulus and material stiffness</a></td>
+<td>线性区 / linear range</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-d289ca8067ef00f08b">复述检查 / Retrieval check</h2>
+<ul>
+<li>[ ] 比较“硬/刚”“强”“脆”“塑”的物理含义。 / Distinguish material descriptions.</li>
+<li>[ ] 从卸载曲线判断永久形变和能量损失。 / Interpret loading and unloading.</li>
+</ul>
+<h2 id="h-7a185af5ecf46cb0ac">对应原课件练习 / Source-slide practice</h2>
+<ul>
+<li><a class="internal-link" href="/notes/14b3543423d448309f.html">D25 拉应力与拉应变复述与练习 - Tensile stress and strain - Retrieval practice</a></li>
+<li><a class="internal-link" href="/notes/fb18d42bb8c8fd2efc.html">D26 材料行为与应力应变曲线复述与练习 - Material behaviour and stress-strain curves - Retrieval practice</a></li>
+<li><a class="internal-link" href="/notes/c234ff0678cf391ea9.html">3.2.9 课堂检测复述 - Retrieval and practice</a></li>
+</ul>
+<h2 id="h-00e36c430b204d4a07">依据 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/notes/0b5dec2e245a870dec.html">资料来源与范围 - Sources and scope</a>：本地9630 U1考纲对应3.2.9，与官方4.4版核对。</li>
+<li>Jim Breithaupt, Oxford International AQA Physics，教材印刷页 109, 110, 111, 112。内容按U1范围重新概括，未复制整段教材。</li>
+</ul>
+<!-- U1_MODELS_START -->
+<h2 id="h-ece831a4c8c76b508e">常用物理模型 / Common physics models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/13997d967967c432d3.html">PM17 材料弹性塑性与曲线模型</a>：elastic / returns to；plastic / permanent。</li>
+</ul>
+<!-- U1_MODELS_END -->
+<!-- U1_PAST_PAPERS_START -->
+<h2 id="h-d7e53f0d63ea2388d1">历年真题 / Past-paper practice</h2>
+<a class="internal-link" href="/notes/8e3481baebd5af9b8c.html">按本知识点查看题目图片（18题） / Practice bank</a>
+<table>
+<thead>
+<tr>
+<th>所属试卷 / Paper</th>
+<th>题目 / Question</th>
+<th>对应范围 / Parts</th>
+<th>答案 / MS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017年6月 / June 2017</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-2422b04c34d760765f">Q19</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018 样卷 / Specimen 2018</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-45f71aad03e1034732">Q07</a></td>
+<td>07.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018 样卷 / Specimen 2018</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-f7819aa754835497fc">Q22</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年1月 / January 2018</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-d01c9085d628026f29">Q08</a></td>
+<td>08.4、08.5</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年6月 / June 2018</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-75e079c8f22e88dd98">Q04</a></td>
+<td>04.2、04.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年1月 / January 2019</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-f5b6c089456890d5d9">Q19</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2020年1月 / January 2020</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-697613f4c3fcbea8a8">Q15</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-d461dcbf5f694c610e">Q08</a></td>
+<td>08.1</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年1月 / January 2022</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-e88315b4e640a670d7">Q07</a></td>
+<td>07.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年1月 / January 2022</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-d002e90bcc8a3771d9">Q20</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-436c357bb80af5b519">Q16</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年6月 / June 2023</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-c70b12f420d611ff20">Q17</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年1月 / January 2024</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-b014d2af521e7ef115">Q03</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年6月 / June 2024</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-a889e40f425b58b792">Q09</a></td>
+<td>09.4、09.6</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年6月 / June 2025</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-09383b39788d522e8d">Q01</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年1月 / January 2026</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-58df4e8a0eca636dcc">Q09</a></td>
+<td>09.3、09.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年1月 / January 2026</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-26dd09b03923a4a654">Q25</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年6月 / June 2026</td>
+<td><a class="internal-link" href="/notes/8e3481baebd5af9b8c.html#h-01b680fbf559c0db35">Q01</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+</tbody>
+</table>
+<!-- U1_PAST_PAPERS_END -->
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/a339e026e8f60cd9a7.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/3de18ce0cea6150f3f.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/fe4f62fb8bc5de4a67.html">物理 U1 知识谱系 / Physics U1 knowledge lineage</a></li><li><a href="/notes/16a0d0b8df1a4bed67.html">3.2 力学和材料 / MECHANICS AND MATERIALS</a></li><li><a href="/notes/410e45032b43fd2965.html">3.2.9 固体的宏观性质 / BULK PROPERTIES OF SOLIDS</a></li><li><a href="/notes/c525a19e194700ce72.html">弹性应变能与形变功 / Elastic strain energy and deformation work</a></li><li><a href="/notes/36bed4fe756eb58c01.html">杨氏模量与材料刚度 / Young modulus and material stiffness</a></li><li><a href="/notes/c234ff0678cf391ea9.html">3.2.9 课堂检测复述 / Retrieval and practice</a></li><li><a href="/notes/1d4d45f7a7f00dbdda.html">3.2.10 课堂检测复述 / Retrieval and practice</a></li><li><a href="/notes/14b3543423d448309f.html">D25 拉应力与拉应变复述与练习 / Retrieval and practice</a></li><li><a href="/notes/fb18d42bb8c8fd2efc.html">D26 材料行为与应力应变曲线复述与练习 / Retrieval and practice</a></li><li><a href="/notes/f632b124127e9adda3.html">U1 概念与定义索引 / Concepts and definitions</a></li><li><a href="/notes/a250111986d580319a.html">U1复述进度 / Retrieval progress</a></li><li><a href="/notes/bc44c2f3b633ca38cb.html">关系索引 / Relationship index</a></li><li><a href="/notes/0a583cb08270db6716.html">课件例题提取索引 / Source slide index</a></li><li><a href="/notes/30b5c7a31ed5ee4f9d.html">U1 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/5d71469646857a1b0a.html">真题练习 / PH01 past-paper practice</a></li><li><a href="/notes/b10127f2a327b0ed43.html">M03 同一物理量的单位换算 真题练习 / Past-paper practice</a></li><li><a href="/notes/857d3e90190ee4b919.html">M04 误差与测量质量 真题练习 / Past-paper practice</a></li><li><a href="/notes/143938268bf1dc3bfd.html">D02 矢量相加与分量 真题练习 / Past-paper practice</a></li><li><a href="/notes/bdbbc34c469a5da2e8.html">D03 共点力平衡 真题练习 / Past-paper practice</a></li><li><a href="/notes/3c513d7140023b576a.html">D04 力矩与力矩原理 真题练习 / Past-paper practice</a></li><li><a href="/notes/133c95102dab21bf8f.html">D16 受力图与运动方程 真题练习 / Past-paper practice</a></li><li><a href="/notes/1f6a93cfd15eebfb12.html">D22 能量守恒与能量收支 真题练习 / Past-paper practice</a></li><li><a href="/notes/0ffb053cc2999e924d.html">D23 密度与几何体积 真题练习 / Past-paper practice</a></li><li><a href="/notes/6539cad3d41757ae0c.html">D24 胡克定律与弹性极限 真题练习 / Past-paper practice</a></li><li><a href="/notes/ef6e02ef19d528266a.html">D25 拉应力与拉应变 真题练习 / Past-paper practice</a></li><li><a href="/notes/8e3481baebd5af9b8c.html">D26 材料行为与应力应变曲线 真题练习 / Past-paper practice</a></li><li><a href="/notes/60e237010ed2414b08.html">D27 弹性应变能与形变功 真题练习 / Past-paper practice</a></li><li><a href="/notes/5566eaadf8d9007c88.html">D28 杨氏模量与材料刚度 真题练习 / Past-paper practice</a></li><li><a href="/notes/6ed9308cf0e0a44e7f.html">PH01 · 2018 样卷 / Specimen 2018 · Q07 · 答案 / Mark scheme</a></li><li><a href="/notes/be681e12898380fc52.html">PH01 · 2018 样卷 / Specimen 2018 · Q07 · 题目 / Question</a></li><li><a href="/notes/90ae7398e9d926f515.html">PH01 · 2018 样卷 / Specimen 2018 · Q22 · 答案 / Mark scheme</a></li><li><a href="/notes/c1dfe7e53b9d0e9be7.html">PH01 · 2018 样卷 / Specimen 2018 · Q22 · 题目 / Question</a></li><li><a href="/notes/5a91b0408154b6bada.html">PH01 · 2017年6月 / June 2017 · Q19 · 答案 / Mark scheme</a></li><li><a href="/notes/ffe5dba32e212e4ad5.html">PH01 · 2017年6月 / June 2017 · Q19 · 题目 / Question</a></li><li><a href="/notes/a5e59d0e729c105271.html">PH01 · 2018年1月 / January 2018 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/5929a3086ec36e38a6.html">PH01 · 2018年1月 / January 2018 · Q08 · 题目 / Question</a></li><li><a href="/notes/58558f9cddd68ee09e.html">PH01 · 2018年6月 / June 2018 · Q04 · 答案 / Mark scheme</a></li><li><a href="/notes/b54536006dce4ecffc.html">PH01 · 2018年6月 / June 2018 · Q04 · 题目 / Question</a></li><li><a href="/notes/7b0917f0a05f891008.html">PH01 · 2019年1月 / January 2019 · Q19 · 答案 / Mark scheme</a></li><li><a href="/notes/747c8e22278e909ea6.html">PH01 · 2019年1月 / January 2019 · Q19 · 题目 / Question</a></li><li><a href="/notes/d23c6be6c21c4cc99b.html">PH01 · 2020年1月 / January 2020 · Q15 · 答案 / Mark scheme</a></li><li><a href="/notes/4ab7a2ee71ce460b11.html">PH01 · 2020年1月 / January 2020 · Q15 · 题目 / Question</a></li><li><a href="/notes/4a12433274dd4cef5c.html">PH01 · 2021年1月 / January 2021 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/f0c79914ecbec12790.html">PH01 · 2021年1月 / January 2021 · Q08 · 题目 / Question</a></li><li><a href="/notes/54f9a2b0ac8003cfb1.html">PH01 · 2022年1月 / January 2022 · Q07 · 答案 / Mark scheme</a></li><li><a href="/notes/ef85629f2a87554a97.html">PH01 · 2022年1月 / January 2022 · Q07 · 题目 / Question</a></li><li><a href="/notes/5708aa3822fe7fd311.html">PH01 · 2022年1月 / January 2022 · Q20 · 答案 / Mark scheme</a></li><li><a href="/notes/d95ebd0e918abeeaf4.html">PH01 · 2022年1月 / January 2022 · Q20 · 题目 / Question</a></li><li><a href="/notes/3c879fec8ae913607b.html">PH01 · 2022年6月 / June 2022 · Q16 · 答案 / Mark scheme</a></li><li><a href="/notes/16eb61c0b820a2d1ae.html">PH01 · 2022年6月 / June 2022 · Q16 · 题目 / Question</a></li><li><a href="/notes/11dbaf5e5f51882ac0.html">PH01 · 2023年6月 / June 2023 · Q17 · 答案 / Mark scheme</a></li><li><a href="/notes/25274743504233b3b7.html">PH01 · 2023年6月 / June 2023 · Q17 · 题目 / Question</a></li><li><a href="/notes/173104b340dd4088e1.html">PH01 · 2024年1月 / January 2024 · Q03 · 答案 / Mark scheme</a></li><li><a href="/notes/bde06e77b7a1b1183f.html">PH01 · 2024年1月 / January 2024 · Q03 · 题目 / Question</a></li><li><a href="/notes/90c0aea212d452187d.html">PH01 · 2024年6月 / June 2024 · Q09 · 答案 / Mark scheme</a></li><li><a href="/notes/73f88a8d771fd4430c.html">PH01 · 2024年6月 / June 2024 · Q09 · 题目 / Question</a></li><li><a href="/notes/de52062ef2e9779c4c.html">PH01 · 2025年6月 / June 2025 · Q01 · 答案 / Mark scheme</a></li><li><a href="/notes/6027f6d371ed53e62c.html">PH01 · 2025年6月 / June 2025 · Q01 · 题目 / Question</a></li><li><a href="/notes/5a8f0ae7bc13b856aa.html">PH01 · 2026年1月 / January 2026 · Q09 · 答案 / Mark scheme</a></li><li><a href="/notes/be503f6d06394f9601.html">PH01 · 2026年1月 / January 2026 · Q09 · 题目 / Question</a></li><li><a href="/notes/d45aa1ec57570a02f0.html">PH01 · 2026年1月 / January 2026 · Q25 · 答案 / Mark scheme</a></li><li><a href="/notes/9e53eb29e454f0bb7f.html">PH01 · 2026年1月 / January 2026 · Q25 · 题目 / Question</a></li><li><a href="/notes/174e7f24b9ac87b664.html">PH01 · 2026年6月 / June 2026 · Q01 · 答案 / Mark scheme</a></li><li><a href="/notes/5bf018da24ce7c0e55.html">PH01 · 2026年6月 / June 2026 · Q01 · 题目 / Question</a></li><li><a href="/notes/aac8a3c1958bf9c994.html">PH01 · 2026年6月 / June 2026 · Q01.1 · Elastic limit / 弹性极限</a></li><li><a href="/notes/c0b6a69578a2975b7b.html">PH01 · 2018年1月 / January 2018 · Q08.4 · Breaking stress and plastic deformation / 断裂应力与塑性形变</a></li><li><a href="/notes/a339e026e8f60cd9a7.html">材料行为与应力应变曲线 / Material behaviour and stress-strain curves · 概念考察练习 / Concept practice</a></li><li><a href="/notes/65a60c2ae8b0e36694.html">PH01 · 2020年1月 / January 2020 · Q15 · Brittle fracture / 脆性断裂</a></li><li><a href="/notes/d25b86a79a29ffd9e6.html">PH01 · 2025年6月 / June 2025 · Q01.1 · Plastic behaviour / 塑性行为</a></li><li><a href="/notes/0091e048a08ab4a1b2.html">PH01 · 2025年6月 / June 2025 · Q01.2 · Brittle behaviour / 脆性行为</a></li><li><a href="/notes/9c94b4f887606c64ba.html">U1 图像与示意图 / Graphs and diagrams</a></li><li><a href="/notes/c17029b0ad4a61800f.html">PH01 2018年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/df951c3f5f5745d790.html">PH01 2019年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/bc3402ec09b0bdcd41.html">PH01 2021年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/c4b6a8903d066161d1.html">PH01 2022年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/8ba7b2c9f334ae2797.html">PH01 2022年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/8a188cbee25dd7ea7e.html">PH01 2023年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/ce941af79cb7a6ca06.html">PH01 2024年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/63137c6313a4f36444.html">PH01 2025年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/d0f092171d20410a43.html">PH01 · 2022年1月 / January 2022 · Q07.4 · Safety-factor comparison / 安全系数比较</a></li><li><a href="/notes/3de18ce0cea6150f3f.html">材料行为与应力应变曲线 / Material behaviour and stress-strain curves · 论述题练习 / Written-response practice</a></li><li><a href="/notes/33d01915d9a7f7817b.html">PH01 · 2018年1月 / January 2018 · Q08.5 · Safety margin / 安全余量</a></li><li><a href="/notes/15ff9d68d0f8b61b7a.html">PH01 · 2021年1月 / January 2021 · Q08.1 · Evidence of elastic behaviour / 弹性行为的证据</a></li><li><a href="/notes/c72a3380347fd33110.html">PH01 · 2021年1月 / January 2021 · Q08.4 · Energy shared by a web / 蛛网分担能量</a></li><li><a href="/notes/a1f810758b98583fe8.html">PH01 · 2018年6月 / June 2018 · Q04.3 · Choosing a cable material / 选择缆线材料</a></li><li><a href="/notes/13997d967967c432d3.html">材料弹性塑性与曲线模型 / Elastic and plastic</a></li><li><a href="/notes/45e0c4f3c886d4a12a.html">材料与弹性词汇 / Materials and elasticity</a></li><li><a href="/notes/c0e35974e67d78fd9d.html">物理情境与器材词汇 / Physical situations and apparatus</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U1/02 知识节点/3.2 力学与材料/D26 材料行为与应力应变曲线 - Material behaviour and stress-strain curves.md","url":"/notes/5106c47714ede301d0.html","unit":"U1"}</script></body></html>

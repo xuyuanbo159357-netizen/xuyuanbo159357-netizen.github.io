@@ -1,0 +1,426 @@
+﻿unit,session,topic,topic_zh,topic_en,marks,paper_total,percent
+U2,201706,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,2,80,2.50
+U2,201706,3.1.2,物理测量的局限,Limitation Of Physical Measurements,7,80,8.75
+U2,201706,3.2.2,力矩,Moments,0,80,0.00
+U2,201706,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,201706,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,201706,3.2.10,杨氏模量,The Young Modulus,3,80,3.75
+U2,201706,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,201706,3.4.1,电学基础,Basics Of Electricity,3,80,3.75
+U2,201706,3.4.2,电流—电压特性,Current–Voltage Characteristics,4,80,5.00
+U2,201706,3.4.3,电阻率,Resistivity,5,80,6.25
+U2,201706,3.4.4,电路,Circuits,7,80,8.75
+U2,201706,3.4.5,分压器,Potential Divider,6,80,7.50
+U2,201706,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,1,80,1.25
+U2,201706,3.5.1,振动系统,Oscillating Systems,9,80,11.25
+U2,201706,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,4,80,5.00
+U2,201706,3.5.3,行波,Progressive Waves,0,80,0.00
+U2,201706,3.5.4,纵波和横波,Longitudinal And Transverse Waves,2,80,2.50
+U2,201706,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,2,80,2.50
+U2,201706,3.5.6,干涉,Interference,10,80,12.50
+U2,201706,3.5.7,衍射,Diffraction,0,80,0.00
+U2,201706,3.5.8,平面界面处的折射,Refraction At A Plane Surface,5,80,6.25
+U2,201706,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,3,80,3.75
+U2,201706,3.5.10,光电效应,Photoelectric Effect,2,80,2.50
+U2,201706,3.5.11,波粒二象性,Wave Particle Duality,5,80,6.25
+U2,201706,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,201801,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U2,201801,3.1.2,物理测量的局限,Limitation Of Physical Measurements,4,80,5.00
+U2,201801,3.2.2,力矩,Moments,7,80,8.75
+U2,201801,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,201801,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,201801,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,201801,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,201801,3.4.1,电学基础,Basics Of Electricity,3,80,3.75
+U2,201801,3.4.2,电流—电压特性,Current–Voltage Characteristics,1,80,1.25
+U2,201801,3.4.3,电阻率,Resistivity,8,80,10.00
+U2,201801,3.4.4,电路,Circuits,9,80,11.25
+U2,201801,3.4.5,分压器,Potential Divider,0,80,0.00
+U2,201801,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,10,80,12.50
+U2,201801,3.5.1,振动系统,Oscillating Systems,2,80,2.50
+U2,201801,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,1,80,1.25
+U2,201801,3.5.3,行波,Progressive Waves,1,80,1.25
+U2,201801,3.5.4,纵波和横波,Longitudinal And Transverse Waves,5,80,6.25
+U2,201801,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,6,80,7.50
+U2,201801,3.5.6,干涉,Interference,2,80,2.50
+U2,201801,3.5.7,衍射,Diffraction,1,80,1.25
+U2,201801,3.5.8,平面界面处的折射,Refraction At A Plane Surface,3,80,3.75
+U2,201801,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,10,80,12.50
+U2,201801,3.5.10,光电效应,Photoelectric Effect,5,80,6.25
+U2,201801,3.5.11,波粒二象性,Wave Particle Duality,1,80,1.25
+U2,201801,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,201806,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U2,201806,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U2,201806,3.2.2,力矩,Moments,0,80,0.00
+U2,201806,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,201806,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,201806,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,201806,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,201806,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,201806,3.4.2,电流—电压特性,Current–Voltage Characteristics,4,80,5.00
+U2,201806,3.4.3,电阻率,Resistivity,1,80,1.25
+U2,201806,3.4.4,电路,Circuits,12,80,15.00
+U2,201806,3.4.5,分压器,Potential Divider,1,80,1.25
+U2,201806,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,4,80,5.00
+U2,201806,3.5.1,振动系统,Oscillating Systems,5,80,6.25
+U2,201806,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,1,80,1.25
+U2,201806,3.5.3,行波,Progressive Waves,8,80,10.00
+U2,201806,3.5.4,纵波和横波,Longitudinal And Transverse Waves,2,80,2.50
+U2,201806,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,4,80,5.00
+U2,201806,3.5.6,干涉,Interference,0,80,0.00
+U2,201806,3.5.7,衍射,Diffraction,10,80,12.50
+U2,201806,3.5.8,平面界面处的折射,Refraction At A Plane Surface,6,80,7.50
+U2,201806,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,9,80,11.25
+U2,201806,3.5.10,光电效应,Photoelectric Effect,6,80,7.50
+U2,201806,3.5.11,波粒二象性,Wave Particle Duality,1,80,1.25
+U2,201806,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,201901,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U2,201901,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U2,201901,3.2.2,力矩,Moments,0,80,0.00
+U2,201901,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,201901,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,201901,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,201901,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,201901,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,201901,3.4.2,电流—电压特性,Current–Voltage Characteristics,4,80,5.00
+U2,201901,3.4.3,电阻率,Resistivity,3,80,3.75
+U2,201901,3.4.4,电路,Circuits,10,80,12.50
+U2,201901,3.4.5,分压器,Potential Divider,0,80,0.00
+U2,201901,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,2,80,2.50
+U2,201901,3.5.1,振动系统,Oscillating Systems,10,80,12.50
+U2,201901,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,201901,3.5.3,行波,Progressive Waves,3,80,3.75
+U2,201901,3.5.4,纵波和横波,Longitudinal And Transverse Waves,7,80,8.75
+U2,201901,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,7,80,8.75
+U2,201901,3.5.6,干涉,Interference,1,80,1.25
+U2,201901,3.5.7,衍射,Diffraction,1,80,1.25
+U2,201901,3.5.8,平面界面处的折射,Refraction At A Plane Surface,12,80,15.00
+U2,201901,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,4,80,5.00
+U2,201901,3.5.10,光电效应,Photoelectric Effect,1,80,1.25
+U2,201901,3.5.11,波粒二象性,Wave Particle Duality,9,80,11.25
+U2,201901,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,201906,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U2,201906,3.1.2,物理测量的局限,Limitation Of Physical Measurements,3,80,3.75
+U2,201906,3.2.2,力矩,Moments,0,80,0.00
+U2,201906,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,201906,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,201906,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,201906,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,201906,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,201906,3.4.2,电流—电压特性,Current–Voltage Characteristics,6,80,7.50
+U2,201906,3.4.3,电阻率,Resistivity,1,80,1.25
+U2,201906,3.4.4,电路,Circuits,3,80,3.75
+U2,201906,3.4.5,分压器,Potential Divider,1,80,1.25
+U2,201906,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,9,80,11.25
+U2,201906,3.5.1,振动系统,Oscillating Systems,6,80,7.50
+U2,201906,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,6,80,7.50
+U2,201906,3.5.3,行波,Progressive Waves,0,80,0.00
+U2,201906,3.5.4,纵波和横波,Longitudinal And Transverse Waves,3,80,3.75
+U2,201906,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,12,80,15.00
+U2,201906,3.5.6,干涉,Interference,2,80,2.50
+U2,201906,3.5.7,衍射,Diffraction,4,80,5.00
+U2,201906,3.5.8,平面界面处的折射,Refraction At A Plane Surface,9,80,11.25
+U2,201906,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,10,80,12.50
+U2,201906,3.5.10,光电效应,Photoelectric Effect,2,80,2.50
+U2,201906,3.5.11,波粒二象性,Wave Particle Duality,3,80,3.75
+U2,201906,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202001,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U2,202001,3.1.2,物理测量的局限,Limitation Of Physical Measurements,7,80,8.75
+U2,202001,3.2.2,力矩,Moments,0,80,0.00
+U2,202001,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202001,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202001,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202001,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202001,3.4.1,电学基础,Basics Of Electricity,1,80,1.25
+U2,202001,3.4.2,电流—电压特性,Current–Voltage Characteristics,5,80,6.25
+U2,202001,3.4.3,电阻率,Resistivity,2,80,2.50
+U2,202001,3.4.4,电路,Circuits,8,80,10.00
+U2,202001,3.4.5,分压器,Potential Divider,0,80,0.00
+U2,202001,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,3,80,3.75
+U2,202001,3.5.1,振动系统,Oscillating Systems,9,80,11.25
+U2,202001,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,202001,3.5.3,行波,Progressive Waves,0,80,0.00
+U2,202001,3.5.4,纵波和横波,Longitudinal And Transverse Waves,2,80,2.50
+U2,202001,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,5,80,6.25
+U2,202001,3.5.6,干涉,Interference,4,80,5.00
+U2,202001,3.5.7,衍射,Diffraction,7,80,8.75
+U2,202001,3.5.8,平面界面处的折射,Refraction At A Plane Surface,6,80,7.50
+U2,202001,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,7,80,8.75
+U2,202001,3.5.10,光电效应,Photoelectric Effect,9,80,11.25
+U2,202001,3.5.11,波粒二象性,Wave Particle Duality,5,80,6.25
+U2,202001,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202101,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U2,202101,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U2,202101,3.2.2,力矩,Moments,0,80,0.00
+U2,202101,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202101,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202101,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202101,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202101,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,202101,3.4.2,电流—电压特性,Current–Voltage Characteristics,1,80,1.25
+U2,202101,3.4.3,电阻率,Resistivity,6,80,7.50
+U2,202101,3.4.4,电路,Circuits,12,80,15.00
+U2,202101,3.4.5,分压器,Potential Divider,2,80,2.50
+U2,202101,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,6,80,7.50
+U2,202101,3.5.1,振动系统,Oscillating Systems,9,80,11.25
+U2,202101,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,1,80,1.25
+U2,202101,3.5.3,行波,Progressive Waves,0,80,0.00
+U2,202101,3.5.4,纵波和横波,Longitudinal And Transverse Waves,1,80,1.25
+U2,202101,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,3,80,3.75
+U2,202101,3.5.6,干涉,Interference,11,80,13.75
+U2,202101,3.5.7,衍射,Diffraction,4,80,5.00
+U2,202101,3.5.8,平面界面处的折射,Refraction At A Plane Surface,7,80,8.75
+U2,202101,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,2,80,2.50
+U2,202101,3.5.10,光电效应,Photoelectric Effect,9,80,11.25
+U2,202101,3.5.11,波粒二象性,Wave Particle Duality,1,80,1.25
+U2,202101,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202201,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U2,202201,3.1.2,物理测量的局限,Limitation Of Physical Measurements,7,80,8.75
+U2,202201,3.2.2,力矩,Moments,0,80,0.00
+U2,202201,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202201,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202201,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202201,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202201,3.4.1,电学基础,Basics Of Electricity,3,80,3.75
+U2,202201,3.4.2,电流—电压特性,Current–Voltage Characteristics,1,80,1.25
+U2,202201,3.4.3,电阻率,Resistivity,4,80,5.00
+U2,202201,3.4.4,电路,Circuits,10,80,12.50
+U2,202201,3.4.5,分压器,Potential Divider,3,80,3.75
+U2,202201,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,1,80,1.25
+U2,202201,3.5.1,振动系统,Oscillating Systems,11,80,13.75
+U2,202201,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,202201,3.5.3,行波,Progressive Waves,7,80,8.75
+U2,202201,3.5.4,纵波和横波,Longitudinal And Transverse Waves,0,80,0.00
+U2,202201,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,7,80,8.75
+U2,202201,3.5.6,干涉,Interference,4,80,5.00
+U2,202201,3.5.7,衍射,Diffraction,4,80,5.00
+U2,202201,3.5.8,平面界面处的折射,Refraction At A Plane Surface,2,80,2.50
+U2,202201,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,10,80,12.50
+U2,202201,3.5.10,光电效应,Photoelectric Effect,2,80,2.50
+U2,202201,3.5.11,波粒二象性,Wave Particle Duality,4,80,5.00
+U2,202201,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202206,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U2,202206,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U2,202206,3.2.2,力矩,Moments,0,80,0.00
+U2,202206,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202206,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202206,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202206,3.3.3,放射性,Radioactivity,1,80,1.25
+U2,202206,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,202206,3.4.2,电流—电压特性,Current–Voltage Characteristics,1,80,1.25
+U2,202206,3.4.3,电阻率,Resistivity,11,80,13.75
+U2,202206,3.4.4,电路,Circuits,8,80,10.00
+U2,202206,3.4.5,分压器,Potential Divider,3,80,3.75
+U2,202206,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,3,80,3.75
+U2,202206,3.5.1,振动系统,Oscillating Systems,1,80,1.25
+U2,202206,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,202206,3.5.3,行波,Progressive Waves,1,80,1.25
+U2,202206,3.5.4,纵波和横波,Longitudinal And Transverse Waves,1,80,1.25
+U2,202206,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,1,80,1.25
+U2,202206,3.5.6,干涉,Interference,12,80,15.00
+U2,202206,3.5.7,衍射,Diffraction,2,80,2.50
+U2,202206,3.5.8,平面界面处的折射,Refraction At A Plane Surface,13,80,16.25
+U2,202206,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,7,80,8.75
+U2,202206,3.5.10,光电效应,Photoelectric Effect,2,80,2.50
+U2,202206,3.5.11,波粒二象性,Wave Particle Duality,7,80,8.75
+U2,202206,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202301,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U2,202301,3.1.2,物理测量的局限,Limitation Of Physical Measurements,7,80,8.75
+U2,202301,3.2.2,力矩,Moments,0,80,0.00
+U2,202301,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202301,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202301,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202301,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202301,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,202301,3.4.2,电流—电压特性,Current–Voltage Characteristics,0,80,0.00
+U2,202301,3.4.3,电阻率,Resistivity,6,80,7.50
+U2,202301,3.4.4,电路,Circuits,5,80,6.25
+U2,202301,3.4.5,分压器,Potential Divider,5,80,6.25
+U2,202301,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,7,80,8.75
+U2,202301,3.5.1,振动系统,Oscillating Systems,3,80,3.75
+U2,202301,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,202301,3.5.3,行波,Progressive Waves,3,80,3.75
+U2,202301,3.5.4,纵波和横波,Longitudinal And Transverse Waves,5,80,6.25
+U2,202301,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,5,80,6.25
+U2,202301,3.5.6,干涉,Interference,1,80,1.25
+U2,202301,3.5.7,衍射,Diffraction,8,80,10.00
+U2,202301,3.5.8,平面界面处的折射,Refraction At A Plane Surface,3,80,3.75
+U2,202301,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,8,80,10.00
+U2,202301,3.5.10,光电效应,Photoelectric Effect,12,80,15.00
+U2,202301,3.5.11,波粒二象性,Wave Particle Duality,1,80,1.25
+U2,202301,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202306,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U2,202306,3.1.2,物理测量的局限,Limitation Of Physical Measurements,4,80,5.00
+U2,202306,3.2.2,力矩,Moments,0,80,0.00
+U2,202306,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202306,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202306,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202306,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202306,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,202306,3.4.2,电流—电压特性,Current–Voltage Characteristics,3,80,3.75
+U2,202306,3.4.3,电阻率,Resistivity,2,80,2.50
+U2,202306,3.4.4,电路,Circuits,6,80,7.50
+U2,202306,3.4.5,分压器,Potential Divider,8,80,10.00
+U2,202306,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,1,80,1.25
+U2,202306,3.5.1,振动系统,Oscillating Systems,7,80,8.75
+U2,202306,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,202306,3.5.3,行波,Progressive Waves,5,80,6.25
+U2,202306,3.5.4,纵波和横波,Longitudinal And Transverse Waves,3,80,3.75
+U2,202306,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,10,80,12.50
+U2,202306,3.5.6,干涉,Interference,5,80,6.25
+U2,202306,3.5.7,衍射,Diffraction,1,80,1.25
+U2,202306,3.5.8,平面界面处的折射,Refraction At A Plane Surface,12,80,15.00
+U2,202306,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,1,80,1.25
+U2,202306,3.5.10,光电效应,Photoelectric Effect,5,80,6.25
+U2,202306,3.5.11,波粒二象性,Wave Particle Duality,7,80,8.75
+U2,202306,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202401,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U2,202401,3.1.2,物理测量的局限,Limitation Of Physical Measurements,4,80,5.00
+U2,202401,3.2.2,力矩,Moments,0,80,0.00
+U2,202401,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,1,80,1.25
+U2,202401,3.2.9,固体的宏观性质,Bulk Properties Of Solids,3,80,3.75
+U2,202401,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202401,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202401,3.4.1,电学基础,Basics Of Electricity,2,80,2.50
+U2,202401,3.4.2,电流—电压特性,Current–Voltage Characteristics,0,80,0.00
+U2,202401,3.4.3,电阻率,Resistivity,0,80,0.00
+U2,202401,3.4.4,电路,Circuits,10,80,12.50
+U2,202401,3.4.5,分压器,Potential Divider,2,80,2.50
+U2,202401,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,4,80,5.00
+U2,202401,3.5.1,振动系统,Oscillating Systems,20,80,25.00
+U2,202401,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,202401,3.5.3,行波,Progressive Waves,0,80,0.00
+U2,202401,3.5.4,纵波和横波,Longitudinal And Transverse Waves,9,80,11.25
+U2,202401,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,4,80,5.00
+U2,202401,3.5.6,干涉,Interference,1,80,1.25
+U2,202401,3.5.7,衍射,Diffraction,2,80,2.50
+U2,202401,3.5.8,平面界面处的折射,Refraction At A Plane Surface,3,80,3.75
+U2,202401,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,9,80,11.25
+U2,202401,3.5.10,光电效应,Photoelectric Effect,4,80,5.00
+U2,202401,3.5.11,波粒二象性,Wave Particle Duality,1,80,1.25
+U2,202401,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202406,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U2,202406,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U2,202406,3.2.2,力矩,Moments,0,80,0.00
+U2,202406,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202406,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202406,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202406,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202406,3.4.1,电学基础,Basics Of Electricity,1,80,1.25
+U2,202406,3.4.2,电流—电压特性,Current–Voltage Characteristics,2,80,2.50
+U2,202406,3.4.3,电阻率,Resistivity,8,80,10.00
+U2,202406,3.4.4,电路,Circuits,3,80,3.75
+U2,202406,3.4.5,分压器,Potential Divider,1,80,1.25
+U2,202406,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,7,80,8.75
+U2,202406,3.5.1,振动系统,Oscillating Systems,3,80,3.75
+U2,202406,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,1,80,1.25
+U2,202406,3.5.3,行波,Progressive Waves,2,80,2.50
+U2,202406,3.5.4,纵波和横波,Longitudinal And Transverse Waves,0,80,0.00
+U2,202406,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,9,80,11.25
+U2,202406,3.5.6,干涉,Interference,0,80,0.00
+U2,202406,3.5.7,衍射,Diffraction,5,80,6.25
+U2,202406,3.5.8,平面界面处的折射,Refraction At A Plane Surface,12,80,15.00
+U2,202406,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,8,80,10.00
+U2,202406,3.5.10,光电效应,Photoelectric Effect,4,80,5.00
+U2,202406,3.5.11,波粒二象性,Wave Particle Duality,8,80,10.00
+U2,202406,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202501,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U2,202501,3.1.2,物理测量的局限,Limitation Of Physical Measurements,7,80,8.75
+U2,202501,3.2.2,力矩,Moments,0,80,0.00
+U2,202501,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202501,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202501,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202501,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202501,3.4.1,电学基础,Basics Of Electricity,3,80,3.75
+U2,202501,3.4.2,电流—电压特性,Current–Voltage Characteristics,3,80,3.75
+U2,202501,3.4.3,电阻率,Resistivity,5,80,6.25
+U2,202501,3.4.4,电路,Circuits,4,80,5.00
+U2,202501,3.4.5,分压器,Potential Divider,2,80,2.50
+U2,202501,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,3,80,3.75
+U2,202501,3.5.1,振动系统,Oscillating Systems,7,80,8.75
+U2,202501,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,202501,3.5.3,行波,Progressive Waves,4,80,5.00
+U2,202501,3.5.4,纵波和横波,Longitudinal And Transverse Waves,3,80,3.75
+U2,202501,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,1,80,1.25
+U2,202501,3.5.6,干涉,Interference,10,80,12.50
+U2,202501,3.5.7,衍射,Diffraction,6,80,7.50
+U2,202501,3.5.8,平面界面处的折射,Refraction At A Plane Surface,10,80,12.50
+U2,202501,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,6,80,7.50
+U2,202501,3.5.10,光电效应,Photoelectric Effect,4,80,5.00
+U2,202501,3.5.11,波粒二象性,Wave Particle Duality,2,80,2.50
+U2,202501,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202506,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,0,80,0.00
+U2,202506,3.1.2,物理测量的局限,Limitation Of Physical Measurements,10,80,12.50
+U2,202506,3.2.2,力矩,Moments,0,80,0.00
+U2,202506,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202506,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202506,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202506,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202506,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,202506,3.4.2,电流—电压特性,Current–Voltage Characteristics,1,80,1.25
+U2,202506,3.4.3,电阻率,Resistivity,1,80,1.25
+U2,202506,3.4.4,电路,Circuits,2,80,2.50
+U2,202506,3.4.5,分压器,Potential Divider,8,80,10.00
+U2,202506,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,6,80,7.50
+U2,202506,3.5.1,振动系统,Oscillating Systems,9,80,11.25
+U2,202506,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,202506,3.5.3,行波,Progressive Waves,3,80,3.75
+U2,202506,3.5.4,纵波和横波,Longitudinal And Transverse Waves,4,80,5.00
+U2,202506,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,8,80,10.00
+U2,202506,3.5.6,干涉,Interference,1,80,1.25
+U2,202506,3.5.7,衍射,Diffraction,3,80,3.75
+U2,202506,3.5.8,平面界面处的折射,Refraction At A Plane Surface,8,80,10.00
+U2,202506,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,9,80,11.25
+U2,202506,3.5.10,光电效应,Photoelectric Effect,5,80,6.25
+U2,202506,3.5.11,波粒二象性,Wave Particle Duality,1,80,1.25
+U2,202506,ADMIN,统一给分（非实际考查）,Administrative credit,1,80,1.25
+U2,202601,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U2,202601,3.1.2,物理测量的局限,Limitation Of Physical Measurements,3,80,3.75
+U2,202601,3.2.2,力矩,Moments,2,80,2.50
+U2,202601,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202601,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202601,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202601,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202601,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,202601,3.4.2,电流—电压特性,Current–Voltage Characteristics,3,80,3.75
+U2,202601,3.4.3,电阻率,Resistivity,7,80,8.75
+U2,202601,3.4.4,电路,Circuits,3,80,3.75
+U2,202601,3.4.5,分压器,Potential Divider,0,80,0.00
+U2,202601,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,12,80,15.00
+U2,202601,3.5.1,振动系统,Oscillating Systems,8,80,10.00
+U2,202601,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,0,80,0.00
+U2,202601,3.5.3,行波,Progressive Waves,1,80,1.25
+U2,202601,3.5.4,纵波和横波,Longitudinal And Transverse Waves,5,80,6.25
+U2,202601,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,6,80,7.50
+U2,202601,3.5.6,干涉,Interference,4,80,5.00
+U2,202601,3.5.7,衍射,Diffraction,4,80,5.00
+U2,202601,3.5.8,平面界面处的折射,Refraction At A Plane Surface,3,80,3.75
+U2,202601,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,13,80,16.25
+U2,202601,3.5.10,光电效应,Photoelectric Effect,1,80,1.25
+U2,202601,3.5.11,波粒二象性,Wave Particle Duality,4,80,5.00
+U2,202601,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00
+U2,202606,3.1.1,SI单位及其词头的使用,Use Of SI units And Their Prefixes,1,80,1.25
+U2,202606,3.1.2,物理测量的局限,Limitation Of Physical Measurements,5,80,6.25
+U2,202606,3.2.2,力矩,Moments,0,80,0.00
+U2,202606,3.2.5,牛顿运动定律,Newton’S Laws Of Motion,0,80,0.00
+U2,202606,3.2.9,固体的宏观性质,Bulk Properties Of Solids,0,80,0.00
+U2,202606,3.2.10,杨氏模量,The Young Modulus,0,80,0.00
+U2,202606,3.3.3,放射性,Radioactivity,0,80,0.00
+U2,202606,3.4.1,电学基础,Basics Of Electricity,0,80,0.00
+U2,202606,3.4.2,电流—电压特性,Current–Voltage Characteristics,5,80,6.25
+U2,202606,3.4.3,电阻率,Resistivity,5,80,6.25
+U2,202606,3.4.4,电路,Circuits,2,80,2.50
+U2,202606,3.4.5,分压器,Potential Divider,8,80,10.00
+U2,202606,3.4.6,电动势和内阻,Electromotive Force And Internal Resistance,9,80,11.25
+U2,202606,3.5.1,振动系统,Oscillating Systems,9,80,11.25
+U2,202606,3.5.2,受迫振动和共振,Forced Vibrations And Resonance,1,80,1.25
+U2,202606,3.5.3,行波,Progressive Waves,3,80,3.75
+U2,202606,3.5.4,纵波和横波,Longitudinal And Transverse Waves,2,80,2.50
+U2,202606,3.5.5,波的叠加原理与驻波的形成,Principle Of Superposition Of Waves And Formation Of Stationary Waves,3,80,3.75
+U2,202606,3.5.6,干涉,Interference,4,80,5.00
+U2,202606,3.5.7,衍射,Diffraction,3,80,3.75
+U2,202606,3.5.8,平面界面处的折射,Refraction At A Plane Surface,11,80,13.75
+U2,202606,3.5.9,电子与原子的碰撞,Collisions Of Electrons With Atoms,2,80,2.50
+U2,202606,3.5.10,光电效应,Photoelectric Effect,5,80,6.25
+U2,202606,3.5.11,波粒二象性,Wave Particle Duality,2,80,2.50
+U2,202606,ADMIN,统一给分（非实际考查）,Administrative credit,0,80,0.00

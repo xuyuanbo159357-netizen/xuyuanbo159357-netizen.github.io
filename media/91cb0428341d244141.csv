@@ -1,0 +1,111 @@
+requirement_id,code,statement,notes,status
+3.1.1-R01,3.1.1,Fundamental (base) units.,M01,已对应 / mapped
+3.1.1-R02,3.1.1,"Use of mass, length, time, amount of substance, temperature, electric current and their associated SI units.","M01,M02,M03",已对应 / mapped
+3.1.1-R03,3.1.1,SI units derived.,M01,已对应 / mapped
+3.1.1-R04,3.1.1,"Knowledge and use of the SI prefixes (T, G, M, k, c, m, μ, n, p, f), values and standard form.",M02,已对应 / mapped
+3.1.1-R05,3.1.1,"The fundamental unit of light intensity, the candela, is not required.",M01,范围边界 / scope
+3.1.1-R06,3.1.1,Students are not expected to recall definitions of the fundamental quantities.,M01,范围边界 / scope
+3.1.1-R07,3.1.1,Dimensional analysis is not required.,M01,范围边界 / scope
+3.1.1-R08,3.1.1,"Students should be able to convert between different units of the same quantity, eg J and eV, J and kW h.",M03,已对应 / mapped
+3.1.2-R01,3.1.2,Identification and suggestions for removal of random and systematic errors.,M04,已对应 / mapped
+3.1.2-R02,3.1.2,"Precision, repeatability, reproducibility, resolution and accuracy.",M04,已对应 / mapped
+3.1.2-R03,3.1.2,"Use of absolute, fractional and percentage uncertainties to represent uncertainty in the final answer for a quantity.",M05,已对应 / mapped
+3.1.2-R04,3.1.2,"Combination of absolute and percentage uncertainties where measurements are added, subtracted, multiplied, divided, or raised to powers.",M05,已对应 / mapped
+3.1.2-R05,3.1.2,Combinations involving trigonometric or logarithmic functions will not be required.,"M04,M05,M06,M07",范围边界 / scope
+3.1.2-R06,3.1.2,Representation of uncertainty in a data point on a graph using error bars.,M06,已对应 / mapped
+3.1.2-R07,3.1.2,Determine the uncertainties in the gradient and intercept of a straight-line graph for graphs with or without associated error bars.,M06,已对应 / mapped
+3.1.2-R08,3.1.2,In practical work students should understand the link between the number of significant figures in the value of a quantity and its associated uncertainty.,M07,已对应 / mapped
+3.1.3-R01,3.1.3,Estimation of approximate values of physical quantities to the nearest order of magnitude.,M08,已对应 / mapped
+3.1.3-R02,3.1.3,Use of these estimates together with their knowledge of physics to produce further derived estimates also to the nearest order of magnitude.,M08,已对应 / mapped
+3.2.1-R01,3.2.1,Nature of scalars and vectors.,D01,已对应 / mapped
+3.2.1-R02,3.2.1,"Examples should include: velocity/speed, mass, force/weight, acceleration, displacement/distance.",D01,已对应 / mapped
+3.2.1-R03,3.2.1,Addition of vectors by calculation or scale drawing.,D02,已对应 / mapped
+3.2.1-R04,3.2.1,Conditions for equilibrium for two or three coplanar forces acting at a point.,D03,已对应 / mapped
+3.2.1-R05,3.2.1,Appreciation that objects at rest or moving with constant velocity are in equilibrium.,D03,已对应 / mapped
+3.2.2-R01,3.2.2,Moment of a force about a point.,D04,已对应 / mapped
+3.2.2-R02,3.2.2,Moment defined as force × perpendicular distance from the point to the line of action of the force.,D04,已对应 / mapped
+3.2.2-R03,3.2.2,Couple as a pair of equal and opposite coplanar forces.,D05,已对应 / mapped
+3.2.2-R04,3.2.2,Moment of couple defined as force × perpendicular distance between the lines of action of the forces.,D05,已对应 / mapped
+3.2.2-R05,3.2.2,Principle of moments.,D04,已对应 / mapped
+3.2.2-R06,3.2.2,Centre of mass.,D06,已对应 / mapped
+3.2.2-R07,3.2.2,Knowledge that the position of the centre of mass of uniform regular solid is at its centre.,D06,已对应 / mapped
+3.2.3-R01,3.2.3,"Displacement, speed, velocity, acceleration.",D07,已对应 / mapped
+3.2.3-R02,3.2.3,v = Δs / Δt      a = Δv / Δt,D07,已对应 / mapped
+3.2.3-R03,3.2.3,Calculations may include average and instantaneous speeds and velocities.,D07,已对应 / mapped
+3.2.3-R04,3.2.3,Representation by graphical methods of uniform and non-uniform acceleration eg motion of a bouncing ball.,"D11,D08",已对应 / mapped
+3.2.3-R05,3.2.3,Significance and calculation of areas in velocity–time and acceleration–time graphs.,D08,已对应 / mapped
+3.2.3-R06,3.2.3,Significance and calculation of gradients in displacement–time and velocity–time graphs.,D08,已对应 / mapped
+3.2.3-R07,3.2.3,Equations for uniform acceleration:,D09,已对应 / mapped
+3.2.3-R08,3.2.3,v = u + at      s = ½(u + v)t      s = ut + ½at²      v² = u² + 2as,D09,已对应 / mapped
+3.2.3-R09,3.2.3,"Acceleration due to gravity, g",D10,已对应 / mapped
+3.2.3-R10,3.2.3,Required practical 1: Determination of g by a freefall method. Procedures should include determination of g from graph (eg from graph of s against t²).,P01,已对应 / mapped
+3.2.4-R01,3.2.4,Independent effect of motion in horizontal and vertical directions of a uniform gravitational field. Problems will be solvable using the equations of uniform acceleration.,D12,已对应 / mapped
+3.2.4-R02,3.2.4,Qualitative treatment of friction.,D13,已对应 / mapped
+3.2.4-R03,3.2.4,Distinctions between static and dynamic friction will not be tested.,D13,范围边界 / scope
+3.2.4-R04,3.2.4,Qualitative treatment of lift force and drag force.,D13,已对应 / mapped
+3.2.4-R05,3.2.4,Terminal speed.,"D14,D12",已对应 / mapped
+3.2.4-R06,3.2.4,Knowledge that air resistance increases with speed.,"D14,D12",已对应 / mapped
+3.2.4-R07,3.2.4,Qualitative understanding of the effect of air resistance on the trajectory of a projectile and on the factors that affect the maximum speed of a vehicle.,"D14,D12",已对应 / mapped
+3.2.5-R01,3.2.5,Knowledge and application of the three laws of motion.,"D15,D16",已对应 / mapped
+3.2.5-R02,3.2.5,Use of F = ma in situations where the mass is constant.,"D15,D16",已对应 / mapped
+3.2.6-R01,3.2.6,momentum = mass × velocity; p = mv,D17,已对应 / mapped
+3.2.6-R02,3.2.6,Conservation of linear momentum.,D17,已对应 / mapped
+3.2.6-R03,3.2.6,Principle applied quantitatively to problems in one dimension.,D17,已对应 / mapped
+3.2.6-R04,3.2.6,Elastic and inelastic collisions; explosions.,D18,已对应 / mapped
+3.2.6-R05,3.2.6,Force as the rate of change of momentum.,D19,已对应 / mapped
+3.2.6-R06,3.2.6,F = Δ(mv) / Δt,D17,已对应 / mapped
+3.2.6-R07,3.2.6,Impulse = change in momentum.,D19,已对应 / mapped
+3.2.6-R08,3.2.6,"FΔt = Δmv, where F is constant.",D17,已对应 / mapped
+3.2.6-R09,3.2.6,Significance of the area under a force–time graph.,D19,已对应 / mapped
+3.2.6-R10,3.2.6,Quantitative questions may be set on forces that vary with time.,D19,已对应 / mapped
+3.2.6-R11,3.2.6,"Relationship between impact forces and contact times (eg kicking a football, crumple zones, packaging).",D19,已对应 / mapped
+3.2.7-R01,3.2.7,W = Fs cos θ,D20,已对应 / mapped
+3.2.7-R02,3.2.7,where θ is the angle between F and s,D20,已对应 / mapped
+3.2.7-R03,3.2.7,Significance of the area under a force–displacement graph.,D20,已对应 / mapped
+3.2.7-R04,3.2.7,P = ΔW / Δt = Fv,D20,已对应 / mapped
+3.2.7-R05,3.2.7,Quantitative questions may be set on variable forces.,D20,已对应 / mapped
+3.2.7-R06,3.2.7,Efficiency = useful output power / input power,D21,已对应 / mapped
+3.2.7-R07,3.2.7,Efficiency may be expressed as a percentage.,D21,已对应 / mapped
+3.2.8-R01,3.2.8,Principle of conservation of energy.,"D22,D27",已对应 / mapped
+3.2.8-R02,3.2.8,ΔEₚ = mgΔh      Eₖ = ½mv²,"D22,D27",已对应 / mapped
+3.2.8-R03,3.2.8,"Quantitative and qualitative application of energy conservation to examples involving gravitational potential energy, kinetic energy, elastic potential energy and work done against resistive forces.","D22,D27",已对应 / mapped
+3.2.9-R01,3.2.9,Density: ρ = m / V,D23,已对应 / mapped
+3.2.9-R02,3.2.9,"Hooke’s law, elastic limit.",D24,已对应 / mapped
+3.2.9-R03,3.2.9,"F = kΔL, k as either stiffness and spring constant.",D24,已对应 / mapped
+3.2.9-R04,3.2.9,Tensile strain and tensile stress.,D25,已对应 / mapped
+3.2.9-R05,3.2.9,"Elastic strain energy, breaking stress.",D26,已对应 / mapped
+3.2.9-R06,3.2.9,Energy stored = ½FΔL = area under force–extension graph,D27,已对应 / mapped
+3.2.9-R07,3.2.9,"Description of plastic behaviour, fracture and brittle behaviour, linked to force–extension graphs.",D26,已对应 / mapped
+3.2.9-R08,3.2.9,Quantitative and qualitative application of energy conservation to examples involving elastic strain energy and energy to deform.,D27,已对应 / mapped
+3.2.9-R09,3.2.9,Elastic potential energy in spring transformed to kinetic and gravitational potential energy.,D27,已对应 / mapped
+3.2.9-R10,3.2.9,Interpretation of simple stress–strain curves.,D26,已对应 / mapped
+3.2.10-R01,3.2.10,Young modulus E = tensile stress / tensile strain = FL / (AΔL),D28,已对应 / mapped
+3.2.10-R02,3.2.10,Use of stress–strain graphs to determine the Young modulus.,D28,已对应 / mapped
+3.2.10-R03,3.2.10,Required practical 2: Investigation of load-extension graph for a wire and determination of the Young modulus for the material of the wire.,P02,已对应 / mapped
+3.3.1-R01,3.3.1,"Simple model of the atom, including the proton, neutron and electron.",A01,已对应 / mapped
+3.3.1-R02,3.3.1,Evidence for a nucleus: Rutherford scattering.,A02,已对应 / mapped
+3.3.1-R03,3.3.1,Appreciation of how knowledge and understanding of the structure of the nucleus has changed over time.,A01,已对应 / mapped
+3.3.1-R04,3.3.1,"Charge and mass of the proton, neutron and electron in SI units and relative units.",A01,已对应 / mapped
+3.3.1-R05,3.3.1,Use of the atomic mass unit (amu) is not required at International AS (see Section 3.12.2).,A01,范围边界 / scope
+3.3.1-R06,3.3.1,"Specific charge of the proton and the electron, and of nuclei and ions.",A04,已对应 / mapped
+3.3.1-R07,3.3.1,"Proton number Z, nucleon number A, nuclide notation. Students should be familiar with the ᴬ_ZX notation.",A03,已对应 / mapped
+3.3.2-R01,3.3.2,Classification of particles:,A05,已对应 / mapped
+3.3.2-R02,3.3.2,"For every type of particle, there is a corresponding antiparticle.",A05,已对应 / mapped
+3.3.2-R03,3.3.2,"Students should know that the positron, antiproton, antineutron and antineutrino are the antiparticles of the electron, proton, neutron and neutrino respectively.",A05,已对应 / mapped
+3.3.2-R04,3.3.2,Knowledge of annihilation and pair production and the energies involved.,"A06,A05",已对应 / mapped
+3.3.2-R05,3.3.2,"Comparison of particle and antiparticle masses, charge and rest energy in MeV.","A06,A05",已对应 / mapped
+3.3.2-R06,3.3.2,The use of E = mc² is not required in calculations.,"A06,A05",范围边界 / scope
+3.3.3-R01,3.3.3,"Possible decay modes of unstable nuclei including α, β−, β+.",A07,已对应 / mapped
+3.3.3-R02,3.3.3,"Equations for α, β−, β+ decays including neutrinos and antineutrinos.",A08,已对应 / mapped
+3.3.3-R03,3.3.3,The existence of the neutrino was hypothesised to account for conservation of momentum and energy in beta decay.,A08,已对应 / mapped
+3.3.3-R04,3.3.3,The decay of a free neutron should be known.,A08,已对应 / mapped
+3.3.3-R05,3.3.3,Half-life; Determination of half-life from graphical decay data including decay; Simple calculations involving times that are whole numbers of the half-life.,A09,已对应 / mapped
+3.3.3-R06,3.3.3,"Use of equations for exponential decay will be required at International A2 only, (see Section 3.9).",A09,范围边界 / scope
+3.3.3-R07,3.3.3,Existence of nuclear excited states; γ ray emission; application eg use of technetium-99m as a source in medical diagnosis.,A10,已对应 / mapped
+3.3.3-R08,3.3.3,"Properties of α, β, and γ radiation and experimental identification of these using simple absorption experiments; applications eg to relative hazards of exposure to humans.",A11,已对应 / mapped
+3.3.3-R09,3.3.3,"Applications also include thickness measurements of aluminium foil, paper and steel.",A12,已对应 / mapped
+3.3.3-R10,3.3.3,I = I₀ / r²,A13,已对应 / mapped
+3.3.3-R11,3.3.3,Inverse-square law for γ radiation.,A13,已对应 / mapped
+3.3.3-R12,3.3.3,Experimental verification of inverse-square law.,A13,已对应 / mapped
+3.3.3-R13,3.3.3,Applications eg to safe handling of radioactive sources.,A12,已对应 / mapped
+3.3.3-R14,3.3.3,Background radiation; examples of its origins and experimental elimination from calculations.,A14,已对应 / mapped

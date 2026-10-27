@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.9.1 电容充放电与时间常量 / Capacitor charge and discharge · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.9 指数变化</div><h1 id="h-98abf77ea9fd63ac15">3.9.1 电容充放电与时间常量 / Capacitor charge and discharge</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/7f45414ad08fb346de.html">3.9.1</a>　｜　<a class="internal-link" href="/notes/da867bb75d0c7de166.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>时间常量 / time constant</strong></td>
+<td><span class="math inline">\(\tau\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td>RC 语境；转动中 τ 表转矩 / RC context; τ means torque in rotation.</td>
+</tr>
+<tr>
+<td><strong>电容 / capacitance</strong></td>
+<td><span class="math inline">\(C\)</span></td>
+<td><span class="math inline">\(\mathrm{F}\)</span></td>
+<td>斜体 C 是电容；正体 C 是库仑单位 / Italic C is capacitance; upright C is the coulomb.</td>
+</tr>
+<tr>
+<td><strong>电阻 / resistance</strong></td>
+<td><span class="math inline">\(R\)</span></td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>电荷量 / electric charge</strong></td>
+<td><span class="math inline">\(Q,\ q\)</span></td>
+<td><span class="math inline">\(\mathrm{C}\)</span></td>
+<td>源电荷常用 Q，单个粒子或检验电荷常用 q / Q often denotes a source; q a particle/test charge.</td>
+</tr>
+<tr>
+<td><strong>电容器电势差 / capacitor potential difference</strong></td>
+<td><span class="math inline">\(V_C,\ V\)</span></td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>电流 / electric current</strong></td>
+<td><span class="math inline">\(I\)</span></td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+<td>与光强、转动惯量的 I 区分 / Not intensity or moment of inertia.</td>
+</tr>
+<tr>
+<td><strong>电动势 / electromotive force</strong></td>
+<td><span class="math inline">\(\varepsilon\)</span></td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+<td>是能量/电荷，不是力 / Energy per charge, not a force.</td>
+</tr>
+<tr>
+<td><strong>时间、时间间隔 / time, time interval</strong></td>
+<td><span class="math inline">\(t,\ \Delta t\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>半衰期 / half-life</strong></td>
+<td><span class="math inline">\(T_{1/2},\ t_{1/2}\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td>两种记号均常见 / Both forms are used.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/85c3113ba416dabdfb.html">time constant — 时间常量</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/85c3113ba416dabdfb.html#h-485f2ec53559b6043e">↗ time constant — 时间常量</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The time for a discharging capacitor’s charge or voltage to fall to one over e of its initial value.</p>
+<p><strong>中文：</strong> 放电时电容器电荷或电压降至初值的 e 分之一所需时间。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p>定义按考纲与指定教材概括；本页未列出可直接对应的定义题评分条目。 Definitions are summarised from the specification and textbook; no directly matched definition-item citation is claimed here.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p><span class="math inline">\(\tau=RC\)</span>；<span class="math inline">\(t_{1/2}=RC\ln2\)</span>。</p>
+<p>放电 / Discharge：<span class="math inline">\(Q=Q_0e^{-t/RC}\)</span>，<span class="math inline">\(V_C=V_0e^{-t/RC}\)</span>，<span class="math inline">\(|I|=(V_0/R)e^{-t/RC}\)</span>，<span class="math inline">\(\ln V_C=\ln V_0-t/(RC)\)</span>。</p>
+<p>从零开始充电 / Charging from zero：<span class="math inline">\(Q=C\varepsilon(1-e^{-t/RC})\)</span>，<span class="math inline">\(V_C=\varepsilon(1-e^{-t/RC})\)</span>，<span class="math inline">\(I=(\varepsilon/R)e^{-t/RC}\)</span>。</p>
+<p>充电时电荷和电压上升、电流衰减；放电时三者大小均衰减。电流符号须先规定正方向。</p>
+<p>Charge and voltage rise during charging while current falls; all three magnitudes fall during discharge. State a current reference direction.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>电阻应恒定，电容近似理想；有效串联电阻包含相关内阻；有符号电流需先定正方向。</p>
+<p>Use a constant resistor and ideal capacitor; include any relevant source/internal resistance in the effective series resistance. State the reference direction before giving a signed current.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-5684dfcf505c1353b6">初末状态和指数方程 / Initial and final states</h3>
+<p>初始未充电电容经恒定电源 <span class="math inline">\(\varepsilon\)</span> 和串联电阻 <span class="math inline">\(R\)</span> 充电：<span class="math inline">\(Q=C\varepsilon(1-e^{-t/RC})\)</span>、<span class="math inline">\(V_C=\varepsilon(1-e^{-t/RC})\)</span>、<span class="math inline">\(I=(\varepsilon/R)e^{-t/RC}\)</span>。初始电流最大，最终电流趋零，电容电压趋于电源电压。</p>
+<p>During charging from zero, charge and capacitor pd rise towards their final values while current falls exponentially. State the assumed initial condition and constant source voltage.</p>
+<p>断开电源经 <span class="math inline">\(R\)</span> 放电：<span class="math inline">\(Q=Q_0e^{-t/RC}\)</span>、<span class="math inline">\(V_C=V_0e^{-t/RC}\)</span>、<span class="math inline">\(|I|=(V_0/R)e^{-t/RC}\)</span>。若把充电方向取正，放电电流为负；符号取决于选定方向，不能与电流大小混用。</p>
+<p>During discharge, charge, capacitor voltage and current magnitude decay exponentially. Discharge current is negative if charging current defines the positive direction.</p>
+<h3 id="h-27c7774cdf18299448">时间常量和图像 / Time constant and graphs</h3>
+<p><span class="math inline">\(\tau=RC\)</span>；放电一时间常量后剩 <span class="math inline">\(e^{-1}\approx36.8\%\)</span>，充电电荷和电压达到最终值的 <span class="math inline">\(63.2\%\)</span>，但充电电流降到初值的 <span class="math inline">\(36.8\%\)</span>。减半时间 <span class="math inline">\(t_{1/2}=RC\ln2\)</span> 也等于充电初始达到一半最终值的时间，之后每个相同时间只把“未充满差值”减半。</p>
+<p>After one time constant, discharge values and charging current are at 36.8% of initial values; charging voltage and charge reach 63.2% of final values. Equal half-times halve the remaining charging deficit, not repeatedly double accumulated charge.</p>
+<p><span class="math inline">\(I=dQ/dt\)</span>（方向一致时），<span class="math inline">\(I\)</span>–<span class="math inline">\(t\)</span> 有符号面积为电荷转移量。放电 <span class="math inline">\(\ln V=\ln V_0-t/RC\)</span>，斜率 <span class="math inline">\(-1/RC\)</span>；充电应作 <span class="math inline">\(\ln(\varepsilon-V_C)\)</span>–<span class="math inline">\(t\)</span>，不能直接把上升的 <span class="math inline">\(\ln V_C\)</span> 当直线。</p>
+<p>Current relates to the charge gradient and its area gives transferred charge. Discharge voltage is linear on a natural-log plot; charging requires the remaining voltage deficit, not <span class="math inline">\(\ln V_C\)</span>.</p>
+<h3 id="h-9fc21ec6ce94b9f044">必做实验6 / Required practical 6</h3>
+<p>电压表并联电容，充电后切换到已知电阻放电，记录多组 <span class="math inline">\((t,V_C)\)</span>；选择可可靠采样的 <span class="math inline">\(RC\)</span>。由对数图斜率求 <span class="math inline">\(RC=-1/\mathrm{gradient}\)</span>，还可用 <span class="math inline">\(1/e\)</span> 点和初始切线交点交叉检查。</p>
+<p>Record capacitor pd against time through a known resistance. Choose a resolvable time constant and determine it from a log-linear gradient, cross-checking with the <span class="math inline">\(1/e\)</span> point or initial tangent.</p>
+<p>高阻表仍可能与放电电阻并联，使实际电阻变小；检查漏电、开关与导线电阻、实际电容值和采样时间。无需用积分推导作为额外记忆负担。</p>
+<p>Meter loading and leakage can change the effective resistance and fitted time constant. Check actual component values and timing resolution.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/11fbe687130c053bc6.html#h-79de2f0272c62153cb">3.9.1</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/d17fce1b856845b8e2.png" target="_blank"><img alt="3.9.1-S006-P01" decoding="async" loading="lazy" src="/media/d17fce1b856845b8e2.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/2044903068e9a93db0.png" target="_blank"><img alt="3.9.1-S007-P01" decoding="async" loading="lazy" src="/media/2044903068e9a93db0.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/7580e1a47a68b13846.png" target="_blank"><img alt="3.9.1-S008-P01" decoding="async" loading="lazy" src="/media/7580e1a47a68b13846.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h3 id="h-87f5489e7a101d6e53">U3 RC charge discharge</h3>
+<a class="image-link" href="/media/36e6a6607e0d13423a.png" target="_blank"><img alt="U3_RC_charge_discharge" decoding="async" loading="lazy" src="/media/36e6a6607e0d13423a.png" style="max-width:min(100%,1100px)"/></a>
+<p>理想 RC 充放电图；电流图取大小，一时间常量后放电剩36.8%、充电达63.2%。 Ideal RC curves; current magnitude shown.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>必做实验 6：定时测电压，选择足够大的 RC 和高阻电压表，利用对数直线求时间常量并重复。</p>
+<p>Required practical 6: measure voltage at timed intervals; use a large RC for readable changes and a high-resistance voltmeter; plot <span class="math inline">\(\ln V\)</span> against time to determine RC, and repeat.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>充电不能直接套放电式；欧姆乘法拉的单位为秒。</p>
+<p>Do not use the discharge equation unchanged for charging. Units <span class="math inline">\(\Omega\times\mathrm{F}\)</span> simplify to seconds.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-ace69260d68f2b0e99">3.9.1 方法 1 · 充放电路径、指数与图像 / RC paths, exponentials and graphs</h3>
+<ol>
+<li>按开关状态重新找充电或放电回路的等效 <span class="math inline">\(R\)</span>，不要把只在另一状态接通的电阻算入 <span class="math inline">\(RC\)</span>。 / Find the resistance of the active path.</li>
+<li>放电 <span class="math inline">\(Q,V,I\)</span> 的幅值按 <span class="math inline">\(e^{-t/RC}\)</span> 衰减；充电 <span class="math inline">\(V_C=\varepsilon(1-e^{-t/RC})\)</span>，而电流和电阻电压衰减。切换后电流可反号，电容电压不能无原因突跳。 / Distinguish capacitor voltage, resistor voltage and current direction.</li>
+<li><span class="math inline">\(\tau=RC\)</span>、<span class="math inline">\(t_{1/2}=RC\ln2\)</span>；经过一时间常数放电剩36.8%，充电达到63.2%。问“失去75%”应以剩25%代入。 / Use the remaining fraction.</li>
+<li><span class="math inline">\(\ln Q\)</span>–<span class="math inline">\(t\)</span> 斜率为 <span class="math inline">\(-1/(RC)\)</span>，截距需取指数得到 <span class="math inline">\(Q_0\)</span>。任意两放电时刻 <span class="math inline">\(\tau=-\Delta t/\ln(Q_2/Q_1)\)</span>；充电图使用距离最终值的差，不能对 <span class="math inline">\(V_C\)</span> 直接取衰减比。 / Take ratios of the exponentially decaying quantity.</li>
+<li>恒流充电 <span class="math inline">\(Q=Q_0+It\)</span>，<span class="math inline">\(dV/dt=I/C\)</span>，不是固定电阻下的指数充电；要随电容电压升高而减小串联电阻。 / Identify the charging regime before choosing an equation.</li>
+<li>等时间采样的 <span class="math inline">\(V_C\)</span>–<span class="math inline">\(I\)</span> 图虽是直线，点会随电流下降变密；<span class="math inline">\(V_C=\varepsilon-IR\)</span>，放电幅值关系则为 <span class="math inline">\(V_C=|I|R\)</span>。 / Do not confuse a straight locus with uniform motion along it.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/85774081db063392dc.html">PH03 · 201901 · Q02</a>；<a class="internal-link" href="/notes/8f0aca8c943fefc1e1.html">PH03 · 202001 · Q02</a>；<a class="internal-link" href="/notes/4c823c7c4292c73ae6.html">PH03 · 202301 · Q04</a>；<a class="internal-link" href="/notes/d4bccd8dae4c34465e.html">PH03 · 202501 · Q04</a>；<a class="internal-link" href="/notes/955046ac5f4fa4610d.html">PH03 · 202506 · Q06</a>。</p>
+<h3 id="h-394e8db99843fd8876">3.9.1 方法 2 · 电容能量、闪光与指数检验 / Capacitor energy, flashes and exponential tests</h3>
+<ul>
+<li>电容从 <span class="math inline">\(V_i\)</span> 降到 <span class="math inline">\(V_f\)</span>，放出能量 <span class="math inline">\(\frac12C(V_i^2-V_f^2)\)</span>，不是 <span class="math inline">\(\frac12C(V_i-V_f)^2\)</span>。电压减半只剩四分之一能量。 / Subtract energies, not voltages inside one square.</li>
+<li>理想恒压源经电阻把空电容充满，电源提供 <span class="math inline">\(CV^2\)</span>，电容储存 <span class="math inline">\(CV^2/2\)</span>，另一半在电阻耗散。 / Track energy supplied as well as energy stored.</li>
+<li>两隔离电容并联重分配时守恒的是总电荷，最终同电压；初末储能一般不同，差额经回路耗散或辐射。 / Charge conservation alone does not imply stored-energy conservation.</li>
+<li>增大 <span class="math inline">\(C\)</span> 在同初电压下增加持续时间和总能量，<strong>初始</strong>电流或亮度未必增大。灯泡电阻随温度变，光强还有热响应，不应自动视为指数。 / Distinguish initial power, duration and thermal lag.</li>
+<li>用至少三个读数检验两个相同时间间隔的比值，或比较两个半衰时间；只见曲线下降不能证明指数。 / Test a constant fractional change quantitatively.</li>
+<li>实验选取 <span class="math inline">\(RC\)</span> 与记录分辨率匹配；毫秒过程应用数据记录，不能靠手动秒表追踪。 / Justify instruments from the timescale.</li>
+</ul>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/1ff9c14f66a8eacc31.html">PH03 · 201806 · Q05</a>；<a class="internal-link" href="/notes/083101cb68cacab0b9.html">PH03 · 202101 · Q06</a>；<a class="internal-link" href="/notes/cd9fbdf34429bada3d.html">PH03 · 201806 · Q20</a>；<a class="internal-link" href="/notes/a3b3ccb0f384b5a6a3.html">PH03 · 202601 · Q04</a>；<a class="internal-link" href="/notes/d4bccd8dae4c34465e.html">PH03 · 202501 · Q04</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (51)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/c32bdba4301dae4eda.html">PH03 · 2018 specimen paper · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1ff9c14f66a8eacc31.html">PH03 · 201806 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cd9fbdf34429bada3d.html">PH03 · 201806 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/09f461c391a370c2db.html">PH03 · 201806 · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8f06a7fe5c432c04f5.html">PH03 · 201806 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/85774081db063392dc.html">PH03 · 201901 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/801f42671d83f390f8.html">PH03 · 201901 · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/fd9257502213a3d273.html">PH03 · 201901 · Q26</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6cd10ca5e48a958b52.html">PH03 · 201906 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3dc9ecd951754efb40.html">PH03 · 201906 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8df1116b1ccd838af8.html">PH03 · 201906 · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5be4061d5f9e07097a.html">PH03 · 201906 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8f0aca8c943fefc1e1.html">PH03 · 202001 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1e06becc11a54e3a56.html">PH03 · 202001 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2e2f561db0391742c6.html">PH03 · 202001 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c4dcd66f11b34a961c.html">PH03 · 202001 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9ed85e9345117aef0c.html">PH03 · 202001 · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/083101cb68cacab0b9.html">PH03 · 202101 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f0edeb7b2b6430eaf7.html">PH03 · 202101 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dd97e0025501b7c41f.html">PH03 · 202101 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3c74bec704d74b913e.html">PH03 · 202201 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/20930232f99c994358.html">PH03 · 202201 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/272c653f85369eb292.html">PH03 · 202201 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5c1f3d4423f47b1ddf.html">PH03 · 202206 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6df56d9dcb64ca207c.html">PH03 · 202206 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a74fef3d2fdc255418.html">PH03 · 202206 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4c823c7c4292c73ae6.html">PH03 · 202301 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/bd9a9ea6cbbb54d7dc.html">PH03 · 202301 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/370b662fad180c14da.html">PH03 · 202301 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/867bfa8e5a6f5a086f.html">PH03 · 202301 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/15b77be945d3df2787.html">PH03 · 202301 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0d3feb1ea5509a12bb.html">PH03 · 202306 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e3dc140b40028b00f5.html">PH03 · 202306 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cd508ef5dfe3c3f8da.html">PH03 · 202401 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b319a710ce23eb729c.html">PH03 · 202401 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cc2d06b0e7b36b4829.html">PH03 · 202406 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dda7a4c7858beae198.html">PH03 · 202406 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d4bccd8dae4c34465e.html">PH03 · 202501 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/448083d170babf581e.html">PH03 · 202501 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d5a51093aea1ba40dc.html">PH03 · 202501 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ad3e0a995707408197.html">PH03 · 202501 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/955046ac5f4fa4610d.html">PH03 · 202506 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a3b3ccb0f384b5a6a3.html">PH03 · 202601 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/46fcdec62d513854c5.html">PH03 · 202601 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0efdc118f48edb728f.html">PH03 · 202601 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/283fa7bc0ad9be50e3.html">PH03 · 202601 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9e4548123ef2e6a09a.html">PH03 · 202606 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d7f27a48522c688667.html">PH03 · 202606 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/741690e7ec18cf7f10.html">PH03 · 202606 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/994b91423e7a65cda5.html">PH03 · 202606 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dd4f0e84368464c69c.html">PH03 · 202606 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/f7c6092e7cb47bdc8b.html">U3逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/a0fc8fef2ecf85e059.html">课件例题与复述</a> · <a class="internal-link" href="/notes/80a70fb9e633991e8e.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/ac76d14d542d0654ef.html">3.4.6 电动势与内阻</a>：电容充放电与时间常量 ↔ 电动势与内阻</li>
+<li><a class="internal-link" href="/notes/45ed8f80a371cf4bbf.html">3.8.4 电容、介质与储能</a>：电容与 RC 过程 / capacitance to RC</li>
+<li><a class="internal-link" href="/notes/3181cffbc7942635dd.html">3.9.2 放射性指数衰变</a>：共同指数模型 / exponential analogy</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.9.1。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 346–349；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/93986c12a359623d9d.html">U3PM07 RC指数变化与对数图 - Charge and discharge</a></li>
+</ul>
+<h2 id="h-ba7d346d099e7e735f">必做实验入口 / Required practical</h2>
+<a class="internal-link" href="/notes/b354832139fe2be19a.html">RP6 电容充放电与RC测定</a>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<a class="internal-link" href="/notes/654434b5a0efd8fc36.html">论述题练习 / Written-response practice</a>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/ac76d14d542d0654ef.html">3.4.6 电动势与内阻 / Electromotive force and internal resistance</a></li><li><a href="/notes/da867bb75d0c7de166.html">U3 场及其影响 / Fields and their consequences</a></li><li><a href="/notes/11fbe687130c053bc6.html">U3 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/c8418eb48964cf69c4.html">U3 考纲框架 / Specification map</a></li><li><a href="/notes/7f45414ad08fb346de.html">3.9.1 电容器的充电和放电 / CAPACITOR CHARGE AND DISCHARGE</a></li><li><a href="/notes/45ed8f80a371cf4bbf.html">3.8.4 电容、介质与储能 / Capacitors</a></li><li><a href="/notes/3181cffbc7942635dd.html">3.9.2 放射性指数衰变 / Exponential changes in radioactivity</a></li><li><a href="/notes/b354832139fe2be19a.html">RP6 电容充放电与RC测定 / Required practical 6 - Capacitor charge and discharge</a></li><li><a href="/notes/85c3113ba416dabdfb.html">time constant — 时间常量</a></li><li><a href="/notes/70af9f4d38e4bcdff8.html">U3 来源与范围 / Sources and scope</a></li><li><a href="/notes/f7c6092e7cb47bdc8b.html">U3 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/44abeaa3dfd083945e.html">3.6.2 简谐运动方程、图像与能量 真题练习 / Past-paper practice</a></li><li><a href="/notes/7515b1b55ce3a03349.html">3.8.1 库仑定律与静电力 真题练习 / Past-paper practice</a></li><li><a href="/notes/cf0d18699a56a6c995.html">3.8.2 电场强度与带电粒子偏转 真题练习 / Past-paper practice</a></li><li><a href="/notes/30b738f4a07790e843.html">3.8.3 电势、电势能与等势面 真题练习 / Past-paper practice</a></li><li><a href="/notes/d0b212c31b6a7c9cb0.html">3.8.4 电容、介质与储能 真题练习 / Past-paper practice</a></li><li><a href="/notes/80a70fb9e633991e8e.html">3.9.1 电容充放电与时间常量 真题练习 / Past-paper practice</a></li><li><a href="/notes/71fe264ec1b44a5d4b.html">3.10.5 交流有效值与示波器 真题练习 / Past-paper practice</a></li><li><a href="/notes/fa767480b1139c9687.html">PH03 2018 specimen paper / Paper index</a></li><li><a href="/notes/c32bdba4301dae4eda.html">PH03 2018 specimen paper Q07</a></li><li><a href="/notes/d90d9353211feec3fc.html">PH03 201806 / Paper index</a></li><li><a href="/notes/1ff9c14f66a8eacc31.html">PH03 201806 Q05</a></li><li><a href="/notes/cd9fbdf34429bada3d.html">PH03 201806 Q20</a></li><li><a href="/notes/09f461c391a370c2db.html">PH03 201806 Q21</a></li><li><a href="/notes/8f06a7fe5c432c04f5.html">PH03 201806 Q23</a></li><li><a href="/notes/0b84b05c25fbc49f80.html">PH03 201901 / Paper index</a></li><li><a href="/notes/85774081db063392dc.html">PH03 201901 Q02</a></li><li><a href="/notes/801f42671d83f390f8.html">PH03 201901 Q25</a></li><li><a href="/notes/fd9257502213a3d273.html">PH03 201901 Q26</a></li><li><a href="/notes/c770501e3c411d9d06.html">PH03 201906 / Paper index</a></li><li><a href="/notes/6cd10ca5e48a958b52.html">PH03 201906 Q03</a></li><li><a href="/notes/3dc9ecd951754efb40.html">PH03 201906 Q18</a></li><li><a href="/notes/8df1116b1ccd838af8.html">PH03 201906 Q21</a></li><li><a href="/notes/5be4061d5f9e07097a.html">PH03 201906 Q22</a></li><li><a href="/notes/c28e405421b2dbdbf3.html">PH03 202001 / Paper index</a></li><li><a href="/notes/8f0aca8c943fefc1e1.html">PH03 202001 Q02</a></li><li><a href="/notes/1e06becc11a54e3a56.html">PH03 202001 Q22</a></li><li><a href="/notes/2e2f561db0391742c6.html">PH03 202001 Q23</a></li><li><a href="/notes/c4dcd66f11b34a961c.html">PH03 202001 Q24</a></li><li><a href="/notes/9ed85e9345117aef0c.html">PH03 202001 Q25</a></li><li><a href="/notes/9056240cebaa303286.html">PH03 202101 / Paper index</a></li><li><a href="/notes/083101cb68cacab0b9.html">PH03 202101 Q06</a></li><li><a href="/notes/f0edeb7b2b6430eaf7.html">PH03 202101 Q17</a></li><li><a href="/notes/dd97e0025501b7c41f.html">PH03 202101 Q18</a></li><li><a href="/notes/02136a2e67ef51d964.html">PH03 202201 / Paper index</a></li><li><a href="/notes/3c74bec704d74b913e.html">PH03 202201 Q04</a></li><li><a href="/notes/20930232f99c994358.html">PH03 202201 Q12</a></li><li><a href="/notes/272c653f85369eb292.html">PH03 202201 Q15</a></li><li><a href="/notes/541e1596ffb4ac0cb3.html">PH03 202206 / Paper index</a></li><li><a href="/notes/5c1f3d4423f47b1ddf.html">PH03 202206 Q05</a></li><li><a href="/notes/6df56d9dcb64ca207c.html">PH03 202206 Q15</a></li><li><a href="/notes/a74fef3d2fdc255418.html">PH03 202206 Q16</a></li><li><a href="/notes/457457bc96f55b4adb.html">PH03 202301 / Paper index</a></li><li><a href="/notes/4c823c7c4292c73ae6.html">PH03 202301 Q04</a></li><li><a href="/notes/bd9a9ea6cbbb54d7dc.html">PH03 202301 Q13</a></li><li><a href="/notes/370b662fad180c14da.html">PH03 202301 Q14</a></li><li><a href="/notes/867bfa8e5a6f5a086f.html">PH03 202301 Q15</a></li><li><a href="/notes/15b77be945d3df2787.html">PH03 202301 Q16</a></li><li><a href="/notes/9db6472a27a9bcadb8.html">PH03 202306 / Paper index</a></li><li><a href="/notes/0d3feb1ea5509a12bb.html">PH03 202306 Q06</a></li><li><a href="/notes/e3dc140b40028b00f5.html">PH03 202306 Q16</a></li><li><a href="/notes/db82f6247ae551f056.html">PH03 202401 / Paper index</a></li><li><a href="/notes/cd508ef5dfe3c3f8da.html">PH03 202401 Q16</a></li><li><a href="/notes/b319a710ce23eb729c.html">PH03 202401 Q17</a></li><li><a href="/notes/dd32a67647d1347e67.html">PH03 202406 / Paper index</a></li><li><a href="/notes/cc2d06b0e7b36b4829.html">PH03 202406 Q05</a></li><li><a href="/notes/dda7a4c7858beae198.html">PH03 202406 Q17</a></li><li><a href="/notes/1f07f31e3f2612fc4a.html">PH03 202501 / Paper index</a></li><li><a href="/notes/d4bccd8dae4c34465e.html">PH03 202501 Q04</a></li><li><a href="/notes/448083d170babf581e.html">PH03 202501 Q13</a></li><li><a href="/notes/d5a51093aea1ba40dc.html">PH03 202501 Q14</a></li><li><a href="/notes/ad3e0a995707408197.html">PH03 202501 Q15</a></li><li><a href="/notes/ae5bee24e0ee1a0c3a.html">PH03 202506 / Paper index</a></li><li><a href="/notes/955046ac5f4fa4610d.html">PH03 202506 Q06</a></li><li><a href="/notes/676e3cac4eb704e930.html">PH03 202601 / Paper index</a></li><li><a href="/notes/a3b3ccb0f384b5a6a3.html">PH03 202601 Q04</a></li><li><a href="/notes/46fcdec62d513854c5.html">PH03 202601 Q14</a></li><li><a href="/notes/0efdc118f48edb728f.html">PH03 202601 Q15</a></li><li><a href="/notes/283fa7bc0ad9be50e3.html">PH03 202601 Q16</a></li><li><a href="/notes/bcd518c140cf55fadf.html">PH03 202606 / Paper index</a></li><li><a href="/notes/9e4548123ef2e6a09a.html">PH03 202606 Q06</a></li><li><a href="/notes/d7f27a48522c688667.html">PH03 202606 Q12</a></li><li><a href="/notes/741690e7ec18cf7f10.html">PH03 202606 Q13</a></li><li><a href="/notes/994b91423e7a65cda5.html">PH03 202606 Q14</a></li><li><a href="/notes/dd4f0e84368464c69c.html">PH03 202606 Q15</a></li><li><a href="/notes/5cc9287fea3846d511.html">U3 图像与示意图 / Graphs and diagrams</a></li><li><a href="/notes/abbe7bdcbe79ea5fb2.html">U3 实验、数据与评价 / Practical data and evaluation</a></li><li><a href="/notes/2365f7ef96ad9dbd32.html">PH03 2019年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/cefcf52bd213255a3a.html">PH03 2020年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/432ba9779fbb9fd7a6.html">PH03 2025年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/08195efc9d60131b66.html">PH03 2025年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/77533e2cb2a07351c4.html">PH03 2026年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/038e4df7c4d3390fcf.html">PH03 · 2021年1月 / January 2021 · Q06.3 · Capacitor charging energy / 电容器充电能量</a></li><li><a href="/notes/77eca743dd74ee6903.html">PH03 · 2023年1月 / January 2023 · Q04.6 · Measuring a very small capacitance / 测量极小电容</a></li><li><a href="/notes/654434b5a0efd8fc36.html">3.9.1 电容充放电与时间常量 / Capacitor charge and discharge · 论述题练习 / Written-response practice</a></li><li><a href="/notes/cc07f52d2a234aac23.html">PH03 · 2019年1月 / January 2019 · Q02.1 · Total charging current / 总充电电流</a></li><li><a href="/notes/2c14bb4abf72742216.html">PH03 · 2019年1月 / January 2019 · Q02.4 · Increasing discharge time / 增大放电时间</a></li><li><a href="/notes/9b8c079be9109e6f85.html">PH03 · 2020年1月 / January 2020 · Q02.5 · Comparing capacitor discharge circuits / 比较电容放电电路</a></li><li><a href="/notes/52f93c305fda21af0b.html">PH03 · 2021年1月 / January 2021 · Q06.5 · Larger camera-flash capacitor / 更大电容的闪光灯</a></li><li><a href="/notes/bfd0c7ff846bba870f.html">PH03 · 2023年1月 / January 2023 · Q04.2 · Maintaining charging current / 保持充电电流</a></li><li><a href="/notes/972c1e35625448a2b7.html">PH03 · 2023年6月 / June 2023 · Q06.4 · Constant-power supply choice / 恒功率供电选择</a></li><li><a href="/notes/2b81345efa867f004c.html">PH03 · 2024年6月 / June 2024 · Q05.1 · Discharge graph area / 放电图像面积</a></li><li><a href="/notes/b3b7c141cf1d0af6f9.html">PH03 · 2025年1月 / January 2025 · Q04.3 · Charging points getting closer / 充电数据点间距变小</a></li><li><a href="/notes/7934f2f27752866b58.html">PH03 · 2025年1月 / January 2025 · Q04.6 · Fast data acquisition / 快速数据采集</a></li><li><a href="/notes/e267fae12d1abd66b2.html">PH03 · 2025年6月 / June 2025 · Q06.4 · Charging then discharging / 先充电后放电</a></li><li><a href="/notes/cbce9d96377dc616b9.html">PH03 · 2026年1月 / January 2026 · Q04.3 · Capacitor-lamp light pulse / 电容器灯泡光脉冲</a></li><li><a href="/notes/9e5cf897a8a5dfd8ee.html">PH03 · 2026年1月 / January 2026 · Q04.5 · Parallel lamps and flash time / 并联灯泡与闪光时间</a></li><li><a href="/notes/93986c12a359623d9d.html">RC指数变化与对数图 / Charge and discharge</a></li><li><a href="/notes/0c23570ef8081a7a20.html">U3 3.9 指数变化词汇 / Vocabulary</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U3/02 知识节点/3.9 指数变化/3.9.1 电容充放电与时间常量 - Capacitor charge and discharge.md","url":"/notes/4966b0336b9fc63e3c.html","unit":"U3"}</script></body></html>

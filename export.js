@@ -1,0 +1,17 @@
+import {api,modal,$,toast,esc} from './core.js';
+let busy=false;
+export async function exportDocument(type,id,kind,format='pdf'){
+ if(busy){toast('正在生成文件，请稍候');return;}busy=true;let cancelled=false;
+ const task=modal('正在生成 '+format.toUpperCase(),'<p class="muted">题目与答案分别导出，保留原题图、题号与分值。</p><progress id="export-progress" max="100" value="0"></progress><p id="export-status" class="muted">正在读取试卷…</p>',{confirm:'取消生成',cancel:false});task.then(()=>{cancelled=true;});
+ const check=()=>{if(cancelled)throw new DOMException('已取消生成','AbortError');};
+ const path='/export?'+new URLSearchParams({type,id,kind}),canvas=document.createElement('canvas'),parts=[];
+ try{
+  const manifest=await api(path);check();
+  async function image(url){const response=await fetch(url,{credentials:'same-origin'});if(!response.ok)throw new Error('题图读取失败，请重新登录后重试');const blob=await response.blob();const src=URL.createObjectURL(blob);return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve({image:img,blob,release:()=>URL.revokeObjectURL(src)});img.onerror=()=>{URL.revokeObjectURL(src);reject(new Error('图片无法打开'));};img.src=src;});}
+  const jpeg=()=>new Promise((resolve,reject)=>canvas.toBlob(b=>b?b.arrayBuffer().then(resolve):reject(new Error('页面生成失败')),'image/jpeg',.94));
+  const deps={canvas,manifest,check,append:async data=>parts.push(data),getItem:i=>api(path+'&item='+i+'&version='+manifest.version),loadImage:async url=>image(url),jpeg,progress:({question,count})=>{if($('#export-progress')){$('#export-progress').value=Math.round(question/count*100);$('#export-status').textContent=`正在生成第 ${question} / ${count} 题…`;}}};
+  if(format==='pdf')await window.PhysicsShared.pdf.renderPdf(deps);
+  else await window.PhysicsShared.docx.renderDocx({...deps,images:async(block,consume)=>{const f=await image(block.url);try{const im=f.image,ratio=515/im.width,height=im.height*ratio;if(height<=900){const bytes=await f.blob.arrayBuffer();const ext=f.blob.type==='image/png'?'png':'jpg';await consume({data:bytes,extension:ext,width:515*Math.min(1,620/height),height:Math.min(height,620)});}else{canvas.width=1545;const ctx=canvas.getContext('2d');let offset=0;while(offset<im.height){check();const take=Math.min(im.height-offset,660/ratio);canvas.height=Math.ceil(take*canvas.width/im.width);ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(im,0,offset,im.width,take,0,0,canvas.width,canvas.height);await consume({data:await jpeg(),extension:'jpg',width:515,height:take*ratio});offset+=take;}}}finally{f.release();}}});
+  check();const file=new Blob(parts,{type:format==='pdf'?'application/pdf':'application/vnd.openxmlformats-officedocument.wordprocessingml.document'}),url=URL.createObjectURL(file),a=document.createElement('a');a.href=url;a.download=(manifest.title+'-'+manifest.label.split(' / ')[0]).replace(/[\\/:*?"<>|]/g,'-')+'.'+format;if($('#modal-confirm'))$('#modal-confirm').click();await modal('文件已生成',`<p class="muted">${esc(a.download)}</p><p style="margin-top:16px">点击下方按钮，将文件保存到设备。</p><a id="download-prepared" class="btn full" style="margin-top:20px" href="${url}" download="${esc(a.download)}">下载 ${format==='pdf'?'PDF':'Word'} 文件 ↓</a>`,{confirm:'关闭',cancel:false});setTimeout(()=>URL.revokeObjectURL(url),60000);
+ }catch(e){if($('#modal-confirm'))$('#modal-confirm').click();if(e.name!=='AbortError')throw e;toast('已取消生成');}finally{busy=false;}
+}

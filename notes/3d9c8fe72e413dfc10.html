@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>线材拉伸与杨氏模量模型 / Young modulus · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/07 常用物理模型</div><h1 id="h-b245b16c59ef73baa3">线材拉伸与杨氏模量模型 / Young modulus</h1>
+<p><a class="internal-link" href="/notes/72caa2ae2f28c228eb.html">常用物理模型总目录 / Model index</a> · <a class="internal-link" href="/notes/a9fe07dc865bd25180.html">关键词速查 / Keyword lookup</a></p>
+<p><strong>考纲 / Specification:</strong> <a class="internal-link" href="/notes/410e45032b43fd2965.html">3.2.9 固体的宏观性质 - Bulk properties of solids</a> · <a class="internal-link" href="/notes/44178f1b0af177db32.html">3.2.10 杨氏模量 - The young modulus</a></p>
+<h2 id="h-18e70b49e22d9d832b">题目关键词与翻译 / Keyword cues and meanings</h2>
+<table>
+<thead>
+<tr>
+<th>English cue</th>
+<th>中文</th>
+<th>应如何判断 / Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>wire / cable</strong></td>
+<td>细线 / 缆绳</td>
+<td>受拉的试样 / A sample under tension.</td>
+</tr>
+<tr>
+<td><strong>Young modulus / same material</strong></td>
+<td>杨氏模量 / 相同材料</td>
+<td>相同线性材料的E不随试样尺寸改变 / E is a material property in the linear range.</td>
+</tr>
+<tr>
+<td><strong>diameter / original length</strong></td>
+<td>直径 / 原长</td>
+<td>面积含直径平方，应变用原长 / Area uses diameter squared; strain uses original length.</td>
+</tr>
+<tr>
+<td><strong>tensile stress / strain</strong></td>
+<td>拉应力 / 拉应变</td>
+<td>区分F/A与伸长/原长 / Distinguish force per area from fractional extension.</td>
+</tr>
+<tr>
+<td><strong>joined / in series</strong></td>
+<td>连接 / 串接</td>
+<td>按连接点受力判断各段拉力 / Check forces at the join.</td>
+</tr>
+</tbody>
+</table>
+<p>关键词用于提示候选模型；须结合对象、方向、阶段和题设条件确认。 / Keywords suggest a model; verify the system, direction, stage and stated conditions.</p>
+<h2 id="h-a0c6d95dbc33fbe5bf">核心模型与条件 / Model and conditions</h2>
+<p>线性弹性范围中，材料的杨氏模量连接载荷、试样几何与伸长。 / Young modulus links force, geometry and extension in the linear elastic range.</p>
+<h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
+<div class="math block">
+\[A_0=\frac{\pi d^2}{4},\qquad \sigma=\frac{F}{A_0},\qquad \epsilon=\frac{x}{L_0},\]
+</div>
+<div class="math block">
+\[E=\frac{\sigma}{\epsilon}=\frac{FL_0}{A_0x},\qquad x=\frac{FL_0}{EA_0},\qquad k=\frac{EA_0}{L_0}.\]
+</div>
+<h2 id="h-bca03c68c3ddc546db">解题流程 / Method</h2>
+<ol>
+<li>用原长、原始截面积及实际拉力；伸长量不是末长度。 / Use original geometry and actual tension.</li>
+<li>同材料、同载荷和同原长时，直径加倍使伸长变为四分之一。 / Extension scales inversely with diameter squared under those fixed conditions.</li>
+<li>求E时，F–x梯度 <span class="math inline">\(k\)</span> 还须乘 <span class="math inline">\(L_0/A_0\)</span>；<span class="math inline">\(\sigma\)</span>–<span class="math inline">\(\epsilon\)</span>线性梯度直接给E。 / Interpret the graph before extracting the modulus.</li>
+<li>串接轻线、中间无额外外力时各段拉力相同；截面积不同则应力、应变、伸长一般不同。 / Equal tension does not imply equal stress or strain.</li>
+</ol>
+<h2 id="h-533bbe8b257399f91d">易错判断 / Checks</h2>
+<p><strong>相同材料意味着E相同，未必k相同。</strong> 应变没有单位；E和应力单位为Pa。 / Stiffness depends on geometry; strain is dimensionless.</p>
+<h2 id="h-ab0fd79fed886214b4">原课件图像辅助 / Source-slide figures</h2>
+<a class="image-link" href="/media/9486ede0c1a7ec8998.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/9486ede0c1a7ec8998.png"/></a>
+<p><strong>读图 / Reading:</strong> 杨氏模量取起始线性弹性段的斜率。图横轴为应变百分数，计算前须除以100转成无量纲应变。 / Use the initial linear gradient; convert percent strain to dimensionless strain before calculating E.</p>
+<h2 id="h-56859aaf0d7bd7dcd3">真题识别实例 / Recognition in past papers</h2>
+<ul>
+<li><a class="internal-link" href="/notes/5566eaadf8d9007c88.html#h-c6d22df10e88497e61">2026年6月 / June 2026 · Q11</a>：题干线索 <strong>Young modulus</strong>。11.3：从应变和E求应力，再乘面积求拉力与7.5 kN上限比较 / Infer tension from strain, modulus and cross-section.</li>
+<li><a class="internal-link" href="/notes/5566eaadf8d9007c88.html#h-6a330d6182246896cb">2026年6月 / June 2026 · Q22</a>：题干线索 <strong>same material</strong>。两段线材材料、原长相同但直径不同：比较拉力、应力、应变及其比值 / Separate constant material properties from geometry-dependent quantities.</li>
+</ul>
+<p>点击题号进入对应知识点的原题位置；评分标准在题目下方默认折叠。以上说明为自编模型分析。 / Links open the original question in its topic bank, with the mark scheme collapsed below; model explanations are original summaries.</p>
+<h2 id="h-015b5c1b7e8a13c76a">知识与模型联系 / Knowledge and model connections</h2>
+<p><strong>基础知识 / Knowledge:</strong> <a class="internal-link" href="/notes/88f5dc7b78c29fabe6.html">D25 拉应力与拉应变 - Tensile stress and strain</a> · <a class="internal-link" href="/notes/36bed4fe756eb58c01.html">D28 杨氏模量与材料刚度 - Young modulus and material stiffness</a> · <a class="internal-link" href="/notes/c380fa2b733282bfba.html">P02 必做实验2：线材杨氏模量 - Required practical 2 - Young modulus of a wire</a> · <a class="internal-link" href="/notes/f627228e921d767326.html">D24 胡克定律与弹性极限 - Hooke’s law and elastic limit</a></p>
+<p><strong>关联模型 / Models:</strong> <a class="internal-link" href="/notes/2e19dabdb29d0e5ee9.html">PM01 实验图像与不确定度模型</a> · <a class="internal-link" href="/notes/4483c0301bc6ec5a87.html">PM09 牛顿定律与连接体模型</a> · <a class="internal-link" href="/notes/095cf571e6dece4852.html">PM15 密度质量与几何体积模型</a> · <a class="internal-link" href="/notes/383cd7b0bbf35ab03a.html">PM16 弹簧形变与弹性储能模型</a> · <a class="internal-link" href="/notes/13997d967967c432d3.html">PM17 材料弹性塑性与曲线模型</a></p>
+<h2 id="h-9be9917ee1a960960c">复述提示 / Retrieval prompt</h2>
+<p>合上公式，说明“关键词提示什么 → 还需什么条件 → 使用什么规律 → 哪一步需要符号或单位检查”。 / Explain the cue, the extra condition, the governing law and the sign or unit check without looking at the equations.</p>
+<p><strong>依据 / Sources:</strong> <a class="internal-link" href="/notes/0b5dec2e245a870dec.html">资料来源与范围 - Sources and scope</a>；对应知识笔记中的定义、课件页码及PH01评分标准。 / The linked knowledge notes record definitions, slide provenance and mark-scheme evidence.</p>
+<section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/f627228e921d767326.html">胡克定律与弹性极限 / Hooke’s law and elastic limit</a></li><li><a href="/notes/88f5dc7b78c29fabe6.html">拉应力与拉应变 / Tensile stress and strain</a></li><li><a href="/notes/36bed4fe756eb58c01.html">杨氏模量与材料刚度 / Young modulus and material stiffness</a></li><li><a href="/notes/c380fa2b733282bfba.html">必做实验2：线材杨氏模量 / Required practical 2: Young modulus of a wire</a></li><li><a href="/notes/6539cad3d41757ae0c.html">D24 胡克定律与弹性极限 真题练习 / Past-paper practice</a></li><li><a href="/notes/ef6e02ef19d528266a.html">D25 拉应力与拉应变 真题练习 / Past-paper practice</a></li><li><a href="/notes/8e3481baebd5af9b8c.html">D26 材料行为与应力应变曲线 真题练习 / Past-paper practice</a></li><li><a href="/notes/5566eaadf8d9007c88.html">D28 杨氏模量与材料刚度 真题练习 / Past-paper practice</a></li><li><a href="/notes/08ef2d4353ae9eea31.html">P02 必做实验2：线材杨氏模量 真题练习 / Past-paper practice</a></li><li><a href="/notes/be681e12898380fc52.html">PH01 · 2018 样卷 / Specimen 2018 · Q07 · 题目 / Question</a></li><li><a href="/notes/00b78192954238106c.html">PH01 · 2018 样卷 / Specimen 2018 · Q23 · 题目 / Question</a></li><li><a href="/notes/f2319e1ff16da17a86.html">PH01 · 2017年6月 / June 2017 · Q18 · 题目 / Question</a></li><li><a href="/notes/ffe5dba32e212e4ad5.html">PH01 · 2017年6月 / June 2017 · Q19 · 题目 / Question</a></li><li><a href="/notes/466da60cf8ad58640a.html">PH01 · 2017年6月 / June 2017 · Q20 · 题目 / Question</a></li><li><a href="/notes/5929a3086ec36e38a6.html">PH01 · 2018年1月 / January 2018 · Q08 · 题目 / Question</a></li><li><a href="/notes/50baecc6d8df9c8c4e.html">PH01 · 2018年1月 / January 2018 · Q19 · 题目 / Question</a></li><li><a href="/notes/b54536006dce4ecffc.html">PH01 · 2018年6月 / June 2018 · Q04 · 题目 / Question</a></li><li><a href="/notes/20b0c54f4136265d66.html">PH01 · 2018年6月 / June 2018 · Q10 · 题目 / Question</a></li><li><a href="/notes/cc8b475d130f92e818.html">PH01 · 2018年6月 / June 2018 · Q13 · 题目 / Question</a></li><li><a href="/notes/54f8ac8d19d9322b51.html">PH01 · 2019年1月 / January 2019 · Q07 · 题目 / Question</a></li><li><a href="/notes/747c8e22278e909ea6.html">PH01 · 2019年1月 / January 2019 · Q19 · 题目 / Question</a></li><li><a href="/notes/23876f92fb07984c8d.html">PH01 · 2020年1月 / January 2020 · Q20 · 题目 / Question</a></li><li><a href="/notes/a45f570ea1a84d4cb5.html">PH01 · 2022年6月 / June 2022 · Q10 · 题目 / Question</a></li><li><a href="/notes/16eb61c0b820a2d1ae.html">PH01 · 2022年6月 / June 2022 · Q16 · 题目 / Question</a></li><li><a href="/notes/7c620fbf503f8e37e9.html">PH01 · 2023年1月 / January 2023 · Q09 · 题目 / Question</a></li><li><a href="/notes/abb97e066f03f6a6e4.html">PH01 · 2023年6月 / June 2023 · Q10 · 题目 / Question</a></li><li><a href="/notes/66b944c5cf8a90f152.html">PH01 · 2023年6月 / June 2023 · Q19 · 题目 / Question</a></li><li><a href="/notes/c8abf4451129b0c330.html">PH01 · 2024年1月 / January 2024 · Q01 · 题目 / Question</a></li><li><a href="/notes/bde06e77b7a1b1183f.html">PH01 · 2024年1月 / January 2024 · Q03 · 题目 / Question</a></li><li><a href="/notes/34468dd4da9cdfef3f.html">PH01 · 2024年1月 / January 2024 · Q04 · 题目 / Question</a></li><li><a href="/notes/891a903abf1db781db.html">PH01 · 2024年1月 / January 2024 · Q15 · 题目 / Question</a></li><li><a href="/notes/73f88a8d771fd4430c.html">PH01 · 2024年6月 / June 2024 · Q09 · 题目 / Question</a></li><li><a href="/notes/7927201214da1b6580.html">PH01 · 2025年1月 / January 2025 · Q11 · 题目 / Question</a></li><li><a href="/notes/abd49ab866289285df.html">PH01 · 2025年1月 / January 2025 · Q12 · 题目 / Question</a></li><li><a href="/notes/63c17d06bde16ea021.html">PH01 · 2025年6月 / June 2025 · Q10 · 题目 / Question</a></li><li><a href="/notes/be503f6d06394f9601.html">PH01 · 2026年1月 / January 2026 · Q09 · 题目 / Question</a></li><li><a href="/notes/0d0eba035b3efadcd3.html">PH01 · 2026年1月 / January 2026 · Q19 · 题目 / Question</a></li><li><a href="/notes/9e53eb29e454f0bb7f.html">PH01 · 2026年1月 / January 2026 · Q25 · 题目 / Question</a></li><li><a href="/notes/11ea4f0ad36d5d4a27.html">PH01 · 2026年6月 / June 2026 · Q11 · 题目 / Question</a></li><li><a href="/notes/2d23a506db0388e247.html">PH01 · 2026年6月 / June 2026 · Q22 · 题目 / Question</a></li><li><a href="/notes/72caa2ae2f28c228eb.html">常用物理模型 / Common physics models</a></li><li><a href="/notes/a9fe07dc865bd25180.html">关键词与模型速查 / Keyword-to-model lookup</a></li><li><a href="/notes/2e19dabdb29d0e5ee9.html">实验图像与不确定度模型 / Gradient and uncertainty</a></li><li><a href="/notes/095cf571e6dece4852.html">密度质量与几何体积模型 / Density</a></li><li><a href="/notes/383cd7b0bbf35ab03a.html">弹簧形变与弹性储能模型 / Spring and extension</a></li><li><a href="/notes/13997d967967c432d3.html">材料弹性塑性与曲线模型 / Elastic and plastic</a></li><li><a href="/notes/ea48ca07a7d544d840.html">测量与 U1 基础 / Cross-unit prerequisite practice</a></li><li><a href="/notes/9ef10285fece222b4b.html">PH02 201706 Q10</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U1/07 常用物理模型/PM18 线材拉伸与杨氏模量模型 - Young modulus.md","url":"/notes/3d9c8fe72e413dfc10.html","unit":"U1"}</script></body></html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.4.3 电阻率、热敏电阻与超导 / Resistivity · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U2/02 知识节点/3.4 电学</div><h1 id="h-c27209d7a0ec5397ec">3.4.3 电阻率、热敏电阻与超导 / Resistivity</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/a930fa1575f598c390.html">3.4.3</a>　｜　<a class="internal-link" href="/notes/d51c071167c0e89009.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>电阻率 / resistivity</strong></td>
+<td><span class="math inline">\(\rho\)</span></td>
+<td><span class="math inline">\(\mathrm{\Omega\,m}\)</span></td>
+<td>与质量密度 ρ 区分 / Not mass density.</td>
+</tr>
+<tr>
+<td><strong>电阻 / resistance</strong></td>
+<td><span class="math inline">\(R\)</span></td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>长度 / length</strong></td>
+<td><span class="math inline">\(L,\ l\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>按题目给出的记号 / Use the question's notation.</td>
+</tr>
+<tr>
+<td><strong>面积、横截面积 / area, cross-sectional area</strong></td>
+<td><span class="math inline">\(A,\ A_0\)</span></td>
+<td><span class="math inline">\(\mathrm{m^2}\)</span></td>
+<td>A₀ 表初始横截面积；与活度 A 区分 / A₀ is initial area; not activity A.</td>
+</tr>
+<tr>
+<td><strong>直径 / diameter</strong></td>
+<td><span class="math inline">\(d,\ d_0\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>d₀ 表初始直径 / d₀ is the original diameter.</td>
+</tr>
+<tr>
+<td><strong>热力学温度 / thermodynamic temperature</strong></td>
+<td><span class="math inline">\(T\)</span></td>
+<td><span class="math inline">\(\mathrm{K}\)</span></td>
+<td>气体定律用 K；与周期 T 区分 / Gas laws use kelvin; not period.</td>
+</tr>
+<tr>
+<td><strong>临界温度 / critical temperature</strong></td>
+<td><span class="math inline">\(T_c\)</span></td>
+<td><span class="math inline">\(\mathrm{K}\)</span></td>
+<td>与光学临界角 θ_c 区分 / Not the optical critical angle.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/59ceed9e094019a858.html">resistivity — 电阻率</a></li>
+<li><a class="internal-link" href="/notes/5351601f25184b4522.html">NTC thermistor — 负温度系数热敏电阻</a></li>
+<li><a class="internal-link" href="/notes/9b3681fcab4756952b.html">superconductivity — 超导性</a></li>
+<li><a class="internal-link" href="/notes/88347af05790127411.html">critical temperature — 临界温度</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/59ceed9e094019a858.html#h-485f2ec53559b6043e">↗ resistivity — 电阻率</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A material property equal to the resistance of a uniform specimen multiplied by its cross-sectional area and divided by its length.</p>
+<p><strong>中文：</strong> 均匀试样的电阻与横截面积的乘积除以长度，描述材料本身的性质。</p>
+<p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/3b8c6ce91ffaf30ca5.html">PH02 202101-Q01</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/5351601f25184b4522.html#h-485f2ec53559b6043e">↗ NTC thermistor — 负温度系数热敏电阻</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A resistor whose resistance decreases as its temperature increases.</p>
+<p><strong>中文：</strong> 温度升高时电阻减小的电阻元件。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/9b3681fcab4756952b.html#h-485f2ec53559b6043e">↗ superconductivity — 超导性</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The property of a material having zero resistivity at and below its critical temperature.</p>
+<p><strong>中文：</strong> 材料在临界温度及以下电阻率为零的性质。</p>
+<p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/6164654eedeedf1dec.html">PH02 201801-Q01</a>、<a class="internal-link" href="/notes/f98b9cd8ec79d8c595.html">PH02 202301-Q02</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/88347af05790127411.html#h-485f2ec53559b6043e">↗ critical temperature — 临界温度</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The temperature at and below which a material has zero resistivity.</p>
+<p><strong>中文：</strong> 材料电阻率达到零及保持为零的温度界限。</p>
+<p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/a7b59dcd31cb061e76.html">PH02 202206-Q01</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
+</section>
+<p><strong>真题定义依据 / Mark-scheme checks：</strong> <a class="internal-link" href="/notes/3b8c6ce91ffaf30ca5.html">PH02 202101-Q01</a>、<a class="internal-link" href="/notes/6164654eedeedf1dec.html">PH02 201801-Q01</a>、<a class="internal-link" href="/notes/a7b59dcd31cb061e76.html">PH02 202206-Q01</a>。定义按评分要点概括；原答案可在对应题目下展开。 Definitions are summarised from the scoring points, with original answers below the linked questions.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p>注意使用横截面积，电阻率单位为欧姆米。</p>
+<p><span class="math inline">\(\rho=RA/L\)</span>, <span class="math inline">\(R=\rho L/A\)</span>, <span class="math inline">\(A=\pi d^2/4\)</span>. Resistivity unit: <span class="math inline">\(\Omega\,\mathrm{m}\)</span>.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>导线应均匀且温度确定。热敏电阻限负温度系数；不考查临界磁场。</p>
+<p>Use a uniform specimen at a stated temperature. Only negative temperature coefficient thermistors are required; critical magnetic field is not assessed.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-b05d6d870b5256fb59">尺寸与电阻率 / Dimensions and resistivity</h3>
+<p><span class="math inline">\(R=\rho L/A\)</span>，<span class="math inline">\(A=\pi d^2/4\)</span>，<span class="math inline">\([\rho]=\Omega\,\mathrm m\)</span>。同种材料、相同温度下 <span class="math inline">\(R\propto L\)</span>、<span class="math inline">\(R\propto1/A\)</span>；直径加倍使横截面积变为四倍，电阻变为四分之一。电阻率由材料和温度决定，不由试样尺寸决定。</p>
+<p>At fixed material and temperature, resistance is proportional to length and inversely proportional to cross-sectional area. Doubling diameter quadruples area and quarters resistance. Resistivity is a material property at a specified temperature.</p>
+<p>实验测多个长度的 <span class="math inline">\(R=V/I\)</span>，作 <span class="math inline">\(R\)</span>–<span class="math inline">\(L\)</span> 图，斜率为 <span class="math inline">\(\rho/A\)</span>。千分尺在多处、相互垂直方向测直径；考虑零点误差、接触电阻和自热。</p>
+<p>Measure resistance for several lengths. The gradient of <span class="math inline">\(R\)</span> against <span class="math inline">\(L\)</span> is <span class="math inline">\(\rho/A\)</span>. Repeat diameter readings at different positions and orientations; consider zero error, contact resistance and heating.</p>
+<h3 id="h-cd161b1b6f55c192cd">温度传感与图像 / Temperature sensing and graphs</h3>
+<p>金属升温：载流子数近似不变，晶格振动增强，电阻增大。NTC 热敏电阻升温：可参与导电的载流子数增多，电阻非线性减小。解释必须同时说清微观原因和电阻变化。</p>
+<p>Heating a metal increases lattice vibrations and resistance, with approximately unchanged carrier density. Heating an NTC thermistor increases available charge carriers and decreases resistance nonlinearly.</p>
+<p>读 <span class="math inline">\(R\)</span>–<span class="math inline">\(T\)</span> 图时指出变化方向及非线性；将热敏电阻接入分压器后，输出随温度变化的方向还取决于输出取自哪一端。</p>
+<p>Describe the trend and nonlinearity on an <span class="math inline">\(R\)</span>–<span class="math inline">\(T\)</span> graph. In a potential divider, the output trend also depends on which component is connected across the output.</p>
+<h3 id="h-87deea219fe0a68a06">超导转变与应用 / Superconducting transition</h3>
+<p>某些材料在各自临界温度及以下电阻率为零；<span class="math inline">\(\rho\)</span>–<span class="math inline">\(T\)</span> 图在临界温度处发生超导转变。不能把所有普通金属简单外推成超导体。</p>
+<p>Some materials have zero resistivity at and below their own critical temperature. Their resistivity–temperature graph shows a superconducting transition; not every ordinary metal becomes superconducting by extrapolation.</p>
+<p>零电阻使持续大电流的电阻发热损耗减小，可用于强电磁铁（MRI、加速器）及输电；维持低温仍需设备和能量。考纲不考临界磁场。</p>
+<p>Zero resistance reduces resistive heating and supports large persistent currents in strong electromagnets and power transmission. Cooling still requires equipment and energy. Critical magnetic field is excluded.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/d4268f21d8a6d90d7c.html#h-61b732d481063b0e8f">3.4.3</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/5079365fe3941a2950.png" target="_blank"><img alt="3.4.3-S019-P01" decoding="async" loading="lazy" src="/media/5079365fe3941a2950.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/5079365fe3941a2950.png" target="_blank"><img alt="3.4.3-S020-P01" decoding="async" loading="lazy" src="/media/5079365fe3941a2950.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/05961872feac660c42.png" target="_blank"><img alt="3.4.3-S020-P02" decoding="async" loading="lazy" src="/media/05961872feac660c42.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h3 id="h-3fa535f60de5788b37">U2 Resistance temperature</h3>
+<a class="image-link" href="/media/6e28a9cd7c67ca696f.png" target="_blank"><img alt="U2_Resistance_temperature" decoding="async" loading="lazy" src="/media/6e28a9cd7c67ca696f.png" style="max-width:min(100%,1100px)"/></a>
+<p>金属、NTC和超导转变示意；超导体临界温度及以下电阻为零。 Qualitative R–temperature comparisons.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>热敏电阻用于温度传感器；超导体用于强磁场和降低输电电阻损耗；导线直径应在不同位置和方向测量。</p>
+<p>Thermistors are used in temperature sensors. Superconductors support strong magnetic fields and reduce resistive losses in electrical transmission. Measure wire diameter at several positions and perpendicular directions.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>区分电阻与电阻率、直径与面积；面积相对不确定度为直径的两倍。</p>
+<p>Distinguish resistance from resistivity and diameter from area; the fractional uncertainty of area is twice that of diameter.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-6af212737c442badb9">3.4.3 方法 1 · 导体几何与比例 / Geometry and resistance ratios</h3>
+<ol>
+<li>画出电流方向，再取垂直于电流的截面积：圆线 <span class="math inline">\(A=\pi d^2/4\)</span>，薄膜 <span class="math inline">\(A=wt\)</span>；线圈导线长约为匝数乘每匝周长，不是线圈轴向长度。 / Use the cross-section normal to current; coil wire length follows the turns.</li>
+<li>用 <span class="math inline">\(R=\rho L/A\)</span> 比例式：<span class="math inline">\(R_2/R_1=(\rho_2/\rho_1)(L_2/L_1)(d_1/d_2)^2\)</span>。同材料、体积不变时 <span class="math inline">\(R\propto L^2\)</span>。 / State which quantities remain constant.</li>
+<li>均匀导线等分为 <span class="math inline">\(n\)</span> 段，每段 <span class="math inline">\(R/n\)</span>；再将这 <span class="math inline">\(n\)</span> 段并联得到 <span class="math inline">\(R/n^2\)</span>。 / Separate cutting from reconnecting.</li>
+<li>熔断功率限制题先求熔丝 <span class="math inline">\(R\)</span>，再用 <span class="math inline">\(I_{\rm limit}=\sqrt{P_{\rm melt}/R}\)</span>，结合正常工作电流选额定值。 / Compare the limiting current with the operating current.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/d105c80e3a9c18ec1d.html">PH02 · 202601 · Q06</a>；<a class="internal-link" href="/notes/f337079a066f025f23.html">PH02 · 202206 · Q10</a>；<a class="internal-link" href="/notes/38d6481438493cf052.html">PH02 · 202301 · Q17</a>；<a class="internal-link" href="/notes/bd79013c5cccece0c0.html">PH02 · 201706 · Q09</a>。</p>
+<h3 id="h-df6a50bfdf740a5e46">3.4.3 方法 2 · 电阻率与温度实验 / Resistivity and temperature experiments</h3>
+<p><strong>实验答题链 / Experimental chain.</strong> 自变量 → 可操作的改变方法 → 因变量及仪器 → 控制量 → 多组读数 → 图像处理 → 不确定度。 / Name variables, instruments, controls, repeated measurements and analysis.</p>
+<ul>
+<li><span class="math inline">\(R\)</span>–<span class="math inline">\(L\)</span> 图的斜率为 <span class="math inline">\(\rho/A\)</span>；固定引线或接触电阻表现为截距，不能强迫拟合过原点。直径在 <span class="math inline">\(A\)</span> 中平方，因此其百分不确定度贡献乘二。 / Allow a contact-resistance intercept and the squared-diameter contribution.</li>
+<li>热敏电阻置于搅拌水浴中，与温度计靠近；每个温度等热平衡后测 <span class="math inline">\(V,I\)</span>，减小自热，重复并控制其他量。 / Allow thermal equilibrium and minimise self-heating.</li>
+<li>超导应用写出“低于临界温度 → 电阻为零 → 大电流下避免 <span class="math inline">\(I^2R\)</span> 发热”等具体收益；冷却成本、机械强度需另行讨论。 / Link the property to a concrete benefit and practical limitation.</li>
+</ul>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/62bec9dba24c7ffd85.html">PH02 · 202201 · Q11</a>；<a class="internal-link" href="/notes/aa235d735a0a974c47.html">PH02 · 202506 · Q10</a>；<a class="internal-link" href="/notes/9ceac0205c7dd4bc8b.html">PH02 · 202206 · Q07</a>；<a class="internal-link" href="/notes/a7b59dcd31cb061e76.html">PH02 · 202206 · Q01</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (48)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/29329a33308f697347.html">PH02 · 201706 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/bd79013c5cccece0c0.html">PH02 · 201706 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6bb68a0cffbc724ee7.html">PH02 · 2018 specimen paper · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a6cbfde83655f6ba16.html">PH02 · 2018 specimen paper · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1f894162d527538af9.html">PH02 · 2018 specimen paper · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7a23ed696d7b1d3970.html">PH02 · 2018 specimen paper · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6164654eedeedf1dec.html">PH02 · 201801 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6a2cc1a4a973154177.html">PH02 · 201801 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4a6de584e608f45e35.html">PH02 · 201801 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/44ced23dbc6abdf28b.html">PH02 · 201801 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6a64aca074248a57a2.html">PH02 · 201806 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2f3f609f0941e2a514.html">PH02 · 201901 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/50c9a7dc16e3a6d43d.html">PH02 · 201901 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/fa935f1fd17eb7fc39.html">PH02 · 201901 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3554ed6024bb625abb.html">PH02 · 201901 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f4e555d192d6b6eb57.html">PH02 · 201906 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f96c14f098b30cc08b.html">PH02 · 201906 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a1f5e92a1f95950f9e.html">PH02 · 201906 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/30a7661b1e76644324.html">PH02 · 202001 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f84cd27938d21353ce.html">PH02 · 202001 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3b8c6ce91ffaf30ca5.html">PH02 · 202101 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dbecc405afcaa55d9f.html">PH02 · 202101 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6af7a85a9781a9de57.html">PH02 · 202101 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5b1bf8132c8e7c2c16.html">PH02 · 202201 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/62bec9dba24c7ffd85.html">PH02 · 202201 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5904ffb325039ac01d.html">PH02 · 202201 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a7b59dcd31cb061e76.html">PH02 · 202206 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9ceac0205c7dd4bc8b.html">PH02 · 202206 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7a783f335e4a3fddb7.html">PH02 · 202206 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f337079a066f025f23.html">PH02 · 202206 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f98b9cd8ec79d8c595.html">PH02 · 202301 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/38d6481438493cf052.html">PH02 · 202301 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/95724d172d2032d75b.html">PH02 · 202301 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3e0c2a05bd78006ed5.html">PH02 · 202306 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/79a8cbe32c2755a4f9.html">PH02 · 202306 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e9d87f8b1d28ca93ba.html">PH02 · 202306 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b282a6ff3c383dfdb6.html">PH02 · 202401 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/58c328ef5cdcf09a85.html">PH02 · 202401 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d02fa7bd0d9d98df5e.html">PH02 · 202406 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/84876c3ee085132f77.html">PH02 · 202406 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/994b8c384c8dbf1907.html">PH02 · 202406 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dabd7b4ac0bf7afa71.html">PH02 · 202501 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/035102f48a099c59ae.html">PH02 · 202506 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5ff40425cbbca6aff6.html">PH02 · 202506 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d105c80e3a9c18ec1d.html">PH02 · 202601 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e33b8e653afd524503.html">PH02 · 202601 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cca460907fc7f14bf6.html">PH02 · 202606 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9e9bda85276d0bdac1.html">PH02 · 202606 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/56c6e1152fae1e8d55.html">U2逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/9e92e29f0bbd27af92.html">课件例题与复述</a> · <a class="internal-link" href="/notes/fc57e6cf1909025642.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/4a7566b071ae7b7dae.html">3.4.2 伏安特性与欧姆定律</a>：温度影响电阻 / temperature dependence</li>
+<li><a class="internal-link" href="/notes/8818ac40b0fb5d1e43.html">3.4.5 分压器与传感电路</a>：传感元件 → 分压 / sensor to divider</li>
+<li><a class="internal-link" href="/notes/50843d2f581c6db998.html">3.10.6 变压器、效率与高压输电</a>：电阻率、热敏电阻与超导 ↔ 变压器、效率与高压输电</li>
+<li><a class="internal-link" href="/notes/c121509e7646ee8712.html">U1 3.1.2</a>：本节所需基础 / prerequisite</li>
+<li><a class="internal-link" href="/notes/410e45032b43fd2965.html">U1 3.2.9</a>：本节所需基础 / prerequisite</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.4.3。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 155–160；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/bce6ad2aec84839e8f.html">U2PM03 导线几何与电阻率 - Resistivity</a></li>
+<li><a class="internal-link" href="/notes/24c1345ccc4b72fa03.html">U2PM05 热敏光敏分压器 - Potential divider</a></li>
+</ul>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/aa02417726fd8450b6.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/abdd9ae93a7c264ac4.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/2c4b46e582bcf040d3.html">跨单元知识联系 / Cross-unit knowledge</a></li><li><a href="/notes/c121509e7646ee8712.html">3.1.2 物理测量的局限 / LIMITATION OF PHYSICAL MEASUREMENTS</a></li><li><a href="/notes/410e45032b43fd2965.html">3.2.9 固体的宏观性质 / BULK PROPERTIES OF SOLIDS</a></li><li><a href="/notes/d51c071167c0e89009.html">U2 电学、波与粒子 / Electricity, waves and particles</a></li><li><a href="/notes/d4268f21d8a6d90d7c.html">U2 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/59118fa50edd7bf53a.html">U2 考纲框架 / Specification map</a></li><li><a href="/notes/a930fa1575f598c390.html">3.4.3 电阻率 / RESISTIVITY</a></li><li><a href="/notes/4a7566b071ae7b7dae.html">3.4.2 伏安特性与欧姆定律 / Current–voltage characteristics</a></li><li><a href="/notes/8818ac40b0fb5d1e43.html">3.4.5 分压器与传感电路 / Potential divider</a></li><li><a href="/notes/88347af05790127411.html">critical temperature — 临界温度</a></li><li><a href="/notes/59ceed9e094019a858.html">resistivity — 电阻率</a></li><li><a href="/notes/5351601f25184b4522.html">NTC thermistor — 负温度系数热敏电阻</a></li><li><a href="/notes/9b3681fcab4756952b.html">superconductivity — 超导性</a></li><li><a href="/notes/7013f303a4a6a5fb2f.html">U2 来源与范围 / Sources and scope</a></li><li><a href="/notes/56c6e1152fae1e8d55.html">U2 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/228d3ff95d281e31d1.html">3.4.1 电学基础 真题练习 / Past-paper practice</a></li><li><a href="/notes/f8cd4abc514cae1e86.html">3.4.2 伏安特性与欧姆定律 真题练习 / Past-paper practice</a></li><li><a href="/notes/fc57e6cf1909025642.html">3.4.3 电阻率、热敏电阻与超导 真题练习 / Past-paper practice</a></li><li><a href="/notes/2ff816991fd1526aed.html">3.4.4 直流电路与电功率 真题练习 / Past-paper practice</a></li><li><a href="/notes/20486cd9fbf4583be2.html">3.4.5 分压器与传感电路 真题练习 / Past-paper practice</a></li><li><a href="/notes/e3527f2e83e569a537.html">3.4.6 电动势与内阻 真题练习 / Past-paper practice</a></li><li><a href="/notes/fb08f7d5188c6c9ed5.html">PH02 2018 specimen paper / Paper index</a></li><li><a href="/notes/6bb68a0cffbc724ee7.html">PH02 2018 specimen paper Q02</a></li><li><a href="/notes/a6cbfde83655f6ba16.html">PH02 2018 specimen paper Q08</a></li><li><a href="/notes/1f894162d527538af9.html">PH02 2018 specimen paper Q20</a></li><li><a href="/notes/7a23ed696d7b1d3970.html">PH02 2018 specimen paper Q23</a></li><li><a href="/notes/56570cdfe35ebac726.html">PH02 201706 / Paper index</a></li><li><a href="/notes/29329a33308f697347.html">PH02 201706 Q07</a></li><li><a href="/notes/bd79013c5cccece0c0.html">PH02 201706 Q09</a></li><li><a href="/notes/e6cc1ccb6ec83d0361.html">PH02 201801 / Paper index</a></li><li><a href="/notes/6164654eedeedf1dec.html">PH02 201801 Q01</a></li><li><a href="/notes/6a2cc1a4a973154177.html">PH02 201801 Q03</a></li><li><a href="/notes/4a6de584e608f45e35.html">PH02 201801 Q11</a></li><li><a href="/notes/44ced23dbc6abdf28b.html">PH02 201801 Q15</a></li><li><a href="/notes/7c525ef238b5ef97b6.html">PH02 201806 / Paper index</a></li><li><a href="/notes/6a64aca074248a57a2.html">PH02 201806 Q14</a></li><li><a href="/notes/fe163b6544d7d76797.html">PH02 201901 / Paper index</a></li><li><a href="/notes/2f3f609f0941e2a514.html">PH02 201901 Q03</a></li><li><a href="/notes/50c9a7dc16e3a6d43d.html">PH02 201901 Q06</a></li><li><a href="/notes/fa935f1fd17eb7fc39.html">PH02 201901 Q13</a></li><li><a href="/notes/3554ed6024bb625abb.html">PH02 201901 Q15</a></li><li><a href="/notes/8645db80972f6c45f3.html">PH02 201906 / Paper index</a></li><li><a href="/notes/f4e555d192d6b6eb57.html">PH02 201906 Q11</a></li><li><a href="/notes/f96c14f098b30cc08b.html">PH02 201906 Q12</a></li><li><a href="/notes/a1f5e92a1f95950f9e.html">PH02 201906 Q15</a></li><li><a href="/notes/ff4673ae925355ff96.html">PH02 202001 / Paper index</a></li><li><a href="/notes/30a7661b1e76644324.html">PH02 202001 Q12</a></li><li><a href="/notes/f84cd27938d21353ce.html">PH02 202001 Q13</a></li><li><a href="/notes/a3546c81d83fed0c6b.html">PH02 202101 / Paper index</a></li><li><a href="/notes/3b8c6ce91ffaf30ca5.html">PH02 202101 Q01</a></li><li><a href="/notes/dbecc405afcaa55d9f.html">PH02 202101 Q07</a></li><li><a href="/notes/6af7a85a9781a9de57.html">PH02 202101 Q13</a></li><li><a href="/notes/a059acf659d94b6635.html">PH02 202201 / Paper index</a></li><li><a href="/notes/5b1bf8132c8e7c2c16.html">PH02 202201 Q08</a></li><li><a href="/notes/62bec9dba24c7ffd85.html">PH02 202201 Q11</a></li><li><a href="/notes/5904ffb325039ac01d.html">PH02 202201 Q12</a></li><li><a href="/notes/66e1fc4b5aabc65461.html">PH02 202206 / Paper index</a></li><li><a href="/notes/a7b59dcd31cb061e76.html">PH02 202206 Q01</a></li><li><a href="/notes/9ceac0205c7dd4bc8b.html">PH02 202206 Q07</a></li><li><a href="/notes/7a783f335e4a3fddb7.html">PH02 202206 Q09</a></li><li><a href="/notes/f337079a066f025f23.html">PH02 202206 Q10</a></li><li><a href="/notes/585d24af610209a7d0.html">PH02 202301 / Paper index</a></li><li><a href="/notes/f98b9cd8ec79d8c595.html">PH02 202301 Q02</a></li><li><a href="/notes/38d6481438493cf052.html">PH02 202301 Q17</a></li><li><a href="/notes/95724d172d2032d75b.html">PH02 202301 Q22</a></li><li><a href="/notes/ba2d545cf3acee1456.html">PH02 202306 / Paper index</a></li><li><a href="/notes/3e0c2a05bd78006ed5.html">PH02 202306 Q08</a></li><li><a href="/notes/79a8cbe32c2755a4f9.html">PH02 202306 Q18</a></li><li><a href="/notes/e9d87f8b1d28ca93ba.html">PH02 202306 Q23</a></li><li><a href="/notes/85bcd3b7aababec3d2.html">PH02 202401 / Paper index</a></li><li><a href="/notes/b282a6ff3c383dfdb6.html">PH02 202401 Q11</a></li><li><a href="/notes/58c328ef5cdcf09a85.html">PH02 202401 Q16</a></li><li><a href="/notes/c5a6923226438012da.html">PH02 202406 / Paper index</a></li><li><a href="/notes/d02fa7bd0d9d98df5e.html">PH02 202406 Q10</a></li><li><a href="/notes/84876c3ee085132f77.html">PH02 202406 Q12</a></li><li><a href="/notes/994b8c384c8dbf1907.html">PH02 202406 Q15</a></li><li><a href="/notes/7684ad07813e8f201d.html">PH02 202501 / Paper index</a></li><li><a href="/notes/dabd7b4ac0bf7afa71.html">PH02 202501 Q04</a></li><li><a href="/notes/23fab94a72e56b33a5.html">PH02 202506 / Paper index</a></li><li><a href="/notes/035102f48a099c59ae.html">PH02 202506 Q11</a></li><li><a href="/notes/5ff40425cbbca6aff6.html">PH02 202506 Q14</a></li><li><a href="/notes/fc62627b3c9c90b319.html">PH02 202601 / Paper index</a></li><li><a href="/notes/d105c80e3a9c18ec1d.html">PH02 202601 Q06</a></li><li><a href="/notes/e33b8e653afd524503.html">PH02 202601 Q12</a></li><li><a href="/notes/2be43c625586f867cc.html">PH02 202606 / Paper index</a></li><li><a href="/notes/cca460907fc7f14bf6.html">PH02 202606 Q03</a></li><li><a href="/notes/9e9bda85276d0bdac1.html">PH02 202606 Q12</a></li><li><a href="/notes/aa02417726fd8450b6.html">3.4.3 电阻率、热敏电阻与超导 / Resistivity · 概念考察练习 / Concept practice</a></li><li><a href="/notes/49dc749f32ba947f35.html">PH02 · 2017年6月 / June 2017 · Q09.1 · Resistivity unit / 电阻率单位</a></li><li><a href="/notes/af6287b2dfdc0a88ee.html">PH02 · 2018年1月 / January 2018 · Q01.1 · Superconductor / 超导体</a></li><li><a href="/notes/05aea4fc379a71c0f4.html">PH02 · 2018年1月 / January 2018 · Q01.2 · Superconductor applications / 超导体应用</a></li><li><a href="/notes/b6afbf8fabbeb45c3f.html">PH02 · 2018年1月 / January 2018 · Q11 · SI unit of resistivity / 电阻率的国际单位</a></li><li><a href="/notes/e153c8e52ab12a11e2.html">PH02 · 2019年1月 / January 2019 · Q03.1 · Superconductor applications / 超导体应用</a></li><li><a href="/notes/98f0d02d804f0b7786.html">PH02 · 2021年1月 / January 2021 · Q01.1 · Resistivity / 电阻率</a></li><li><a href="/notes/4a2eca95beb4a278ed.html">PH02 · 2022年6月 / June 2022 · Q01.1 · Critical temperature / 临界温度</a></li><li><a href="/notes/8c0174c72fc1ad2f35.html">PH02 · 2023年1月 / January 2023 · Q02.1 · Superconductor / 超导体</a></li><li><a href="/notes/c49a804c52f485872f.html">PH02 · 2026年6月 / June 2026 · Q03.1 · Ntc thermistor / 负温度系数热敏电阻</a></li><li><a href="/notes/93032a4b59def8dd38.html">U2 图像与示意图 / Graphs and diagrams</a></li><li><a href="/notes/94b3d967693ed4c007.html">U2 陈述、解释与比较 / Statements explanations and comparisons</a></li><li><a href="/notes/b28ecd1330283bcb3a.html">PH02 2022年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/a82a4e46c78fe785b1.html">PH02 2024年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/b2877315ef4379fe55.html">PH02 · 2021年1月 / January 2021 · Q07.4 · Lamp and thermistor combination / 灯泡与热敏电阻组合</a></li><li><a href="/notes/abdd9ae93a7c264ac4.html">3.4.3 电阻率、热敏电阻与超导 / Resistivity · 论述题练习 / Written-response practice</a></li><li><a href="/notes/f9faf82eff8a99d5ce.html">PH02 · 2017年6月 / June 2017 · Q07.1 · Thermistor potential divider / 热敏电阻分压器</a></li><li><a href="/notes/838cb2d5fa3d0a6e66.html">PH02 · 2017年6月 / June 2017 · Q09.3 · Material selection / 材料选择</a></li><li><a href="/notes/96c08cfca2bbe70e3a.html">PH02 · 2019年1月 / January 2019 · Q03.2 · Superconducting MRI magnet / 超导核磁共振磁体</a></li><li><a href="/notes/16a7c295b2b19b2bf7.html">PH02 · 2022年1月 / January 2022 · Q11.4 · Gradient method for resistance / 电阻的斜率法</a></li><li><a href="/notes/8181d02dc13bed0b59.html">PH02 · 2022年6月 / June 2022 · Q01.2 · Superconducting electromagnets / 超导电磁铁</a></li><li><a href="/notes/3bc560c32ab21d8bac.html">PH02 · 2022年6月 / June 2022 · Q07.2 · Thermistor temperature experiment / 热敏电阻温度实验</a></li><li><a href="/notes/34cd0a81644282aa33.html">PH02 · 2023年1月 / January 2023 · Q02.2 · Strong superconducting magnets / 强超导磁体</a></li><li><a href="/notes/3a21c1b6b17810bc4f.html">PH02 · 2023年6月 / June 2023 · Q08.2 · Thermistor divider response / 热敏分压器响应</a></li><li><a href="/notes/b8cbe55c958d917e88.html">PH02 · 2024年6月 / June 2024 · Q10.2 · Heating element and supply leads / 加热丝与供电导线</a></li><li><a href="/notes/b73c716c5ad007627e.html">PH02 · 2026年1月 / January 2026 · Q06.1 · Low-resistance metal bar / 低电阻金属棒</a></li><li><a href="/notes/5d3c7db7ad07596a86.html">PH02 · 2026年1月 / January 2026 · Q06.3 · Residual measured resistance / 残余测量电阻</a></li><li><a href="/notes/f2afcd97d42fff28c2.html">PH02 · 2026年6月 / June 2026 · Q03.2 · Superconductor resistivity curve / 超导体电阻率曲线</a></li><li><a href="/notes/0bd35dcbddc3eca75c.html">PH02 · 2025年6月 / June 2025 · Q11.2 · Adjusting threshold temperature / 调整触发温度</a></li><li><a href="/notes/bce6ad2aec84839e8f.html">导线几何与电阻率 / Resistivity</a></li><li><a href="/notes/24c1345ccc4b72fa03.html">热敏光敏分压器 / Potential divider</a></li><li><a href="/notes/f43231ab09b32fea0b.html">U2 3.4 电学词汇 / Vocabulary</a></li><li><a href="/notes/50843d2f581c6db998.html">3.10.6 变压器、效率与高压输电 / The operation of a transformer</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U2/02 知识节点/3.4 电学/3.4.3 电阻率、热敏电阻与超导 - Resistivity.md","url":"/notes/6389fbf5b53c8757b1.html","unit":"U2"}</script></body></html>

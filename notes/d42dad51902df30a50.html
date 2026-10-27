@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.5.9 原子能级、线谱与X射线 / Collisions of electrons with atoms · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U2/02 知识节点/3.5 振动与波</div><h1 id="h-018ba84536a4cb5427">3.5.9 原子能级、线谱与X射线 / Collisions of electrons with atoms</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/6ac8d206c62850d22b.html">3.5.9</a>　｜　<a class="internal-link" href="/notes/d51c071167c0e89009.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>能量 / energy</strong></td>
+<td><span class="math inline">\(E\)</span></td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+<td>与杨氏模量、电场强度等 E 区分 / Not Young modulus or electric field strength here.</td>
+</tr>
+<tr>
+<td><strong>上下能级能量 / upper and lower energy levels</strong></td>
+<td><span class="math inline">\(E_{\mathrm{upper}},\ E_{\mathrm{lower}}\)</span></td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+<td>也常用 eV / Often given in eV.</td>
+</tr>
+<tr>
+<td><strong>光子能量 / photon energy</strong></td>
+<td><span class="math inline">\(E,\ E_\gamma\)</span></td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+<td>也可用 eV 给出，计算时注意统一单位 / eV may also be used; keep units consistent.</td>
+</tr>
+<tr>
+<td><strong>普朗克常量 / Planck constant</strong></td>
+<td><span class="math inline">\(h\)</span></td>
+<td><span class="math inline">\(\mathrm{J\,s}\)</span></td>
+<td>不是高度 h / Not height here.</td>
+</tr>
+<tr>
+<td><strong>频率 / frequency</strong></td>
+<td><span class="math inline">\(f\)</span></td>
+<td><span class="math inline">\(\mathrm{Hz}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>元电荷大小 / elementary charge</strong></td>
+<td><span class="math inline">\(e\)</span></td>
+<td><span class="math inline">\(\mathrm{C}\)</span></td>
+<td>电子电荷为 −e，质子电荷为 +e / Electron charge −e; proton charge +e.</td>
+</tr>
+<tr>
+<td><strong>电势差、电压 / potential difference, voltage</strong></td>
+<td><span class="math inline">\(V,\ \Delta V\)</span></td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+<td>斜体 V 是物理量，正体 V 是伏特 / Italic V is the quantity; upright V is the volt.</td>
+</tr>
+<tr>
+<td><strong>波长 / wavelength</strong></td>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>与衰变常量 λ 区分 / Not decay constant.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/2f35e8d1b6b0bffe98.html">excitation — 激发</a></li>
+<li><a class="internal-link" href="/notes/92b4706519e737b3a0.html">ionisation — 电离</a></li>
+<li><a class="internal-link" href="/notes/d8328e4e1d120ed168.html">electron volt — 电子伏特</a></li>
+<li><a class="internal-link" href="/notes/7c0b6fd452eab016bc.html">line spectrum — 线状光谱</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/2f35e8d1b6b0bffe98.html#h-485f2ec53559b6043e">↗ excitation — 激发</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> An electron in an atom gains energy and moves to a higher energy level without leaving the atom.</p>
+<p><strong>中文：</strong> 原子中电子获得能量升至较高能级，但未离开原子。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/92b4706519e737b3a0.html#h-485f2ec53559b6043e">↗ ionisation — 电离</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> Removal of an electron from an atom.</p>
+<p><strong>中文：</strong> 电子从原子中被移走的过程。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/d8328e4e1d120ed168.html#h-485f2ec53559b6043e">↗ electron volt — 电子伏特</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The energy gained by an electron when it moves through a potential difference of one volt.</p>
+<p><strong>中文：</strong> 电子通过一伏特电势差所获得的能量。</p>
+<p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/c5fcce5129c7c6b7ca.html">PH02 201901-Q07</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/7c0b6fd452eab016bc.html#h-485f2ec53559b6043e">↗ line spectrum — 线状光谱</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A spectrum containing discrete wavelengths associated with transitions between discrete energy levels.</p>
+<p><strong>中文：</strong> 含有离散波长、对应离散能级跃迁的光谱。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p><strong>真题定义依据 / Mark-scheme checks：</strong> <a class="internal-link" href="/notes/c5fcce5129c7c6b7ca.html">PH02 201901-Q07</a>。定义按评分要点概括；原答案可在对应题目下展开。 Definitions are summarised from the scoring points, with original answers below the linked questions.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p>电子伏特是能量单位；发射光子的能量为上下能级差，X射线最高光子能量受加速电压限制。</p>
+<p><span class="math inline">\(1\,\mathrm{eV}=1.602\times10^{-19}\,\mathrm{J}\)</span>; emitted photon <span class="math inline">\(hf=E_{\mathrm{upper}}-E_{\mathrm{lower}}\)</span>; electron accelerated through <span class="math inline">\(V\)</span> gains <span class="math inline">\(eV\)</span>; X-ray maximum photon energy <span class="math inline">\(=eV\)</span>.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>束缚能级间的单光子吸收要求光子能量匹配允许能级差；碰撞电子可转移激发所需能量并保留余能。电离需达到移走电子所需能量；用SI普朗克常量计算前将eV换算为J。</p>
+<p>Single-photon absorption between bound levels requires a matching energy gap. Colliding electrons can retain surplus kinetic energy. Ionisation requires sufficient removal energy; convert eV to J before using SI Planck constant.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-02bdbb718b08dbb7eb">激发、电离与荧光灯 / Excitation, ionisation and lamps</h3>
+<p>激发使束缚电子升到更高允许能级；电离使电子脱离原子。碰撞电子只需具备足够能量，可在碰撞后带走余能；吸收一个光子造成束缚能级跃迁时，光子能量需匹配能级差。</p>
+<p>Excitation raises a bound electron to a higher allowed level; ionisation removes it. A colliding electron can retain surplus kinetic energy, whereas absorption for a bound-to-bound transition requires a matching photon energy.</p>
+<p>荧光灯：电场加速电子→与低压汞蒸气原子碰撞、使其激发或电离→原子退激发发紫外光→荧光涂层吸收紫外并发可见光。能量从高能光子转为较低能可见光，不能把涂层说成简单反射紫外光。</p>
+<p>Accelerated electrons excite or ionise mercury atoms. De-excitation produces UV photons; the phosphor absorbs UV and emits visible light rather than merely reflecting UV.</p>
+<h3 id="h-fb8ff2b7e394ac61a8">能级、谱线与单位 / Energy levels, spectra and units</h3>
+<p>向低能级跃迁时 <span class="math inline">\(hf=E_{\rm upper}-E_{\rm lower}=hc/\lambda&gt;0\)</span>。离散能级只允许离散光子能量，形成特征线谱；能级差越大，频率越高、波长越短。吸收谱对应能级向上跃迁。</p>
+<p>Downward transitions emit photons whose energies equal the positive level difference. Discrete levels produce discrete spectral lines; a larger gap gives higher frequency and shorter wavelength.</p>
+<p><span class="math inline">\(1\,\mathrm{eV}=1.602\times10^{-19}\,\mathrm J\)</span>；eV 是能量单位，不是电势单位。能级若以电离极限为零，束缚能级为负值；计算仍取末、初状态之差。</p>
+<p>An electron volt is an energy unit, not a voltage. Bound levels are negative when zero energy is at the ionisation limit; use state differences consistently.</p>
+<h3 id="h-b75f190d101b2306f0">X射线管与特征辐射 / X-ray tube and characteristic radiation</h3>
+<p>加热阴极释放电子，真空中高电压将电子加速到金属靶阳极。大部分电子能量成为热，部分成为X射线。连续谱来自电子减速；特征线来自内层空位被更高能级电子填充，其能量取决于靶元素。</p>
+<p>A heated cathode emits electrons, accelerated through a vacuum towards a metal target. Most energy becomes heat. Braking produces a continuous spectrum; inner-shell transitions produce characteristic lines determined by the target element.</p>
+<p>单个电子最大能量 <span class="math inline">\(eV\)</span> 给出 <span class="math inline">\(hf_{\max}=eV\)</span>、<span class="math inline">\(\lambda_{\min}=hc/(eV)\)</span>；提高管电压减小最短波长，但不改变同一靶元素的特征能级差。医学成像利用不同组织吸收不同，骨骼等高吸收部位形成对比。</p>
+<p>The maximum photon energy is <span class="math inline">\(eV\)</span>, giving a minimum wavelength. Increasing tube voltage changes the cutoff, not the target's characteristic level gaps. Medical imaging uses differential absorption by tissues.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/d4268f21d8a6d90d7c.html#h-4b5bbee154e74b5c2e">3.5.9</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/3cc9824b88f9650f8e.png" target="_blank"><img alt="3.5.9-S006-P01" decoding="async" loading="lazy" src="/media/3cc9824b88f9650f8e.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/3147878eeb395ff314.png" target="_blank"><img alt="3.5.9-S007-P01" decoding="async" loading="lazy" src="/media/3147878eeb395ff314.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/0275ba7f147e037da3.png" target="_blank"><img alt="3.5.9-S009-P01" decoding="async" loading="lazy" src="/media/0275ba7f147e037da3.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>医学成像利用组织吸收差异；电子流改变影响强度，加速电压改变影响最高光子能量。</p>
+<p>Medical X-ray images exploit different absorption by tissues. Explain changes to intensity when electron current changes and maximum photon energy when accelerating voltage changes.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>电离不同于升到另一束缚能级；光子能量来自能级差而非单个能级数值。</p>
+<p>Ionisation is removal, not simply promotion to another bound level. A line photon energy is a difference between energy levels, not one level’s absolute value.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-8924c45d4ef3f42260">3.5.9 方法 1 · 能级、光谱与激发 / Energy levels and excitation</h3>
+<ol>
+<li>先按能量高低排列；发射箭头向低能级，<span class="math inline">\(E_\gamma=E_i-E_f=hf\)</span>。在<strong>允许跃迁</strong>中比较能隙，能隙越小波长越长。 / Compare only transitions allowed by the stated initial and final states.</li>
+<li>若所有两级跃迁均可发生且能隙不同，<span class="math inline">\(n\)</span> 个能级最多有 <span class="math inline">\(n(n-1)/2\)</span> 条谱线；不是每种情形都达到该上限。 / State the accessibility assumptions.</li>
+<li>束缚态吸收需光子能量等于能级差；电离可吸收高于电离能的光子，剩余能量成为电子动能。 / Distinguish discrete excitation from ionisation.</li>
+<li>解释线谱：离散波长 → 离散光子能量 → 离散能级差。荧光灯：电子碰撞激发汞 → 汞发紫外 → 荧光粉吸收后多种可见跃迁。 / Give the causal sequence rather than listing terms.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/0bc34c0b8c737a2d2f.html">PH02 · 202601 · Q07</a>；<a class="internal-link" href="/notes/277fff3a065dfcaa7b.html">PH02 · 201801 · Q05</a>；<a class="internal-link" href="/notes/762a9dda450078c1d5.html">PH02 · 202201 · Q04</a>；<a class="internal-link" href="/notes/e0527946285dc3fa7a.html">PH02 · 202506 · Q09</a>。</p>
+<h3 id="h-554b7de3638568e257">3.5.9 方法 2 · X射线管的控制变量 / Controls of an X-ray tube</h3>
+<p>加速电压规定电子最大动能 <span class="math inline">\(eV\)</span>，因此决定截止光子能量和最短波长；靶材原子能级决定特征峰位置；管电流影响每秒电子数及光子产生率。 / Voltage sets the cutoff, target material sets characteristic energies, and tube current affects photon rate.</p>
+<p>求热量时用输入能量 <span class="math inline">\(VIt\)</span> 乘未转化为X射线的比例；求粒子数先用 <span class="math inline">\(It/e\)</span>，求光子率用 <span class="math inline">\(P_\gamma/(hf)\)</span>。 / Keep electrical input, radiation output and heat separate.</p>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/085bc124944c55d514.html">PH02 · 202301 · Q06</a>；<a class="internal-link" href="/notes/ee157874aa03cf0741.html">PH02 · 201806 · Q09</a>；<a class="internal-link" href="/notes/523101fe4f0dc6c921.html">PH02 · 202201 · Q06</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (40)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/edd5c7cd2f141f48ee.html">PH02 · 201706 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b238a70145f6d6d21d.html">PH02 · 201706 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/66f89dcd16a6e2d47d.html">PH02 · 201706 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/91bb6a5835cc512f09.html">PH02 · 2018 specimen paper · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c7f5dc1696e25223e2.html">PH02 · 201801 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/277fff3a065dfcaa7b.html">PH02 · 201801 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ee157874aa03cf0741.html">PH02 · 201806 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b7250415e590d3c926.html">PH02 · 201806 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/40d992cede074136e5.html">PH02 · 201901 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/756aa8153d10680990.html">PH02 · 201901 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e35b6e1e374ae5146a.html">PH02 · 201906 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/32ab02588ffc2ba507.html">PH02 · 201906 · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b179d12f9aae072f7c.html">PH02 · 202001 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/87c3fde7253f8115b2.html">PH02 · 202001 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/729272be100e89077c.html">PH02 · 202001 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/87a7a16a926eb11188.html">PH02 · 202101 · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7440df1b36f7d4352b.html">PH02 · 202101 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/762a9dda450078c1d5.html">PH02 · 202201 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/255712f4f742d45548.html">PH02 · 202201 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/523101fe4f0dc6c921.html">PH02 · 202201 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f26da2ec3f8d7b20f6.html">PH02 · 202201 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/38d602ac9b9995bce5.html">PH02 · 202206 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/beec0085af8fec87aa.html">PH02 · 202206 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/085bc124944c55d514.html">PH02 · 202301 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8db224b9cb2b25a85c.html">PH02 · 202306 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6e41be20b472a266be.html">PH02 · 202401 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1e05f56c9ab1dfbeaf.html">PH02 · 202401 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2b7c1923a7e6439c27.html">PH02 · 202401 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6989e6bcd343c918ad.html">PH02 · 202406 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/620ab2f846b1f338e9.html">PH02 · 202501 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d7a69f7bc74779a05e.html">PH02 · 202501 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5eceffd4a138c4ddba.html">PH02 · 202501 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c27fbe68e5b3e9bbdb.html">PH02 · 202501 · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e0527946285dc3fa7a.html">PH02 · 202506 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/63ec3e7c5a42b1d12f.html">PH02 · 202506 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0bc34c0b8c737a2d2f.html">PH02 · 202601 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a9d8131b92173a48a7.html">PH02 · 202601 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a19804e3e3a86dfe41.html">PH02 · 202601 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e848a4bdae13c39e9d.html">PH02 · 202606 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0a9f0f326353285bc3.html">PH02 · 202606 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/56c6e1152fae1e8d55.html">U2逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/e892488deff1e0a2f5.html">课件例题与复述</a> · <a class="internal-link" href="/notes/55d34c8e00429786ed.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/5bab39ee7718e57846.html">3.5.7 单缝衍射与光栅</a>：光栅分析线谱 / grating to spectra</li>
+<li><a class="internal-link" href="/notes/b4e5b7006a3ebbef36.html">3.5.10 光子与光电效应</a>：光子能量转移 / photon energy</li>
+<li><a class="internal-link" href="/notes/577e7da52289ac87da.html">3.5.11 波粒二象性与德布罗意波长</a>：原子能级、线谱与X射线 ↔ 波粒二象性与德布罗意波长</li>
+<li><a class="internal-link" href="/notes/718ee3f9818a198c33.html">U1 3.3.1</a>：本节所需基础 / prerequisite</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.5.9。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 235–245；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/4371399e1815350a20.html">U2PM14 离散能级与光谱 - Excitation and transition</a></li>
+</ul>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/2cd998f5c5a5fdac88.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/607ab9526b96d8bb64.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/718ee3f9818a198c33.html">3.3.1 原子的组成 / CONSTITUENTS OF THE ATOM</a></li><li><a href="/notes/d51c071167c0e89009.html">U2 电学、波与粒子 / Electricity, waves and particles</a></li><li><a href="/notes/d4268f21d8a6d90d7c.html">U2 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/59118fa50edd7bf53a.html">U2 考纲框架 / Specification map</a></li><li><a href="/notes/6ac8d206c62850d22b.html">3.5.9 电子与原子的碰撞 / COLLISIONS OF ELECTRONS WITH ATOMS</a></li><li><a href="/notes/5bab39ee7718e57846.html">3.5.7 单缝衍射与光栅 / Diffraction</a></li><li><a href="/notes/b4e5b7006a3ebbef36.html">3.5.10 光子与光电效应 / Photoelectric effect</a></li><li><a href="/notes/577e7da52289ac87da.html">3.5.11 波粒二象性与德布罗意波长 / Wave–particle duality</a></li><li><a href="/notes/2f35e8d1b6b0bffe98.html">excitation — 激发</a></li><li><a href="/notes/d8328e4e1d120ed168.html">electron volt — 电子伏特</a></li><li><a href="/notes/92b4706519e737b3a0.html">ionisation — 电离</a></li><li><a href="/notes/7c0b6fd452eab016bc.html">line spectrum — 线状光谱</a></li><li><a href="/notes/7013f303a4a6a5fb2f.html">U2 来源与范围 / Sources and scope</a></li><li><a href="/notes/56c6e1152fae1e8d55.html">U2 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/f8cd4abc514cae1e86.html">3.4.2 伏安特性与欧姆定律 真题练习 / Past-paper practice</a></li><li><a href="/notes/2ff816991fd1526aed.html">3.4.4 直流电路与电功率 真题练习 / Past-paper practice</a></li><li><a href="/notes/e3527f2e83e569a537.html">3.4.6 电动势与内阻 真题练习 / Past-paper practice</a></li><li><a href="/notes/949a03110b13eba7fd.html">3.5.4 横波、纵波、偏振与超声 真题练习 / Past-paper practice</a></li><li><a href="/notes/072b205884dcc228db.html">3.5.7 单缝衍射与光栅 真题练习 / Past-paper practice</a></li><li><a href="/notes/55d34c8e00429786ed.html">3.5.9 原子能级、线谱与X射线 真题练习 / Past-paper practice</a></li><li><a href="/notes/09ebcd672c8c7c070a.html">3.5.10 光子与光电效应 真题练习 / Past-paper practice</a></li><li><a href="/notes/ce3263153af6155d0d.html">3.5.11 波粒二象性与德布罗意波长 真题练习 / Past-paper practice</a></li><li><a href="/notes/fb08f7d5188c6c9ed5.html">PH02 2018 specimen paper / Paper index</a></li><li><a href="/notes/91bb6a5835cc512f09.html">PH02 2018 specimen paper Q03</a></li><li><a href="/notes/56570cdfe35ebac726.html">PH02 201706 / Paper index</a></li><li><a href="/notes/edd5c7cd2f141f48ee.html">PH02 201706 Q17</a></li><li><a href="/notes/b238a70145f6d6d21d.html">PH02 201706 Q18</a></li><li><a href="/notes/66f89dcd16a6e2d47d.html">PH02 201706 Q19</a></li><li><a href="/notes/e6cc1ccb6ec83d0361.html">PH02 201801 / Paper index</a></li><li><a href="/notes/c7f5dc1696e25223e2.html">PH02 201801 Q02</a></li><li><a href="/notes/277fff3a065dfcaa7b.html">PH02 201801 Q05</a></li><li><a href="/notes/7c525ef238b5ef97b6.html">PH02 201806 / Paper index</a></li><li><a href="/notes/ee157874aa03cf0741.html">PH02 201806 Q09</a></li><li><a href="/notes/b7250415e590d3c926.html">PH02 201806 Q24</a></li><li><a href="/notes/fe163b6544d7d76797.html">PH02 201901 / Paper index</a></li><li><a href="/notes/40d992cede074136e5.html">PH02 201901 Q05</a></li><li><a href="/notes/756aa8153d10680990.html">PH02 201901 Q24</a></li><li><a href="/notes/8645db80972f6c45f3.html">PH02 201906 / Paper index</a></li><li><a href="/notes/e35b6e1e374ae5146a.html">PH02 201906 Q06</a></li><li><a href="/notes/32ab02588ffc2ba507.html">PH02 201906 Q21</a></li><li><a href="/notes/ff4673ae925355ff96.html">PH02 202001 / Paper index</a></li><li><a href="/notes/b179d12f9aae072f7c.html">PH02 202001 Q01</a></li><li><a href="/notes/87c3fde7253f8115b2.html">PH02 202001 Q04</a></li><li><a href="/notes/729272be100e89077c.html">PH02 202001 Q24</a></li><li><a href="/notes/a3546c81d83fed0c6b.html">PH02 202101 / Paper index</a></li><li><a href="/notes/87a7a16a926eb11188.html">PH02 202101 Q21</a></li><li><a href="/notes/7440df1b36f7d4352b.html">PH02 202101 Q22</a></li><li><a href="/notes/a059acf659d94b6635.html">PH02 202201 / Paper index</a></li><li><a href="/notes/762a9dda450078c1d5.html">PH02 202201 Q04</a></li><li><a href="/notes/255712f4f742d45548.html">PH02 202201 Q05</a></li><li><a href="/notes/523101fe4f0dc6c921.html">PH02 202201 Q06</a></li><li><a href="/notes/f26da2ec3f8d7b20f6.html">PH02 202201 Q24</a></li><li><a href="/notes/66e1fc4b5aabc65461.html">PH02 202206 / Paper index</a></li><li><a href="/notes/38d602ac9b9995bce5.html">PH02 202206 Q05</a></li><li><a href="/notes/beec0085af8fec87aa.html">PH02 202206 Q22</a></li><li><a href="/notes/585d24af610209a7d0.html">PH02 202301 / Paper index</a></li><li><a href="/notes/085bc124944c55d514.html">PH02 202301 Q06</a></li><li><a href="/notes/ba2d545cf3acee1456.html">PH02 202306 / Paper index</a></li><li><a href="/notes/8db224b9cb2b25a85c.html">PH02 202306 Q16</a></li><li><a href="/notes/85bcd3b7aababec3d2.html">PH02 202401 / Paper index</a></li><li><a href="/notes/6e41be20b472a266be.html">PH02 202401 Q01</a></li><li><a href="/notes/1e05f56c9ab1dfbeaf.html">PH02 202401 Q03</a></li><li><a href="/notes/2b7c1923a7e6439c27.html">PH02 202401 Q18</a></li><li><a href="/notes/c5a6923226438012da.html">PH02 202406 / Paper index</a></li><li><a href="/notes/6989e6bcd343c918ad.html">PH02 202406 Q06</a></li><li><a href="/notes/7684ad07813e8f201d.html">PH02 202501 / Paper index</a></li><li><a href="/notes/620ab2f846b1f338e9.html">PH02 202501 Q09</a></li><li><a href="/notes/d7a69f7bc74779a05e.html">PH02 202501 Q15</a></li><li><a href="/notes/5eceffd4a138c4ddba.html">PH02 202501 Q19</a></li><li><a href="/notes/c27fbe68e5b3e9bbdb.html">PH02 202501 Q25</a></li><li><a href="/notes/23fab94a72e56b33a5.html">PH02 202506 / Paper index</a></li><li><a href="/notes/e0527946285dc3fa7a.html">PH02 202506 Q09</a></li><li><a href="/notes/63ec3e7c5a42b1d12f.html">PH02 202506 Q24</a></li><li><a href="/notes/fc62627b3c9c90b319.html">PH02 202601 / Paper index</a></li><li><a href="/notes/0bc34c0b8c737a2d2f.html">PH02 202601 Q07</a></li><li><a href="/notes/a9d8131b92173a48a7.html">PH02 202601 Q22</a></li><li><a href="/notes/a19804e3e3a86dfe41.html">PH02 202601 Q23</a></li><li><a href="/notes/2be43c625586f867cc.html">PH02 202606 / Paper index</a></li><li><a href="/notes/e848a4bdae13c39e9d.html">PH02 202606 Q23</a></li><li><a href="/notes/0a9f0f326353285bc3.html">PH02 202606 Q24</a></li><li><a href="/notes/2cd998f5c5a5fdac88.html">3.5.9 原子能级、线谱与X射线 / Collisions of electrons with atoms · 概念考察练习 / Concept practice</a></li><li><a href="/notes/5531c8be1c67b5d901.html">PH02 · 2018年1月 / January 2018 · Q02.1 · X-rays and ultrasound / X射线与超声波</a></li><li><a href="/notes/24c5e359dc0cbd466b.html">PH02 · 2018年1月 / January 2018 · Q05.2 · Hydrogen ionisation energy / 氢原子的电离能</a></li><li><a href="/notes/d9c385afb66484c97a.html">PH02 · 2020年1月 / January 2020 · Q24 · X-ray-tube electrodes / X射线管电极</a></li><li><a href="/notes/baeb08b1f9da4ae456.html">PH02 · 2022年6月 / June 2022 · Q05.1 · Ionisation energy reference level / 电离能级的能量基准</a></li><li><a href="/notes/6a4404380aa0d48fd7.html">PH02 · 2024年1月 / January 2024 · Q18 · X-ray-tube components / X射线管部件</a></li><li><a href="/notes/226500a711f7f95cc2.html">PH02 · 2025年6月 / June 2025 · Q24 · Fluorescent powder coating / 荧光粉涂层</a></li><li><a href="/notes/0d6a83aed9e86fecb2.html">PH02 2018年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/17e9c84f8b57179672.html">PH02 2018年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/7b34e14bd37730fdd3.html">PH02 2019年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/c08986b59ef45097c4.html">PH02 2022年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/203a85c5102b18b375.html">PH02 2023年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/da709a66ee846b438e.html">PH02 2025年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/ceaa1c8802aef7429f.html">PH02 2026年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/4041764b54a811ded5.html">PH02 · 2022年1月 / January 2022 · Q06.2 · Gas-discharge resistance / 气体放电电阻</a></li><li><a href="/notes/c44feb6a74969cbcc9.html">PH02 · 2018年1月 / January 2018 · Q02.2 · Ultrasound for a fetus / 胎儿超声成像</a></li><li><a href="/notes/607ab9526b96d8bb64.html">3.5.9 原子能级、线谱与X射线 / Collisions of electrons with atoms · 论述题练习 / Written-response practice</a></li><li><a href="/notes/40fc29e6a37f6da0c3.html">PH02 · 2018年1月 / January 2018 · Q05.3 · Ionisation energy balance / 电离能量平衡</a></li><li><a href="/notes/71f203f5a7ea799efe.html">PH02 · 2018年6月 / June 2018 · Q09.1 · Characteristic X-rays / 特征X射线</a></li><li><a href="/notes/0f3a31aa753d919fff.html">PH02 · 2019年1月 / January 2019 · Q05 · Fluorescent-tube ultraviolet / 荧光灯中的紫外线</a></li><li><a href="/notes/9b7eef1073452902ef.html">PH02 · 2019年6月 / June 2019 · Q06.1 · Exciting mercury atoms / 激发汞原子</a></li><li><a href="/notes/7d5717f83b6ef43d61.html">PH02 · 2019年6月 / June 2019 · Q06.2 · Exciting a fluorescent coating / 激发荧光涂层</a></li><li><a href="/notes/cbc8f2b756d7cfff24.html">PH02 · 2019年6月 / June 2019 · Q06.3 · Visible fluorescence / 可见荧光</a></li><li><a href="/notes/7e498e1cebbee5feb3.html">PH02 · 2020年1月 / January 2020 · Q01.1 · Absorption and excitation / 吸收与激发</a></li><li><a href="/notes/6dd985a8ceb2af3849.html">PH02 · 2022年1月 / January 2022 · Q04 · Evidence for discrete energy levels / 分立能级的证据</a></li><li><a href="/notes/b5eab161d62f3010e9.html">PH02 · 2022年1月 / January 2022 · Q06.1 · Fluorescent-tube visible light / 荧光灯的可见光</a></li><li><a href="/notes/20e77c92dc83efc63b.html">PH02 · 2023年1月 / January 2023 · Q06.3 · X-ray tube current / X射线管电流</a></li><li><a href="/notes/9c795f66ea54f812d7.html">PH02 · 2024年1月 / January 2024 · Q01.2 · Converting ultraviolet to visible light / 紫外线转为可见光</a></li><li><a href="/notes/8f129ef7d1e25092dc.html">PH02 · 2024年1月 / January 2024 · Q03 · Characteristic spectral lines / 特征谱线</a></li><li><a href="/notes/d01f099bf1202a93bb.html">PH02 · 2024年6月 / June 2024 · Q06.1 · Exciting sodium atoms / 激发钠原子</a></li><li><a href="/notes/a1724cad9ae6c795d8.html">PH02 · 2024年6月 / June 2024 · Q06.2 · Discrete sodium wavelengths / 钠光谱的分立波长</a></li><li><a href="/notes/70396a32195e817bf1.html">PH02 · 2025年1月 / January 2025 · Q09.1 · Mercury ultraviolet emission / 汞的紫外发射</a></li><li><a href="/notes/651b2190b499699239.html">PH02 · 2025年6月 / June 2025 · Q09.1 · Line spectra and energy levels / 线状光谱与能级</a></li><li><a href="/notes/054a94ef65766be876.html">PH02 · 2026年1月 / January 2026 · Q07.1 · Negative atomic energy levels / 负的原子能级</a></li><li><a href="/notes/e62991d91a097f38c0.html">PH02 · 2026年1月 / January 2026 · Q07.4 · Mercury excitation in a discharge / 放电中汞的激发</a></li><li><a href="/notes/b2fda22ea059c81036.html">PH02 · 2026年1月 / January 2026 · Q07.5 · White fluorescent light / 白色荧光</a></li><li><a href="/notes/026a51e0e84e1807c6.html">PH02 · 2022年1月 / January 2022 · Q05.3 · Choosing diffraction probes / 选择衍射探针</a></li><li><a href="/notes/4371399e1815350a20.html">离散能级与光谱 / Excitation and transition</a></li><li><a href="/notes/7ea6479fb770766e82.html">U2 3.5 振动、波与量子词汇 / Vocabulary</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U2/02 知识节点/3.5 振动与波/3.5.9 原子能级、线谱与X射线 - Collisions of electrons with atoms.md","url":"/notes/d42dad51902df30a50.html","unit":"U2"}</script></body></html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.4.4 直流电路与电功率 / Circuits · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U2/02 知识节点/3.4 电学</div><h1 id="h-be70c6b3a62d577551">3.4.4 直流电路与电功率 / Circuits</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/ed73709c3649392bc0.html">3.4.4</a>　｜　<a class="internal-link" href="/notes/d51c071167c0e89009.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>电阻 / resistance</strong></td>
+<td><span class="math inline">\(R\)</span></td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>电流 / electric current</strong></td>
+<td><span class="math inline">\(I\)</span></td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+<td>与光强、转动惯量的 I 区分 / Not intensity or moment of inertia.</td>
+</tr>
+<tr>
+<td><strong>电势差、电压 / potential difference, voltage</strong></td>
+<td><span class="math inline">\(V,\ \Delta V\)</span></td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+<td>斜体 V 是物理量，正体 V 是伏特 / Italic V is the quantity; upright V is the volt.</td>
+</tr>
+<tr>
+<td><strong>能量 / energy</strong></td>
+<td><span class="math inline">\(E\)</span></td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+<td>与杨氏模量、电场强度等 E 区分 / Not Young modulus or electric field strength here.</td>
+</tr>
+<tr>
+<td><strong>功率 / power</strong></td>
+<td><span class="math inline">\(P\)</span></td>
+<td><span class="math inline">\(\mathrm{W}\)</span></td>
+<td>斜体 P 为功率，正体 W 为瓦特 / P is the quantity; upright W is the watt.</td>
+</tr>
+<tr>
+<td><strong>时间、时间间隔 / time, time interval</strong></td>
+<td><span class="math inline">\(t,\ \Delta t\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/19f703b95b0518b8cb.html">series circuit — 串联电路</a></li>
+<li><a class="internal-link" href="/notes/3b177de3b5e24afece.html">parallel circuit — 并联电路</a></li>
+<li><a class="internal-link" href="/notes/a19890e687446427f3.html">electrical power — 电功率</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/19f703b95b0518b8cb.html#h-485f2ec53559b6043e">↗ series circuit — 串联电路</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A circuit arrangement in which components share a single current path.</p>
+<p><strong>中文：</strong> 元件共用一条电流路径的连接方式。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/3b177de3b5e24afece.html#h-485f2ec53559b6043e">↗ parallel circuit — 并联电路</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A circuit arrangement in which components are connected between the same two junctions.</p>
+<p><strong>中文：</strong> 元件连接在同一对节点之间的连接方式。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/a19890e687446427f3.html#h-485f2ec53559b6043e">↗ electrical power — 电功率</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The rate at which electrical energy is transferred.</p>
+<p><strong>中文：</strong> 电能转移的速率。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p>定义按考纲与指定教材概括；本页未列出可直接对应的定义题评分条目。 Definitions are summarised from the specification and textbook; no directly matched definition-item citation is claimed here.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p>掌握串并联等效电阻、电能和功率。</p>
+<p><span class="math inline">\(R_{\mathrm{s}}=R_1+R_2+\cdots\)</span>; <span class="math inline">\(1/R_{\mathrm{p}}=1/R_1+1/R_2+\cdots\)</span>; <span class="math inline">\(E=IVt\)</span>; <span class="math inline">\(P=IV=I^2R=V^2/R\)</span>.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>恒定电压和电流时使用电能公式；功率公式中的电流、电压和电阻必须对应同一元件。</p>
+<p>Apply <span class="math inline">\(E=IVt\)</span> when voltage and current are constant. <span class="math inline">\(I^2R\)</span> and <span class="math inline">\(V^2/R\)</span> refer to the voltage/current of the same resistor.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-304cb2579355cf3494">串并联和守恒 / Connections and conservation</h3>
+<p>串联：同一电流依次通过元件，电势降相加，<span class="math inline">\(R_T=\sum R\)</span>。并联：支路接同一对节点，电势差相同，电流相加，<span class="math inline">\(1/R_T=\sum1/R\)</span>。并联总电阻小于任一支路电阻。判断连接看节点，不能只看图形位置。</p>
+<p>Series components share current and their potential drops add. Parallel branches share potential difference and their currents add. Parallel equivalent resistance is smaller than any branch resistance; identify connections from nodes.</p>
+<p>节点：<span class="math inline">\(\sum I_{\rm in}=\sum I_{\rm out}\)</span>，来自电荷守恒。回路：按统一绕行方向列电动势和电势降的代数和为零，来自能量守恒。先化简等效电阻，再逐级还原支路量。</p>
+<p>The junction rule expresses charge conservation; the loop rule expresses energy conservation. Use consistent signs around a loop, reduce the network, then recover individual branch quantities.</p>
+<h3 id="h-7d849aa05c120c4166">电池组合 / Combinations of cells</h3>
+<p>电池串联时电动势按极性代数相加，内阻相加；反向的一节会抵消部分电动势。<span class="math inline">\(n\)</span> 节相同电池同向并联时 <span class="math inline">\(\varepsilon_{\rm eq}=\varepsilon\)</span>，<span class="math inline">\(r_{\rm eq}=r/n\)</span>；供电电压不会变为 <span class="math inline">\(n\varepsilon\)</span>。</p>
+<p>Series emfs add algebraically and internal resistances add. For <span class="math inline">\(n\)</span> identical cells in parallel with the same polarity, emf is unchanged and internal resistance is <span class="math inline">\(r/n\)</span>.</p>
+<h3 id="h-7cfbc39bbb2568517a">功率与能量比较 / Power and energy comparisons</h3>
+<p><span class="math inline">\(P=IV=I^2R=V^2/R\)</span> 中各量必须属于同一元件；<span class="math inline">\(E=IVt\)</span> 要求该时间内电压、电流恒定。恒流比较用 <span class="math inline">\(I^2R\)</span>，恒压比较用 <span class="math inline">\(V^2/R\)</span>，结论方向不同。</p>
+<p>Use the voltage, current and resistance of the same component. <span class="math inline">\(E=IVt\)</span> requires constant voltage and current. At fixed current power increases with resistance; at fixed voltage it decreases with resistance.</p>
+<p>效率 <span class="math inline">\(\eta=E_{\rm useful}/E_{\rm input}=P_{\rm useful}/P_{\rm input}\)</span>。包含电源内阻时区分供电功率 <span class="math inline">\(\varepsilon I\)</span>、负载功率 <span class="math inline">\(VI\)</span> 和内耗 <span class="math inline">\(I^2r\)</span>。</p>
+<p>Distinguish total supplied power, useful load power and internal dissipation when source resistance matters.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/d4268f21d8a6d90d7c.html#h-70b32a1dc99a35658a">3.4.4</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/782fdac2d760425d51.png" target="_blank"><img alt="3.4.4-S006-P01" decoding="async" loading="lazy" src="/media/782fdac2d760425d51.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/380fe0e7c5770dee4f.png" target="_blank"><img alt="3.4.4-S010-P01" decoding="async" loading="lazy" src="/media/380fe0e7c5770dee4f.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/380fe0e7c5770dee4f.png" target="_blank"><img alt="3.4.4-S011-P01" decoding="async" loading="lazy" src="/media/380fe0e7c5770dee4f.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>逐级化简混联电路，再求支路电压、电流；功率比较须看电源条件。</p>
+<p>Reduce mixed circuits stage by stage, then recover branch voltages and currents. Compare power under constant supply voltage or constant current as stated.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>固定电压时电阻越大功率越小，固定电流时相反；支路电流不同于总电流。</p>
+<p>A larger resistance produces less power at fixed voltage but more at fixed current. Do not treat every branch current as the total supply current.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-5111853d970a5f4135">3.4.4 方法 1 · 节点、开关与电源负载 / Nodes, switches and source loading</h3>
+<ol>
+<li>用理想导线连接的点合并为同一节点；按开关状态重画串并联结构。 / Merge equipotential nodes and redraw the circuit.</li>
+<li>先判断电源是否有内阻。理想电源并联新支路时原支路电压不变；若 <span class="math inline">\(r&gt;0\)</span>，总电流增加会增加内部损失，使端电压下降，原支路电流可能减小。 / Distinguish an ideal source from a source with internal resistance.</li>
+<li>每支路 <span class="math inline">\(p\)</span> 个相同电池串联、共 <span class="math inline">\(b\)</span> 支路并联：<span class="math inline">\(\varepsilon_{eq}=p\varepsilon\)</span>，<span class="math inline">\(r_{eq}=pr/b\)</span>。移去一个电池若使该支路断路，应去掉整条支路再计算。 / A removed cell may open an entire branch.</li>
+<li>用节点电流守恒和回路能量守恒建立方程；<span class="math inline">\(\varepsilon=IR+Ir\)</span> 中各项都是单位电荷的能量。 / Interpret emf and voltage as energy per unit charge.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/13f8ca91b0d7d947ae.html">PH02 · 202606 · Q08</a>；<a class="internal-link" href="/notes/9157548893d11ffb3c.html">PH02 · 202401 · Q08</a>；<a class="internal-link" href="/notes/c4ce80f9757418d3ca.html">PH02 · 202406 · Q05</a>；<a class="internal-link" href="/notes/7d5a579841b22e5fbc.html">PH02 · 202406 · Q03</a>。</p>
+<h3 id="h-1881a7893c65304101">3.4.4 方法 2 · 功率、百分变化与效率链 / Power and efficiency chains</h3>
+<p>先说明保持不变的是 <span class="math inline">\(I\)</span>、<span class="math inline">\(V\)</span> 还是电源参数，再选 <span class="math inline">\(P=IV=I^2R=V^2/R\)</span>。 / Choose the power form after identifying what remains constant.</p>
+<ul>
+<li>电阻变为 <span class="math inline">\(1.15R\)</span> 且电压恒定，功率比为 <span class="math inline">\(1/1.15\)</span>，不可直接说减少15%。 / Calculate the ratio before the percentage change.</li>
+<li>连续能量转换的总效率为各阶段效率的乘积；每一级都要明确输入和有用输出。 / Multiply stage efficiencies with consistent input/output definitions.</li>
+<li>串联电阻相加时加绝对不确定度；乘除及幂次才按相应百分不确定度规则。 / Match the uncertainty rule to the operation.</li>
+</ul>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/bdf264f7ee4d78a400.html">PH02 · 202506 · Q15</a>；<a class="internal-link" href="/notes/27a776c2ebc18d0493.html">PH02 · 202506 · Q16</a>；<a class="internal-link" href="/notes/3a1c649dc98d3a0374.html">PH02 · 201806 · Q11</a>；<a class="internal-link" href="/notes/abdb37e2f811a031f6.html">PH02 · 202606 · Q13</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (122)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/45b560c244d5324d34.html">PH02 · 201706 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d61940a8e25314b2cd.html">PH02 · 201706 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/29329a33308f697347.html">PH02 · 201706 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/bd79013c5cccece0c0.html">PH02 · 201706 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/792292862a02510d91.html">PH02 · 201706 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/63c2bd18b2fff77677.html">PH02 · 201706 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3cc6fad9aa0c685495.html">PH02 · 201706 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/22a284656bd576f291.html">PH02 · 201706 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6bb68a0cffbc724ee7.html">PH02 · 2018 specimen paper · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2658582e8b12d5d614.html">PH02 · 2018 specimen paper · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a6cbfde83655f6ba16.html">PH02 · 2018 specimen paper · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/83f1b4130ddb54b209.html">PH02 · 2018 specimen paper · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1f894162d527538af9.html">PH02 · 2018 specimen paper · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ec793e1d9a16f58e9e.html">PH02 · 2018 specimen paper · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/435212486aa4179293.html">PH02 · 2018 specimen paper · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/99c6afc317771fbe4f.html">PH02 · 2018 specimen paper · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/469a2b8464e00c18ec.html">PH02 · 2018 specimen paper · Q25</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6a2cc1a4a973154177.html">PH02 · 201801 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/605c999dee56f4b957.html">PH02 · 201801 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9605fa030ed5eab91f.html">PH02 · 201801 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/44ced23dbc6abdf28b.html">PH02 · 201801 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/73248b891abe1a1da0.html">PH02 · 201806 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3a1c649dc98d3a0374.html">PH02 · 201806 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/45f8eb88c49a147f08.html">PH02 · 201806 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/65161141e4b9d58b69.html">PH02 · 201806 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6a64aca074248a57a2.html">PH02 · 201806 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/458ef0fa04f5febcc8.html">PH02 · 201806 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4d3c3ad14c92a6f54f.html">PH02 · 201806 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b02af19b88de116c63.html">PH02 · 201806 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/50c9a7dc16e3a6d43d.html">PH02 · 201901 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/838abf1f1e888851ca.html">PH02 · 201901 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e12b3833002eca1f4f.html">PH02 · 201901 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/fa935f1fd17eb7fc39.html">PH02 · 201901 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/fe3871f4e58ed08299.html">PH02 · 201901 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3554ed6024bb625abb.html">PH02 · 201901 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3268f014e8a08280eb.html">PH02 · 201901 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b2748e119ddec8216a.html">PH02 · 201906 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e14de5afad692f3f3b.html">PH02 · 201906 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f4e555d192d6b6eb57.html">PH02 · 201906 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/938deb1ab772c9e7f1.html">PH02 · 201906 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/37f28ea29fab2f57b1.html">PH02 · 201906 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a1f5e92a1f95950f9e.html">PH02 · 201906 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/651daefdd59aca2464.html">PH02 · 202001 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e0fe35a5a5cb3abf93.html">PH02 · 202001 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3057000dcddf982ba9.html">PH02 · 202001 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/30a7661b1e76644324.html">PH02 · 202001 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1369b0a268f48f58f6.html">PH02 · 202001 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1320d9f8d671693be4.html">PH02 · 202001 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5697b2ee137d198c9a.html">PH02 · 202001 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3b8c6ce91ffaf30ca5.html">PH02 · 202101 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4637eb27e045d84993.html">PH02 · 202101 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/40cbc66259626fa51b.html">PH02 · 202101 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dbecc405afcaa55d9f.html">PH02 · 202101 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c1c9692cadeb16a85a.html">PH02 · 202101 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6af7a85a9781a9de57.html">PH02 · 202101 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/259b37b60fafb4592b.html">PH02 · 202101 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6821dd6825325fd634.html">PH02 · 202101 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5b1bf8132c8e7c2c16.html">PH02 · 202201 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/62bec9dba24c7ffd85.html">PH02 · 202201 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5904ffb325039ac01d.html">PH02 · 202201 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a4ff911c221506d168.html">PH02 · 202201 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/df30f20735dce8d74e.html">PH02 · 202201 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cacced6ba02780bd57.html">PH02 · 202201 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3ea5f711302ca68b2c.html">PH02 · 202206 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9ceac0205c7dd4bc8b.html">PH02 · 202206 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7a783f335e4a3fddb7.html">PH02 · 202206 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f337079a066f025f23.html">PH02 · 202206 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d3e35b4ab70c5998c3.html">PH02 · 202206 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/80ccac7bf96e21a2c0.html">PH02 · 202206 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/64a818a8f6a875ceee.html">PH02 · 202206 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8c385d1d5b5462a9f4.html">PH02 · 202301 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6ba9ef28176b53fcb2.html">PH02 · 202301 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a0f0807eef6e5be7b2.html">PH02 · 202301 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/38d6481438493cf052.html">PH02 · 202301 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/511b9cbeec6ab028c8.html">PH02 · 202301 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/95724d172d2032d75b.html">PH02 · 202301 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/508ef6f590a71c71ed.html">PH02 · 202306 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3e0c2a05bd78006ed5.html">PH02 · 202306 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5f5fc964c5ba5e2c8c.html">PH02 · 202306 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cc10b8ca7c7291aeb6.html">PH02 · 202306 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/391614eddd5de7ddf2.html">PH02 · 202306 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/de8e43307423d9a1bb.html">PH02 · 202306 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/79a8cbe32c2755a4f9.html">PH02 · 202306 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e9d87f8b1d28ca93ba.html">PH02 · 202306 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ff262ad10856c6f7ed.html">PH02 · 202401 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9157548893d11ffb3c.html">PH02 · 202401 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/88971c2c030ed8cb66.html">PH02 · 202401 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/10ae1a99a0f25770ec.html">PH02 · 202401 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/58c328ef5cdcf09a85.html">PH02 · 202401 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9a8f5e557d9c4ff015.html">PH02 · 202401 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7d5a579841b22e5fbc.html">PH02 · 202406 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dd00e04b67d524e46a.html">PH02 · 202406 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c4ce80f9757418d3ca.html">PH02 · 202406 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d02fa7bd0d9d98df5e.html">PH02 · 202406 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/14abca33fbf18f7111.html">PH02 · 202406 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/994b8c384c8dbf1907.html">PH02 · 202406 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ed8c7925d68c851f7a.html">PH02 · 202501 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dabd7b4ac0bf7afa71.html">PH02 · 202501 · Q04</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/eb5ac3b5ef8f73c15c.html">PH02 · 202501 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/620ab2f846b1f338e9.html">PH02 · 202501 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/64afd125ad155dec95.html">PH02 · 202501 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/528cb61c4c3b203c11.html">PH02 · 202501 · Q24</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c94854d9bd25848fbc.html">PH02 · 202506 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/035102f48a099c59ae.html">PH02 · 202506 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a53b0e21f76ecc167f.html">PH02 · 202506 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c2368d9f0982e6acea.html">PH02 · 202506 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5ff40425cbbca6aff6.html">PH02 · 202506 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/bdf264f7ee4d78a400.html">PH02 · 202506 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/27a776c2ebc18d0493.html">PH02 · 202506 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d729983b29b7e13250.html">PH02 · 202601 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d105c80e3a9c18ec1d.html">PH02 · 202601 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dc4d8f43bb7bd212d0.html">PH02 · 202601 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0a797232d9b611848c.html">PH02 · 202601 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9e075ac6a582a006d1.html">PH02 · 202601 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/636806f9348ad66257.html">PH02 · 202601 · Q15</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/515ff6af8721024278.html">PH02 · 202601 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/bd5d945f4f0443e8c6.html">PH02 · 202606 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/13f8ca91b0d7d947ae.html">PH02 · 202606 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3b0da30d5521474b81.html">PH02 · 202606 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9e9bda85276d0bdac1.html">PH02 · 202606 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/abdb37e2f811a031f6.html">PH02 · 202606 · Q13</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/54c62b8bfc82ed9f92.html">PH02 · 202606 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/56c6e1152fae1e8d55.html">U2逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/c6fe5c96b60ff8a9e6.html">课件例题与复述</a> · <a class="internal-link" href="/notes/2ff816991fd1526aed.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/524a70c6ce9165dd87.html">3.4.1 电学基础</a>：直流电路与电功率 ↔ 电学基础</li>
+<li><a class="internal-link" href="/notes/8818ac40b0fb5d1e43.html">3.4.5 分压器与传感电路</a>：串联电路 → 分压 / series to divider</li>
+<li><a class="internal-link" href="/notes/ac76d14d542d0654ef.html">3.4.6 电动势与内阻</a>：负载与内损 / load and internal loss</li>
+<li><a class="internal-link" href="/notes/50843d2f581c6db998.html">3.10.6 变压器、效率与高压输电</a>：直流电路与电功率 ↔ 变压器、效率与高压输电</li>
+<li><a class="internal-link" href="/notes/cc4006b0e246312063.html">U1 3.2.8</a>：本节所需基础 / prerequisite</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.4.4。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 163–174；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/84ffb0f3067a42a64e.html">U2PM02 伏安特性与工作点 - Characteristic and operating point</a></li>
+<li><a class="internal-link" href="/notes/ef5992172dee8f3e81.html">U2PM04 混联电路与功率分配 - Series and parallel</a></li>
+</ul>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/739cd16b1a5675fc6f.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/b5536c5142ef5daf19.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/cc4006b0e246312063.html">3.2.8 能量守恒 / CONSERVATION OF ENERGY</a></li><li><a href="/notes/d51c071167c0e89009.html">U2 电学、波与粒子 / Electricity, waves and particles</a></li><li><a href="/notes/d4268f21d8a6d90d7c.html">U2 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/59118fa50edd7bf53a.html">U2 考纲框架 / Specification map</a></li><li><a href="/notes/ed73709c3649392bc0.html">3.4.4 电路 / CIRCUITS</a></li><li><a href="/notes/524a70c6ce9165dd87.html">3.4.1 电学基础 / Basics of electricity</a></li><li><a href="/notes/8818ac40b0fb5d1e43.html">3.4.5 分压器与传感电路 / Potential divider</a></li><li><a href="/notes/ac76d14d542d0654ef.html">3.4.6 电动势与内阻 / Electromotive force and internal resistance</a></li><li><a href="/notes/19f703b95b0518b8cb.html">series circuit — 串联电路</a></li><li><a href="/notes/3b177de3b5e24afece.html">parallel circuit — 并联电路</a></li><li><a href="/notes/a19890e687446427f3.html">electrical power — 电功率</a></li><li><a href="/notes/7013f303a4a6a5fb2f.html">U2 来源与范围 / Sources and scope</a></li><li><a href="/notes/56c6e1152fae1e8d55.html">U2 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/228d3ff95d281e31d1.html">3.4.1 电学基础 真题练习 / Past-paper practice</a></li><li><a href="/notes/f8cd4abc514cae1e86.html">3.4.2 伏安特性与欧姆定律 真题练习 / Past-paper practice</a></li><li><a href="/notes/fc57e6cf1909025642.html">3.4.3 电阻率、热敏电阻与超导 真题练习 / Past-paper practice</a></li><li><a href="/notes/2ff816991fd1526aed.html">3.4.4 直流电路与电功率 真题练习 / Past-paper practice</a></li><li><a href="/notes/20486cd9fbf4583be2.html">3.4.5 分压器与传感电路 真题练习 / Past-paper practice</a></li><li><a href="/notes/e3527f2e83e569a537.html">3.4.6 电动势与内阻 真题练习 / Past-paper practice</a></li><li><a href="/notes/949a03110b13eba7fd.html">3.5.4 横波、纵波、偏振与超声 真题练习 / Past-paper practice</a></li><li><a href="/notes/55d34c8e00429786ed.html">3.5.9 原子能级、线谱与X射线 真题练习 / Past-paper practice</a></li><li><a href="/notes/fb08f7d5188c6c9ed5.html">PH02 2018 specimen paper / Paper index</a></li><li><a href="/notes/6bb68a0cffbc724ee7.html">PH02 2018 specimen paper Q02</a></li><li><a href="/notes/2658582e8b12d5d614.html">PH02 2018 specimen paper Q04</a></li><li><a href="/notes/a6cbfde83655f6ba16.html">PH02 2018 specimen paper Q08</a></li><li><a href="/notes/83f1b4130ddb54b209.html">PH02 2018 specimen paper Q10</a></li><li><a href="/notes/1f894162d527538af9.html">PH02 2018 specimen paper Q20</a></li><li><a href="/notes/ec793e1d9a16f58e9e.html">PH02 2018 specimen paper Q21</a></li><li><a href="/notes/435212486aa4179293.html">PH02 2018 specimen paper Q22</a></li><li><a href="/notes/99c6afc317771fbe4f.html">PH02 2018 specimen paper Q24</a></li><li><a href="/notes/469a2b8464e00c18ec.html">PH02 2018 specimen paper Q25</a></li><li><a href="/notes/56570cdfe35ebac726.html">PH02 201706 / Paper index</a></li><li><a href="/notes/45b560c244d5324d34.html">PH02 201706 Q04</a></li><li><a href="/notes/d61940a8e25314b2cd.html">PH02 201706 Q06</a></li><li><a href="/notes/29329a33308f697347.html">PH02 201706 Q07</a></li><li><a href="/notes/bd79013c5cccece0c0.html">PH02 201706 Q09</a></li><li><a href="/notes/792292862a02510d91.html">PH02 201706 Q12</a></li><li><a href="/notes/63c2bd18b2fff77677.html">PH02 201706 Q14</a></li><li><a href="/notes/3cc6fad9aa0c685495.html">PH02 201706 Q16</a></li><li><a href="/notes/22a284656bd576f291.html">PH02 201706 Q23</a></li><li><a href="/notes/e6cc1ccb6ec83d0361.html">PH02 201801 / Paper index</a></li><li><a href="/notes/6a2cc1a4a973154177.html">PH02 201801 Q03</a></li><li><a href="/notes/605c999dee56f4b957.html">PH02 201801 Q04</a></li><li><a href="/notes/9605fa030ed5eab91f.html">PH02 201801 Q07</a></li><li><a href="/notes/44ced23dbc6abdf28b.html">PH02 201801 Q15</a></li><li><a href="/notes/7c525ef238b5ef97b6.html">PH02 201806 / Paper index</a></li><li><a href="/notes/73248b891abe1a1da0.html">PH02 201806 Q06</a></li><li><a href="/notes/3a1c649dc98d3a0374.html">PH02 201806 Q11</a></li><li><a href="/notes/45f8eb88c49a147f08.html">PH02 201806 Q12</a></li><li><a href="/notes/65161141e4b9d58b69.html">PH02 201806 Q13</a></li><li><a href="/notes/6a64aca074248a57a2.html">PH02 201806 Q14</a></li><li><a href="/notes/458ef0fa04f5febcc8.html">PH02 201806 Q15</a></li><li><a href="/notes/4d3c3ad14c92a6f54f.html">PH02 201806 Q16</a></li><li><a href="/notes/b02af19b88de116c63.html">PH02 201806 Q17</a></li><li><a href="/notes/fe163b6544d7d76797.html">PH02 201901 / Paper index</a></li><li><a href="/notes/50c9a7dc16e3a6d43d.html">PH02 201901 Q06</a></li><li><a href="/notes/838abf1f1e888851ca.html">PH02 201901 Q10</a></li><li><a href="/notes/e12b3833002eca1f4f.html">PH02 201901 Q12</a></li><li><a href="/notes/fa935f1fd17eb7fc39.html">PH02 201901 Q13</a></li><li><a href="/notes/fe3871f4e58ed08299.html">PH02 201901 Q14</a></li><li><a href="/notes/3554ed6024bb625abb.html">PH02 201901 Q15</a></li><li><a href="/notes/3268f014e8a08280eb.html">PH02 201901 Q17</a></li><li><a href="/notes/8645db80972f6c45f3.html">PH02 201906 / Paper index</a></li><li><a href="/notes/b2748e119ddec8216a.html">PH02 201906 Q05</a></li><li><a href="/notes/e14de5afad692f3f3b.html">PH02 201906 Q07</a></li><li><a href="/notes/f4e555d192d6b6eb57.html">PH02 201906 Q11</a></li><li><a href="/notes/938deb1ab772c9e7f1.html">PH02 201906 Q13</a></li><li><a href="/notes/37f28ea29fab2f57b1.html">PH02 201906 Q14</a></li><li><a href="/notes/a1f5e92a1f95950f9e.html">PH02 201906 Q15</a></li><li><a href="/notes/ff4673ae925355ff96.html">PH02 202001 / Paper index</a></li><li><a href="/notes/651daefdd59aca2464.html">PH02 202001 Q03</a></li><li><a href="/notes/e0fe35a5a5cb3abf93.html">PH02 202001 Q08</a></li><li><a href="/notes/3057000dcddf982ba9.html">PH02 202001 Q11</a></li><li><a href="/notes/30a7661b1e76644324.html">PH02 202001 Q12</a></li><li><a href="/notes/1369b0a268f48f58f6.html">PH02 202001 Q14</a></li><li><a href="/notes/1320d9f8d671693be4.html">PH02 202001 Q15</a></li><li><a href="/notes/5697b2ee137d198c9a.html">PH02 202001 Q16</a></li><li><a href="/notes/a3546c81d83fed0c6b.html">PH02 202101 / Paper index</a></li><li><a href="/notes/3b8c6ce91ffaf30ca5.html">PH02 202101 Q01</a></li><li><a href="/notes/4637eb27e045d84993.html">PH02 202101 Q04</a></li><li><a href="/notes/40cbc66259626fa51b.html">PH02 202101 Q06</a></li><li><a href="/notes/dbecc405afcaa55d9f.html">PH02 202101 Q07</a></li><li><a href="/notes/c1c9692cadeb16a85a.html">PH02 202101 Q12</a></li><li><a href="/notes/6af7a85a9781a9de57.html">PH02 202101 Q13</a></li><li><a href="/notes/259b37b60fafb4592b.html">PH02 202101 Q14</a></li><li><a href="/notes/6821dd6825325fd634.html">PH02 202101 Q15</a></li><li><a href="/notes/a059acf659d94b6635.html">PH02 202201 / Paper index</a></li><li><a href="/notes/5b1bf8132c8e7c2c16.html">PH02 202201 Q08</a></li><li><a href="/notes/62bec9dba24c7ffd85.html">PH02 202201 Q11</a></li><li><a href="/notes/5904ffb325039ac01d.html">PH02 202201 Q12</a></li><li><a href="/notes/a4ff911c221506d168.html">PH02 202201 Q14</a></li><li><a href="/notes/df30f20735dce8d74e.html">PH02 202201 Q15</a></li><li><a href="/notes/cacced6ba02780bd57.html">PH02 202201 Q16</a></li><li><a href="/notes/66e1fc4b5aabc65461.html">PH02 202206 / Paper index</a></li><li><a href="/notes/3ea5f711302ca68b2c.html">PH02 202206 Q02</a></li><li><a href="/notes/9ceac0205c7dd4bc8b.html">PH02 202206 Q07</a></li><li><a href="/notes/7a783f335e4a3fddb7.html">PH02 202206 Q09</a></li><li><a href="/notes/f337079a066f025f23.html">PH02 202206 Q10</a></li><li><a href="/notes/d3e35b4ab70c5998c3.html">PH02 202206 Q12</a></li><li><a href="/notes/80ccac7bf96e21a2c0.html">PH02 202206 Q13</a></li><li><a href="/notes/64a818a8f6a875ceee.html">PH02 202206 Q14</a></li><li><a href="/notes/585d24af610209a7d0.html">PH02 202301 / Paper index</a></li><li><a href="/notes/8c385d1d5b5462a9f4.html">PH02 202301 Q08</a></li><li><a href="/notes/6ba9ef28176b53fcb2.html">PH02 202301 Q13</a></li><li><a href="/notes/a0f0807eef6e5be7b2.html">PH02 202301 Q16</a></li><li><a href="/notes/38d6481438493cf052.html">PH02 202301 Q17</a></li><li><a href="/notes/511b9cbeec6ab028c8.html">PH02 202301 Q18</a></li><li><a href="/notes/95724d172d2032d75b.html">PH02 202301 Q22</a></li><li><a href="/notes/ba2d545cf3acee1456.html">PH02 202306 / Paper index</a></li><li><a href="/notes/508ef6f590a71c71ed.html">PH02 202306 Q02</a></li><li><a href="/notes/3e0c2a05bd78006ed5.html">PH02 202306 Q08</a></li><li><a href="/notes/5f5fc964c5ba5e2c8c.html">PH02 202306 Q12</a></li><li><a href="/notes/cc10b8ca7c7291aeb6.html">PH02 202306 Q13</a></li><li><a href="/notes/391614eddd5de7ddf2.html">PH02 202306 Q14</a></li><li><a href="/notes/de8e43307423d9a1bb.html">PH02 202306 Q15</a></li><li><a href="/notes/79a8cbe32c2755a4f9.html">PH02 202306 Q18</a></li><li><a href="/notes/e9d87f8b1d28ca93ba.html">PH02 202306 Q23</a></li><li><a href="/notes/85bcd3b7aababec3d2.html">PH02 202401 / Paper index</a></li><li><a href="/notes/ff262ad10856c6f7ed.html">PH02 202401 Q05</a></li><li><a href="/notes/9157548893d11ffb3c.html">PH02 202401 Q08</a></li><li><a href="/notes/88971c2c030ed8cb66.html">PH02 202401 Q12</a></li><li><a href="/notes/10ae1a99a0f25770ec.html">PH02 202401 Q13</a></li><li><a href="/notes/58c328ef5cdcf09a85.html">PH02 202401 Q16</a></li><li><a href="/notes/9a8f5e557d9c4ff015.html">PH02 202401 Q20</a></li><li><a href="/notes/c5a6923226438012da.html">PH02 202406 / Paper index</a></li><li><a href="/notes/7d5a579841b22e5fbc.html">PH02 202406 Q03</a></li><li><a href="/notes/dd00e04b67d524e46a.html">PH02 202406 Q04</a></li><li><a href="/notes/c4ce80f9757418d3ca.html">PH02 202406 Q05</a></li><li><a href="/notes/d02fa7bd0d9d98df5e.html">PH02 202406 Q10</a></li><li><a href="/notes/14abca33fbf18f7111.html">PH02 202406 Q13</a></li><li><a href="/notes/994b8c384c8dbf1907.html">PH02 202406 Q15</a></li><li><a href="/notes/7684ad07813e8f201d.html">PH02 202501 / Paper index</a></li><li><a href="/notes/ed8c7925d68c851f7a.html">PH02 202501 Q02</a></li><li><a href="/notes/dabd7b4ac0bf7afa71.html">PH02 202501 Q04</a></li><li><a href="/notes/eb5ac3b5ef8f73c15c.html">PH02 202501 Q05</a></li><li><a href="/notes/620ab2f846b1f338e9.html">PH02 202501 Q09</a></li><li><a href="/notes/64afd125ad155dec95.html">PH02 202501 Q14</a></li><li><a href="/notes/528cb61c4c3b203c11.html">PH02 202501 Q24</a></li><li><a href="/notes/23fab94a72e56b33a5.html">PH02 202506 / Paper index</a></li><li><a href="/notes/c94854d9bd25848fbc.html">PH02 202506 Q06</a></li><li><a href="/notes/035102f48a099c59ae.html">PH02 202506 Q11</a></li><li><a href="/notes/a53b0e21f76ecc167f.html">PH02 202506 Q12</a></li><li><a href="/notes/c2368d9f0982e6acea.html">PH02 202506 Q13</a></li><li><a href="/notes/5ff40425cbbca6aff6.html">PH02 202506 Q14</a></li><li><a href="/notes/bdf264f7ee4d78a400.html">PH02 202506 Q15</a></li><li><a href="/notes/27a776c2ebc18d0493.html">PH02 202506 Q16</a></li><li><a href="/notes/fc62627b3c9c90b319.html">PH02 202601 / Paper index</a></li><li><a href="/notes/d729983b29b7e13250.html">PH02 202601 Q05</a></li><li><a href="/notes/d105c80e3a9c18ec1d.html">PH02 202601 Q06</a></li><li><a href="/notes/dc4d8f43bb7bd212d0.html">PH02 202601 Q10</a></li><li><a href="/notes/0a797232d9b611848c.html">PH02 202601 Q13</a></li><li><a href="/notes/9e075ac6a582a006d1.html">PH02 202601 Q14</a></li><li><a href="/notes/636806f9348ad66257.html">PH02 202601 Q15</a></li><li><a href="/notes/515ff6af8721024278.html">PH02 202601 Q16</a></li><li><a href="/notes/2be43c625586f867cc.html">PH02 202606 / Paper index</a></li><li><a href="/notes/bd5d945f4f0443e8c6.html">PH02 202606 Q05</a></li><li><a href="/notes/13f8ca91b0d7d947ae.html">PH02 202606 Q08</a></li><li><a href="/notes/3b0da30d5521474b81.html">PH02 202606 Q11</a></li><li><a href="/notes/9e9bda85276d0bdac1.html">PH02 202606 Q12</a></li><li><a href="/notes/abdb37e2f811a031f6.html">PH02 202606 Q13</a></li><li><a href="/notes/54c62b8bfc82ed9f92.html">PH02 202606 Q14</a></li><li><a href="/notes/739cd16b1a5675fc6f.html">3.4.4 直流电路与电功率 / Circuits · 概念考察练习 / Concept practice</a></li><li><a href="/notes/21b4c8df50a849a744.html">PH02 · 2018年1月 / January 2018 · Q07.1 · Electromotive force / 电动势</a></li><li><a href="/notes/0ef5c91841c39110f4.html">PH02 · 2022年6月 / June 2022 · Q02 · Terminal potential difference and emf / 端电压与电动势</a></li><li><a href="/notes/782c3a81c213555eca.html">PH02 · 2026年6月 / June 2026 · Q08.1 · Meaning of a 1.5 V emf / 1.5伏电动势的含义</a></li><li><a href="/notes/1c85537ef99f3b95f2.html">U2 计算与证明 / Calculations and show-that questions</a></li><li><a href="/notes/0d6a83aed9e86fecb2.html">PH02 2018年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/17e9c84f8b57179672.html">PH02 2018年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/e9bf26c1525e68791b.html">PH02 2019年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/2f62f4d8f96db2e549.html">PH02 2020年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/5a59a184aab66a38b4.html">PH02 2021年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/c08986b59ef45097c4.html">PH02 2022年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/230340ece257dad78a.html">PH02 2024年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/590e87ab1e23540428.html">PH02 · 2024年6月 / June 2024 · Q10.4 · Kettle switch-on power / 电水壶接通功率</a></li><li><a href="/notes/b8cbe55c958d917e88.html">PH02 · 2024年6月 / June 2024 · Q10.2 · Heating element and supply leads / 加热丝与供电导线</a></li><li><a href="/notes/b5536c5142ef5daf19.html">3.4.4 直流电路与电功率 / Circuits · 论述题练习 / Written-response practice</a></li><li><a href="/notes/3b0fcd0f088e3c2181.html">PH02 · 2018年6月 / June 2018 · Q11.2 · Increasing generator power / 增大发电功率</a></li><li><a href="/notes/a8accfcf1bfb0a21f9.html">PH02 · 2024年1月 / January 2024 · Q08.3 · Increased external resistance / 外电阻增大</a></li><li><a href="/notes/69d79c1c238d413ad9.html">PH02 · 2024年1月 / January 2024 · Q08.4 · Power in a load resistor / 负载电阻功率</a></li><li><a href="/notes/e9f982ab1c7c2d83ca.html">PH02 · 2024年6月 / June 2024 · Q05.2 · Missing cell in a battery / 电池组缺少电池</a></li><li><a href="/notes/d68a1149a6a3b0dde2.html">PH02 · 2021年1月 / January 2021 · Q07.5 · Heating rate and divider voltage / 加热速率与分压</a></li><li><a href="/notes/3ac6741837bd131fb9.html">PH02 · 2018年1月 / January 2018 · Q07.5 · Battery suitability / 电池适用性</a></li><li><a href="/notes/b5c73aebf6576ba803.html">PH02 · 2018年1月 / January 2018 · Q07.7 · Short circuit and internal power / 短路与内部耗散</a></li><li><a href="/notes/a87c1023034b2e3f66.html">PH02 · 2019年6月 / June 2019 · Q07.1 · Terminal voltage and current / 端电压与电流</a></li><li><a href="/notes/a30e075505dd669ed2.html">PH02 · 2023年6月 / June 2023 · Q02 · Cell voltage when a switch closes / 合闸时电池电压</a></li><li><a href="/notes/bd9ca23a9e0884078d.html">PH02 · 2024年1月 / January 2024 · Q05.2 · Non-ideal ammeter / 非理想电流表</a></li><li><a href="/notes/2d8191e5ca610adc3c.html">PH02 · 2024年6月 / June 2024 · Q03 · Cell equation and energy conservation / 电池方程与能量守恒</a></li><li><a href="/notes/c2b6edde4ae2e24e6e.html">PH02 · 2025年1月 / January 2025 · Q05.2 · Internal resistance limits output voltage / 内阻限制输出电压</a></li><li><a href="/notes/d302911551f3a7f8c7.html">PH02 · 2025年6月 / June 2025 · Q06.3 · Cell internal resistance and brightness / 电池内阻与灯泡亮度</a></li><li><a href="/notes/613592990e1c27cef3.html">PH02 · 2026年6月 / June 2026 · Q08.2 · Single-reading emf measurement / 单次测量电动势</a></li><li><a href="/notes/1b4034fe89546c9ee2.html">PH02 · 2026年6月 / June 2026 · Q08.3 · Closing a parallel branch with internal resistance / 有内阻电池的并联支路合闸</a></li><li><a href="/notes/84ffb0f3067a42a64e.html">伏安特性与工作点 / Characteristic and operating point</a></li><li><a href="/notes/ef5992172dee8f3e81.html">混联电路与功率分配 / Series and parallel</a></li><li><a href="/notes/f43231ab09b32fea0b.html">U2 3.4 电学词汇 / Vocabulary</a></li><li><a href="/notes/50843d2f581c6db998.html">3.10.6 变压器、效率与高压输电 / The operation of a transformer</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U2/02 知识节点/3.4 电学/3.4.4 直流电路与电功率 - Circuits.md","url":"/notes/9b9873b5020c3643d4.html","unit":"U2"}</script></body></html>

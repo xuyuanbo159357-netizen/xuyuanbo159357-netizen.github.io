@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>冲量、力时间图与冲击 / Impulse, force-time graphs and impact · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/02 知识节点/3.2 力学与材料</div><h1 id="h-3c2bf13c125996d188">冲量、力时间图与冲击 / Impulse, force-time graphs and impact</h1>
+<details class="callout physics-relations"><summary>关系摘要</summary><div class="callout-body"><p><strong>冲量、力时间图与冲击 / Impulse, force-time graphs and impact</strong></p>
+<p>冲量等于动量变化；延长接触时间可减小相同动量变化的平均力。Impulse links force and momentum.</p>
+<p>考纲 / Specification：<a class="internal-link" href="/notes/88eca5b9d3ed5730ae.html">3.2.6 动量 - MOMENTUM</a></p>
+</div></details>
+<!-- U1_LINEAGE_START -->
+<details class="callout physics-lineage"><summary>知识谱系位置 / Place in the knowledge lineage</summary><div class="callout-body"><p><a class="internal-link" href="/notes/fe4f62fb8bc5de4a67.html">00 物理U1知识谱系 - Physics U1 knowledge lineage</a> → <a class="internal-link" href="/notes/16a0d0b8df1a4bed67.html">3.2 力学与材料 - Mechanics and materials</a> → <a class="internal-link" href="/notes/88eca5b9d3ed5730ae.html">3.2.6 动量 - MOMENTUM</a> → <strong>D19 冲量、力时间图与冲击</strong></p>
+<p><strong>从哪些知识引入 / Incoming relationships</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/bed34d9362c13d8db4.html">D11 弹跳球运动图像 - Bouncing-ball graphs</a> → 本笔记：碰地冲量 / impact。</li>
+</ul>
+<p><strong>可以继续连接到 / Outgoing relationships</strong></p>
+<ul>
+<li>本笔记 → <a class="internal-link" href="/notes/47203daf24e7e8bcaf.html">D17 动量与动量守恒 - Momentum and conservation of momentum</a>: 冲量改变p / Δp。</li>
+</ul>
+<p><strong>应用与返回 / Apply and return</strong></p>
+<ul>
+<li><a class="internal-link" href="/notes/7fe6d6da744b66304d.html">3.2.6 课堂检测复述 - Retrieval and practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+<li><a class="internal-link" href="/notes/aa4f944a41cbc22549.html">D19 冲量、力时间图与冲击复述与练习 - Impulse, force-time graphs and impact - Retrieval practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+</ul>
+<p>箭头的含义以上方关系标签为准，相关知识不一概视为严格先修。The labels distinguish definitions, derivations, evidence, measurement and applications.</p>
+</div></details>
+<!-- U1_LINEAGE_END -->
+<!-- U1_DEFINITIONS_START -->
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>冲量 / impulse</strong></td>
+<td><span class="math inline">\(J\)</span></td>
+<td><span class="math inline">\(\mathrm{N\,s}\)</span></td>
+<td>斜体 J 表冲量，正体 J 是焦耳单位 / Italic J is impulse; upright J is the joule.</td>
+</tr>
+<tr>
+<td><strong>动量 / momentum</strong></td>
+<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(\mathrm{kg\,m\,s^{-1}}\)</span></td>
+<td>矢量；与压强 p 通过语境区分 / Vector; distinguish from pressure by context.</td>
+</tr>
+<tr>
+<td><strong>力 / force</strong></td>
+<td><span class="math inline">\(F\)</span></td>
+<td><span class="math inline">\(\mathrm{N}\)</span></td>
+<td>矢量；合力常记 ΣF 或 F_resultant / Vector; resultant force is often ΣF or F_resultant.</td>
+</tr>
+<tr>
+<td><strong>时间、时间间隔 / time, time interval</strong></td>
+<td><span class="math inline">\(t,\ \Delta t\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>质量 / mass</strong></td>
+<td><span class="math inline">\(m\)</span></td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+<td>与重力不同 / Not weight.</td>
+</tr>
+<tr>
+<td><strong>初速度 / initial velocity</strong></td>
+<td><span class="math inline">\(u\)</span></td>
+<td><span class="math inline">\(\mathrm{m\,s^{-1}}\)</span></td>
+<td>运动方程中的初值 / Initial value in motion equations.</td>
+</tr>
+<tr>
+<td><strong>速度 / velocity</strong></td>
+<td><span class="math inline">\(v,\ \bar v\)</span></td>
+<td><span class="math inline">\(\mathrm{m\,s^{-1}}\)</span></td>
+<td>矢量；上横线表示平均速度 / Vector; the overbar denotes mean velocity.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<p><strong>Impulse / 冲量</strong></p>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<h3 id="h-3dc8b8147e1044c6ab">Impulse / 冲量</h3>
+<p><strong>EN:</strong> Impulse is the change in momentum of an object.</p>
+<p><strong>中:</strong> 冲量是物体动量的变化量。</p>
+<p><strong>表达要点 / Wording:</strong> change in momentum</p>
+<p><strong>依据 / Evidence:</strong> <a class="internal-link" href="/media/f6300cb04858f0ff68.pdf#page=15">PH01 201801 Q11.1 · MS p15（定义/陈述评分点）</a>；<a class="internal-link" href="/media/4597a1dde4e4c908b8.pdf#page=11">PH01 202001 Q09.1 · MS p11（定义/陈述评分点）</a></p>
+<h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
+<div class="math block">
+\[\begin{gathered}
+J_{\rm net}=\Delta p=m(v-u) \\
+F_{\rm resultant,avg}=\frac{\Delta p}{\Delta t} \\
+J=F\Delta t\quad\text{(constant force)}
+\end{gathered}\]
+</div>
+<h2 id="h-166a0f981d6cdc4cad">Conditions / 适用条件</h2>
+<p>只有合力的总冲量等于物体的全部动量变化。若图中给的是接触力，须检查是否还需计入重力等其他力。 / Net impulse gives the total momentum change; check other forces when the graph shows a contact force.</p>
+<h2 id="h-614697bd55e5a5935c">Explanation / 讲解</h2>
+<h3 id="h-467442a25677282312">核心关系 / Core relations</h3>
+<div class="math block">
+\[F_{\text{avg}}=\frac{\Delta p}{\Delta t},\qquad
+J=\Delta p=m(v-u).\]
+</div>
+<p>恒定力时 <span class="math inline">\(J=F\Delta t\)</span>。变力时有符号F–t图下面积是冲量。For a varying force, use the graph area rather than peak force multiplied by time.</p>
+<p>单位N s与kg m s⁻¹相同。Force changes momentum, not merely its magnitude.</p>
+<h3 id="h-bbd7e5dcb34354ba35">碰撞与反弹 / Stopping and rebound</h3>
+<p>从 <span class="math inline">\(u&gt;0\)</span> 停下时 <span class="math inline">\(\Delta p=-mu\)</span>。若反弹末速度 <span class="math inline">\(v&lt;0\)</span>，则动量变化大小为 <span class="math inline">\(m(|u|+|v|)\)</span>。A rebound can create a larger momentum change than stopping.</p>
+<p>同样的动量变化，接触时间越长，平均力越小。缓冲区、包装材料和接球时向后移动手都利用这一关系。A longer stopping interval reduces average impact force.</p>
+<p>平均力与峰值力不同；相同面积的F–t曲线可有不同峰值。Different force profiles can give the same impulse.</p>
+<p>踢球时冲量改变球的速度，脚受到对应反向冲量。Apply the third law to the same interaction on the two bodies.</p>
+<h3 id="h-554371516ca7656351">物理图像与图示 / Physics graphs and diagrams</h3>
+<a class="image-link" href="/media/b5554144bb1462726a.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/b5554144bb1462726a.png"/></a>
+<p><strong>读图 / Reading:</strong> 力–时间图下面积给该力的冲量；先把毫秒换成秒，再求面积。 / Area gives impulse; convert milliseconds to seconds first.</p>
+<a class="image-link" href="/media/f97ae51f6bea4ab305.png" target="_blank"><img alt="物理示意图 / Physics diagram" decoding="async" loading="lazy" src="/media/f97ae51f6bea4ab305.png"/></a>
+<p><strong>读图 / Reading:</strong> 反弹时速度方向改变，计算动量变化必须使用带符号的速度。 / Use signed velocities when the object rebounds.</p>
+<!-- U1_DEFINITIONS_END -->
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-0a9d95ee7817a4a1d9">D19 方法 1 · 冲量、接触力与连续流 / Impulse, contact forces and continuous flow</h3>
+<ol>
+<li>冲量为动量变化 <span class="math inline">\(\mathbf J=\Delta\mathbf p=\int\mathbf F_{net}dt\)</span>；平均合力 <span class="math inline">\(\Delta p/\Delta t\)</span>。反弹需计方向，图上ms先换秒。 / Use signed momenta and the correct time unit.</li>
+<li>力板或竖直接触问题要区分接触力与合力；求净冲量可用接触曲线减重力基线，求地面对球力需加回重力。 / Identify exactly which force is plotted or requested.</li>
+<li>安全解释用“相同初末运动状态 → 相同动量变化 → 更长停止时间 → 较小平均合力”；若反弹，动量变化也可能更大，不能无条件说相同。 / State what is held fixed.</li>
+<li>也可用相同动能损失、较长停止距离解释平均阻力；<span class="math inline">\(F\)</span>–<span class="math inline">\(t\)</span> 面积和 <span class="math inline">\(F\)</span>–<span class="math inline">\(x\)</span> 面积分别对应冲量、功，不可互换。 / Match the graph to the conserved quantity.</li>
+<li>连续流体或沙流 <span class="math inline">\(F=\dot m(v_{out}-v_{in})\)</span>，先把体积流率经密度转质量流率；电机功率还应计系统摩擦。 / Use the change in velocity, not just the output speed unless the input component is zero.</li>
+</ol>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/0c41ccd51abec7d2c0.html">PH01 · 202306 · Q08</a>；<a class="internal-link" href="/notes/48e0cf1ee457aa1ba1.html">PH01 · 201801 · Q11</a>；<a class="internal-link" href="/notes/6fc0aeca1da01f185c.html">PH01 · 201901 · Q08</a>；<a class="internal-link" href="/notes/3eafbf210a4da8d7e1.html">PH01 · 202001 · Q09</a>；<a class="internal-link" href="/notes/9f63c473c7f7750561.html">PH01 · 202601 · Q14</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (22)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/c6db2b2607ef02008c.html">PH01 · 201706 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5cdf23be2226353c53.html">PH01 · 2018 specimen paper · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b1afdb971f0d1f6412.html">PH01 · 2018 specimen paper · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/48e0cf1ee457aa1ba1.html">PH01 · 201801 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d2256df309ada9a4e6.html">PH01 · 201806 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6fc0aeca1da01f185c.html">PH01 · 201901 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6314965cfa238c91c7.html">PH01 · 201906 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/3eafbf210a4da8d7e1.html">PH01 · 202001 · Q09</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/089828e4b363d4547a.html">PH01 · 202101 · Q10</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c52fdd8d9f811e8985.html">PH01 · 202101 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/20aab310122e7f9c5e.html">PH01 · 202206 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/af064423c8ff484145.html">PH01 · 202206 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7a97934740f3a1f90d.html">PH01 · 202301 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/0c41ccd51abec7d2c0.html">PH01 · 202306 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/73d61e1d52d3956564.html">PH01 · 202306 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f0be41784c3f233bbe.html">PH01 · 202401 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7927201214da1b6580.html">PH01 · 202501 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c5715dcc9bb9256d19.html">PH01 · 202506 · Q23</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9f63c473c7f7750561.html">PH01 · 202601 · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/253f8a04796517b700.html">PH01 · 202601 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/384227ada914061913.html">PH01 · 202606 · Q07</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/bb51720d43bd2dea27.html">PH01 · 202606 · Q17</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/30b5c7a31ed5ee4f9d.html">U1逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-91121d1ecaf6930b80">知识联系 / Relationships</h2>
+<table>
+<thead>
+<tr>
+<th>方向 / Direction</th>
+<th>相连知识 / Linked knowledge</th>
+<th>关系 / Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前置或关联 → 本知识 / incoming</td>
+<td><a class="internal-link" href="/notes/bed34d9362c13d8db4.html">D11 弹跳球运动图像 - Bouncing-ball graphs</a></td>
+<td>碰地冲量 / impact</td>
+</tr>
+<tr>
+<td>本知识 → / outgoing</td>
+<td><a class="internal-link" href="/notes/47203daf24e7e8bcaf.html">D17 动量与动量守恒 - Momentum and conservation of momentum</a></td>
+<td>冲量改变p / Δp</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-d289ca8067ef00f08b">复述检查 / Retrieval check</h2>
+<ul>
+<li>[ ] 计算停止和反弹时的动量变化并比较。 / Compare stopping and rebound.</li>
+<li>[ ] 用同一面积、不同宽度的F–t图解释缓冲。 / Relate area, duration and force.</li>
+</ul>
+<h2 id="h-7a185af5ecf46cb0ac">对应原课件练习 / Source-slide practice</h2>
+<ul>
+<li><a class="internal-link" href="/notes/aa4f944a41cbc22549.html">D19 冲量、力时间图与冲击复述与练习 - Impulse, force-time graphs and impact - Retrieval practice</a></li>
+<li><a class="internal-link" href="/notes/7fe6d6da744b66304d.html">3.2.6 课堂检测复述 - Retrieval and practice</a></li>
+</ul>
+<h2 id="h-00e36c430b204d4a07">依据 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/notes/0b5dec2e245a870dec.html">资料来源与范围 - Sources and scope</a>：本地9630 U1考纲对应3.2.6，与官方4.4版核对。</li>
+<li>Jim Breithaupt, Oxford International AQA Physics，教材印刷页 75, 79。内容按U1范围重新概括，未复制整段教材。</li>
+</ul>
+<!-- U1_MODELS_START -->
+<h2 id="h-ece831a4c8c76b508e">常用物理模型 / Common physics models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/a147ef262ccc4f266c.html">PM10 碰撞模型</a>：collide / collision；elastic / elastically。</li>
+<li><a class="internal-link" href="/notes/5dade7996b1e93961e.html">PM12 冲量停止与反弹模型</a>：average force / contact time；rebound / bounce。</li>
+</ul>
+<!-- U1_MODELS_END -->
+<!-- U1_PAST_PAPERS_START -->
+<h2 id="h-d7e53f0d63ea2388d1">历年真题 / Past-paper practice</h2>
+<a class="internal-link" href="/notes/edebb63acb9b6684d4.html">按本知识点查看题目图片（22题） / Practice bank</a>
+<table>
+<thead>
+<tr>
+<th>所属试卷 / Paper</th>
+<th>题目 / Question</th>
+<th>对应范围 / Parts</th>
+<th>答案 / MS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017年6月 / June 2017</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-d8a9fa6d860a60c7ea">Q08</a></td>
+<td>08.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018 样卷 / Specimen 2018</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-0f5f7123c519207fd3">Q06</a></td>
+<td>06.4、06.5</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018 样卷 / Specimen 2018</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-46d7ccff8306d474e7">Q20</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年1月 / January 2018</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-77d16441546f0d6f6e">Q11</a></td>
+<td>11.1、11.2、11.3、11.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2018年6月 / June 2018</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-4c774ee57dcf32887e">Q12</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年1月 / January 2019</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-840831049d34f373aa">Q08</a></td>
+<td>08.1</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2019年6月 / June 2019</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-078b89294c4e8d6897">Q19</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2020年1月 / January 2020</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-bfc399d8b83ed5b22a">Q09</a></td>
+<td>09.1、09.2</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-eddfc9cb6f3c871208">Q10</a></td>
+<td>10.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2021年1月 / January 2021</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-0a710dccc5155dd849">Q17</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-f9238540ace323cad8">Q06</a></td>
+<td>06.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2022年6月 / June 2022</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-d8bb447cf30921c58a">Q17</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年1月 / January 2023</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-3e059fa9b6f76d739d">Q19</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年6月 / June 2023</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-dea1b412e001c0fc72">Q08</a></td>
+<td>08.2、08.7</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2023年6月 / June 2023</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-9bc588e877007b8661">Q11</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2024年1月 / January 2024</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-4ddf9a67fbc51c8a00">Q18</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年1月 / January 2025</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-0a21315d5c7dac01ac">Q11</a></td>
+<td>11.3</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2025年6月 / June 2025</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-c8935216b70018243a">Q23</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年1月 / January 2026</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-470bff12ba298ed804">Q14</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年1月 / January 2026</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-84c5e78dc2e842884e">Q18</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年6月 / June 2026</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-efb0e744d685ef41a3">Q07</a></td>
+<td>07.4</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+<tr>
+<td>2026年6月 / June 2026</td>
+<td><a class="internal-link" href="/notes/edebb63acb9b6684d4.html#h-ac23b079149d2796ce">Q17</a></td>
+<td>整题 / Whole question</td>
+<td>题目下方展开 / Expand below question</td>
+</tr>
+</tbody>
+</table>
+<!-- U1_PAST_PAPERS_END -->
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/627724d259cd24b19b.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/ed39eb52c6a2f576f8.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/fe4f62fb8bc5de4a67.html">物理 U1 知识谱系 / Physics U1 knowledge lineage</a></li><li><a href="/notes/16a0d0b8df1a4bed67.html">3.2 力学和材料 / MECHANICS AND MATERIALS</a></li><li><a href="/notes/88eca5b9d3ed5730ae.html">3.2.6 动量 / MOMENTUM</a></li><li><a href="/notes/bed34d9362c13d8db4.html">弹跳球运动图像 / Bouncing-ball graphs</a></li><li><a href="/notes/47203daf24e7e8bcaf.html">动量与动量守恒 / Momentum and conservation of momentum</a></li><li><a href="/notes/7fe6d6da744b66304d.html">3.2.6 课堂检测复述 / Retrieval and practice</a></li><li><a href="/notes/aa4f944a41cbc22549.html">D19 冲量、力时间图与冲击复述与练习 / Retrieval and practice</a></li><li><a href="/notes/f632b124127e9adda3.html">U1 概念与定义索引 / Concepts and definitions</a></li><li><a href="/notes/a250111986d580319a.html">U1复述进度 / Retrieval progress</a></li><li><a href="/notes/8403480eb1d7e4d99d.html">公式与适用条件 / Equations and conditions</a></li><li><a href="/notes/bc44c2f3b633ca38cb.html">关系索引 / Relationship index</a></li><li><a href="/notes/0a583cb08270db6716.html">课件例题提取索引 / Source slide index</a></li><li><a href="/notes/30b5c7a31ed5ee4f9d.html">U1 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/5d71469646857a1b0a.html">真题练习 / PH01 past-paper practice</a></li><li><a href="/notes/23c34f3b857fe6b1f0.html">M01 SI基本量与导出单位 真题练习 / Past-paper practice</a></li><li><a href="/notes/b10127f2a327b0ed43.html">M03 同一物理量的单位换算 真题练习 / Past-paper practice</a></li><li><a href="/notes/fe7637d09b6ef7141e.html">M05 不确定度与传播规则 真题练习 / Past-paper practice</a></li><li><a href="/notes/143938268bf1dc3bfd.html">D02 矢量相加与分量 真题练习 / Past-paper practice</a></li><li><a href="/notes/bdbbc34c469a5da2e8.html">D03 共点力平衡 真题练习 / Past-paper practice</a></li><li><a href="/notes/8ce0042fbeb056af21.html">D08 运动图像的斜率与面积 真题练习 / Past-paper practice</a></li><li><a href="/notes/a99a9fb74089b8de8f.html">D09 匀加速度运动方程 真题练习 / Past-paper practice</a></li><li><a href="/notes/b75774f39cedd5eb55.html">D10 自由落体与重力加速度 真题练习 / Past-paper practice</a></li><li><a href="/notes/79932814098e71b7f1.html">D11 弹跳球运动图像 真题练习 / Past-paper practice</a></li><li><a href="/notes/03ecf3e50996f080e7.html">D12 抛体的独立分运动 真题练习 / Past-paper practice</a></li><li><a href="/notes/14a72a3c76f4e8d575.html">D13 摩擦、阻力与升力 真题练习 / Past-paper practice</a></li><li><a href="/notes/aaac23b768790dc106.html">D15 牛顿三定律 真题练习 / Past-paper practice</a></li><li><a href="/notes/133c95102dab21bf8f.html">D16 受力图与运动方程 真题练习 / Past-paper practice</a></li><li><a href="/notes/6ddae8fa69e4c02393.html">D17 动量与动量守恒 真题练习 / Past-paper practice</a></li><li><a href="/notes/e791b5ece270e6902a.html">D18 碰撞与爆炸 真题练习 / Past-paper practice</a></li><li><a href="/notes/edebb63acb9b6684d4.html">D19 冲量、力时间图与冲击 真题练习 / Past-paper practice</a></li><li><a href="/notes/37e0477c04f2570ea9.html">D20 功与力位移图 真题练习 / Past-paper practice</a></li><li><a href="/notes/42b30140f387c43b86.html">D21 功率与效率 真题练习 / Past-paper practice</a></li><li><a href="/notes/1f6a93cfd15eebfb12.html">D22 能量守恒与能量收支 真题练习 / Past-paper practice</a></li><li><a href="/notes/0ffb053cc2999e924d.html">D23 密度与几何体积 真题练习 / Past-paper practice</a></li><li><a href="/notes/6539cad3d41757ae0c.html">D24 胡克定律与弹性极限 真题练习 / Past-paper practice</a></li><li><a href="/notes/5566eaadf8d9007c88.html">D28 杨氏模量与材料刚度 真题练习 / Past-paper practice</a></li><li><a href="/notes/eb8a462bff3b9d16e2.html">PH01 · 2018 样卷 / Specimen 2018 · Q06 · 答案 / Mark scheme</a></li><li><a href="/notes/5cdf23be2226353c53.html">PH01 · 2018 样卷 / Specimen 2018 · Q06 · 题目 / Question</a></li><li><a href="/notes/4273f3c2a09d6cbbf3.html">PH01 · 2018 样卷 / Specimen 2018 · Q20 · 答案 / Mark scheme</a></li><li><a href="/notes/b1afdb971f0d1f6412.html">PH01 · 2018 样卷 / Specimen 2018 · Q20 · 题目 / Question</a></li><li><a href="/notes/9820d0fb4658725343.html">PH01 · 2017年6月 / June 2017 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/c6db2b2607ef02008c.html">PH01 · 2017年6月 / June 2017 · Q08 · 题目 / Question</a></li><li><a href="/notes/7529c9f7831f603928.html">PH01 · 2018年1月 / January 2018 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/48e0cf1ee457aa1ba1.html">PH01 · 2018年1月 / January 2018 · Q11 · 题目 / Question</a></li><li><a href="/notes/83c9075ff5bbab3d29.html">PH01 · 2018年6月 / June 2018 · Q12 · 答案 / Mark scheme</a></li><li><a href="/notes/d2256df309ada9a4e6.html">PH01 · 2018年6月 / June 2018 · Q12 · 题目 / Question</a></li><li><a href="/notes/17571e11a1a168f362.html">PH01 · 2019年1月 / January 2019 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/6fc0aeca1da01f185c.html">PH01 · 2019年1月 / January 2019 · Q08 · 题目 / Question</a></li><li><a href="/notes/3b26b9c1119c7d553e.html">PH01 · 2019年6月 / June 2019 · Q19 · 答案 / Mark scheme</a></li><li><a href="/notes/6314965cfa238c91c7.html">PH01 · 2019年6月 / June 2019 · Q19 · 题目 / Question</a></li><li><a href="/notes/a6aa626e9e903706f9.html">PH01 · 2020年1月 / January 2020 · Q09 · 答案 / Mark scheme</a></li><li><a href="/notes/3eafbf210a4da8d7e1.html">PH01 · 2020年1月 / January 2020 · Q09 · 题目 / Question</a></li><li><a href="/notes/4736181fbf71859637.html">PH01 · 2021年1月 / January 2021 · Q10 · 答案 / Mark scheme</a></li><li><a href="/notes/089828e4b363d4547a.html">PH01 · 2021年1月 / January 2021 · Q10 · 题目 / Question</a></li><li><a href="/notes/7ddfef765fc6cdb384.html">PH01 · 2021年1月 / January 2021 · Q17 · 答案 / Mark scheme</a></li><li><a href="/notes/c52fdd8d9f811e8985.html">PH01 · 2021年1月 / January 2021 · Q17 · 题目 / Question</a></li><li><a href="/notes/c5ecdb90c672f3856d.html">PH01 · 2022年6月 / June 2022 · Q06 · 答案 / Mark scheme</a></li><li><a href="/notes/20aab310122e7f9c5e.html">PH01 · 2022年6月 / June 2022 · Q06 · 题目 / Question</a></li><li><a href="/notes/2d2bc67ef948b0dcf4.html">PH01 · 2022年6月 / June 2022 · Q17 · 答案 / Mark scheme</a></li><li><a href="/notes/af064423c8ff484145.html">PH01 · 2022年6月 / June 2022 · Q17 · 题目 / Question</a></li><li><a href="/notes/0cfaf0f1e2d5cc4186.html">PH01 · 2023年1月 / January 2023 · Q19 · 答案 / Mark scheme</a></li><li><a href="/notes/7a97934740f3a1f90d.html">PH01 · 2023年1月 / January 2023 · Q19 · 题目 / Question</a></li><li><a href="/notes/7349931a5def24f6a9.html">PH01 · 2023年6月 / June 2023 · Q08 · 答案 / Mark scheme</a></li><li><a href="/notes/0c41ccd51abec7d2c0.html">PH01 · 2023年6月 / June 2023 · Q08 · 题目 / Question</a></li><li><a href="/notes/3c3244f040c12158f2.html">PH01 · 2023年6月 / June 2023 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/73d61e1d52d3956564.html">PH01 · 2023年6月 / June 2023 · Q11 · 题目 / Question</a></li><li><a href="/notes/049fef9fb3b00b37dc.html">PH01 · 2024年1月 / January 2024 · Q18 · 答案 / Mark scheme</a></li><li><a href="/notes/f0be41784c3f233bbe.html">PH01 · 2024年1月 / January 2024 · Q18 · 题目 / Question</a></li><li><a href="/notes/567f35fcd73403f774.html">PH01 · 2025年1月 / January 2025 · Q11 · 答案 / Mark scheme</a></li><li><a href="/notes/7927201214da1b6580.html">PH01 · 2025年1月 / January 2025 · Q11 · 题目 / Question</a></li><li><a href="/notes/79a126caa72a2f98b2.html">PH01 · 2025年6月 / June 2025 · Q23 · 答案 / Mark scheme</a></li><li><a href="/notes/c5715dcc9bb9256d19.html">PH01 · 2025年6月 / June 2025 · Q23 · 题目 / Question</a></li><li><a href="/notes/94ef02db9439d15f6f.html">PH01 · 2026年1月 / January 2026 · Q14 · 答案 / Mark scheme</a></li><li><a href="/notes/9f63c473c7f7750561.html">PH01 · 2026年1月 / January 2026 · Q14 · 题目 / Question</a></li><li><a href="/notes/2288941f5f76911bc4.html">PH01 · 2026年1月 / January 2026 · Q18 · 答案 / Mark scheme</a></li><li><a href="/notes/253f8a04796517b700.html">PH01 · 2026年1月 / January 2026 · Q18 · 题目 / Question</a></li><li><a href="/notes/ba1100102c19e9fa8c.html">PH01 · 2026年6月 / June 2026 · Q07 · 答案 / Mark scheme</a></li><li><a href="/notes/384227ada914061913.html">PH01 · 2026年6月 / June 2026 · Q07 · 题目 / Question</a></li><li><a href="/notes/be05d843e09e788029.html">PH01 · 2026年6月 / June 2026 · Q17 · 答案 / Mark scheme</a></li><li><a href="/notes/bb51720d43bd2dea27.html">PH01 · 2026年6月 / June 2026 · Q17 · 题目 / Question</a></li><li><a href="/notes/627724d259cd24b19b.html">冲量、力时间图与冲击 / Impulse, force-time graphs and impact · 概念考察练习 / Concept practice</a></li><li><a href="/notes/04a2f9de70c173d8ef.html">PH01 · 2018年1月 / January 2018 · Q11.1 · Impulse / 冲量</a></li><li><a href="/notes/245d4b60fcd0373ce3.html">PH01 · 2018年6月 / June 2018 · Q12 · Impulse unit / 冲量单位</a></li><li><a href="/notes/97404b6417bc87a21e.html">PH01 · 2020年1月 / January 2020 · Q09.1 · Impulse / 冲量</a></li><li><a href="/notes/62230699b66a36da8e.html">PH01 2017年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/807adb8e84ef9f0d3e.html">PH01 2026年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/f56916012c9ddd2bc7.html">PH01 2026年6月 / June 试卷分析 / Paper analysis</a></li><li><a href="/notes/8772084e2cf4b75447.html">PH01 · 2020年1月 / January 2020 · Q09.4 · Momentum and external force / 动量与外力</a></li><li><a href="/notes/5c2182e3689672afd6.html">PH01 · 2021年1月 / January 2021 · Q10.2 · Jet propulsion / 喷流推进</a></li><li><a href="/notes/ed39eb52c6a2f576f8.html">冲量、力时间图与冲击 / Impulse, force-time graphs and impact · 论述题练习 / Written-response practice</a></li><li><a href="/notes/622e5bd579ebdfbb13.html">PH01 · 2018年1月 / January 2018 · Q11.4 · Impact force / 冲击力</a></li><li><a href="/notes/0221a3ba30825f65f6.html">PH01 · 2019年1月 / January 2019 · Q08.1 · Force-time area / 力时间图面积</a></li><li><a href="/notes/1f2e64cb462426dd32.html">PH01 · 2022年6月 / June 2022 · Q06.4 · Soft barrier / 软质缓冲障碍物</a></li><li><a href="/notes/12971e3864ccfa71f6.html">PH01 · 2023年6月 / June 2023 · Q08.7 · Bending the knees / 屈膝缓冲</a></li><li><a href="/notes/e212714afa407a74f1.html">PH01 · 2025年1月 / January 2025 · Q11.3 · Low-stiffness safety rope / 低劲度安全绳</a></li><li><a href="/notes/d5c85dc7db41c3cd5a.html">PH01 · 2023年6月 / June 2023 · Q08.6 · Comparing methods / 比较两种方法</a></li><li><a href="/notes/a147ef262ccc4f266c.html">碰撞模型 / Collide</a></li><li><a href="/notes/5dade7996b1e93961e.html">冲量停止与反弹模型 / Stop and rebound</a></li><li><a href="/notes/857915dbfc44d3a334.html">动量与碰撞词汇 / Momentum and collisions</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U1/02 知识节点/3.2 力学与材料/D19 冲量、力时间图与冲击 - Impulse, force-time graphs and impact.md","url":"/notes/69f17727c2b6991086.html","unit":"U1"}</script></body></html>

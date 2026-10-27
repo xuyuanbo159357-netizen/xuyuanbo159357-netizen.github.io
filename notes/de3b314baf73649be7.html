@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.10.4 电磁感应、楞次定律与发电 / Electromagnetic induction · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.10 磁场</div><h1 id="h-43c70c863871c7885a">3.10.4 电磁感应、楞次定律与发电 / Electromagnetic induction</h1>
+<p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/41f74e1ac78750b880.html">3.10.4</a>　｜　<a class="internal-link" href="/notes/da867bb75d0c7de166.html">本单元知识谱系</a></p>
+<h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
+<p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
+<table>
+<thead>
+<tr>
+<th>物理量 / Quantity</th>
+<th>符号 / Symbol</th>
+<th>SI单位 / SI unit</th>
+<th>说明 / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>电动势 / electromotive force</strong></td>
+<td><span class="math inline">\(\varepsilon\)</span></td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+<td>是能量/电荷，不是力 / Energy per charge, not a force.</td>
+</tr>
+<tr>
+<td><strong>磁通链 / flux linkage</strong></td>
+<td><span class="math inline">\(N\Phi\)</span></td>
+<td><span class="math inline">\(\mathrm{Wb}\)</span></td>
+<td>等磁通线圈；题目常写单位 Wb turn / Equal flux per turn; Wb turn is also used.</td>
+</tr>
+<tr>
+<td><strong>磁通量 / magnetic flux</strong></td>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td><span class="math inline">\(\mathrm{Wb}\)</span></td>
+<td>大写 Φ，与相位/逸出功 φ 区分 / Capital Φ, not phase/work-function φ.</td>
+</tr>
+<tr>
+<td><strong>磁感应强度 / magnetic flux density</strong></td>
+<td><span class="math inline">\(B\)</span></td>
+<td><span class="math inline">\(\mathrm{T}\)</span></td>
+<td>正体 T 是特斯拉，不是周期 / Upright T is the tesla.</td>
+</tr>
+<tr>
+<td><strong>面积、横截面积 / area, cross-sectional area</strong></td>
+<td><span class="math inline">\(A,\ A_0\)</span></td>
+<td><span class="math inline">\(\mathrm{m^2}\)</span></td>
+<td>A₀ 表初始横截面积；与活度 A 区分 / A₀ is initial area; not activity A.</td>
+</tr>
+<tr>
+<td><strong>线圈匝数 / number of turns</strong></td>
+<td><span class="math inline">\(N,\ N_p,\ N_s\)</span></td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+<td>计数；下标 p/s 为原/副线圈 / Count; p/s identify primary/secondary.</td>
+</tr>
+<tr>
+<td><strong>时间、时间间隔 / time, time interval</strong></td>
+<td><span class="math inline">\(t,\ \Delta t\)</span></td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>长度 / length</strong></td>
+<td><span class="math inline">\(L,\ l\)</span></td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+<td>按题目给出的记号 / Use the question's notation.</td>
+</tr>
+<tr>
+<td><strong>速率 / speed</strong></td>
+<td><span class="math inline">\(v\)</span></td>
+<td><span class="math inline">\(\mathrm{m\,s^{-1}}\)</span></td>
+<td>速度的大小 / Magnitude of velocity.</td>
+</tr>
+<tr>
+<td><strong>角速率、角速度 / angular speed, angular velocity</strong></td>
+<td><span class="math inline">\(\omega\)</span></td>
+<td><span class="math inline">\(\mathrm{rad\,s^{-1}}\)</span></td>
+<td>按语境区分大小与带方向的角速度 / Distinguish magnitude from directed angular velocity.</td>
+</tr>
+<tr>
+<td><strong>角、转角 / angle</strong></td>
+<td><span class="math inline">\(\theta\)</span></td>
+<td><span class="math inline">\(\mathrm{rad}\)</span></td>
+<td>角度须按题设使用；运动学角变量用 rad / Follow stated angle units; use radians in angular kinematics.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
+<ul>
+<li><a class="internal-link" href="/notes/d04dfb6997abbc290a.html">electromagnetic induction — 电磁感应</a></li>
+<li><a class="internal-link" href="/notes/e814a442f02d7c17f4.html">eddy current — 涡流</a></li>
+</ul>
+<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<section class="transclusion"><a class="transclusion-source" href="/notes/d04dfb6997abbc290a.html#h-485f2ec53559b6043e">↗ electromagnetic induction — 电磁感应</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The production of an emf when the magnetic flux linkage of a circuit changes.</p>
+<p><strong>中文：</strong> 电路磁通链变化时产生电动势的现象。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<section class="transclusion"><a class="transclusion-source" href="/notes/e814a442f02d7c17f4.html#h-485f2ec53559b6043e">↗ eddy current — 涡流</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> A circulating current induced within the bulk of a conductor by changing magnetic flux.</p>
+<p><strong>中文：</strong> 磁通变化在导体内部诱导出的环形电流。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p>定义按考纲与指定教材概括；本页未列出可直接对应的定义题评分条目。 Definitions are summarised from the specification and textbook; no directly matched definition-item citation is claimed here.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p>电动势由磁通链变化率决定；平均变化率不同于瞬时值。</p>
+<p><span class="math inline">\(\varepsilon=-d(N\Phi)/dt\)</span>; magnitude <span class="math inline">\(=|\Delta(N\Phi)/\Delta t|\)</span> for average rate; moving rod <span class="math inline">\(\varepsilon=BLv\)</span> for mutually perpendicular geometry; rotating coil <span class="math inline">\(\varepsilon=NBA\omega\sin\omega t\)</span>.</p>
+<h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
+<p>法拉第定律描述变化率，楞次定律描述反抗引起感应的变化；导体棒公式需正确垂直几何关系。</p>
+<p>Faraday’s law: induced emf is proportional to the rate of change of flux linkage. Lenz’s law: induced effects oppose the change producing them. The rod formula uses the velocity component perpendicular to the rod and field.</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-aa1ed7323be2f5cbf7">感应条件、法拉第与楞次 / Induction and laws</h3>
+<p>磁铁移近或移远线圈、线圈转动或面积改变、附近电流变化均可能改变磁通链并产生电动势；相对运动本身并非充分条件。开路线圈可有感应电动势，有闭合导电路径才有持续感应电流。</p>
+<p>Changing field, area or orientation can change linkage and induce emf. Relative motion alone is insufficient. An open circuit can have an induced emf; current requires a conducting closed path.</p>
+<p>法拉第：感应电动势大小是磁通链变化率，<span class="math inline">\(|\varepsilon|=|\Delta(N\Phi)/\Delta t|\)</span>；瞬时值对应磁通链—时间曲线斜率大小。楞次：感应效应反抗引起它的磁通变化，定向可写 <span class="math inline">\(\varepsilon=-d\Psi/dt\)</span>。</p>
+<p>Faraday's law uses the rate of change of flux linkage. Lenz's law gives the opposing direction, represented by the minus sign for consistent orientations.</p>
+<p>判断方向：先说外磁通在增加还是减少→感应场要反抗该变化→用右手握拳定则求电流方向。反抗的是“变化”，不能笼统写成总与原磁场反向；这与能量守恒一致。</p>
+<p>Determine the change in external flux, choose the opposing induced field, then use the grip rule for current. The induced field opposes the change, not necessarily the original field.</p>
+<h3 id="h-7198b0f1ed010e09d0">直导体与涡流 / Moving conductor and eddy currents</h3>
+<p>导体有效长度、速度和磁场相互垂直时 <span class="math inline">\(\varepsilon=BLv\)</span>。闭合回路中 <span class="math inline">\(I=\varepsilon/R\)</span>，磁阻力 <span class="math inline">\(F=BIL\)</span>，外力维持匀速时 <span class="math inline">\(Fv=I\varepsilon=I^2R\)</span>；机械能转为电能及内能。</p>
+<p>For mutually perpendicular length, velocity and field, motional emf is <span class="math inline">\(BLv\)</span>. In a closed loop the magnetic drag and electrical dissipation account for the required mechanical input.</p>
+<p>大片导体中变化磁通可产生闭合涡流，造成发热和反抗运动的磁作用。用于电磁阻尼、制动或加热；铁芯叠片用绝缘层截断大回路、提高回路电阻，从而减小涡流损耗。</p>
+<p>Changing flux in bulk conductors produces eddy currents, heating and opposing magnetic effects. Insulated laminations interrupt large loops and reduce losses.</p>
+<h3 id="h-cf3d3993b6a362a01c">转动线圈的相位和幅值 / Rotating coil phase and amplitude</h3>
+<p>若 <span class="math inline">\(\Psi=NBA\cos\omega t\)</span>，则按一致方向 <span class="math inline">\(\varepsilon=NBA\omega\sin\omega t\)</span>，峰值 <span class="math inline">\(\varepsilon_0=NBA\omega\)</span>。磁通链最大或最小时斜率为零、电动势为零；磁通链过零时变化率最大、电动势大小最大。</p>
+<p>For cosine linkage the induced emf is sinusoidal. Emf is zero at linkage extrema and has maximum magnitude at linkage zero crossings.</p>
+<p>增加匝数、面积、磁场或角速率可提高峰值；提高角速率也提高频率。导线运动方向、受力方向和感应电流方向分别判断，不把左手与右手定则混用。</p>
+<p>More turns, larger area, stronger field or greater angular speed increases peak emf. Greater angular speed also increases frequency.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/11fbe687130c053bc6.html#h-21856cc5c5456d456d">3.10.4</a></p>
+<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/53d4dcc9f590b7af21.png" target="_blank"><img alt="3.10.4-S011-P01" decoding="async" loading="lazy" src="/media/53d4dcc9f590b7af21.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/102d970ca0f3ca9d7b.png" target="_blank"><img alt="3.10.4-S013-P01" decoding="async" loading="lazy" src="/media/102d970ca0f3ca9d7b.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/46ae2e7bffeca52adc.png" target="_blank"><img alt="3.10.4-S013-P02" decoding="async" loading="lazy" src="/media/46ae2e7bffeca52adc.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/098d74b0c8cd4ec63a.png" target="_blank"><img alt="3.10.4-S019-P01" decoding="async" loading="lazy" src="/media/098d74b0c8cd4ec63a.png" style="max-width:min(100%,1000px)"/></a>
+</div></details>
+<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<h3 id="h-8b4b26ec21c4ed5c9c">U3 Flux linkage emf</h3>
+<a class="image-link" href="/media/8a8863571706d9492b.png" target="_blank"><img alt="U3_Flux_linkage_emf" decoding="async" loading="lazy" src="/media/8a8863571706d9492b.png" style="max-width:min(100%,1100px)"/></a>
+<p>匀速转动线圈的磁通链和电动势；电动势为磁通链的负变化率。 Uniformly rotating coil.</p>
+<h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
+<p>用磁通链图负斜率求电动势，按楞次定律判断极性、电流并解释能量守恒。</p>
+<p>Use the negative gradient of a flux-linkage–time graph; use Lenz’s law to identify the induced pole/current and explain energy conservation.</p>
+<h2 id="h-dfdd33cb99783f88f9">Common errors / 易错点</h2>
+<p>恒定非零磁通不产生感应电动势；感应场反抗的是变化，不一定与原磁场反向。</p>
+<p>A non-zero constant flux does not induce emf. The induced field opposes the change, not necessarily the original field itself.</p>
+<!-- EXAM_COVERAGE_START -->
+<h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
+<p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-c7c4d02e44c57c861a">3.10.4 方法 1 · 感应的解释链与波形 / Explaining induction and its waveform</h3>
+<p><strong>完整解释链 / Causal chain:</strong> 题中变化 → 磁通链变化 → 法拉第定律给大小 → 楞次定律给方向 → 若回路闭合才有感应电流。 / State the change, linkage, rate, opposing effect and whether a current can flow.</p>
+<ul>
+<li>楞次定律反抗的是<strong>磁通变化</strong>，不总是反抗原磁场；恒定磁通链没有持续感应。 / The induced field may support a decreasing applied field.</li>
+<li>磁体加速穿过线圈：后峰通常更高、更窄；进入、离开时磁通变化方向相反，电动势变号。峰之间零电动势不代表零磁通。 / Connect height to rate and width to transit time.</li>
+<li>整线圈平移且始终处于均匀磁场，净磁通不变，不能把每条边的 <span class="math inline">\(Blv\)</span> 简单相加。单棒开路仍可有端电动势，但无持续回路电流。 / Distinguish a rod emf from a net loop emf.</li>
+<li>涡流可在非磁性导体中产生；割缝破坏主要闭合电流路径，使制动显著减弱。阻尼能量转为焦耳热，需由物体机械能或外界驱动补给。 / Magnetism of the material is not required for eddy currents.</li>
+<li>突然断电产生大电动势的理由是 <span class="math inline">\(\Delta(N\Phi)/\Delta t\)</span> 大；分别说明大匝数、大初始磁通、短切换时间。 / Link each design feature to the rate equation.</li>
+</ul>
+<p><strong>对应真题 / Examples：</strong> <a class="internal-link" href="/notes/afcc4bf01689075d59.html">PH03 · 202201 · Q06</a>；<a class="internal-link" href="/notes/5f798004d089e6b460.html">PH03 · 202001 · Q05</a>；<a class="internal-link" href="/notes/cbe816bd719482d986.html">PH03 · 201901 · Q33</a>；<a class="internal-link" href="/notes/c7118677fbeba0f3d7.html">PH03 · 202506 · Q19</a>；<a class="internal-link" href="/notes/5f6592cc87e81c3602.html">PH03 · 202401 · Q06</a>。</p>
+<details class="callout note"><summary>本页对应题目核对清单 / Question coverage (41)</summary><div class="callout-body"><p>题号按本库收录范围列出；下列知识路线是解题讲解，不代替原评分标准。 / Coverage routes refer to teaching explanations; the original mark scheme remains under each question.</p>
+<table>
+<thead>
+<tr>
+<th>题目 / Question</th>
+<th>本页作用 / Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/042e8d25c251d3e97d.html">PH03 · 2018 specimen paper · Q14</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/51098afdd327e5db61.html">PH03 · 2018 specimen paper · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9238185e7a6e40083f.html">PH03 · 201806 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/f76dcf438b51ba1ec2.html">PH03 · 201806 · Q31</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d550316a82e627ade0.html">PH03 · 201806 · Q32</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d66cfb2c2178527873.html">PH03 · 201901 · Q03</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cbe816bd719482d986.html">PH03 · 201901 · Q33</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d3ff7fa62a84306478.html">PH03 · 201906 · Q02</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2e6e22e92edd6ef51b.html">PH03 · 201906 · Q29</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/44ec5ffcf74f158d70.html">PH03 · 201906 · Q30</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/597a1a459f04968d4d.html">PH03 · 201906 · Q31</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5f798004d089e6b460.html">PH03 · 202001 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/30b0fa3fa64f16d911.html">PH03 · 202001 · Q31</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b4fd2c0b7aeff293e0.html">PH03 · 202001 · Q32</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/dc9702435fde31d004.html">PH03 · 202001 · Q34</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8b3737ed5536ecd06c.html">PH03 · 202101 · Q05</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8e7d7de373a748ae5e.html">PH03 · 202101 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/afcc4bf01689075d59.html">PH03 · 202201 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/31ec3d4f69d67a2703.html">PH03 · 202201 · Q11</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/1750b358919891814e.html">PH03 · 202201 · Q16</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/01196447c3e8acdebb.html">PH03 · 202201 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/d8d6b39495b6d9f76f.html">PH03 · 202206 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/4ca5b92a71ed76cd78.html">PH03 · 202206 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9447d4c04faab31ba4.html">PH03 · 202206 · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/75701d867693985f6a.html">PH03 · 202301 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/325fa59a8b04df0351.html">PH03 · 202301 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/7f828b407509c7e449.html">PH03 · 202306 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ac7fdc4c558e728926.html">PH03 · 202306 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/5f6592cc87e81c3602.html">PH03 · 202401 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c6c820576b2479679d.html">PH03 · 202401 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6426519cb6e5ec30f5.html">PH03 · 202406 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c5678599bdf5d9fd63.html">PH03 · 202406 · Q12</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6870534e29e1aba1e5.html">PH03 · 202406 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/e348abf4c7a079d254.html">PH03 · 202501 · Q06</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c0ed839f77e09ca8ad.html">PH03 · 202501 · Q21</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/2492cbeb8b39b6b000.html">PH03 · 202501 · Q22</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8b8cff464284df477d.html">PH03 · 202506 · Q01</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a2c622405c19c7f564.html">PH03 · 202506 · Q18</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c7118677fbeba0f3d7.html">PH03 · 202506 · Q19</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/8e249c9a0dab2d474b.html">PH03 · 202601 · Q08</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/412fcd2c4651924958.html">PH03 · 202606 · Q20</a></td>
+<td>本知识点 / This topic</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<a class="internal-link" href="/notes/f7c6092e7cb47bdc8b.html">U3逐题核对总览 / Coverage overview</a>
+<!-- EXAM_COVERAGE_END -->
+<h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
+<p><a class="internal-link" href="/notes/f418420bad3caea9e4.html">课件例题与复述</a> · <a class="internal-link" href="/notes/d2265e7e62cf75fe67.html">按知识点真题（答案默认折叠）</a></p>
+<h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
+<ul>
+<li><a class="internal-link" href="/notes/84b8b317626934eb83.html">3.10.3 磁通量与磁通链</a>：磁通链变化率 / flux-linkage rate</li>
+<li><a class="internal-link" href="/notes/fc29becd5b56e53930.html">3.10.5 交流有效值与示波器</a>：发电 → 正弦交流 / generator to AC</li>
+<li><a class="internal-link" href="/notes/50843d2f581c6db998.html">3.10.6 变压器、效率与高压输电</a>：互感变压 / induction to transformer</li>
+</ul>
+<h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
+<ul>
+<li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.10.4。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
+<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 371–380；本地 PDF 页为印刷页 +16。</li>
+</ul>
+<h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
+<ul>
+<li><a class="internal-link" href="/notes/7ed23766bb04f62e23.html">U3PM11 磁通变化与感应方向 - Flux linkage and induced EMF</a></li>
+</ul>
+<!-- SPECIAL_PRACTICE_20261021_START -->
+<h2 id="h-19d57ddbbddfdc0aa6">专项真题练习 / Focused past-paper practice</h2>
+<p><a class="internal-link" href="/notes/79007149d6446e0dd0.html">概念考察练习 / Concept practice</a> · <a class="internal-link" href="/notes/d5f49f52c454adf6ef.html">论述题练习 / Written-response practice</a></p>
+<!-- SPECIAL_PRACTICE_20261021_END --><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/2c4b46e582bcf040d3.html">跨单元知识联系 / Cross-unit knowledge</a></li><li><a href="/notes/da867bb75d0c7de166.html">U3 场及其影响 / Fields and their consequences</a></li><li><a href="/notes/11fbe687130c053bc6.html">U3 知识覆盖核对 / Syllabus coverage audit</a></li><li><a href="/notes/c8418eb48964cf69c4.html">U3 考纲框架 / Specification map</a></li><li><a href="/notes/41f74e1ac78750b880.html">3.10.4 电磁感应 / ELECTROMAGNETIC INDUCTION</a></li><li><a href="/notes/84b8b317626934eb83.html">3.10.3 磁通量与磁通链 / Magnetic flux and flux linkage</a></li><li><a href="/notes/fc29becd5b56e53930.html">3.10.5 交流有效值与示波器 / Alternating currents</a></li><li><a href="/notes/50843d2f581c6db998.html">3.10.6 变压器、效率与高压输电 / The operation of a transformer</a></li><li><a href="/notes/e814a442f02d7c17f4.html">eddy current — 涡流</a></li><li><a href="/notes/d04dfb6997abbc290a.html">electromagnetic induction — 电磁感应</a></li><li><a href="/notes/70af9f4d38e4bcdff8.html">U3 来源与范围 / Sources and scope</a></li><li><a href="/notes/f7c6092e7cb47bdc8b.html">U3 逐题核对与解题思路 / Question coverage and approaches</a></li><li><a href="/notes/9fc7be13a5240e443f.html">3.6.1 圆周运动与向心力 真题练习 / Past-paper practice</a></li><li><a href="/notes/74ba1e2bebfaa9cfd1.html">3.10.1 磁感应强度与通电导线受力 真题练习 / Past-paper practice</a></li><li><a href="/notes/ff6a80852a91c93413.html">3.10.2 磁场中的带电粒子与回旋加速器 真题练习 / Past-paper practice</a></li><li><a href="/notes/951dfdc234ff45c4ff.html">3.10.3 磁通量与磁通链 真题练习 / Past-paper practice</a></li><li><a href="/notes/d2265e7e62cf75fe67.html">3.10.4 电磁感应、楞次定律与发电 真题练习 / Past-paper practice</a></li><li><a href="/notes/71fe264ec1b44a5d4b.html">3.10.5 交流有效值与示波器 真题练习 / Past-paper practice</a></li><li><a href="/notes/bc85ac2d6f4b1f7b9b.html">3.10.6 变压器、效率与高压输电 真题练习 / Past-paper practice</a></li><li><a href="/notes/fa767480b1139c9687.html">PH03 2018 specimen paper / Paper index</a></li><li><a href="/notes/042e8d25c251d3e97d.html">PH03 2018 specimen paper Q14</a></li><li><a href="/notes/51098afdd327e5db61.html">PH03 2018 specimen paper Q21</a></li><li><a href="/notes/d90d9353211feec3fc.html">PH03 201806 / Paper index</a></li><li><a href="/notes/9238185e7a6e40083f.html">PH03 201806 Q03</a></li><li><a href="/notes/f76dcf438b51ba1ec2.html">PH03 201806 Q31</a></li><li><a href="/notes/d550316a82e627ade0.html">PH03 201806 Q32</a></li><li><a href="/notes/0b84b05c25fbc49f80.html">PH03 201901 / Paper index</a></li><li><a href="/notes/d66cfb2c2178527873.html">PH03 201901 Q03</a></li><li><a href="/notes/cbe816bd719482d986.html">PH03 201901 Q33</a></li><li><a href="/notes/c770501e3c411d9d06.html">PH03 201906 / Paper index</a></li><li><a href="/notes/d3ff7fa62a84306478.html">PH03 201906 Q02</a></li><li><a href="/notes/2e6e22e92edd6ef51b.html">PH03 201906 Q29</a></li><li><a href="/notes/44ec5ffcf74f158d70.html">PH03 201906 Q30</a></li><li><a href="/notes/597a1a459f04968d4d.html">PH03 201906 Q31</a></li><li><a href="/notes/c28e405421b2dbdbf3.html">PH03 202001 / Paper index</a></li><li><a href="/notes/5f798004d089e6b460.html">PH03 202001 Q05</a></li><li><a href="/notes/30b0fa3fa64f16d911.html">PH03 202001 Q31</a></li><li><a href="/notes/b4fd2c0b7aeff293e0.html">PH03 202001 Q32</a></li><li><a href="/notes/dc9702435fde31d004.html">PH03 202001 Q34</a></li><li><a href="/notes/9056240cebaa303286.html">PH03 202101 / Paper index</a></li><li><a href="/notes/8b3737ed5536ecd06c.html">PH03 202101 Q05</a></li><li><a href="/notes/8e7d7de373a748ae5e.html">PH03 202101 Q19</a></li><li><a href="/notes/02136a2e67ef51d964.html">PH03 202201 / Paper index</a></li><li><a href="/notes/afcc4bf01689075d59.html">PH03 202201 Q06</a></li><li><a href="/notes/31ec3d4f69d67a2703.html">PH03 202201 Q11</a></li><li><a href="/notes/1750b358919891814e.html">PH03 202201 Q16</a></li><li><a href="/notes/01196447c3e8acdebb.html">PH03 202201 Q18</a></li><li><a href="/notes/541e1596ffb4ac0cb3.html">PH03 202206 / Paper index</a></li><li><a href="/notes/d8d6b39495b6d9f76f.html">PH03 202206 Q01</a></li><li><a href="/notes/4ca5b92a71ed76cd78.html">PH03 202206 Q20</a></li><li><a href="/notes/9447d4c04faab31ba4.html">PH03 202206 Q21</a></li><li><a href="/notes/457457bc96f55b4adb.html">PH03 202301 / Paper index</a></li><li><a href="/notes/75701d867693985f6a.html">PH03 202301 Q06</a></li><li><a href="/notes/325fa59a8b04df0351.html">PH03 202301 Q18</a></li><li><a href="/notes/9db6472a27a9bcadb8.html">PH03 202306 / Paper index</a></li><li><a href="/notes/7f828b407509c7e449.html">PH03 202306 Q19</a></li><li><a href="/notes/ac7fdc4c558e728926.html">PH03 202306 Q20</a></li><li><a href="/notes/db82f6247ae551f056.html">PH03 202401 / Paper index</a></li><li><a href="/notes/5f6592cc87e81c3602.html">PH03 202401 Q06</a></li><li><a href="/notes/c6c820576b2479679d.html">PH03 202401 Q18</a></li><li><a href="/notes/dd32a67647d1347e67.html">PH03 202406 / Paper index</a></li><li><a href="/notes/6426519cb6e5ec30f5.html">PH03 202406 Q06</a></li><li><a href="/notes/c5678599bdf5d9fd63.html">PH03 202406 Q12</a></li><li><a href="/notes/6870534e29e1aba1e5.html">PH03 202406 Q20</a></li><li><a href="/notes/1f07f31e3f2612fc4a.html">PH03 202501 / Paper index</a></li><li><a href="/notes/e348abf4c7a079d254.html">PH03 202501 Q06</a></li><li><a href="/notes/c0ed839f77e09ca8ad.html">PH03 202501 Q21</a></li><li><a href="/notes/2492cbeb8b39b6b000.html">PH03 202501 Q22</a></li><li><a href="/notes/ae5bee24e0ee1a0c3a.html">PH03 202506 / Paper index</a></li><li><a href="/notes/8b8cff464284df477d.html">PH03 202506 Q01</a></li><li><a href="/notes/a2c622405c19c7f564.html">PH03 202506 Q18</a></li><li><a href="/notes/c7118677fbeba0f3d7.html">PH03 202506 Q19</a></li><li><a href="/notes/676e3cac4eb704e930.html">PH03 202601 / Paper index</a></li><li><a href="/notes/8e249c9a0dab2d474b.html">PH03 202601 Q08</a></li><li><a href="/notes/412fcd2c4651924958.html">PH03 202606 Q20</a></li><li><a href="/notes/79007149d6446e0dd0.html">3.10.4 电磁感应、楞次定律与发电 / Electromagnetic induction · 概念考察练习 / Concept practice</a></li><li><a href="/notes/95d9a93260878a6b5c.html">PH03 · 2024年6月 / June 2024 · Q20 · Eddy-current dependence / 涡流的影响因素</a></li><li><a href="/notes/0a4fd575ab896bbadf.html">U3 陈述、解释与比较 / Statements explanations and comparisons</a></li><li><a href="/notes/cefcf52bd213255a3a.html">PH03 2020年1月 / January 试卷分析 / Paper analysis</a></li><li><a href="/notes/d5f49f52c454adf6ef.html">3.10.4 电磁感应、楞次定律与发电 / Electromagnetic induction · 论述题练习 / Written-response practice</a></li><li><a href="/notes/63596b0702398c8dfc.html">PH03 · 2018年6月 / June 2018 · Q03.4 · Generator field and angular speed / 发电机磁场与角速度</a></li><li><a href="/notes/bc12011cc33cd98d90.html">PH03 · 2019年6月 / June 2019 · Q02.4 · Magnetic damping / 磁阻尼</a></li><li><a href="/notes/689540a981e9f92dde.html">PH03 · 2020年1月 / January 2020 · Q05.2 · Induced-emf graph / 感应电动势图像</a></li><li><a href="/notes/6a07f0ee7708286da2.html">PH03 · 2021年1月 / January 2021 · Q05.4 · Opening an inductive circuit / 断开感应电路</a></li><li><a href="/notes/2ca7811c8cc9eb687f.html">PH03 · 2022年1月 / January 2022 · Q06.1 · Falling magnet approaching a coil / 磁铁下落接近线圈</a></li><li><a href="/notes/a0197aa61fe7317b74.html">PH03 · 2022年1月 / January 2022 · Q06.2 · Opposite induction pulse signs / 感应脉冲符号相反</a></li><li><a href="/notes/859f5ba738e03a7bce.html">PH03 · 2022年1月 / January 2022 · Q06.3 · Unequal induction peaks / 不等大的感应峰值</a></li><li><a href="/notes/e6649b1eac68008650.html">PH03 · 2022年1月 / January 2022 · Q06.4 · Unequal pulse durations / 不等长的脉冲时间</a></li><li><a href="/notes/5ad7df4a3a79e4fa2f.html">PH03 · 2023年1月 / January 2023 · Q06.4 · Solar-wind induced voltages / 太阳风引起的感应电压</a></li><li><a href="/notes/aa9e3b32e41dedbd3f.html">PH03 · 2024年1月 / January 2024 · Q06.1 · Switching an ignition coil / 点火线圈开关</a></li><li><a href="/notes/e1401bc1505a0b9018.html">PH03 · 2024年1月 / January 2024 · Q06.2 · Producing a large induced emf / 产生大感应电动势</a></li><li><a href="/notes/76c8ff03cc71f81bd8.html">PH03 · 2024年1月 / January 2024 · Q06.5 · Reducing primary resistance / 减小初级电阻</a></li><li><a href="/notes/f9af297b855a226545.html">PH03 · 2024年6月 / June 2024 · Q06.2 · Rotating-coil induction / 旋转线圈感应</a></li><li><a href="/notes/ff45d9e3941af3428a.html">PH03 · 2025年1月 / January 2025 · Q06.4 · Accelerating rod induced emf / 加速金属棒的感应电动势</a></li><li><a href="/notes/24d0affb0634a3a6e4.html">PH03 · 2026年1月 / January 2026 · Q08.2 · Smaller slower-changing magnetic flux / 更小且变化更慢的磁通</a></li><li><a href="/notes/7ed23766bb04f62e23.html">磁通变化与感应方向 / Flux linkage and induced EMF</a></li><li><a href="/notes/8f136e56d555f9fa42.html">U3 3.10 磁场与交流词汇 / Vocabulary</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source":"A-level 物理/AQA（OxfordAQA 9630）/U3/02 知识节点/3.10 磁场/3.10.4 电磁感应、楞次定律与发电 - Electromagnetic induction.md","url":"/notes/de3b314baf73649be7.html","unit":"U3"}</script></body></html>
