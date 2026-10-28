@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.10.1 磁感应强度与通电导线受力 / Magnetic flux density · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.10 磁场</div><h1 id="h-f11ac933dd2f32f091">3.10.1 磁感应强度与通电导线受力 / Magnetic flux density</h1>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.10.1 磁感应强度与通电导线受力 / Magnetic flux density · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.10 磁场</div><h1 id="h-f11ac933dd2f32f091">3.10.1 磁感应强度与通电导线受力 / Magnetic flux density</h1>
 <p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/1f54cb01b0623a2d34.html">3.10.1</a>　｜　<a class="internal-link" href="/notes/da867bb75d0c7de166.html">本单元知识谱系</a></p>
 <h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
 <p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
@@ -69,25 +69,57 @@
 <h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
 <p>垂直公式要求电流与磁场垂直；其他角度先找垂直分量。</p>
 <p>Use the perpendicular formula under the stated orientation. With other angles, identify the component perpendicular to the field if required by the given situation.</p>
-<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2><h3 id="h-ae9138c674173f8eee">弗莱明左手定则 / Fleming's left-hand rule</h3>
+<p><strong>适用情境 / Use：</strong> 已知磁场和电流（或带电粒子运动），判断磁力方向。电动机情境常为电能 → 机械能；单个粒子只受磁力时，磁力本身不做功。 / Use the magnetic field and conventional current to find magnetic-force direction. A motor converts electrical to mechanical energy; magnetic force alone does no work on a moving particle.</p>
+<p>左手三指互相垂直。 / Hold the three fingers of the left hand mutually perpendicular.</p>
+<table>
+<thead>
+<tr>
+<th>左手手指 / Left-hand finger</th>
+<th>对应方向 / Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>食指 / First finger</td>
+<td>磁场 <span class="math inline">\(B\)</span>；磁体外从 N 指向 S / magnetic field, from N to S outside the magnet</td>
+</tr>
+<tr>
+<td>中指 / Second finger</td>
+<td><strong>传统电流 <span class="math inline">\(I\)</span></strong>，即正电荷运动方向 / <strong>conventional current</strong>, the direction of positive-charge motion</td>
+</tr>
+<tr>
+<td>拇指 / Thumb</td>
+<td>导线或粒子所受磁力 <span class="math inline">\(F\)</span> / magnetic force on the conductor or particle</td>
+</tr>
+</tbody>
+</table>
+<p><strong>带电粒子 / Charged particles：</strong> 正电荷用速度方向代替传统电流方向；负电荷用与其速度相反的方向作为传统电流方向，再判受力。 / For a positive charge use its velocity as the current direction; for a negative charge use the direction opposite to its velocity before finding the force.</p>
+<p><strong>检查 / Check：</strong> 磁力垂直于磁场和电流方向；若运动或电流与磁场平行，磁力为零。 / Magnetic force is perpendicular to both directions; parallel motion or current gives zero magnetic force.</p>
+<p><strong>易混点 / Distinction：</strong> 右手握拳定则判断电流周围的磁场：拇指指传统电流，弯曲四指指环绕导线的磁场。它不是弗莱明右手发电机定则。 / The right-hand grip rule finds the field around a current: thumb for conventional current and curled fingers for field. It is different from Fleming's right-hand generator rule.</p>
+<p><a class="internal-link" href="/notes/de3b314baf73649be7.html#h-e2ff3ede84b5aa7abd">右手发电机定则：运动 → 感应电流 / Generator rule: motion → induced current</a></p>
+<p>斜向情况用 <span class="math inline">\(F=BIL\sin\theta\)</span>，<span class="math inline">\(\theta\)</span> 为导线与磁场夹角；平行时为零。只计处于磁场中的导线长度，不是整个回路长度。</p>
+<p>For an angled case use the perpendicular component. Only the wire length inside the field contributes.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/11fbe687130c053bc6.html#h-91719b5083e8bf6c25">3.10.1</a></p>
+<!-- EXPLANATORY_FIGURE_20261027:U3-3.10.2-s015-p02 -->
+<p><strong>图示：左手：场、电流、力 / Left hand: field, current, force</strong></p>
+<p><a class="image-link" href="/media/explain-453edf04e08d31d98c929320.png" target="_blank"><img alt="物理讲解图 / Physics explanatory diagram" decoding="async" loading="lazy" src="/media/explain-453edf04e08d31d98c929320.png" style="max-width:min(100%,700px)"/></a></p>
+<p><strong>读图 / Reading：</strong> 左手食指指磁场 B，中指指传统电流 I，拇指指磁力 F。图中 Thrust 指推力，不是负电荷本身的速度方向。</p>
+<p>Left first finger: B; second finger: conventional I; thumb: magnetic F. “Thrust” means force, not the velocity of a negative charge.</p>
+
 <h3 id="h-0fa8a5b4b6903b4118">通电导线受力与特斯拉 / Wire force and tesla</h3>
 <p>均匀磁场中，直导线有效长度 <span class="math inline">\(L\)</span> 与场垂直时 <span class="math inline">\(F=BIL\)</span>，故 <span class="math inline">\(B=F/(IL)\)</span>。一特斯拉使垂直于磁场的1 m导线在电流1 A时受力1 N，<span class="math inline">\(1\,\mathrm T=1\,\mathrm{N\,A^{-1}\,m^{-1}}\)</span>。</p>
 <p>For a wire perpendicular to a uniform magnetic field, force is <span class="math inline">\(BIL\)</span>. One tesla produces one newton on one metre of perpendicular wire carrying one ampere.</p>
 <p>弗莱明左手：食指磁场（N到S）、中指传统电流、拇指受力；电子运动方向与传统电流相反。不要与判断导线周围磁场的右手握拳定则混淆。</p>
 <p>Fleming's left hand gives field, conventional current and force. Electron drift is opposite to current. The right-hand grip rule instead gives the field around a current.</p>
-<p>课件斜向情况用 <span class="math inline">\(F=BIL\sin\theta\)</span>，<span class="math inline">\(\theta\)</span> 为导线与磁场夹角；平行时为零。只计处于磁场中的导线长度，不是整个回路长度。</p>
+<p>教学资料斜向情况用 <span class="math inline">\(F=BIL\sin\theta\)</span>，<span class="math inline">\(\theta\)</span> 为导线与磁场夹角；平行时为零。只计处于磁场中的导线长度，不是整个回路长度。</p>
 <p>For the slide's angled case use the perpendicular component. Only the wire length inside the field contributes.</p>
 <p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/11fbe687130c053bc6.html#h-91719b5083e8bf6c25">3.10.1</a></p>
-<h3 id="h-088daa4c73506bf46f">原课件图像 / Source diagrams</h3>
-<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/b0c1fb7d504437506d.png" target="_blank"><img alt="3.10.1-S006-P01" decoding="async" loading="lazy" src="/media/b0c1fb7d504437506d.png" style="max-width:min(100%,1000px)"/></a>
-</div></details>
-<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/53f902ef4bfdb7e1fb.png" target="_blank"><img alt="3.10.1-S006-P02" decoding="async" loading="lazy" src="/media/53f902ef4bfdb7e1fb.png" style="max-width:min(100%,1000px)"/></a>
-</div></details>
-<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/aa1f45c8f578c66c27.png" target="_blank"><img alt="3.10.1-S007-P03" decoding="async" loading="lazy" src="/media/aa1f45c8f578c66c27.png" style="max-width:min(100%,1000px)"/></a>
-</div></details>
-<details class="callout example"><summary>物理示意图 / Physics diagram</summary><div class="callout-body"><a class="image-link" href="/media/102d970ca0f3ca9d7b.png" target="_blank"><img alt="3.10.1-S007-P01" decoding="async" loading="lazy" src="/media/102d970ca0f3ca9d7b.png" style="max-width:min(100%,1000px)"/></a>
-</div></details>
-<p>图像按原课件来源保留，解释与公式以本页考纲范围为准。 Original teaching images are retained; the text and conditions above define the assessed scope.</p>
+<!-- EXPLANATORY_FIGURE_20261027:U3-3.10.1-s010-p01 -->
+<p><strong>图示：导线受磁力的方向 / Force on a wire</strong></p>
+<p><a class="image-link" href="/media/explain-e148c13eb0d4bb1b9124a193.png" target="_blank"><img alt="物理讲解图 / Physics explanatory diagram" decoding="async" loading="lazy" src="/media/explain-e148c13eb0d4bb1b9124a193.png" style="max-width:min(100%,700px)"/></a></p>
+<p><strong>读图 / Reading：</strong> 图中 I 与 B 垂直，力同时垂直二者；L 只计处于磁场内的有效导线长度。</p>
+<p>For perpendicular I and B, force is normal to both; L is only the effective field-exposed length.</p>
 <h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
 <p>利用不同电流或有效长度的受力测磁感应强度，分析电动机受力。</p>
 <p>Use force measurements with different currents or wire lengths to determine B; explain motor-force situations.</p>
@@ -297,7 +329,7 @@
 <a class="internal-link" href="/notes/f7c6092e7cb47bdc8b.html">U3逐题核对总览 / Coverage overview</a>
 <!-- EXAM_COVERAGE_END -->
 <h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
-<p><a class="internal-link" href="/notes/d4f51134a1a25f84d2.html">课件例题与复述</a> · <a class="internal-link" href="/notes/74ba1e2bebfaa9cfd1.html">按知识点真题（答案默认折叠）</a></p>
+<p><a class="internal-link" href="/notes/d4f51134a1a25f84d2.html">例题与复述</a> · <a class="internal-link" href="/notes/74ba1e2bebfaa9cfd1.html">按知识点真题（答案默认折叠）</a></p>
 <h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
 <ul>
 <li><a class="internal-link" href="/notes/315b27a4677d5e754a.html">3.10.2 磁场中的带电粒子与回旋加速器</a>：电流到单电荷 / current to charge</li>
