@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.10.4 电磁感应、楞次定律与发电 / Electromagnetic induction · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.10 磁场</div><h1 id="h-43c70c863871c7885a">3.10.4 电磁感应、楞次定律与发电 / Electromagnetic induction</h1>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.10.4 电磁感应、楞次定律与发电 / Electromagnetic induction · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.10 磁场</div><h1 id="h-43c70c863871c7885a">3.10.4 电磁感应、楞次定律与发电 / Electromagnetic induction</h1>
 <p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/41f74e1ac78750b880.html">3.10.4</a>　｜　<a class="internal-link" href="/notes/da867bb75d0c7de166.html">本单元知识谱系</a></p>
 <h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
 <p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
@@ -22,7 +22,7 @@
 </tr>
 <tr>
 <td><strong>磁通链 / flux linkage</strong></td>
-<td><span class="math inline">\(N\Phi\)</span></td>
+<td><span class="math inline">\(N\Phi=\Psi\)</span></td>
 <td><span class="math inline">\(\mathrm{Wb}\)</span></td>
 <td>等磁通线圈；题目常写单位 Wb turn / Equal flux per turn; Wb turn is also used.</td>
 </tr>
@@ -100,17 +100,99 @@
 </section>
 <p>定义按考纲与指定教材概括；本页未列出可直接对应的定义题评分条目。 Definitions are summarised from the specification and textbook; no directly matched definition-item citation is claimed here.</p>
 <h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
-<p>电动势由磁通链变化率决定；平均变化率不同于瞬时值。</p>
-<p><span class="math inline">\(\varepsilon=-d(N\Phi)/dt\)</span>; magnitude <span class="math inline">\(=|\Delta(N\Phi)/\Delta t|\)</span> for average rate; moving rod <span class="math inline">\(\varepsilon=BLv\)</span> for mutually perpendicular geometry; rotating coil <span class="math inline">\(\varepsilon=NBA\omega\sin\omega t\)</span>.</p>
+<h3 id="h-577f3d1234bd825028">Faraday's law / 法拉第电磁感应定律</h3>
+<p><strong>Law statement / 定律表述</strong></p>
+<p><strong>English:</strong> <strong>The magnitude of the induced emf is proportional to the rate of change of flux linkage.</strong></p>
+<p><strong>中文：</strong> <strong>感应电动势的大小与磁通链的变化率成正比。</strong></p>
+<p><strong>Formula / 公式：平均感应电动势的大小 / Magnitude of the average induced emf</strong></p>
+<div class="math block">
+\[\Large\displaystyle |\bar\varepsilon|=\left|\frac{\Delta(N\Phi)}{\Delta t}\right|\]
+</div>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>单位 / Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\bar\varepsilon\)</span></td>
+<td>平均感应电动势 / average induced emf</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(N\Phi\)</span></td>
+<td>磁通链 / flux linkage</td>
+<td><span class="math inline">\(\mathrm{Wb\,turn}\)</span>（匝数无量纲 / turns are dimensionless）</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta t\)</span></td>
+<td>时间间隔 / time interval</td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>条件与读图 / Conditions and graphs：</strong> 差分式给出一段时间内平均电动势的大小；瞬时电动势的大小取磁通链—时间图在该时刻的斜率绝对值。 / The finite-difference expression gives the magnitude of the average emf; the instantaneous magnitude is the magnitude of the gradient of a flux-linkage–time graph.</p>
+<p><strong>评分依据 / Mark-scheme basis：</strong> <a class="internal-link" href="/notes/6426519cb6e5ec30f5.html">PH03 · 202406 · Q06.2</a></p>
+<h3 id="h-f57aa28282a25697db">Lenz's law / 楞次定律</h3>
+<p><strong>Law statement / 定律表述</strong></p>
+<p><strong>English:</strong> <strong>The direction of the induced emf is such as to oppose the change in flux linkage that produces it.</strong></p>
+<p><strong>中文：</strong> <strong>感应电动势的方向总是反抗引起它的磁通链变化。</strong></p>
+<p><strong>Formula / 公式：含方向约定的瞬时感应电动势 / Instantaneous induced emf with a consistent orientation</strong></p>
+<div class="math block">
+\[\Large\displaystyle \varepsilon=-\frac{d(N\Phi)}{dt}\]
+</div>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>单位 / Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\varepsilon\)</span></td>
+<td>瞬时感应电动势 / instantaneous induced emf</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(N\Phi\)</span></td>
+<td>磁通链 / flux linkage</td>
+<td><span class="math inline">\(\mathrm{Wb\,turn}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(t\)</span></td>
+<td>时间 / time</td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>解释 / Explanation：</strong> 在闭合回路中，感应电流产生的磁场反抗原磁通链的变化。反抗的是变化，不是始终与原磁场反向。负号表示这一判向规则，不能理解为电动势的数值始终小于零。 / In a closed circuit, the induced current produces a magnetic field that opposes the change in flux linkage. The minus sign expresses this directional rule; it does not mean that the numerical emf is always negative.</p>
+<p><strong>评分依据 / Mark-scheme basis：</strong> <a class="internal-link" href="/notes/afcc4bf01689075d59.html">PH03 · 202201 · Q06.2</a></p>
+<p><strong>符号统一 / Notation：</strong> 本节 <span class="math inline">\(\Phi\)</span> 表示每匝磁通量，<span class="math inline">\(N\Phi\)</span>（也可记作 <span class="math inline">\(\Psi\)</span>）表示磁通链。若题目直接用 <span class="math inline">\(\Phi\)</span> 表示磁通链，应按题设使用，避免重复乘以匝数 <span class="math inline">\(N\)</span>。 / Here <span class="math inline">\(\Phi\)</span> is flux per turn and <span class="math inline">\(N\Phi=\Psi\)</span> is flux linkage. If a question uses <span class="math inline">\(\Phi\)</span> for linkage itself, do not multiply by <span class="math inline">\(N\)</span> again.</p>
+<h3 id="h-260f3e17af55469548">运动导体与转动线圈 / Moving conductor and rotating coil</h3>
+<p><strong>直导体 / Straight conductor</strong></p>
+<div class="math block">
+\[\Large\displaystyle \varepsilon=BLv\]
+</div>
+<p><strong>转动线圈 / Rotating coil</strong></p>
+<div class="math block">
+\[\Large\displaystyle \varepsilon=NBA\omega\sin\omega t\]
+</div>
+<p><strong>Conditions / 适用条件：</strong> <span class="math inline">\(B\)</span>、<span class="math inline">\(L\)</span>、<span class="math inline">\(v\)</span> 互相垂直时使用 <span class="math inline">\(BLv\)</span>；转动线圈取匀强磁场、恒定角速率，并令 <span class="math inline">\(t=0\)</span> 时磁通链最大。 / The <span class="math inline">\(BLv\)</span> expression requires mutually perpendicular field, length and velocity. The rotating coil is in a uniform field at constant angular speed, with maximum linkage at <span class="math inline">\(t=0\)</span>.</p>
 <h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
-<p>法拉第定律描述变化率，楞次定律描述反抗引起感应的变化；导体棒公式需正确垂直几何关系。</p>
-<p>Faraday’s law: induced emf is proportional to the rate of change of flux linkage. Lenz’s law: induced effects oppose the change producing them. The rod formula uses the velocity component perpendicular to the rod and field.</p>
+<p>法拉第定律给出感应电动势的大小；楞次定律给出反抗磁通链变化的方向。导体棒公式需满足相应的垂直几何关系。</p>
+<p>Faraday's law gives the magnitude of the induced emf; Lenz's law gives the direction that opposes the change in flux linkage. The rod formula requires the stated perpendicular geometry.</p>
 <h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
 <h3 id="h-aa1ed7323be2f5cbf7">感应条件、法拉第与楞次 / Induction and laws</h3>
 <p>磁铁移近或移远线圈、线圈转动或面积改变、附近电流变化均可能改变磁通链并产生电动势；相对运动本身并非充分条件。开路线圈可有感应电动势，有闭合导电路径才有持续感应电流。</p>
 <p>Changing field, area or orientation can change linkage and induce emf. Relative motion alone is insufficient. An open circuit can have an induced emf; current requires a conducting closed path.</p>
-<p>法拉第：感应电动势大小是磁通链变化率，<span class="math inline">\(|\varepsilon|=|\Delta(N\Phi)/\Delta t|\)</span>；瞬时值对应磁通链—时间曲线斜率大小。楞次：感应效应反抗引起它的磁通变化，定向可写 <span class="math inline">\(\varepsilon=-d\Psi/dt\)</span>。</p>
-<p>Faraday's law uses the rate of change of flux linkage. Lenz's law gives the opposing direction, represented by the minus sign for consistent orientations.</p>
+<p>法拉第定律说明电动势大小取决于磁通链的变化率；平均值使用一段时间内的变化量，瞬时值使用该时刻的斜率。楞次定律说明感应电动势反抗引起它的磁通链变化，按一致方向写作 <span class="math inline">\(\varepsilon=-d(N\Phi)/dt\)</span>。</p>
+
+<p>Faraday's law relates the magnitude of the induced emf to the rate of change of flux linkage. Lenz's law gives the direction opposing the change that produces the emf.</p>
 <p>判断方向：先说外磁通在增加还是减少→感应场要反抗该变化→用右手握拳定则求电流方向。反抗的是“变化”，不能笼统写成总与原磁场反向；这与能量守恒一致。</p>
 <p>Determine the change in external flux, choose the opposing induced field, then use the grip rule for current. The induced field opposes the change, not necessarily the original field.</p>
 <h3 id="h-7198b0f1ed010e09d0">直导体与涡流 / Moving conductor and eddy currents</h3>
