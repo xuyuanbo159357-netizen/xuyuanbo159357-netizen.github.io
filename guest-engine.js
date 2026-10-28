@@ -18,6 +18,7 @@ const FORMS=['whole','part'],KINDS=['short','process','discussion','choice'];
 const form=q=>q.entryKind==='part'?'part':'whole';
 const key=q=>q.parent+':'+(form(q)==='whole'?'*':q.part||'single');
 function conflict(a,b){return a.parent===b.parent&&(form(a)==='whole'||form(b)==='whole'||(a.part||'single')===(b.part||'single'));}
+function normalize(bank,ids){const whole=new Set(ids.map(id=>bank.questions.get(id)).filter(q=>form(q)==='whole').map(q=>q.parent)),seen=new Set();return ids.filter(id=>{const q=bank.questions.get(id);if(form(q)==='part'&&whole.has(q.parent))return false;const k=key(q);if(seen.has(k))return false;seen.add(k);return true;});}
 function levels(value){if(value===undefined||value===null||value==='')return [];const raw=Array.isArray(value)?value:String(value).split(',');return [...new Set(raw.map(v=>integer(v,'难度星级',1,5)))];}
 function topicScope(pool,opts){const values=Array.isArray(opts.topics)?opts.topics:String(opts.topics||'').split(',').filter(Boolean);return new Set(values.length?values:pool.flatMap(q=>q.topics||[]));}
 function coverageGain(q,covered,scope,freq){return (q.topics||[]).filter(t=>scope.has(t)).reduce((n,t)=>n+(covered.has(t)?0:1+1/Math.sqrt(freq.get(t)||1)),0);}
@@ -124,7 +125,7 @@ function flexible(bank,opts){
  }
  fail('排除整题与所属小问重复后，没有同时满足所设范围的组合',409);
 }
-module.exports={assemble,flexible,form,key,conflict,levels,range,spread,coverageSummary};
+module.exports={assemble,flexible,form,key,conflict,normalize,levels,range,spread,coverageSummary};
 
 };
 modules['./bank']=function(require,module,exports){
@@ -191,9 +192,9 @@ class Service{
   async createPaper(user,body){
     let source=null;
     if(body.sourcePaperId!==undefined){source=this.bank.catalog.papers.find(p=>p.id===body.sourcePaperId);if(!source)fail('未找到所选正式试卷');if(body.unit!==undefined&&Number(body.unit)!==source.unit)fail('所选试卷不属于当前 Unit');}
-    let ids=source?source.ids.slice():body.automatic?this.bank.assemble(body):unique(body.ids||[]);
-    if(!Array.isArray(ids)||!ids.length||ids.length>60||ids.some(i=>!this.bank.questions.has(i)))fail('请加入1–60道有效题目');
-    const {conflict,form}=require('./assembly');for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++)if(conflict(this.bank.questions.get(ids[i]),this.bank.questions.get(ids[j])))fail('同一整题与所属小问、或同一小问的不同分类副本不能重复入卷');
+    let ids=source?source.ids.slice():body.automatic?this.bank.assemble(body):Array.isArray(body.ids)?unique(body.ids):[];
+    if(!Array.isArray(ids)||!ids.length||ids.length>600||ids.some(i=>!this.bank.questions.has(i)))fail('请加入有效题目');
+    const {conflict,form,normalize}=require('./assembly');if(!source&&!body.automatic)ids=normalize(this.bank,ids);if(ids.length>60)fail('合并后最多保留60道选题单元');for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++)if(conflict(this.bank.questions.get(ids[i]),this.bank.questions.get(ids[j])))fail('同一整题与所属小问、或同一小问的不同分类副本不能重复入卷');
     if(!source)ids=this.bank.order(ids);
     const p={id:id(),owner:user.id,title:String(body.title||(source?source.title:'OxfordAQA 9630 自选试卷')).slice(0,100),ids,recipients:[],created:now(),ordering:source?'source-paper':'question-type-choice-last',typeCounts:this.bank.typeCounts(ids),coverage:this.bank.coverage(ids,body.automatic?body:{paperId:'manual'}),structureCounts:{whole:ids.filter(i=>form(this.bank.questions.get(i))==='whole').length,part:ids.filter(i=>form(this.bank.questions.get(i))==='part').length},...(source?{sourcePaperId:source.id,sourcePaperTitle:source.title,sourceSession:source.session,sourceUnit:source.unit}:{})};
     await this.store.save('paper',p.id,user.id,p);return p;

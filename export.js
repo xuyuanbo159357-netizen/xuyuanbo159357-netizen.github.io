@@ -1,4 +1,4 @@
-import {api,modal,$,toast,esc} from './core.js?v=20261028g';
+import {api,modal,$,toast,esc} from './core.js?v=20261028h';
 let busy=false;
 export async function exportDocument(type,id,kind,format='pdf'){
  if(busy){toast('正在生成文件，请稍候');return;}busy=true;let cancelled=false;

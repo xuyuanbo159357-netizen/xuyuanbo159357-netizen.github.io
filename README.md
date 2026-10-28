@@ -13,3 +13,5 @@ All 2,891 formal-paper subparts have 1–5 star teaching estimates based on calc
 Assembly supports multi-select difficulty, separately specified whole-question and subpart counts, optional type quotas, exact target marks and source-overlap checks. Existing question IDs and browser-local records are preserved.
 
 Automatic assembly also supports count and score intervals, fixed counts with automatically matched total marks, and fixed total marks with automatically matched counts. Every configured interval and quota is enforced. New subpart and context images use pixel-verified lossless compression; Word exports embed converted PNGs for compatibility.
+
+Manual selection shows live type totals and a removable preview. When a whole question overlaps its specialist/subpart copies, the whole question takes precedence and is counted only once. Automatic selection prioritizes uncovered knowledge topics, followed by a constraint-preserving coverage improvement pass.
