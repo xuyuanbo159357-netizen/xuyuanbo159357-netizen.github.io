@@ -1,4 +1,4 @@
-import {api,modal,$,toast,esc} from './core.js';
+import {api,modal,$,toast,esc} from './core.js?v=20261028g';
 let busy=false;
 export async function exportDocument(type,id,kind,format='pdf'){
  if(busy){toast('正在生成文件，请稍候');return;}busy=true;let cancelled=false;
@@ -7,7 +7,7 @@ export async function exportDocument(type,id,kind,format='pdf'){
  const path='/export?'+new URLSearchParams({type,id,kind}),canvas=document.createElement('canvas'),parts=[];
  try{
   const manifest=await api(path);check();
-  async function image(url){const response=await fetch(url,{credentials:'same-origin'});if(!response.ok)throw new Error('题图读取失败，请重新登录后重试');const blob=await response.blob();const src=URL.createObjectURL(blob);return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve({image:img,blob,release:()=>URL.revokeObjectURL(src)});img.onerror=()=>{URL.revokeObjectURL(src);reject(new Error('图片无法打开'));};img.src=src;});}
+  async function image(url){const response=await fetch(url,{credentials:'same-origin'});if(!response.ok)throw new Error('题图读取失败，请重新登录后重试');const blob=await response.blob();const src=URL.createObjectURL(blob);return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{if(blob.type==='image/webp'||/\.webp(?:[?#]|$)/i.test(url)){const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;c.getContext('2d').drawImage(img,0,0);c.toBlob(png=>png?resolve({image:img,blob:png,release:()=>URL.revokeObjectURL(src)}):reject(new Error('图片格式转换失败')),'image/png');}else resolve({image:img,blob,release:()=>URL.revokeObjectURL(src)});};img.onerror=()=>{URL.revokeObjectURL(src);reject(new Error('图片无法打开'));};img.src=src;});}
   const jpeg=()=>new Promise((resolve,reject)=>canvas.toBlob(b=>b?b.arrayBuffer().then(resolve):reject(new Error('页面生成失败')),'image/jpeg',.94));
   const deps={canvas,manifest,check,append:async data=>parts.push(data),getItem:i=>api(path+'&item='+i+'&version='+manifest.version),loadImage:async url=>image(url),jpeg,progress:({question,count})=>{if($('#export-progress')){$('#export-progress').value=Math.round(question/count*100);$('#export-status').textContent=`正在生成第 ${question} / ${count} 题…`;}}};
   if(format==='pdf')await window.PhysicsShared.pdf.renderPdf(deps);

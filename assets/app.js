@@ -112,3 +112,6 @@
     });
   }catch(error){console.warn('本地悬停词库加载失败；刷新页面可重试。',error);}
 })();
+
+// Per-subpart teaching difficulty, kept separate from official exam answers.
+(async()=>{try{const page=JSON.parse(document.getElementById('page-data')?.textContent||'{}'),src=page.source||'';const m=src.match(/\/PH0([1-4]) (20\d{4}) Q(\d+)(?:\.(\d+))?[^/]*\.md$/);if(!m||!src.includes('/06 真题练习/'))return;const parent=`PH0${m[1]}-${m[2]}-Q${m[3].padStart(2,'0')}`;const [data,ui]=await Promise.all([fetch('/assets/question-difficulty.json').then(r=>r.json()),import('/difficulty.js')]);let rows=data.questions[parent];if(!rows)return;if(m[4])rows=rows.filter(r=>r.part===String(Number(m[4])));if(!rows.length)return;const d=rows.reduce((a,b)=>a.difficulty.stars>=b.difficulty.stars?a:b).difficulty,box=document.createElement('section');box.className='exam-difficulty';box.innerHTML=ui.difficulty({number:Number(m[3]),difficulty:d,subparts:rows});const h=document.querySelector('main h1');if(h)h.insertAdjacentElement('afterend',box);}catch(error){console.warn('题目星级暂未加载',error);}})();

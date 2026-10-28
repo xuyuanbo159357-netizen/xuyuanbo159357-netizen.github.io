@@ -1,4 +1,5 @@
-import {guestUser,guestApi,guestUpload,clearGuest} from './guest.js';
+import {difficulty} from './difficulty.js?v=20261028g';
+import {guestUser,guestApi,guestUpload,clearGuest} from './guest.js?v=20261028g';
 export {guestUser,clearGuest};
 export const state={user:null,catalog:null,knowledge:null,unit:1,cleanup:null,epoch:0};
 export const $=(s,root=document)=>root.querySelector(s), $$=(s,root=document)=>Array.from(root.querySelectorAll(s));
@@ -25,7 +26,7 @@ export function heading(eyebrow,title,subtitle=''){return `<div class="eyebrow">
 export function units(unit){return `<div class="units">${[1,2,3,4].map(u=>`<button class="chip ${unit===u?'active':''}" data-unit="${u}" aria-pressed="${unit===u}">U${u}</button>`).join('')}</div>`;}
 export function empty(text){return `<div class="empty">${esc(text)}</div>`;}
 export function link(route,label,cls='btn secondary'){return `<a class="${cls}" href="#/${route}">${esc(label)}</a>`;}
-export function knowledgeLinks(q){const items=(q.topics||[]).map(id=>state.knowledge?.topics[id]).filter(Boolean);return items.length?`<div class="knowledge-links"><span>知识点回顾</span>${items.map(t=>`<a href="${esc(t.url)}">${esc(t.title)} ↗</a>`).join('')}</div>`:'';}
+export function knowledgeLinks(q){const items=(q.topics||[]).map(id=>state.knowledge?.topics[id]).filter(Boolean);return difficulty(q)+(items.length?`<div class="knowledge-links"><span>知识点回顾</span>${items.map(t=>`<a href="${esc(t.url)}">${esc(t.title)} ↗</a>`).join('')}</div>`:'');}
 export function testLink(t){return `#/${t.status==='draft'?'exam':'result'}/${t.id}`;}
 export function modal(title,content,{confirm='确定',cancel='取消',form=false,wide=false}={}){
  return new Promise(resolve=>{const last=document.activeElement,root=$('#modal-root');root.innerHTML=`<div class="modal-overlay"><section class="modal ${wide?'image-modal':''}" role="dialog" aria-modal="true" aria-labelledby="modal-title"><h2 id="modal-title">${esc(title)}</h2><div class="${form?'':'modal-content'}">${content}</div><div class="actions">${cancel?`<button class="btn secondary" id="modal-cancel">${esc(cancel)}</button>`:''}<button class="btn" id="modal-confirm">${esc(confirm)}</button></div></section></div>`;

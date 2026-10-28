@@ -11,21 +11,139 @@ modules['./common']=function(require,module,exports){
  function shuffle(xs){const a=xs.slice();for(let i=a.length-1;i>0;i--){const range=i+1,max=Math.floor(4294967296/range)*range;let x;do{x=crypto.getRandomValues(new Uint32Array(1))[0];}while(x>=max);const j=x%range;[a[i],a[j]]=[a[j],a[i]];}return a;}
  const beijing=t=>new Date((t+28800)*1000).toISOString().slice(0,16).replace('T',' ')+'（北京时间）';
  module.exports={ApiError,fail,id,hash,copy,sum,unique,now,integer,text,shuffle,beijing};};
+modules['./assembly']=function(require,module,exports){
+'use strict';
+const {fail,integer,shuffle,sum}=require('./common');
+const FORMS=['whole','part'],KINDS=['short','process','discussion','choice'];
+const form=q=>q.entryKind==='part'?'part':'whole';
+const key=q=>q.parent+':'+(form(q)==='whole'?'*':q.part||'single');
+function conflict(a,b){return a.parent===b.parent&&(form(a)==='whole'||form(b)==='whole'||(a.part||'single')===(b.part||'single'));}
+function levels(value){if(value===undefined||value===null||value==='')return [];const raw=Array.isArray(value)?value:String(value).split(',');return [...new Set(raw.map(v=>integer(v,'难度星级',1,5)))];}
+function topicScope(pool,opts){const values=Array.isArray(opts.topics)?opts.topics:String(opts.topics||'').split(',').filter(Boolean);return new Set(values.length?values:pool.flatMap(q=>q.topics||[]));}
+function coverageGain(q,covered,scope,freq){return (q.topics||[]).filter(t=>scope.has(t)).reduce((n,t)=>n+(covered.has(t)?0:1+1/Math.sqrt(freq.get(t)||1)),0);}
+function spread(pool,count,opts={}){
+ const scope=topicScope(pool,opts),freq=new Map(),covered=new Set(),picked=[];
+ for(const q of pool)for(const t of q.topics||[])freq.set(t,(freq.get(t)||0)+1);
+ let remaining=shuffle(pool);
+ while(picked.length<count&&remaining.length){remaining.sort((a,b)=>coverageGain(b,covered,scope,freq)-coverageGain(a,covered,scope,freq));const q=remaining.shift();picked.push(q);for(const t of q.topics||[])covered.add(t);remaining=remaining.filter(x=>!conflict(x,q));}
+ return picked;
+}
+function improve(bank,ids,pool,opts){
+ const selected=ids.map(id=>bank.questions.get(id)),scope=topicScope(pool,opts);
+ const coverage=xs=>new Set(xs.flatMap(q=>(q.topics||[]).filter(t=>scope.has(t))));
+ for(let round=0;round<3;round++){let changed=false;for(let i=0;i<selected.length;i++){
+  const old=selected[i],others=selected.filter((q,j)=>j!==i),remaining=coverage(others);let best=old,bestCount=coverage(selected).size;
+  for(const q of pool){if(q.marks!==old.marks||form(q)!==form(old)||opts.typeCounts&&bank.questionType(q)!==bank.questionType(old)||others.some(p=>conflict(p,q)))continue;const n=new Set([...remaining,...(q.topics||[]).filter(t=>scope.has(t))]).size;if(n>bestCount){best=q;bestCount=n;}}
+  if(best.id!==old.id){selected[i]=best;changed=true;}
+ }if(!changed)break;}
+ return selected.map(q=>q.id);
+}
+function coverageSummary(bank,ids,opts={}){
+ const selected=ids.map(id=>bank.questions.get(id)),unit=opts.unit||selected[0]?.unit||1;
+ let pool;
+ if(opts.automatic||!opts.paperId&&!opts.sourcePaperId&&opts.category){
+  const effective=opts.structure||(opts.category==='normal'?'whole':'part');const whole=opts.structureRanges?.whole?.max??opts.structureCounts?.whole??(effective==='whole'?40:0),part=opts.structureRanges?.part?.max??opts.structureCounts?.part??(effective==='whole'?0:40);
+  pool=bank.filtered({...opts,unit,structure:opts.structureCounts||opts.structureRanges?'all':opts.structure,category:opts.typeCounts||whole?'all':opts.category}).filter(q=>(form(q)==='whole'?whole>0:part>0)&&(!opts.typeCounts||Number(opts.typeCounts[bank.questionType(q)]||0)>0));
+ }else pool=selected;
+ const scope=topicScope(pool,opts),available=new Set(pool.flatMap(q=>(q.topics||[]).filter(t=>scope.has(t)))),covered=new Set(selected.flatMap(q=>(q.topics||[]).filter(t=>scope.has(t)))),labels=new Map(bank.catalog.topics.map(t=>[t.id,t.title]));
+ return {coveredCount:covered.size,availableCount:available.size,coveredTopics:[...covered],remainingTopics:[...available].filter(t=>!covered.has(t)).map(id=>({id,title:labels.get(id)||id})),strategy:'prioritize-uncovered-topics-within-all-constraints'};
+}
+function assemble(bank,opts,deadline=Date.now()+1800){
+ const counts=opts.structureCounts;
+ if(!counts||typeof counts!=='object'||Array.isArray(counts)||Object.keys(counts).some(k=>!FORMS.includes(k)))fail('整题与小问数量设置无效');
+ const forms=Object.fromEntries(FORMS.map(k=>[k,integer(counts[k]??0,k==='whole'?'整题数量':'小问数量',0,40)]));
+ const count=sum(Object.values(forms));if(count<1||count>40)fail('整题与小问数量合计需为1–40道');
+ let types=null;if(opts.typeCounts!==undefined){if(!opts.typeCounts||typeof opts.typeCounts!=='object'||Array.isArray(opts.typeCounts)||Object.keys(opts.typeCounts).some(k=>!KINDS.includes(k)))fail('题型数量设置无效');types=Object.fromEntries(KINDS.map(k=>[k,integer(opts.typeCounts[k]??0,'题型数量',0,40)]));if(sum(Object.values(types))!==count)fail('题型数量之和须等于整题与小问数量之和');}
+ const target=integer(opts.marks,'目标总分',1,300),seen=new Set();
+ const pool=shuffle(bank.filtered({...opts,structure:'all',category:types||forms.whole?'all':opts.category})).filter(q=>{const k=key(q);if(seen.has(k))return false;seen.add(k);return forms[form(q)]>0&&(!types||types[bank.questionType(q)]>0);});
+ for(const f of FORMS)if(pool.filter(q=>form(q)===f).length<forms[f])fail((f==='whole'?'整题':'小问')+'题池不足，请调整知识点、难度或数量',409);
+ // Exact reachable scores before searching; scores and quotas are never relaxed.
+ function reachable(xs,n){const d=Array(n+1).fill(0n);d[0]=1n;const mask=(1n<<BigInt(target+1))-1n;for(const q of xs)for(let k=n;k>0;k--)d[k]|=(d[k-1]<<BigInt(q.marks))&mask;return d[n];}
+ function combine(a,b){let out=0n;for(let n=0;n<=target;n++)if((a>>BigInt(n))&1n)out|=b<<BigInt(n);return out;}
+ const whole=reachable(pool.filter(q=>form(q)==='whole'),forms.whole),part=reachable(pool.filter(q=>form(q)==='part'),forms.part);
+ if(!((combine(whole,part)>>BigInt(target))&1n))fail('所选难度、整题/小问数量与目标总分无法同时满足，请调整设置',409);
+ if(types)for(const t of KINDS)if(pool.filter(q=>bank.questionType(q)===t).length<types[t])fail('所选难度下的题型数量不足，请调整设置',409);
+ const scope=topicScope(pool,opts),freq=new Map();for(const q of pool)for(const t of q.topics||[])freq.set(t,(freq.get(t)||0)+1);
+ let visits=0;const chosen=[],positions=new Map(pool.map((q,i)=>[q.id,i])),lastCell=new Map(),cell=q=>form(q)+':'+bank.questionType(q);
+ function search(left){
+  const needed=sum(Object.values(forms));if(!needed)return left===0?chosen.map(q=>q.id):null;
+  if(++visits%128===0&&Date.now()>deadline)fail('当前条件组合较复杂，尚未找到精确组合；请调整题量或总分后重试',409,{reason:'search-timeout'});
+  const available=pool.filter(q=>forms[form(q)]>0&&(!types||types[bank.questionType(q)]>0)&&positions.get(q.id)>(lastCell.get(cell(q))??-1)&&q.marks<=left&&!chosen.some(p=>conflict(p,q)));
+  if(available.length<needed)return null;
+  const marks=available.map(q=>q.marks).sort((a,b)=>a-b);if(sum(marks.slice(0,needed))>left||sum(marks.slice(-needed))<left)return null;
+  function bounds(keys,counts,get){let lo=0,hi=0;for(const k of keys)if(counts[k]){const xs=available.filter(q=>get(q)===k).map(q=>q.marks).sort((a,b)=>a-b);if(xs.length<counts[k])return false;lo+=sum(xs.slice(0,counts[k]));hi+=sum(xs.slice(-counts[k]));}return lo<=left&&left<=hi;}
+  if(!bounds(FORMS,forms,form)||types&&!bounds(KINDS,types,q=>bank.questionType(q)))return null;
+  let candidates=null,ratio=Infinity;
+  for(const f of FORMS)if(forms[f]){const xs=available.filter(q=>form(q)===f);if(xs.length<forms[f])return null;if(xs.length/forms[f]<ratio){candidates=xs;ratio=xs.length/forms[f];}}
+  if(types)for(const t of KINDS)if(types[t]){const xs=available.filter(q=>bank.questionType(q)===t);if(xs.length<types[t])return null;if(xs.length/types[t]<ratio){candidates=xs;ratio=xs.length/types[t];}}
+  // Try attainable average marks first; shuffle preserves random choice among peers.
+  const covered=new Set(chosen.flatMap(q=>q.topics||[]));candidates.sort((a,b)=>coverageGain(b,covered,scope,freq)-coverageGain(a,covered,scope,freq)||Math.abs(a.marks-left/needed)-Math.abs(b.marks-left/needed));
+  for(const q of candidates){const f=form(q),t=bank.questionType(q),k=cell(q),old=lastCell.get(k);lastCell.set(k,positions.get(q.id));forms[f]--;if(types)types[t]--;chosen.push(q);const result=search(left-q.marks);chosen.pop();forms[f]++;if(types)types[t]++;if(old===undefined)lastCell.delete(k);else lastCell.set(k,old);if(result)return result;}
+  return null;
+ }
+ const result=search(target);if(!result)fail('排除整题与所属小问重复后，无法满足全部数量和分数条件',409);return improve(bank,result,pool,opts);
+}
+function range(raw,label,min,max,fallback){
+ if(raw===undefined)return fallback;
+ if(!raw||typeof raw!=='object'||Array.isArray(raw)||Object.keys(raw).some(k=>!['min','max'].includes(k)))fail(label+'区间格式无效');
+ const a=integer(raw.min,label+'下限',min,max),b=integer(raw.max,label+'上限',min,max);if(a>b)fail(label+'下限不能大于上限');return {min:a,max:b};
+}
+function flexible(bank,opts){
+ const mode=opts.assemblyMode;if(!['ranges','fixed-count','fixed-marks'].includes(mode))fail('组卷匹配方式无效');
+ let forms,count;
+ if(mode==='fixed-count'){
+  const raw=opts.structureCounts;if(!raw||typeof raw!=='object'||Array.isArray(raw)||Object.keys(raw).some(k=>!FORMS.includes(k)))fail('整题与小问数量设置无效');
+  forms=Object.fromEntries(FORMS.map(k=>{const n=integer(raw[k]??0,'题目数量',0,40);return [k,{min:n,max:n}];}));const n=forms.whole.min+forms.part.min;if(n<1||n>40)fail('整题与小问数量合计需为1–40道');count={min:n,max:n};
+ }else{
+  count=range(opts.countRange,'总题数',1,40,{min:1,max:40});const raw=opts.structureRanges||{};
+  if(typeof raw!=='object'||Array.isArray(raw)||Object.keys(raw).some(k=>!FORMS.includes(k)))fail('整题与小问区间格式无效');
+  forms={whole:range(raw.whole,'完整大题数量',0,40,{min:0,max:0}),part:range(raw.part,'拆分小问数量',0,40,{min:0,max:40})};
+ }
+ const marks=mode==='fixed-marks'?(()=>{const n=integer(opts.marks,'目标总分',1,300);return {min:n,max:n};})():mode==='ranges'?range(opts.marksRange,'总分',1,300,{min:1,max:300}):{min:1,max:300};
+ let totalByType=null;if(opts.typeCounts!==undefined){const raw=opts.typeCounts;if(!raw||typeof raw!=='object'||Array.isArray(raw)||Object.keys(raw).some(k=>!KINDS.includes(k)))fail('题型数量设置无效');totalByType=sum(KINDS.map(k=>integer(raw[k]??0,'题型数量',0,40)));if(totalByType<count.min||totalByType>count.max)fail('各题型数量合计不在设置的题数范围内');}
+ const rawPool=bank.filtered({...opts,structure:'all',category:opts.typeCounts||forms.whole.max?'all':opts.category});const pool=opts.typeCounts?rawPool.filter(q=>Number(opts.typeCounts[bank.questionType(q)]||0)>0):rawPool;
+ const mask=(1n<<BigInt(marks.max+1))-1n,scoreMask=mask^((1n<<BigInt(marks.min))-1n);
+ const dp={};
+ for(const f of FORMS){const table=Array(forms[f].max+1).fill(0n);table[0]=1n;for(const q of pool.filter(q=>form(q)===f))for(let n=forms[f].max;n>0;n--)table[n]|=(table[n-1]<<BigInt(q.marks))&mask;dp[f]=table;}
+ function combine(a,b,filter=scoreMask){let out=0n;while(a){const low=a&-a,shift=low.toString(2).length-1;out|=b<<BigInt(shift);a-=low;}return out&filter;}
+ let typeScores=mask;if(opts.typeCounts){typeScores=1n;for(const k of KINDS){const n=Number(opts.typeCounts[k]||0),table=Array(n+1).fill(0n);table[0]=1n;for(const q of pool.filter(q=>bank.questionType(q)===k))for(let i=n;i>0;i--)table[i]|=(table[i-1]<<BigInt(q.marks))&mask;typeScores=combine(typeScores,table[n],mask);}}
+ const possible=[];
+ for(let whole=forms.whole.min;whole<=forms.whole.max;whole++)for(let part=forms.part.min;part<=forms.part.max;part++){
+  const n=whole+part;if(n<count.min||n>count.max||totalByType!==null&&n!==totalByType)continue;
+  const scores=combine(dp.whole[whole],dp.part[part])&typeScores;if(scores)possible.push({whole,part,scores});
+ }
+ if(!possible.length)fail('当前知识点、难度、题数和分数范围没有可用组合，请调整设置',409);
+ const deadline=Date.now()+2200;let attempts=0;
+ for(const candidate of shuffle(possible)){
+  const scores=[];for(let n=marks.min;n<=marks.max;n++)if((candidate.scores>>BigInt(n))&1n)scores.push(n);
+  for(const score of shuffle(scores)){
+   if(Date.now()>deadline)fail('区间组合搜索尚未完成，请缩小范围或调整条件后重试',409,{reason:'search-timeout'});
+   try{return assemble(bank,{...opts,assemblyMode:'exact',structureCounts:{whole:candidate.whole,part:candidate.part},count:candidate.whole+candidate.part,marks:score},deadline);}catch(error){if(error.status!==409)throw error;if(error.detail?.reason==='search-timeout')throw error;}
+   if(++attempts>100)fail('暂未找到同时满足全部条件且不重复的组合，请调整范围后重试',409);
+  }
+ }
+ fail('排除整题与所属小问重复后，没有同时满足所设范围的组合',409);
+}
+module.exports={assemble,flexible,form,key,conflict,levels,range,spread,coverageSummary};
+
+};
 modules['./bank']=function(require,module,exports){
 'use strict';
 const fs=require('node:fs'),path=require('node:path');
 const {fail,integer,shuffle,sum,unique,copy}=require('./common');
+const Assembly=require('./assembly');
 const TYPES={short:['简答题',0],process:['综合 / 过程题',1],discussion:['论述题',2],choice:['选择题',3]};
 class Bank{
   constructor(folder=path.join(__dirname,'../resources')){this.folder=folder;this.catalog=require(path.join(folder,'catalog.json'));this.questions=new Map(require(path.join(folder,'questions.json')).map(q=>[q.id,q]));this.assets=require(path.join(folder,'assets.json'));this.wordCache=new Map();}
-  questionType(q){return q.answerMode==='choice'?'choice':q.category==='discussion'?'discussion':q.answerMode==='short'?'short':'process';}
+  questionType(q){return q.questionType||(q.answerMode==='choice'?'choice':q.category==='discussion'?'discussion':q.answerMode==='short'?'short':'process');}
   order(ids){return ids.map((id,index)=>({id,index,rank:TYPES[this.questionType(this.questions.get(id))][1]})).sort((a,b)=>a.rank-b.rank||a.index-b.index).map(x=>x.id);}
   typeCounts(ids){const c={short:0,process:0,discussion:0,choice:0};for(const id of ids)c[this.questionType(this.questions.get(id))]++;return c;}
   typeSummary(ids){return Object.entries(this.typeCounts(ids)).filter(([,n])=>n).map(([id,count])=>({id,label:TYPES[id][0],count}));}
-  filtered(opts){const unit=integer(opts.unit||1,'Unit',1,4),category=opts.category||'normal';const topics=Array.isArray(opts.topics)?opts.topics:String(opts.topics||'').split(',').filter(Boolean);const term=String(opts.search||'').toLowerCase();return [...this.questions.values()].filter(q=>q.unit===unit&&(category==='all'||q.category===category)&&(!topics.length||q.topics.some(t=>topics.includes(t)))&&(!term||(q.source+' '+q.text+' '+q.focus).toLowerCase().includes(term)));}
-  public(q,answers=false){const r=copy(q);delete r.sourceNote;delete r.sourceSha256;if(!answers){delete r.correct;delete r.answerImages;delete r.explanation;}r.questionType=this.questionType(q);r.questionTypeLabel=TYPES[r.questionType][0];for(const field of ['questionImages','answerImages','contextImages'])if(r[field])r[field]=r[field].map(im=>({...im,url:'cloud-media://'+im.id}));return r;}
-  select(opts,used=[]){const excluded=new Set(used),pool=shuffle(this.filtered(opts).filter(q=>!excluded.has(q.id)));if(!pool.length)fail('所选范围已无未出题目，请更换范围或开始新一轮');if(pool.length<10&&!opts.allowPartial)fail('当前范围仅剩 '+pool.length+' 道未出题目，是否开始？',409,{remaining:pool.length});return pool.slice(0,10).map(q=>q.id);}
-  assemble(opts){if(opts.typeCounts!==undefined)return this.assembleTypes(opts);const count=integer(opts.count||10,'题数',1,40),target=integer(opts.marks||0,'总分',1,300),pool=shuffle(this.filtered(opts));if(pool.length<count)fail('所选范围题目不足');const states=Array.from({length:count+1},()=>new Map());states[0].set(0,[]);for(const q of pool){for(let n=count;n>0;n--)for(const [score,ids] of [...states[n-1]]){const next=score+q.marks;if(next<=target&&!states[n].has(next))states[n].set(next,ids.concat(q.id));}if(states[count].has(target))return states[count].get(target);}fail('题量和总分无法同时满足，请调整设置',409,{possibleMarks:[...states[count].keys()].sort((a,b)=>Math.abs(a-target)-Math.abs(b-target)).slice(0,5)});}
+  filtered(opts){const unit=integer(opts.unit||1,'Unit',1,4),category=opts.category||'normal';const topics=Array.isArray(opts.topics)?opts.topics:String(opts.topics||'').split(',').filter(Boolean);const term=String(opts.search||'').toLowerCase(),levels=Assembly.levels(opts.difficulties);const structure=opts.structure||(category==='normal'?'whole':'part');if(!['whole','part','all'].includes(structure))fail('题目拆分方式无效');const result=[...this.questions.values()].filter(q=>q.unit===unit&&(category==='all'||q.category===category)&&(structure==='all'||Assembly.form(q)===structure)&&(!levels.length||levels.includes(q.difficulty?.stars))&&(!topics.length||q.topics.some(t=>topics.includes(t)))&&(!term||(q.source+' '+q.text+' '+q.focus).toLowerCase().includes(term)));if(category!=='all')return result;const seen=new Set();return result.sort((a,b)=>Number(b.category==='normal')-Number(a.category==='normal')).filter(q=>{const k=Assembly.key(q);if(seen.has(k))return false;seen.add(k);return true;});}
+  public(q,answers=false){const r=copy(q);delete r.sourceNote;delete r.sourceSha256;if(!answers){delete r.correct;delete r.answerImages;delete r.explanation;}r.questionType=this.questionType(q);r.questionTypeLabel=TYPES[r.questionType][0];for(const field of ['questionImages','answerImages','contextImages','sharedContextImages'])if(r[field])r[field]=r[field].map(im=>({...im,url:'cloud-media://'+im.id}));return r;}
+  select(opts,used=[]){const excluded=new Set(used),pool=shuffle(this.filtered(opts).filter(q=>!excluded.has(q.id)));if(!pool.length)fail('所选范围已无未出题目，请更换范围或开始新一轮');if(pool.length<10&&!opts.allowPartial)fail('当前范围仅剩 '+pool.length+' 道未出题目，是否开始？',409,{remaining:pool.length});const selected=Assembly.spread(pool,Math.min(10,pool.length),opts);if(selected.length<10&&!opts.allowPartial)fail('排除重复原题后仅剩 '+selected.length+' 道可用题目',409,{remaining:selected.length});return selected.map(q=>q.id);}
+  coverage(ids,opts={}){return Assembly.coverageSummary(this,ids,opts);}
+  assemble(opts){if(opts.assemblyMode&&opts.assemblyMode!=='exact')return Assembly.flexible(this,opts);if(opts.structureCounts!==undefined)return Assembly.assemble(this,opts);if(opts.typeCounts!==undefined)return this.assembleTypes(opts);const count=integer(opts.count||10,'题数',1,40),target=integer(opts.marks||0,'总分',1,300),pool=shuffle(this.filtered(opts));if(pool.length<count)fail('所选范围题目不足');const states=Array.from({length:count+1},()=>new Map());states[0].set(0,[]);for(const q of pool){for(let n=count;n>0;n--)for(const [score,ids] of [...states[n-1]]){const next=score+q.marks;if(next<=target&&!states[n].has(next))states[n].set(next,ids.concat(q.id));}if(states[count].has(target))return states[count].get(target);}fail('题量和总分无法同时满足，请调整设置',409,{possibleMarks:[...states[count].keys()].sort((a,b)=>Math.abs(a-target)-Math.abs(b-target)).slice(0,5)});}
   assembleTypes(opts){
     const raw=opts.typeCounts;if(!raw||typeof raw!=='object'||Array.isArray(raw)||Object.keys(raw).some(k=>!TYPES[k]))fail('题型数量设置无效');
     const counts=Object.fromEntries(Object.keys(TYPES).map(k=>[k,integer(raw[k]===undefined?0:raw[k],TYPES[k][0]+'数量',0,40)]));const count=sum(Object.values(counts));if(count<1||count>40)fail('各题型数量合计需为1–40道');if(opts.count!==undefined&&integer(opts.count,'题数',1,40)!==count)fail('总题量与题型数量之和不一致');const target=integer(opts.marks,'总分',1,300);
@@ -64,7 +182,7 @@ class Service{
     else if(opts.paperId){const p=await this.paperAccess(uid,opts.paperId);ids=p.ids.slice();title=p.title;mode='assigned';}
     else if(opts.session){const p=this.bank.catalog.papers.find(p=>p.unit===Number(opts.unit||1)&&p.session===opts.session);if(!p)fail('未找到正式试卷');ids=p.ids.slice();title=p.title;mode='paper';}
     else{ids=this.bank.select(opts,used);title='Unit '+(opts.unit||1)+' · '+({normal:'知识点测试',concept:'概念考察',discussion:'论述题练习'}[opts.category]||'知识点测试');mode='random';}
-    const selection={...opts};delete selection.previous;delete selection.allowPartial;const t={id:id(),owner:uid,title,mode,selection,ids,used:unique([...used,...ids]),answers:{},grades:{},status:'draft',reviewer:null,created:now(),bankVersion:this.bank.catalog.version};if(assignment)t.assignmentId=assignment.id;await this.store.save('test',t.id,uid,t);return t;
+    const selection={...opts};delete selection.previous;delete selection.allowPartial;const t={id:id(),owner:uid,title,mode,selection,ids,used:unique([...used,...ids]),answers:{},grades:{},status:'draft',reviewer:null,created:now(),bankVersion:this.bank.catalog.version,coverage:this.bank.coverage(ids,mode==='random'?opts:{paperId:mode})};if(assignment)t.assignmentId=assignment.id;await this.store.save('test',t.id,uid,t);return t;
   }
   async saveAnswers(uid,key,body){const t=await this.readableTest(uid,key);this.own(uid,t);if(t.status!=='draft')fail('已提交的答题卡不能修改');const answers=body.answers||{};if(!answers||typeof answers!=='object'||Array.isArray(answers))fail('答案格式错误');if(body.skipped!==undefined){if(!Array.isArray(body.skipped)||body.skipped.length>t.ids.length||body.skipped.some(qid=>typeof qid!=='string'||!t.ids.includes(qid)))fail('跳过题目不在本次测试中');t.skipped=unique(body.skipped);}for(const [qid,a] of Object.entries(answers)){if(!t.ids.includes(qid)||!a||typeof a!=='object'||Array.isArray(a))fail('答题卡中没有此题或答案格式错误');const choice=a.choice||'';if(choice&&!['A','B','C','D'].includes(choice))fail('选项无效');const value=String(a.text||'');if(value.length>20000)fail('单题文字答案过长');const files=a.attachments||[];if(!Array.isArray(files)||files.length>6)fail('每题最多六张作答图片');for(const f of files)this.own(uid,await this.store.get('upload',f.id));t.answers[qid]={choice,text:value,attachments:files.map(f=>({id:f.id}))};}await this.store.save('test',key,uid,t);return t;}
   async submit(uid,key){const t=await this.readableTest(uid,key);this.own(uid,t);if(t.status!=='draft')fail('这份答题卡已经提交');const skipped=new Set(t.skipped||[]),included=t.ids.filter(qid=>!skipped.has(qid));if(!included.length)fail('所有题目均已跳过，请至少保留一道题再生成答题卡');if(skipped.size){t.originalIds=t.ids.slice();t.ids=included;t.answers=Object.fromEntries(Object.entries(t.answers).filter(([qid])=>included.includes(qid)));t.grades=Object.fromEntries(Object.entries(t.grades).filter(([qid])=>included.includes(qid)));}t.status='submitted';t.submitted=now();if(t.assignmentId){const a=await this.store.get('assignment',t.assignmentId);t.late=t.submitted>a.dueAt;t.deadlineAtSubmission=a.dueAt;if(await this.store.isTeacher(a.owner,uid))t.reviewer=a.owner;}await this.store.save('test',key,uid,t);return t;}
@@ -75,9 +193,9 @@ class Service{
     if(body.sourcePaperId!==undefined){source=this.bank.catalog.papers.find(p=>p.id===body.sourcePaperId);if(!source)fail('未找到所选正式试卷');if(body.unit!==undefined&&Number(body.unit)!==source.unit)fail('所选试卷不属于当前 Unit');}
     let ids=source?source.ids.slice():body.automatic?this.bank.assemble(body):unique(body.ids||[]);
     if(!Array.isArray(ids)||!ids.length||ids.length>60||ids.some(i=>!this.bank.questions.has(i)))fail('请加入1–60道有效题目');
-    for(const qid of ids){const q=this.bank.questions.get(qid);if(!q.part&&ids.filter(i=>this.bank.questions.get(i).parent===q.parent).length>1)fail('同一原题的整题和专项题不能重复加入');}
+    const {conflict,form}=require('./assembly');for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++)if(conflict(this.bank.questions.get(ids[i]),this.bank.questions.get(ids[j])))fail('同一整题与所属小问、或同一小问的不同分类副本不能重复入卷');
     if(!source)ids=this.bank.order(ids);
-    const p={id:id(),owner:user.id,title:String(body.title||(source?source.title:'OxfordAQA 9630 自选试卷')).slice(0,100),ids,recipients:[],created:now(),ordering:source?'source-paper':'question-type-choice-last',typeCounts:this.bank.typeCounts(ids),...(source?{sourcePaperId:source.id,sourcePaperTitle:source.title,sourceSession:source.session,sourceUnit:source.unit}:{})};
+    const p={id:id(),owner:user.id,title:String(body.title||(source?source.title:'OxfordAQA 9630 自选试卷')).slice(0,100),ids,recipients:[],created:now(),ordering:source?'source-paper':'question-type-choice-last',typeCounts:this.bank.typeCounts(ids),coverage:this.bank.coverage(ids,body.automatic?body:{paperId:'manual'}),structureCounts:{whole:ids.filter(i=>form(this.bank.questions.get(i))==='whole').length,part:ids.filter(i=>form(this.bank.questions.get(i))==='part').length},...(source?{sourcePaperId:source.id,sourcePaperTitle:source.title,sourceSession:source.session,sourceUnit:source.unit}:{})};
     await this.store.save('paper',p.id,user.id,p);return p;
   }
   async paperHidden(uid,key){const h=await this.store.optional('paper-hidden','paper-hidden:'+uid+':'+key);return !!h&&h.hidden!==false;}
@@ -135,9 +253,9 @@ async function exportManifest(bank,record,kind,params,store){
   const q=bank.questions.get(ids[index]),blocks=[],para=(text,size=10)=>{if(text)blocks.push({type:'text',text:String(text),size});};
   const image=im=>{if(!bank.assets[im.id])fail('题图未收录',404);blocks.push({type:'image',url:'cloud-media://'+im.id,width:im.width,height:im.height});};
   const months={'01':'January','06':'June'},session=q.session.slice(0,4)+' '+(months[q.session.slice(4)]||q.session.slice(4)),source='PH0'+q.unit+' / '+session+' / Q'+String(q.number).padStart(2,'0')+(q.part?'.'+q.part:'');
-  para(String(index+1).padStart(2,'0')+'   '+source+'   ['+q.marks+' marks]',12);if(kind!=='questions')para(q.focus);
-  const context=kind!=='answers'&&(q.contextImages||[]).length;
-  const images=kind==='answers'?q.answerImages:(context?q.contextImages:q.questionImages);
+  para(String(index+1).padStart(2,'0')+'   '+source+'   ['+q.marks+' marks]',12);if(kind!=='questions')para(q.focus);if(q.difficulty)para('Difficulty: '+q.difficulty.stars+'/5 (teaching estimate)',9);if((q.subparts||[]).length>1)para(q.subparts.map(p=>'Q'+String(q.number).padStart(2,'0')+'.'+p.part+': '+p.difficulty.stars+'/5').join(' | '),9);
+  const split=Object.hasOwn(q,'sharedContextImages'),context=kind!=='answers'&&split?(q.sharedContextImages||[]).length:kind!=='answers'&&(q.contextImages||[]).length;
+  const images=kind==='answers'?q.answerImages:split?[...(q.sharedContextImages||[]),...q.questionImages]:(context?q.contextImages:q.questionImages);
   if(context)para('Shared context: answer only '+source+'. Original question numbers are retained in the images.',9);
   for(const im of images||[])image(im);
   if(!(images||[]).length&&kind!=='answers')para(q.text);
