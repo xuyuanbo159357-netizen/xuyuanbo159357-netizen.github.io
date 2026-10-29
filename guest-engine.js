@@ -11,6 +11,48 @@ modules['./common']=function(require,module,exports){
  function shuffle(xs){const a=xs.slice();for(let i=a.length-1;i>0;i--){const range=i+1,max=Math.floor(4294967296/range)*range;let x;do{x=crypto.getRandomValues(new Uint32Array(1))[0];}while(x>=max);const j=x%range;[a[i],a[j]]=[a[j],a[i]];}return a;}
  const beijing=t=>new Date((t+28800)*1000).toISOString().slice(0,16).replace('T',' ')+'（北京时间）';
  module.exports={ApiError,fail,id,hash,copy,sum,unique,now,integer,text,shuffle,beijing};};
+modules['./paper-plan']=function(require,module,exports){
+'use strict';
+const {fail,integer,shuffle,sum}=require('./common'),A=require('./assembly');
+const bucket=(bank,q)=>bank.paperType(q)==='choice'?'choice':bank.isConcept(q)?'concept':'written';
+function pool(bank,opts){let rows=bank.filtered({...opts,category:'all',structure:'part'});if(opts.category==='concept')rows=rows.filter(q=>bank.isConcept(q));if(opts.category==='discussion')rows=rows.filter(q=>q.category==='discussion'||q.questionType==='discussion');if(opts.typeCounts){const t=opts.typeCounts;rows=rows.filter(q=>bucket(bank,q)==='choice'?Number(t.choice)>0:bucket(bank,q)==='concept'?Number(t.concept)>0:Number(t.comprehensive)-Number(t.concept)>0);}return rows;}
+function choose(bank,opts){
+ if(!['score-range','count-range','both-ranges'].includes(opts.assemblyMode))fail('请选择三种区间匹配方式之一');
+ const counts=opts.assemblyMode==='score-range'?{min:1,max:40}:A.range(opts.countRange,'题目数量',1,40);
+ const marks=opts.assemblyMode==='count-range'?{min:1,max:300}:A.range(opts.marksRange,'分数',1,300);
+ if(!counts||!marks)fail('请填写当前匹配方式对应的区间');
+ let quotas=null;
+ if(opts.typeCounts!==undefined){const t=opts.typeCounts;if(!t||typeof t!=='object'||Array.isArray(t)||Object.keys(t).some(k=>!['comprehensive','choice','concept'].includes(k)))fail('题型数量设置无效');const comp=integer(t.comprehensive??0,'综合题数量',0,40),choice=integer(t.choice??0,'选择题数量',0,40),concept=integer(t.concept??0,'其中概念题数量',0,40);if(concept>comp)fail('概念考察题数量不能超过综合题数量');if(comp+choice<counts.min||comp+choice>counts.max)fail('两类题型数量合计不在题目数量区间内');quotas={concept,written:comp-concept,choice};}
+ const rows=shuffle(pool(bank,opts)).filter(q=>!quotas||quotas[bucket(bank,q)]>0),mask=(1n<<BigInt(marks.max+1))-1n;
+ const reachable=(xs,n)=>{const dp=Array(n+1).fill(0n);dp[0]=1n;for(const q of xs)for(let k=n;k>0;k--)dp[k]|=(dp[k-1]<<BigInt(q.marks))&mask;return dp;};
+ const dp=reachable(rows,counts.max);let typeBits=mask;
+ if(quotas){typeBits=1n;for(const [k,n]of Object.entries(quotas)){const bits=reachable(rows.filter(q=>bucket(bank,q)===k),n)[n];let joined=0n;for(let s=0;s<=marks.max;s++)if((typeBits>>BigInt(s))&1n)joined|=bits<<BigInt(s);typeBits=joined&mask;}}
+ const cases=[];for(let n=counts.min;n<=counts.max;n++){if(quotas&&sum(Object.values(quotas))!==n)continue;const bits=dp[n]&typeBits;for(let s=marks.min;s<=marks.max;s++)if((bits>>BigInt(s))&1n)cases.push({n,s});}
+ if(!cases.length)fail('当前知识点、难度、题型与区间没有可用组合，请调整设置',409);
+ const scope=new Set(Array.isArray(opts.topics)&&opts.topics.length?opts.topics:rows.flatMap(q=>q.topics||[])),deadline=Date.now()+2500;
+ const gain=(q,covered)=>(q.topics||[]).filter(t=>scope.has(t)&&!covered.has(t)).length;
+ for(const target of shuffle(cases)){
+  const selected=[],left=quotas?{...quotas}:null,last=new Map(),pos=new Map(rows.map((q,i)=>[q.id,i]));let visits=0;
+  function search(n,score){if(!n)return score===0?selected.map(q=>q.id):null;if(++visits%128===0&&Date.now()>deadline)fail('组合搜索尚未完成，请缩小区间后重试',409,{reason:'search-timeout'});
+   const free=rows.filter(q=>(!left||left[bucket(bank,q)]>0)&&q.marks<=score&&pos.get(q.id)>(last.get(bucket(bank,q))??-1)&&!selected.some(p=>A.conflict(p,q)));
+   if(free.length<n)return null;const ms=free.map(q=>q.marks).sort((a,b)=>a-b);if(sum(ms.slice(0,n))>score||sum(ms.slice(-n))<score)return null;
+   // Canonical independent subparts have no overlap after de-duplication.
+   // Exact residual reachability avoids exponential retries near score limits.
+   let attainable;
+   if(!left)attainable=reachable(free,n)[n];else{attainable=1n;for(const [k,want]of Object.entries(left)){const bits=reachable(free.filter(q=>bucket(bank,q)===k),want)[want];let joined=0n;for(let s=0;s<=score;s++)if((attainable>>BigInt(s))&1n)joined|=bits<<BigInt(s);attainable=joined&mask;}}
+   if(!((attainable>>BigInt(score))&1n))return null;
+   let candidates=free;
+   if(left){let ratio=Infinity,lo=0,hi=0;for(const [k,want]of Object.entries(left))if(want){const xs=free.filter(q=>bucket(bank,q)===k),m=xs.map(q=>q.marks).sort((a,b)=>a-b);if(xs.length<want)return null;lo+=sum(m.slice(0,want));hi+=sum(m.slice(-want));if(xs.length/want<ratio){ratio=xs.length/want;candidates=xs;}}if(score<lo||score>hi)return null;}
+   const covered=new Set(selected.flatMap(q=>q.topics||[]));candidates.sort((a,b)=>gain(b,covered)-gain(a,covered)||Math.abs(a.marks-score/n)-Math.abs(b.marks-score/n));
+   for(const q of candidates){const k=bucket(bank,q),old=last.get(k);last.set(k,pos.get(q.id));if(left)left[k]--;selected.push(q);const result=search(n-1,score-q.marks);selected.pop();if(left)left[k]++;if(old===undefined)last.delete(k);else last.set(k,old);if(result)return result;}return null;
+  }
+  const result=search(target.n,target.s);if(result)return result;if(Date.now()>deadline)break;
+ }
+ fail('排除整题与所属小问重复后，暂未找到符合全部区间的组合，请调整条件',409);
+}
+module.exports={choose,pool,bucket};
+
+};
 modules['./assembly']=function(require,module,exports){
 'use strict';
 const {fail,integer,shuffle,sum}=require('./common');
@@ -42,7 +84,7 @@ function improve(bank,ids,pool,opts){
 function coverageSummary(bank,ids,opts={}){
  const selected=ids.map(id=>bank.questions.get(id)),unit=opts.unit||selected[0]?.unit||1;
  let pool;
- if(opts.automatic||!opts.paperId&&!opts.sourcePaperId&&opts.category){
+ if(opts.assemblyProtocol==='range-v2')pool=bank.planningPool(opts);else if(opts.automatic||!opts.paperId&&!opts.sourcePaperId&&opts.category){
   const effective=opts.structure||(opts.category==='normal'?'whole':'part');const whole=opts.structureRanges?.whole?.max??opts.structureCounts?.whole??(effective==='whole'?40:0),part=opts.structureRanges?.part?.max??opts.structureCounts?.part??(effective==='whole'?0:40);
   pool=bank.filtered({...opts,unit,structure:opts.structureCounts||opts.structureRanges?'all':opts.structure,category:opts.typeCounts||whole?'all':opts.category}).filter(q=>(form(q)==='whole'?whole>0:part>0)&&(!opts.typeCounts||Number(opts.typeCounts[bank.questionType(q)]||0)>0));
  }else pool=selected;
@@ -135,16 +177,19 @@ const {fail,integer,shuffle,sum,unique,copy}=require('./common');
 const Assembly=require('./assembly');
 const TYPES={short:['简答题',0],process:['综合 / 过程题',1],discussion:['论述题',2],choice:['选择题',3]};
 class Bank{
-  constructor(folder=path.join(__dirname,'../resources')){this.folder=folder;this.catalog=require(path.join(folder,'catalog.json'));this.questions=new Map(require(path.join(folder,'questions.json')).map(q=>[q.id,q]));this.assets=require(path.join(folder,'assets.json'));this.wordCache=new Map();}
+  constructor(folder=path.join(__dirname,'../resources')){this.folder=folder;this.catalog=require(path.join(folder,'catalog.json'));this.questions=new Map(require(path.join(folder,'questions.json')).map(q=>[q.id,q]));this.assets=require(path.join(folder,'assets.json'));this.wordCache=new Map();this.imageLayout=require(path.join(folder,'image-layout.json'));}
   questionType(q){return q.questionType||(q.answerMode==='choice'?'choice':q.category==='discussion'?'discussion':q.answerMode==='short'?'short':'process');}
-  order(ids){return ids.map((id,index)=>({id,index,rank:TYPES[this.questionType(this.questions.get(id))][1]})).sort((a,b)=>a.rank-b.rank||a.index-b.index).map(x=>x.id);}
-  typeCounts(ids){const c={short:0,process:0,discussion:0,choice:0};for(const id of ids)c[this.questionType(this.questions.get(id))]++;return c;}
-  typeSummary(ids){return Object.entries(this.typeCounts(ids)).filter(([,n])=>n).map(([id,count])=>({id,label:TYPES[id][0],count}));}
+  paperType(q){return q.answerMode==='choice'?'choice':'comprehensive';}
+  isConcept(q){if(!this.conceptKeys)this.conceptKeys=new Set([...this.questions.values()].filter(q=>q.category==='concept').map(q=>q.parent+':'+(q.part||'')));return this.paperType(q)!=='choice'&&this.conceptKeys.has(q.parent+':'+(q.part||''));}
+  planningPool(opts){return require('./paper-plan').pool(this,opts);}
+  order(ids){return ids.map((id,index)=>({id,index,rank:this.paperType(this.questions.get(id))==='choice'?1:0})).sort((a,b)=>a.rank-b.rank||a.index-b.index).map(x=>x.id);}
+  typeCounts(ids){const c={comprehensive:0,choice:0,concept:0};for(const id of ids){const q=this.questions.get(id);c[this.paperType(q)]++;if(this.isConcept(q))c.concept++;}return c;}
+  typeSummary(ids){const c=this.typeCounts(ids);return [{id:'comprehensive',label:'综合题'+(c.concept?'（含概念考察 '+c.concept+' 道）':''),count:c.comprehensive},{id:'choice',label:'选择题',count:c.choice}].filter(x=>x.count);}
   filtered(opts){const unit=integer(opts.unit||1,'Unit',1,4),category=opts.category||'normal';const topics=Array.isArray(opts.topics)?opts.topics:String(opts.topics||'').split(',').filter(Boolean);const term=String(opts.search||'').toLowerCase(),levels=Assembly.levels(opts.difficulties);const structure=opts.structure||(category==='normal'?'whole':'part');if(!['whole','part','all'].includes(structure))fail('题目拆分方式无效');const result=[...this.questions.values()].filter(q=>q.unit===unit&&(category==='all'||q.category===category)&&(structure==='all'||Assembly.form(q)===structure)&&(!levels.length||levels.includes(q.difficulty?.stars))&&(!topics.length||q.topics.some(t=>topics.includes(t)))&&(!term||(q.source+' '+q.text+' '+q.focus).toLowerCase().includes(term)));if(category!=='all')return result;const seen=new Set();return result.sort((a,b)=>Number(b.category==='normal')-Number(a.category==='normal')).filter(q=>{const k=Assembly.key(q);if(seen.has(k))return false;seen.add(k);return true;});}
-  public(q,answers=false){const r=copy(q);delete r.sourceNote;delete r.sourceSha256;if(!answers){delete r.correct;delete r.answerImages;delete r.explanation;}r.questionType=this.questionType(q);r.questionTypeLabel=TYPES[r.questionType][0];for(const field of ['questionImages','answerImages','contextImages','sharedContextImages'])if(r[field])r[field]=r[field].map(im=>({...im,url:'cloud-media://'+im.id}));return r;}
+  public(q,answers=false){const r=copy(q);delete r.sourceNote;delete r.sourceSha256;if(!answers){delete r.correct;delete r.answerImages;delete r.explanation;}r.questionType=this.paperType(q);r.isConcept=this.isConcept(q);r.questionTypeLabel=r.questionType==='choice'?'选择题':'综合题'+(r.isConcept?' · 概念考察':'');for(const field of ['questionImages','answerImages','contextImages','sharedContextImages'])if(r[field])r[field]=r[field].map(im=>({...im,url:'cloud-media://'+im.id}));return r;}
   select(opts,used=[]){const excluded=new Set(used),pool=shuffle(this.filtered(opts).filter(q=>!excluded.has(q.id)));if(!pool.length)fail('所选范围已无未出题目，请更换范围或开始新一轮');if(pool.length<10&&!opts.allowPartial)fail('当前范围仅剩 '+pool.length+' 道未出题目，是否开始？',409,{remaining:pool.length});const selected=Assembly.spread(pool,Math.min(10,pool.length),opts);if(selected.length<10&&!opts.allowPartial)fail('排除重复原题后仅剩 '+selected.length+' 道可用题目',409,{remaining:selected.length});return selected.map(q=>q.id);}
   coverage(ids,opts={}){return Assembly.coverageSummary(this,ids,opts);}
-  assemble(opts){if(opts.assemblyMode&&opts.assemblyMode!=='exact')return Assembly.flexible(this,opts);if(opts.structureCounts!==undefined)return Assembly.assemble(this,opts);if(opts.typeCounts!==undefined)return this.assembleTypes(opts);const count=integer(opts.count||10,'题数',1,40),target=integer(opts.marks||0,'总分',1,300),pool=shuffle(this.filtered(opts));if(pool.length<count)fail('所选范围题目不足');const states=Array.from({length:count+1},()=>new Map());states[0].set(0,[]);for(const q of pool){for(let n=count;n>0;n--)for(const [score,ids] of [...states[n-1]]){const next=score+q.marks;if(next<=target&&!states[n].has(next))states[n].set(next,ids.concat(q.id));}if(states[count].has(target))return states[count].get(target);}fail('题量和总分无法同时满足，请调整设置',409,{possibleMarks:[...states[count].keys()].sort((a,b)=>Math.abs(a-target)-Math.abs(b-target)).slice(0,5)});}
+  assemble(opts){if(opts.assemblyProtocol==='range-v2')return require('./paper-plan').choose(this,opts);if(opts.assemblyMode&&opts.assemblyMode!=='exact')return Assembly.flexible(this,opts);if(opts.structureCounts!==undefined)return Assembly.assemble(this,opts);if(opts.typeCounts!==undefined)return this.assembleTypes(opts);const count=integer(opts.count||10,'题数',1,40),target=integer(opts.marks||0,'总分',1,300),pool=shuffle(this.filtered(opts));if(pool.length<count)fail('所选范围题目不足');const states=Array.from({length:count+1},()=>new Map());states[0].set(0,[]);for(const q of pool){for(let n=count;n>0;n--)for(const [score,ids] of [...states[n-1]]){const next=score+q.marks;if(next<=target&&!states[n].has(next))states[n].set(next,ids.concat(q.id));}if(states[count].has(target))return states[count].get(target);}fail('题量和总分无法同时满足，请调整设置',409,{possibleMarks:[...states[count].keys()].sort((a,b)=>Math.abs(a-target)-Math.abs(b-target)).slice(0,5)});}
   assembleTypes(opts){
     const raw=opts.typeCounts;if(!raw||typeof raw!=='object'||Array.isArray(raw)||Object.keys(raw).some(k=>!TYPES[k]))fail('题型数量设置无效');
     const counts=Object.fromEntries(Object.keys(TYPES).map(k=>[k,integer(raw[k]===undefined?0:raw[k],TYPES[k][0]+'数量',0,40)]));const count=sum(Object.values(counts));if(count<1||count>40)fail('各题型数量合计需为1–40道');if(opts.count!==undefined&&integer(opts.count,'题数',1,40)!==count)fail('总题量与题型数量之和不一致');const target=integer(opts.marks,'总分',1,300);
@@ -248,13 +293,15 @@ async function exportManifest(bank,record,kind,params,store){
   if(!ids.length)fail('没有可导出的题目');
   const version=hash(JSON.stringify([record.title,ids,record.answers||{},record.grades||{},record.status||'']));
   if(params.version&&params.version!==version)fail('试卷或作答已更新，请重新生成 PDF',409);
-  if(params.item===undefined)return {protocol:'device-pdf-v1',version,kind,title:record.title,label:LABELS[kind],count:ids.length,units:[...new Set(ids.map(i=>bank.questions.get(i).unit))],marks:ids.reduce((n,i)=>n+bank.questions.get(i).marks,0)};
+  const pick=q=>kind==='answers'?q.answerImages:Object.hasOwn(q,'sharedContextImages')?[...(q.sharedContextImages||[]),...q.questionImages]:(q.contextImages?.length?q.contextImages:q.questionImages);
+  let bodyFontPoints=10.5;for(const id of ids){const q=bank.questions.get(id);for(const im of [...pick(q),...(kind==='analysis'?q.answerImages:[])]){const l=bank.imageLayout?.[im.id];if(l)bodyFontPoints=Math.min(bodyFontPoints,515*l.fontPixels/l.width);}}
+  if(params.item===undefined)return {protocol:'device-pdf-v1',version,kind,title:record.title,label:LABELS[kind],bodyFontPoints,count:ids.length,units:[...new Set(ids.map(i=>bank.questions.get(i).unit))],marks:ids.reduce((n,i)=>n+bank.questions.get(i).marks,0)};
   const index=Number(params.item);if(!Number.isSafeInteger(index)||index<0||index>=ids.length)fail('导出题目位置无效');
   if(!params.version)fail('请先读取导出清单');
   const q=bank.questions.get(ids[index]),blocks=[],para=(text,size=10)=>{if(text)blocks.push({type:'text',text:String(text),size});};
-  const image=im=>{if(!bank.assets[im.id])fail('题图未收录',404);blocks.push({type:'image',url:'cloud-media://'+im.id,width:im.width,height:im.height});};
+  const image=im=>{if(!bank.assets[im.id])fail('题图未收录',404);blocks.push({type:'image',url:'cloud-media://'+im.id,width:im.width,height:im.height,layout:bank.imageLayout?.[im.id]||null});};
   const months={'01':'January','06':'June'},session=q.session.slice(0,4)+' '+(months[q.session.slice(4)]||q.session.slice(4)),source='PH0'+q.unit+' / '+session+' / Q'+String(q.number).padStart(2,'0')+(q.part?'.'+q.part:'');
-  para(String(index+1).padStart(2,'0')+'   '+source+'   ['+q.marks+' marks]',12);if(kind!=='questions')para(q.focus);if(q.difficulty)para('Difficulty: '+q.difficulty.stars+'/5 (teaching estimate)',9);if((q.subparts||[]).length>1)para(q.subparts.map(p=>'Q'+String(q.number).padStart(2,'0')+'.'+p.part+': '+p.difficulty.stars+'/5').join(' | '),9);
+  para(String(index+1).padStart(2,'0')+'   '+source+'   ['+q.marks+(q.marks===1?' mark]':' marks]'),12);if(kind!=='questions')para(q.focus);if(q.difficulty)para('Difficulty: '+q.difficulty.stars+'/5 (teaching estimate)',9);if((q.subparts||[]).length>1)para(q.subparts.map(p=>'Q'+String(q.number).padStart(2,'0')+'.'+p.part+': '+p.difficulty.stars+'/5').join(' | '),9);
   const split=Object.hasOwn(q,'sharedContextImages'),context=kind!=='answers'&&split?(q.sharedContextImages||[]).length:kind!=='answers'&&(q.contextImages||[]).length;
   const images=kind==='answers'?q.answerImages:split?[...(q.sharedContextImages||[]),...q.questionImages]:(context?q.contextImages:q.questionImages);
   if(context)para('Shared context: answer only '+source+'. Original question numbers are retained in the images.',9);

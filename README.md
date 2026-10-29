@@ -10,8 +10,10 @@ Only public website assets are included. No backend, account records, uploads, o
 
 All 2,891 formal-paper subparts have 1–5 star teaching estimates based on calculation, reasoning and linked concepts. Whole-question stars reflect the hardest constituent subpart; detailed subpart stars remain visible. These estimates are not official difficulty statistics.
 
-Assembly supports multi-select difficulty, separately specified whole-question and subpart counts, optional type quotas, exact target marks and source-overlap checks. Existing question IDs and browser-local records are preserved.
+Automatic assembly offers three matching modes: a marks interval with automatic question counts, a question-count interval with automatic marks, or both intervals together. There is no separate fixed total or whole/subpart count setting. Random assembly uses canonical independent subparts, while manual and past-paper assembly preserve whole questions when selected.
 
-Automatic assembly also supports count and score intervals, fixed counts with automatically matched total marks, and fixed total marks with automatically matched counts. Every configured interval and quota is enforced. New subpart and context images use pixel-verified lossless compression; Word exports embed converted PNGs for compatibility.
+The two main types are comprehensive and multiple choice. Optional type quotas include a concept-assessment count within comprehensive questions, never added again to the total. Difficulty, knowledge scope, intervals and configured quotas are enforced. Selection prioritizes uncovered knowledge topics.
 
-Manual selection shows live type totals and a removable preview. When a whole question overlaps its specialist/subpart copies, the whole question takes precedence and is counted only once. Automatic selection prioritizes uncovered knowledge topics, followed by a constraint-preserving coverage improvement pass.
+Manual selection shows live type totals and a removable preview. When a whole question overlaps its specialist/subpart copies, the whole question takes precedence and is counted only once. Comprehensive questions precede multiple-choice questions.
+
+PDF and Word exports use source-derived common body-text scaling, trim irrelevant outer vertical whitespace and allow multiple short questions on a page. Long content splits at whitespace where possible without shrinking its text. Word embeds PNGs for compatibility. Original source question images and existing browser-local records are preserved.
