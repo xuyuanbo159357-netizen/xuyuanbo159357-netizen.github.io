@@ -18,11 +18,12 @@ const bucket=(bank,q)=>bank.paperType(q)==='choice'?'choice':bank.isConcept(q)?'
 function pool(bank,opts){let rows=bank.filtered({...opts,category:'all',structure:'part'});if(opts.category==='concept')rows=rows.filter(q=>bank.isConcept(q));if(opts.category==='discussion')rows=rows.filter(q=>q.category==='discussion'||q.questionType==='discussion');if(opts.typeCounts){const t=opts.typeCounts;rows=rows.filter(q=>bucket(bank,q)==='choice'?Number(t.choice)>0:bucket(bank,q)==='concept'?Number(t.concept)>0:Number(t.comprehensive)-Number(t.concept)>0);}return rows;}
 function choose(bank,opts){
  if(!['score-range','count-range','both-ranges'].includes(opts.assemblyMode))fail('请选择三种区间匹配方式之一');
- const counts=opts.assemblyMode==='score-range'?{min:1,max:40}:A.range(opts.countRange,'题目数量',1,40);
  const marks=opts.assemblyMode==='count-range'?{min:1,max:300}:A.range(opts.marksRange,'分数',1,300);
- if(!counts||!marks)fail('请填写当前匹配方式对应的区间');
  let quotas=null;
- if(opts.typeCounts!==undefined){const t=opts.typeCounts;if(!t||typeof t!=='object'||Array.isArray(t)||Object.keys(t).some(k=>!['comprehensive','choice','concept'].includes(k)))fail('题型数量设置无效');const comp=integer(t.comprehensive??0,'综合题数量',0,40),choice=integer(t.choice??0,'选择题数量',0,40),concept=integer(t.concept??0,'其中概念题数量',0,40);if(concept>comp)fail('概念考察题数量不能超过综合题数量');if(comp+choice<counts.min||comp+choice>counts.max)fail('两类题型数量合计不在题目数量区间内');quotas={concept,written:comp-concept,choice};}
+ if(opts.typeCounts!==undefined){const t=opts.typeCounts;if(!t||typeof t!=='object'||Array.isArray(t)||Object.keys(t).some(k=>!['comprehensive','choice','concept'].includes(k)))fail('题型数量设置无效');const comp=integer(t.comprehensive??0,'综合题数量',0,40),choice=integer(t.choice??0,'选择题数量',0,40),concept=integer(t.concept??0,'其中概念题数量',0,40);if(concept>comp)fail('概念考察题数量不能超过综合题数量');if(comp+choice<1||comp+choice>40)fail('综合题与选择题合计需为 1–40 道');quotas={concept,written:comp-concept,choice};}
+ const total=quotas?sum(Object.values(quotas)):null;
+ const counts=quotas?{min:total,max:total}:opts.assemblyMode==='score-range'?{min:1,max:40}:A.range(opts.countRange,'题目数量',1,40);
+ if(!counts||!marks)fail('请填写当前匹配方式对应的区间');
  const rows=shuffle(pool(bank,opts)).filter(q=>!quotas||quotas[bucket(bank,q)]>0),mask=(1n<<BigInt(marks.max+1))-1n;
  const reachable=(xs,n)=>{const dp=Array(n+1).fill(0n);dp[0]=1n;for(const q of xs)for(let k=n;k>0;k--)dp[k]|=(dp[k-1]<<BigInt(q.marks))&mask;return dp;};
  const dp=reachable(rows,counts.max);let typeBits=mask;

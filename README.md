@@ -12,7 +12,7 @@ All 2,891 formal-paper subparts have 1–5 star teaching estimates based on calc
 
 Automatic assembly offers three matching modes: a marks interval with automatic question counts, a question-count interval with automatic marks, or both intervals together. There is no separate fixed total or whole/subpart count setting. Random assembly uses canonical independent subparts, while manual and past-paper assembly preserve whole questions when selected.
 
-The two main types are comprehensive and multiple choice. Optional type quotas include a concept-assessment count within comprehensive questions, never added again to the total. Difficulty, knowledge scope, intervals and configured quotas are enforced. Selection prioritizes uncovered knowledge topics.
+The two main types are comprehensive and multiple choice. Optional type quotas include a concept-assessment count within comprehensive questions, never added again to the total. When type quotas are enabled, their sum determines the exact paper length and supersedes any prior count interval; the applicable marks interval still applies. Difficulty, knowledge scope and configured quotas are enforced. Selection prioritizes uncovered knowledge topics.
 
 Manual selection shows live type totals and a removable preview. When a whole question overlaps its specialist/subpart copies, the whole question takes precedence and is counted only once. Comprehensive questions precede multiple-choice questions.
 
