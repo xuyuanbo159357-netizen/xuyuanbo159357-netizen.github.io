@@ -1,7 +1,277 @@
 <!DOCTYPE html>
 
-<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.13.1 转动运动学、转动惯量与角动量 / Rotational motion · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U4/02 知识节点/3.13 能源</div><h1 id="h-db1fad2cc5e5563850">3.13.1 转动运动学、转动惯量与角动量 / Rotational motion</h1>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.13.1 转动运动学、转动惯量与角动量 / Rotational motion · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class="physics-knowledge"><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U4/02 知识节点/3.13 能源</div><h1 id="h-db1fad2cc5e5563850">3.13.1 转动运动学、转动惯量与角动量 / Rotational motion</h1>
 <p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/488bd8ffc40e60bb38.html">3.13.1</a>　｜　<a class="internal-link" href="/notes/b10222e15f0fcc973d.html">本单元知识谱系</a></p>
+<h2 id="h-9b72ef987b2ceff699">知识逐项讲解 / Concept-by-concept guide</h2>
+<h3 class="concept-name" id="h-bb11869c4b58e6addf"><strong><a class="internal-link" href="/notes/c8b4f5ceb753c95d2a.html">angular displacement — 角位移</a></strong></h3>
+<p><strong>Definition / 定义</strong></p>
+<section class="transclusion concept-definition"><a class="transclusion-source" href="/notes/c8b4f5ceb753c95d2a.html#h-485f2ec53559b6043e">↗ angular displacement — 角位移</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The angle through which an object rotates about an axis.</p>
+<p><strong>中文：</strong> 物体绕轴转过的角度。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p><strong>Formula / 公式</strong></p>
+<div class="math block">
+\[\Large\displaystyle \theta=\frac{s_{\mathrm{arc}}}{r}\]
+</div>
+<p><strong>Symbols and SI units / 符号与 SI 单位</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\theta\)</span></td>
+<td>角位移 / angular displacement</td>
+<td><span class="math inline">\(\mathrm{rad}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(s_{\mathrm{arc}}\)</span></td>
+<td>有向弧长 / directed arc length</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>转动半径 / rotation radius</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 class="concept-name" id="h-240557ce6ad8c15eba"><strong><a class="internal-link" href="/notes/4c144db15fb0191537.html">angular velocity — 角速度</a></strong></h3>
+<p><strong>Definition / 定义</strong></p>
+<section class="transclusion concept-definition"><a class="transclusion-source" href="/notes/4c144db15fb0191537.html#h-485f2ec53559b6043e">↗ angular velocity — 角速度</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The rate of change of angular displacement, including the sense of rotation.</p>
+<p><strong>中文：</strong> 角位移的变化率，含转动方向。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p><strong>Formula / 公式</strong></p>
+<div class="math block">
+\[\Large\displaystyle \bar\omega=\frac{\Delta\theta}{\Delta t}\]
+</div>
+<p><strong>Symbols and SI units / 符号与 SI 单位</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\bar\omega\)</span></td>
+<td>平均角速度 / average angular velocity</td>
+<td><span class="math inline">\(\mathrm{rad\,s^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta\theta\)</span></td>
+<td>角位移变化 / change in angular displacement</td>
+<td><span class="math inline">\(\mathrm{rad}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta t\)</span></td>
+<td>时间间隔 / time interval</td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conditions / 条件与说明：</strong> 瞬时角速度为角位移—时间图像的切线斜率；正负号表示转动方向。 / Instantaneous angular velocity is the tangent gradient of angular displacement against time; the sign gives the sense of rotation.</p>
+<h3 class="concept-name" id="h-a90b37a7354605cd91"><strong><a class="internal-link" href="/notes/1f8d060b8bd69f8db7.html">angular acceleration — 角加速度</a></strong></h3>
+<p><strong>Definition / 定义</strong></p>
+<section class="transclusion concept-definition"><a class="transclusion-source" href="/notes/1f8d060b8bd69f8db7.html#h-485f2ec53559b6043e">↗ angular acceleration — 角加速度</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The rate of change of angular velocity.</p>
+<p><strong>中文：</strong> 角速度的变化率。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p><strong>Formula / 公式</strong></p>
+<div class="math block">
+\[\Large\displaystyle \bar\alpha=\frac{\omega-\omega_0}{\Delta t}\]
+</div>
+<p><strong>Symbols and SI units / 符号与 SI 单位</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\bar\alpha\)</span></td>
+<td>平均角加速度 / average angular acceleration</td>
+<td><span class="math inline">\(\mathrm{rad\,s^{-2}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\omega_0,\omega\)</span></td>
+<td>初、末角速度 / initial and final angular velocities</td>
+<td><span class="math inline">\(\mathrm{rad\,s^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta t\)</span></td>
+<td>时间间隔 / time interval</td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 class="concept-name" id="h-892b5ffd07cf6dc16f"><strong><a class="internal-link" href="/notes/020238f853f239ddbe.html">moment of inertia — 转动惯量</a></strong></h3>
+<p><strong>Definition / 定义</strong></p>
+<section class="transclusion concept-definition"><a class="transclusion-source" href="/notes/020238f853f239ddbe.html#h-485f2ec53559b6043e">↗ moment of inertia — 转动惯量</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The sum of each mass element multiplied by the square of its perpendicular distance from the rotation axis.</p>
+<p><strong>中文：</strong> 各质量元乘其到转轴垂直距离平方之和。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p><strong>Formula / 公式</strong></p>
+<div class="math block">
+\[\Large\displaystyle I=\sum_i m_ir_i^2\]
+</div>
+<p><strong>Symbols and SI units / 符号与 SI 单位</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(I\)</span></td>
+<td>相对指定轴的转动惯量 / moment of inertia about specified axis</td>
+<td><span class="math inline">\(\mathrm{kg\,m^2}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(m_i\)</span></td>
+<td>第 i 个质点的质量 / mass of particle i</td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(r_i\)</span></td>
+<td>质点到转轴的垂直距离 / perpendicular distance from axis</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 class="concept-name" id="h-0bb154dda1fd060b65"><strong><a class="internal-link" href="/notes/b892aaea135ec115f8.html">torque — 转矩</a></strong></h3>
+<p><strong>Definition / 定义</strong></p>
+<section class="transclusion concept-definition"><a class="transclusion-source" href="/notes/b892aaea135ec115f8.html#h-485f2ec53559b6043e">↗ torque — 转矩</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The turning effect of a force, equal to force times the perpendicular distance of its line of action from the axis.</p>
+<p><strong>中文：</strong> 力的转动作用，等于力乘力的作用线到轴的垂直距离。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p><strong>Formula / 公式</strong></p>
+<div class="math block">
+\[\Large\displaystyle \tau=Fr_{\perp}\]
+</div>
+<p><strong>Symbols and SI units / 符号与 SI 单位</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\tau\)</span></td>
+<td>转矩 / torque</td>
+<td><span class="math inline">\(\mathrm{N\,m}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(F\)</span></td>
+<td>力大小 / force magnitude</td>
+<td><span class="math inline">\(\mathrm{N}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(r_{\perp}\)</span></td>
+<td>转轴到力作用线的垂直距离 / perpendicular lever arm</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 class="concept-name" id="h-7be3ecf141d7ee1c9b"><strong><a class="internal-link" href="/notes/4db3bcb65cc1a6e893.html">angular momentum — 角动量</a></strong></h3>
+<p><strong>Definition / 定义</strong></p>
+<section class="transclusion concept-definition"><a class="transclusion-source" href="/notes/4db3bcb65cc1a6e893.html#h-485f2ec53559b6043e">↗ angular momentum — 角动量</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
+<p><strong>English:</strong> The product of moment of inertia and angular velocity for rotation about a fixed axis.</p>
+<p><strong>中文：</strong> 绕固定轴转动时，转动惯量与角速度之积。</p>
+<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
+</section>
+<p><strong>Formula / 公式</strong></p>
+<div class="math block">
+\[\Large\displaystyle L=I\omega\]
+</div>
+<p><strong>Symbols and SI units / 符号与 SI 单位</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(L\)</span></td>
+<td>角动量 / angular momentum</td>
+<td><span class="math inline">\(\mathrm{kg\,m^2\,s^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I\)</span></td>
+<td>相对该轴的转动惯量 / moment of inertia about the axis</td>
+<td><span class="math inline">\(\mathrm{kg\,m^2}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\omega\)</span></td>
+<td>角速度 / angular velocity</td>
+<td><span class="math inline">\(\mathrm{rad\,s^{-1}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conditions / 条件与说明：</strong> 用于本节绕固定轴转动的模型。 / For the fixed-axis rotation model in this section.</p>
+<p>定义按考纲与指定教材概括；本页未列出可直接对应的定义题评分条目。 Definitions are summarised from the specification and textbook; no directly matched definition-item citation is claimed here.</p>
+<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
+<p><strong>Conditions / 适用条件：</strong> 各量相对同一转轴；转动运动方程取恒角加速度。Στ=Iα 取固定轴且 I 不变；W=τθ 取恒转矩。 / Use the same axis throughout; kinematics assumes constant angular acceleration. Στ=Iα requires fixed axis and constant I, and W=τθ requires constant torque.</p>
+<div class="math block">
+\[\Large\displaystyle I=mr^2\]
+</div>
+<div class="math block">
+\[\Large\displaystyle I=\sum m_ir_i^2\]
+</div>
+<div class="math block">
+\[\Large\displaystyle \omega=\omega_0+\alpha t\]
+</div>
+<div class="math block">
+\[\Large\displaystyle \theta=\frac{(\omega_0+\omega)t}{2}\]
+</div>
+<div class="math block">
+\[\Large\displaystyle \theta=\omega_0t+\frac12\alpha t^2\]
+</div>
+<div class="math block">
+\[\Large\displaystyle \omega^2=\omega_0^2+2\alpha\theta\]
+</div>
+<div class="math block">
+\[\Large\displaystyle \tau=Fr_\perp\]
+</div>
+<div class="math block">
+\[\Large\displaystyle \sum\tau=I\alpha\]
+</div>
+<div class="math block">
+\[\Large\displaystyle L=I\omega\]
+</div>
+<div class="math block">
+\[\Large\displaystyle E_{k,\rm rot}=\frac12I\omega^2\]
+</div>
+<div class="math block">
+\[\Large\displaystyle W=\tau\theta\]
+</div>
+<div class="math block">
+\[\Large\displaystyle P=\tau\omega\]
+</div>
 <h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
 <p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
 <table>
@@ -106,52 +376,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="h-e373911868e35fc356">Concept / 概念</h2>
-<ul>
-<li><a class="internal-link" href="/notes/c8b4f5ceb753c95d2a.html">angular displacement — 角位移</a></li>
-<li><a class="internal-link" href="/notes/4c144db15fb0191537.html">angular velocity — 角速度</a></li>
-<li><a class="internal-link" href="/notes/1f8d060b8bd69f8db7.html">angular acceleration — 角加速度</a></li>
-<li><a class="internal-link" href="/notes/020238f853f239ddbe.html">moment of inertia — 转动惯量</a></li>
-<li><a class="internal-link" href="/notes/b892aaea135ec115f8.html">torque — 转矩</a></li>
-<li><a class="internal-link" href="/notes/4db3bcb65cc1a6e893.html">angular momentum — 角动量</a></li>
-</ul>
-<h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
-<section class="transclusion"><a class="transclusion-source" href="/notes/c8b4f5ceb753c95d2a.html#h-485f2ec53559b6043e">↗ angular displacement — 角位移</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
-<p><strong>English:</strong> The angle through which an object rotates about an axis.</p>
-<p><strong>中文：</strong> 物体绕轴转过的角度。</p>
-<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
-</section>
-<section class="transclusion"><a class="transclusion-source" href="/notes/4c144db15fb0191537.html#h-485f2ec53559b6043e">↗ angular velocity — 角速度</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
-<p><strong>English:</strong> The rate of change of angular displacement, including the sense of rotation.</p>
-<p><strong>中文：</strong> 角位移的变化率，含转动方向。</p>
-<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
-</section>
-<section class="transclusion"><a class="transclusion-source" href="/notes/1f8d060b8bd69f8db7.html#h-485f2ec53559b6043e">↗ angular acceleration — 角加速度</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
-<p><strong>English:</strong> The rate of change of angular velocity.</p>
-<p><strong>中文：</strong> 角速度的变化率。</p>
-<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
-</section>
-<section class="transclusion"><a class="transclusion-source" href="/notes/020238f853f239ddbe.html#h-485f2ec53559b6043e">↗ moment of inertia — 转动惯量</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
-<p><strong>English:</strong> The sum of each mass element multiplied by the square of its perpendicular distance from the rotation axis.</p>
-<p><strong>中文：</strong> 各质量元乘其到转轴垂直距离平方之和。</p>
-<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
-</section>
-<section class="transclusion"><a class="transclusion-source" href="/notes/b892aaea135ec115f8.html#h-485f2ec53559b6043e">↗ torque — 转矩</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
-<p><strong>English:</strong> The turning effect of a force, equal to force times the perpendicular distance of its line of action from the axis.</p>
-<p><strong>中文：</strong> 力的转动作用，等于力乘力的作用线到轴的垂直距离。</p>
-<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
-</section>
-<section class="transclusion"><a class="transclusion-source" href="/notes/4db3bcb65cc1a6e893.html#h-485f2ec53559b6043e">↗ angular momentum — 角动量</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
-<p><strong>English:</strong> The product of moment of inertia and angular velocity for rotation about a fixed axis.</p>
-<p><strong>中文：</strong> 绕固定轴转动时，转动惯量与角速度之积。</p>
-<p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
-</section>
-<p>定义按考纲与指定教材概括；本页未列出可直接对应的定义题评分条目。 Definitions are summarised from the specification and textbook; no directly matched definition-item citation is claimed here.</p>
-<h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
-<p><span class="math inline">\(I=mr^2\)</span>（点质量 / point mass），<span class="math inline">\(I=\sum m_ir_i^2\)</span>（分布物体 / extended body）。</p>
-<p>恒角加速度 / Constant angular acceleration：<span class="math inline">\(\omega=\omega_0+\alpha t\)</span>，<span class="math inline">\(\theta=(\omega_0+\omega)t/2\)</span>，<span class="math inline">\(\theta=\omega_0t+\alpha t^2/2\)</span>，<span class="math inline">\(\omega^2=\omega_0^2+2\alpha\theta\)</span>。</p>
-<p><span class="math inline">\(\tau=Fr_\perp\)</span>，<span class="math inline">\(\sum\tau=I\alpha\)</span>（固定轴、<span class="math inline">\(I\)</span>不变 / fixed axis and constant <span class="math inline">\(I\)</span>）；<span class="math inline">\(L=I\omega\)</span>；<span class="math inline">\(E_{k,\rm rot}=\tfrac12I\omega^2\)</span>；<span class="math inline">\(W=\tau\theta\)</span>（恒力矩 / constant torque）；<span class="math inline">\(P=\tau\omega\)</span>。</p>
-<p>单位 / Units：<span class="math inline">\(I\)</span>: kg m²，<span class="math inline">\(\tau\)</span>: N m，<span class="math inline">\(L\)</span>: kg m² s⁻¹，<span class="math inline">\(\theta\)</span>: rad，<span class="math inline">\(\omega\)</span>: rad s⁻¹，<span class="math inline">\(\alpha\)</span>: rad s⁻²。</p>
 <h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
 <p>运动学式要求恒角加速度；简单转矩方程要求固定轴且转动惯量恒定；功公式要求恒转矩；扩展物体转动惯量公式需要时会给出。</p>
 <p>Uniform angular-acceleration equations require constant <span class="math inline">\(\alpha\)</span>. The simple <span class="math inline">\(\tau=I\alpha\)</span> equation assumes constant I about the fixed axis; work expression requires constant torque. Moment-of-inertia formulae for extended objects will be given when needed.</p>
@@ -162,13 +386,13 @@
 <p>角位移 <span class="math inline">\(\theta\)</span> 用rad，角速度 <span class="math inline">\(\omega=d\theta/dt\)</span>，角速率为其大小，角加速度 <span class="math inline">\(\alpha=d\omega/dt\)</span>。同一刚体各点角速度相同，线速度 <span class="math inline">\(v=r\omega\)</span> 不一定相同。</p>
 <p>Distinguish signed angular velocity from angular speed. Points on one rigid rotating body share angular velocity but have different linear speeds at different radii.</p>
 <h3 id="h-570198d3c144ed6538">匀角加速度与图像 / Constant angular acceleration</h3>
-<p>固定轴且 <span class="math inline">\(\alpha\)</span> 恒定：<span class="math inline">\(\omega=\omega_0+\alpha t\)</span>，<span class="math inline">\(\theta=(\omega_0+\omega)t/2\)</span>，<span class="math inline">\(\theta=\omega_0t+\alpha t^2/2\)</span>，<span class="math inline">\(\omega^2=\omega_0^2+2\alpha\theta\)</span>；<span class="math inline">\(\theta\)</span> 是该时间内的角位移。</p>
+<p>固定轴且 <span class="math inline">\(\alpha\)</span> 恒定：<span class="math inline">\(\omega=\omega_0+\alpha t\)</span>，<span class="math inline">\(\theta=\frac{(\omega_0+\omega)t}{2}\)</span>，<span class="math inline">\(\theta=\omega_0t+\frac12\alpha t^2\)</span>，<span class="math inline">\(\omega^2=\omega_0^2+2\alpha\theta\)</span>；<span class="math inline">\(\theta\)</span> 是该时间内的角位移。</p>
 <p>Use the four rotational kinematics equations only for constant angular acceleration about the stated axis.</p>
 <p><span class="math inline">\(\theta\)</span>–<span class="math inline">\(t\)</span> 斜率为 <span class="math inline">\(\omega\)</span>，<span class="math inline">\(\omega\)</span>–<span class="math inline">\(t\)</span> 斜率为 <span class="math inline">\(\alpha\)</span>、有符号面积为角位移。负斜率并非总为“减速”：只有角速度和角加速度异号时角速率才减小。转数 <span class="math inline">\(n\)</span> 对应角位移 <span class="math inline">\(2\pi n\)</span>。</p>
 <p>Graph gradients and signed areas have rotational analogues. Negative angular acceleration does not always mean decreasing speed; compare its sign with angular velocity. Convert revolutions to radians.</p>
 <!-- EXPLANATORY_FIGURE_20261027:U4-3.13.1-s022-p02 -->
 <p><strong>图示：角速度图的斜率与面积 / Angular-velocity gradient and area</strong></p>
-<p><a class="image-link" href="/media/explain-2f427e855fba9fddcde8fd01.png" target="_blank"><img alt="物理讲解图 / Physics explanatory diagram" decoding="async" loading="lazy" src="/media/explain-2f427e855fba9fddcde8fd01.png" style="max-width:min(100%,700px)"/></a></p>
+<a class="image-link" href="/media/explain-2f427e855fba9fddcde8fd01.png" target="_blank"><img alt="fig-2f427e855fba9fdd" decoding="async" loading="lazy" src="/media/explain-2f427e855fba9fddcde8fd01.png" style="max-width:min(100%,700px)"/></a>
 <p><strong>读图 / Reading：</strong> ω–t 斜率为角加速度，带符号面积为角位移；曲线下降表示角加速度为负，不必然表示已经反向转动。</p>
 <p>The ω–t gradient is angular acceleration and signed area angular displacement; a falling curve need not mean rotation has reversed.</p>
 <h3 id="h-ef1094e3db7852a6b8">力矩、角动量与约束 / Torque and angular momentum</h3>
@@ -187,12 +411,12 @@
 <p>角速度—时间面积为角位移；固定角动量下角速度与转动动能均随转动惯量减小而增大。 Rotational kinematics and conservation.</p>
 <!-- EXPLANATORY_FIGURE_20261027:U4-3.13.1-s007-p01 -->
 <p><strong>图示：质量分布与转动惯量 / Distribution and moment of inertia</strong></p>
-<p><a class="image-link" href="/media/explain-1c6c54c9d02e20209ec675a3.png" target="_blank"><img alt="物理讲解图 / Physics explanatory diagram" decoding="async" loading="lazy" src="/media/explain-1c6c54c9d02e20209ec675a3.png" style="max-width:min(100%,420px)"/></a></p>
+<a class="image-link" href="/media/explain-1c6c54c9d02e20209ec675a3.png" target="_blank"><img alt="fig-1c6c54c9d02e2020" decoding="async" loading="lazy" src="/media/explain-1c6c54c9d02e20209ec675a3.png" style="max-width:min(100%,420px)"/></a>
 <p><strong>读图 / Reading：</strong> 质量相同而离轴更远时，转动惯量更大；比较圆环与圆盘时必须使用同一转轴与半径条件。</p>
 <p>At the same mass, material farther from the axis gives greater inertia; compare ring and disc about the same specified axis.</p>
 <!-- EXPLANATORY_FIGURE_20261027:U4-3.13.1-s056-p01 -->
 <p><strong>图示：悬挂质量驱动飞轮 / A hanging mass driving a flywheel</strong></p>
-<p><a class="image-link" href="/media/explain-cd509018cd32b1519798e7b5.png" target="_blank"><img alt="物理讲解图 / Physics explanatory diagram" decoding="async" loading="lazy" src="/media/explain-cd509018cd32b1519798e7b5.png" style="max-width:min(100%,420px)"/></a></p>
+<a class="image-link" href="/media/explain-cd509018cd32b1519798e7b5.png" target="_blank"><img alt="fig-cd509018cd32b151" decoding="async" loading="lazy" src="/media/explain-cd509018cd32b1519798e7b5.png" style="max-width:min(100%,420px)"/></a>
 <p><strong>读图 / Reading：</strong> 下落重力势能分配到质量的平动动能、飞轮转动动能及耗散；张力一般不等于 mg，也不能忽略质量自身加速。</p>
 <p>Falling potential energy supplies translation, rotation and losses; tension is generally not mg because the hanging mass accelerates.</p>
 <h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
@@ -456,7 +680,7 @@
 <a class="internal-link" href="/notes/fca3a9ecc76aba6c37.html">U4逐题核对总览 / Coverage overview</a>
 <!-- EXAM_COVERAGE_END -->
 <h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
-<p><a class="internal-link" href="/notes/9f5e4559fdf934134e.html">例题与复述</a> · <a class="internal-link" href="/notes/f983826757f96810cd.html">按知识点真题（答案默认折叠）</a></p>
+<p><a class="internal-link" href="/notes/9f5e4559fdf934134e.html">课件例题与复述</a> · <a class="internal-link" href="/notes/f983826757f96810cd.html">按知识点真题（答案默认折叠）</a></p>
 <h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
 <ul>
 <li><a class="internal-link" href="/notes/a89635a1e6204dc5e0.html">3.6.1 圆周运动与向心力</a>：转动运动学、转动惯量与角动量 ↔ 圆周运动与向心力</li>
@@ -468,7 +692,7 @@
 <h2 id="h-97d1272cdcbbc41e6c">来源 / Sources</h2>
 <ul>
 <li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.13.1。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
-<li>[Jim Breithaupt 指定教材](file:///E:/%E6%96%B0%E4%B8%9C%E6%96%B9/%E7%89%A9%E7%90%86/%E5%A4%87%E8%AF%BE/ASU1%E5%A4%87%E8%AF%BE/Oxford%20International%20AQA%20Examinations%20International%20A%20Level%20Physics%20by%20Jim%20Breithaupt%20%28z-lib.org%29.pdf)，印刷页 439–458；本地 PDF 页为印刷页 +16。</li>
+<li>Jim Breithaupt 指定教材，印刷页 439–458；本地 PDF 页为印刷页 +16。</li>
 </ul>
 <h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
 <ul>
