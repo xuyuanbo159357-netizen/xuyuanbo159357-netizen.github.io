@@ -295,7 +295,7 @@ async function exportManifest(bank,record,kind,params,store){
   const version=hash(JSON.stringify([record.title,ids,record.answers||{},record.grades||{},record.status||'']));
   if(params.version&&params.version!==version)fail('试卷或作答已更新，请重新生成 PDF',409);
   const pick=q=>kind==='answers'?q.answerImages:Object.hasOwn(q,'sharedContextImages')?[...(q.sharedContextImages||[]),...q.questionImages]:(q.contextImages?.length?q.contextImages:q.questionImages);
-  let bodyFontPoints=10.5;for(const id of ids){const q=bank.questions.get(id);for(const im of [...pick(q),...(kind==='analysis'?q.answerImages:[])]){const l=bank.imageLayout?.[im.id];if(l)bodyFontPoints=Math.min(bodyFontPoints,515*l.fontPixels/l.width);}}
+  let bodyFontPoints=10.5;for(const id of ids){const q=bank.questions.get(id);for(const im of [...pick(q),...(kind==='analysis'?q.answerImages:[])]){const l=bank.imageLayout?.[im.id];if(l){bodyFontPoints=Math.min(bodyFontPoints,515*l.fontPixels/l.width);if(l.preserveAnswerSpace)bodyFontPoints=Math.min(bodyFontPoints,640*l.fontPixels/(l.bottom-l.top));}}}
   if(params.item===undefined)return {protocol:'device-pdf-v1',version,kind,title:record.title,label:LABELS[kind],bodyFontPoints,count:ids.length,units:[...new Set(ids.map(i=>bank.questions.get(i).unit))],marks:ids.reduce((n,i)=>n+bank.questions.get(i).marks,0)};
   const index=Number(params.item);if(!Number.isSafeInteger(index)||index<0||index>=ids.length)fail('导出题目位置无效');
   if(!params.version)fail('请先读取导出清单');

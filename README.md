@@ -17,3 +17,5 @@ The two main types are comprehensive and multiple choice. Optional type quotas i
 Manual selection shows live type totals and a removable preview. When a whole question overlaps its specialist/subpart copies, the whole question takes precedence and is counted only once. Comprehensive questions precede multiple-choice questions.
 
 PDF and Word exports use source-derived common body-text scaling, trim irrelevant outer vertical whitespace and allow multiple short questions on a page. Long content splits at whitespace where possible without shrinking its text. Word embeds PNGs for compatibility. Original source question images and existing browser-local records are preserved.
+
+Calculation questions retain the entire original question image, including unruled working space and answer lines. Their layout metadata forbids whitespace trimming; a common body scale fits complete source images into the printable area. Existing source pixels and question identities remain unchanged.
