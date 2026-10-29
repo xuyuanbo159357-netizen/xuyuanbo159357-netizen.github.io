@@ -1,6 +1,6 @@
-import {state,$,esc,icon,newPage,main,api,toast,installMedia,confirm,guestUser} from './core.js?v=20261028r7';
-import {home,selection,exam,result,installExports} from './views.js?v=20261028r7';
-import {papers,wrong,wrongEdit,profile,teacher,student,classroom,assignment,privacy} from './account.js?v=20261028r7';
+import {state,$,esc,icon,newPage,main,api,toast,installMedia,confirm,guestUser} from './core.js?v=20261028r8';
+import {home,selection,exam,result,installExports} from './views.js?v=20261028r8';
+import {papers,wrong,wrongEdit,profile,teacher,student,classroom,assignment,privacy} from './account.js?v=20261028r8';
 
 const navs=[['home','home','学习首页'],['assemble','compose','组卷系统'],['papers','papers','我的试卷'],['wrong','wrong','我的错题库'],['teacher','discussion','教师管理'],['profile','profile','我的账号']];
 const desktopNavs=[navs[0],['knowledge','concept','知识库学习','/knowledge.html'],['maps','history','知识谱系图','/maps.html'],['analysis','compose','考试分析总览','/exam-analysis.html'],...navs.slice(1)];
