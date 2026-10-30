@@ -1,4 +1,4 @@
-import {api,modal,$,toast,esc} from './core.js?v=20261030r1';
+import {api,modal,$,toast,esc} from './core.js?v=20261030r2';
 let busy=false;
 let analysisIndexPromise;
 async function analysisIndex(){
@@ -15,7 +15,7 @@ export async function exportPaperAnalysis(id){
   await window.PhysicsShared.xlsx.writeAnalysis(analysis,async data=>parts.push(data));
   const file=new Blob(parts,{type:window.PhysicsShared.xlsx.MIME});url=URL.createObjectURL(file);
   const name=(analysis.title+'-试卷分析').replace(/[\\/:*?"<>|]/g,'-')+'.xlsx';
-  await modal('试卷分析已生成',`<p>${esc(name)}</p><p class="muted" style="margin-top:12px">${analysis.subpartCount} 个小问 · ${analysis.totalMarks} 分。包含“题目分析”和“总结分析”两个分表，按列查看各题、主要考点和难度分值。</p><p class="muted" style="margin-top:10px">每个小问只计入一个主要考纲知识点；难度为题库1–5星教学分级。</p><a id="download-paper-analysis" class="btn full" style="margin-top:18px" href="${url}" download="${esc(name)}">下载 Excel 分析表 ↓</a>`,{confirm:'关闭',cancel:false});
+  await modal('试卷分析已生成',`<p>${esc(name)}</p><p class="muted" style="margin-top:12px">${analysis.subpartCount} 个小问 · ${analysis.totalMarks} 分。包含“题目分析”和“总结分析”两个分表，按行查看各题、主要考点和难度分值。</p><p class="muted" style="margin-top:10px">每个小问只计入一个主要考纲知识点；难度为题库1–5星教学分级。</p><a id="download-paper-analysis" class="btn full" style="margin-top:18px" href="${url}" download="${esc(name)}">下载 Excel 分析表 ↓</a>`,{confirm:'关闭',cancel:false});
  }finally{busy=false;if(url)setTimeout(()=>URL.revokeObjectURL(url),60000);}
 }
 export async function exportDocument(type,id,kind,format='pdf'){
