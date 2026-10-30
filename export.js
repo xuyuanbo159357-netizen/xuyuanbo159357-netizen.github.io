@@ -1,6 +1,16 @@
-import {api,modal,$,toast,esc} from './core.js?v=20261030r2';
+import {api,modal,$,toast,esc} from './core.js?v=20261030r3';
 let busy=false;
 let analysisIndexPromise;
+let rowWriterPromise;
+async function rowWriter(){
+ if(window.PhysicsShared?.xlsx?.layoutVersion==='rows-v2')return;
+ if(!rowWriterPromise)rowWriterPromise=new Promise((resolve,reject)=>{
+  const script=document.createElement('script');script.src='/shared-analysis-rows-v2.js';
+  script.onload=()=>window.PhysicsShared?.xlsx?.layoutVersion==='rows-v2'?resolve():reject(Error('试卷分析版本未更新，请重新打开网站后再试'));
+  script.onerror=()=>reject(Error('新版试卷分析加载失败，请检查网络后重试'));document.head.append(script);
+ }).catch(error=>{rowWriterPromise=null;throw error;});
+ await rowWriterPromise;
+}
 async function analysisIndex(){
  if(!analysisIndexPromise)analysisIndexPromise=fetch('/guest-data/analysis-index.json?v=20261030analysis1').then(async r=>{if(!r.ok)throw Error('试卷分析资料读取失败，请刷新页面后重试');return r.json();}).catch(error=>{analysisIndexPromise=null;throw error;});
  return analysisIndexPromise;
@@ -10,11 +20,12 @@ export async function exportPaperAnalysis(id){
  let url;
  try{
   toast('正在生成试卷分析表格…');
+  await rowWriter();
   const [paper,index]=await Promise.all([api('/papers/'+encodeURIComponent(id)),analysisIndex()]);
   const analysis=window.PhysicsShared.analysis.analyze(paper,index),parts=[];
   await window.PhysicsShared.xlsx.writeAnalysis(analysis,async data=>parts.push(data));
   const file=new Blob(parts,{type:window.PhysicsShared.xlsx.MIME});url=URL.createObjectURL(file);
-  const name=(analysis.title+'-试卷分析').replace(/[\\/:*?"<>|]/g,'-')+'.xlsx';
+  const name=(analysis.title+'-试卷分析-纵向版').replace(/[\\/:*?"<>|]/g,'-')+'.xlsx';
   await modal('试卷分析已生成',`<p>${esc(name)}</p><p class="muted" style="margin-top:12px">${analysis.subpartCount} 个小问 · ${analysis.totalMarks} 分。包含“题目分析”和“总结分析”两个分表，按行查看各题、主要考点和难度分值。</p><p class="muted" style="margin-top:10px">每个小问只计入一个主要考纲知识点；难度为题库1–5星教学分级。</p><a id="download-paper-analysis" class="btn full" style="margin-top:18px" href="${url}" download="${esc(name)}">下载 Excel 分析表 ↓</a>`,{confirm:'关闭',cancel:false});
  }finally{busy=false;if(url)setTimeout(()=>URL.revokeObjectURL(url),60000);}
 }

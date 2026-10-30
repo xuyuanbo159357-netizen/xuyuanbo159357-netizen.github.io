@@ -1,6 +1,6 @@
-import {coverageNote} from './difficulty.js?v=20261030r2';
-import {state,$,$$,esc,icon,date,statuses,on,main,api,upload,heading,units,empty,link,testLink,toast,confirm,formModal,textField,person,requireUser,startTest,media,attachments,uploadInput,copy,taskButton,knowledgeLinks,requireAccount,guestUser,clearGuest} from './core.js?v=20261030r2';
-import {exportDocument,exportPaperAnalysis} from './export.js?v=20261030r2';
+import {coverageNote} from './difficulty.js?v=20261030r3';
+import {state,$,$$,esc,icon,date,statuses,on,main,api,upload,heading,units,empty,link,testLink,toast,confirm,formModal,textField,person,requireUser,startTest,media,attachments,uploadInput,copy,taskButton,knowledgeLinks,requireAccount,guestUser,clearGuest} from './core.js?v=20261030r3';
+import {exportDocument,exportPaperAnalysis} from './export.js?v=20261030r3';
 const H=()=>window.PhysicsShared.hierarchy;
 const fileButtons=(type,id,kind,label)=>`<div class="row wrap"><span class="muted">${label}</span>${['pdf','docx'].map(f=>`<button class="btn secondary small" data-export="${type}" data-id="${id}" data-kind="${kind}" data-format="${f}">${f==='pdf'?'PDF':'Word'}</button>`).join('')}</div>`;
 const lists=tests=>tests.map(t=>`<div class="activity-row"><div class="grow"><a href="${testLink(t)}">${esc(t.title)}</a><div class="muted">${date(t.created)}</div></div><span class="badge">${statuses[t.status]}</span><a class="text-button" href="${testLink(t)}">打开 →</a></div>`).join('');

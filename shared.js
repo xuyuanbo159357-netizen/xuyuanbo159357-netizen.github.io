@@ -1063,7 +1063,7 @@ async function writeAnalysis(analysis,append){
  for(let i=0;i<sheets.length;i++)await zip.file('xl/worksheets/sheet'+(i+1)+'.xml',sheets[i].xml);
  return zip.finish();
 }
-module.exports={MIME,column,workbookSheets,writeAnalysis};
+module.exports={layoutVersion:'rows-v2',MIME,column,workbookSheets,writeAnalysis};
 
 };
 function require(id){id=id.replace(/^\.\//, "");if(cache[id])return cache[id].exports;const m={exports:{}};cache[id]=m;if(!modules[id])throw new Error("Unknown shared module "+id);modules[id](require,m,m.exports);return m.exports;}window.PhysicsShared={hierarchy:require("topic-hierarchy"),pdf:require("pdf-renderer"),docx:require("docx-writer"),analysis:require("paper-analysis"),xlsx:require("xlsx-writer")};})();

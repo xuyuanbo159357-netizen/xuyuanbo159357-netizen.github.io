@@ -1,6 +1,6 @@
-import {stars,coverageNote} from './difficulty.js?v=20261030r2';
-import {state,$,$$,esc,icon,date,statuses,on,main,api,upload,heading,units,empty,link,testLink,toast,confirm,formModal,textField,person,requireUser,startTest,modal,media,attachments,uploadInput,copy,taskButton,knowledgeLinks} from './core.js?v=20261030r2';
-import {exportDocument} from './export.js?v=20261030r2';
+import {stars,coverageNote} from './difficulty.js?v=20261030r3';
+import {state,$,$$,esc,icon,date,statuses,on,main,api,upload,heading,units,empty,link,testLink,toast,confirm,formModal,textField,person,requireUser,startTest,modal,media,attachments,uploadInput,copy,taskButton,knowledgeLinks} from './core.js?v=20261030r3';
+import {exportDocument} from './export.js?v=20261030r3';
 const H=()=>window.PhysicsShared.hierarchy;
 const exportsRow=(type,id,kind,label)=>`<div class="row wrap"><span class="muted grow">${esc(label)}</span>${['pdf','docx'].map(f=>`<button class="btn secondary small" data-export="${type}" data-id="${id}" data-kind="${kind}" data-format="${f}">${f==='pdf'?'PDF':'Word'}</button>`).join('')}</div>`;
 const paperOptions=rows=>rows.map(p=>`<option value="${p.id}">${esc(p.title)}</option>`).join('');
