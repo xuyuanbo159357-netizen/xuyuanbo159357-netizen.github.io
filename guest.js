@@ -1,4 +1,4 @@
-import {GuestEngine as E} from './guest-engine.js?v=20261028r8';
+import {GuestEngine as E} from './guest-engine.js?v=20261030r1';
 export const guestUser=Object.freeze({id:'browser-guest',username:'guest',name:'游客',guest:true,code:''});
 const {fail,copy,now,id,hash}=E.common;
 const databaseName='oxfordaqa-physics-guest-v1';let opening,engine;
@@ -19,7 +19,7 @@ class Store{
  async lookupRecords(){return (await this.list('lookup',guestUser.id)).sort((a,b)=>b.count-a.count).map(({word,kind,count})=>({word,kind,count}));}
  async countWord(uid,word,kind){const key=hash(kind+':'+word),old=await this.optional('lookup',key),count=(old?.count||0)+1;await this.save('lookup',key,uid,{word,kind,count,updated:now()});return count;}
 }
-async function json(file){const r=await fetch('/guest-data/'+file+'?v=20261028r8',{cache:'no-store'});if(!r.ok)throw new Error('游客题库读取失败，请刷新页面重试');return r.json();}
+async function json(file){const r=await fetch('/guest-data/'+file+'?v=20261030r1',{cache:'no-store'});if(!r.ok)throw new Error('游客题库读取失败，请刷新页面重试');return r.json();}
 async function init(){if(!engine)engine=Promise.all(['catalog.json','questions.json','assets.json','dictionary/glossary.json','dictionary/extended-glossary.json','image-layout.json'].map(json)).then(([catalog,questions,assets,glossary,extended,imageLayout])=>{E.data['/guest-data/dictionary/glossary.json']=glossary;E.data['/guest-data/dictionary/extended-glossary.json']=extended;return Object.assign(Object.create(E.Bank.prototype),{folder:'/guest-data',catalog,questions:new Map(questions.map(q=>[q.id,q])),assets,imageLayout,wordCache:new Map()});}).catch(e=>{engine=null;throw e;});return engine;}
 async function photoURL(store,key){if(!urls.has(key)){const f=await store.get('upload',key);if(f.owner!==guestUser.id)fail('无权读取此本地图片',403);urls.set(key,URL.createObjectURL(f.blob));}return urls.get(key);}
 async function decorate(value,store){if(Array.isArray(value))return Promise.all(value.map(v=>decorate(v,store)));if(!value||typeof value!=='object')return value;const bank=await init(),r={};for(const [key,v] of Object.entries(value)){if(typeof v==='string'&&v.startsWith('cloud-media://'))r[key]=bank.assets[v.slice(14)]?.websitePath||'/media/'+encodeURIComponent(v.slice(14));else if(typeof v==='string'&&v.startsWith('cloud-private://'))r[key]=await photoURL(store,v.slice(16));else r[key]=await decorate(v,store);}return r;}

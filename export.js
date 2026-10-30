@@ -1,5 +1,23 @@
-import {api,modal,$,toast,esc} from './core.js?v=20261028r8';
+import {api,modal,$,toast,esc} from './core.js?v=20261030r1';
 let busy=false;
+let analysisIndexPromise;
+async function analysisIndex(){
+ if(!analysisIndexPromise)analysisIndexPromise=fetch('/guest-data/analysis-index.json?v=20261030analysis1').then(async r=>{if(!r.ok)throw Error('试卷分析资料读取失败，请刷新页面后重试');return r.json();}).catch(error=>{analysisIndexPromise=null;throw error;});
+ return analysisIndexPromise;
+}
+export async function exportPaperAnalysis(id){
+ if(busy){toast('正在生成文件，请稍候');return;}busy=true;
+ let url;
+ try{
+  toast('正在生成试卷分析表格…');
+  const [paper,index]=await Promise.all([api('/papers/'+encodeURIComponent(id)),analysisIndex()]);
+  const analysis=window.PhysicsShared.analysis.analyze(paper,index),parts=[];
+  await window.PhysicsShared.xlsx.writeAnalysis(analysis,async data=>parts.push(data));
+  const file=new Blob(parts,{type:window.PhysicsShared.xlsx.MIME});url=URL.createObjectURL(file);
+  const name=(analysis.title+'-试卷分析').replace(/[\\/:*?"<>|]/g,'-')+'.xlsx';
+  await modal('试卷分析已生成',`<p>${esc(name)}</p><p class="muted" style="margin-top:12px">${analysis.subpartCount} 个小问 · ${analysis.totalMarks} 分。包含“题目分析”和“总结分析”两个分表，按列查看各题、主要考点和难度分值。</p><p class="muted" style="margin-top:10px">每个小问只计入一个主要考纲知识点；难度为题库1–5星教学分级。</p><a id="download-paper-analysis" class="btn full" style="margin-top:18px" href="${url}" download="${esc(name)}">下载 Excel 分析表 ↓</a>`,{confirm:'关闭',cancel:false});
+ }finally{busy=false;if(url)setTimeout(()=>URL.revokeObjectURL(url),60000);}
+}
 export async function exportDocument(type,id,kind,format='pdf'){
  if(busy){toast('正在生成文件，请稍候');return;}busy=true;let cancelled=false;
  const task=modal('正在生成 '+format.toUpperCase(),'<p class="muted">题目与答案分别导出，保留原题图、题号与分值。</p><progress id="export-progress" max="100" value="0"></progress><p id="export-status" class="muted">正在读取试卷…</p>',{confirm:'取消生成',cancel:false});task.then(()=>{cancelled=true;});

@@ -21,3 +21,7 @@ PDF and Word exports use source-derived common body-text scaling, trim irrelevan
 Calculation questions retain the entire original question image, including unruled working space and answer lines. Their layout metadata forbids whitespace trimming; a common body scale fits complete source images into the printable area. Existing source pixels and question identities remain unchanged.
 
 Knowledge-point assembly supports loose (any selected topic matches) and strict (every annotated topic is selected) filtering. Whole questions use the union of all constituent subpart annotations. Strict mode excludes unannotated questions, validates manual selections, and retains only shared context instead of displaying unrelated sibling questions. The mode is preserved when a paper is assigned for practice.
+
+## 试卷分析 Excel
+
+在“我的试卷”点击“生成试卷分析 · Excel”，可下载“题目分析”和“总结分析”两个分表。题目按小问横向排列，区分主要考纲知识点与其他考点；知识点分值只按主要考点计入一次。总结页按考纲顺序汇总分值和题型，并分别统计1–5星难度。难度沿用教学估计，统一给分的小问单列为不适用。文件在浏览器生成，游客和有试卷访问权限的账号均可使用，无新增云端计算费用。
