@@ -148,10 +148,16 @@
 <td>A₀ 表初始横截面积；与活度 A 区分 / A₀ is initial area; not activity A.</td>
 </tr>
 <tr>
-<td><strong>路程、距离 / distance</strong></td>
+<td><strong>极板间距 / plate separation</strong></td>
 <td><span class="math inline">\(d\)</span></td>
 <td><span class="math inline">\(\mathrm{m}\)</span></td>
-<td>路程是标量 / Distance travelled is scalar.</td>
+<td>两平行极板之间的距离 / Distance between the parallel plates.</td>
+</tr>
+<tr>
+<td><strong>电场强度 / electric field strength</strong></td>
+<td><span class="math inline">\(E_{\mathrm{field}}\)</span></td>
+<td><span class="math inline">\(\mathrm{V\,m^{-1}}\)</span> 或 <span class="math inline">\(\mathrm{N\,C^{-1}}\)</span></td>
+<td>本节加下标以区别储能 <span class="math inline">\(E\)</span> / Subscript distinguishes field strength from stored energy <span class="math inline">\(E\)</span>.</td>
 </tr>
 <tr>
 <td><strong>能量 / energy</strong></td>
@@ -170,11 +176,42 @@
 <p>Capacitance uses the magnitude of charge on one plate, not the sum of both plate magnitudes. A linear fixed capacitor has <span class="math inline">\(Q\propto V\)</span> and a charge–pd gradient equal to capacitance.</p>
 <p>大而平行、间距远小于板尺寸且忽略边缘效应时，<span class="math inline">\(C=\frac{\varepsilon_0\varepsilon_r A}{d}\)</span>。<span class="math inline">\(A\)</span> 为重叠面积，<span class="math inline">\(\varepsilon_r=C/C_0\)</span> 无单位；介质需填充所考虑的板间区域。</p>
 <p>For large parallel plates with negligible edge effects, capacitance increases with overlap area and relative permittivity and decreases with spacing. Relative permittivity is dimensionless.</p>
-<h3 id="h-105a8e24df3ab96ab8">极性分子与两种约束 / Polar molecules and constraints</h3>
-<p>极性分子在外电场中受力矩而部分转向，形成抵消原场的极化场。相同自由电荷下净场和电势差减小，因此 <span class="math inline">\(C=\frac QV\)</span> 增大；不是电介质把两块板导通。</p>
-<p>Polar molecules partly align in the field and produce an opposing polarisation field. At fixed free charge, net field and pd fall, increasing capacitance; the dielectric does not conduct between the plates.</p>
-<p>保持接电池：<span class="math inline">\(V\)</span> 固定，插入介质使 <span class="math inline">\(C,Q\)</span> 增大。断开电池：<span class="math inline">\(Q\)</span> 固定，<span class="math inline">\(C\)</span> 增大而 <span class="math inline">\(V\)</span> 减小。改变极板距离也先判断 <span class="math inline">\(Q\)</span> 或 <span class="math inline">\(V\)</span> 哪个固定，再用公式。</p>
-<p>Connected to a battery, voltage is fixed and charge increases with capacitance. Disconnected, charge is fixed and voltage falls as capacitance increases. Identify the constraint before analysing any geometry change.</p>
+<span id="h-105a8e24df3ab96ab8"></span><h3 id="h-e1d620e41e90b11853"><strong>插入电介质为什么使电容增大 / Why inserting a dielectric increases capacitance</strong></h3>
+<p><strong>极化、排列 → 相同极板电荷下合场减弱 → 电势差减小 → 电容增大。</strong> / <strong>Polarisation and alignment → weaker net field for the same plate charge → lower potential difference → greater capacitance.</strong></p>
+<ol>
+<li><strong>电介质被极化，分子电偶极子沿电场方向排列。</strong> 原有极性分子发生转向；非极性分子中正、负电荷中心发生微小相对位移，形成沿电场方向的感应偶极子。 / <strong>The dielectric becomes polarised and its molecular dipoles line up with the electric field.</strong> Permanent dipoles turn towards the field; small charge displacements in non-polar molecules produce induced dipoles.</li>
+<li><strong>极化电荷产生与原电场相反的电场。</strong> 靠近正极板的介质表面出现负束缚电荷，靠近负极板的表面出现正束缚电荷。因此，<strong>在极板自由电荷量 <span class="math inline">\(Q\)</span> 相同的条件下，板间合电场强度减小</strong>。 / <strong>The polarisation produces a field opposing the original field.</strong> Negative bound charge appears near the positive plate and positive bound charge near the negative plate. <strong>For the same free charge on the plates, the net electric field strength decreases.</strong></li>
+<li><strong>极板间距 <span class="math inline">\(d\)</span> 不变时，场强减小使两板电势差 <span class="math inline">\(V\)</span> 减小。相同的 <span class="math inline">\(Q\)</span> 对应更小的 <span class="math inline">\(V\)</span>，所以电容 <span class="math inline">\(C\)</span> 增大。</strong> / <strong>With unchanged plate separation, the weaker field gives a smaller potential difference. The same charge is stored at a smaller potential difference, so capacitance increases.</strong></li>
+</ol>
+<div class="math block">
+\[\Large\displaystyle E_{\mathrm{field}}=\frac{V}{d}\]
+</div>
+<div class="math block">
+\[\Large\displaystyle C=\frac{Q}{V}\]
+</div>
+<p>这里 <span class="math inline">\(E_{\mathrm{field}}\)</span> 是板间合电场强度（<span class="math inline">\(\mathrm{V\,m^{-1}}\)</span>），<span class="math inline">\(d\)</span> 是极板间距（<span class="math inline">\(\mathrm{m}\)</span>），<span class="math inline">\(V\)</span> 是电势差（<span class="math inline">\(\mathrm{V}\)</span>），<span class="math inline">\(Q\)</span> 是一块极板上的自由电荷量大小（<span class="math inline">\(\mathrm{C}\)</span>），<span class="math inline">\(C\)</span> 是电容（<span class="math inline">\(\mathrm{F}\)</span>）。 / The symbols denote net electric field strength, plate separation, potential difference, free charge magnitude on one plate and capacitance, respectively.</p>
+<p><strong>对应评分点 / Mark-scheme points（所提供 Q06.1，2 marks）：</strong> <strong>① 极化分子或电偶极子沿电场排列；② 相同极板电荷下，电势差或电场强度减小。</strong> / <strong>① Polarised molecules or dipoles line up with the field; ② the potential difference or field strength decreases for the same plate charge.</strong></p>
+<p><strong>英文样例答案 / Sample answer：</strong> The molecules become polarised and the dipoles line up with the electric field. For the same charge on the plates, the electric field strength and potential difference decrease. Since capacitance is charge divided by potential difference, the capacitance increases.</p>
+<h4 id="h-182e53005de4b0b112">电源接通与断开 / Connected and disconnected cases</h4>
+<table>
+<thead>
+<tr>
+<th>电容器状态 / State</th>
+<th>插入介质后的变化 / Changes after insertion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>断开电源且保持绝缘 / Disconnected and isolated</strong></td>
+<td><strong><span class="math inline">\(Q\)</span> 不变，<span class="math inline">\(C\)</span> 增大，<span class="math inline">\(V\)</span> 和 <span class="math inline">\(E_{\mathrm{field}}\)</span> 减小。</strong> 无自由电荷通过外电路进出极板。 / <strong>Charge stays constant; capacitance increases; potential difference and net field strength decrease.</strong> No free charge enters or leaves through an external circuit.</td>
+</tr>
+<tr>
+<td><strong>仍连接理想恒压电源 / Connected to an ideal constant-voltage source</strong></td>
+<td><strong><span class="math inline">\(V\)</span> 不变，<span class="math inline">\(C\)</span> 增大，<span class="math inline">\(Q\)</span> 增大。</strong> 电源向极板补充电荷，使电势差保持原值；<span class="math inline">\(d\)</span> 不变时最终合场强度也保持原值。 / <strong>Potential difference stays constant; capacitance and plate charge increase.</strong> More charge flows from the source to maintain the voltage; at fixed separation, the final net field strength is unchanged.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>评分标准也接受“相同电势差下能储存更多电荷”的解释。</strong> 不要无条件地说“插入介质后电压一定减小”，也不要把极化解释为介质导通两板、消耗极板自由电荷。极化电荷抵消的是部分电场作用。 / <strong>The mark scheme also accepts that more charge can be stored for the same potential difference.</strong> State the circuit constraint. Polarisation opposes part of the field; it does not conduct charge between the plates or consume their free charge.</p>
 <h3 id="h-64a1c4614cb9e1dcd2">储能与能量来源 / Stored energy</h3>
 <p>充入微小电荷所需能量为 <span class="math inline">\(dE=V\,dQ\)</span>，所以储能是 <span class="math inline">\(V\)</span>–<span class="math inline">\(Q\)</span> 图面积；对线性电容，<span class="math inline">\(E=\frac12QV=\frac12CV^2=\frac{Q^2}{2C}\)</span>。<span class="math inline">\(Q\)</span>–<span class="math inline">\(V\)</span> 图的三角形面积也等于该数值，不能由此把任意充电过程都写成 <span class="math inline">\(E=QV\)</span>。</p>
 <p>Energy is the integral of pd with respect to charge. A linear capacitor stores half the product of final charge and pd; it does not store the full <span class="math inline">\(QV\)</span> supplied by an ideal constant-voltage source in a simple resistive charging circuit.</p>
@@ -197,8 +234,8 @@
 <!-- EXPLANATORY_FIGURE_20261027:U3-3.8.4-s016-p01 -->
 <p><strong>图示：电介质极化 / Dielectric polarisation</strong></p>
 <a class="image-link" href="/media/explain-7a78f0441d87e285a7c87478.png" target="_blank"><img alt="fig-7a78f0441d87e285" decoding="async" loading="lazy" src="/media/explain-7a78f0441d87e285a7c87478.png" style="max-width:min(100%,420px)"/></a>
-<p><strong>读图 / Reading：</strong> 介质内部正、负电荷发生微小相对位移，削弱内部合电场；保持电压还是保持电荷不变，会影响后续量的变化。</p>
-<p>Small internal charge separations oppose the applied field; subsequent changes depend on whether voltage or charge is held fixed.</p>
+<p><strong>读图 / Reading：</strong> 介质被极化，电偶极子沿电场排列；极化电荷产生反向电场。相同极板自由电荷下，合场和电势差减小；若仍接恒压电源，则有更多电荷流到极板以维持电压。</p>
+<p>The dielectric is polarised and its dipoles line up with the field. The polarisation field opposes the original field. For the same free plate charge, net field and potential difference decrease; if a constant-voltage source remains connected, more charge flows onto the plates to maintain the voltage.</p>
 <h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
 <p>比较板间距、介质和储能前，先确定电荷还是电压固定。</p>
 <p>Identify whether charge or voltage is fixed before comparing plate separation, dielectric insertion and energy.</p>
@@ -484,6 +521,7 @@
 <ul>
 <li><a class="internal-link" href="/media/e812f39218ed8fe0d6.pdf">用户指定《物理大纲.pdf》</a>，OxfordAQA 9630 Version 4.4；对应小节 3.8.4。 <a class="internal-link" href="/notes/f49e443aaa0fb99e0e.html">严格逐项对应的考纲框架</a></li>
 <li>Jim Breithaupt 指定教材，印刷页 339–345；本地 PDF 页为印刷页 +16。</li>
+<li>用户提供的真题评分标准截图，Q06.1（2分）：电介质极化、偶极子排列，以及相同极板电荷下场强或电势差减小；补充说明接受相同电势差下可储存更多电荷。 / Supplied mark-scheme extract, Q06.1, including the alternative explanation in the additional guidance.</li>
 </ul>
 <h2 id="h-b91648e5cbeb95e697">对应模型 / Models</h2>
 <ul>

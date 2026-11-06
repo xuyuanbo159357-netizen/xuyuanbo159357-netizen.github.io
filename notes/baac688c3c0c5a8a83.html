@@ -3,55 +3,165 @@
 <html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.6.2 简谐运动方程、图像与能量 / Simple harmonic motion · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class="physics-knowledge"><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.6 圆周与周期运动</div><h1 id="h-3d96e7226f3d25e600">3.6.2 简谐运动方程、图像与能量 / Simple harmonic motion</h1>
 <p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/3037e62baad7d03c78.html">3.6.2</a>　｜　<a class="internal-link" href="/notes/da867bb75d0c7de166.html">本单元知识谱系</a></p>
 <h2 id="h-9b72ef987b2ceff699">知识逐项讲解 / Concept-by-concept guide</h2>
-<h3 class="concept-name" id="h-992bdcf2b5f2423b0b"><strong><a class="internal-link" href="/notes/7f77642a6ec6765fa4.html">simple harmonic motion — 简谐运动</a></strong></h3>
-<p><strong>Definition / 定义</strong></p>
+<span id="h-7e0fb7e3db963b7d23"></span><h3 id="h-a4a174afcfe2544186">1. 简谐运动的定义 / Definition of simple harmonic motion</h3>
+<p><strong><a class="internal-link" href="/notes/7f77642a6ec6765fa4.html">simple harmonic motion — 简谐运动</a></strong></p>
 <section class="transclusion concept-definition"><a class="transclusion-source" href="/notes/7f77642a6ec6765fa4.html#h-485f2ec53559b6043e">↗ simple harmonic motion — 简谐运动</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
 <p><strong>English:</strong> Motion in which acceleration is directly proportional to displacement from equilibrium and is always directed towards equilibrium.</p>
 <p><strong>中文：</strong> 加速度与偏离平衡位置的位移成正比，方向始终指向平衡位置的运动。</p>
 <p><strong>定义评分依据 / Definition marking points：</strong> <a class="internal-link" href="/notes/c408350222d70c6f0e.html">PH03 201806-Q01</a>。原答案在题目下展开；此处按评分要点概括。 Summarised from the marking points; originals are folded below each question.</p>
 </section>
-<h3 class="concept-name" id="h-9a7387b2e2d742f234"><strong><a class="internal-link" href="/notes/bf5d444207a7658984.html">angular frequency — 角频率</a></strong></h3>
-<p><strong>Definition / 定义</strong></p>
+<p>以平衡位置为 <span class="math inline">\(x=0\)</span>，任选一侧为正方向。简谐运动有两个判定点：<strong>加速度大小与离开平衡位置的距离成正比，加速度方向始终指向平衡位置</strong>。例如物体在平衡位置右侧时，<span class="math inline">\(x&gt;0\)</span>，回复加速度向左。 / Measure signed displacement from equilibrium. <strong>Acceleration is proportional in magnitude to displacement from equilibrium and is directed towards equilibrium.</strong> For a displacement to the right, the restoring acceleration points left.</p>
+<div class="math block">
+\[\Large\displaystyle a=-\omega^2x\]
+</div>
+<p><span class="math inline">\(x\)</span> 是有符号位移（<span class="math inline">\(\mathrm{m}\)</span>），<span class="math inline">\(a\)</span> 是同方向坐标下的加速度（<span class="math inline">\(\mathrm{m\,s^{-2}}\)</span>），<span class="math inline">\(\omega\)</span> 是恒定的角频率（<span class="math inline">\(\mathrm{rad\,s^{-1}}\)</span>）。负号表示 <span class="math inline">\(a\)</span> 与 <span class="math inline">\(x\)</span> 方向相反。 / The minus sign gives the restoring direction. The constant of proportionality in magnitude is <span class="math inline">\(\omega^2\)</span>.</p>
+<p><strong>真题定义依据 / Mark-scheme check</strong> <a class="internal-link" href="/notes/c408350222d70c6f0e.html">PH03 201806-Q01</a>。</p>
+<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
+<h3 id="h-708a32bba1c0c1aaf7">2. 两种基本模型 / Two basic models</h3>
+<a class="image-link" href="/media/39443988783d86dbf2.png" target="_blank"><img alt="shm-3.6.2-models" decoding="async" loading="lazy" src="/media/39443988783d86dbf2.png" style="max-width:min(100%,1000px)"/></a>
+<p><strong>弹簧模型 / Mass–spring system.</strong> 水平面上的物块向右拉开后释放，弹簧拉它回到平衡位置。物块凭惯性越过平衡位置，压缩弹簧后受到向右的回复力。以平衡位置量 <span class="math inline">\(x\)</span>，在胡克定律适用范围内，回复合力为 <span class="math inline">\(-kx\)</span>。 / Pull a mass to the right and release it. The spring pulls it back, and the mass passes through equilibrium. A compressed spring then pushes it back towards equilibrium. In the Hooke’s law range, the restoring resultant is <span class="math inline">\(-kx\)</span>.</p>
+<p><strong>钟摆模型 / Simple pendulum.</strong> 把钟摆简化为轻质、不可伸长摆线末端的摆球。摆球偏离最低点时，重力的切向分量使它沿圆弧返回。摆角较小时，切向回复加速度近似与弧长位移成正比。 / Model a clock pendulum as a bob on a light, inextensible string. The tangential component of its weight pulls it towards the lowest point. At small angles, tangential acceleration is approximately proportional to arc displacement.</p>
+<h3 id="h-172ef01322c1cb7806">3. 从弹簧模型到单位圆 / From the mass–spring system to the unit circle</h3>
+<h4 id="h-c2c621923ac0618f46">3.1 弹簧的回复力与角频率 / Spring restoring force and angular frequency</h4>
+<p>取物块质量 <span class="math inline">\(m\)</span>（<span class="math inline">\(\mathrm{kg}\)</span>）、弹簧劲度系数 <span class="math inline">\(k\)</span>（<span class="math inline">\(\mathrm{N\,m^{-1}}\)</span>）。对水平弹簧，按牛顿第二定律把回复合力写成 <span class="math inline">\(ma\)</span>。与定义式比较得到 <span class="math inline">\(\omega^2=k/m\)</span>。 / Apply Newton’s second law to the spring’s restoring force and compare the resulting acceleration with the SHM condition.</p>
+<div class="math block">
+\[\Large\displaystyle ma=-kx\]
+</div>
+<div class="math block">
+\[\Large\displaystyle \omega=\sqrt{\frac{k}{m}}\]
+</div>
+<p>竖直弹簧以静态平衡位置为原点，重力与平衡时的弹簧力相消，额外位移 <span class="math inline">\(x\)</span> 仍对应回复合力 <span class="math inline">\(-kx\)</span>。 / For a vertical spring, weight balances the spring force at equilibrium, leaving a restoring resultant <span class="math inline">\(-kx\)</span> for displacement from that position.</p>
+<h4 id="h-0cbd09fc5dd14db667">3.2 转一圈对应振动一次 / One turn represents one oscillation</h4>
+<a class="image-link" href="/media/a669887dca3c7875c5.png" target="_blank"><img alt="shm-3.6.2-unit-circle" decoding="async" loading="lazy" src="/media/a669887dca3c7875c5.png" style="max-width:min(100%,1000px)"/></a>
+<p>设想点 <span class="math inline">\(P\)</span> 在半径为 1 的圆上逆时针匀速转动，取它在水平轴上的投影。横坐标是归一化位移 <span class="math inline">\(x/A\)</span>，乘振幅 <span class="math inline">\(A\)</span>（<span class="math inline">\(\mathrm{m}\)</span>）得到弹簧物块的实际位移。图中物块的起点为 <span class="math inline">\(x=+A\)</span>，且从静止释放。 / Let a reference point <span class="math inline">\(P\)</span> turn anticlockwise on a unit circle. Its horizontal coordinate is the normalised displacement <span class="math inline">\(x/A\)</span>. Multiplying by the amplitude <span class="math inline">\(A\)</span> gives the displacement of the mass. The example begins at rest at <span class="math inline">\(x=+A\)</span>.</p>
+<p><strong><a class="internal-link" href="/notes/bf5d444207a7658984.html">angular frequency — 角频率</a></strong> 对应参考点的角速度大小，即每秒转过多少弧度。圆上的点转过 <span class="math inline">\(2\pi\)</span> 弧度，物块回到相同的位置和运动状态，经历一个周期 <span class="math inline">\(T\)</span>（<span class="math inline">\(\mathrm{s}\)</span>）。频率 <span class="math inline">\(f\)</span>（<span class="math inline">\(\mathrm{Hz}\)</span>）是一秒内的完整振动次数。 / The angular speed of the reference point is the oscillator’s angular frequency. One revolution of <span class="math inline">\(2\pi\)</span> radians returns the mass to the same position and state of motion after one period <span class="math inline">\(T\)</span>. Frequency <span class="math inline">\(f\)</span> counts oscillations per second.</p>
 <section class="transclusion concept-definition"><a class="transclusion-source" href="/notes/bf5d444207a7658984.html#h-485f2ec53559b6043e">↗ angular frequency — 角频率</a><h2 id="h-485f2ec53559b6043e">Definition / 定义</h2>
 <p><strong>English:</strong> The rate of change of the phase angle of an oscillation, equal to two pi times its frequency.</p>
 <p><strong>中文：</strong> 振动相位角的变化率，等于频率的二π倍。</p>
 <p>定义按指定教材与 9630 考纲概括；教材页码见对应小节。 Summarised from the specified textbook and specification; page references are in the linked section.</p>
 </section>
-<p><strong>Formula / 公式</strong></p>
 <div class="math block">
-\[\Large\displaystyle \omega=2\pi f\]
+\[\Large\displaystyle f=\frac{1}{T}\]
 </div>
 <div class="math block">
-\[\Large\displaystyle \omega=\frac{2\pi}{T}\]
+\[\Large\displaystyle \omega=\frac{2\pi}{T}=2\pi f\]
 </div>
-<p><strong>Symbols and SI units / 符号与 SI 单位</strong></p>
+<p>代入弹簧振子的角频率，得到它的周期。同一根弹簧上，质量越大，周期越长。同一质量接上更硬的弹簧，周期越短。 / Substitute the angular frequency of the mass–spring system to obtain its period. Increasing mass lengthens the period. Increasing stiffness shortens it.</p>
+<div class="math block">
+\[\Large\displaystyle T=2\pi\sqrt{\frac{m}{k}}\]
+</div>
+<h4 id="h-41d106c2e9a3252c09">3.3 从投影读出位移、速度和加速度 / Reading displacement, velocity and acceleration</h4>
+<p><span class="math inline">\(t\)</span> 是经过时间（<span class="math inline">\(\mathrm{s}\)</span>），<span class="math inline">\(\theta\)</span> 是参考点的相位角（<span class="math inline">\(\mathrm{rad}\)</span>），<span class="math inline">\(\phi\)</span> 是 <span class="math inline">\(t=0\)</span> 的初相位（<span class="math inline">\(\mathrm{rad}\)</span>）。参考点从正横轴量角，从 <span class="math inline">\(+A\)</span> 静止释放时 <span class="math inline">\(\phi=0\)</span>。 / Measure the reference angle from the positive horizontal axis. The initial angle <span class="math inline">\(\phi\)</span> is zero for release from the positive extreme.</p>
+<div class="math block">
+\[\Large\displaystyle \theta=\omega t+\phi\]
+</div>
+<p><strong>位移 / Displacement.</strong> 圆上点的水平投影为 <span class="math inline">\(\cos\theta\)</span>，所以实际位移为 / Multiply the horizontal projection by <span class="math inline">\(A\)</span>.</p>
+<div class="math block">
+\[\Large\displaystyle x=A\cos(\omega t+\phi)\]
+</div>
+<p><strong>速度 / Velocity.</strong> 把参考圆的半径由 1 缩放到 <span class="math inline">\(A\)</span>，切向速率为 <span class="math inline">\(\omega A\)</span>。取切向速度的水平分量，得到物块速度 <span class="math inline">\(v\)</span>（<span class="math inline">\(\mathrm{m\,s^{-1}}\)</span>）。当 <span class="math inline">\(0&lt;\theta&lt;\pi\)</span> 时投影向左，<span class="math inline">\(v&lt;0\)</span>。 / On the circle scaled to radius <span class="math inline">\(A\)</span>, the tangential speed is <span class="math inline">\(\omega A\)</span>. Its horizontal component gives the mass’s signed velocity.</p>
+<div class="math block">
+\[\Large\displaystyle v=-\omega A\sin(\omega t+\phi)\]
+</div>
+<p><strong>加速度 / Acceleration.</strong> 缩放后圆周运动的向心加速度大小为 <span class="math inline">\(\omega^2 A\)</span>，始终指向圆心。它的水平分量指向平衡位置。 / Project the inward acceleration of magnitude <span class="math inline">\(\omega^2 A\)</span> onto the horizontal axis.</p>
+<div class="math block">
+\[\Large\displaystyle a=-\omega^2 A\cos(\omega t+\phi)\]
+</div>
+<p>比较位移式与加速度式，立即得到定义中的 <span class="math inline">\(a=-\omega^2x\)</span>。消去相位即可由位置求速度，正负号根据物体运动方向选择。 / Comparing the displacement and acceleration equations recovers the SHM condition. Eliminating phase gives velocity at a specified displacement. Choose the sign from the direction of motion.</p>
+<div class="math block">
+\[\Large\displaystyle v=\pm\omega\sqrt{A^2-x^2}\]
+</div>
+<span id="h-929fd3f857abf7f226"></span><span id="h-e3d6c2331180038916"></span><h3 id="h-4db93218b3a2f4fb77">4. 读懂 x、v、a 的时序图与相位 / Time graphs and phase</h3>
+<a class="image-link" href="/media/f7850403d73f39047d.png" target="_blank"><img alt="shm-3.6.2-time-graphs" decoding="async" loading="lazy" src="/media/f7850403d73f39047d.png" style="max-width:min(100%,1000px)"/></a>
+<p>三图采用同一个时钟，纵轴分别用各自的最大量值归一化。沿同一条竖线读三个量。<strong><span class="math inline">\(v\)</span> 是 <span class="math inline">\(x\)</span>–<span class="math inline">\(t\)</span> 图的斜率，<span class="math inline">\(a\)</span> 是 <span class="math inline">\(v\)</span>–<span class="math inline">\(t\)</span> 图的斜率。</strong> / The graphs share the same time axis. Each vertical axis is normalised by its own amplitude. Read all three quantities at the same time. <strong>Velocity is the gradient of the displacement graph, and acceleration is the gradient of the velocity graph.</strong></p>
 <table>
 <thead>
 <tr>
-<th>符号 / Symbol</th>
-<th>物理量 / Quantity</th>
-<th>SI 单位 / SI unit</th>
+<th>时刻 / Time</th>
+<th>位移 / Displacement</th>
+<th>速度 / Velocity</th>
+<th>加速度 / Acceleration</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="math inline">\(\omega\)</span></td>
-<td>角速率或角频率，按情境区分 / angular speed or angular frequency in context</td>
-<td><span class="math inline">\(\mathrm{rad\,s^{-1}}\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(+A\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(-\omega^2 A\)</span></td>
 </tr>
 <tr>
-<td><span class="math inline">\(f\)</span></td>
-<td>频率 / frequency</td>
-<td><span class="math inline">\(\mathrm{Hz}\)</span></td>
+<td><span class="math inline">\(T/4\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(-\omega A\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(T/2\)</span></td>
+<td><span class="math inline">\(-A\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(+\omega^2 A\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(3T/4\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(+\omega A\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
 </tr>
 <tr>
 <td><span class="math inline">\(T\)</span></td>
-<td>周期 / period</td>
-<td><span class="math inline">\(\mathrm{s}\)</span></td>
+<td><span class="math inline">\(+A\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(-\omega^2 A\)</span></td>
 </tr>
 </tbody>
 </table>
-<p><strong>真题定义依据 / Mark-scheme checks：</strong> <a class="internal-link" href="/notes/c408350222d70c6f0e.html">PH03 201806-Q01</a>。定义按评分要点概括；原答案可在对应题目下展开。 Definitions are summarised from the scoring points, with original answers below the linked questions.</p>
+<p>在平衡位置，速率达到最大，加速度为零。在两端，速度为零，加速度大小达到最大。 / Speed is greatest at equilibrium. Acceleration magnitude is greatest at the extremes.</p>
+<div class="math block">
+\[\Large\displaystyle v_{\max}=\omega A\]
+</div>
+<div class="math block">
+\[\Large\displaystyle |a|_{\max}=\omega^2 A\]
+</div>
+<p><strong>相位 / Phase</strong> <span class="math inline">\(\theta\)</span> 表示振动走到了一个周期中的哪个状态。初相位 <span class="math inline">\(\phi\)</span> 决定从哪一状态开始。例如同为 <span class="math inline">\(x=0\)</span>，向左通过对应 <span class="math inline">\(\theta=\pi/2\)</span>，向右通过对应 <span class="math inline">\(\theta=3\pi/2\)</span>。 / Phase specifies where the oscillator is in its cycle. The initial phase fixes the starting state. The two equilibrium crossings have opposite velocities and different phases.</p>
+<p><strong>相位差 / Phase difference.</strong> 比较同频图像上的对应事件，例如两个正峰。若它们相隔 <span class="math inline">\(\Delta t\)</span>（<span class="math inline">\(\mathrm{s}\)</span>），相位差的大小以弧度表示为 / For equal-frequency graphs, use the time offset between equivalent points, such as positive peaks.</p>
+<div class="math block">
+\[\Large\displaystyle |\Delta\theta|=\frac{2\pi|\Delta t|}{T}\]
+</div>
+<p>在本页余弦约定中，<span class="math inline">\(v\)</span> 的正峰比下一次 <span class="math inline">\(x\)</span> 的正峰早 <span class="math inline">\(T/4\)</span>，所以 <span class="math inline">\(v\)</span> 超前 <span class="math inline">\(x\)</span> 四分之一周期（<span class="math inline">\(\pi/2\)</span>）。<span class="math inline">\(a\)</span> 与 <span class="math inline">\(x\)</span> 相差半周期（<span class="math inline">\(\pi\)</span>），两者反相。 / In this cosine convention, velocity leads displacement by a quarter cycle. Acceleration and displacement are in antiphase.</p>
+<h4 id="h-365139556068cae109">同一个振子的能量 / Energy of the same oscillator</h4>
+<a class="image-link" href="/media/f9ae620796ea273cac.png" target="_blank"><img alt="shm-3.6.2-energy" decoding="async" loading="lazy" src="/media/f9ae620796ea273cac.png" style="max-width:min(100%,1000px)"/></a>
+<p>以平衡位置为振动势能零点。无阻尼时，平衡位置动能最大，两端势能最大，总能量恒定。能量只依赖位移或速率的平方，因此经过半个振动周期就重复。 / Take oscillator potential energy to be zero at equilibrium. Without damping, kinetic energy peaks at equilibrium and potential energy peaks at the extremes. The energy pattern repeats every half period.</p>
+<div class="math block">
+\[\Large\displaystyle E_p=\frac12m\omega^2x^2\]
+</div>
+<div class="math block">
+\[\Large\displaystyle E_k=\frac12m\omega^2(A^2-x^2)\]
+</div>
+<div class="math block">
+\[\Large\displaystyle E_{\rm total}=\frac12m\omega^2A^2\]
+</div>
+<p><span class="math inline">\(E_p\)</span>、<span class="math inline">\(E_k\)</span>、<span class="math inline">\(E_{\rm total}\)</span> 分别为振动势能、动能与总能量，单位均为 <span class="math inline">\(\mathrm{J}\)</span>。 / Potential, kinetic and total energies are measured in joules.</p>
+<span id="h-858e6210a36ce6709a"></span><h3 id="h-5186b32e15e07d9c99">5. 钟摆模型的特点 / Features of the simple pendulum</h3>
+<p>回看两种模型图右侧。设摆长 <span class="math inline">\(L\)</span>（<span class="math inline">\(\mathrm{m}\)</span>）从支点量到摆球质心，摆角 <span class="math inline">\(\alpha\)</span>（<span class="math inline">\(\mathrm{rad}\)</span>）从竖直向下方向量起，弧长位移 <span class="math inline">\(s\)</span>（<span class="math inline">\(\mathrm{m}\)</span>）从最低点量起。重力的切向分量指向最低点，切向加速度用 <span class="math inline">\(a_t\)</span>（<span class="math inline">\(\mathrm{m\,s^{-2}}\)</span>）表示。 / In the pendulum diagram, measure length from the pivot to the bob’s centre of mass. Measure the angle from the downward vertical and the arc displacement from the lowest point. The tangential component of weight provides the restoring acceleration.</p>
+<div class="math block">
+\[\Large\displaystyle s=L\alpha\]
+</div>
+<div class="math block">
+\[\Large\displaystyle a_t=-g\sin\alpha\]
+</div>
+<p>小摆角用弧度表示时，<span class="math inline">\(\sin\alpha\approx\alpha\)</span>。代入弧长关系后，切向加速度具有简谐运动的形式。 / For small angles in radians, substitute the small-angle approximation and the arc-length relation into the tangential acceleration.</p>
+<div class="math block">
+\[\Large\displaystyle a_t\approx-\frac{g}{L}s\]
+</div>
+<div class="math block">
+\[\Large\displaystyle \omega=\sqrt{\frac{g}{L}}\]
+</div>
+<div class="math block">
+\[\Large\displaystyle T=2\pi\sqrt{\frac{L}{g}}\]
+</div>
+<p><span class="math inline">\(g\)</span> 是重力场强（<span class="math inline">\(\mathrm{N\,kg^{-1}}\)</span>），数值等于当地自由落体加速度（<span class="math inline">\(\mathrm{m\,s^{-2}}\)</span>）。<strong>同一地点，摆长越长，周期越长。小角度理想模型的周期与摆球质量无关。</strong> 摆角较大时，应保留 <span class="math inline">\(\sin\alpha\)</span>，小角度周期公式的精度随之降低。摆球在圆弧上运动，用于简谐判定的是沿圆弧的切向加速度。 / A longer pendulum has a longer period at the same location. The bob’s mass cancels. The approximation is accurate for small swings, and it is the tangential acceleration along the arc that enters the SHM condition.</p>
+<p><strong>逐项覆盖 / Requirement-by-requirement coverage</strong> <a class="internal-link" href="/notes/11fbe687130c053bc6.html#h-0bcfd375f8a901f30b">3.6.2</a>。</p>
 <h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
 <p><strong>Conditions / 适用条件：</strong> 速度正负由运动方向决定；振动势能以平衡位置为零，无阻尼时总能量恒定。 / Velocity sign follows motion; oscillator potential energy is zero at equilibrium and total energy is constant without damping.</p>
 <div class="math block">
@@ -182,36 +292,6 @@
 <h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
 <p>理想简谐运动要求线性回复力且阻尼可忽略；单摆采用小角度近似。</p>
 <p>For ideal SHM use a linear restoring force and negligible damping. For a simple pendulum, use small angles so <span class="math inline">\(\sin\theta\approx\theta\)</span>.</p>
-<h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
-<h3 id="h-7e0fb7e3db963b7d23">简谐判定、方程与相位 / SHM condition and phase</h3>
-<p>从平衡位置量有符号位移 <span class="math inline">\(x\)</span>，恢复加速度满足 <span class="math inline">\(a=-\omega^2x\)</span>：大小与位移成正比，方向总指向平衡位置。<span class="math inline">\(ω\)</span> 在该理想系统中为常量；仅仅“往复”不足以判定简谐。</p>
-<p>SHM requires acceleration proportional to displacement from equilibrium and directed towards equilibrium, with constant angular frequency. Repeated back-and-forth motion alone is insufficient.</p>
-<p>若从正向最大位移静止释放，可用 <span class="math inline">\(x=A\cos\omega t\)</span>、<span class="math inline">\(v=-A\omega\sin\omega t\)</span>、<span class="math inline">\(a=-\omega^2A\cos\omega t\)</span>。其他初始状态应调整相位，不能强行把所有运动都写成无初相余弦。<span class="math inline">\(v=\pm\omega\sqrt{A^2-x^2}\)</span> 的符号由运动方向决定。</p>
-<p>The zero-phase cosine solution assumes release from positive maximum displacement. Other initial conditions require a phase shift. Choose the sign of velocity from the direction of travel.</p>
-<h3 id="h-929fd3f857abf7f226">图像、极值和能量 / Graphs, extrema and energy</h3>
-<p><span class="math inline">\(v\)</span> 是 <span class="math inline">\(x\)</span>–<span class="math inline">\(t\)</span> 的斜率，<span class="math inline">\(a\)</span> 是 <span class="math inline">\(v\)</span>–<span class="math inline">\(t\)</span> 的斜率。<span class="math inline">\(a\)</span> 与 <span class="math inline">\(x\)</span> 反相；<span class="math inline">\(x\)</span> 与 <span class="math inline">\(v\)</span> 相差四分之一周期。平衡处 <span class="math inline">\(|v|_{\max}=\omega A\)</span>、<span class="math inline">\(a=0\)</span>；端点 <span class="math inline">\(v=0\)</span>、<span class="math inline">\(|a|_{\max}=\omega^2A\)</span>。</p>
-<p>Velocity and acceleration are gradients of the corresponding time graphs. Acceleration is in antiphase with displacement; velocity is a quarter-cycle out of phase. Speed peaks at equilibrium and acceleration magnitude at the extremes.</p>
-<p>以平衡位置的有效振动势能为零：<span class="math inline">\(E_p=\frac12m\omega^2x^2\)</span>，<span class="math inline">\(E_k=\frac12m\omega^2(A^2-x^2)\)</span>，<span class="math inline">\(E_{\rm total}=\frac12m\omega^2A^2\)</span>。能量随时间以振动频率的两倍变化，总能量在无阻尼时恒定；振幅加倍使能量变为四倍。</p>
-<p>Effective oscillator potential energy is quadratic in displacement; kinetic energy is the complementary parabola. The energy variations have twice the oscillation frequency, while total energy is constant without damping.</p>
-<!-- EXPLANATORY_FIGURE_20261027:U3-3.6.2-s025-p02 -->
-<p><strong>图示：x、v、a 的相位 / Phases of x, v and a</strong></p>
-<a class="image-link" href="/media/explain-a704e439fc0bed89fe96ca28.png" target="_blank"><img alt="fig-a704e439fc0bed89" decoding="async" loading="lazy" src="/media/explain-a704e439fc0bed89fe96ca28.png" style="max-width:min(100%,700px)"/></a>
-<p><strong>读图 / Reading：</strong> 逐时刻对照三图：平衡处速度大小最大、加速度为零；位移极值处速度为零，且加速度总与位移反向。</p>
-<p>At equilibrium speed is greatest and acceleration zero; at displacement extrema velocity is zero and acceleration opposes displacement.</p>
-<!-- EXPLANATORY_FIGURE_20261027:U3-3.6.2-s029-p01 -->
-<p><strong>图示：能量随位移变化 / Energy against displacement</strong></p>
-<a class="image-link" href="/media/explain-a667d40d0beb122e05b994f6.png" target="_blank"><img alt="fig-a667d40d0beb122e" decoding="async" loading="lazy" src="/media/explain-a667d40d0beb122e05b994f6.png" style="max-width:min(100%,700px)"/></a>
-<p><strong>读图 / Reading：</strong> 横轴是位移 x 而不是时间。无阻尼时总能量水平不变，势能随 x² 增加，动能补足两者之差。</p>
-<p>The horizontal axis is displacement, not time; total energy is constant without damping, potential rises with x² and kinetic is the remainder.</p>
-<h3 id="h-858e6210a36ce6709a">周期推导与成立条件 / Period derivations</h3>
-<p>弹簧：<span class="math inline">\(F=-kx=ma\)</span>，与 <span class="math inline">\(a=-\omega^2x\)</span> 比较得 <span class="math inline">\(\omega^2=k/m\)</span>，所以 <span class="math inline">\(T=2\pi\sqrt{\frac{m}{k}}\)</span>。竖直弹簧应先用 <span class="math inline">\(kx_0=mg\)</span> 消去静态平衡项，再对平衡位置附近的额外位移列式。</p>
-<p>For a spring, compare <span class="math inline">\(ma=-kx\)</span> with the SHM condition. For a vertical spring, first remove the static equilibrium extension before identifying the restoring force.</p>
-<p>单摆：沿圆弧 <span class="math inline">\(s=l\theta\)</span>，切向 <span class="math inline">\(ma_t=-mg\sin\theta\)</span>。小角度下 <span class="math inline">\(\sin\theta\approx\theta=s/l\)</span>，故 <span class="math inline">\(a_t=-(g/l)s\)</span>，得到 <span class="math inline">\(T=2\pi\sqrt{\frac{l}{g}}\)</span>。弧度、小角度、轻且不可伸长摆线是必要条件。</p>
-<p>For a pendulum, use the tangential component of weight and <span class="math inline">\(\sin\theta\approx\theta=s/l\)</span> at small angles. This gives SHM with <span class="math inline">\(\omega^2=g/l\)</span>. The approximation uses radians and a light inextensible string.</p>
-<p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/11fbe687130c053bc6.html#h-0bcfd375f8a901f30b">3.6.2</a></p>
-<h3 id="h-e3d6c2331180038916">U3 SHM graphs</h3>
-<a class="image-link" href="/media/454143aa688b8a1d57.png" target="_blank"><img alt="U3_SHM_graphs" decoding="async" loading="lazy" src="/media/454143aa688b8a1d57.png" style="max-width:min(100%,1100px)"/></a>
-<p>简谐运动位移、速度、加速度相位及状态图；速度有正负两个分支。 Normalised SHM graphs.</p>
 <h2 id="h-ecda3c283bd02cd0db">Applications / 应用与实验</h2>
 <p>由初始位置与速度选相位；掌握周期推导。</p>
 <p>Choose phase from the initial position and velocity; derive period expressions rather than memorising unexplained equations.</p>
@@ -221,6 +301,70 @@
 <!-- EXAM_COVERAGE_START -->
 <h2 id="h-683b44220da9004fb8">真题检验与答题思路 / Exam coverage and approaches</h2>
 <p>依据本库现有真题与评分标准核对。下列步骤按题型使用，先核对题设条件；综合题需结合其他关联知识点。 / Checked against the papers and mark schemes held in this vault; select the approach that fits the stated conditions.</p>
+<h3 id="h-cc5c6706757adb297d">6. 答题模型：已知什么，可以求什么 / Given quantities and what they determine</h3>
+<p>先找决定快慢的 <span class="math inline">\(\omega\)</span>，再找决定振动范围的 <span class="math inline">\(A\)</span>。求某一时刻的状态还要定初相位，求某一位置的速度正负要看运动方向。 / Find the angular frequency and amplitude first. To find a state at a particular time, also fix the initial phase. To choose the sign of velocity at a specified position, use the direction of motion.</p>
+<table>
+<thead>
+<tr>
+<th>已知条件 / Given</th>
+<th>推导路线 / How to proceed</th>
+<th>可以求出 / What follows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(T\)</span>、<span class="math inline">\(f\)</span> 或 <span class="math inline">\(\omega\)</span> 中任一个 / One timing quantity</td>
+<td><span class="math inline">\(f=1/T\)</span>，<span class="math inline">\(\omega=2\pi/T\)</span></td>
+<td>其余两个时间量。再给 <span class="math inline">\(A\)</span> 才能求两个最大量值。 / The other two timing quantities. Amplitude is also needed for maximum speed and acceleration.</td>
+</tr>
+<tr>
+<td>弹簧 <span class="math inline">\(m,k\)</span>，或小角度单摆 <span class="math inline">\(L,g\)</span> / Spring or pendulum parameters</td>
+<td>比较回复加速度与 <span class="math inline">\(a=-\omega^2x\)</span>。 / Compare the restoring acceleration with the SHM condition.</td>
+<td><span class="math inline">\(\omega,T,f\)</span>。振幅需由初始状态、能量或图像取得。 / Timing, with amplitude determined separately from initial conditions, energy or a graph.</td>
+</tr>
+<tr>
+<td><span class="math inline">\(a\)</span>–<span class="math inline">\(x\)</span> 图的斜率 <span class="math inline">\(S\)</span> / Acceleration–displacement gradient</td>
+<td>过原点的负斜率直线满足定义，<span class="math inline">\(\omega=\sqrt{-S}\)</span>。 / Use the negative gradient of the straight line through the origin.</td>
+<td>判断简谐运动并求 <span class="math inline">\(\omega,T,f\)</span>。 / Identify SHM and find its timing.</td>
+</tr>
+<tr>
+<td><span class="math inline">\(x\)</span>–<span class="math inline">\(t\)</span> 图 / Displacement–time graph</td>
+<td>最大 <span class="math inline">\(\lvert x\rvert\)</span> 读出 <span class="math inline">\(A\)</span>，相邻同向同相位点间隔读出 <span class="math inline">\(T\)</span>，切线斜率给 <span class="math inline">\(v\)</span>。 / Read the amplitude, the time between equivalent points and the tangent gradient.</td>
+<td><span class="math inline">\(A,T,\omega\)</span>，以及各时刻的 <span class="math inline">\(x,v,a\)</span>。 / Amplitude, timing and instantaneous states.</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A,\omega\)</span> / Amplitude and angular frequency</td>
+<td>分别乘 <span class="math inline">\(\omega\)</span> 和 <span class="math inline">\(\omega^2\)</span>。 / Multiply by <span class="math inline">\(\omega\)</span> and <span class="math inline">\(\omega^2\)</span>.</td>
+<td><span class="math inline">\(v_{\max}\)</span>、<span class="math inline">\(\lvert a\rvert_{\max}\)</span>。给出 <span class="math inline">\(m\)</span> 还可求总能量。 / Maximum speed and acceleration, and total energy if mass is given.</td>
+</tr>
+<tr>
+<td><span class="math inline">\(x,A,\omega\)</span> / A specified displacement and the two oscillator parameters</td>
+<td>用 <span class="math inline">\(a=-\omega^2x\)</span> 与 <span class="math inline">\(\lvert v\rvert=\omega\sqrt{A^2-x^2}\)</span>。 / Use the acceleration and speed relations.</td>
+<td>有符号的 <span class="math inline">\(a\)</span> 与速率 <span class="math inline">\(\lvert v\rvert\)</span>。另给运动方向才能定 <span class="math inline">\(v\)</span> 的正负。 / Signed acceleration and speed. Direction of travel fixes the sign of velocity.</td>
+</tr>
+<tr>
+<td><span class="math inline">\(v_{\max}\)</span> 与 <span class="math inline">\(\lvert a\rvert_{\max}\)</span> / Both maxima</td>
+<td><span class="math inline">\(\omega=\lvert a\rvert_{\max}/v_{\max}\)</span>，再用 <span class="math inline">\(A=v_{\max}/\omega\)</span>。 / Divide the maxima, then recover the amplitude.</td>
+<td><span class="math inline">\(\omega,A,T,f\)</span>。 / Angular frequency, amplitude, period and frequency.</td>
+</tr>
+<tr>
+<td><span class="math inline">\(x_0,v_0,\omega\)</span> / Initial displacement and velocity plus angular frequency</td>
+<td><span class="math inline">\(A=\sqrt{x_0^2+(v_0/\omega)^2}\)</span>。按 <span class="math inline">\(x_0=A\cos\phi\)</span> 与 <span class="math inline">\(v_0=-\omega A\sin\phi\)</span> 选象限。 / Find the amplitude and use both initial values to select the phase quadrant.</td>
+<td><span class="math inline">\(A,\phi\)</span> 及完整的 <span class="math inline">\(x(t),v(t),a(t)\)</span>，适用于有振动的情形。 / Amplitude, initial phase and the full motion for a nonzero oscillation.</td>
+</tr>
+<tr>
+<td><span class="math inline">\(E_{\rm total},m,\omega\)</span> / Total energy, mass and angular frequency</td>
+<td>用总能量式反求 <span class="math inline">\(A\)</span>。再给 <span class="math inline">\(x\)</span> 时，用势能式与能量守恒。 / Invert the total-energy formula and use conservation at a specified position.</td>
+<td>振幅，给定位移时的动能与势能。 / Amplitude and the energy split at a given displacement.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例 / Worked example.</strong> 弹簧振子从 <span class="math inline">\(+A\)</span> 静止释放，<span class="math inline">\(A=0.060\,\mathrm{m}\)</span>，<span class="math inline">\(T=2.0\,\mathrm{s}\)</span>。求它首次到达 <span class="math inline">\(x=+0.030\,\mathrm{m}\)</span> 时的速度、加速度和经过时间。 / A mass starts at rest at the positive extreme. Find its velocity, acceleration and elapsed time at its first arrival at the stated displacement.</p>
+<ol>
+<li>由周期得 <span class="math inline">\(\omega=\pi\,\mathrm{rad\,s^{-1}}\)</span>。首次从 <span class="math inline">\(+A\)</span> 向平衡位置运动，速度取负，<span class="math inline">\(v\approx-0.163\,\mathrm{m\,s^{-1}}\)</span>。 / Calculate angular frequency and choose the negative velocity branch.</li>
+<li><span class="math inline">\(x\)</span> 为正，回复加速度为负，<span class="math inline">\(a\approx-0.296\,\mathrm{m\,s^{-2}}\)</span>。 / The acceleration points towards equilibrium.</li>
+<li>单位圆上 <span class="math inline">\(x/A=1/2\)</span>，首次到达时相位为 <span class="math inline">\(\pi/3\)</span>，故 <span class="math inline">\(t=T/6\approx0.333\,\mathrm{s}\)</span>。同一位置在一周期内还会再次经过，此时速度方向不同。 / The first matching phase is <span class="math inline">\(\pi/3\)</span>. The later passage through the same position has the opposite velocity.</li>
+</ol>
 <h3 id="h-19f6d07cbd0e377550">3.6.2 方法 1 · 简谐条件与失效判断 / Testing and rejecting SHM</h3>
 <p><strong>规范表述 / Standard statement:</strong> Acceleration is directly proportional to displacement from equilibrium and is directed towards equilibrium. / 加速度与相对平衡位置的位移成正比，方向指向平衡位置。</p>
 <ol>
