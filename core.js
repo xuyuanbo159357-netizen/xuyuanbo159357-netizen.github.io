@@ -1,5 +1,5 @@
-import {difficulty} from './difficulty.js?v=20261109r2';
-import {guestUser,guestApi,guestUpload,clearGuest} from './guest.js?v=20261109r2';
+import {difficulty} from './difficulty.js?v=20261109r3';
+import {guestUser,guestApi,guestUpload,clearGuest} from './guest.js?v=20261109r3';
 export {guestUser,clearGuest};
 export const state={user:null,catalog:null,knowledge:null,unit:1,cleanup:null,epoch:0};
 export const $=(s,root=document)=>root.querySelector(s), $$=(s,root=document)=>Array.from(root.querySelectorAll(s));

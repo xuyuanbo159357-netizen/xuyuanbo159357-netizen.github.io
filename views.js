@@ -1,6 +1,6 @@
-import {stars,coverageNote} from './difficulty.js?v=20261109r2';
-import {state,$,$$,esc,icon,date,statuses,on,main,api,upload,heading,units,empty,link,testLink,toast,confirm,formModal,textField,person,requireUser,startTest,modal,media,attachments,uploadInput,copy,taskButton,knowledgeLinks} from './core.js?v=20261109r2';
-import {exportDocument} from './export.js?v=20261109r2';
+import {stars,coverageNote} from './difficulty.js?v=20261109r3';
+import {state,$,$$,esc,icon,date,statuses,on,main,api,upload,heading,units,empty,link,testLink,toast,confirm,formModal,textField,person,requireUser,startTest,modal,media,attachments,uploadInput,copy,taskButton,knowledgeLinks} from './core.js?v=20261109r3';
+import {exportDocument} from './export.js?v=20261109r3';
 const H=()=>window.PhysicsShared.hierarchy;
 const exportsRow=(type,id,kind,label)=>`<div class="row wrap"><span class="muted grow">${esc(label)}</span>${['pdf','docx'].map(f=>`<button class="btn secondary small" data-export="${type}" data-id="${id}" data-kind="${kind}" data-format="${f}">${f==='pdf'?'PDF':'Word'}</button>`).join('')}</div>`;
 const paperOptions=rows=>rows.map(p=>`<option value="${p.id}">${esc(p.title)}</option>`).join('');
@@ -14,6 +14,26 @@ export async function home(){
 
 export async function selection(mode='normal',params=new URLSearchParams()){
  const catalog=state.catalog,s={unit:[1,2,3,4].includes(Number(params.get('unit')))?Number(params.get('unit')):state.unit,mode,category:['concept','discussion'].includes(mode)?mode:'normal',chapters:[],topics:(params.get('topics')||'').split(',').filter(id=>catalog.topics.some(t=>t.id===id&&t.unit===(Number(params.get('unit'))||state.unit))),source:'topics',topicMatch:'loose',year:'',paper:'',title:'我的物理试卷',custom:false,difficulties:[],browseForm:mode==='assemble'?'part':mode==='normal'?'whole':'part',assemblyMode:'both-ranges',countRange:{min:8,max:12},marksRange:{min:20,max:40},byType:false,counts:{comprehensive:7,choice:3,concept:2},items:[],total:0,cart:new Map(),browseType:'all',randomStructure:'part',search:'',loading:false,saving:false,review:false,keepOrder:false,originalPaper:null};
+ const editId=mode==='assemble'?params.get('edit'):null;
+ let editRevision=0;
+ if(editId){
+  if(!requireUser())return;
+  const paper=await api('/papers/'+encodeURIComponent(editId));
+  if(paper.owner!==state.user.id)throw Error('只能编辑自己创建的试卷');
+  const scope=paper.builderScope;
+  s.unit=scope?.unit||paper.sourceUnit||paper.questions[0]?.unit||s.unit;
+  const view=H().view(catalog,s.unit,scope?.chapters||[],scope?.topics||[]);
+  s.chapters=view.selectedChapters;
+  s.topics=view.selectedTopics;
+  s.topicMatch=paper.topicMatch||'loose';
+  s.title=paper.title;
+  s.custom=true;
+  s.cart=new Map(paper.questions.map(q=>[q.id,q]));
+  s.keepOrder=true;
+  s.review=true;
+  if(paper.sourcePaperId)s.originalPaper={id:paper.sourcePaperId,unit:paper.sourceUnit,ids:paper.ids};
+  editRevision=paper.revision??0;
+ }
  const cartMarks=()=>[...s.cart.values()].reduce((n,q)=>n+q.marks,0);
  const cartSummary=()=>s.cart.size?cartMarks()+' 分 · 切换筛选后仍保留':'在左侧点击“添加”收录题目';
  const questionForm=q=>q.questionType==='choice'?'独立题':q.entryKind==='part'?'拆分小问':'完整大题';
@@ -56,13 +76,14 @@ export async function selection(mode='normal',params=new URLSearchParams()){
    </article>`).join('')||empty('题单已清空，可返回继续添加。');
  }
  function drawReview(){
-  main(`${heading('REVIEW YOUR PAPER','预览试卷','调整题目顺序，或返回继续添加。')}<div class="builder-layout">
+  main(`${heading('REVIEW YOUR PAPER',editId?'编辑试卷':'预览试卷','调整题目顺序，或返回继续添加。')}<div class="builder-layout">
    <div id="picked-list">${pickedPreview()}</div>
    <aside class="card sticky">
-    <h3>${esc(s.title)}</h3>
+    <label class="field label">试卷名称<input class="input" id="paper-title" maxlength="100" value="${esc(s.title)}"></label>
     <p id="picked-stat" class="notice" aria-live="polite">${esc(pickedStats())}</p>
     <button class="btn full" id="save-reviewed-paper" ${!s.cart.size?'disabled':''}>保存试卷</button>
     <button class="btn secondary full" id="continue-assembly" style="margin-top:10px">返回继续添加题目</button>
+    ${editId?`<div class="actions">${link('papers','取消编辑','text-button')}</div>`:''}
    </aside>
   </div>`);
  }
@@ -115,15 +136,19 @@ export async function selection(mode='normal',params=new URLSearchParams()){
  }
  async function saveReviewedPaper(){
   if(s.saving||!s.cart.size||!requireUser())return;
+  const title=s.title.trim();
+  if(!title||title.length>100)throw Error('请填写 1–100 字的试卷名称');
   const ids=[...s.cart.keys()],original=s.originalPaper;
   const sameSource=original&&original.ids.length===ids.length&&original.ids.every((id,index)=>id===ids[index]);
-  const body=sameSource?{title:s.title,unit:original.unit,sourcePaperId:original.id}:{
-   title:s.title,fixedIds:ids,keepFixedOrder:true,topicMatch:s.topicMatch
+  const body=sameSource?{title,unit:original.unit,sourcePaperId:original.id}:{
+   title,fixedIds:ids,keepFixedOrder:true,topicMatch:s.topicMatch
   };
+  body.builderScope={unit:s.unit,chapters:s.chapters,topics:s.topics};
+  if(editId)body.revision=editRevision;
   const host=$('#main');
   s.saving=true;
   try{
-   await api('/papers',body);
+   await api(editId?'/papers/'+encodeURIComponent(editId)+'/edit':'/papers',body);
    if(host===$('#main')){toast('试卷已保存');location.hash='/papers';}
   }finally{s.saving=false;}
  }
