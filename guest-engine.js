@@ -266,7 +266,7 @@ class Service{
   async submit(uid,key){const t=await this.readableTest(uid,key);this.own(uid,t);if(t.status!=='draft')fail('这份答题卡已经提交');const skipped=new Set(t.skipped||[]),included=t.ids.filter(qid=>!skipped.has(qid));if(!included.length)fail('所有题目均已跳过，请至少保留一道题再生成答题卡');if(skipped.size){t.originalIds=t.ids.slice();t.ids=included;t.answers=Object.fromEntries(Object.entries(t.answers).filter(([qid])=>included.includes(qid)));t.grades=Object.fromEntries(Object.entries(t.grades).filter(([qid])=>included.includes(qid)));}t.status='submitted';t.submitted=now();if(t.assignmentId){const a=await this.store.get('assignment',t.assignmentId);t.late=t.submitted>a.dueAt;t.deadlineAtSubmission=a.dueAt;if(await this.store.isTeacher(a.owner,uid))t.reviewer=a.owner;}await this.store.save('test',key,uid,t);return t;}
   async grade(uid,key,body){const t=await this.readableTest(uid,key),reviewer=await this.effectiveReviewer(t);if(uid!==(reviewer||t.owner))fail('这份答题卡由指定批改账号评分',403);if(!['submitted','grading'].includes(t.status))fail('答题卡当前不可批改');for(const qid of t.ids){const q=this.bank.questions.get(qid);if(q.answerMode==='choice')t.grades[qid]={score:(t.answers[qid]||{}).choice===q.correct?q.marks:0,comment:'',automatic:true};}for(const [qid,g] of Object.entries(body.grades||{})){if(!t.ids.includes(qid))fail('批改包含答题卡之外的题目');const q=this.bank.questions.get(qid);if(q.answerMode==='choice')continue;if(typeof g.score!=='number'||!Number.isInteger(g.score)||g.score<0||g.score>q.marks)fail('得分需为0至本题满分之间的整数');const comment=String(g.comment||'');if(comment.length>4000)fail('批注过长');t.grades[qid]={score:g.score,comment,automatic:false};}t.status='grading';if(body.finish){const missing=t.ids.filter(qid=>!Object.prototype.hasOwnProperty.call(t.grades,qid));if(missing.length)fail('还有'+missing.length+'道题未填写得分');t.status='graded';t.graded=now();}if(!reviewer)t.reviewer=null;await this.store.save('test',key,t.owner,t);return t;}
   async assign(uid,key,other){const t=await this.readableTest(uid,key);this.own(uid,t);if(t.status!=='submitted'||await this.effectiveReviewer(t))fail('只能提交尚未指定批改人的答题卡');if(!await this.store.isTeacher(other,uid))fail('请先完成学生与教师的绑定',403);t.reviewer=other;await this.store.save('test',key,uid,t);return t;}
-  async createPaper(user,body){
+  planPaper(body){
     let source=null;
     if(body.sourcePaperId!==undefined){source=this.bank.catalog.papers.find(p=>p.id===body.sourcePaperId);if(!source)fail('未找到所选正式试卷');if(body.unit!==undefined&&Number(body.unit)!==source.unit)fail('所选试卷不属于当前 Unit');}
     const {conflict,form,normalize}=require('./assembly');
@@ -281,11 +281,27 @@ class Service{
       const accepts=this.bank.topicFilter(body);
       if(remaining.some(i=>!accepts(this.bank.questions.get(i))))fail('已选题目含有范围外或未标注的知识点，请重新筛选');
     }
-    const ids=source?remaining:[...this.bank.order(fixed),...this.bank.order(remaining)];
+    const keepFixedOrder=hasFixed&&body.keepFixedOrder===true;
+    const ids=source?remaining:[...(keepFixedOrder?fixed:this.bank.order(fixed)),...this.bank.order(remaining)];
     if(!ids.length)fail('请加入有效题目');
     if(ids.length>60)fail('合并后最多保留60道选题单元');
     for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++)if(conflict(this.bank.questions.get(ids[i]),this.bank.questions.get(ids[j])))fail('同一整题与所属小问、或同一小问的不同分类副本不能重复入卷');
-    const p={id:id(),owner:user.id,title:String(body.title||(source?source.title:'OxfordAQA 9630 自选试卷')).slice(0,100),ids,topicMatch:source?'loose':body.topicMatch||'loose',recipients:[],created:now(),ordering:source?'source-paper':fixed.length&&body.automatic?'manual-first':'question-type-choice-last',typeCounts:this.bank.typeCounts(ids),coverage:this.bank.coverage(ids,body.automatic?body:{paperId:'manual'}),structureCounts:{whole:ids.filter(i=>form(this.bank.questions.get(i))==='whole').length,part:ids.filter(i=>form(this.bank.questions.get(i))==='part').length},...(source?{sourcePaperId:source.id,sourcePaperTitle:source.title,sourceSession:source.session,sourceUnit:source.unit}:{})};
+    return {
+      title:String(body.title||(source?source.title:'OxfordAQA 9630 自选试卷')).slice(0,100),
+      ids,topicMatch:source?'loose':body.topicMatch||'loose',
+      ordering:source?'source-paper':keepFixedOrder?'preview-order':fixed.length&&body.automatic?'manual-first':'question-type-choice-last',
+      typeCounts:this.bank.typeCounts(ids),
+      coverage:this.bank.coverage(ids,body.automatic?body:{paperId:'manual'}),
+      structureCounts:{whole:ids.filter(i=>form(this.bank.questions.get(i))==='whole').length,part:ids.filter(i=>form(this.bank.questions.get(i))==='part').length},
+      ...(source?{sourcePaperId:source.id,sourcePaperTitle:source.title,sourceSession:source.session,sourceUnit:source.unit}:{})
+    };
+  }
+  previewPaper(body){
+    const plan=this.planPaper(body);
+    return {...plan,questions:plan.ids.map(id=>this.bank.public(this.bank.questions.get(id),false,plan.topicMatch==='strict'))};
+  }
+  async createPaper(user,body){
+    const p={...this.planPaper(body),id:id(),owner:user.id,recipients:[],created:now()};
     await this.store.save('paper',p.id,user.id,p);return p;
   }
   async paperHidden(uid,key){const h=await this.store.optional('paper-hidden','paper-hidden:'+uid+':'+key);return !!h&&h.hidden!==false;}
@@ -410,6 +426,7 @@ async function route({path,method,body,user,uid,store,service:s,bank,files,cloud
   if(p==='/tests'&&method==='POST')return s.createTest({id:uid},body);
   if(p==='/tests'&&method==='GET'){const tests=[];for(const t of await store.list('test'))if(uid===t.owner||(uid===t.reviewer&&await store.bound(uid,t.owner)))tests.push({id:t.id,title:t.title,status:t.status,created:t.created,owner:t.owner,reviewer:t.reviewer});return {items:tests};}
   if(p.startsWith('/tests/')){const [key,action]=p.slice('/tests/'.length).split('/');if(method==='POST'){if(action==='answers')return decorate(await s.saveAnswers(uid,key,body));if(action==='submit')return decorate(await s.submit(uid,key));if(action==='grade')return decorate(await s.grade(uid,key,body));if(action==='assign')return decorate(await s.assign(uid,key,body.id));fail('未找到答题卡操作',404);}const t=await s.readableTest(uid,key);if(['card.pdf','analysis.pdf'].includes(action)){if(action==='analysis.pdf'&&t.status!=='graded')fail('批改完成后才能导出解析');return exportManifest(bank,t,action==='analysis.pdf'?'analysis':'card',params,store);}if(action)fail('未找到答题卡页面',404);const r=decorate(t),reviewer=await s.effectiveReviewer(t);r.reviewer=reviewer;r.questions=t.ids.map(i=>bank.public(bank.questions.get(i),t.status!=='draft',t.selection?.topicMatch==='strict'));r.maxMarks=sum(t.ids.map(i=>bank.questions.get(i).marks));r.totalScore=sum(Object.values(t.grades).map(g=>g.score));r.readOnly=uid!==t.owner;r.canGrade=['submitted','grading'].includes(t.status)&&(reviewer||t.owner)===uid;return r;}
+  if(p==='/papers/preview'&&method==='POST')return s.previewPaper(body);
   if(p==='/papers'&&method==='POST')return s.createPaper({id:uid},body);
   if(p==='/papers'&&method==='GET')return {items:(await s.papersFor(uid)).map(p=>({...p,count:p.ids.length,marks:sum(p.ids.map(i=>bank.questions.get(i).marks)),typeSummary:bank.typeSummary(p.ids)}))};
   if(p.startsWith('/papers/')){const [key,action]=p.slice('/papers/'.length).split('/');if(action==='delete'&&method==='POST')return s.deletePaper(uid,key);const paper=await s.paperAccess(uid,key);if(action==='send'&&method==='POST')return s.sendPaper(uid,key,body.id);if(['questions.pdf','answers.pdf'].includes(action)&&method==='GET'){if(action==='answers.pdf')s.own(uid,paper);return exportManifest(bank,paper,action==='answers.pdf'?'answers':'questions',params,store);}if(!action)return {...paper,questions:paper.ids.map(i=>bank.public(bank.questions.get(i),false,paper.topicMatch==='strict'))};fail('未找到试卷操作',404);}

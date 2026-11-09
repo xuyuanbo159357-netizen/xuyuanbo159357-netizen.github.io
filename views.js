@@ -1,6 +1,6 @@
-import {stars,coverageNote} from './difficulty.js?v=20261109r1';
-import {state,$,$$,esc,icon,date,statuses,on,main,api,upload,heading,units,empty,link,testLink,toast,confirm,formModal,textField,person,requireUser,startTest,modal,media,attachments,uploadInput,copy,taskButton,knowledgeLinks} from './core.js?v=20261109r1';
-import {exportDocument} from './export.js?v=20261109r1';
+import {stars,coverageNote} from './difficulty.js?v=20261109r2';
+import {state,$,$$,esc,icon,date,statuses,on,main,api,upload,heading,units,empty,link,testLink,toast,confirm,formModal,textField,person,requireUser,startTest,modal,media,attachments,uploadInput,copy,taskButton,knowledgeLinks} from './core.js?v=20261109r2';
+import {exportDocument} from './export.js?v=20261109r2';
 const H=()=>window.PhysicsShared.hierarchy;
 const exportsRow=(type,id,kind,label)=>`<div class="row wrap"><span class="muted grow">${esc(label)}</span>${['pdf','docx'].map(f=>`<button class="btn secondary small" data-export="${type}" data-id="${id}" data-kind="${kind}" data-format="${f}">${f==='pdf'?'PDF':'Word'}</button>`).join('')}</div>`;
 const paperOptions=rows=>rows.map(p=>`<option value="${p.id}">${esc(p.title)}</option>`).join('');
@@ -13,7 +13,7 @@ export async function home(){
 }
 
 export async function selection(mode='normal',params=new URLSearchParams()){
- const catalog=state.catalog,s={unit:[1,2,3,4].includes(Number(params.get('unit')))?Number(params.get('unit')):state.unit,mode,category:['concept','discussion'].includes(mode)?mode:'normal',chapters:[],topics:(params.get('topics')||'').split(',').filter(id=>catalog.topics.some(t=>t.id===id&&t.unit===(Number(params.get('unit'))||state.unit))),source:'topics',topicMatch:'loose',year:'',paper:'',title:'我的物理试卷',custom:false,difficulties:[],browseForm:mode==='assemble'?'part':mode==='normal'?'whole':'part',assemblyMode:'both-ranges',countRange:{min:8,max:12},marksRange:{min:20,max:40},byType:false,counts:{comprehensive:7,choice:3,concept:2},items:[],total:0,cart:new Map(),browseType:'all',randomStructure:'part',search:'',loading:false,saving:false};
+ const catalog=state.catalog,s={unit:[1,2,3,4].includes(Number(params.get('unit')))?Number(params.get('unit')):state.unit,mode,category:['concept','discussion'].includes(mode)?mode:'normal',chapters:[],topics:(params.get('topics')||'').split(',').filter(id=>catalog.topics.some(t=>t.id===id&&t.unit===(Number(params.get('unit'))||state.unit))),source:'topics',topicMatch:'loose',year:'',paper:'',title:'我的物理试卷',custom:false,difficulties:[],browseForm:mode==='assemble'?'part':mode==='normal'?'whole':'part',assemblyMode:'both-ranges',countRange:{min:8,max:12},marksRange:{min:20,max:40},byType:false,counts:{comprehensive:7,choice:3,concept:2},items:[],total:0,cart:new Map(),browseType:'all',randomStructure:'part',search:'',loading:false,saving:false,review:false,keepOrder:false,originalPaper:null};
  const cartMarks=()=>[...s.cart.values()].reduce((n,q)=>n+q.marks,0);
  const cartSummary=()=>s.cart.size?cartMarks()+' 分 · 切换筛选后仍保留':'在左侧点击“添加”收录题目';
  const questionForm=q=>q.questionType==='choice'?'独立题':q.entryKind==='part'?'拆分小问':'完整大题';
@@ -28,7 +28,6 @@ export async function selection(mode='normal',params=new URLSearchParams()){
   $('#cart-count').textContent=s.cart.size+' 道';
   $('#cart-summary').textContent=cartSummary();
   $('#cart-type-summary').textContent=cartTypes();
-  $('#manual-paper').disabled=!s.cart.size;
   $('#preview-cart').disabled=!s.cart.size;
   $('#auto-paper').textContent=s.cart.size?'保留已添加题目并随机补题':'自动随机组卷';
   $$('[data-add-question]').forEach(button=>{
@@ -39,7 +38,41 @@ export async function selection(mode='normal',params=new URLSearchParams()){
   });
  }
  function pickedStats(){return `已选 ${s.cart.size} 道 · ${cartMarks()} 分 · ${cartTypes()}`;}
- function pickedPreview(){return [...s.cart.values()].map(q=>`<article class="manual-question" style="margin:16px 0"><div class="manual-question-heading"><div class="grow"><span class="badge">${questionForm(q)}</span><h3>${esc(q.source)}</h3><p class="muted">${q.marks} 分 · ${esc(q.questionTypeLabel)}</p></div><button class="text-button danger" data-remove-picked="${esc(q.id)}">移除</button></div><div class="manual-question-body">${knowledgeLinks(q)}${media(q.questionImages,q.unit,q.text)}${q.contextImages?.length?`<details><summary>完整题干与图示</summary>${media(q.contextImages,q.unit)}</details>`:''}</div></article>`).join('')||empty('尚未选择题目。');}
+ function pickedPreview(){
+  return [...s.cart.values()].map((q,index)=>`
+   <article class="manual-question" style="margin-bottom:12px">
+    <div class="manual-question-heading row wrap">
+     <div class="grow"><span class="badge">第 ${index+1} 题</span> <span class="badge">${questionForm(q)}</span>
+      <h3>${esc(q.source)}</h3><p class="muted">${q.marks} 分 · ${esc(q.questionTypeLabel)}</p>
+     </div>
+     <button class="btn secondary small" data-review-move="${index}" data-delta="-1" aria-label="上移第 ${index+1} 题" ${index===0?'disabled':''}>上移</button>
+     <button class="btn secondary small" data-review-move="${index}" data-delta="1" aria-label="下移第 ${index+1} 题" ${index===s.cart.size-1?'disabled':''}>下移</button>
+     <button class="text-button danger" data-review-delete="${esc(q.id)}" aria-label="删除第 ${index+1} 题">删除</button>
+    </div>
+    <div class="manual-question-body"><details data-review-question="${esc(q.id)}"><summary>查看题干</summary>
+     ${knowledgeLinks(q)}${media(q.questionImages,q.unit,q.text)}
+     ${q.contextImages?.length?`<details><summary>完整题干与图示</summary>${media(q.contextImages,q.unit)}</details>`:''}
+    </details></div>
+   </article>`).join('')||empty('题单已清空，可返回继续添加。');
+ }
+ function drawReview(){
+  main(`${heading('REVIEW YOUR PAPER','预览试卷','调整题目顺序，或返回继续添加。')}<div class="builder-layout">
+   <div id="picked-list">${pickedPreview()}</div>
+   <aside class="card sticky">
+    <h3>${esc(s.title)}</h3>
+    <p id="picked-stat" class="notice" aria-live="polite">${esc(pickedStats())}</p>
+    <button class="btn full" id="save-reviewed-paper" ${!s.cart.size?'disabled':''}>保存试卷</button>
+    <button class="btn secondary full" id="continue-assembly" style="margin-top:10px">返回继续添加题目</button>
+   </aside>
+  </div>`);
+ }
+ function updateReview(){
+  const open=$$('[data-review-question][open]').map(d=>d.dataset.reviewQuestion);
+  $('#picked-list').innerHTML=pickedPreview();
+  $$('[data-review-question]').forEach(d=>{d.open=open.includes(d.dataset.reviewQuestion);});
+  $('#picked-stat').textContent=pickedStats();
+  $('#save-reviewed-paper').disabled=!s.cart.size;
+ }
  function assemblySettings(){
  const field=(key,edge,label,value,max)=>`<label class="field label">${label}<input class="input" type="number" min="1" max="${max}" data-interval="${key}:${edge}" aria-label="${label}" value="${value}"></label>`;
  return `<div class="structure-settings"><label class="field label">随机补题的大题形式<select class="input" id="random-structure"><option value="part" ${s.randomStructure==='part'?'selected':''}>按拆分小问抽取</option><option value="whole" ${s.randomStructure==='whole'?'selected':''}>保留完整大题</option></select></label><label class="field label">组卷匹配方式<select class="input" id="assembly-mode" aria-label="组卷匹配方式">${[['score-range','给定分数区间，自动匹配题目'],['count-range','给定题目数量区间，自动匹配分数'],['both-ranges','分数和题目数量区间都指定']].map(([k,v])=>`<option value="${k}" ${s.assemblyMode===k?'selected':''}>${v}</option>`).join('')}</select></label>${!s.byType&&s.assemblyMode!=='score-range'?`<div class="grid" style="grid-template-columns:1fr 1fr;gap:10px">${field('count','min','题目数量下限',s.countRange.min,40)}${field('count','max','题目数量上限',s.countRange.max,40)}</div>`:''}${s.assemblyMode!=='count-range'?`<div class="grid" style="grid-template-columns:1fr 1fr;gap:10px">${field('marks','min','分数下限',s.marksRange.min,300)}${field('marks','max','分数上限',s.marksRange.max,300)}</div>`:''}<p class="notice" id="type-total" ${s.byType?'':'hidden'}>${typeTotal()}</p><p class="muted">${s.byType?'以综合题和选择题的数量合计决定题数，忽略题目数量区间；概念考察不重复计数。':'区间上下限相同可指定一个确定值。'}题量、分数和题型均按最终整卷统计，已添加题目计入目标。完整大题按一道计，含概念小问的整题计入概念考察。</p></div>`;
@@ -47,25 +80,52 @@ export async function selection(mode='normal',params=new URLSearchParams()){
  function typeTotal(){return '按题型数量组卷：共 '+(Number(s.counts.comprehensive||0)+Number(s.counts.choice||0))+' 道，其中概念考察 '+Number(s.counts.concept||0)+' 道已包含在综合题内。';}
  function assemblyTarget(){return '';}
  function draw(){
+  if(s.review){drawReview();return;}
   const v=H().view(catalog,s.unit,s.chapters,s.topics),papers=catalog.papers.filter(p=>p.unit===s.unit).sort((a,b)=>b.session.localeCompare(a.session)),years=[...new Set(papers.map(p=>p.session.slice(0,4)))],whole=mode==='paper'||mode==='assemble'&&s.source==='paper';
-  main(`${heading(mode==='assemble'?'BUILD YOUR PAPER':'CHOOSE YOUR FOCUS',mode==='assemble'?'出一份试卷':mode==='paper'?'历年整卷测试':mode==='concept'?'概念考察':mode==='discussion'?'论述练习':'知识点测试',mode==='assemble'?'按知识点挑选，或直接生成一整套历年真题。':'重新进入本页，从完整题池开始；本轮继续测试不会重复。')}<div class="builder-layout"><div><div class="card">${mode==='assemble'?`<label class="field label">试卷名称<input class="input" id="paper-title" maxlength="100" value="${esc(s.title)}" placeholder="例如：Unit 1 力学周测"></label>`:''}<div class="label">选择 Unit</div>${units(s.unit)}${mode==='assemble'?`<div class="source-tabs"><button class="chip ${s.source==='topics'?'active':''}" data-source="topics">按知识点组卷</button><button class="chip ${s.source==='paper'?'active':''}" data-source="paper">历年整套真题</button></div>`:''}${whole?`<div class="section-head"><h3>选择年份</h3></div><div class="chips">${['',...years].map(y=>`<button class="chip ${s.year===y?'active':''}" data-year="${y}">${y?y+' 年':'全部年份'}</button>`).join('')}</div><div class="section-head"><h3>选择考季与试卷</h3></div><div class="list">${papers.filter(p=>!s.year||p.session.startsWith(s.year)).map(p=>`<label class="select-card ${s.paper===p.id?'selected':''}"><input type="radio" name="paper" value="${p.id}" ${s.paper===p.id?'checked':''}><span class="grow"><strong>${esc(p.title)}</strong><span class="muted" style="display:block">${p.count} 道原题 · ${p.marks} 分</span></span></label>`).join('')}</div>`:`${mode==='assemble'?`<div class="divider"></div><label class="checkline"><input id="by-type" type="checkbox" ${s.byType?'checked':''}><span><strong>分别设置题型数量</strong><br><span class="muted">综合题和选择题；概念考察计入综合题</span></span></label>`:''}<div class="section-head"><h3>题目难度<span class="section-count">可多选</span></h3></div><div class="difficulty-filters"><button class="chip ${!s.difficulties.length?'active':''}" data-difficulty="" aria-pressed="${!s.difficulties.length}">全部难度</button>${[1,2,3,4,5].map(n=>`<button class="chip ${s.difficulties.includes(n)?'active':''}" data-difficulty="${n}" aria-label="${n} 星难度" aria-pressed="${s.difficulties.includes(n)}">${stars(n)}</button>`).join('')}</div><details class="difficulty-legend"><summary>分级标准</summary><p>1 星：直接记忆或识别；2 星：一步应用；3 星：多步运算或因果链；4 星：跨考点建模与推断；5 星：高度自主建模、实验评估或复杂综合计算。整题按最难小问标星，并保留逐小问星级。此为教学估计，不是官方难度。</p></details>${mode==='assemble'?`<div class="section-head"><h3>浏览题目形式</h3></div><div class="chips">${[['part','拆分小问'],['whole','完整大题'],['all','全部形式']].map(([k,v])=>`<button class="chip ${s.browseForm===k?'active':''}" data-form="${k}">${v}</button>`).join('')}</div>`:''}${mode==='assemble'?`<div class="section-head"><h3>知识点匹配方式</h3></div><label class="field label"><select class="input" id="topic-match" aria-label="知识点匹配方式"><option value="loose" ${s.topicMatch==='loose'?'selected':''}>宽松遵循知识点</option><option value="strict" ${s.topicMatch==='strict'?'selected':''}>严格遵循知识点</option></select></label><p class="muted">严格：题目全部考点都在所选范围内。宽松：包含任一所选考点即可。按题库知识点标注筛选；完整大题按全部小问的考点判断。不细选时使用当前 Unit 或所选章节。</p>`:''}<div class="section-head"><h3>考纲章节<span class="section-count">可多选 · 已选 ${s.chapters.length}</span></h3></div><div class="chips chapter-chips"><button class="chip ${!s.chapters.length?'active':''}" data-chapter="">全部章节</button>${v.chapters.map(c=>`<button class="chip ${c.on?'active':''}" data-chapter="${c.id}">${esc(c.id+' '+c.zh)}<small>${esc(c.en)}</small></button>`).join('')}</div><div class="section-head"><h3>具体知识点<span class="section-count">已选 ${s.topics.length}</span></h3><button class="text-button" id="clear-topics">清空细选</button></div><p class="muted" style="margin-bottom:16px">不细选时，使用${s.chapters.length?'所选章节':'当前 Unit'}中的全部对应知识点。</p><div class="topic-grid">${v.topics.map(t=>`<label class="select-card ${t.on?'selected':''}"><input type="checkbox" name="topic" value="${t.id}" ${t.on?'checked':''}><span class="grow"><span class="badge">${esc(t.syllabusCode||t.chapterCode)}</span><br>${esc(t.title)}</span></label>`).join('')}</div>`}</div>${mode==='assemble'&&!whole?`<div class="section-head"><h2>手动挑选题目</h2><span class="muted">${s.total} 道可选</span></div><div class="card"><label class="field label">手选题型<select class="input" id="browse-type"><option value="all" ${s.browseType==='all'?'selected':''}>全部题型</option><option value="choice" ${s.browseType==='choice'?'selected':''}>选择题</option><option value="comprehensive" ${s.browseType==='comprehensive'?'selected':''}>大题（综合题）</option></select></label><div class="row"><input class="input grow" id="browse-search" placeholder="检索题干 / 年份 / 题号" value="${esc(s.search)}"><button class="btn secondary" id="browse" ${s.loading?'disabled':''}>${s.loading?'读取中…':'列出题目'}</button></div><div style="margin-top:20px" class="list">${s.items.map(q=>`<article class="manual-question ${s.cart.has(q.id)?'selected':''}"><div class="manual-question-heading"><div class="grow"><span class="badge">${esc(q.questionTypeLabel)}</span> <span class="badge">${questionForm(q)}</span><h3>${esc(q.source)}</h3><p class="muted">${q.marks} 分 · ${esc(q.focus||'')}</p></div>${cartButton(q)}</div><div class="manual-question-body">${knowledgeLinks(q)}${media(q.questionImages,q.unit,q.text)}${q.contextImages?.length?`<details><summary>完整题干与图示</summary>${media(q.contextImages,q.unit)}</details>`:''}</div></article>`).join('')}${!s.items.length?empty('选择范围后，点击“列出题目”浏览原题。'):''}</div>${s.items.length<s.total?'<button class="btn secondary full" id="more-items" style="margin-top:20px">加载更多</button>':''}</div>`:''}</div><aside class="card sticky"><div class="eyebrow">YOUR SELECTION</div><h3>${mode==='assemble'?'组卷设置':'准备开始'}</h3><div class="selection-summary"><span class="muted">当前单元</span><div>Unit ${s.unit}</div></div><div class="selection-summary"><span class="muted">练习范围</span><div>${whole?'历年完整真题':s.topics.length?s.topics.length+' 个知识点':s.chapters.length?s.chapters.length+' 个章节':'当前 Unit 全部知识点'}</div></div>${mode==='assemble'&&!whole?`${assemblySettings()}${s.byType?`<div style="margin-top:18px"><label class="quota-row"><span class="grow">综合题数量</span><input class="input" data-quota="comprehensive" aria-label="综合题数量" type="number" min="0" max="40" value="${s.counts.comprehensive}"></label><div style="margin-left:14px;padding-left:12px;border-left:2px solid #e0e6ee"><label class="field label">其中概念考察题数量<input class="input" data-quota="concept" aria-label="其中概念考察题数量" type="number" min="0" max="${s.counts.comprehensive}" value="${s.counts.concept}"></label></div><label class="quota-row"><span class="grow">选择题数量</span><input class="input" data-quota="choice" aria-label="选择题数量" type="number" min="0" max="40" value="${s.counts.choice}"></label><p class="muted">概念考察包含在综合题内，不重复累加题数。</p></div>`:''}${assemblyTarget()}<button class="btn full" id="auto-paper">${s.cart.size?'保留已添加题目并随机补题':'自动随机组卷'}</button><p class="export-note">优先覆盖不同知识点，并按所设范围匹配实际题数与总分。设置题型数量后，以题型数量合计为准；涉及分数的模式仍匹配分数区间。</p><div class="divider"></div><div class="row between"><strong>手选题目</strong><span class="badge" id="cart-count">${s.cart.size} 道</span></div><p class="muted" id="cart-summary" style="margin:10px 0">${cartSummary()}</p><div class="notice" style="margin:12px 0"><strong>手选已选题型数量</strong><p id="cart-type-summary" style="margin-top:6px">${cartTypes()}</p></div><button class="btn soft full" id="preview-cart" style="margin-bottom:10px" ${!s.cart.size?'disabled':''}>预览已选题目</button><button class="btn secondary full" id="manual-paper" ${!s.cart.size?'disabled':''}>生成手选试卷</button><p class="export-note">手选时整题与所属小问重叠，仅保留整题。随机补题接在已添加题目之后，并跳过重叠题目。</p>`:`<p class="muted" style="margin:20px 0">${whole?'保留原卷的题号、顺序与分值。':'每轮随机十道；不足十道时由你确认是否使用剩余题目。'}</p><button class="btn full" id="${mode==='assemble'?'whole-paper':'start-test'}" ${whole&&!s.paper?'disabled':''}>${mode==='assemble'?'生成整套真题':whole?'开始整卷作答':'开始测试 · 随机十道'}</button>`}${mode==='assemble'?'<p class="export-note">题目与答案可导出 Word / PDF；生成后可下载 Excel 试卷分析。</p>':''}</aside></div>`);
+  main(`${heading(mode==='assemble'?'BUILD YOUR PAPER':'CHOOSE YOUR FOCUS',mode==='assemble'?'出一份试卷':mode==='paper'?'历年整卷测试':mode==='concept'?'概念考察':mode==='discussion'?'论述练习':'知识点测试',mode==='assemble'?'按知识点挑选，或直接生成一整套历年真题。':'重新进入本页，从完整题池开始；本轮继续测试不会重复。')}<div class="builder-layout"><div><div class="card">${mode==='assemble'?`<label class="field label">试卷名称<input class="input" id="paper-title" maxlength="100" value="${esc(s.title)}" placeholder="例如：Unit 1 力学周测"></label>`:''}<div class="label">选择 Unit</div>${units(s.unit)}${mode==='assemble'?`<div class="source-tabs"><button class="chip ${s.source==='topics'?'active':''}" data-source="topics">按知识点组卷</button><button class="chip ${s.source==='paper'?'active':''}" data-source="paper">历年整套真题</button></div>`:''}${whole?`<div class="section-head"><h3>选择年份</h3></div><div class="chips">${['',...years].map(y=>`<button class="chip ${s.year===y?'active':''}" data-year="${y}">${y?y+' 年':'全部年份'}</button>`).join('')}</div><div class="section-head"><h3>选择考季与试卷</h3></div><div class="list">${papers.filter(p=>!s.year||p.session.startsWith(s.year)).map(p=>`<label class="select-card ${s.paper===p.id?'selected':''}"><input type="radio" name="paper" value="${p.id}" ${s.paper===p.id?'checked':''}><span class="grow"><strong>${esc(p.title)}</strong><span class="muted" style="display:block">${p.count} 道原题 · ${p.marks} 分</span></span></label>`).join('')}</div>`:`${mode==='assemble'?`<div class="divider"></div><label class="checkline"><input id="by-type" type="checkbox" ${s.byType?'checked':''}><span><strong>分别设置题型数量</strong><br><span class="muted">综合题和选择题；概念考察计入综合题</span></span></label>`:''}<div class="section-head"><h3>题目难度<span class="section-count">可多选</span></h3></div><div class="difficulty-filters"><button class="chip ${!s.difficulties.length?'active':''}" data-difficulty="" aria-pressed="${!s.difficulties.length}">全部难度</button>${[1,2,3,4,5].map(n=>`<button class="chip ${s.difficulties.includes(n)?'active':''}" data-difficulty="${n}" aria-label="${n} 星难度" aria-pressed="${s.difficulties.includes(n)}">${stars(n)}</button>`).join('')}</div><details class="difficulty-legend"><summary>分级标准</summary><p>1 星：直接记忆或识别；2 星：一步应用；3 星：多步运算或因果链；4 星：跨考点建模与推断；5 星：高度自主建模、实验评估或复杂综合计算。整题按最难小问标星，并保留逐小问星级。此为教学估计，不是官方难度。</p></details>${mode==='assemble'?`<div class="section-head"><h3>浏览题目形式</h3></div><div class="chips">${[['part','拆分小问'],['whole','完整大题'],['all','全部形式']].map(([k,v])=>`<button class="chip ${s.browseForm===k?'active':''}" data-form="${k}">${v}</button>`).join('')}</div>`:''}${mode==='assemble'?`<div class="section-head"><h3>知识点匹配方式</h3></div><label class="field label"><select class="input" id="topic-match" aria-label="知识点匹配方式"><option value="loose" ${s.topicMatch==='loose'?'selected':''}>宽松遵循知识点</option><option value="strict" ${s.topicMatch==='strict'?'selected':''}>严格遵循知识点</option></select></label><p class="muted">严格：题目全部考点都在所选范围内。宽松：包含任一所选考点即可。按题库知识点标注筛选；完整大题按全部小问的考点判断。不细选时使用当前 Unit 或所选章节。</p>`:''}<div class="section-head"><h3>考纲章节<span class="section-count">可多选 · 已选 ${s.chapters.length}</span></h3></div><div class="chips chapter-chips"><button class="chip ${!s.chapters.length?'active':''}" data-chapter="">全部章节</button>${v.chapters.map(c=>`<button class="chip ${c.on?'active':''}" data-chapter="${c.id}">${esc(c.id+' '+c.zh)}<small>${esc(c.en)}</small></button>`).join('')}</div><div class="section-head"><h3>具体知识点<span class="section-count">已选 ${s.topics.length}</span></h3><button class="text-button" id="clear-topics">清空细选</button></div><p class="muted" style="margin-bottom:16px">不细选时，使用${s.chapters.length?'所选章节':'当前 Unit'}中的全部对应知识点。</p><div class="topic-grid">${v.topics.map(t=>`<label class="select-card ${t.on?'selected':''}"><input type="checkbox" name="topic" value="${t.id}" ${t.on?'checked':''}><span class="grow"><span class="badge">${esc(t.syllabusCode||t.chapterCode)}</span><br>${esc(t.title)}</span></label>`).join('')}</div>`}</div>${mode==='assemble'&&!whole?`<div class="section-head"><h2>手动挑选题目</h2><span class="muted">${s.total} 道可选</span></div><div class="card"><label class="field label">手选题型<select class="input" id="browse-type"><option value="all" ${s.browseType==='all'?'selected':''}>全部题型</option><option value="choice" ${s.browseType==='choice'?'selected':''}>选择题</option><option value="comprehensive" ${s.browseType==='comprehensive'?'selected':''}>大题（综合题）</option></select></label><div class="row"><input class="input grow" id="browse-search" placeholder="检索题干 / 年份 / 题号" value="${esc(s.search)}"><button class="btn secondary" id="browse" ${s.loading?'disabled':''}>${s.loading?'读取中…':'列出题目'}</button></div><div style="margin-top:20px" class="list">${s.items.map(q=>`<article class="manual-question ${s.cart.has(q.id)?'selected':''}"><div class="manual-question-heading"><div class="grow"><span class="badge">${esc(q.questionTypeLabel)}</span> <span class="badge">${questionForm(q)}</span><h3>${esc(q.source)}</h3><p class="muted">${q.marks} 分 · ${esc(q.focus||'')}</p></div>${cartButton(q)}</div><div class="manual-question-body">${knowledgeLinks(q)}${media(q.questionImages,q.unit,q.text)}${q.contextImages?.length?`<details><summary>完整题干与图示</summary>${media(q.contextImages,q.unit)}</details>`:''}</div></article>`).join('')}${!s.items.length?empty('选择范围后，点击“列出题目”浏览原题。'):''}</div>${s.items.length<s.total?'<button class="btn secondary full" id="more-items" style="margin-top:20px">加载更多</button>':''}</div>`:''}</div><aside class="card sticky"><div class="eyebrow">YOUR SELECTION</div><h3>${mode==='assemble'?'组卷设置':'准备开始'}</h3><div class="selection-summary"><span class="muted">当前单元</span><div>Unit ${s.unit}</div></div><div class="selection-summary"><span class="muted">练习范围</span><div>${whole?'历年完整真题':s.topics.length?s.topics.length+' 个知识点':s.chapters.length?s.chapters.length+' 个章节':'当前 Unit 全部知识点'}</div></div>${mode==='assemble'&&!whole?`${assemblySettings()}${s.byType?`<div style="margin-top:18px"><label class="quota-row"><span class="grow">综合题数量</span><input class="input" data-quota="comprehensive" aria-label="综合题数量" type="number" min="0" max="40" value="${s.counts.comprehensive}"></label><div style="margin-left:14px;padding-left:12px;border-left:2px solid #e0e6ee"><label class="field label">其中概念考察题数量<input class="input" data-quota="concept" aria-label="其中概念考察题数量" type="number" min="0" max="${s.counts.comprehensive}" value="${s.counts.concept}"></label></div><label class="quota-row"><span class="grow">选择题数量</span><input class="input" data-quota="choice" aria-label="选择题数量" type="number" min="0" max="40" value="${s.counts.choice}"></label><p class="muted">概念考察包含在综合题内，不重复累加题数。</p></div>`:''}${assemblyTarget()}<button class="btn full" id="auto-paper">${s.cart.size?'保留已添加题目并随机补题':'自动随机组卷'}</button><p class="export-note">优先覆盖不同知识点，并按所设范围匹配实际题数与总分。设置题型数量后，以题型数量合计为准；涉及分数的模式仍匹配分数区间。</p><div class="divider"></div><div class="row between"><strong>手选题目</strong><span class="badge" id="cart-count">${s.cart.size} 道</span></div><p class="muted" id="cart-summary" style="margin:10px 0">${cartSummary()}</p><div class="notice" style="margin:12px 0"><strong>手选已选题型数量</strong><p id="cart-type-summary" style="margin-top:6px">${cartTypes()}</p></div><button class="btn soft full" id="preview-cart" style="margin-bottom:10px" ${!s.cart.size?'disabled':''}>预览已选试卷</button><p class="export-note">手选时整题与所属小问重叠，仅保留整题。随机补题接在已添加题目之后，并跳过重叠题目。</p>`:`<p class="muted" style="margin:20px 0">${whole?'保留原卷的题号、顺序与分值。':'每轮随机十道；不足十道时由你确认是否使用剩余题目。'}</p><button class="btn full" id="${mode==='assemble'?'whole-paper':'start-test'}" ${whole&&!s.paper?'disabled':''}>${mode==='assemble'?'预览整套真题':whole?'开始整卷作答':'开始测试 · 随机十道'}</button>`}${mode==='assemble'?'<p class="export-note">题目与答案可导出 Word / PDF；生成后可下载 Excel 试卷分析。</p>':''}</aside></div>`);
  }
  function reset(){s.items=[];s.total=0;s.paper='';s.year='';}
  async function browse(more=false){if(!requireUser())return;s.search=$('#browse-search').value;const o={...opts(),paperType:s.browseType},fingerprint=JSON.stringify({...o,search:s.search});s.loading=true;draw();try{const q=new URLSearchParams({...o,topics:o.topics.join(','),search:s.search,offset:more?s.items.length:0,sort:'question-type'}),r=await api('/questions?'+q);if(fingerprint!==JSON.stringify({...opts(),paperType:s.browseType,search:s.search}))return;s.items=more?s.items.concat(r.items):r.items;s.total=r.total;}finally{s.loading=false;draw();}}
- async function savePaper(automatic,whole=false){
-  if(s.saving||!requireUser())return;
+ function paperRequest(automatic,whole){
   const title=s.title.trim();
-  if(!title||title.length>100)throw new Error('请填写 1–100 字的试卷名称');
-  const body=whole?{unit:s.unit,title,sourcePaperId:s.paper}:{
-   ...opts(),title,automatic,fixedIds:[...s.cart.keys()],assemblyProtocol:'range-v2',
-   assemblyMode:s.assemblyMode,randomStructure:s.randomStructure,
+  if(!title||title.length>100)throw Error('请填写 1–100 字的试卷名称');
+  return whole?{unit:s.unit,title,sourcePaperId:s.paper}:{
+   ...opts(),title,automatic,fixedIds:[...s.cart.keys()],keepFixedOrder:s.keepOrder,
+   assemblyProtocol:'range-v2',assemblyMode:s.assemblyMode,randomStructure:s.randomStructure,
    countRange:{min:Number(s.countRange.min),max:Number(s.countRange.max)},
    marksRange:{min:Number(s.marksRange.min),max:Number(s.marksRange.max)},
    ...(s.byType&&automatic?{typeCounts:Object.fromEntries(Object.entries(s.counts).map(([k,v])=>[k,Number(v)]))}:{})
   };
+ }
+ async function previewPaper(automatic,whole=false){
+  if(s.saving||!requireUser())return;
+  const request=paperRequest(automatic,whole),host=$('#main');
   s.saving=true;
-  try{await api('/papers',body);toast('试卷已生成');location.hash='/papers';}
-  finally{s.saving=false;}
+  try{
+   const draft=await api('/papers/preview',request);
+   if(host!==$('#main'))return;
+   if(whole!==wholeMode()||JSON.stringify(request)!==JSON.stringify(paperRequest(automatic,whole)))throw Error('组卷设置已变更，请重新预览');
+   s.cart=new Map(draft.questions.map(q=>[q.id,q]));
+   s.keepOrder=true;
+   if(draft.sourcePaperId)s.originalPaper={id:draft.sourcePaperId,unit:draft.sourceUnit,ids:draft.ids};
+   s.review=true;
+   draw();
+   scrollTo(0,0);
+  }finally{s.saving=false;}
+ }
+ async function saveReviewedPaper(){
+  if(s.saving||!s.cart.size||!requireUser())return;
+  const ids=[...s.cart.keys()],original=s.originalPaper;
+  const sameSource=original&&original.ids.length===ids.length&&original.ids.every((id,index)=>id===ids[index]);
+  const body=sameSource?{title:s.title,unit:original.unit,sourcePaperId:original.id}:{
+   title:s.title,fixedIds:ids,keepFixedOrder:true,topicMatch:s.topicMatch
+  };
+  const host=$('#main');
+  s.saving=true;
+  try{
+   await api('/papers',body);
+   if(host===$('#main')){toast('试卷已保存');location.hash='/papers';}
+  }finally{s.saving=false;}
  }
  draw();on('change','#topic-match',(e,b)=>{s.topicMatch=b.value;s.items=[];s.total=0;draw();});on('click','[data-unit]',(e,b)=>{s.unit=state.unit=Number(b.dataset.unit);s.chapters=[];s.topics=[];reset();draw();});on('click','[data-source]',(e,b)=>{s.source=b.dataset.source;reset();draw();});on('click','[data-year]',(e,b)=>{s.year=b.dataset.year;s.paper='';draw();});on('change','input[name=paper]',(e,b)=>{s.paper=b.value;if(!s.custom)s.title=catalog.papers.find(p=>p.id===b.value).title;draw();});on('click','[data-chapter]',(e,b)=>{s.chapters=b.dataset.chapter?H().toggle(s.chapters,b.dataset.chapter):[];s.topics=[];s.items=[];s.total=0;draw();});on('change','input[name=topic]',(e,b)=>{s.topics=H().toggle(s.topics,b.value);s.items=[];s.total=0;draw();});on('click','#clear-topics',()=>{s.topics=[];s.items=[];s.total=0;draw();});on('click','[data-category]',(e,b)=>{s.category=b.dataset.category;if(s.category!=='normal')s.browseForm='part';reset();draw();});on('change','#by-type',(e,b)=>{s.byType=b.checked;draw();});on('input','#paper-title',(e,b)=>{s.title=b.value;s.custom=true;});on('input','[data-quota]',(e,b)=>{s.counts[b.dataset.quota]=b.value;const c=$('[data-quota=concept]');if(c)c.max=s.counts.comprehensive;const total=$('#type-total');if(total)total.textContent=typeTotal();});
  on('click','[data-difficulty]',(e,b)=>{const n=Number(b.dataset.difficulty);s.difficulties=n?s.difficulties.includes(n)?s.difficulties.filter(x=>x!==n):[...s.difficulties,n]:[];reset();draw();});on('click','[data-form]',(e,b)=>{s.browseForm=b.dataset.form;if(s.browseForm!=='part')s.category='normal';s.items=[];s.total=0;draw();});
@@ -88,8 +148,32 @@ export async function selection(mode='normal',params=new URLSearchParams()){
   updateCart();
  });
  on('click','[data-look]',async(e,b)=>{const q=s.items.find(q=>q.id===b.dataset.look);await formModal(q.source,`<div>${knowledgeLinks(q)}${media(q.questionImages,q.unit,q.text)}</div>`,'关闭');});
- on('click','#preview-cart',()=>s.cart.size&&modal('已选题目预览',`<p id="picked-stat" class="notice">${esc(pickedStats())}</p><div id="picked-list">${pickedPreview()}</div>`,{confirm:'返回组卷',cancel:false,wide:true}));on('click','[data-remove-picked]',(e,b)=>{s.cart.delete(b.dataset.removePicked);updateCart();$('#picked-stat').textContent=pickedStats();$('#picked-list').innerHTML=pickedPreview();});
- taskButton('#auto-paper',()=>savePaper(true));taskButton('#manual-paper',()=>savePaper(false));taskButton('#whole-paper',()=>savePaper(false,true));taskButton('#start-test',async()=>{const o=opts();if(wholeMode()){if(!s.paper)throw new Error('请选择一套真题');o.session=catalog.papers.find(p=>p.id===s.paper).session;}const t=await startTest(o);if(t)location.hash='/exam/'+t.id;});
+ on('click','[data-review-move]',(e,b)=>{
+  if(s.saving)return;
+  const rows=[...s.cart],from=Number(b.dataset.reviewMove),delta=Number(b.dataset.delta),to=from+delta;
+  if(to<0||to>=rows.length)return;
+  [rows[from],rows[to]]=[rows[to],rows[from]];
+  s.cart=new Map(rows);
+  updateReview();
+  const button=$('[data-review-move="'+to+'"][data-delta="'+delta+'"]');
+  (button.disabled?$('[data-review-move="'+to+'"]:not(:disabled)'):button)?.focus({preventScroll:true});
+ });
+ on('click','[data-review-delete]',(e,b)=>{
+  if(s.saving)return;
+  s.cart.delete(b.dataset.reviewDelete);
+  updateReview();
+ });
+ on('click','#continue-assembly',()=>{
+  if(s.saving)return;
+  s.review=false;
+  s.source='topics';
+  draw();
+ });
+ taskButton('#save-reviewed-paper',saveReviewedPaper);
+ taskButton('#preview-cart',()=>previewPaper(false));
+ taskButton('#auto-paper',()=>previewPaper(true));
+ taskButton('#whole-paper',()=>previewPaper(false,true));
+ taskButton('#start-test',async()=>{const o=opts();if(wholeMode()){if(!s.paper)throw new Error('请选择一套真题');o.session=catalog.papers.find(p=>p.id===s.paper).session;}const t=await startTest(o);if(t)location.hash='/exam/'+t.id;});
  function wholeMode(){return mode==='paper'||mode==='assemble'&&s.source==='paper';}
 }
 
