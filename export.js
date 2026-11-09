@@ -1,4 +1,4 @@
-import {api,modal,$,toast,esc} from './core.js?v=20261030r3';
+import {api,modal,$,toast,esc} from './core.js?v=20261109r1';
 let busy=false;
 let analysisIndexPromise;
 let rowWriterPromise;

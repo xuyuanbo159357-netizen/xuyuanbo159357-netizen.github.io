@@ -15,16 +15,29 @@ modules['./paper-plan']=function(require,module,exports){
 'use strict';
 const {fail,integer,shuffle,sum}=require('./common'),A=require('./assembly');
 const bucket=(bank,q)=>bank.paperType(q)==='choice'?'choice':bank.isConcept(q)?'concept':'written';
-function pool(bank,opts){let rows=bank.filtered({...opts,category:'all',structure:'part'});if(opts.category==='concept')rows=rows.filter(q=>bank.isConcept(q));if(opts.category==='discussion')rows=rows.filter(q=>q.category==='discussion'||q.questionType==='discussion');if(opts.typeCounts){const t=opts.typeCounts;rows=rows.filter(q=>bucket(bank,q)==='choice'?Number(t.choice)>0:bucket(bank,q)==='concept'?Number(t.concept)>0:Number(t.comprehensive)-Number(t.concept)>0);}return rows;}
+function pool(bank,opts){let rows=bank.filtered({...opts,category:'all',structure:opts.randomStructure??'part'});if(opts.category==='concept')rows=rows.filter(q=>bank.isConcept(q));if(opts.category==='discussion')rows=rows.filter(q=>q.category==='discussion'||q.questionType==='discussion');if(opts.typeCounts){const t=opts.typeCounts;rows=rows.filter(q=>bucket(bank,q)==='choice'?Number(t.choice)>0:bucket(bank,q)==='concept'?Number(t.concept)>0:Number(t.comprehensive)-Number(t.concept)>0);}return rows;}
 function choose(bank,opts){
  if(!['score-range','count-range','both-ranges'].includes(opts.assemblyMode))fail('请选择三种区间匹配方式之一');
- const marks=opts.assemblyMode==='count-range'?{min:1,max:300}:A.range(opts.marksRange,'分数',1,300);
+ if(opts.randomStructure!==undefined&&!['part','whole'].includes(opts.randomStructure))fail('请选择完整大题或拆分小问');
+ let marks=opts.assemblyMode==='count-range'?{min:1,max:300}:A.range(opts.marksRange,'分数',1,300);
  let quotas=null;
  if(opts.typeCounts!==undefined){const t=opts.typeCounts;if(!t||typeof t!=='object'||Array.isArray(t)||Object.keys(t).some(k=>!['comprehensive','choice','concept'].includes(k)))fail('题型数量设置无效');const comp=integer(t.comprehensive??0,'综合题数量',0,40),choice=integer(t.choice??0,'选择题数量',0,40),concept=integer(t.concept??0,'其中概念题数量',0,40);if(concept>comp)fail('概念考察题数量不能超过综合题数量');if(comp+choice<1||comp+choice>40)fail('综合题与选择题合计需为 1–40 道');quotas={concept,written:comp-concept,choice};}
  const total=quotas?sum(Object.values(quotas)):null;
- const counts=quotas?{min:total,max:total}:opts.assemblyMode==='score-range'?{min:1,max:40}:A.range(opts.countRange,'题目数量',1,40);
+ let counts=quotas?{min:total,max:total}:opts.assemblyMode==='score-range'?{min:1,max:40}:A.range(opts.countRange,'题目数量',1,40);
  if(!counts||!marks)fail('请填写当前匹配方式对应的区间');
- const rows=shuffle(pool(bank,opts)).filter(q=>!quotas||quotas[bucket(bank,q)]>0),mask=(1n<<BigInt(marks.max+1))-1n;
+ const fixed=(opts.fixedIds||[]).map(id=>bank.questions.get(id));
+ if(fixed.length){
+   const fixedMarks=sum(fixed.map(q=>q.marks));
+   if(quotas){
+     for(const q of fixed)quotas[bucket(bank,q)]--;
+     if(Object.values(quotas).some(n=>n<0))fail('已添加的题目超出整卷题型配额，请调高配额或移除部分题目',409);
+   }
+   counts={min:Math.max(1,counts.min-fixed.length),max:counts.max-fixed.length};
+   marks={min:Math.max(1,marks.min-fixedMarks),max:marks.max-fixedMarks};
+   if(counts.max<counts.min||marks.max<marks.min)fail('已添加的题目已达到或超出目标区间，请提高上限或直接生成手选试卷',409);
+ }
+ const rows=shuffle(pool(bank,opts)).filter(q=>(!quotas||quotas[bucket(bank,q)]>0)&&!fixed.some(p=>A.conflict(p,q)));
+ const mask=(1n<<BigInt(marks.max+1))-1n;
  const reachable=(xs,n)=>{const dp=Array(n+1).fill(0n);dp[0]=1n;for(const q of xs)for(let k=n;k>0;k--)dp[k]|=(dp[k-1]<<BigInt(q.marks))&mask;return dp;};
  const dp=reachable(rows,counts.max);let typeBits=mask;
  if(quotas){typeBits=1n;for(const [k,n]of Object.entries(quotas)){const bits=reachable(rows.filter(q=>bucket(bank,q)===k),n)[n];let joined=0n;for(let s=0;s<=marks.max;s++)if((typeBits>>BigInt(s))&1n)joined|=bits<<BigInt(s);typeBits=joined&mask;}}
@@ -44,7 +57,7 @@ function choose(bank,opts){
    if(!((attainable>>BigInt(score))&1n))return null;
    let candidates=free;
    if(left){let ratio=Infinity,lo=0,hi=0;for(const [k,want]of Object.entries(left))if(want){const xs=free.filter(q=>bucket(bank,q)===k),m=xs.map(q=>q.marks).sort((a,b)=>a-b);if(xs.length<want)return null;lo+=sum(m.slice(0,want));hi+=sum(m.slice(-want));if(xs.length/want<ratio){ratio=xs.length/want;candidates=xs;}}if(score<lo||score>hi)return null;}
-   const covered=new Set(selected.flatMap(q=>q.topics||[]));candidates.sort((a,b)=>gain(b,covered)-gain(a,covered)||Math.abs(a.marks-score/n)-Math.abs(b.marks-score/n));
+   const covered=new Set([...fixed,...selected].flatMap(q=>q.topics||[]));candidates.sort((a,b)=>gain(b,covered)-gain(a,covered)||Math.abs(a.marks-score/n)-Math.abs(b.marks-score/n));
    for(const q of candidates){const k=bucket(bank,q),old=last.get(k);last.set(k,pos.get(q.id));if(left)left[k]--;selected.push(q);const result=search(n-1,score-q.marks);selected.pop();if(left)left[k]++;if(old===undefined)last.delete(k);else last.set(k,old);if(result)return result;}return null;
   }
   const result=search(target.n,target.s);if(result)return result;if(Date.now()>deadline)break;
@@ -181,7 +194,15 @@ class Bank{
   constructor(folder=path.join(__dirname,'../resources')){this.folder=folder;this.catalog=require(path.join(folder,'catalog.json'));this.questions=new Map(require(path.join(folder,'questions.json')).map(q=>[q.id,q]));this.assets=require(path.join(folder,'assets.json'));this.wordCache=new Map();this.imageLayout=require(path.join(folder,'image-layout.json'));}
   questionType(q){return q.questionType||(q.answerMode==='choice'?'choice':q.category==='discussion'?'discussion':q.answerMode==='short'?'short':'process');}
   paperType(q){return q.answerMode==='choice'?'choice':'comprehensive';}
-  isConcept(q){if(!this.conceptKeys)this.conceptKeys=new Set([...this.questions.values()].filter(q=>q.category==='concept').map(q=>q.parent+':'+(q.part||'')));return this.paperType(q)!=='choice'&&this.conceptKeys.has(q.parent+':'+(q.part||''));}
+  isConcept(q){
+    if(this.paperType(q)==='choice')return false;
+    if(!this.conceptKeys){
+      const concepts=[...this.questions.values()].filter(q=>q.category==='concept');
+      this.conceptKeys=new Set(concepts.map(q=>q.parent+':'+(q.part||'')));
+      this.conceptParents=new Set(concepts.map(q=>q.parent));
+    }
+    return Assembly.form(q)==='whole'?this.conceptParents.has(q.parent):this.conceptKeys.has(q.parent+':'+(q.part||''));
+  }
   planningPool(opts){return require('./paper-plan').pool(this,opts);}
   order(ids){return ids.map((id,index)=>({id,index,rank:this.paperType(this.questions.get(id))==='choice'?1:0})).sort((a,b)=>a.rank-b.rank||a.index-b.index).map(x=>x.id);}
   typeCounts(ids){const c={comprehensive:0,choice:0,concept:0};for(const id of ids){const q=this.questions.get(id);c[this.paperType(q)]++;if(this.isConcept(q))c.concept++;}return c;}
@@ -248,12 +269,23 @@ class Service{
   async createPaper(user,body){
     let source=null;
     if(body.sourcePaperId!==undefined){source=this.bank.catalog.papers.find(p=>p.id===body.sourcePaperId);if(!source)fail('未找到所选正式试卷');if(body.unit!==undefined&&Number(body.unit)!==source.unit)fail('所选试卷不属于当前 Unit');}
-    let ids=source?source.ids.slice():body.automatic?this.bank.assemble(body):Array.isArray(body.ids)?unique(body.ids):[];
-    if(!Array.isArray(ids)||!ids.length||ids.length>600||ids.some(i=>!this.bank.questions.has(i)))fail('请加入有效题目');
-    const {conflict,form,normalize}=require('./assembly');if(!source&&!body.automatic)ids=normalize(this.bank,ids);if(ids.length>60)fail('合并后最多保留60道选题单元');for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++)if(conflict(this.bank.questions.get(ids[i]),this.bank.questions.get(ids[j])))fail('同一整题与所属小问、或同一小问的不同分类副本不能重复入卷');
-    if(!source){const accepts=this.bank.topicFilter(body);if(body.topicMatch==='strict'&&ids.some(i=>!accepts(this.bank.questions.get(i))))fail('已选题目含有范围外或未标注的知识点，请重新筛选');}
-    if(!source)ids=this.bank.order(ids);
-    const p={id:id(),owner:user.id,title:String(body.title||(source?source.title:'OxfordAQA 9630 自选试卷')).slice(0,100),ids,topicMatch:source?'loose':body.topicMatch||'loose',recipients:[],created:now(),ordering:source?'source-paper':'question-type-choice-last',typeCounts:this.bank.typeCounts(ids),coverage:this.bank.coverage(ids,body.automatic?body:{paperId:'manual'}),structureCounts:{whole:ids.filter(i=>form(this.bank.questions.get(i))==='whole').length,part:ids.filter(i=>form(this.bank.questions.get(i))==='part').length},...(source?{sourcePaperId:source.id,sourcePaperTitle:source.title,sourceSession:source.session,sourceUnit:source.unit}:{})};
+    const {conflict,form,normalize}=require('./assembly');
+    const hasFixed=!source&&body.fixedIds!==undefined;
+    if(hasFixed&&(!Array.isArray(body.fixedIds)||body.fixedIds.length>60||body.fixedIds.some(i=>!this.bank.questions.has(i))))fail('已添加题目无效或超过60道');
+    if(hasFixed&&body.automatic&&body.assemblyProtocol!=='range-v2')fail('请使用当前版本随机补题');
+    const fixed=hasFixed?normalize(this.bank,body.fixedIds):[];
+    let remaining=source?source.ids.slice():body.automatic?this.bank.assemble({...body,fixedIds:fixed}):!hasFixed&&Array.isArray(body.ids)?unique(body.ids):[];
+    if(remaining.length>600||remaining.some(i=>!this.bank.questions.has(i)))fail('请加入有效题目');
+    if(!source&&!body.automatic)remaining=normalize(this.bank,remaining);
+    if(!source&&body.topicMatch==='strict'){
+      const accepts=this.bank.topicFilter(body);
+      if(remaining.some(i=>!accepts(this.bank.questions.get(i))))fail('已选题目含有范围外或未标注的知识点，请重新筛选');
+    }
+    const ids=source?remaining:[...this.bank.order(fixed),...this.bank.order(remaining)];
+    if(!ids.length)fail('请加入有效题目');
+    if(ids.length>60)fail('合并后最多保留60道选题单元');
+    for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++)if(conflict(this.bank.questions.get(ids[i]),this.bank.questions.get(ids[j])))fail('同一整题与所属小问、或同一小问的不同分类副本不能重复入卷');
+    const p={id:id(),owner:user.id,title:String(body.title||(source?source.title:'OxfordAQA 9630 自选试卷')).slice(0,100),ids,topicMatch:source?'loose':body.topicMatch||'loose',recipients:[],created:now(),ordering:source?'source-paper':fixed.length&&body.automatic?'manual-first':'question-type-choice-last',typeCounts:this.bank.typeCounts(ids),coverage:this.bank.coverage(ids,body.automatic?body:{paperId:'manual'}),structureCounts:{whole:ids.filter(i=>form(this.bank.questions.get(i))==='whole').length,part:ids.filter(i=>form(this.bank.questions.get(i))==='part').length},...(source?{sourcePaperId:source.id,sourcePaperTitle:source.title,sourceSession:source.session,sourceUnit:source.unit}:{})};
     await this.store.save('paper',p.id,user.id,p);return p;
   }
   async paperHidden(uid,key){const h=await this.store.optional('paper-hidden','paper-hidden:'+uid+':'+key);return !!h&&h.hidden!==false;}
@@ -364,7 +396,15 @@ async function route({path,method,body,user,uid,store,service:s,bank,files,cloud
   if(p.startsWith('/assignments/')){const [key,action]=p.slice('/assignments/'.length).split('/');if(action==='start'&&method==='POST')return s.createTest({id:uid},{assignmentId:key});if(action==='questions.pdf'&&method==='GET'){const a=await s.assignmentAccess(uid,key);return exportManifest(bank,a,'questions',params,store);}if(!action&&method==='GET')return s.assignmentDetail(uid,key);fail('未找到作业操作',404);}
   if(p==='/messages'&&method==='GET')return {items:await s.messagesFor(uid)};
   if(p.startsWith('/messages/')&&p.endsWith('/read')&&method==='POST')return s.readMessage(uid,p.split('/')[2]);
-  if(p==='/questions'&&method==='GET'){let qs=bank.filtered(params);if(params.sort==='question-type')qs=bank.order(qs.map(q=>q.id)).map(i=>bank.questions.get(i));const offset=integer(params.offset||0,'分页位置',0,100000);return {total:qs.length,items:qs.slice(offset,offset+30).map(q=>bank.public(q,false,params.topicMatch==='strict'))};}
+  if(p==='/questions'&&method==='GET'){
+    let qs=bank.filtered(params);
+    const type=params.paperType||'all';
+    if(!['all','choice','comprehensive'].includes(type))fail('题型筛选无效');
+    if(type!=='all')qs=qs.filter(q=>bank.paperType(q)===type);
+    if(params.sort==='question-type')qs=bank.order(qs.map(q=>q.id)).map(i=>bank.questions.get(i));
+    const offset=integer(params.offset||0,'分页位置',0,100000);
+    return {total:qs.length,items:qs.slice(offset,offset+30).map(q=>bank.public(q,false,params.topicMatch==='strict'))};
+  }
   if(p==='/lookup'&&method==='POST'){const unit=integer(body.unit||1,'Unit',1,4),result=body.text!==undefined?bank.lookupText(body.text,body.offset,unit):bank.lookup(body.image,body.x,body.y,unit);if(result.found)result.count=await store.countWord(uid,result.term,result.kind);return result;}
   if(p==='/lookups'&&method==='GET')return {items:await store.lookupRecords(uid)};
   if(p==='/tests'&&method==='POST')return s.createTest({id:uid},body);
