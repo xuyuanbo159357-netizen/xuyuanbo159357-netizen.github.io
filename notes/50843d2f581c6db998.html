@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.10.6 变压器、效率与高压输电 / The operation of a transformer · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class="physics-knowledge"><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.10 磁场</div><h1 id="h-88f50bea3dea124031">3.10.6 变压器、效率与高压输电 / The operation of a transformer</h1>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.10.6 变压器、效率与高压输电 / The operation of a transformer · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=20261112-formula-guides"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class="physics-knowledge"><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/02 知识节点/3.10 磁场</div><h1 id="h-88f50bea3dea124031">3.10.6 变压器、效率与高压输电 / The operation of a transformer</h1>
 <p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/717efac3e46a047885.html">3.10.6</a>　｜　<a class="internal-link" href="/notes/da867bb75d0c7de166.html">本单元知识谱系</a></p>
 <h2 id="h-9b72ef987b2ceff699">知识逐项讲解 / Concept-by-concept guide</h2>
 <h3 class="concept-name" id="h-211357d65ddd080d48"><strong><a class="internal-link" href="/notes/2cc486f4debbabf0d3.html">transformer — 变压器</a></strong></h3>
@@ -21,33 +21,49 @@
 <div class="math block">
 \[\Large\displaystyle \eta=\frac{V_sI_s}{V_pI_p}\]
 </div>
-<p><strong>Symbols and SI units / 符号与 SI 单位</strong></p>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
 <table>
 <thead>
 <tr>
 <th>符号 / Symbol</th>
-<th>物理量 / Quantity</th>
+<th>物理量或记号 / Quantity or notation</th>
 <th>SI 单位 / SI unit</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><span class="math inline">\(\eta\)</span></td>
-<td>变压器效率 / transformer efficiency</td>
+<td>效率 / efficiency</td>
 <td>无量纲 / dimensionless</td>
 </tr>
 <tr>
-<td><span class="math inline">\(V_p,V_s\)</span></td>
-<td>原、副线圈电压有效值 / primary and secondary rms voltages</td>
+<td><span class="math inline">\(V_{s}\)</span></td>
+<td>副线圈电势差 / secondary voltage</td>
 <td><span class="math inline">\(\mathrm{V}\)</span></td>
 </tr>
 <tr>
-<td><span class="math inline">\(I_p,I_s\)</span></td>
-<td>原、副线圈电流有效值 / primary and secondary rms currents</td>
+<td><span class="math inline">\(I_{s}\)</span></td>
+<td>副线圈电流 / secondary current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{p}\)</span></td>
+<td>原线圈电势差 / primary voltage</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I_{p}\)</span></td>
+<td>原线圈电流 / primary current</td>
 <td><span class="math inline">\(\mathrm{A}\)</span></td>
 </tr>
 </tbody>
 </table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>变压器效率是副线圈输出电功率与原线圈输入电功率的比值。</p>
+<p>Transformer efficiency is secondary electrical output power divided by primary input power.</p>
+<p><strong>适用条件 / Conditions</strong></p>
+<p>使用一致的有效值和相应的功率模型。</p>
+<p>Use consistent rms values and the appropriate power model.</p>
 <p><strong>Conditions / 条件与说明：</strong> 无量纲；若用百分数表示，再乘 100%。变压器有用输出对应副线圈功率。 / Dimensionless; multiply by 100% for a percentage. For a transformer the useful output is secondary power.</p>
 <p>定义按考纲与指定教材概括；本页未列出可直接对应的定义题评分条目。 Definitions are summarised from the specification and textbook; no directly matched definition-item citation is claimed here.</p>
 <h2 id="h-8831d8f80b1538f26b">Formula / 公式与单位</h2>
@@ -55,18 +71,191 @@
 <div class="math block">
 \[\Large\displaystyle \frac{V_s}{V_p}=\frac{N_s}{N_p}\]
 </div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(V_{s}\)</span></td>
+<td>副线圈电势差 / secondary voltage</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{p}\)</span></td>
+<td>原线圈电势差 / primary voltage</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(N_{s}\)</span></td>
+<td>副线圈匝数 / secondary number of turns</td>
+<td>无量纲 / dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(N_{p}\)</span></td>
+<td>原线圈匝数 / primary number of turns</td>
+<td>无量纲 / dimensionless</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>理想变压器的电压比等于匝数比，由两线圈共同的变化磁通决定。</p>
+<p>An ideal transformer’s voltage ratio equals its turns ratio because both windings share the changing flux.</p>
 <div class="math block">
 \[\Large\displaystyle \eta=\frac{V_sI_s}{V_pI_p}\]
 </div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\eta\)</span></td>
+<td>效率 / efficiency</td>
+<td>无量纲 / dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{s}\)</span></td>
+<td>副线圈电势差 / secondary voltage</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I_{s}\)</span></td>
+<td>副线圈电流 / secondary current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{p}\)</span></td>
+<td>原线圈电势差 / primary voltage</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I_{p}\)</span></td>
+<td>原线圈电流 / primary current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>变压器效率是副线圈输出电功率与原线圈输入电功率的比值。</p>
+<p>Transformer efficiency is secondary electrical output power divided by primary input power.</p>
+<p><strong>适用条件 / Conditions</strong></p>
+<p>使用一致的有效值和相应的功率模型。</p>
+<p>Use consistent rms values and the appropriate power model.</p>
 <div class="math block">
 \[\Large\displaystyle V_pI_p=V_sI_s\]
 </div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(V_{p}\)</span></td>
+<td>原线圈电势差 / primary voltage</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I_{p}\)</span></td>
+<td>原线圈电流 / primary current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{s}\)</span></td>
+<td>副线圈电势差 / secondary voltage</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I_{s}\)</span></td>
+<td>副线圈电流 / secondary current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>理想变压器输入功率等于输出功率，升压时电流相应减小。</p>
+<p>An ideal transformer conserves power, so a higher secondary voltage is accompanied by lower current.</p>
 <div class="math block">
 \[\Large\displaystyle P_{\mathrm{loss}}=I^2R\]
 </div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P_{\mathrm{loss}}\)</span></td>
+<td>功率 / power</td>
+<td><span class="math inline">\(\mathrm{W}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I\)</span></td>
+<td>输电线电流 / transmission-line current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(R\)</span></td>
+<td>电阻 / resistance</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>输电线电阻的发热损耗与输电电流平方成正比。</p>
+<p>Heating loss in a transmission-line resistance is proportional to squared current.</p>
 <div class="math block">
 \[\Large\displaystyle \Delta V_{\mathrm{line}}=IR\]
 </div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Delta V_{\mathrm{line}}\)</span></td>
+<td>线路电压降 / line voltage drop</td>
+<td><span class="math inline">\(\mathrm V\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I\)</span></td>
+<td>输电线电流 / transmission-line current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(R\)</span></td>
+<td>电阻 / resistance</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>输电线电阻上的电势降由电流乘线路电阻得到。</p>
+<p>The voltage drop along a resistive transmission line is current times line resistance.</p>
 <h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
 <p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
 <table>
@@ -138,6 +327,40 @@
 <h2 id="h-78f89391ca87be19db">Conditions / 条件与范围</h2>
 <p>匝比假设两线圈链接相同变化磁通；理想模型无损耗，实际效率小于一；恒定直流不能维持变压作用。</p>
 <p>The turns ratio assumes both coils link the same changing flux. Ideal power conservation excludes losses; real efficiency is below unity. Steady dc does not give continuous transformer operation.</p>
+<h2 id="h-79cd530357f82455c5">正文关系式补充说明 / Further relations used in the explanation</h2>
+<div class="math block">
+\[\Large\displaystyle I=\frac{P}{V}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(I\)</span></td>
+<td>输电线电流 / transmission-line current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(P\)</span></td>
+<td>输送功率 / transmitted power</td>
+<td><span class="math inline">\(\mathrm{W}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>输电电压 / transmission voltage</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>输送给定功率时，提高输电电压会减小输电电流，从而减小 I²R 损耗。</p>
+<p>For a fixed transmitted power, increasing transmission voltage reduces current and hence I²R losses.</p>
 <h2 id="h-eb6c7a8508e39b81f1">Explanation / 解释</h2>
 <h3 id="h-37269667d5b0f19863">互感过程与匝数关系 / Induction and turns ratio</h3>
 <p>原线圈交流→铁芯磁通随时间变化→穿过副线圈的磁通链改变→副线圈产生交流电动势。稳定直流不能维持这一过程。理想耦合时 <span class="math inline">\(\frac{V_s}{V_p}=\frac{N_s}{N_p}\)</span>，电压须用同一类型的值（例如均用rms）。</p>
@@ -286,7 +509,7 @@
 <a class="internal-link" href="/notes/f7c6092e7cb47bdc8b.html">U3逐题核对总览 / Coverage overview</a>
 <!-- EXAM_COVERAGE_END -->
 <h2 id="h-d70fdaf0a0a815007a">复述与真题 / Retrieval and practice</h2>
-<p><a class="internal-link" href="/notes/547032851926cc6d8d.html">课件例题与复述</a> · <a class="internal-link" href="/notes/bc85ac2d6f4b1f7b9b.html">按知识点真题（答案默认折叠）</a></p>
+<p><a class="internal-link" href="/notes/547032851926cc6d8d.html">例题与复述</a> · <a class="internal-link" href="/notes/bc85ac2d6f4b1f7b9b.html">按知识点真题（答案默认折叠）</a></p>
 <h2 id="h-034b1ba9b9275896b8">知识联系 / Knowledge connections</h2>
 <ul>
 <li><a class="internal-link" href="/notes/6389fbf5b53c8757b1.html">3.4.3 电阻率、热敏电阻与超导</a>：变压器、效率与高压输电 ↔ 电阻率、热敏电阻与超导</li>

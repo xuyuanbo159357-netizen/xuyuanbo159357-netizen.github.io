@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>误差棒与图像不确定度 / Error bars and graph uncertainty · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class="physics-knowledge"><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/02 知识节点/3.1 测量与误差</div><h1 id="h-80ab0cf04ce0e57834">误差棒与图像不确定度 / Error bars and graph uncertainty</h1>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>误差棒与图像不确定度 / Error bars and graph uncertainty · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=20261112-formula-guides"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class="physics-knowledge"><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U1/02 知识节点/3.1 测量与误差</div><h1 id="h-80ab0cf04ce0e57834">误差棒与图像不确定度 / Error bars and graph uncertainty</h1>
 <details class="callout physics-relations"><summary>关系摘要</summary><div class="callout-body"><p><strong>误差棒与图像不确定度 / Error bars and graph uncertainty</strong></p>
 <p>最佳直线给出估计值，允许的极端直线给出梯度和截距范围。Use a best line and acceptable extreme lines.</p>
 <p>考纲 / Specification：<a class="internal-link" href="/notes/c121509e7646ee8712.html">3.1.2 物理测量的局限 - Limitation of physical measurements</a></p>
@@ -18,7 +18,7 @@
 </ul>
 <p><strong>应用与返回 / Apply and return</strong></p>
 <ul>
-<li><a class="internal-link" href="/notes/8d77caac76f7491f44.html">M06 误差棒与图像不确定度复述与练习 - Error bars and graph uncertainty - Retrieval practice</a>：先复述本知识，再解释原课件例题；该练习页可返回本概念。</li>
+<li><a class="internal-link" href="/notes/8d77caac76f7491f44.html">M06 误差棒与图像不确定度复述与练习 - Error bars and graph uncertainty - Retrieval practice</a>：先复述本知识，再解释例题；该练习页可返回本概念。</li>
 </ul>
 <p>箭头的含义以上方关系标签为准，相关知识不一概视为严格先修。The labels distinguish definitions, derivations, evidence, measurement and applications.</p>
 </div></details>
@@ -43,43 +43,144 @@
 <div class="math block">
 \[\Large\displaystyle m=\frac{\Delta y}{\Delta x}\]
 </div>
-<p><strong>Symbols and SI units / 符号与 SI 单位</strong></p>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
 <table>
 <thead>
 <tr>
 <th>符号 / Symbol</th>
-<th>物理量 / Quantity</th>
+<th>物理量或记号 / Quantity or notation</th>
 <th>SI 单位 / SI unit</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><span class="math inline">\(m\)</span></td>
-<td>斜率 / gradient</td>
-<td><span class="math inline">\(\mathrm{\text{unit of }y\,/\,\text{unit of }x}\)</span></td>
+<td>拟合直线斜率 / fitted-line gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
 </tr>
 <tr>
 <td><span class="math inline">\(\Delta y\)</span></td>
-<td>纵轴量的变化 / change in vertical-axis quantity</td>
-<td><span class="math inline">\(\mathrm{\text{unit of }y}\)</span></td>
+<td>纵轴坐标的变化量 / change in vertical coordinate</td>
+<td>与纵轴量相同 / same as the vertical quantity</td>
 </tr>
 <tr>
 <td><span class="math inline">\(\Delta x\)</span></td>
-<td>横轴量的变化 / change in horizontal-axis quantity</td>
-<td><span class="math inline">\(\mathrm{\text{unit of }x}\)</span></td>
+<td>横轴坐标的变化量 / change in horizontal coordinate</td>
+<td>与横轴量相同 / same as the horizontal quantity</td>
 </tr>
 </tbody>
 </table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>直线斜率是纵轴变化量除以横轴变化量，读数应取拟合线上相距较远的两点。</p>
+<p>A straight-line gradient is the change in the vertical quantity divided by the change in the horizontal quantity. Use widely separated points on the fitted line.</p>
 <h2 id="h-072efd30cac18f1137">Formula / 公式</h2>
 <div class="math block">
 \[\Large\displaystyle m=\frac{\Delta y}{\Delta x}\]
 </div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>拟合直线斜率 / fitted-line gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta y\)</span></td>
+<td>纵轴坐标的变化量 / change in vertical coordinate</td>
+<td>与纵轴量相同 / same as the vertical quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta x\)</span></td>
+<td>横轴坐标的变化量 / change in horizontal coordinate</td>
+<td>与横轴量相同 / same as the horizontal quantity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>直线斜率是纵轴变化量除以横轴变化量，读数应取拟合线上相距较远的两点。</p>
+<p>A straight-line gradient is the change in the vertical quantity divided by the change in the horizontal quantity. Use widely separated points on the fitted line.</p>
 <div class="math block">
 \[\Large\displaystyle y=mx+c\]
 </div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(y\)</span></td>
+<td>纵轴物理量 / vertical-axis quantity</td>
+<td>由纵轴量决定 / unit of vertical-axis quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>拟合直线斜率 / fitted-line gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(x\)</span></td>
+<td>横轴或被测物理量 / horizontal-axis or measured quantity</td>
+<td>由被测量决定 / unit of the measured quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(c\)</span></td>
+<td>纵轴截距 / vertical intercept</td>
+<td>与纵轴量相同 / same unit as vertical quantity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>线性关系由斜率和纵轴截距确定，截距是在横轴变量为零时的纵轴值。</p>
+<p>A linear relation is determined by its gradient and vertical intercept. The intercept is the vertical value at zero horizontal value.</p>
 <div class="math block">
 \[\Large\displaystyle \Delta m=\frac{m_{\max}-m_{\min}}{2}\quad\text{(if using the half-range convention)}\]
 </div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Delta m\)</span></td>
+<td>斜率的绝对不确定度 / absolute uncertainty in the gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m_{\max}\)</span></td>
+<td>拟合直线斜率 / fitted-line gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m_{\min}\)</span></td>
+<td>拟合直线斜率 / fitted-line gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>用最大、最小可接受斜率的半差估计斜率的绝对不确定度。</p>
+<p>Half the difference between the maximum and minimum acceptable gradients estimates the absolute uncertainty in the gradient.</p>
+<p><strong>适用条件 / Conditions</strong></p>
+<p>采用半极差约定，并遵守题目指定的不确定度方法。</p>
+<p>Use the half-range convention when it is the stated or adopted method.</p>
 <h2 id="h-31e2f5195e20a91d29">物理量与符号 / Quantities and symbols</h2>
 <p>符号沿用本节公式；若题目另有定义，以题设为准。 / These symbols follow this section; use any notation defined in the question.</p>
 <table>
@@ -122,14 +223,112 @@
 <h3 id="h-2919ccf6b5b02037c9">数据点与直线 / Points and lines</h3>
 <p>误差棒的横向、纵向半长度分别表示 <span class="math inline">\(\Delta x\)</span>、<span class="math inline">\(\Delta y\)</span>。Error bars show uncertainty in each coordinate. 最佳拟合直线应合理代表数据趋势，不要求穿过每个点的中心。A best-fit line represents the trend rather than joining all point centres.</p>
 <p>梯度用直线上相距较远的两个点计算：choose a large triangle on the fitted line.
-<div class="math inline">\[\Large\displaystyle m=\frac{\Delta y}{\Delta x},\qquad y\]</div></p>
+<div class="math inline">\[\Large\displaystyle m=\frac{\Delta y}{\Delta x}\]</div></p>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>拟合直线斜率 / fitted-line gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta y\)</span></td>
+<td>纵轴坐标的变化量 / change in vertical coordinate</td>
+<td>与纵轴量相同 / same as the vertical quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta x\)</span></td>
+<td>横轴坐标的变化量 / change in horizontal coordinate</td>
+<td>与横轴量相同 / same as the horizontal quantity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>直线斜率是纵轴变化量除以横轴变化量，读数应取拟合线上相距较远的两点。</p>
+<p>A straight-line gradient is the change in the vertical quantity divided by the change in the horizontal quantity. Use widely separated points on the fitted line.</p>
 <div class="math block">
-\[\Large\displaystyle m=mx+c\]
+\[\Large\displaystyle y=mx+c\]
 </div>
-<p>梯度单位为纵轴单位除以横轴单位，截距单位为纵轴单位。The gradient and intercept carry different units.</p>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(y\)</span></td>
+<td>纵轴物理量 / vertical-axis quantity</td>
+<td>由纵轴量决定 / unit of vertical-axis quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>拟合直线斜率 / fitted-line gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(x\)</span></td>
+<td>横轴或被测物理量 / horizontal-axis or measured quantity</td>
+<td>由被测量决定 / unit of the measured quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(c\)</span></td>
+<td>纵轴截距 / vertical intercept</td>
+<td>与纵轴量相同 / same unit as vertical quantity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>线性关系由斜率和纵轴截距确定，截距是在横轴变量为零时的纵轴值。</p>
+<p>A linear relation is determined by its gradient and vertical intercept. The intercept is the vertical value at zero horizontal value.
+梯度单位为纵轴单位除以横轴单位，截距单位为纵轴单位。The gradient and intercept carry different units.</p>
 <h3 id="h-c442615865a310adb1">不确定度 / Uncertainty</h3>
 <p>在误差范围内画最陡和最缓的合理直线，得到 <span class="math inline">\(m_{\max}\)</span>、<span class="math inline">\(m_{\min}\)</span>。Draw acceptable steepest and shallowest lines. 按题目约定可报告
-<div class="math inline">\[\Large\displaystyle \Delta m=\frac{m_{\max}-m_{\min}}{2}\]</div>
+<div class="math inline">\[\Large\displaystyle \Delta m=\frac{m_{\max}-m_{\min}}{2}\]</div></p>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量或记号 / Quantity or notation</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Delta m\)</span></td>
+<td>斜率的绝对不确定度 / absolute uncertainty in the gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m_{\max}\)</span></td>
+<td>拟合直线斜率 / fitted-line gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m_{\min}\)</span></td>
+<td>拟合直线斜率 / fitted-line gradient</td>
+<td>纵轴单位除以横轴单位 / vertical unit divided by horizontal unit</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理规律与含义 / Law and meaning</strong></p>
+<p>用最大、最小可接受斜率的半差估计斜率的绝对不确定度。</p>
+<p>Half the difference between the maximum and minimum acceptable gradients estimates the absolute uncertainty in the gradient.</p>
+<p><strong>适用条件 / Conditions</strong></p>
+<p>采用半极差约定，并遵守题目指定的不确定度方法。</p>
+<p>Use the half-range convention when it is the stated or adopted method.
 或采用最佳梯度与极端梯度之间的最大差，并明确说明。Use the specified convention; otherwise state how the range was estimated.</p>
 <p>同样读取允许的截距 <span class="math inline">\(c_{\max}\)</span>、<span class="math inline">\(c_{\min}\)</span>，估算 <span class="math inline">\(\Delta c\)</span>。无误差棒时根据数据散布画合理的极端直线，不能假装知道更小的范围。Without error bars, use the observed scatter to justify the extreme lines.</p>
 <h3 id="h-367e39e1abe3e3066b">物理含义 / Physical meaning</h3>
