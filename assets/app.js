@@ -58,7 +58,7 @@
       details.append(branch(children,folder,level+1));frag.append(details);
     }return frag;
   }
-  fetch('/assets/catalog.json?v=u1-u4-20261112-teaching-logic').then(r=>r.json()).then(data=>{
+  fetch('/assets/catalog.json?v=u1-u4-20261112-leading-context-crops').then(r=>r.json()).then(data=>{
     catalog=data; const nav=document.querySelector('#navigation');nav.replaceChildren();
     const top=E('a',null,'首页 / Start here');top.href='/knowledge.html';nav.append(top);
     const maps=E('a',null,'知识谱系图 / Knowledge maps');maps.href='/maps.html';nav.append(maps);
@@ -93,7 +93,7 @@
 
 (async function(){
   'use strict';
-  const base='/assets/physics-hover/', version='20261112-formula-guides';
+  const base='/assets/physics-hover/', version='20261112-leading-context-crops';
   try{
     const style=document.createElement('link');style.rel='stylesheet';style.href=base+'hover.css?v='+version;document.head.append(style);
     if(!globalThis.PhysicsHoverCore){await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=base+'hover-core.js?v='+version;script.onload=resolve;script.onerror=reject;document.head.append(script);});}
