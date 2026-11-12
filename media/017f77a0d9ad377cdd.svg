@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="390" viewBox="0 0 960 390"><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10Z" fill="#496582"/></marker></defs><rect width="960" height="390" rx="14" fill="#f6f9fc"/><g font-family="Arial, Microsoft YaHei, sans-serif" fill="#29455e">
+<text x="36" y="42" font-size="24" font-weight="bold">An alpha particle can turn back outside the nucleus</text>
+<text x="36" y="74" font-size="19">最接近位置可以仍在核外，不能直接视作核表面</text>
+<line x1="80" y1="182" x2="460" y2="182" stroke="#496582" stroke-width="4" marker-end="url(#arr)"/>
+<text x="95" y="147" font-size="19">Incoming alpha particle / 入射 α 粒子</text>
+<circle cx="488" cy="182" r="16" fill="#bd818f"/><text x="430" y="224" font-size="18">Turning point / 折返点</text>
+<line x1="480" y1="184" x2="375" y2="184" stroke="#bd818f" stroke-width="4" marker-end="url(#arr)"/>
+<text x="300" y="250" font-size="18" fill="#bd818f">Repulsion / 静电斥力</text><circle cx="800" cy="182" r="36" fill="#a9bbd0" stroke="#496582" stroke-width="3"/>
+<text x="724" y="127" font-size="19">Lead nucleus / 铅核</text>
+<text x="789" y="189" font-size="23">+</text>
+<line x1="488" y1="266" x2="800" y2="266" stroke="#496582" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<line x1="488" y1="204" x2="488" y2="280" stroke="#8ca2b8" stroke-dasharray="5 5"/>
+<line x1="800" y1="218" x2="800" y2="280" stroke="#8ca2b8" stroke-dasharray="5 5"/>
+<text x="588" y="301" font-size="20">r<tspan baseline-shift="sub" font-size="14">min</tspan> = centre-to-alpha separation</text>
+<text x="590" y="329" font-size="18">从核中心量至 α 粒子的距离</text>
+<line x1="800" y1="182" x2="836" y2="182" stroke="#496582" stroke-width="2" marker-end="url(#arr)"/>
+<text x="845" y="192" font-size="18">R<tspan baseline-shift="sub" font-size="13">nucleus</tspan></text>
+<text x="36" y="366" font-size="17">Schematic, not to scale. / 定性示意，尺寸不按比例。</text>
+</g></svg>

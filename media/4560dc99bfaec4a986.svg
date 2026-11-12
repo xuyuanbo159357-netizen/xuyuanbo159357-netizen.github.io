@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="410" viewBox="0 0 960 410"><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10Z" fill="#496582"/></marker></defs><rect width="960" height="410" rx="14" fill="#f6f9fc"/><g font-family="Arial, Microsoft YaHei, sans-serif" fill="#29455e">
+<text x="32" y="40" font-size="24" font-weight="bold">Moderation: kinetic energy is transferred in repeated collisions</text>
+<text x="32" y="72" font-size="19">慢化：中子与慢化剂的轻原子核多次碰撞，将动能传给原子核</text>
+<circle cx="76" cy="175" r="11" fill="#496582"/>
+<line x1="95" y1="175" x2="268" y2="175" stroke="#496582" stroke-width="5" marker-end="url(#arr)"/>
+<circle cx="300" cy="175" r="25" fill="#d9bac2" stroke="#bd818f" stroke-width="2"/>
+<line x1="316" y1="183" x2="460" y2="240" stroke="#496582" stroke-width="4" marker-end="url(#arr)"/>
+<circle cx="495" cy="252" r="25" fill="#d9bac2" stroke="#bd818f" stroke-width="2"/>
+<line x1="510" y1="237" x2="616" y2="182" stroke="#496582" stroke-width="3" marker-end="url(#arr)"/>
+<circle cx="648" cy="168" r="25" fill="#d9bac2" stroke="#bd818f" stroke-width="2"/>
+<line x1="674" y1="168" x2="746" y2="168" stroke="#496582" stroke-width="2" marker-end="url(#arr)"/>
+<text x="35" y="128" font-size="19">Fast neutron</text><text x="35" y="152" font-size="17">快中子</text>
+<text x="752" y="160" font-size="19">Thermal neutron</text><text x="752" y="186" font-size="17">热中子</text>
+<line x1="300" y1="146" x2="315" y2="112" stroke="#bd818f" stroke-width="2" marker-end="url(#arr)"/>
+<text x="330" y="115" font-size="17">Recoiling nucleus / 反冲原子核</text>
+<text x="304" y="323" font-size="19">Energy to nuclei; low neutron absorption</text>
+<text x="304" y="350" font-size="18">原子核获得动能；材料应尽量少吸收中子</text>
+<text x="32" y="382" font-size="16">Illustrative path and speeds, not experimental data. / 路径与速度为定性示意，并非实测。</text>
+</g></svg>
