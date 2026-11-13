@@ -1,20 +1,233 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="OxfordAQA 9630 U1–U4 中英文物理知识库"><title>抽水蓄能与调峰 / Pumped storage · OxfordAQA Physics</title><link rel="stylesheet" href="/assets/site.css"><script defer src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button id="menu" aria-label="展开目录">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br>更新 · 2026-10-21<br><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U4/07 常用物理模型</div><h1 id="h-6a88787043cd064f06">抽水蓄能与调峰 / Pumped storage</h1>
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>抽水蓄能与调峰 / Pumped storage · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=u1-u4-20261113-illustrated-model-guides"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U4/07 常用物理模型</div><h1 id="h-6a88787043cd064f06">抽水蓄能与调峰 / Pumped storage</h1>
+<a class="internal-link" href="/notes/526598d46379449bac.html">模型目录 / Model index</a>
+<h2 id="h-cb5f80444803cc19fd">图像化建模 / Illustrated model</h2>
+<a class="image-link" href="/media/1b001cc2fb8e7eeb2a.svg" target="_blank"><img alt="U4PM10-model-guide-20261113" decoding="async" loading="lazy" src="/media/1b001cc2fb8e7eeb2a.svg" style="max-width:min(100%,1100px)"/></a>
+<p><strong>图中对象与读图 / System and reading：</strong> 重力能量模型给储量，效率模型分开抽水输入和发电输出，再用流率求功率 / combine stored gravitational energy with separate pumping/generation efficiencies and flow-limited power</p>
+<p><strong>条件与约束 / Conditions and constraints：</strong> 水头近似恒定、g 近似恒定；水头变化明显时按分段或题给平均值 / approximately fixed head and g; use stages or a supplied average if head varies</p>
+<h2 id="h-5d0133360d3d766fd4">分模型与接口 / Sub-models and interfaces</h2>
+<p>基础规律的解释与推导见分模型和基础知识入口；本复合模型只调用公式结论，按对象、阶段和共同未知量联算。 / See the linked sub-models and foundation notes for explanations and derivations. This compound model applies their results to the specified system and stages.</p>
+<table>
+<thead>
+<tr>
+<th>分模型 / Sub-model</th>
+<th>提供的关系或量 / Supplies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a></td>
+<td>速度、位移、外力功或耗散能量 / speed, displacement, external work or dissipated energy</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/a2c720b4558c61ff64.html">功率效率与恒速行驶模型 / Power and efficiency</a></td>
+<td>输入功率、效率或恒速驱动力 / input power, efficiency or driving force at constant speed</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/9d331ccea45e7b1e36.html">风水来流功率 / Wind and flow rate</a></td>
+<td>质量流率、可用功率或输出功率 / mass flow, available power or output power</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基础知识入口 / Foundation notes：</strong> <a class="internal-link" href="/notes/516f324ab11fcf9310.html">3.13</a></p>
+<p><strong>连接顺序 / Connection order：</strong> 重力能量模型给储量，效率模型分开抽水输入和发电输出，再用流率求功率 / combine stored gravitational energy with separate pumping/generation efficiencies and flow-limited power</p>
+<h2 id="h-12d7795ca044bbb774">按物理关系整理公式 / Formulae organised by relationship</h2>
+<h3 id="h-95f933f2dcd6b0ed8e">关系 1 / Relation 1</h3>
+<div class="math block">
+\[\Large\displaystyle E_s=mgh\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(E_s\)</span></td>
+<td>储存的重力势能 / stored gravitational energy</td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>物体质量 / mass</td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(g\)</span></td>
+<td>重力加速度或场强大小 / gravitational acceleration or field magnitude</td>
+<td><span class="math inline">\(\mathrm{m\,s^{-2}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(h\)</span></td>
+<td>高度差 / height difference</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 水头决定单位水质量可释放的重力势能。 / Head determines gravitational energy available per water mass.</p>
+<p><strong>适用条件 / Conditions：</strong> 水头近似恒定、g 近似恒定；水头变化明显时按分段或题给平均值 / approximately fixed head and g; use stages or a supplied average if head varies</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a> · <a class="internal-link" href="/notes/a2c720b4558c61ff64.html">功率效率与恒速行驶模型 / Power and efficiency</a> · <a class="internal-link" href="/notes/9d331ccea45e7b1e36.html">风水来流功率 / Wind and flow rate</a></p>
+<h3 id="h-6d57c6a77023c0aa6b">关系 2 / Relation 2</h3>
+<div class="math block">
+\[\Large\displaystyle P_{\mathrm{out}}=\eta_g\dot mgh\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P_{\mathrm{out}}\)</span></td>
+<td>有用输出功率 / useful output power</td>
+<td><span class="math inline">\(\mathrm{W}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\eta_g\)</span></td>
+<td>发电效率 / generating efficiency</td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\dot m\)</span></td>
+<td>质量流率 / mass flow rate</td>
+<td><span class="math inline">\(\mathrm{kg\,s^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(g\)</span></td>
+<td>重力加速度或场强大小 / gravitational acceleration or field magnitude</td>
+<td><span class="math inline">\(\mathrm{m\,s^{-2}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(h\)</span></td>
+<td>高度差 / height difference</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 质量流率、水头和发电效率共同限制输出功率。 / Flow rate, head and generation efficiency limit output power.</p>
+<p><strong>适用条件 / Conditions：</strong> 水头近似恒定、g 近似恒定；水头变化明显时按分段或题给平均值 / approximately fixed head and g; use stages or a supplied average if head varies</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a> · <a class="internal-link" href="/notes/a2c720b4558c61ff64.html">功率效率与恒速行驶模型 / Power and efficiency</a> · <a class="internal-link" href="/notes/9d331ccea45e7b1e36.html">风水来流功率 / Wind and flow rate</a></p>
+<h3 id="h-0c7f66201480483420">关系 3 / Relation 3</h3>
+<div class="math block">
+\[\Large\displaystyle E_{\mathrm{pump,in}}=\frac{E_s}{\eta_p}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(E_{\mathrm{pump,in}}\)</span></td>
+<td>抽水输入电能 / pumping electrical input</td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(E_s\)</span></td>
+<td>储存的重力势能 / stored gravitational energy</td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\eta_p\)</span></td>
+<td>抽水效率 / pumping efficiency</td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 抽水输入电能要大于储存的重力势能。 / Pumping electrical input exceeds gravitational energy stored when efficiency is below one.</p>
+<p><strong>适用条件 / Conditions：</strong> 水头近似恒定、g 近似恒定；水头变化明显时按分段或题给平均值 / approximately fixed head and g; use stages or a supplied average if head varies</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a> · <a class="internal-link" href="/notes/a2c720b4558c61ff64.html">功率效率与恒速行驶模型 / Power and efficiency</a> · <a class="internal-link" href="/notes/9d331ccea45e7b1e36.html">风水来流功率 / Wind and flow rate</a></p>
+<h2 id="h-cf7eaa5ad6fce8ddc4">真题归纳的一般题型 / General question patterns</h2>
+<p>关键词只提示候选模型，须核对对象、阶段、几何、守恒条件和题目所求。以下是解题路线概括，不是新增真题或官方答案。 / A cue suggests a candidate model; verify the system, stage, geometry and conditions. These are original teaching routes, not new past papers or official mark schemes.</p>
+<table>
+<thead>
+<tr>
+<th>题型与关键词 / Type and cues</th>
+<th>常见题给量 / Typical givens</th>
+<th>模型怎样使用 / Use of the model</th>
+<th>所求与检查 / Target and check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定量或机制应用 / Calculation or mechanism: pumped storage 抽水蓄能；peak demand 高峰需求；reservoir 水库</td>
+<td>水质量或体积、水头、抽水发电效率与时间 / water mass/volume, head, pumping/generating efficiencies and time</td>
+<td>重力能量模型给储量，效率模型分开抽水输入和发电输出，再用流率求功率 / combine stored gravitational energy with separate pumping/generation efficiencies and flow-limited power</td>
+<td>可发电量、持续时间或抽水输入 / delivered energy, duration or pumping input</td>
+</tr>
+<tr>
+<td>explain / compare / suggest：解释、比较、推断 / explanation, comparison, inference</td>
+<td>已知改变的量以及保持不变的条件 / changed and fixed quantities</td>
+<td>抽水输入比储能大，发电输出比储能小；不可把水头势能和由其产生的动能重复相加 / pumping input exceeds stored energy and electrical output is smaller; do not double-count converted gravitational energy</td>
+<td>用完整因果链说明目标量的变化，避免只列公式 / explain the change with a causal chain</td>
+</tr>
+<tr>
+<td>justify / evaluate：说明依据、评价适用性 / justification or evaluation</td>
+<td>题目描述的实际约束 / the actual constraints</td>
+<td>水头近似恒定、g 近似恒定；水头变化明显时按分段或题给平均值 / approximately fixed head and g; use stages or a supplied average if head varies</td>
+<td>指明所用结论适用在哪一阶段；条件改变时重新选模型 / identify the valid stage and reassess changed conditions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="h-7ec3884f5f01709730">可回到原题核对的实例 / Traceable past-paper examples</h3>
+<table>
+<thead>
+<tr>
+<th>真题 / Paper</th>
+<th>实际出现的线索 / Observed cues</th>
+<th>线索所在位置与复述任务 / Location and retrieval task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/ad8af8c23292c2c862.html">PH04-202506-Q17-S</a></td>
+<td><strong>pumped storage, reservoir</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/b07150af0b1d523296.html">PH04-201901-Q23-S</a></td>
+<td><strong>pumped storage, reservoir</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/97462bbc956bbac5fd.html">PH04-201806-Q16-S</a></td>
+<td><strong>pumped storage, reservoir</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-78f4f4163ed578d839">对应知识点 / Knowledge links</h2>
+<ul>
+<li><a class="internal-link" href="/notes/516f324ab11fcf9310.html">3.13</a></li>
+</ul>
+<hr/>
+<h2 id="h-91dd417c9de345504b">既有条件、例题与来源 / Existing conditions, examples and sources</h2>
+<p>保留以下已经整理的边界条件、数值例和原题入口；核心公式与组合顺序见上方。 / The existing conditions, examples and source links below remain available; use the formula cards and combination route above.</p>
 <h2 id="h-306de3762cf22bd56a">关键词 → 模型 / Keywords → model</h2>
 <p>pumped storage → peak demand → reservoir → efficiency → <strong>抽水蓄能与调峰</strong></p>
-<h2 id="h-1ec4232f42e67f8191">推理顺序 / Reasoning</h2>
-<p>先求重力储能，分开抽水和发电效率，再比较流率限制的功率、储能与负荷时段。</p>
-<p>Calculate gravitational storage capacity; separate pumping input and generation output efficiencies; compare flow-limited power with stored energy and demand timing.</p>
 <h2 id="h-5974c4eb699b19ead0">知识与条件 / Knowledge and conditions</h2>
 <h3 id="h-6e04e26b48711b892f">3.13.4</h3>
 <a class="internal-link" href="/notes/516f324ab11fcf9310.html">3.13.4 水电与抽水蓄能</a>
 <p>水头电站用高度差和质量流率；来流动能用密度、面积、速率；重力势能转为动能后不可重复相加。</p>
 <p>For a head-driven plant, use the height drop and mass flow; for incoming-stream kinetic power, use density, area and speed. Do not double-count the same gravitational energy after it has become kinetic energy.</p>
 <p>体积流率 <span class="math inline">\(Q_v\)</span> 与电荷 Q 区分；水头模型与水流动能模型按题目条件选择。</p>
-<p><span class="math inline">\(P_{\mathrm{grav}}=\dot m gh=\rho Q_vgh\)</span>; stream kinetic power <span class="math inline">\(P=\frac12\rho Av^3\)</span>; <span class="math inline">\(E=mgh\)</span>; electrical output <span class="math inline">\(=\eta E\)</span> or <span class="math inline">\(\eta P\)</span>.</p>
 <h2 id="h-25507b12c6b278dd78">真题复述 / Past-paper retrieval</h2>
 <ul>
 <li><a class="internal-link" href="/notes/3c9b6cf4cbf2bda305.html">202601-Q07</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/749fbeb4754c732626.html">202601-Q21</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/c61226744c9dad76b6.html">202606-Q06</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 </ul>
-<section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/516f324ab11fcf9310.html">3.13.4 水电与抽水蓄能 / Hydroelectric power and pumped storage</a></li><li><a href="/notes/6adb8e4183418b840f.html">3.13.4 水电与抽水蓄能 真题练习 / Past-paper practice</a></li><li><a href="/notes/2590177c646dae9f0d.html">PH04 2018 specimen paper Q03</a></li><li><a href="/notes/97462bbc956bbac5fd.html">PH04 201806 Q16</a></li><li><a href="/notes/921f6ab57a8f8edf89.html">PH04 201806 Q29</a></li><li><a href="/notes/b07150af0b1d523296.html">PH04 201901 Q23</a></li><li><a href="/notes/46c23cd11a5d080844.html">PH04 201901 Q35</a></li><li><a href="/notes/ed791e1ffd50fa68d9.html">PH04 202101 Q06</a></li><li><a href="/notes/d395b6ccdf18e89995.html">PH04 202201 Q03</a></li><li><a href="/notes/5238a0f43d779c1f44.html">PH04 202301 Q04</a></li><li><a href="/notes/32874044b3f4ebc961.html">PH04 202401 Q16</a></li><li><a href="/notes/6583fb9150d8e2e0f4.html">PH04 202406 Q01</a></li><li><a href="/notes/465aaffb9d8aa4c5c9.html">PH04 202406 Q20</a></li><li><a href="/notes/ad8af8c23292c2c862.html">PH04 202506 Q17</a></li><li><a href="/notes/3c9b6cf4cbf2bda305.html">PH04 202601 Q07</a></li><li><a href="/notes/526598d46379449bac.html">U4 常用物理模型 / Common physics models</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes" aria-label="搜索笔记"><button id="search-close" aria-label="关闭搜索">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U4/07 常用物理模型/U4PM10 抽水蓄能与调峰 - Pumped storage.md", "url": "/notes/7df62e6efe343ab56e.html", "unit": "U4"}</script></body></html>
+<span aria-hidden="true" class="anchor-alias" id="h-1ec4232f42e67f8191"></span><div id="backlinks"><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/516f324ab11fcf9310.html">3.13.4 水电与抽水蓄能 / Hydroelectric power and pumped storage</a></li><li><a href="/notes/526598d46379449bac.html">U4 常用物理模型 / Common physics models</a></li><li><a href="/notes/29572baf213f2f3d99.html">U4 图解、分模型与题型路线 / Illustrated models and question routes</a></li></ul></section></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U4/07 常用物理模型/U4PM10 抽水蓄能与调峰 - Pumped storage.md", "url": "/notes/7df62e6efe343ab56e.html", "unit": "U4"}</script></body></html>

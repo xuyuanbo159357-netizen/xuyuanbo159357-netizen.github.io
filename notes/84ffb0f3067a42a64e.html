@@ -1,26 +1,165 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="OxfordAQA 9630 U1–U4 中英文物理知识库"><title>伏安特性与工作点 / Characteristic and operating point · OxfordAQA Physics</title><link rel="stylesheet" href="/assets/site.css"><script defer src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button id="menu" aria-label="展开目录">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br>更新 · 2026-10-21<br><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U2/07 常用物理模型</div><h1 id="h-8b000c4c67be4707ae">伏安特性与工作点 / Characteristic and operating point</h1>
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>伏安特性与工作点 / Characteristic and operating point · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=u1-u4-20261113-illustrated-model-guides"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U2/07 常用物理模型</div><h1 id="h-8b000c4c67be4707ae">伏安特性与工作点 / Characteristic and operating point</h1>
+<a class="internal-link" href="/notes/387f8af36ffd6c9855.html">模型目录 / Model index</a>
+<h2 id="h-cb5f80444803cc19fd">图像化建模 / Illustrated model</h2>
+<a class="image-link" href="/media/d4950705d7821b3ae1.svg" target="_blank"><img alt="U2PM02-model-guide-20261113" decoding="async" loading="lazy" src="/media/d4950705d7821b3ae1.svg" style="max-width:min(100%,1100px)"/></a>
+<p><strong>图中对象与读图 / System and reading：</strong> 先找工作点，再以该点 V/I 求静态电阻，并结合 P=VI / read the operating point, calculate static resistance and then power</p>
+<p><strong>条件与约束 / Conditions and constraints：</strong> 仅恒温欧姆器件有过原点直线；非线性器件逐工作点分析 / only an ohmic device at constant conditions has a straight line through the origin</p>
+<h2 id="h-fa799caac376662e33">基本模型的物理关系 / Physical relationships of the basic model</h2>
+<p><strong>起点 / Given：</strong> I–V 图、外加电压与器件条件 / I–V graph, applied voltage and device conditions</p>
+<p><strong>由哪些量决定 / Dependence：</strong> I–V 曲线切线斜率一般不等于静态电阻的倒数关系所需的 V/I / distinguish a local gradient from the static ratio V/I</p>
+<h2 id="h-12d7795ca044bbb774">按物理关系整理公式 / Formulae organised by relationship</h2>
+<h3 id="h-95f933f2dcd6b0ed8e">关系 1 / Relation 1</h3>
+<div class="math block">
+\[\Large\displaystyle R=\frac{V}{I}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(R\)</span></td>
+<td>电阻 / resistance</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>电势差 / potential difference</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I\)</span></td>
+<td>电流 / current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 静态电阻取工作点电压与电流之比。 / Static resistance is the voltage-to-current ratio at the operating point.</p>
+<p><strong>适用条件 / Conditions：</strong> 仅恒温欧姆器件有过原点直线；非线性器件逐工作点分析 / only an ohmic device at constant conditions has a straight line through the origin</p>
+<h3 id="h-6d57c6a77023c0aa6b">关系 2 / Relation 2</h3>
+<div class="math block">
+\[\Large\displaystyle P=VI\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P\)</span></td>
+<td>功率 / power</td>
+<td><span class="math inline">\(\mathrm{W}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>电势差 / potential difference</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I\)</span></td>
+<td>电流 / current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 元件接收的电功率由其端电压和电流决定。 / Electrical power depends on terminal voltage and current.</p>
+<p><strong>适用条件 / Conditions：</strong> 仅恒温欧姆器件有过原点直线；非线性器件逐工作点分析 / only an ohmic device at constant conditions has a straight line through the origin</p>
+<h2 id="h-cf7eaa5ad6fce8ddc4">真题归纳的一般题型 / General question patterns</h2>
+<p>关键词只提示候选模型，须核对对象、阶段、几何、守恒条件和题目所求。以下是解题路线概括，不是新增真题或官方答案。 / A cue suggests a candidate model; verify the system, stage, geometry and conditions. These are original teaching routes, not new past papers or official mark schemes.</p>
+<table>
+<thead>
+<tr>
+<th>题型与关键词 / Type and cues</th>
+<th>常见题给量 / Typical givens</th>
+<th>模型怎样使用 / Use of the model</th>
+<th>所求与检查 / Target and check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定量或机制应用 / Calculation or mechanism: I–V characteristic 伏安特性；operating point 工作点</td>
+<td>I–V 图、外加电压与器件条件 / I–V graph, applied voltage and device conditions</td>
+<td>先找工作点，再以该点 V/I 求静态电阻，并结合 P=VI / read the operating point, calculate static resistance and then power</td>
+<td>工作电流、电阻或功率 / operating current, resistance or power</td>
+</tr>
+<tr>
+<td>explain / compare / suggest：解释、比较、推断 / explanation, comparison, inference</td>
+<td>已知改变的量以及保持不变的条件 / changed and fixed quantities</td>
+<td>I–V 曲线切线斜率一般不等于静态电阻的倒数关系所需的 V/I / distinguish a local gradient from the static ratio V/I</td>
+<td>用完整因果链说明目标量的变化，避免只列公式 / explain the change with a causal chain</td>
+</tr>
+<tr>
+<td>justify / evaluate：说明依据、评价适用性 / justification or evaluation</td>
+<td>题目描述的实际约束 / the actual constraints</td>
+<td>仅恒温欧姆器件有过原点直线；非线性器件逐工作点分析 / only an ohmic device at constant conditions has a straight line through the origin</td>
+<td>指明所用结论适用在哪一阶段；条件改变时重新选模型 / identify the valid stage and reassess changed conditions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="h-7ec3884f5f01709730">可回到原题核对的实例 / Traceable past-paper examples</h3>
+<table>
+<thead>
+<tr>
+<th>真题 / Paper</th>
+<th>实际出现的线索 / Observed cues</th>
+<th>线索所在位置与复述任务 / Location and retrieval task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/bd5d945f4f0443e8c6.html">PH02-202606-Q05.2-S</a></td>
+<td><strong>I–V characteristic</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/c2368d9f0982e6acea.html">PH02-202506-Q13-S</a></td>
+<td><strong>I–V characteristic</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/620ab2f846b1f338e9.html">PH02-202501-Q09.4-S</a></td>
+<td><strong>I–V characteristic</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-78f4f4163ed578d839">对应知识点 / Knowledge links</h2>
+<ul>
+<li><a class="internal-link" href="/notes/4a7566b071ae7b7dae.html">3.4</a></li>
+<li><a class="internal-link" href="/notes/9b9873b5020c3643d4.html">3.4</a></li>
+</ul>
+<hr/>
+<h2 id="h-91dd417c9de345504b">既有条件、例题与来源 / Existing conditions, examples and sources</h2>
+<p>保留以下已经整理的边界条件、数值例和原题入口；核心公式与组合顺序见上方。 / The existing conditions, examples and source links below remain available; use the formula cards and combination route above.</p>
 <h2 id="h-306de3762cf22bd56a">关键词 → 模型 / Keywords → model</h2>
 <p>characteristic → filament lamp → diode → operating point → <strong>伏安特性与工作点</strong></p>
-<h2 id="h-1ec4232f42e67f8191">推理顺序 / Reasoning</h2>
-<p>识别坐标轴，读工作点，求电阻和功率，再解释温度导致的阻值变化。</p>
-<p>Identify the axes; read the stated operating point; find <span class="math inline">\(R=V/I\)</span> and <span class="math inline">\(P=VI\)</span>; explain any temperature-dependent resistance change.</p>
 <h2 id="h-5974c4eb699b19ead0">知识与条件 / Knowledge and conditions</h2>
 <h3 id="h-073c4ee8e75801c10e">3.4.2</h3>
 <a class="internal-link" href="/notes/4a7566b071ae7b7dae.html">3.4.2 伏安特性与欧姆定律</a>
 <p>欧姆定律要求温度等物理条件不变。未另作说明时，电流表电阻为零，电压表电阻无限大。</p>
 <p>Ohm’s law: current is directly proportional to potential difference provided temperature and other physical conditions remain constant. Ideal ammeters have zero resistance; ideal voltmeters have infinite resistance unless stated otherwise.</p>
 <p>工作点的电阻使用电压与电流之比；直线图像的斜率含义取决于坐标轴。</p>
-<p><span class="math inline">\(R=V/I\)</span> at an operating point. On a straight <span class="math inline">\(V\)</span>–<span class="math inline">\(I\)</span> graph, gradient <span class="math inline">\(=R\)</span>; on a straight <span class="math inline">\(I\)</span>–<span class="math inline">\(V\)</span> graph, gradient <span class="math inline">\(=1/R\)</span>.</p>
 <h3 id="h-37a9a50d4d41722747">3.4.4</h3>
 <a class="internal-link" href="/notes/9b9873b5020c3643d4.html">3.4.4 直流电路与电功率</a>
 <p>恒定电压和电流时使用电能公式；功率公式中的电流、电压和电阻必须对应同一元件。</p>
 <p>Apply <span class="math inline">\(E=IVt\)</span> when voltage and current are constant. <span class="math inline">\(I^2R\)</span> and <span class="math inline">\(V^2/R\)</span> refer to the voltage/current of the same resistor.</p>
 <p>掌握串并联等效电阻、电能和功率。</p>
-<p><span class="math inline">\(R_{\mathrm{s}}=R_1+R_2+\cdots\)</span>; <span class="math inline">\(1/R_{\mathrm{p}}=1/R_1+1/R_2+\cdots\)</span>; <span class="math inline">\(E=IVt\)</span>; <span class="math inline">\(P=IV=I^2R=V^2/R\)</span>.</p>
 <h2 id="h-25507b12c6b278dd78">真题复述 / Past-paper retrieval</h2>
 <ul>
 <li><a class="internal-link" href="/notes/abdb37e2f811a031f6.html">202606-Q13</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/54c62b8bfc82ed9f92.html">202606-Q14</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/e848a4bdae13c39e9d.html">202606-Q23</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 </ul>
-<section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/4a7566b071ae7b7dae.html">3.4.2 伏安特性与欧姆定律 / Current–voltage characteristics</a></li><li><a href="/notes/9b9873b5020c3643d4.html">3.4.4 直流电路与电功率 / Circuits</a></li><li><a href="/notes/228d3ff95d281e31d1.html">3.4.1 电学基础 真题练习 / Past-paper practice</a></li><li><a href="/notes/f8cd4abc514cae1e86.html">3.4.2 伏安特性与欧姆定律 真题练习 / Past-paper practice</a></li><li><a href="/notes/fc57e6cf1909025642.html">3.4.3 电阻率、热敏电阻与超导 真题练习 / Past-paper practice</a></li><li><a href="/notes/2ff816991fd1526aed.html">3.4.4 直流电路与电功率 真题练习 / Past-paper practice</a></li><li><a href="/notes/20486cd9fbf4583be2.html">3.4.5 分压器与传感电路 真题练习 / Past-paper practice</a></li><li><a href="/notes/e3527f2e83e569a537.html">3.4.6 电动势与内阻 真题练习 / Past-paper practice</a></li><li><a href="/notes/55d34c8e00429786ed.html">3.5.9 原子能级、线谱与X射线 真题练习 / Past-paper practice</a></li><li><a href="/notes/435212486aa4179293.html">PH02 2018 specimen paper Q22</a></li><li><a href="/notes/45b560c244d5324d34.html">PH02 201706 Q04</a></li><li><a href="/notes/78382969122c35a65d.html">PH02 201801 Q16</a></li><li><a href="/notes/4898c125672be9fb30.html">PH02 201806 Q01</a></li><li><a href="/notes/4d3c3ad14c92a6f54f.html">PH02 201806 Q16</a></li><li><a href="/notes/66b4da56e682805788.html">PH02 201901 Q02</a></li><li><a href="/notes/b2748e119ddec8216a.html">PH02 201906 Q05</a></li><li><a href="/notes/e0fe35a5a5cb3abf93.html">PH02 202001 Q08</a></li><li><a href="/notes/40cbc66259626fa51b.html">PH02 202101 Q06</a></li><li><a href="/notes/dbecc405afcaa55d9f.html">PH02 202101 Q07</a></li><li><a href="/notes/c1c9692cadeb16a85a.html">PH02 202101 Q12</a></li><li><a href="/notes/d3e35b4ab70c5998c3.html">PH02 202206 Q12</a></li><li><a href="/notes/3e0c2a05bd78006ed5.html">PH02 202306 Q08</a></li><li><a href="/notes/9e2d43f5b9cc0f1398.html">PH02 202306 Q25</a></li><li><a href="/notes/dd00e04b67d524e46a.html">PH02 202406 Q04</a></li><li><a href="/notes/620ab2f846b1f338e9.html">PH02 202501 Q09</a></li><li><a href="/notes/c2368d9f0982e6acea.html">PH02 202506 Q13</a></li><li><a href="/notes/d729983b29b7e13250.html">PH02 202601 Q05</a></li><li><a href="/notes/0a797232d9b611848c.html">PH02 202601 Q13</a></li><li><a href="/notes/bd5d945f4f0443e8c6.html">PH02 202606 Q05</a></li><li><a href="/notes/387f8af36ffd6c9855.html">U2 常用物理模型 / Common physics models</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes" aria-label="搜索笔记"><button id="search-close" aria-label="关闭搜索">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U2/07 常用物理模型/U2PM02 伏安特性与工作点 - Characteristic and operating point.md", "url": "/notes/84ffb0f3067a42a64e.html", "unit": "U2"}</script></body></html>
+<span aria-hidden="true" class="anchor-alias" id="h-1ec4232f42e67f8191"></span><div id="backlinks"><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/4a7566b071ae7b7dae.html">3.4.2 伏安特性与欧姆定律 / Current–voltage characteristics</a></li><li><a href="/notes/9b9873b5020c3643d4.html">3.4.4 直流电路与电功率 / Circuits</a></li><li><a href="/notes/387f8af36ffd6c9855.html">U2 常用物理模型 / Common physics models</a></li><li><a href="/notes/9d4d4ff6aaeb02d786.html">U2 图解、分模型与题型路线 / Illustrated models and question routes</a></li><li><a href="/notes/ef5992172dee8f3e81.html">混联电路与功率分配 / Series and parallel</a></li><li><a href="/notes/24c1345ccc4b72fa03.html">热敏光敏分压器 / Potential divider</a></li><li><a href="/notes/4740937afab4d3ea55.html">电源内阻与图像截距 / EMF and internal resistance</a></li><li><a href="/notes/c600bc3b1191a53012.html">U3 图解、分模型与题型路线 / Illustrated models and question routes</a></li><li><a href="/notes/47cb512d1cf32ab171.html">交流读数与变压输电 / RMS and transformer</a></li></ul></section></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U2/07 常用物理模型/U2PM02 伏安特性与工作点 - Characteristic and operating point.md", "url": "/notes/84ffb0f3067a42a64e.html", "unit": "U2"}</script></body></html>

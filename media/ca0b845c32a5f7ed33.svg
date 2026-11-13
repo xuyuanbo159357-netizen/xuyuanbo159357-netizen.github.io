@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="489.6pt" viewBox="0 0 864 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-13T11:33:21.108094</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.6 
+L 864 489.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 179.1936 260.064 
+C 185.838529 260.064 192.212193 257.423942 196.910868 252.725268 
+C 201.609542 248.026593 204.2496 241.652929 204.2496 235.008 
+C 204.2496 228.363071 201.609542 221.989407 196.910868 217.290732 
+C 192.212193 212.592058 185.838529 209.952 179.1936 209.952 
+C 172.548671 209.952 166.175007 212.592058 161.476332 217.290732 
+C 156.777658 221.989407 154.1376 228.363071 154.1376 235.008 
+C 154.1376 241.652929 156.777658 248.026593 161.476332 252.725268 
+C 166.175007 257.423942 172.548671 260.064 179.1936 260.064 
+z
+" clip-path="url(#p0c8659a0e5)" style="fill: #bd818f; stroke: #496582; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 399.6864 260.064 
+C 406.331329 260.064 412.704993 257.423942 417.403668 252.725268 
+C 422.102342 248.026593 424.7424 241.652929 424.7424 235.008 
+C 424.7424 228.363071 422.102342 221.989407 417.403668 217.290732 
+C 412.704993 212.592058 406.331329 209.952 399.6864 209.952 
+C 393.041471 209.952 386.667807 212.592058 381.969132 217.290732 
+C 377.270458 221.989407 374.6304 228.363071 374.6304 235.008 
+C 374.6304 241.652929 377.270458 248.026593 381.969132 252.725268 
+C 386.667807 257.423942 393.041471 260.064 399.6864 260.064 
+z
+" clip-path="url(#p0c8659a0e5)" style="fill: #bd818f; stroke: #496582; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 179.1936 235.008 
+L 195.471592 253.437666 
+L 204.350497 263.135726 
+L 211.749584 270.88041 
+L 217.668854 276.793358 
+L 223.588123 282.409267 
+L 229.507393 287.688214 
+L 233.946846 291.403622 
+L 238.386298 294.893465 
+L 242.82575 298.143786 
+L 247.265203 301.141585 
+L 251.704655 303.87487 
+L 256.144107 306.33271 
+L 260.58356 308.505274 
+L 265.023012 310.383873 
+L 269.462464 311.960993 
+L 273.901917 313.230325 
+L 278.341369 314.186794 
+L 282.780821 314.826573 
+L 287.220274 315.147104 
+L 291.659726 315.147104 
+L 296.099179 314.826573 
+L 300.538631 314.186794 
+L 304.978083 313.230325 
+L 309.417536 311.960993 
+L 313.856988 310.383873 
+L 318.29644 308.505274 
+L 322.735893 306.33271 
+L 327.175345 303.87487 
+L 331.614797 301.141585 
+L 336.05425 298.143786 
+L 340.493702 294.893465 
+L 344.933154 291.403622 
+L 349.372607 287.688214 
+L 355.291877 282.409267 
+L 361.211146 276.793358 
+L 367.130416 270.88041 
+L 374.529503 263.135726 
+L 383.408408 253.437666 
+L 393.76713 241.762144 
+L 399.6864 235.008 
+L 399.6864 235.008 
+" clip-path="url(#p0c8659a0e5)" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 179.1936 235.008 
+L 399.6864 235.008 
+L 399.6864 235.008 
+" clip-path="url(#p0c8659a0e5)" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 179.1936 235.008 
+L 195.471592 216.578334 
+L 204.350497 206.880274 
+L 211.749584 199.13559 
+L 217.668854 193.222642 
+L 223.588123 187.606733 
+L 229.507393 182.327786 
+L 233.946846 178.612378 
+L 238.386298 175.122535 
+L 242.82575 171.872214 
+L 247.265203 168.874415 
+L 251.704655 166.14113 
+L 256.144107 163.68329 
+L 260.58356 161.510726 
+L 265.023012 159.632127 
+L 269.462464 158.055007 
+L 273.901917 156.785675 
+L 278.341369 155.829206 
+L 282.780821 155.189427 
+L 287.220274 154.868896 
+L 291.659726 154.868896 
+L 296.099179 155.189427 
+L 300.538631 155.829206 
+L 304.978083 156.785675 
+L 309.417536 158.055007 
+L 313.856988 159.632127 
+L 318.29644 161.510726 
+L 322.735893 163.68329 
+L 327.175345 166.14113 
+L 331.614797 168.874415 
+L 336.05425 171.872214 
+L 340.493702 175.122535 
+L 344.933154 178.612378 
+L 349.372607 182.327786 
+L 355.291877 187.606733 
+L 361.211146 193.222642 
+L 367.130416 199.13559 
+L 374.529503 206.880274 
+L 383.408408 216.578334 
+L 393.76713 228.253856 
+L 399.6864 235.008 
+L 399.6864 235.008 
+" clip-path="url(#p0c8659a0e5)" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="179.1936" y="238.080266" transform="rotate(-0 179.1936 238.080266)">+Q</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="399.6864" y="238.080266" transform="rotate(-0 399.6864 238.080266)">−Q</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 276.40672 313.354854 
+Q 289.441442 313.354854 300.240097 313.354854 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 293.840097 310.154854 
+L 300.240097 313.354854 
+L 293.840097 316.554854 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 276.40672 235.008 
+Q 289.441442 235.008 300.240097 235.008 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 293.840097 231.808 
+L 300.240097 235.008 
+L 293.840097 238.208 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 276.40672 156.661146 
+Q 289.441442 156.661146 300.240097 156.661146 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 293.840097 153.461146 
+L 300.240097 156.661146 
+L 293.840097 159.861146 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(226.812187 357.476232)">E: vector sum / 矢量叠加</text>
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(224.750547 369.416389)">Ve: scalar sum / 标量叠加</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 593.784 165.8112 
+L 831.816 165.8112 
+L 831.816 95.3088 
+L 593.784 95.3088 
+z
+" clip-path="url(#p6dcd15d502)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 593.784 270.2592 
+L 831.816 270.2592 
+L 831.816 199.7568 
+L 593.784 199.7568 
+z
+" clip-path="url(#p6dcd15d502)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 593.784 374.7072 
+L 831.816 374.7072 
+L 831.816 304.2048 
+L 593.784 304.2048 
+z
+" clip-path="url(#p6dcd15d502)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="113.851599" transform="rotate(-0 712.8 113.851599)">1 题给量 / given</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="143.124382" transform="rotate(-0 712.8 143.124382)">源电荷、距离和电荷符号</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="218.331503" transform="rotate(-0 712.8 218.331503)">2 调用模型 / use</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="247.559023" transform="rotate(-0 712.8 247.559023)">电荷叠加与等势</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="322.779503" transform="rotate(-0 712.8 322.779503)">3 所求量 / find</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="352.007023" transform="rotate(-0 712.8 352.007023)">场强、电势、零场位置或势能变化</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 712.8 171.726562 
+Q 712.8 182.783951 712.8 191.605272 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 716 185.205272 
+L 712.8 191.605272 
+L 709.6 185.205272 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 712.8 276.174562 
+Q 712.8 287.231951 712.8 296.053272 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 716 289.653272 
+L 712.8 296.053272 
+L 709.6 289.653272 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+  </g>
+  <g id="text_10">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(38.88 41.94099)">电荷叠加与等势</text>
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(38.88 57.988354)">Point charge and equipotential</text>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #8090a2" transform="translate(38.88 442.181758)">示意图，不按比例；图形/归一化曲线是模型说明，非真题实测数据。</text>
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #8090a2" transform="translate(38.88 452.88)">Schematic, not to scale; any normalised curves illustrate the model, not measured examination data.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0c8659a0e5">
+   <rect x="38.88" y="84.672" width="501.12" height="300.672"/>
+  </clipPath>
+  <clipPath id="p6dcd15d502">
+   <rect x="587.52" y="78.336" width="250.56" height="313.344"/>
+  </clipPath>
+ </defs>
+</svg>

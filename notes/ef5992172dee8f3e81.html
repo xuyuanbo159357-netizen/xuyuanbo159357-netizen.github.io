@@ -1,20 +1,214 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="OxfordAQA 9630 U1–U4 中英文物理知识库"><title>混联电路与功率分配 / Series and parallel · OxfordAQA Physics</title><link rel="stylesheet" href="/assets/site.css"><script defer src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button id="menu" aria-label="展开目录">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br>更新 · 2026-10-21<br><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U2/07 常用物理模型</div><h1 id="h-bf0be1cf8b255461fd">混联电路与功率分配 / Series and parallel</h1>
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>混联电路与功率分配 / Series and parallel · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=u1-u4-20261113-illustrated-model-guides"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U2/07 常用物理模型</div><h1 id="h-bf0be1cf8b255461fd">混联电路与功率分配 / Series and parallel</h1>
+<a class="internal-link" href="/notes/387f8af36ffd6c9855.html">模型目录 / Model index</a>
+<h2 id="h-cb5f80444803cc19fd">图像化建模 / Illustrated model</h2>
+<a class="image-link" href="/media/d24907bbb01e6c3d8b.svg" target="_blank"><img alt="U2PM04-model-guide-20261113" decoding="async" loading="lazy" src="/media/d24907bbb01e6c3d8b.svg" style="max-width:min(100%,1100px)"/></a>
+<p><strong>图中对象与读图 / System and reading：</strong> 用电流连续与同端点同电压识别支路，先等效再还原各元件电流和功率 / reduce the circuit, then recover branch currents and powers</p>
+<p><strong>条件与约束 / Conditions and constraints：</strong> 理想导线；电源有内阻时再接入内阻模型 / ideal wires; add the internal-resistance model for a non-ideal supply</p>
+<h2 id="h-5d0133360d3d766fd4">分模型与接口 / Sub-models and interfaces</h2>
+<p>基础规律的解释与推导见分模型和基础知识入口；本复合模型只调用公式结论，按对象、阶段和共同未知量联算。 / See the linked sub-models and foundation notes for explanations and derivations. This compound model applies their results to the specified system and stages.</p>
+<table>
+<thead>
+<tr>
+<th>分模型 / Sub-model</th>
+<th>提供的关系或量 / Supplies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/5deb8dfad165c2c87a.html">电荷流与电流 / Charge and current</a></td>
+<td>电流、电荷或漂移速度 / current, charge or drift speed</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/84ffb0f3067a42a64e.html">伏安特性与工作点 / Characteristic and operating point</a></td>
+<td>工作电流、电阻或功率 / operating current, resistance or power</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基础知识入口 / Foundation notes：</strong> <a class="internal-link" href="/notes/9b9873b5020c3643d4.html">3.4</a></p>
+<p><strong>连接顺序 / Connection order：</strong> 用电流连续与同端点同电压识别支路，先等效再还原各元件电流和功率 / reduce the circuit, then recover branch currents and powers</p>
+<h2 id="h-12d7795ca044bbb774">按物理关系整理公式 / Formulae organised by relationship</h2>
+<h3 id="h-95f933f2dcd6b0ed8e">关系 1 / Relation 1</h3>
+<div class="math block">
+\[\Large\displaystyle R_{\mathrm{eq}}=R_1+R_2\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(R_{\mathrm{eq}}\)</span></td>
+<td>等效电阻 / equivalent resistance</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(R_1\)</span></td>
+<td>电阻 1 / resistance 1</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(R_2\)</span></td>
+<td>电阻 2 / resistance 2</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 串联电阻相加。 / Series resistances add.</p>
+<p><strong>适用条件 / Conditions：</strong> 理想导线；电源有内阻时再接入内阻模型 / ideal wires; add the internal-resistance model for a non-ideal supply</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/5deb8dfad165c2c87a.html">电荷流与电流 / Charge and current</a> · <a class="internal-link" href="/notes/84ffb0f3067a42a64e.html">伏安特性与工作点 / Characteristic and operating point</a></p>
+<h3 id="h-6d57c6a77023c0aa6b">关系 2 / Relation 2</h3>
+<div class="math block">
+\[\Large\displaystyle \frac{1}{R_{\mathrm{eq}}}=\frac{1}{R_1}+\frac{1}{R_2}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(R_{\mathrm{eq}}\)</span></td>
+<td>等效电阻 / equivalent resistance</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(R_1\)</span></td>
+<td>电阻 1 / resistance 1</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(R_2\)</span></td>
+<td>电阻 2 / resistance 2</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 并联支路电导相加。 / Parallel conductances add.</p>
+<p><strong>适用条件 / Conditions：</strong> 理想导线；电源有内阻时再接入内阻模型 / ideal wires; add the internal-resistance model for a non-ideal supply</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/5deb8dfad165c2c87a.html">电荷流与电流 / Charge and current</a> · <a class="internal-link" href="/notes/84ffb0f3067a42a64e.html">伏安特性与工作点 / Characteristic and operating point</a></p>
+<h3 id="h-0c7f66201480483420">关系 3 / Relation 3</h3>
+<div class="math block">
+\[\Large\displaystyle P=VI\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P\)</span></td>
+<td>功率 / power</td>
+<td><span class="math inline">\(\mathrm{W}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>电势差 / potential difference</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(I\)</span></td>
+<td>电流 / current</td>
+<td><span class="math inline">\(\mathrm{A}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 元件接收的电功率由其端电压和电流决定。 / Electrical power depends on terminal voltage and current.</p>
+<p><strong>适用条件 / Conditions：</strong> 理想导线；电源有内阻时再接入内阻模型 / ideal wires; add the internal-resistance model for a non-ideal supply</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/5deb8dfad165c2c87a.html">电荷流与电流 / Charge and current</a> · <a class="internal-link" href="/notes/84ffb0f3067a42a64e.html">伏安特性与工作点 / Characteristic and operating point</a></p>
+<h2 id="h-cf7eaa5ad6fce8ddc4">真题归纳的一般题型 / General question patterns</h2>
+<p>关键词只提示候选模型，须核对对象、阶段、几何、守恒条件和题目所求。以下是解题路线概括，不是新增真题或官方答案。 / A cue suggests a candidate model; verify the system, stage, geometry and conditions. These are original teaching routes, not new past papers or official mark schemes.</p>
+<table>
+<thead>
+<tr>
+<th>题型与关键词 / Type and cues</th>
+<th>常见题给量 / Typical givens</th>
+<th>模型怎样使用 / Use of the model</th>
+<th>所求与检查 / Target and check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定量或机制应用 / Calculation or mechanism: series 串联；parallel 并联；power 功率</td>
+<td>电源电压、各支路电阻及连接方式 / supply voltage, resistances and topology</td>
+<td>用电流连续与同端点同电压识别支路，先等效再还原各元件电流和功率 / reduce the circuit, then recover branch currents and powers</td>
+<td>等效电阻、支路电流或功率分配 / equivalent resistance, branch current or power distribution</td>
+</tr>
+<tr>
+<td>explain / compare / suggest：解释、比较、推断 / explanation, comparison, inference</td>
+<td>已知改变的量以及保持不变的条件 / changed and fixed quantities</td>
+<td>串联分压、并联分流；不能把支路数当电流比例 / series circuits divide voltage and parallel circuits divide current according to resistance</td>
+<td>用完整因果链说明目标量的变化，避免只列公式 / explain the change with a causal chain</td>
+</tr>
+<tr>
+<td>justify / evaluate：说明依据、评价适用性 / justification or evaluation</td>
+<td>题目描述的实际约束 / the actual constraints</td>
+<td>理想导线；电源有内阻时再接入内阻模型 / ideal wires; add the internal-resistance model for a non-ideal supply</td>
+<td>指明所用结论适用在哪一阶段；条件改变时重新选模型 / identify the valid stage and reassess changed conditions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="h-7ec3884f5f01709730">可回到原题核对的实例 / Traceable past-paper examples</h3>
+<table>
+<thead>
+<tr>
+<th>真题 / Paper</th>
+<th>实际出现的线索 / Observed cues</th>
+<th>线索所在位置与复述任务 / Location and retrieval task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/c2368d9f0982e6acea.html">PH02-202506-Q13-S</a></td>
+<td><strong>parallel, power</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/511b9cbeec6ab028c8.html">PH02-202301-Q18-S</a></td>
+<td><strong>parallel, power</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/37f28ea29fab2f57b1.html">PH02-201906-Q14-S</a></td>
+<td><strong>parallel, power</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-78f4f4163ed578d839">对应知识点 / Knowledge links</h2>
+<ul>
+<li><a class="internal-link" href="/notes/9b9873b5020c3643d4.html">3.4</a></li>
+</ul>
+<hr/>
+<h2 id="h-91dd417c9de345504b">既有条件、例题与来源 / Existing conditions, examples and sources</h2>
+<p>保留以下已经整理的边界条件、数值例和原题入口；核心公式与组合顺序见上方。 / The existing conditions, examples and source links below remain available; use the formula cards and combination route above.</p>
 <h2 id="h-306de3762cf22bd56a">关键词 → 模型 / Keywords → model</h2>
 <p>series → parallel → junction → power → <strong>混联电路与功率分配</strong></p>
-<h2 id="h-1ec4232f42e67f8191">推理顺序 / Reasoning</h2>
-<p>先化简电路，再由总量回到支路，使用节点电荷守恒和回路能量守恒。</p>
-<p>Reduce the network; obtain total current; recover branch voltage and current; apply charge conservation at junctions and energy conservation round loops.</p>
 <h2 id="h-5974c4eb699b19ead0">知识与条件 / Knowledge and conditions</h2>
 <h3 id="h-37a9a50d4d41722747">3.4.4</h3>
 <a class="internal-link" href="/notes/9b9873b5020c3643d4.html">3.4.4 直流电路与电功率</a>
 <p>恒定电压和电流时使用电能公式；功率公式中的电流、电压和电阻必须对应同一元件。</p>
 <p>Apply <span class="math inline">\(E=IVt\)</span> when voltage and current are constant. <span class="math inline">\(I^2R\)</span> and <span class="math inline">\(V^2/R\)</span> refer to the voltage/current of the same resistor.</p>
 <p>掌握串并联等效电阻、电能和功率。</p>
-<p><span class="math inline">\(R_{\mathrm{s}}=R_1+R_2+\cdots\)</span>; <span class="math inline">\(1/R_{\mathrm{p}}=1/R_1+1/R_2+\cdots\)</span>; <span class="math inline">\(E=IVt\)</span>; <span class="math inline">\(P=IV=I^2R=V^2/R\)</span>.</p>
 <h2 id="h-25507b12c6b278dd78">真题复述 / Past-paper retrieval</h2>
 <ul>
 <li><a class="internal-link" href="/notes/9e9bda85276d0bdac1.html">202606-Q12</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/abdb37e2f811a031f6.html">202606-Q13</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/54c62b8bfc82ed9f92.html">202606-Q14</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 </ul>
-<section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/9b9873b5020c3643d4.html">3.4.4 直流电路与电功率 / Circuits</a></li><li><a href="/notes/2ff816991fd1526aed.html">3.4.4 直流电路与电功率 真题练习 / Past-paper practice</a></li><li><a href="/notes/e3527f2e83e569a537.html">3.4.6 电动势与内阻 真题练习 / Past-paper practice</a></li><li><a href="/notes/435212486aa4179293.html">PH02 2018 specimen paper Q22</a></li><li><a href="/notes/45b560c244d5324d34.html">PH02 201706 Q04</a></li><li><a href="/notes/bd79013c5cccece0c0.html">PH02 201706 Q09</a></li><li><a href="/notes/63c2bd18b2fff77677.html">PH02 201706 Q14</a></li><li><a href="/notes/3cc6fad9aa0c685495.html">PH02 201706 Q16</a></li><li><a href="/notes/45f8eb88c49a147f08.html">PH02 201806 Q12</a></li><li><a href="/notes/4d3c3ad14c92a6f54f.html">PH02 201806 Q16</a></li><li><a href="/notes/b02af19b88de116c63.html">PH02 201806 Q17</a></li><li><a href="/notes/50c9a7dc16e3a6d43d.html">PH02 201901 Q06</a></li><li><a href="/notes/fa935f1fd17eb7fc39.html">PH02 201901 Q13</a></li><li><a href="/notes/fe3871f4e58ed08299.html">PH02 201901 Q14</a></li><li><a href="/notes/3268f014e8a08280eb.html">PH02 201901 Q17</a></li><li><a href="/notes/b2748e119ddec8216a.html">PH02 201906 Q05</a></li><li><a href="/notes/938deb1ab772c9e7f1.html">PH02 201906 Q13</a></li><li><a href="/notes/37f28ea29fab2f57b1.html">PH02 201906 Q14</a></li><li><a href="/notes/1369b0a268f48f58f6.html">PH02 202001 Q14</a></li><li><a href="/notes/3b8c6ce91ffaf30ca5.html">PH02 202101 Q01</a></li><li><a href="/notes/dbecc405afcaa55d9f.html">PH02 202101 Q07</a></li><li><a href="/notes/c1c9692cadeb16a85a.html">PH02 202101 Q12</a></li><li><a href="/notes/5904ffb325039ac01d.html">PH02 202201 Q12</a></li><li><a href="/notes/df30f20735dce8d74e.html">PH02 202201 Q15</a></li><li><a href="/notes/7a783f335e4a3fddb7.html">PH02 202206 Q09</a></li><li><a href="/notes/d3e35b4ab70c5998c3.html">PH02 202206 Q12</a></li><li><a href="/notes/80ccac7bf96e21a2c0.html">PH02 202206 Q13</a></li><li><a href="/notes/a0f0807eef6e5be7b2.html">PH02 202301 Q16</a></li><li><a href="/notes/511b9cbeec6ab028c8.html">PH02 202301 Q18</a></li><li><a href="/notes/508ef6f590a71c71ed.html">PH02 202306 Q02</a></li><li><a href="/notes/3e0c2a05bd78006ed5.html">PH02 202306 Q08</a></li><li><a href="/notes/10ae1a99a0f25770ec.html">PH02 202401 Q13</a></li><li><a href="/notes/9a8f5e557d9c4ff015.html">PH02 202401 Q20</a></li><li><a href="/notes/7d5a579841b22e5fbc.html">PH02 202406 Q03</a></li><li><a href="/notes/dd00e04b67d524e46a.html">PH02 202406 Q04</a></li><li><a href="/notes/ed8c7925d68c851f7a.html">PH02 202501 Q02</a></li><li><a href="/notes/620ab2f846b1f338e9.html">PH02 202501 Q09</a></li><li><a href="/notes/64afd125ad155dec95.html">PH02 202501 Q14</a></li><li><a href="/notes/a53b0e21f76ecc167f.html">PH02 202506 Q12</a></li><li><a href="/notes/5ff40425cbbca6aff6.html">PH02 202506 Q14</a></li><li><a href="/notes/bdf264f7ee4d78a400.html">PH02 202506 Q15</a></li><li><a href="/notes/27a776c2ebc18d0493.html">PH02 202506 Q16</a></li><li><a href="/notes/d729983b29b7e13250.html">PH02 202601 Q05</a></li><li><a href="/notes/0a797232d9b611848c.html">PH02 202601 Q13</a></li><li><a href="/notes/9e075ac6a582a006d1.html">PH02 202601 Q14</a></li><li><a href="/notes/bd5d945f4f0443e8c6.html">PH02 202606 Q05</a></li><li><a href="/notes/abdb37e2f811a031f6.html">PH02 202606 Q13</a></li><li><a href="/notes/387f8af36ffd6c9855.html">U2 常用物理模型 / Common physics models</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes" aria-label="搜索笔记"><button id="search-close" aria-label="关闭搜索">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U2/07 常用物理模型/U2PM04 混联电路与功率分配 - Series and parallel.md", "url": "/notes/ef5992172dee8f3e81.html", "unit": "U2"}</script></body></html>
+<span aria-hidden="true" class="anchor-alias" id="h-1ec4232f42e67f8191"></span><div id="backlinks"><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/9b9873b5020c3643d4.html">3.4.4 直流电路与电功率 / Circuits</a></li><li><a href="/notes/387f8af36ffd6c9855.html">U2 常用物理模型 / Common physics models</a></li><li><a href="/notes/9d4d4ff6aaeb02d786.html">U2 图解、分模型与题型路线 / Illustrated models and question routes</a></li><li><a href="/notes/24c1345ccc4b72fa03.html">热敏光敏分压器 / Potential divider</a></li><li><a href="/notes/4740937afab4d3ea55.html">电源内阻与图像截距 / EMF and internal resistance</a></li><li><a href="/notes/c600bc3b1191a53012.html">U3 图解、分模型与题型路线 / Illustrated models and question routes</a></li><li><a href="/notes/93986c12a359623d9d.html">RC指数变化与对数图 / Charge and discharge</a></li><li><a href="/notes/29572baf213f2f3d99.html">U4 图解、分模型与题型路线 / Illustrated models and question routes</a></li><li><a href="/notes/5cf3a34c0ebd1c6dfb.html">太阳能阵列最大功率 / Solar cell and maximum power</a></li></ul></section></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U2/07 常用物理模型/U2PM04 混联电路与功率分配 - Series and parallel.md", "url": "/notes/ef5992172dee8f3e81.html", "unit": "U2"}</script></body></html>

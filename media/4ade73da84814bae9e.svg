@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="489.6pt" viewBox="0 0 864 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-13T11:33:22.343947</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.6 
+L 864 489.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 239.328 247.03488 
+C 242.517566 247.03488 245.576925 245.767652 247.832288 243.512288 
+C 250.087652 241.256925 251.35488 238.197566 251.35488 235.008 
+C 251.35488 231.818434 250.087652 228.759075 247.832288 226.503712 
+C 245.576925 224.248348 242.517566 222.98112 239.328 222.98112 
+C 236.138434 222.98112 233.079075 224.248348 230.823712 226.503712 
+C 228.568348 228.759075 227.30112 231.818434 227.30112 235.008 
+C 227.30112 238.197566 228.568348 241.256925 230.823712 243.512288 
+C 233.079075 245.767652 236.138434 247.03488 239.328 247.03488 
+z
+" clip-path="url(#p1be2f2c974)" style="fill: #bd818f; stroke: #496582; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="139.104" y="315.203344" transform="rotate(-0 139.104 315.203344)">×</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="139.104" y="240.035344" transform="rotate(-0 139.104 240.035344)">×</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="139.104" y="164.867344" transform="rotate(-0 139.104 164.867344)">×</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="239.328" y="315.203344" transform="rotate(-0 239.328 315.203344)">×</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="239.328" y="240.035344" transform="rotate(-0 239.328 240.035344)">×</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="239.328" y="164.867344" transform="rotate(-0 239.328 164.867344)">×</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="339.552" y="315.203344" transform="rotate(-0 339.552 315.203344)">×</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="339.552" y="240.035344" transform="rotate(-0 339.552 240.035344)">×</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="339.552" y="164.867344" transform="rotate(-0 339.552 164.867344)">×</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="439.776" y="315.203344" transform="rotate(-0 439.776 315.203344)">×</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="439.776" y="240.035344" transform="rotate(-0 439.776 240.035344)">×</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 18px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="439.776" y="164.867344" transform="rotate(-0 439.776 164.867344)">×</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="289.44" y="112.907688" transform="rotate(-0 289.44 112.907688)">B into page / B 向里</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="239.328" y="238.080266" transform="rotate(-0 239.328 238.080266)">+q</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 256.36085 235.008 
+Q 296.95741 235.008 335.317902 235.008 
+" style="fill: none; stroke: #bd818f; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 328.917902 231.808 
+L 335.317902 235.008 
+L 328.917902 238.208 
+z
+" style="fill: #bd818f; stroke: #bd818f; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="296.9568" y="263.136266" transform="rotate(-0 296.9568 263.136266)">v</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 239.328 217.974386 
+Q 239.328 187.401732 239.328 159.065146 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 236.128 165.465146 
+L 239.328 159.065146 
+L 242.528 165.465146 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="209.2608" y="190.473866" transform="rotate(-0 209.2608 190.473866)">FB</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 239.328 252.041614 
+Q 239.328 282.614268 239.328 310.950854 
+" style="fill: none; stroke: #bd818f; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 242.528 304.550854 
+L 239.328 310.950854 
+L 236.128 304.550854 
+z
+" style="fill: #bd818f; stroke: #bd818f; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="209.2608" y="285.686666" transform="rotate(-0 209.2608 285.686666)">FE</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(351.939156 332.296375)">forces balance</text>
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(367.664 344.312156)">两力平衡</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_6">
+    <path d="M 593.784 165.8112 
+L 831.816 165.8112 
+L 831.816 95.3088 
+L 593.784 95.3088 
+z
+" clip-path="url(#pee13fd931d)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 593.784 270.2592 
+L 831.816 270.2592 
+L 831.816 199.7568 
+L 593.784 199.7568 
+z
+" clip-path="url(#pee13fd931d)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 593.784 374.7072 
+L 831.816 374.7072 
+L 831.816 304.2048 
+L 593.784 304.2048 
+z
+" clip-path="url(#pee13fd931d)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="113.851599" transform="rotate(-0 712.8 113.851599)">1 题给量 / given</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="143.106804" transform="rotate(-0 712.8 143.106804)">互相垂直的 E、B 和粒子方向</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="218.331503" transform="rotate(-0 712.8 218.331503)">2 调用模型 / use</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(639.298828 239.635551)">匀强电场与电场力 + 磁场中的运动电</text>
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(684.298828 255.461401)">荷 + 受力分解</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="322.779503" transform="rotate(-0 712.8 322.779503)">3 所求量 / find</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="352.033742" transform="rotate(-0 712.8 352.033742)">不偏转速度、磁场或电场</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 712.8 171.726562 
+Q 712.8 182.783951 712.8 191.605272 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 716 185.205272 
+L 712.8 191.605272 
+L 709.6 185.205272 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 712.8 276.174562 
+Q 712.8 287.231951 712.8 296.053272 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 716 289.653272 
+L 712.8 296.053272 
+L 709.6 289.653272 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+  </g>
+  <g id="text_25">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(38.88 41.969115)">交叉电磁场速度选择</text>
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(38.88 58.016771)">Undeflected</text>
+  </g>
+  <g id="text_26">
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #8090a2" transform="translate(38.88 442.181758)">示意图，不按比例；图形/归一化曲线是模型说明，非真题实测数据。</text>
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #8090a2" transform="translate(38.88 452.88)">Schematic, not to scale; any normalised curves illustrate the model, not measured examination data.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1be2f2c974">
+   <rect x="38.88" y="84.672" width="501.12" height="300.672"/>
+  </clipPath>
+  <clipPath id="pee13fd931d">
+   <rect x="587.52" y="78.336" width="250.56" height="313.344"/>
+  </clipPath>
+ </defs>
+</svg>

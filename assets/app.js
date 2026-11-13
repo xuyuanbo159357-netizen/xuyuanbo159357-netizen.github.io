@@ -58,7 +58,7 @@
       details.append(branch(children,folder,level+1));frag.append(details);
     }return frag;
   }
-  fetch('/assets/catalog.json?v=u1-u4-20261112-leading-context-crops').then(r=>r.json()).then(data=>{
+  fetch('/assets/catalog.json?v=u1-u4-20261113-illustrated-model-guides').then(r=>r.json()).then(data=>{
     catalog=data; const nav=document.querySelector('#navigation');nav.replaceChildren();
     const top=E('a',null,'首页 / Start here');top.href='/knowledge.html';nav.append(top);
     const maps=E('a',null,'知识谱系图 / Knowledge maps');maps.href='/maps.html';nav.append(maps);

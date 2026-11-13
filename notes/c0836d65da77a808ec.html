@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>引力势垒与最小能量 / Potential barrier · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=u1-u4-20261113-illustrated-model-guides"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/07 常用物理模型</div><h1 id="h-8495e1f14ab194a12f">引力势垒与最小能量 / Potential barrier</h1>
+<a class="internal-link" href="/notes/3dd0f4dc5081d66acd.html">模型目录 / Model index</a>
+<h2 id="h-cb5f80444803cc19fd">图像化建模 / Illustrated model</h2>
+<a class="image-link" href="/media/058be1ac95063fc669.svg" target="_blank"><img alt="U3PM22-model-guide-20261113" decoding="async" loading="lazy" src="/media/058be1ac95063fc669.svg" style="max-width:min(100%,1100px)"/></a>
+<p><strong>图中对象与读图 / System and reading：</strong> 先把源的引力势带符号相加，找路径最高点，再调用能量模型算上坡所需动能 / sum source potentials, locate the path maximum and use energy conservation</p>
+<p><strong>条件与约束 / Conditions and constraints：</strong> 固定引力源、无耗散，沿指定路径；所给最小值是达到势垒顶端的临界值 / fixed sources, no losses and specified path; the minimum is a threshold</p>
+<h2 id="h-5d0133360d3d766fd4">分模型与接口 / Sub-models and interfaces</h2>
+<p>基础规律的解释与推导见分模型和基础知识入口；本复合模型只调用公式结论，按对象、阶段和共同未知量联算。 / See the linked sub-models and foundation notes for explanations and derivations. This compound model applies their results to the specified system and stages.</p>
+<table>
+<thead>
+<tr>
+<th>分模型 / Sub-model</th>
+<th>提供的关系或量 / Supplies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/f6a35f06a0f6cefc8d.html">点源引力场 / Radial gravitational field</a></td>
+<td>引力、场强、引力势或势能 / gravitational force, field strength, potential or potential energy</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a></td>
+<td>速度、位移、外力功或耗散能量 / speed, displacement, external work or dissipated energy</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基础知识入口 / Foundation notes：</strong> <a class="internal-link" href="/notes/bde9238ff0910a56e0.html">3.7</a></p>
+<p><strong>连接顺序 / Connection order：</strong> 先把源的引力势带符号相加，找路径最高点，再调用能量模型算上坡所需动能 / sum source potentials, locate the path maximum and use energy conservation</p>
+<h2 id="h-12d7795ca044bbb774">按物理关系整理公式 / Formulae organised by relationship</h2>
+<h3 id="h-95f933f2dcd6b0ed8e">关系 1 / Relation 1</h3>
+<div class="math block">
+\[\Large\displaystyle V_g=-\frac{GM_1}{r_1}-\frac{GM_2}{r_2}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(V_g\)</span></td>
+<td>引力势 / gravitational potential</td>
+<td><span class="math inline">\(\mathrm{J\,kg^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(G\)</span></td>
+<td>万有引力常量 / gravitational constant</td>
+<td><span class="math inline">\(\mathrm{N\,m^2\,kg^{-2}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(M_1\)</span></td>
+<td>天体 1 质量 / source mass 1</td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(M_2\)</span></td>
+<td>天体 2 质量 / source mass 2</td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(r_1\)</span></td>
+<td>到天体 1 中心的距离 / distance from source 1</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(r_2\)</span></td>
+<td>到天体 2 中心的距离 / distance from source 2</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 引力势按带符号标量相加，不按场强方向相消。 / Gravitational potentials add as signed scalars, not directional field vectors.</p>
+<p><strong>适用条件 / Conditions：</strong> 固定引力源、无耗散，沿指定路径；所给最小值是达到势垒顶端的临界值 / fixed sources, no losses and specified path; the minimum is a threshold</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/f6a35f06a0f6cefc8d.html">点源引力场 / Radial gravitational field</a> · <a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a></p>
+<h3 id="h-6d57c6a77023c0aa6b">关系 2 / Relation 2</h3>
+<div class="math block">
+\[\Large\displaystyle E_{\min}=m(V_{g,\max}-V_{g,i})\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(E_{\min}\)</span></td>
+<td>临界最小初始动能 / threshold initial kinetic energy</td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>物体质量 / mass</td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{g,\max}\)</span></td>
+<td>路径最高总引力势 / maximum total potential along the path</td>
+<td><span class="math inline">\(\mathrm{J\,kg^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{g,i}\)</span></td>
+<td>起点总引力势 / initial total gravitational potential</td>
+<td><span class="math inline">\(\mathrm{J\,kg^{-1}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 沿路径的最大势能增量决定临界初始动能。 / The greatest potential-energy rise along the path sets the kinetic-energy threshold.</p>
+<p><strong>适用条件 / Conditions：</strong> 固定引力源、无耗散，沿指定路径；所给最小值是达到势垒顶端的临界值 / fixed sources, no losses and specified path; the minimum is a threshold</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/f6a35f06a0f6cefc8d.html">点源引力场 / Radial gravitational field</a> · <a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a></p>
+<h2 id="h-cf7eaa5ad6fce8ddc4">真题归纳的一般题型 / General question patterns</h2>
+<p>关键词只提示候选模型，须核对对象、阶段、几何、守恒条件和题目所求。以下是解题路线概括，不是新增真题或官方答案。 / A cue suggests a candidate model; verify the system, stage, geometry and conditions. These are original teaching routes, not new past papers or official mark schemes.</p>
+<table>
+<thead>
+<tr>
+<th>题型与关键词 / Type and cues</th>
+<th>常见题给量 / Typical givens</th>
+<th>模型怎样使用 / Use of the model</th>
+<th>所求与检查 / Target and check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定量或机制应用 / Calculation or mechanism: minimum energy 最小能量；between planets 天体之间；potential barrier 势垒</td>
+<td>起点总引力势、路径最高势及物体质量 / initial total potential, maximum along the path and mass</td>
+<td>先把源的引力势带符号相加，找路径最高点，再调用能量模型算上坡所需动能 / sum source potentials, locate the path maximum and use energy conservation</td>
+<td>最小初始动能、最大可达位置或额外能量 / threshold initial kinetic energy, turning position or extra energy</td>
+</tr>
+<tr>
+<td>explain / compare / suggest：解释、比较、推断 / explanation, comparison, inference</td>
+<td>已知改变的量以及保持不变的条件 / changed and fixed quantities</td>
+<td>不能直接以终点势代替路径最高势；零场强位置总势一般仍为负 / do not replace the path maximum with the destination; zero field need not mean zero total potential</td>
+<td>用完整因果链说明目标量的变化，避免只列公式 / explain the change with a causal chain</td>
+</tr>
+<tr>
+<td>justify / evaluate：说明依据、评价适用性 / justification or evaluation</td>
+<td>题目描述的实际约束 / the actual constraints</td>
+<td>固定引力源、无耗散，沿指定路径；所给最小值是达到势垒顶端的临界值 / fixed sources, no losses and specified path; the minimum is a threshold</td>
+<td>指明所用结论适用在哪一阶段；条件改变时重新选模型 / identify the valid stage and reassess changed conditions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="h-7ec3884f5f01709730">可回到原题核对的实例 / Traceable past-paper examples</h3>
+<table>
+<thead>
+<tr>
+<th>真题 / Paper</th>
+<th>实际出现的线索 / Observed cues</th>
+<th>线索所在位置与复述任务 / Location and retrieval task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/b0dd5a56e77974901e.html">PH03-202601-Q05.5-S</a></td>
+<td><strong>minimum energy</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-78f4f4163ed578d839">对应知识点 / Knowledge links</h2>
+<ul>
+<li><a class="internal-link" href="/notes/bde9238ff0910a56e0.html">3.7</a></li>
+</ul>
+<h2 id="h-742b85ec8a71a143e4">真题路线示例：先越过势垒 / Worked route: cross the barrier first</h2>
+<a class="internal-link" href="/notes/b0dd5a56e77974901e.html">PH03 202601 Q05.5，原题及评分标准 / Question and mark scheme</a>
+<p><strong>关键词 / Cues：</strong> minimum energy；from the surface of the Earth to the surface of the Moon。</p>
+<p><strong>题给量与读图 / Givens and graph：</strong> 质量为 950 kg，地球表面 T 点总引力势为 −6.26×10⁷ J kg⁻¹；路径上的最高点 P 的总引力势约为 −1.3×10⁶ J kg⁻¹。 / The mass is 950 kg and the total potential at T is −6.26×10⁷ J kg⁻¹. Read the maximum at P as approximately −1.3×10⁶ J kg⁻¹.</p>
+<p><strong>调用顺序 / Sub-model sequence：</strong> <a class="internal-link" href="/notes/f6a35f06a0f6cefc8d.html">点源引力场 / Radial gravitational field</a> 给总势及沿途最高势，再调用 <a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a> 的能量账目。 / Obtain total potential and its path maximum from the gravity model, then apply the energy model.</p>
+<div class="math block">
+\[\Large\displaystyle \Delta V_g=(-1.3\times10^6)-(-6.26\times10^7)=6.13\times10^7\ \mathrm{J\,kg^{-1}}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Delta V_g\)</span></td>
+<td>从起点到势垒最高点的引力势增量 / potential rise from the start to the barrier maximum</td>
+<td><span class="math inline">\(\mathrm{J\,kg^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{g,\max}\)</span></td>
+<td>路径最高总引力势 / maximum total potential along the path</td>
+<td><span class="math inline">\(\mathrm{J\,kg^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{g,i}\)</span></td>
+<td>起点总引力势 / initial total gravitational potential</td>
+<td><span class="math inline">\(\mathrm{J\,kg^{-1}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> PH03 202601 Q05.5：起点总势由题给，最高点约 −1.3×10⁶ J kg⁻¹ 由图读出；此处使用评分标准中的读数示例。 / The starting potential is supplied and the path maximum is read from the graph, using the mark-scheme example.</p>
+<p><strong>适用条件 / Conditions：</strong> 固定引力源、无耗散，沿指定路径；所给最小值是达到势垒顶端的临界值 / fixed sources, no losses and specified path; the minimum is a threshold</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/f6a35f06a0f6cefc8d.html">点源引力场 / Radial gravitational field</a> · <a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a></p>
+<div class="math block">
+\[\Large\displaystyle E_{\min}=950\times6.13\times10^7\approx5.8\times10^{10}\ \mathrm J\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(E_{\min}\)</span></td>
+<td>临界最小初始动能 / threshold initial kinetic energy</td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>物体质量 / mass</td>
+<td><span class="math inline">\(\mathrm{kg}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta V_g\)</span></td>
+<td>从起点到势垒最高点的引力势增量 / potential rise from the start to the barrier maximum</td>
+<td><span class="math inline">\(\mathrm{J\,kg^{-1}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> PH03 202601 Q05.5：把 950 kg 乘最高点与起点的势差，得到所需能量；不能改用月球表面的势。 / Multiply the 950 kg mass by the rise to the maximum, not by the net change to the lunar surface.</p>
+<p><strong>适用条件 / Conditions：</strong> 固定引力源、无耗散，沿指定路径；所给最小值是达到势垒顶端的临界值 / fixed sources, no losses and specified path; the minimum is a threshold</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/f6a35f06a0f6cefc8d.html">点源引力场 / Radial gravitational field</a> · <a class="internal-link" href="/notes/6639b8ddcca84b99ca.html">功与能量收支模型 / Work and energy</a></p>
+<p><strong>评分细节 / Mark-scheme detail：</strong> 原评分标准也接受最高势约 −1.2×10⁶ J kg⁻¹ 对应的读图范围。终点月球表面的势不是势垒顶端；势差算错后的跟随分不能视为方法正确。 / The scheme also permits the corresponding read-off near −1.2×10⁶ J kg⁻¹. The lunar-surface potential is not the maximum; follow-through credit does not validate using the wrong potential difference.</p>
+<div id="backlinks"><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/bde9238ff0910a56e0.html">3.7.3 引力势与引力势能 / Gravitational potential</a></li><li><a href="/notes/3dd0f4dc5081d66acd.html">U3 常用物理模型 / Common physics models</a></li><li><a href="/notes/c600bc3b1191a53012.html">U3 图解、分模型与题型路线 / Illustrated models and question routes</a></li></ul></section></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U3/07 常用物理模型/U3PM22 引力势垒与最小能量 - Potential barrier.md", "url": "/notes/c0836d65da77a808ec.html", "unit": "U3"}</script></body></html>

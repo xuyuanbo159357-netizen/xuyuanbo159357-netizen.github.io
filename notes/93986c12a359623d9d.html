@@ -1,20 +1,224 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="OxfordAQA 9630 U1–U4 中英文物理知识库"><title>RC指数变化与对数图 / Charge and discharge · OxfordAQA Physics</title><link rel="stylesheet" href="/assets/site.css"><script defer src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button id="menu" aria-label="展开目录">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br>更新 · 2026-10-21<br><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/07 常用物理模型</div><h1 id="h-23160016bdb7bb1604">RC指数变化与对数图 / Charge and discharge</h1>
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>RC指数变化与对数图 / Charge and discharge · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=u1-u4-20261113-illustrated-model-guides"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/07 常用物理模型</div><h1 id="h-23160016bdb7bb1604">RC指数变化与对数图 / Charge and discharge</h1>
+<a class="internal-link" href="/notes/3dd0f4dc5081d66acd.html">模型目录 / Model index</a>
+<h2 id="h-cb5f80444803cc19fd">图像化建模 / Illustrated model</h2>
+<a class="image-link" href="/media/f26e2c09cb04efa805.svg" target="_blank"><img alt="U3PM07-model-guide-20261113" decoding="async" loading="lazy" src="/media/f26e2c09cb04efa805.svg" style="max-width:min(100%,1100px)"/></a>
+<p><strong>图中对象与读图 / System and reading：</strong> 先辨充放电及开关状态，使用相应指数结论；对数图斜率求 RC / identify switching and charging/discharging, then use the appropriate exponential relation</p>
+<p><strong>条件与约束 / Conditions and constraints：</strong> 理想固定 R、C；放电式不能直接当作充电电容电压式 / fixed ideal R and C; do not substitute a discharge expression for charging voltage</p>
+<h2 id="h-5d0133360d3d766fd4">分模型与接口 / Sub-models and interfaces</h2>
+<p>基础规律的解释与推导见分模型和基础知识入口；本复合模型只调用公式结论，按对象、阶段和共同未知量联算。 / See the linked sub-models and foundation notes for explanations and derivations. This compound model applies their results to the specified system and stages.</p>
+<table>
+<thead>
+<tr>
+<th>分模型 / Sub-model</th>
+<th>提供的关系或量 / Supplies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/1c83266d056ea0e3b8.html">电介质固定电荷或固定电压 / Connected or disconnected</a></td>
+<td>C、Q、V 或储能变化 / capacitance, charge, voltage or stored energy change</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/ef5992172dee8f3e81.html">混联电路与功率分配 / Series and parallel</a></td>
+<td>等效电阻、支路电流或功率分配 / equivalent resistance, branch current or power distribution</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基础知识入口 / Foundation notes：</strong> <a class="internal-link" href="/notes/4966b0336b9fc63e3c.html">3.9</a></p>
+<p><strong>连接顺序 / Connection order：</strong> 先辨充放电及开关状态，使用相应指数结论；对数图斜率求 RC / identify switching and charging/discharging, then use the appropriate exponential relation</p>
+<h2 id="h-12d7795ca044bbb774">按物理关系整理公式 / Formulae organised by relationship</h2>
+<h3 id="h-95f933f2dcd6b0ed8e">关系 1 / Relation 1</h3>
+<div class="math block">
+\[\Large\displaystyle V=V_0e^{-t/(RC)}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>电势差 / potential difference</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_0\)</span></td>
+<td>初始电压 / initial voltage</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(t\)</span></td>
+<td>时间 / time</td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(R\)</span></td>
+<td>电阻 / resistance</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(C\)</span></td>
+<td>电容 / capacitance</td>
+<td><span class="math inline">\(\mathrm{F}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 理想 RC 放电时电压按指数衰减。 / Voltage decays exponentially during ideal RC discharge.</p>
+<p><strong>适用条件 / Conditions：</strong> 理想固定 R、C；放电式不能直接当作充电电容电压式 / fixed ideal R and C; do not substitute a discharge expression for charging voltage</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/1c83266d056ea0e3b8.html">电介质固定电荷或固定电压 / Connected or disconnected</a> · <a class="internal-link" href="/notes/ef5992172dee8f3e81.html">混联电路与功率分配 / Series and parallel</a></p>
+<h3 id="h-6d57c6a77023c0aa6b">关系 2 / Relation 2</h3>
+<div class="math block">
+\[\Large\displaystyle \tau_{RC}=RC\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\tau_{RC}\)</span></td>
+<td>时间常量 / time constant</td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(R\)</span></td>
+<td>电阻 / resistance</td>
+<td><span class="math inline">\(\mathrm{\Omega}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(C\)</span></td>
+<td>电容 / capacitance</td>
+<td><span class="math inline">\(\mathrm{F}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 时间常量决定指数变化的时间尺度。 / The time constant sets the exponential time scale.</p>
+<p><strong>适用条件 / Conditions：</strong> 理想固定 R、C；放电式不能直接当作充电电容电压式 / fixed ideal R and C; do not substitute a discharge expression for charging voltage</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/1c83266d056ea0e3b8.html">电介质固定电荷或固定电压 / Connected or disconnected</a> · <a class="internal-link" href="/notes/ef5992172dee8f3e81.html">混联电路与功率分配 / Series and parallel</a></p>
+<h3 id="h-0c7f66201480483420">关系 3 / Relation 3</h3>
+<div class="math block">
+\[\Large\displaystyle U=\frac{1}{2}CV^2\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(U\)</span></td>
+<td>势能 / potential energy</td>
+<td><span class="math inline">\(\mathrm{J}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(C\)</span></td>
+<td>电容 / capacitance</td>
+<td><span class="math inline">\(\mathrm{F}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>电势差 / potential difference</td>
+<td><span class="math inline">\(\mathrm{V}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 电容储能由电容和电压共同决定，比较时先确定固定量。 / Capacitor energy depends on capacitance and voltage; identify what is held fixed.</p>
+<p><strong>适用条件 / Conditions：</strong> 理想固定 R、C；放电式不能直接当作充电电容电压式 / fixed ideal R and C; do not substitute a discharge expression for charging voltage</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/1c83266d056ea0e3b8.html">电介质固定电荷或固定电压 / Connected or disconnected</a> · <a class="internal-link" href="/notes/ef5992172dee8f3e81.html">混联电路与功率分配 / Series and parallel</a></p>
+<h2 id="h-cf7eaa5ad6fce8ddc4">真题归纳的一般题型 / General question patterns</h2>
+<p>关键词只提示候选模型，须核对对象、阶段、几何、守恒条件和题目所求。以下是解题路线概括，不是新增真题或官方答案。 / A cue suggests a candidate model; verify the system, stage, geometry and conditions. These are original teaching routes, not new past papers or official mark schemes.</p>
+<table>
+<thead>
+<tr>
+<th>题型与关键词 / Type and cues</th>
+<th>常见题给量 / Typical givens</th>
+<th>模型怎样使用 / Use of the model</th>
+<th>所求与检查 / Target and check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定量或机制应用 / Calculation or mechanism: time constant 时间常量；discharge 放电；log graph 对数图</td>
+<td>R、C、初始电压及时间数据 / resistance, capacitance, initial voltage and timing data</td>
+<td>先辨充放电及开关状态，使用相应指数结论；对数图斜率求 RC / identify switching and charging/discharging, then use the appropriate exponential relation</td>
+<td>电压、剩余电荷、时间常量或 R/C / voltage, charge, time constant or circuit parameters</td>
+</tr>
+<tr>
+<td>explain / compare / suggest：解释、比较、推断 / explanation, comparison, inference</td>
+<td>已知改变的量以及保持不变的条件 / changed and fixed quantities</td>
+<td>放电时间常量后剩余约 37%；充电后达到最终变化量的约 63% / after one time constant discharge retains about 37 percent and charging reaches about 63 percent</td>
+<td>用完整因果链说明目标量的变化，避免只列公式 / explain the change with a causal chain</td>
+</tr>
+<tr>
+<td>justify / evaluate：说明依据、评价适用性 / justification or evaluation</td>
+<td>题目描述的实际约束 / the actual constraints</td>
+<td>理想固定 R、C；放电式不能直接当作充电电容电压式 / fixed ideal R and C; do not substitute a discharge expression for charging voltage</td>
+<td>指明所用结论适用在哪一阶段；条件改变时重新选模型 / identify the valid stage and reassess changed conditions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="h-7ec3884f5f01709730">可回到原题核对的实例 / Traceable past-paper examples</h3>
+<table>
+<thead>
+<tr>
+<th>真题 / Paper</th>
+<th>实际出现的线索 / Observed cues</th>
+<th>线索所在位置与复述任务 / Location and retrieval task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/994b91423e7a65cda5.html">PH03-202606-Q14-S</a></td>
+<td><strong>time constant, discharge</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/46fcdec62d513854c5.html">PH03-202601-Q14-S</a></td>
+<td><strong>time constant, discharge</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/cd508ef5dfe3c3f8da.html">PH03-202401-Q16-S</a></td>
+<td><strong>time constant, discharge</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-78f4f4163ed578d839">对应知识点 / Knowledge links</h2>
+<ul>
+<li><a class="internal-link" href="/notes/4966b0336b9fc63e3c.html">3.9</a></li>
+</ul>
+<hr/>
+<h2 id="h-91dd417c9de345504b">既有条件、例题与来源 / Existing conditions, examples and sources</h2>
+<p>保留以下已经整理的边界条件、数值例和原题入口；核心公式与组合顺序见上方。 / The existing conditions, examples and source links below remain available; use the formula cards and combination route above.</p>
 <h2 id="h-306de3762cf22bd56a">关键词 → 模型 / Keywords → model</h2>
 <p>charge → discharge → time constant → log graph → <strong>RC指数变化与对数图</strong></p>
-<h2 id="h-1ec4232f42e67f8191">推理顺序 / Reasoning</h2>
-<p>选充电或放电式，用有效串联电阻；取自然对数线性化，并解释斜率与电流面积。</p>
-<p>Choose charging or discharging equations; use effective series resistance; linearise discharge with natural logarithms; interpret gradient and current area.</p>
 <h2 id="h-5974c4eb699b19ead0">知识与条件 / Knowledge and conditions</h2>
 <h3 id="h-ecab88fd8f286f1bdd">3.9.1</h3>
 <a class="internal-link" href="/notes/4966b0336b9fc63e3c.html">3.9.1 电容充放电与时间常量</a>
 <p>电阻应恒定，电容近似理想；有效串联电阻包含相关内阻；有符号电流需先定正方向。</p>
 <p>Use a constant resistor and ideal capacitor; include any relevant source/internal resistance in the effective series resistance. State the reference direction before giving a signed current.</p>
 <p>充电电荷、电压上升，电流衰减；放电三者大小均衰减。\n<span class="math inline">\(t_{1/2}=RC\ln2\)</span>; <span class="math inline">\(\ln V=\ln V_0-t/(RC)\)</span> for discharge.||半值时间不同于时间常量；对数直线斜率为负时间常量倒数。</p>
-<p><span class="math inline">\(\tau=RC\)</span>. Discharge: <span class="math inline">\(Q=Q_0e^{-t/RC}\)</span>, <span class="math inline">\(V=V_0e^{-t/RC}\)</span>, current magnitude <span class="math inline">\(|I|=(V_0/R)e^{-t/RC}\)</span>. Charge: <span class="math inline">\(Q=C\varepsilon(1-e^{-t/RC})\)</span>, <span class="math inline">\(V=\varepsilon(1-e^{-t/RC})\)</span>, <span class="math inline">\(I=(\varepsilon/R)e^{-t/RC}\)</span>.</p>
 <h2 id="h-25507b12c6b278dd78">真题复述 / Past-paper retrieval</h2>
 <ul>
 <li><a class="internal-link" href="/notes/741690e7ec18cf7f10.html">202606-Q13</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/994b91423e7a65cda5.html">202606-Q14</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/dd4f0e84368464c69c.html">202606-Q15</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 </ul>
-<section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/4966b0336b9fc63e3c.html">3.9.1 电容充放电与时间常量 / Capacitor charge and discharge</a></li><li><a href="/notes/80a70fb9e633991e8e.html">3.9.1 电容充放电与时间常量 真题练习 / Past-paper practice</a></li><li><a href="/notes/c32bdba4301dae4eda.html">PH03 2018 specimen paper Q07</a></li><li><a href="/notes/1ff9c14f66a8eacc31.html">PH03 201806 Q05</a></li><li><a href="/notes/cd9fbdf34429bada3d.html">PH03 201806 Q20</a></li><li><a href="/notes/09f461c391a370c2db.html">PH03 201806 Q21</a></li><li><a href="/notes/8f06a7fe5c432c04f5.html">PH03 201806 Q23</a></li><li><a href="/notes/85774081db063392dc.html">PH03 201901 Q02</a></li><li><a href="/notes/801f42671d83f390f8.html">PH03 201901 Q25</a></li><li><a href="/notes/fd9257502213a3d273.html">PH03 201901 Q26</a></li><li><a href="/notes/6cd10ca5e48a958b52.html">PH03 201906 Q03</a></li><li><a href="/notes/3dc9ecd951754efb40.html">PH03 201906 Q18</a></li><li><a href="/notes/8df1116b1ccd838af8.html">PH03 201906 Q21</a></li><li><a href="/notes/5be4061d5f9e07097a.html">PH03 201906 Q22</a></li><li><a href="/notes/8f0aca8c943fefc1e1.html">PH03 202001 Q02</a></li><li><a href="/notes/1e06becc11a54e3a56.html">PH03 202001 Q22</a></li><li><a href="/notes/2e2f561db0391742c6.html">PH03 202001 Q23</a></li><li><a href="/notes/c4dcd66f11b34a961c.html">PH03 202001 Q24</a></li><li><a href="/notes/9ed85e9345117aef0c.html">PH03 202001 Q25</a></li><li><a href="/notes/083101cb68cacab0b9.html">PH03 202101 Q06</a></li><li><a href="/notes/f0edeb7b2b6430eaf7.html">PH03 202101 Q17</a></li><li><a href="/notes/dd97e0025501b7c41f.html">PH03 202101 Q18</a></li><li><a href="/notes/3c74bec704d74b913e.html">PH03 202201 Q04</a></li><li><a href="/notes/20930232f99c994358.html">PH03 202201 Q12</a></li><li><a href="/notes/272c653f85369eb292.html">PH03 202201 Q15</a></li><li><a href="/notes/5c1f3d4423f47b1ddf.html">PH03 202206 Q05</a></li><li><a href="/notes/6df56d9dcb64ca207c.html">PH03 202206 Q15</a></li><li><a href="/notes/a74fef3d2fdc255418.html">PH03 202206 Q16</a></li><li><a href="/notes/4c823c7c4292c73ae6.html">PH03 202301 Q04</a></li><li><a href="/notes/bd9a9ea6cbbb54d7dc.html">PH03 202301 Q13</a></li><li><a href="/notes/370b662fad180c14da.html">PH03 202301 Q14</a></li><li><a href="/notes/867bfa8e5a6f5a086f.html">PH03 202301 Q15</a></li><li><a href="/notes/15b77be945d3df2787.html">PH03 202301 Q16</a></li><li><a href="/notes/0d3feb1ea5509a12bb.html">PH03 202306 Q06</a></li><li><a href="/notes/e3dc140b40028b00f5.html">PH03 202306 Q16</a></li><li><a href="/notes/cd508ef5dfe3c3f8da.html">PH03 202401 Q16</a></li><li><a href="/notes/b319a710ce23eb729c.html">PH03 202401 Q17</a></li><li><a href="/notes/cc2d06b0e7b36b4829.html">PH03 202406 Q05</a></li><li><a href="/notes/dda7a4c7858beae198.html">PH03 202406 Q17</a></li><li><a href="/notes/d4bccd8dae4c34465e.html">PH03 202501 Q04</a></li><li><a href="/notes/448083d170babf581e.html">PH03 202501 Q13</a></li><li><a href="/notes/d5a51093aea1ba40dc.html">PH03 202501 Q14</a></li><li><a href="/notes/ad3e0a995707408197.html">PH03 202501 Q15</a></li><li><a href="/notes/955046ac5f4fa4610d.html">PH03 202506 Q06</a></li><li><a href="/notes/a3b3ccb0f384b5a6a3.html">PH03 202601 Q04</a></li><li><a href="/notes/46fcdec62d513854c5.html">PH03 202601 Q14</a></li><li><a href="/notes/0efdc118f48edb728f.html">PH03 202601 Q15</a></li><li><a href="/notes/283fa7bc0ad9be50e3.html">PH03 202601 Q16</a></li><li><a href="/notes/9e4548123ef2e6a09a.html">PH03 202606 Q06</a></li><li><a href="/notes/d7f27a48522c688667.html">PH03 202606 Q12</a></li><li><a href="/notes/741690e7ec18cf7f10.html">PH03 202606 Q13</a></li><li><a href="/notes/994b91423e7a65cda5.html">PH03 202606 Q14</a></li><li><a href="/notes/dd4f0e84368464c69c.html">PH03 202606 Q15</a></li><li><a href="/notes/3dd0f4dc5081d66acd.html">U3 常用物理模型 / Common physics models</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes" aria-label="搜索笔记"><button id="search-close" aria-label="关闭搜索">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U3/07 常用物理模型/U3PM07 RC指数变化与对数图 - Charge and discharge.md", "url": "/notes/93986c12a359623d9d.html", "unit": "U3"}</script></body></html>
+<span aria-hidden="true" class="anchor-alias" id="h-1ec4232f42e67f8191"></span><div id="backlinks"><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/4966b0336b9fc63e3c.html">3.9.1 电容充放电与时间常量 / Capacitor charge and discharge</a></li><li><a href="/notes/3dd0f4dc5081d66acd.html">U3 常用物理模型 / Common physics models</a></li><li><a href="/notes/c600bc3b1191a53012.html">U3 图解、分模型与题型路线 / Illustrated models and question routes</a></li></ul></section></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U3/07 常用物理模型/U3PM07 RC指数变化与对数图 - Charge and discharge.md", "url": "/notes/93986c12a359623d9d.html", "unit": "U3"}</script></body></html>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="489.6pt" viewBox="0 0 864 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-13T11:33:19.036566</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.6 
+L 864 489.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 88.992 191.609735 
+L 91.338381 194.271432 
+L 93.684763 197.324572 
+L 96.031144 200.739815 
+L 98.377525 204.484345 
+L 101.897097 210.639062 
+L 105.416669 217.320119 
+L 110.109431 226.796283 
+L 123.014528 253.350974 
+L 126.5341 259.987964 
+L 130.053672 266.085417 
+L 132.400054 269.785038 
+L 134.746435 273.150484 
+L 137.092816 276.149414 
+L 139.439197 278.753013 
+L 141.785579 280.936261 
+L 144.13196 282.678179 
+L 146.478341 283.962031 
+L 148.824722 284.775477 
+L 149.997913 285.003177 
+L 151.171104 285.110703 
+L 152.344294 285.097796 
+L 153.517485 284.964487 
+L 154.690676 284.711097 
+L 155.863866 284.338234 
+L 158.210247 283.237961 
+L 160.556629 281.674242 
+L 162.90301 279.662102 
+L 165.249391 277.220876 
+L 167.595773 274.374023 
+L 169.942154 271.148897 
+L 172.288535 267.57649 
+L 174.634916 263.691128 
+L 178.154488 257.358702 
+L 181.67406 250.543527 
+L 186.366823 240.96121 
+L 196.925538 219.139133 
+L 200.44511 212.343679 
+L 203.964682 206.037747 
+L 206.311064 202.173535 
+L 208.657445 198.624833 
+L 211.003826 195.42574 
+L 213.350207 192.606998 
+L 215.696589 190.195691 
+L 218.04297 188.21499 
+L 220.389351 186.683927 
+L 222.735732 185.617216 
+L 223.908923 185.261373 
+L 225.082114 185.025106 
+L 226.255304 184.908985 
+L 227.428495 184.913287 
+L 228.601686 185.038003 
+L 229.774876 185.282833 
+L 230.948067 185.647189 
+L 233.294448 186.730687 
+L 235.640829 188.278087 
+L 237.987211 190.27452 
+L 240.333592 192.700801 
+L 242.679973 195.533617 
+L 245.026355 198.745746 
+L 247.372736 202.306322 
+L 249.719117 206.181133 
+L 253.238689 212.50035 
+L 256.758261 219.305707 
+L 261.451023 228.880561 
+L 272.009739 250.710293 
+L 275.529311 257.51565 
+L 279.048883 263.834867 
+L 281.395264 267.709678 
+L 283.741645 271.270254 
+L 286.088027 274.482383 
+L 288.434408 277.315199 
+L 290.780789 279.74148 
+L 293.127171 281.737913 
+L 295.473552 283.285313 
+L 297.819933 284.368811 
+L 298.993124 284.733167 
+L 300.166314 284.977997 
+L 301.339505 285.102713 
+L 302.512696 285.107015 
+L 303.685886 284.990894 
+L 304.859077 284.754627 
+L 306.032268 284.398784 
+L 308.378649 283.332073 
+L 310.72503 281.80101 
+L 313.071411 279.820309 
+L 315.417793 277.409002 
+L 317.764174 274.59026 
+L 320.110555 271.391167 
+L 322.456936 267.842465 
+L 324.803318 263.978253 
+L 328.32289 257.672321 
+L 331.842462 250.876867 
+L 336.535224 241.309593 
+L 347.09394 219.472473 
+L 350.613512 212.657298 
+L 354.133084 206.324872 
+L 356.479465 202.43951 
+L 358.825846 198.867103 
+L 361.172227 195.641977 
+L 363.518609 192.795124 
+L 365.86499 190.353898 
+L 368.211371 188.341758 
+L 370.557753 186.778039 
+L 372.904134 185.677766 
+L 374.077324 185.304903 
+L 375.250515 185.051513 
+L 376.423706 184.918204 
+L 377.596896 184.905297 
+L 378.770087 185.012823 
+L 379.943278 185.240523 
+L 381.116468 185.58785 
+L 383.462849 186.637761 
+L 385.809231 188.152466 
+L 388.155612 190.117411 
+L 390.501993 192.513714 
+L 392.848375 195.31835 
+L 395.194756 198.504367 
+L 397.541137 202.041151 
+L 399.887518 205.894717 
+L 403.40709 212.187286 
+L 406.926662 218.972755 
+L 411.619425 228.53233 
+L 422.17814 250.37657 
+L 425.697712 257.20148 
+L 429.217284 263.547037 
+L 431.563666 267.442902 
+L 433.910047 271.027096 
+L 436.256428 274.265179 
+L 438.602809 277.126036 
+L 439.776 278.406265 
+L 439.776 278.406265 
+" clip-path="url(#pe0525b1a33)" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 141.101262 134.784 
+Q 239.325838 134.784 335.314346 134.784 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 328.914346 131.584 
+L 335.314346 134.784 
+L 328.914346 137.984 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="239.328" y="125.409047" transform="rotate(-0 239.328 125.409047)">propagation / 传播</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(243.88875 342.292955)">一周期 → 一波长</text>
+    <text style="font-size: 12px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(202.693125 355.130845)">one period → one wavelength</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path d="M 593.784 165.8112 
+L 831.816 165.8112 
+L 831.816 95.3088 
+L 593.784 95.3088 
+z
+" clip-path="url(#p64aab9314a)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 593.784 270.2592 
+L 831.816 270.2592 
+L 831.816 199.7568 
+L 593.784 199.7568 
+z
+" clip-path="url(#p64aab9314a)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 593.784 374.7072 
+L 831.816 374.7072 
+L 831.816 304.2048 
+L 593.784 304.2048 
+z
+" clip-path="url(#p64aab9314a)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="113.851599" transform="rotate(-0 712.8 113.851599)">1 题给量 / given</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="143.124382" transform="rotate(-0 712.8 143.124382)">f、λ、间距 Δx 或往返时间</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="218.331503" transform="rotate(-0 712.8 218.331503)">2 调用模型 / use</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="247.550586" transform="rotate(-0 712.8 247.550586)">行波相位与回波计时</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="322.779503" transform="rotate(-0 712.8 322.779503)">3 所求量 / find</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="352.033742" transform="rotate(-0 712.8 352.033742)">波速、相位差或反射体距离</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 712.8 171.726562 
+Q 712.8 182.783951 712.8 191.605272 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 716 185.205272 
+L 712.8 191.605272 
+L 709.6 185.205272 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 712.8 276.174562 
+Q 712.8 287.231951 712.8 296.053272 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 716 289.653272 
+L 712.8 296.053272 
+L 709.6 289.653272 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+  </g>
+  <g id="text_9">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(38.88 41.94099)">行波相位与回波计时</text>
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(38.88 57.988354)">Phase and echo</text>
+  </g>
+  <g id="text_10">
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #8090a2" transform="translate(38.88 442.181758)">示意图，不按比例；图形/归一化曲线是模型说明，非真题实测数据。</text>
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #8090a2" transform="translate(38.88 452.88)">Schematic, not to scale; any normalised curves illustrate the model, not measured examination data.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe0525b1a33">
+   <rect x="38.88" y="84.672" width="501.12" height="300.672"/>
+  </clipPath>
+  <clipPath id="p64aab9314a">
+   <rect x="587.52" y="78.336" width="250.56" height="313.344"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,20 +1,210 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="OxfordAQA 9630 U1–U4 中英文物理知识库"><title>核衰变活度与背景修正 / Activity and half-life · OxfordAQA Physics</title><link rel="stylesheet" href="/assets/site.css"><script defer src="/assets/app.js"></script><link rel="stylesheet" href="/knowledge-bridge.css"><script defer src="/knowledge-bridge.js"></script></head><body class=""><header><button id="menu" aria-label="展开目录">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a href="https://oxfordaqa-physics-studio.vercel.app/#/profile" class="studio-account">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br>更新 · 2026-10-21<br><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/07 常用物理模型</div><h1 id="h-8bd48f399c0f4ec475">核衰变活度与背景修正 / Activity and half-life</h1>
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>核衰变活度与背景修正 / Activity and half-life · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=u1-u4-20261113-illustrated-model-guides"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class=""><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U3/07 常用物理模型</div><h1 id="h-8bd48f399c0f4ec475">核衰变活度与背景修正 / Activity and half-life</h1>
+<a class="internal-link" href="/notes/3dd0f4dc5081d66acd.html">模型目录 / Model index</a>
+<h2 id="h-cb5f80444803cc19fd">图像化建模 / Illustrated model</h2>
+<a class="image-link" href="/media/8c3592165b28473fcd.svg" target="_blank"><img alt="U3PM08-model-guide-20261113" decoding="async" loading="lazy" src="/media/8c3592165b28473fcd.svg" style="max-width:min(100%,1100px)"/></a>
+<p><strong>图中对象与读图 / System and reading：</strong> 先校正探测计数，用指数模型预测大样本活度，再分清计数率与活度 / correct detector counts, predict activity and distinguish activity from detected rate</p>
+<p><strong>条件与约束 / Conditions and constraints：</strong> 同一种核素、固定衰变常量；测量还受效率和几何影响 / one nuclide with constant decay constant; detection efficiency and geometry still matter</p>
+<h2 id="h-5d0133360d3d766fd4">分模型与接口 / Sub-models and interfaces</h2>
+<p>基础规律的解释与推导见分模型和基础知识入口；本复合模型只调用公式结论，按对象、阶段和共同未知量联算。 / See the linked sub-models and foundation notes for explanations and derivations. This compound model applies their results to the specified system and stages.</p>
+<table>
+<thead>
+<tr>
+<th>分模型 / Sub-model</th>
+<th>提供的关系或量 / Supplies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/0998bbf87604ca1455.html">半衰期与背景扣除模型 / Half-life</a></td>
+<td>净计数率、剩余比例或半衰期 / corrected rate, remaining fraction or half-life</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基础知识入口 / Foundation notes：</strong> <a class="internal-link" href="/notes/3181cffbc7942635dd.html">3.9</a></p>
+<p><strong>连接顺序 / Connection order：</strong> 先校正探测计数，用指数模型预测大样本活度，再分清计数率与活度 / correct detector counts, predict activity and distinguish activity from detected rate</p>
+<h2 id="h-12d7795ca044bbb774">按物理关系整理公式 / Formulae organised by relationship</h2>
+<h3 id="h-95f933f2dcd6b0ed8e">关系 1 / Relation 1</h3>
+<div class="math block">
+\[\Large\displaystyle A_s=\lambda_d N_n\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(A_s\)</span></td>
+<td>样本活度 / sample activity</td>
+<td><span class="math inline">\(\mathrm{Bq}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\lambda_d\)</span></td>
+<td>衰变常量 / decay constant</td>
+<td><span class="math inline">\(\mathrm{s^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(N_n\)</span></td>
+<td>未衰变核数 / undecayed nuclei</td>
+<td><span class="math inline">\(1\)</span>（无量纲 / dimensionless）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 活度是大样本每秒衰变数的统计预测，与剩余核数成正比。 / Activity predicts the decay rate of a large sample and is proportional to remaining nuclei.</p>
+<p><strong>适用条件 / Conditions：</strong> 同一种核素、固定衰变常量；测量还受效率和几何影响 / one nuclide with constant decay constant; detection efficiency and geometry still matter</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/0998bbf87604ca1455.html">半衰期与背景扣除模型 / Half-life</a></p>
+<h3 id="h-6d57c6a77023c0aa6b">关系 2 / Relation 2</h3>
+<div class="math block">
+\[\Large\displaystyle A_s=A_0e^{-\lambda_dt}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(A_s\)</span></td>
+<td>样本活度 / sample activity</td>
+<td><span class="math inline">\(\mathrm{Bq}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(A_0\)</span></td>
+<td>初始活度 / initial activity</td>
+<td><span class="math inline">\(\mathrm{Bq}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\lambda_d\)</span></td>
+<td>衰变常量 / decay constant</td>
+<td><span class="math inline">\(\mathrm{s^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(t\)</span></td>
+<td>时间 / time</td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 固定衰变常量给出活度的指数预测。 / A constant decay probability gives exponential activity.</p>
+<p><strong>适用条件 / Conditions：</strong> 同一种核素、固定衰变常量；测量还受效率和几何影响 / one nuclide with constant decay constant; detection efficiency and geometry still matter</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/0998bbf87604ca1455.html">半衰期与背景扣除模型 / Half-life</a></p>
+<h3 id="h-0c7f66201480483420">关系 3 / Relation 3</h3>
+<div class="math block">
+\[\Large\displaystyle T_{1/2}=\frac{\ln2}{\lambda_d}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(T_{1/2}\)</span></td>
+<td>半衰期 / half-life</td>
+<td><span class="math inline">\(\mathrm{s}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\lambda_d\)</span></td>
+<td>衰变常量 / decay constant</td>
+<td><span class="math inline">\(\mathrm{s^{-1}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>物理关系 / Physical relationship：</strong> 半衰期越长，单位时间衰变概率越低。 / A longer half-life corresponds to a smaller decay constant.</p>
+<p><strong>适用条件 / Conditions：</strong> 同一种核素、固定衰变常量；测量还受效率和几何影响 / one nuclide with constant decay constant; detection efficiency and geometry still matter</p>
+<p><strong>联用分模型结论 / Combines sub-model results：</strong> <a class="internal-link" href="/notes/0998bbf87604ca1455.html">半衰期与背景扣除模型 / Half-life</a></p>
+<h2 id="h-cf7eaa5ad6fce8ddc4">真题归纳的一般题型 / General question patterns</h2>
+<p>关键词只提示候选模型，须核对对象、阶段、几何、守恒条件和题目所求。以下是解题路线概括，不是新增真题或官方答案。 / A cue suggests a candidate model; verify the system, stage, geometry and conditions. These are original teaching routes, not new past papers or official mark schemes.</p>
+<table>
+<thead>
+<tr>
+<th>题型与关键词 / Type and cues</th>
+<th>常见题给量 / Typical givens</th>
+<th>模型怎样使用 / Use of the model</th>
+<th>所求与检查 / Target and check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定量或机制应用 / Calculation or mechanism: activity 活度；decay constant 衰变常量；prediction 预测</td>
+<td>初始活度、时间、半衰期及本底 / initial activity, time, half-life and background</td>
+<td>先校正探测计数，用指数模型预测大样本活度，再分清计数率与活度 / correct detector counts, predict activity and distinguish activity from detected rate</td>
+<td>剩余活度、衰变常量或等待时间 / activity, decay constant or elapsed time</td>
+</tr>
+<tr>
+<td>explain / compare / suggest：解释、比较、推断 / explanation, comparison, inference</td>
+<td>已知改变的量以及保持不变的条件 / changed and fixed quantities</td>
+<td>大样本相对涨落小，可预测平均活度；单个核的衰变时刻不可预测 / a large sample has small relative fluctuations, but the decay time of one nucleus is unpredictable</td>
+<td>用完整因果链说明目标量的变化，避免只列公式 / explain the change with a causal chain</td>
+</tr>
+<tr>
+<td>justify / evaluate：说明依据、评价适用性 / justification or evaluation</td>
+<td>题目描述的实际约束 / the actual constraints</td>
+<td>同一种核素、固定衰变常量；测量还受效率和几何影响 / one nuclide with constant decay constant; detection efficiency and geometry still matter</td>
+<td>指明所用结论适用在哪一阶段；条件改变时重新选模型 / identify the valid stage and reassess changed conditions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="h-7ec3884f5f01709730">可回到原题核对的实例 / Traceable past-paper examples</h3>
+<table>
+<thead>
+<tr>
+<th>真题 / Paper</th>
+<th>实际出现的线索 / Observed cues</th>
+<th>线索所在位置与复述任务 / Location and retrieval task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="internal-link" href="/notes/eb59026accd511b2bd.html">PH03-202506-Q02.3-S</a></td>
+<td><strong>activity, prediction</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/985e0166cf8fd6ca91.html">PH03-202306-Q05.3-S</a></td>
+<td><strong>activity, decay constant</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+<tr>
+<td><a class="internal-link" href="/notes/29f1687a57fad854d5.html">PH03-201806-Q25-S</a></td>
+<td><strong>activity, decay constant</strong></td>
+<td>小问设问 / subpart demand；先说明为何可用本模型，再对照题目下的折叠评分标准。 / State why the model applies, then consult the folded mark scheme.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h-78f4f4163ed578d839">对应知识点 / Knowledge links</h2>
+<ul>
+<li><a class="internal-link" href="/notes/3181cffbc7942635dd.html">3.9</a></li>
+</ul>
+<hr/>
+<h2 id="h-91dd417c9de345504b">既有条件、例题与来源 / Existing conditions, examples and sources</h2>
+<p>保留以下已经整理的边界条件、数值例和原题入口；核心公式与组合顺序见上方。 / The existing conditions, examples and source links below remain available; use the formula cards and combination route above.</p>
 <h2 id="h-306de3762cf22bd56a">关键词 → 模型 / Keywords → model</h2>
 <p>activity → decay constant → half-life → background → <strong>核衰变活度与背景修正</strong></p>
-<h2 id="h-1ec4232f42e67f8191">推理顺序 / Reasoning</h2>
-<p>先扣背景并保持探测几何，再用活度与核数关系以及一致时间单位计算。</p>
-<p>Subtract background; keep detection geometry fixed; use activity proportional to nuclei number; apply exponential or logarithmic ratios with consistent time units.</p>
 <h2 id="h-5974c4eb699b19ead0">知识与条件 / Knowledge and conditions</h2>
 <h3 id="h-3bb442ce069faa2912">3.9.2</h3>
 <a class="internal-link" href="/notes/3181cffbc7942635dd.html">3.9.2 放射性指数衰变</a>
 <p>采用同一种核素且概率恒定；固定探测效率与几何、扣除背景后，计数率才与活度成正比。</p>
 <p>Use a single radionuclide with constant decay probability. Detected count rate is proportional to activity only with fixed detection efficiency/geometry and corrected background.</p>
 <p>活度单位 Bq，衰变常量单位 s<span class="math inline">\(^{-1}\)</span>；质量与摩尔质量使用一致单位。</p>
-<p><span class="math inline">\(dN/dt=-\lambda N\)</span>; <span class="math inline">\(N=N_0e^{-\lambda t}\)</span>; <span class="math inline">\(A=\lambda N=A_0e^{-\lambda t}\)</span>; <span class="math inline">\(T_{1/2}=\ln2/\lambda\)</span>; <span class="math inline">\(N=(m/M)N_A\)</span>.</p>
 <h2 id="h-25507b12c6b278dd78">真题复述 / Past-paper retrieval</h2>
 <ul>
 <li><a class="internal-link" href="/notes/9cc1ca641fd1432af7.html">202606-Q01</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/5ce8e3d91ea5d54c27.html">202606-Q16</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 <li><a class="internal-link" href="/notes/06a80bcea1b6a0838a.html">202606-Q17</a> — 先说模型和适用条件，再独立作答 / identify the model and conditions before solving.</li>
 </ul>
-<section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/3181cffbc7942635dd.html">3.9.2 放射性指数衰变 / Exponential changes in radioactivity</a></li><li><a href="/notes/f87d38b2a1f0aab643.html">3.9.2 放射性指数衰变 真题练习 / Past-paper practice</a></li><li><a href="/notes/959008913a16107e0e.html">PH03 2018 specimen paper Q02</a></li><li><a href="/notes/e687dc0b69e1268929.html">PH03 2018 specimen paper Q18</a></li><li><a href="/notes/6fb9715723ac0318f8.html">PH03 201806 Q04</a></li><li><a href="/notes/cc094b1bcc1961264e.html">PH03 201806 Q24</a></li><li><a href="/notes/29f1687a57fad854d5.html">PH03 201806 Q25</a></li><li><a href="/notes/6bef0ad9673f79d9c3.html">PH03 201806 Q26</a></li><li><a href="/notes/b731bedae434edfe62.html">PH03 201901 Q27</a></li><li><a href="/notes/c770d12968beaba3a5.html">PH03 201901 Q28</a></li><li><a href="/notes/01fc2077b22513c741.html">PH03 201901 Q29</a></li><li><a href="/notes/c3da8fd012b4172769.html">PH03 201906 Q05</a></li><li><a href="/notes/54f7c322ac6378cf8b.html">PH03 201906 Q23</a></li><li><a href="/notes/1d16dbc04d537a20bd.html">PH03 201906 Q24</a></li><li><a href="/notes/a9246866e115e2ee1e.html">PH03 202001 Q26</a></li><li><a href="/notes/84fbf18d18666dbdcb.html">PH03 202101 Q03</a></li><li><a href="/notes/a1ed427a9401a0bb4b.html">PH03 202201 Q02</a></li><li><a href="/notes/1593cf231575525350.html">PH03 202206 Q03</a></li><li><a href="/notes/e505d4304c9486a01a.html">PH03 202301 Q05</a></li><li><a href="/notes/985e0166cf8fd6ca91.html">PH03 202306 Q05</a></li><li><a href="/notes/c9e6a97e9b198fd629.html">PH03 202401 Q04</a></li><li><a href="/notes/e3993e3b3c0cfdc192.html">PH03 202406 Q07</a></li><li><a href="/notes/dcdb83fc393b57a0ad.html">PH03 202501 Q05</a></li><li><a href="/notes/eb59026accd511b2bd.html">PH03 202506 Q02</a></li><li><a href="/notes/e40a7b7d03388a6b04.html">PH03 202506 Q14</a></li><li><a href="/notes/ebe4d24f0066a7e3fc.html">PH03 202506 Q15</a></li><li><a href="/notes/79807bcf591062b051.html">PH03 202601 Q01</a></li><li><a href="/notes/c8b9d12faa24a254b6.html">PH03 202601 Q17</a></li><li><a href="/notes/9cc1ca641fd1432af7.html">PH03 202606 Q01</a></li><li><a href="/notes/5ce8e3d91ea5d54c27.html">PH03 202606 Q16</a></li><li><a href="/notes/06a80bcea1b6a0838a.html">PH03 202606 Q17</a></li><li><a href="/notes/3dd0f4dc5081d66acd.html">U3 常用物理模型 / Common physics models</a></li></ul></section><div id="backlinks"></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes" aria-label="搜索笔记"><button id="search-close" aria-label="关闭搜索">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U3/07 常用物理模型/U3PM08 核衰变活度与背景修正 - Activity and half-life.md", "url": "/notes/6fb18a57f5002e379e.html", "unit": "U3"}</script></body></html>
+<span aria-hidden="true" class="anchor-alias" id="h-1ec4232f42e67f8191"></span><div id="backlinks"><section class="backlinks"><h2>关联笔记 / Linked mentions</h2><ul><li><a href="/notes/3181cffbc7942635dd.html">3.9.2 放射性指数衰变 / Exponential changes in radioactivity</a></li><li><a href="/notes/3dd0f4dc5081d66acd.html">U3 常用物理模型 / Common physics models</a></li><li><a href="/notes/c600bc3b1191a53012.html">U3 图解、分模型与题型路线 / Illustrated models and question routes</a></li></ul></section></div><footer class="page-footer">OxfordAQA International AS and A-level Physics (9630) · U1–U4</footer></main><dialog id="search-dialog"><div class="search-head"><input aria-label="搜索笔记" id="search-input" placeholder="搜索知识点、物理模型、真题 / Search notes"/><button aria-label="关闭搜索" id="search-close">✕</button></div><div id="search-results">输入关键词搜索本知识库</div></dialog><script id="page-data" type="application/json">{"source": "A-level 物理/AQA（OxfordAQA 9630）/U3/07 常用物理模型/U3PM08 核衰变活度与背景修正 - Activity and half-life.md", "url": "/notes/6fb18a57f5002e379e.html", "unit": "U3"}</script></body></html>

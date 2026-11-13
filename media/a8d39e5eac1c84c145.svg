@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="489.6pt" viewBox="0 0 864 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-13T11:33:24.191527</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.6 
+L 864 489.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 250.95653 260.064 
+C 242.160692 244.829161 229.506839 232.175308 214.272 223.37947 
+C 199.037161 214.583632 181.751677 209.952 164.16 209.952 
+C 146.568323 209.952 129.282839 214.583632 114.048 223.37947 
+C 98.813161 232.175308 86.159308 244.829161 77.36347 260.064 
+" clip-path="url(#p13abe3dff1)" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 327.92347 229.9968 
+C 336.719308 245.231639 349.373161 257.885492 364.608 266.68133 
+C 379.842839 275.477168 397.128323 280.1088 414.72 280.1088 
+C 432.311677 280.1088 449.597161 275.477168 464.832 266.68133 
+C 480.066839 257.885492 492.720692 245.231639 501.51653 229.9968 
+" clip-path="url(#p13abe3dff1)" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 164.16 218.97216 
+C 166.552174 218.97216 168.846694 218.021739 170.538216 216.330216 
+C 172.229739 214.638694 173.18016 212.344174 173.18016 209.952 
+C 173.18016 207.559826 172.229739 205.265306 170.538216 203.573784 
+C 168.846694 201.882261 166.552174 200.93184 164.16 200.93184 
+C 161.767826 200.93184 159.473306 201.882261 157.781784 203.573784 
+C 156.090261 205.265306 155.13984 207.559826 155.13984 209.952 
+C 155.13984 212.344174 156.090261 214.638694 157.781784 216.330216 
+C 159.473306 218.021739 161.767826 218.97216 164.16 218.97216 
+z
+" clip-path="url(#p13abe3dff1)" style="fill: #bd818f; stroke: #496582; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 414.72 289.12896 
+C 417.112174 289.12896 419.406694 288.178539 421.098216 286.487016 
+C 422.789739 284.795494 423.74016 282.500974 423.74016 280.1088 
+C 423.74016 277.716626 422.789739 275.422106 421.098216 273.730584 
+C 419.406694 272.039061 417.112174 271.08864 414.72 271.08864 
+C 412.327826 271.08864 410.033306 272.039061 408.341784 273.730584 
+C 406.650261 275.422106 405.69984 277.716626 405.69984 280.1088 
+C 405.69984 282.500974 406.650261 284.795494 408.341784 286.487016 
+C 410.033306 288.178539 412.327826 289.12896 414.72 289.12896 
+z
+" clip-path="url(#p13abe3dff1)" style="fill: #bd818f; stroke: #496582; stroke-width: 1.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="164.16" y="213.024266" transform="rotate(-0 164.16 213.024266)">m</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="414.72" y="283.181066" transform="rotate(-0 414.72 283.181066)">m</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 156.6432 202.939562 
+Q 156.6432 182.39072 156.6432 164.077946 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 153.4432 170.477946 
+L 156.6432 164.077946 
+L 159.8432 170.477946 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="136.5984" y="185.462666" transform="rotate(-0 136.5984 185.462666)">N</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 171.6768 221.974109 
+Q 171.6768 255.052179 171.6768 285.894182 
+" style="fill: none; stroke: #bd818f; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 174.8768 279.494182 
+L 171.6768 285.894182 
+L 168.4768 279.494182 
+z
+" style="fill: #bd818f; stroke: #bd818f; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="196.7328" y="258.119802" transform="rotate(-0 196.7328 258.119802)">mg</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 407.2032 268.08715 
+Q 407.2032 227.49059 407.2032 189.130098 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 404.0032 195.530098 
+L 407.2032 189.130098 
+L 410.4032 195.530098 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="387.1584" y="230.563466" transform="rotate(-0 387.1584 230.563466)">N</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 422.2368 292.132438 
+Q 422.2368 312.68128 422.2368 330.994054 
+" style="fill: none; stroke: #bd818f; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 425.4368 324.594054 
+L 422.2368 330.994054 
+L 419.0368 324.594054 
+z
+" style="fill: #bd818f; stroke: #bd818f; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="447.2928" y="315.748602" transform="rotate(-0 447.2928 315.748602)">mg</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="164.16" y="368.446339" transform="rotate(-0 164.16 368.446339)">crest / 拱顶</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="414.72" y="368.52712" transform="rotate(-0 414.72 368.52712)">dip / 凹底</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_10">
+    <path d="M 593.784 165.8112 
+L 831.816 165.8112 
+L 831.816 95.3088 
+L 593.784 95.3088 
+z
+" clip-path="url(#p9d08e9ce8f)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 593.784 270.2592 
+L 831.816 270.2592 
+L 831.816 199.7568 
+L 593.784 199.7568 
+z
+" clip-path="url(#p9d08e9ce8f)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 593.784 374.7072 
+L 831.816 374.7072 
+L 831.816 304.2048 
+L 593.784 304.2048 
+z
+" clip-path="url(#p9d08e9ce8f)" style="fill: #eef3f8; stroke: #496582; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="113.851599" transform="rotate(-0 712.8 113.851599)">1 题给量 / given</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="142.606179" transform="rotate(-0 712.8 142.606179)">m、局部曲率半径、速度和 g</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="218.331503" transform="rotate(-0 712.8 218.331503)">2 调用模型 / use</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="247.550586" transform="rotate(-0 712.8 247.550586)">圆周运动 + 受力分解</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="322.779503" transform="rotate(-0 712.8 322.779503)">3 所求量 / find</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #29455e" x="712.8" y="351.998586" transform="rotate(-0 712.8 351.998586)">支持力、视重或临界速率</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 712.8 171.726562 
+Q 712.8 182.783951 712.8 191.605272 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 716 185.205272 
+L 712.8 191.605272 
+L 709.6 185.205272 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 712.8 276.174562 
+Q 712.8 287.231951 712.8 296.053272 
+" style="fill: none; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 716 289.653272 
+L 712.8 296.053272 
+L 709.6 289.653272 
+z
+" style="fill: #496582; stroke: #496582; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+  </g>
+  <g id="text_15">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(38.88 41.969115)">U3PM17 拱桥与凹路支持力</text>
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #29455e" transform="translate(38.88 58.016479)">Crest and dip</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #8090a2" transform="translate(38.88 442.181758)">示意图，不按比例；图形/归一化曲线是模型说明，非真题实测数据。</text>
+   <text style="font-size: 10px; font-family: 'Microsoft YaHei', 'DejaVu Sans'; fill: #8090a2" transform="translate(38.88 452.88)">Schematic, not to scale; any normalised curves illustrate the model, not measured examination data.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p13abe3dff1">
+   <rect x="38.88" y="84.672" width="501.12" height="300.672"/>
+  </clipPath>
+  <clipPath id="p9d08e9ce8f">
+   <rect x="587.52" y="78.336" width="250.56" height="313.344"/>
+  </clipPath>
+ </defs>
+</svg>
