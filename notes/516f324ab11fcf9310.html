@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.13.4 水电与抽水蓄能 / Hydroelectric power and pumped storage · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=u1-u4-20261117-subpart-knowledge-index"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class="physics-knowledge"><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U4/02 知识节点/3.13 能源</div><h1 id="h-8939ff2881ed1c05af">3.13.4 水电与抽水蓄能 / Hydroelectric power and pumped storage</h1>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="OxfordAQA 9630 U1–U4 中英文物理知识库" name="description"/><title>3.13.4 水电与抽水蓄能 / Hydroelectric power and pumped storage · OxfordAQA Physics</title><link href="/assets/site.css" rel="stylesheet"/><script defer="" src="/assets/app.js?v=u1-u4-20261117-pumped-storage-abc"></script><link href="/knowledge-bridge.css" rel="stylesheet"/><script defer="" src="/knowledge-bridge.js"></script></head><body class="physics-knowledge"><header><button aria-label="展开目录" id="menu">☰</button><a class="brand" href="/">OxfordAQA <b>PHYSICS</b><small>9630 · U1–U4</small></a><nav><a href="/#/home">学习首页</a><a href="/knowledge.html">知识库</a><a href="/exam-analysis.html">考试分析总览</a><a href="/practice.html">真题演练</a><a href="/#/home">测试与组卷</a><a class="studio-account" href="https://oxfordaqa-physics-studio.vercel.app/#/profile">我的账号</a><button id="search-open">搜索 / Search <kbd>/</kbd></button></nav></header><aside id="sidebar"><label class="nav-label">CONTENTS / 知识目录</label><div id="navigation">目录加载中…</div><footer>中英文物理知识库<br/>更新 · 2026-10-21<br/><span>3,978 篇笔记 · 12 张谱系图</span></footer></aside><main><div class="breadcrumb">U4/02 知识节点/3.13 能源</div><h1 id="h-8939ff2881ed1c05af">3.13.4 水电与抽水蓄能 / Hydroelectric power and pumped storage</h1>
 <p><strong>考纲 / Specification：</strong> <a class="internal-link" href="/notes/9e92ac7570188ddd0e.html">3.13.4</a>　｜　<a class="internal-link" href="/notes/b10222e15f0fcc973d.html">本单元知识谱系</a></p>
 <h2 id="h-7ca305fb577ec5fd18">学习导航 / Learning route</h2>
 <ul>
@@ -333,10 +333,166 @@
 <h2 id="h-162a9c9b6ae11f6604">2. 基荷、备用与抽水蓄能 / Base load, backup and pumped storage</h2>
 <h3 id="h-9a8509cd411a7709d1">2.1 过程、现象与问题 / Process, observations and questions</h3>
 <h4 id="h-a538c2af7c448176da">基荷、备用与抽水蓄能 / Base load, backup and storage</h4>
-<p>基荷电站持续满足较稳定的最低需求；备用或调峰电站快速响应额外需求。水电启停较快，但持续输出取决于水库、水量和水头条件。</p>
-<p>Base-load generation supplies relatively steady minimum demand; backup or peak-load stations respond to additional demand. Hydroelectric output can respond quickly but is constrained by water availability and head.</p>
-<p>低需求时用电将水从低库抽至高库储存重力势能，高需求时放水经水轮机发电。往返效率小于100%，抽水蓄能是能量储存与调度，不是净能量来源；可用 <span class="math inline">\(E=\eta mgh\)</span> 和放电功率求持续时间。</p>
-<p>Pumped storage uses off-peak electricity to raise water and releases it for peak generation. Round-trip losses make it storage rather than a net energy source. Stored useful energy and output power determine duration.</p>
+<p>以下按 PH04 202601 Q07 评分标准的 <strong>A 运行原理 → B 使用原因 → C 最大功率</strong> 展开。 / The explanation follows the three areas in the PH04 202601 Q07 mark scheme: <strong>A operation → B purpose → C maximum power</strong>.</p>
+<h4 id="h-56a087b591b127547a">A. 运行原理 / Principles of operation</h4>
+<p><strong>装置 / Arrangement：</strong> 系统有一个<strong style="color:#c62828;">高水库 / high reservoir</strong>和一个<strong style="color:#c62828;">低水库 / low reservoir</strong>，由管道及水轮机—发电机组连接。上下水库的水位差提供可储存和释放的重力势能。</p>
+<p>The system has a <strong style="color:#c62828;">high reservoir</strong> and a <strong style="color:#c62828;">low reservoir</strong>, connected through pipes and a turbine–generator unit. Their vertical separation allows gravitational potential energy to be stored and released.</p>
+<a class="image-link" href="/media/1b001cc2fb8e7eeb2a.svg" target="_blank"><img alt="U4PM10-model-guide-20261113" decoding="async" loading="lazy" src="/media/1b001cc2fb8e7eeb2a.svg" style="max-width:min(100%,1000px)"/></a>
+<p><strong>结合图像 / Reading the diagram：</strong> 沿水流方向区分“低库 → 高库”的抽水阶段与“高库 → 低库”的发电阶段；两阶段的能量转移方向相反。 / Trace the uphill pumping stage and the downhill generating stage separately; the direction of energy transfer is reversed.</p>
+<p><strong>低需求：向上抽水 / Low demand: pumping uphill。</strong> 电力需求较低、供电超过需求时，用富余电能让<strong style="color:#c62828;">发电机作为电动机 / generator acts as a motor</strong>，驱动可逆水轮机作为水泵工作，把水从低水库抽到高水库。电能转为水的重力势能并储存。</p>
+<p>When demand is low and supply exceeds demand, surplus electricity makes the <strong style="color:#c62828;">generator act as a motor</strong>. It drives the reversible turbine as a pump, moving water from the low reservoir to the high reservoir. Electrical energy is transferred to stored gravitational potential energy.</p>
+<p><strong>高需求：向下放水发电 / High demand: generating downhill。</strong> 需求较高时，水从高水库向下流入低水库，驱动<strong style="color:#c62828;">水轮机和发电机 / turbine and generator</strong>向电网供电。水的重力势能经水流动能、转动机械能转为电能。</p>
+<p>At high demand, water flows down from the high reservoir to the low reservoir. It drives the <strong style="color:#c62828;">turbine and generator</strong> to supply electricity. Gravitational potential energy is transferred through water motion and turbine rotation to electrical energy.</p>
+<h4 id="h-078dcd5d485f06e564">B. 为什么使用抽水蓄能 / Why pumped storage is used</h4>
+<ol>
+<li>
+<p><strong>让基础负荷电站持续运行 / Keep base-load stations running。</strong> <strong style="color:#c62828;">基础负荷发电机持续运行 / base-load generators run continuously</strong>，不必随短时间的需求变化反复启停；低需求时的富余电能可用于抽水储能。</p>
+<p><strong style="color:#c62828;">Base-load generators can run continuously</strong> rather than repeatedly starting and stopping as demand changes. Surplus electricity at low demand is used for pumping.</p>
+</li>
+<li>
+<p><strong>供电过剩时储能 / Store energy when supply exceeds demand。</strong> 当<strong style="color:#c62828;">supply exceeds demand / 供电超过需求</strong>，系统消耗电能驱动电动机和水泵，把多余供能转为高水库中水的重力势能。</p>
+<p>When <strong style="color:#c62828;">supply exceeds demand</strong>, electrical energy drives the motor and pump, storing the surplus as gravitational potential energy.</p>
+</li>
+<li>
+<p><strong>供电不足时补充电力 / Supply the shortfall when demand exceeds supply。</strong> 当<strong style="color:#c62828;">demand exceeds supply / 需求超过供电</strong>，系统放水发电，补足其他电站不能满足的功率缺口。</p>
+<p>When <strong style="color:#c62828;">demand exceeds supply</strong>, the system releases water and generates electricity to supply the shortfall.</p>
+</li>
+<li>
+<p><strong>提高电力系统的运行效率、降低成本 / Improve system operation and reduce cost。</strong> 储存低需求时的富余电能、减少基础负荷电站低效变负荷或反复启停，可以<strong style="color:#c62828;">提高整体运行效率或降低成本 / improve overall operating efficiency or reduce cost</strong>。这里说的是电力系统的运行安排，不是抽水—发电循环能够增加能量。</p>
+<p>Storing surplus off-peak energy and reducing inefficient changes or repeated start-ups at base-load stations can <strong style="color:#c62828;">improve overall operating efficiency or reduce cost</strong>. This refers to operation of the electricity system, not an increase in energy during storage.</p>
+</li>
+<li>
+<p><strong>快速应对需求突增 / Respond rapidly to demand surges。</strong> 抽水蓄能的<strong style="color:#c62828;">启动时间短 / quick start-up time</strong>，可在需求突然上升时迅速增加发电功率，作为调峰或备用电源。</p>
+<p>Its <strong style="color:#c62828;">quick start-up time</strong> allows a rapid increase in output when demand suddenly rises, providing peak-load or backup power.</p>
+</li>
+</ol>
+<p><strong>重要区分 / Important distinction：</strong> 抽水蓄能是<strong style="color:#c62828;">能量储存与调配 / energy storage and redistribution</strong>，不是净能量来源。实际发电回收的电能小于此前抽水消耗的电能；“发电”不能解释为“创造能量”。</p>
+<p>Pumped storage provides <strong style="color:#c62828;">energy storage and redistribution</strong>, not a net energy source. Electrical energy recovered during generation is less than that used for pumping; generation does not mean creating energy.</p>
+<h4 id="h-e8ad9e7efe96cde286">C. 最大功率取决于什么 / What determines maximum power</h4>
+<h5 id="h-1d4b5a1e15b977c54f">C1. 水流动能通量 / Kinetic power of the water flow</h5>
+<p>按本题采用的均匀水流模型，水以速率 <span class="math inline">\(v\)</span> 流过有效圆形截面。每秒通过的水量随截面积和流速增大，每千克水的动能随速率平方增大，因此：</p>
+<p>In the uniform-flow model used in this question, water passes through an effective circular area at speed <span class="math inline">\(v\)</span>. Mass passing per second increases with area and speed, and kinetic energy per kilogram increases with speed squared. Therefore:</p>
+<div class="math block">
+\[\Large\displaystyle P_{\mathrm{flow}}=\frac{1}{2}\rho\pi r^{2}v^{3}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P_{\mathrm{flow}}\)</span></td>
+<td>水流携带的动能功率 / kinetic power carried by the water</td>
+<td><span class="math inline">\(\mathrm{W}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\rho\)</span></td>
+<td>水的密度 / water density</td>
+<td><span class="math inline">\(\mathrm{kg\,m^{-3}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>有效圆形水流截面的半径 / radius of the effective circular flow area</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(v\)</span></td>
+<td>该截面处的水流速率 / water speed at this cross-section</td>
+<td><span class="math inline">\(\mathrm{m\,s^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\pi\)</span></td>
+<td>圆周率 / pi</td>
+<td>无量纲 / dimensionless</td>
+</tr>
+</tbody>
+</table>
+<p><strong>规律与限制 / Meaning and limits：</strong> 在其他量不变时，水流可用功率与<strong style="color:#c62828;">半径平方 / radius squared</strong>和<strong style="color:#c62828;">流速立方 / speed cubed</strong>成正比。本题把水轮机尺寸与有效水流面积联系起来；实际系统还受管道、导流装置、流量及发电机容量限制，不能仅凭半径断定实际电输出。</p>
+<p>With other quantities fixed, available flow power is proportional to <strong style="color:#c62828;">radius squared</strong> and <strong style="color:#c62828;">speed cubed</strong>. In this model, turbine size is linked to the effective flow area. Pipes, flow control, flow rate and generator capacity also limit real electrical output.</p>
+<p><strong>原答案记号注意 / Notation in the original scheme：</strong> 评分表把右侧这一式写成 <span class="math inline">\(E\)</span>，但其量纲为功率，单位是瓦特；此处规范记作 <span class="math inline">\(P_{\mathrm{flow}}\)</span>。它表示每秒传递的动能，不是总能量。</p>
+<p>The original scheme labels this expression <span class="math inline">\(E\)</span>, but its dimensions are power and its unit is the watt. It is written here as <span class="math inline">\(P_{\mathrm{flow}}\)</span>: kinetic energy transferred per second, not total energy.</p>
+<h5 id="h-927272bfa83ffe58d4">C2. 上下水库的垂直高度差 / Vertical separation of the reservoirs</h5>
+<p><strong style="color:#c62828;">垂直高度差 / vertical separation</strong>越大，每千克水下降时可释放的重力势能越大。若忽略损耗，并把这部分势能全部转为所考虑水流的动能，则能量守恒给出：</p>
+<p>A greater <strong style="color:#c62828;">vertical separation</strong> gives more gravitational potential energy per kilogram of water. If losses are negligible and this energy is fully converted into the kinetic energy of the flow being considered, energy conservation gives:</p>
+<div class="math block">
+\[\Large\displaystyle v=\sqrt{2gh}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(v\)</span></td>
+<td>理想情况下由水头获得的水流速率 / ideal water speed produced by the head</td>
+<td><span class="math inline">\(\mathrm{m\,s^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(g\)</span></td>
+<td>重力加速度 / gravitational acceleration</td>
+<td><span class="math inline">\(\mathrm{m\,s^{-2}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(h\)</span></td>
+<td>有效水头，即有关水位的垂直高度差 / effective head, the relevant vertical water-level difference</td>
+<td><span class="math inline">\(\mathrm{m}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>规律与解释 / Meaning and explanation：</strong> 在上述条件下，水头越大，水流可达到的速率越大；由 C1 的流速立方关系，可用功率也增大。实际水电站不能不加条件地把此理想速率关系用于任意管内位置；应按题给水头、流量、压力及损耗条件选模型。</p>
+<p>Under these assumptions, a greater head gives a greater possible speed and hence greater available power through the speed-cubed relationship in C1. Do not apply this ideal speed relation at an arbitrary point in a real pipe without checking the stated head, flow, pressure and losses.</p>
+<h5 id="h-fa323556e63c4cc0db">C3. 水轮机半径与通过的水量 / Turbine radius and water throughput</h5>
+<p>较大的<strong style="color:#c62828;">水轮机半径 / turbine radius</strong>通常允许更大的有效水流截面积。在流速相同、有效截面随水轮机半径变化的简化模型中，半径越大，每秒通过的水质量越大，因此可传递的功率越大。答题时要把“尺寸较大”与“面积、流率、功率”的因果关系说清楚。</p>
+<p>A greater <strong style="color:#c62828;">turbine radius</strong> can allow a larger effective flow area. In the simplified model, at the same speed, this allows more water mass to pass each second and therefore greater power transfer. Link size to area, flow rate and power rather than just stating that the turbine is larger.</p>
+<h5 id="h-84eb7e778e6145264d">C4. 实际效率与能量损耗 / Real efficiency and energy losses</h5>
+<p>水流和管道摩擦、水轮机机械摩擦，以及发电机和导线中的<strong style="color:#c62828;">电阻发热 / resistive heating</strong>等，使部分能量转为内能，所以实际电输出小于水流提供的功率。</p>
+<p>Water–pipe friction, mechanical friction in the turbine and <strong style="color:#c62828;">resistive heating</strong> in the generator and conductors transfer some energy to internal energy. Useful electrical output is therefore less than the available water-flow power.</p>
+<div class="math block">
+\[\Large\displaystyle P_{\mathrm{electric}}=\eta P_{\mathrm{flow}}\]
+</div>
+<p><strong>符号对应表 / Symbols and SI units</strong></p>
+<table>
+<thead>
+<tr>
+<th>符号 / Symbol</th>
+<th>物理量 / Quantity</th>
+<th>SI 单位 / SI unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P_{\mathrm{electric}}\)</span></td>
+<td>有用电输出功率 / useful electrical output power</td>
+<td><span class="math inline">\(\mathrm{W}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\eta\)</span></td>
+<td>从所定义水流输入到电输出的效率 / efficiency from the defined water-flow input to electrical output</td>
+<td>无量纲 / dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(P_{\mathrm{flow}}\)</span></td>
+<td>同一阶段定义的水流输入功率 / water-flow input power for the same stage</td>
+<td><span class="math inline">\(\mathrm{W}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>规律与条件 / Meaning and conditions：</strong> 有用输出等于该阶段输入乘效率，实际效率小于 1。效率必须与公式采用的输入阶段对应；已计入流动损失的输入不要再次扣除同一损失。</p>
+<p>Useful output equals input power multiplied by the efficiency for that stage; real efficiency is less than one. Match efficiency to the chosen input stage and do not count the same loss twice.</p>
+<h5 id="h-b7823ef223f1d29cde">按评分标准组织论述 / Organising a response using the mark scheme</h5>
+<p>先覆盖 <strong style="color:#c62828;">A 原理、B 用途、C 功率 / operation, purpose and power</strong> 三方面，再在各方面补足因果解释。PH04 202601 Q07 的说明中，一个方面“完整覆盖”指包含该方面超过一半的列举要点；“部分覆盖”为一个要点。这是该题的分层评分说明，不是所有论述题统一按要点数量给分。</p>
+<p>Cover <strong style="color:#c62828;">operation, purpose and power</strong>, then develop the causal explanation in each area. For PH04 202601 Q07, the guidance describes complete coverage of an area as more than half its listed points, and partial coverage as one point. This is question-specific level-of-response guidance, not a universal point-counting rule.</p>
+<p><strong>答案依据 / Mark-scheme basis：</strong> <a class="internal-link" href="/notes/3c9b6cf4cbf2bda305.html">PH04 202601 Q07（6 分 / 6 marks）</a>；原评分表见本页下方对应题例。</p>
 <p><strong>逐项覆盖 / Requirement-by-requirement coverage：</strong> <a class="internal-link" href="/notes/71907ca6349f90e588.html#h-1c0a92e93828469634">3.13.4</a></p>
 <h3 id="h-2acb585324b8c661a5">2.2 关键概念与定义 / Key concepts and definitions</h3>
 <h4 class="concept-name" id="h-187040de971b0e06b1"><strong><a class="internal-link" href="/notes/7125c1ab2159b26f8b.html">pumped storage — 抽水蓄能</a></strong></h4>
@@ -449,8 +605,8 @@
 <h2 id="h-db4c4ec4f0b9016e55">真题考点精讲与逐小问评分点 / Exam explanations and subpart marking points</h2>
 <p>先理解下面的物理联系，再按题目要求核对定义限定、因果链、实验步骤或图像条件。下方题例逐一对应本库原评分表；给分数量、可选答案和特别限制以该题评分标准为准。 / Understand the physical links, then check the definition qualifiers, causal chain, procedure or graph conditions. Each example below is tied to its original marking table; mark allocations, alternatives and restrictions remain question-specific.</p>
 <h3 id="h-822efbf8ebf1a9849f">考点精讲：抽水蓄能按两个工况讲解 / Explain both pumped-storage operating modes</h3>
-<p>供电超过需求时，用富余电能驱动水泵把水提升到高水库；高需求时放水，经水轮机和发电机补充电力。它储存并调配能量，不是额外创造能量。快速启动可应对需求变化，并让基础负荷电站保持稳定运行。输出还受水头、流量、设备尺寸与效率限制。</p>
-<p>When supply exceeds demand, surplus electricity pumps water uphill. At high demand, water returns through turbines and generators. The scheme stores and shifts energy rather than creating extra energy. Rapid start-up meets changing demand and lets base-load stations run steadily. Head, flow, equipment size and efficiency limit output.</p>
+<p>完整讲解按评分标准的三个方面展开：<a class="internal-link" href="/notes/516f324ab11fcf9310.html#h-56a087b591b127547a">A 运行原理</a> → <a class="internal-link" href="/notes/516f324ab11fcf9310.html#h-078dcd5d485f06e564">B 使用原因</a> → <a class="internal-link" href="/notes/516f324ab11fcf9310.html#h-e8ad9e7efe96cde286">C 最大功率</a>。先说明两种运行工况，再说明电网调峰用途，最后解释水头、流速、水轮机尺寸与损耗怎样影响功率。</p>
+<p>Follow the three marking areas: operation, purpose and maximum power. Explain both operating modes, then the grid-balancing purpose, and finally how head, water speed, turbine size and losses affect power.</p>
 <p><strong>对应小问 / Examples：</strong> <a class="internal-link" href="/notes/3c9b6cf4cbf2bda305.html">PH04-202601-Q07</a> · <a class="internal-link" href="/notes/6583fb9150d8e2e0f4.html#h-7ae67e3ea65c6e2ba9">PH04-202406-Q01.4</a> · <a class="internal-link" href="/notes/6583fb9150d8e2e0f4.html#h-1c5b7dcc66b0301c42">PH04-202406-Q01.3</a></p>
 <details class="callout example"><summary>PH04-2018_specimen_paper-Q03.3 · 3.13.4 水电与抽水蓄能 / Hydroelectric power and pumped storage</summary><div class="callout-body"><h4 id="h-a293dd47ea6246b7ec">PH04-2018_specimen_paper-Q03.3 评分点与讲解 / Marking points and explanation</h4>
 <p><strong>考查内容 / Focus：</strong> 3.13.4 水电与抽水蓄能 / Hydroelectric power and pumped storage</p>
